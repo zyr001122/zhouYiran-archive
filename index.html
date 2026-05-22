@@ -94,6 +94,9 @@
     .comment-original { font-size: 11px; color: var(--text-light); line-height: 1.6; margin-bottom: 3px; }
     .comment-translated { font-size: 13px; color: var(--text); line-height: 1.7; }
 
+    .comment-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; margin-top: 8px; }
+    .comment-images img { width: 100%; border-radius: 8px; object-fit: cover; max-height: 200px; }
+
     /* ACTOR REPLY */
     .actor-reply { margin-top: 10px; padding: 10px 12px; background: var(--pink-light); border-radius: 10px; border-left: 3px solid var(--pink); }
     .actor-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
@@ -275,6 +278,7 @@
         </div>
         <div class="comment-original zh">${c.originalText}</div>
         <div class="comment-translated">${c.translatedText}</div>
+        ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" />`).join('')}</div>` : ''}
         ${replyHtml}
       </div>`;
   }
