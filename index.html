@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --weibo: #FF8200;
-      --weibo-light: #fff3e6;
-      --weibo-deep: #d96d00;
+      --accent: #F7A4B8;
+      --accent-light: #fde8ef;
+      --accent-deep: #c45e77;
       --pink: #F7A4B8;
       --pink-dark: #E8839A;
       --pink-deep: #c45e77;
@@ -34,18 +34,18 @@
     .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo-icon { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
     .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .logo-name { font-size: 15px; font-weight: 700; color: var(--weibo); letter-spacing: -0.3px; }
+    .logo-name { font-size: 15px; font-weight: 700; color: var(--pink-deep); letter-spacing: -0.3px; }
 
     /* HERO */
     .hero { background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 50%, #fff0f5 100%); border-bottom: 1px solid var(--border); padding: 2rem 1.5rem; }
     .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.75rem; }
     .hero-avatar { width: 126px; height: 126px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 20px rgba(247,164,184,0.4); }
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--weibo); margin-bottom: 4px; }
+    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
     .hero-stats { display: flex; gap: 24px; }
     .stat-item { text-align: left; }
-    .stat-num { font-size: 17px; font-weight: 700; color: var(--weibo); display: block; }
+    .stat-num { font-size: 17px; font-weight: 700; color: var(--pink-deep); display: block; }
     .stat-label { font-size: 11px; color: var(--text-muted); }
 
     /* LAYOUT */
@@ -53,9 +53,9 @@
 
     /* FEED */
     .feed-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .feed-title { font-size: 15px; font-weight: 700; color: var(--weibo); display: flex; align-items: center; gap: 8px; }
-    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--weibo); border-radius: 2px; }
-    .post-count-badge { font-size: 11px; background: var(--weibo-light); color: var(--weibo-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+    .feed-title { font-size: 15px; font-weight: 700; color: var(--pink-deep); display: flex; align-items: center; gap: 8px; }
+    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--pink); border-radius: 2px; }
+    .post-count-badge { font-size: 11px; background: var(--pink-light); color: var(--pink-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
     .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
     .post-card:hover { box-shadow: 0 4px 20px rgba(247,164,184,0.2); }
 
@@ -64,10 +64,10 @@
     .actor-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--pink-light); }
     .actor-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .post-meta-info { flex: 1; }
-    .actor-name { font-size: 14px; font-weight: 700; color: var(--weibo); }
+    .actor-name { font-size: 14px; font-weight: 700; color: var(--pink-deep); }
     .post-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
-    .weibo-link { font-size: 11px; color: var(--weibo); text-decoration: none; padding: 4px 10px; border: 1px solid var(--weibo); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
-    .weibo-link:hover { background: var(--weibo); color: white; }
+    .weibo-link { font-size: 11px; color: var(--pink-deep); text-decoration: none; padding: 4px 10px; border: 1px solid var(--pink); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
+    .weibo-link:hover { background: var(--pink); color: white; }
 
     /* POST BODY */
     .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
@@ -99,7 +99,7 @@
     .actor-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .actor-reply-avatar { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1.5px solid var(--pink); }
     .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--weibo); }
+    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--pink-deep); }
     .actor-reply-original { font-size: 11px; color: var(--pink-dark); line-height: 1.6; margin-bottom: 2px; }
     .actor-reply-translated { font-size: 13px; color: var(--pink-deep); font-weight: 500; line-height: 1.7; }
 
@@ -107,16 +107,16 @@
     .sidebar { display: flex; flex-direction: column; gap: 1rem; }
     .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; }
     .sidebar-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .sidebar-title-dot { width: 6px; height: 6px; background: var(--weibo); border-radius: 50%; display: inline-block; }
+    .sidebar-title-dot { width: 6px; height: 6px; background: var(--pink); border-radius: 50%; display: inline-block; }
 
     /* DATE TREE */
     .year-group { margin-bottom: 8px; }
-    .year-label { font-size: 13px; font-weight: 700; color: var(--weibo-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
-    .year-label:hover { color: var(--weibo); }
+    .year-label { font-size: 13px; font-weight: 700; color: var(--pink-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+    .year-label:hover { color: var(--pink-dark); }
     .month-list { padding-left: 12px; margin-top: 4px; }
     .month-item { font-size: 12px; color: var(--text-muted); padding: 4px 8px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s; }
-    .month-item:hover { background: var(--weibo-light); color: var(--weibo-deep); }
-    .month-item.active { background: var(--weibo); color: white; font-weight: 600; }
+    .month-item:hover { background: var(--pink-light); color: var(--pink-deep); }
+    .month-item.active { background: var(--pink); color: white; font-weight: 600; }
     .month-count { font-size: 10px; opacity: 0.7; }
 
     /* NOTICE */
@@ -127,13 +127,13 @@
     /* SEARCH */
     .search-bar { margin-bottom: 1rem; }
     .search-input { width: 100%; padding: 9px 16px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-family: inherit; background: white; outline: none; color: var(--text); transition: border-color 0.2s; }
-    .search-input:focus { border-color: var(--weibo); }
+    .search-input:focus { border-color: var(--pink); }
     .search-input::placeholder { color: var(--text-light); }
 
     /* FILTER BAR */
-    .filter-active-bar { font-size: 12px; color: var(--weibo-deep); background: var(--weibo-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
+    .filter-active-bar { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
     .filter-active-bar.show { display: flex; }
-    .clear-filter { cursor: pointer; font-weight: 600; color: var(--weibo-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
+    .clear-filter { cursor: pointer; font-weight: 600; color: var(--pink-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
 
     /* EMPTY */
     .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-light); }
