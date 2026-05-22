@@ -305,7 +305,6 @@
         </div>
         ${imagesHtml}
         <div class="post-footer">
-          <div class="like-count"><span class="like-heart">♥</span> ${formatNum(post.likes)}</div>
           <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
             댓글 번역 보기 (${commentCount}개${replyCount > 0 ? ` · 답글 ${replyCount}개` : ''})
           </button>
