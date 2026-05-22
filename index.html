@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>周翊然 주익연 한국어 아카이브</title>
+  <title>周翊然Tz 초화 댓파 번역 아카이브</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
+      --weibo: #FF8200;
+      --weibo-light: #fff3e6;
+      --weibo-deep: #d96d00;
       --pink: #F7A4B8;
       --pink-dark: #E8839A;
       --pink-deep: #c45e77;
@@ -27,36 +30,32 @@
 
     /* HEADER */
     .site-header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 52px; display: flex; align-items: center; }
     .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo-icon { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
     .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .logo-text { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.3px; }
-    .logo-sub { font-size: 11px; color: var(--text-muted); font-weight: 300; }
-    .header-nav { display: flex; gap: 6px; }
-    .nav-btn { padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px; background: none; font-size: 12px; color: var(--text-muted); cursor: pointer; font-family: inherit; transition: all 0.2s; }
-    .nav-btn:hover, .nav-btn.active { background: var(--pink); border-color: var(--pink); color: white; }
+    .logo-name { font-size: 15px; font-weight: 700; color: var(--weibo); letter-spacing: -0.3px; }
 
     /* HERO */
     .hero { background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 50%, #fff0f5 100%); border-bottom: 1px solid var(--border); padding: 2rem 1.5rem; }
-    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 2rem; }
-    .hero-avatar { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 20px rgba(247,164,184,0.4); }
+    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.75rem; }
+    .hero-avatar { width: 126px; height: 126px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 20px rgba(247,164,184,0.4); }
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.6; }
-    .hero-stats { display: flex; gap: 20px; }
-    .stat-item { text-align: center; }
-    .stat-num { font-size: 18px; font-weight: 700; color: var(--pink-deep); display: block; }
+    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--weibo); margin-bottom: 4px; }
+    .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
+    .hero-stats { display: flex; gap: 24px; }
+    .stat-item { text-align: left; }
+    .stat-num { font-size: 17px; font-weight: 700; color: var(--weibo); display: block; }
     .stat-label { font-size: 11px; color: var(--text-muted); }
 
     /* LAYOUT */
-    .main-layout { max-width: 960px; margin: 0 auto; padding: 1.5rem; display: grid; grid-template-columns: 1fr 260px; gap: 1.5rem; align-items: start; }
+    .main-layout { max-width: 960px; margin: 0 auto; padding: 1.5rem; display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: start; }
 
     /* FEED */
     .feed-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .feed-title { font-size: 15px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; }
-    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--pink); border-radius: 2px; }
-    .post-count-badge { font-size: 11px; background: var(--pink-light); color: var(--pink-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+    .feed-title { font-size: 15px; font-weight: 700; color: var(--weibo); display: flex; align-items: center; gap: 8px; }
+    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--weibo); border-radius: 2px; }
+    .post-count-badge { font-size: 11px; background: var(--weibo-light); color: var(--weibo-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
     .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
     .post-card:hover { box-shadow: 0 4px 20px rgba(247,164,184,0.2); }
 
@@ -65,12 +64,10 @@
     .actor-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--pink-light); }
     .actor-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .post-meta-info { flex: 1; }
-    .actor-name-row { display: flex; align-items: center; gap: 6px; }
-    .actor-name { font-size: 14px; font-weight: 700; color: var(--text); }
-    .verified-badge { background: var(--pink); color: white; font-size: 9px; padding: 1px 6px; border-radius: 8px; font-weight: 500; }
-    .post-date { font-size: 11px; color: var(--text-light); margin-top: 1px; }
-    .weibo-link { font-size: 11px; color: var(--pink); text-decoration: none; padding: 4px 10px; border: 1px solid var(--pink); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
-    .weibo-link:hover { background: var(--pink); color: white; }
+    .actor-name { font-size: 14px; font-weight: 700; color: var(--weibo); }
+    .post-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+    .weibo-link { font-size: 11px; color: var(--weibo); text-decoration: none; padding: 4px 10px; border: 1px solid var(--weibo); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
+    .weibo-link:hover { background: var(--weibo); color: white; }
 
     /* POST BODY */
     .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
@@ -79,8 +76,6 @@
     .translated-text { font-size: 15px; color: var(--text); line-height: 1.85; }
     .post-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 12px 0; }
     .post-images img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 280px; }
-    .post-tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
-    .tag { font-size: 11px; color: var(--pink-deep); background: var(--pink-light); padding: 3px 10px; border-radius: 12px; }
     .post-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 10px; }
     .like-count { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--text-muted); }
     .like-heart { color: var(--pink); font-size: 15px; }
@@ -90,7 +85,7 @@
     /* COMMENTS */
     .comments-section { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border); display: none; }
     .comments-section.open { display: block; }
-    .comments-title { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; letter-spacing: 0.5px; }
+    .comments-title { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; }
     .comment-item { margin-bottom: 12px; padding: 10px 12px; background: var(--pink-pale); border-radius: 10px; }
     .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .comment-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
@@ -104,7 +99,7 @@
     .actor-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .actor-reply-avatar { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1.5px solid var(--pink); }
     .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--pink-deep); }
+    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--weibo); }
     .actor-reply-original { font-size: 11px; color: var(--pink-dark); line-height: 1.6; margin-bottom: 2px; }
     .actor-reply-translated { font-size: 13px; color: var(--pink-deep); font-weight: 500; line-height: 1.7; }
 
@@ -112,38 +107,33 @@
     .sidebar { display: flex; flex-direction: column; gap: 1rem; }
     .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; }
     .sidebar-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .sidebar-title-dot { width: 6px; height: 6px; background: var(--pink); border-radius: 50%; display: inline-block; }
+    .sidebar-title-dot { width: 6px; height: 6px; background: var(--weibo); border-radius: 50%; display: inline-block; }
 
     /* DATE TREE */
     .year-group { margin-bottom: 8px; }
-    .year-label { font-size: 13px; font-weight: 700; color: var(--pink-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
-    .year-label:hover { color: var(--pink-dark); }
+    .year-label { font-size: 13px; font-weight: 700; color: var(--weibo-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+    .year-label:hover { color: var(--weibo); }
     .month-list { padding-left: 12px; margin-top: 4px; }
     .month-item { font-size: 12px; color: var(--text-muted); padding: 4px 8px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s; }
-    .month-item:hover { background: var(--pink-light); color: var(--pink-deep); }
-    .month-item.active { background: var(--pink); color: white; font-weight: 600; }
+    .month-item:hover { background: var(--weibo-light); color: var(--weibo-deep); }
+    .month-item.active { background: var(--weibo); color: white; font-weight: 600; }
     .month-count { font-size: 10px; opacity: 0.7; }
 
-    /* TAG CLOUD */
-    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag-cloud .tag { cursor: pointer; transition: all 0.2s; }
-    .tag-cloud .tag:hover { background: var(--pink); color: white; }
-
     /* NOTICE */
-    .notice-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .notice-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
     .notice-item:last-child { border-bottom: none; }
-    .notice-date { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+    .notice-label { font-size: 10px; color: var(--text-light); margin-top: 2px; font-weight: 500; }
 
     /* SEARCH */
-    .search-bar { display: flex; gap: 8px; margin-bottom: 1rem; }
-    .search-input { flex: 1; padding: 8px 14px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-family: inherit; background: white; outline: none; color: var(--text); transition: border-color 0.2s; }
-    .search-input:focus { border-color: var(--pink); }
+    .search-bar { margin-bottom: 1rem; }
+    .search-input { width: 100%; padding: 9px 16px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-family: inherit; background: white; outline: none; color: var(--text); transition: border-color 0.2s; }
+    .search-input:focus { border-color: var(--weibo); }
     .search-input::placeholder { color: var(--text-light); }
 
-    /* ADD GUIDE */
-    .add-guide { background: var(--pink-light); border: 1px dashed var(--pink); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; font-size: 13px; color: var(--pink-deep); line-height: 1.7; display: none; }
-    .add-guide.open { display: block; }
-    .add-guide code { background: rgba(247,164,184,0.3); padding: 1px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; }
+    /* FILTER BAR */
+    .filter-active-bar { font-size: 12px; color: var(--weibo-deep); background: var(--weibo-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
+    .filter-active-bar.show { display: flex; }
+    .clear-filter { cursor: pointer; font-weight: 600; color: var(--weibo-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
 
     /* EMPTY */
     .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-light); }
@@ -152,100 +142,96 @@
     /* FOOTER */
     .site-footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 2rem; }
 
-    /* FILTER ACTIVE STATE */
-    .filter-active-bar { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
-    .filter-active-bar.show { display: flex; }
-    .clear-filter { cursor: pointer; font-weight: 600; color: var(--pink-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
-
     @media (max-width: 700px) {
       .main-layout { grid-template-columns: 1fr; padding: 1rem; }
       .sidebar { display: none; }
       .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
       .hero-stats { justify-content: center; }
-      .header-nav { gap: 4px; }
-      .nav-btn { padding: 5px 10px; font-size: 11px; }
+      .hero-avatar { width: 100px; height: 100px; }
     }
   </style>
 </head>
 <body>
 
+<!-- HEADER: 프로필 이미지 + 이름만 -->
 <header class="site-header">
   <div class="header-inner">
-    <a class="site-logo" href="#" onclick="clearAllFilters()">
-      <div class="logo-icon"><img src="IMG_1757.JPG" alt="주익연" /></div>
-      <div>
-        <div class="logo-text">周翊然 주익연</div>
-        <div class="logo-sub">한국어 번역 아카이브</div>
-      </div>
+    <a class="site-logo" href="#" onclick="clearAllFilters(); return false;">
+      <div class="logo-icon"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
+      <span class="logo-name">周翊然Tz</span>
     </a>
-    <nav class="header-nav">
-      <button class="nav-btn active" id="nav-all" onclick="clearAllFilters()">전체글</button>
-      <button class="nav-btn" onclick="showGuide()">글 추가 방법</button>
-    </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然" /></div>
+    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
     <div class="hero-info">
-      <h1>周翊然 주익연</h1>
-      <p>웨이보 원문을 한국어로 번역한 팬 아카이브입니다.<br>배우의 글과 팬 소통 댓글을 모두 보실 수 있어요.</p>
+      <h1>周翊然Tz</h1>
+      <p>22일 초화 댓파 번역 아카이브</p>
       <div class="hero-stats">
-        <div class="stat-item"><span class="stat-num" id="total-posts">0</span><span class="stat-label">번역 게시물</span></div>
-        <div class="stat-item"><span class="stat-num" id="total-comments">0</span><span class="stat-label">번역 댓글</span></div>
-        <div class="stat-item"><span class="stat-num" id="total-replies">0</span><span class="stat-label">배우 답글</span></div>
+        <div class="stat-item">
+          <span class="stat-num" id="stat-update">-</span>
+          <span class="stat-label">최근 업데이트</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="stat-comments">0</span>
+          <span class="stat-label">번역 댓글 수</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- MAIN -->
 <main>
   <div class="main-layout">
     <section>
       <div class="search-bar">
         <input class="search-input" type="text" id="searchInput" placeholder="번역 내용으로 검색..." oninput="renderFeed()" />
       </div>
-      <div class="add-guide" id="addGuide">
-        <strong>📌 새 게시물 추가 방법</strong><br><br>
-        <code>data.js</code> 파일에서 <code>posts</code> 배열 안에 추가하세요.<br><br>
-        날짜: <code>"date": "2026-01-22"</code><br>
-        웨이보 링크: <code>"weiboUrl": "https://weibo.com/..."</code><br>
-        중국어 원문: <code>"originalText": "..."</code><br>
-        한국어 번역: <code>"translatedText": "..."</code><br>
-        이미지: <code>"images": ["이미지URL"]</code> 없으면 <code>[]</code><br>
-        좋아요수: <code>"likes": 12345</code>
-      </div>
       <div class="filter-active-bar" id="filterBar">
         <span id="filterLabel"></span>
         <button class="clear-filter" onclick="clearAllFilters()">✕ 전체보기</button>
       </div>
       <div class="feed-header">
-        <div class="feed-title">번역 게시물</div>
+        <div class="feed-title">초화 게시물</div>
         <span class="post-count-badge" id="feed-count"></span>
       </div>
       <div id="posts-feed"></div>
     </section>
 
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-card">
         <div class="sidebar-title"><span class="sidebar-title-dot"></span>날짜별 보기</div>
         <div id="date-tree"></div>
       </div>
       <div class="sidebar-card">
-        <div class="sidebar-title"><span class="sidebar-title-dot"></span>태그 분류</div>
-        <div class="tag-cloud" id="tag-cloud"></div>
-      </div>
-      <div class="sidebar-card">
         <div class="sidebar-title"><span class="sidebar-title-dot"></span>공지</div>
-        <div class="notice-item">팬 제작 비영리 번역 아카이브입니다. 번역 오류는 제보 환영해요 🌸<div class="notice-date">운영 안내</div></div>
-        <div class="notice-item">원문 출처는 웨이보 링크를 클릭하면 확인하실 수 있습니다.<div class="notice-date">이용 안내</div></div>
+        <div class="notice-item">
+          제작 : VAz &nbsp;·&nbsp; 번역 오류 多(한자)
+          <div class="notice-label">운영 안내</div>
+        </div>
+        <div class="notice-item">
+          본 아카이브는 팬 제작 비영리 번역 사이트입니다.
+          <div class="notice-label">이용 안내</div>
+        </div>
+        <div class="notice-item">
+          무단 재배포 및 상업적 이용을 금합니다.
+          <div class="notice-label">이용 안내</div>
+        </div>
+        <div class="notice-item">
+          원문 출처는 웨이보 링크를 클릭하면 확인하실 수 있습니다.
+          <div class="notice-label">이용 안내</div>
+        </div>
       </div>
     </aside>
   </div>
 </main>
 
-<footer class="site-footer">周翊然 주익연 한국어 번역 팬 아카이브 &nbsp;·&nbsp; 비영리 팬 제작 사이트</footer>
+<footer class="site-footer">周翊然Tz 초화 댓파 번역 아카이브 &nbsp;·&nbsp; 비영리 팬 제작 사이트</footer>
 
 <script src="data.js"></script>
 <script>
@@ -258,9 +244,24 @@
     if (n >= 1000) return (n / 1000).toFixed(1) + '천';
     return n.toLocaleString();
   }
+
   function formatDate(d) {
     const date = new Date(d);
-    return `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일`;
+    return `${date.getMonth()+1}월 ${date.getDate()}일`;
+  }
+
+  function formatDateTime(d) {
+    const date = new Date(d);
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
+    const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
+    return hour ? `${month}월 ${day}일 ${hour}:${min}` : `${month}월 ${day}일`;
+  }
+
+  function formatUpdateDate(d) {
+    const date = new Date(d);
+    return `${date.getMonth()+1}월 ${date.getDate()}일`;
   }
 
   function renderComment(c) {
@@ -289,8 +290,6 @@
   function renderPost(post) {
     const imagesHtml = post.images && post.images.length
       ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>` : '';
-    const tagsHtml = post.tags && post.tags.length
-      ? `<div class="post-tags">${post.tags.map(t => `<span class="tag" onclick="filterByTag('${t}')" style="cursor:pointer;">#${t}</span>`).join('')}</div>` : '';
     const commentsHtml = post.comments && post.comments.length
       ? post.comments.map(renderComment).join('')
       : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
@@ -301,11 +300,8 @@
         <div class="post-meta">
           <div class="actor-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
           <div class="post-meta-info">
-            <div class="actor-name-row">
-              <span class="actor-name">${ACTOR_NICK}</span>
-              <span class="verified-badge">공식</span>
-            </div>
-            <div class="post-date">${formatDate(post.date)}</div>
+            <div class="actor-name">${ACTOR_NICK}</div>
+            <div class="post-date">${formatDateTime(post.date)}</div>
           </div>
           <a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>
         </div>
@@ -316,7 +312,6 @@
           <div class="translated-text">${post.translatedText}</div>
         </div>
         ${imagesHtml}
-        ${tagsHtml}
         <div class="post-footer">
           <div class="like-count"><span class="like-heart">♥</span> ${formatNum(post.likes)}</div>
           <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
@@ -334,19 +329,13 @@
     const el = document.getElementById(`comments-${id}`);
     const btn = document.getElementById(`cmtbtn-${id}`);
     el.classList.toggle('open');
-    if (el.classList.contains('open')) {
-      btn.textContent = '댓글 접기 ▲';
-    } else {
-      btn.textContent = btn.textContent.replace('접기 ▲', '보기');
-    }
+    btn.textContent = el.classList.contains('open') ? '댓글 접기 ▲' : btn.textContent.replace('접기 ▲', '보기');
   }
 
   function getFilteredPosts() {
     const query = document.getElementById('searchInput').value.toLowerCase();
     let filtered = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    if (currentFilter.type === 'tag') {
-      filtered = filtered.filter(p => p.tags && p.tags.includes(currentFilter.value));
-    } else if (currentFilter.type === 'year') {
+    if (currentFilter.type === 'year') {
       filtered = filtered.filter(p => new Date(p.date).getFullYear() === currentFilter.value);
     } else if (currentFilter.type === 'month') {
       filtered = filtered.filter(p => {
@@ -357,8 +346,7 @@
     if (query) {
       filtered = filtered.filter(p =>
         p.translatedText.toLowerCase().includes(query) ||
-        p.originalText.toLowerCase().includes(query) ||
-        (p.tags && p.tags.some(t => t.includes(query)))
+        p.originalText.toLowerCase().includes(query)
       );
     }
     return filtered;
@@ -366,32 +354,20 @@
 
   function renderFeed() {
     const filtered = getFilteredPosts();
-    const feed = document.getElementById('posts-feed');
     document.getElementById('feed-count').textContent = filtered.length + '개';
-    feed.innerHTML = filtered.length === 0
+    document.getElementById('posts-feed').innerHTML = filtered.length === 0
       ? `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`
       : filtered.map(renderPost).join('');
   }
 
-  function filterByTag(tag) {
-    currentFilter = { type: 'tag', value: tag };
-    showFilterBar(`#${tag} 태그`);
-    renderFeed();
-  }
-
   function filterByMonth(year, month) {
     currentFilter = { type: 'month', value: { year, month } };
-    showFilterBar(`${year}년 ${month}월`);
+    document.getElementById('filterLabel').textContent = `📅 ${year}년 ${month}월 게시물만 보는 중`;
+    document.getElementById('filterBar').classList.add('show');
     renderFeed();
     document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     const el = document.getElementById(`m-${year}-${month}`);
     if (el) el.classList.add('active');
-  }
-
-  function showFilterBar(label) {
-    const bar = document.getElementById('filterBar');
-    document.getElementById('filterLabel').textContent = `📅 ${label} 게시물만 보는 중`;
-    bar.classList.add('show');
   }
 
   function clearAllFilters() {
@@ -402,16 +378,13 @@
     renderFeed();
   }
 
-  function showGuide() {
-    document.getElementById('addGuide').classList.toggle('open');
-  }
-
   function renderStats() {
-    document.getElementById('total-posts').textContent = posts.length;
+    const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    if (sorted.length > 0) {
+      document.getElementById('stat-update').textContent = formatUpdateDate(sorted[0].date);
+    }
     const totalComments = posts.reduce((s, p) => s + (p.comments ? p.comments.length : 0), 0);
-    document.getElementById('total-comments').textContent = totalComments;
-    const totalReplies = posts.reduce((s, p) => s + (p.comments ? p.comments.filter(c => c.actorReply).length : 0), 0);
-    document.getElementById('total-replies').textContent = totalReplies;
+    document.getElementById('stat-comments').textContent = totalComments;
   }
 
   function renderDateTree() {
@@ -424,8 +397,7 @@
       if (!tree[y][m]) tree[y][m] = 0;
       tree[y][m]++;
     });
-    const container = document.getElementById('date-tree');
-    container.innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
+    document.getElementById('date-tree').innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
       const months = Object.keys(tree[year]).sort((a,b) => b-a).map(month => `
         <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">
           <span>${month}월</span>
@@ -433,7 +405,7 @@
         </div>`).join('');
       return `
         <div class="year-group">
-          <div class="year-label" onclick="currentFilter={type:'year',value:${year}};showFilterBar('${year}년');renderFeed();">
+          <div class="year-label" onclick="currentFilter={type:'year',value:${year}};document.getElementById('filterLabel').textContent='📅 ${year}년 게시물만 보는 중';document.getElementById('filterBar').classList.add('show');renderFeed();">
             <span>${year}년</span><span style="font-size:10px;opacity:0.6;">▾</span>
           </div>
           <div class="month-list">${months}</div>
@@ -441,18 +413,9 @@
     }).join('');
   }
 
-  function renderTags() {
-    const tagSet = new Set();
-    posts.forEach(p => p.tags && p.tags.forEach(t => tagSet.add(t)));
-    document.getElementById('tag-cloud').innerHTML = [...tagSet].map(t =>
-      `<span class="tag" onclick="filterByTag('${t}')" style="cursor:pointer;">#${t}</span>`
-    ).join('');
-  }
-
   renderStats();
   renderFeed();
   renderDateTree();
-  renderTags();
 </script>
 </body>
 </html>
