@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>周翊然 주익연 한국어 아카이브</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #F7A4B8;
+      --pink-dark: #E8839A;
+      --pink-deep: #c45e77;
+      --pink-light: #fde8ef;
+      --pink-pale: #fff5f8;
+      --text: #2a1a20;
+      --text-muted: #8a6070;
+      --text-light: #c4a0ae;
+      --border: #f0d0da;
+      --white: #ffffff;
+      --card-bg: #fffbfc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--pink-pale);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--pink);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+      font-weight: 700;
+    }
+    .logo-text {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+    .header-nav {
+      display: flex;
+      gap: 6px;
+    }
+    .nav-btn {
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: none;
+      font-size: 12px;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: white;
+    }
+
+    /* ── HERO BANNER ── */
+    .hero {
+      background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 50%, #fff0f5 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 22px;
+      color: white;
+      font-weight: 600;
+      flex-shrink: 0;
+      border: 3px solid white;
+      box-shadow: 0 4px 20px rgba(247,164,184,0.4);
+    }
+    .hero-info h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .hero-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 20px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pink-deep);
+      display: block;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ── LAYOUT ── */
+    .main-layout {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    /* ── POSTS FEED ── */
+    .feed-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .feed-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .feed-title::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 16px;
+      background: var(--pink);
+      border-radius: 2px;
+    }
+    .post-count-badge {
+      font-size: 11px;
+      background: var(--pink-light);
+      color: var(--pink-deep);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    .post-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .post-card:hover {
+      box-shadow: 0 4px 20px rgba(247,164,184,0.2);
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .actor-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: white;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .post-meta-info { flex: 1; }
+    .actor-name-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .actor-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .verified-badge {
+      background: var(--pink);
+      color: white;
+      font-size: 9px;
+      padding: 1px 6px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .post-date {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 1px;
+    }
+    .weibo-link {
+      font-size: 11px;
+      color: var(--pink);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid var(--pink);
+      border-radius: 12px;
+      transition: all 0.2s;
+    }
+    .weibo-link:hover {
+      background: var(--pink);
+      color: white;
+    }
+
+    .post-body { margin-bottom: 12px; }
+    .original-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding: 10px 12px;
+      background: var(--pink-pale);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border-left: 3px solid var(--pink-light);
+    }
+    .original-label {
+      font-size: 10px;
+      color: var(--text-light);
+      margin-bottom: 3px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .translated-text {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .translated-label {
+      font-size: 10px;
+      color: var(--pink-deep);
+      margin-bottom: 4px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .post-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .post-images img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 280px;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-size: 11px;
+      color: var(--pink-deep);
+      background: var(--pink-light);
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .post-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .like-count {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .like-heart { color: var(--pink); font-size: 15px; }
+    .toggle-comments-btn {
+      font-size: 12px;
+      color: var(--pink-deep);
+      background: var(--pink-light);
+      border: none;
+      padding: 5px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .toggle-comments-btn:hover {
+      background: var(--pink);
+      color: white;
+    }
+
+    /* ── COMMENTS ── */
+    .comments-section {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+      display: none;
+    }
+    .comments-section.open { display: block; }
+    .comments-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .comment-item {
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      background: var(--pink-pale);
+      border-radius: 10px;
+    }
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .comment-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .comment-username {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .comment-likes {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--text-light);
+    }
+    .comment-original {
+      font-size: 11px;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .comment-translated {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .actor-reply {
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: var(--pink-light);
+      border-radius: 8px;
+      border-left: 3px solid var(--pink);
+    }
+    .actor-reply-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--pink-deep);
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .actor-reply-original {
+      font-size: 11px;
+      color: var(--pink-dark);
+      line-height: 1.6;
+      margin-bottom: 2px;
+    }
+    .actor-reply-translated {
+      font-size: 13px;
+      color: var(--pink-deep);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { display: flex; flex-direction: column; gap: 1rem; }
+
+    .sidebar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    .sidebar-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sidebar-title-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--pink);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud .tag { cursor: pointer; transition: all 0.2s; }
+    .tag-cloud .tag:hover { background: var(--pink); color: white; }
+
+    .notice-item {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .notice-item:last-child { border-bottom: none; }
+    .notice-date { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+
+    .timeline-item {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+    }
+    .timeline-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pink);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .timeline-text { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .timeline-date { font-size: 10px; color: var(--text-light); }
+
+    /* ── SEARCH BAR ── */
+    .search-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .search-input {
+      flex: 1;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      font-family: inherit;
+      background: white;
+      outline: none;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--pink); }
+    .search-input::placeholder { color: var(--text-light); }
+    .search-btn {
+      padding: 8px 16px;
+      background: var(--pink);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-light);
+    }
+    .empty-state .big-icon { font-size: 40px; margin-bottom: 12px; }
+    .empty-state p { font-size: 14px; }
+
+    /* ── ADD POST GUIDE ── */
+    .add-guide {
+      background: var(--pink-light);
+      border: 1px dashed var(--pink);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      font-size: 13px;
+      color: var(--pink-deep);
+      line-height: 1.7;
+      display: none;
+    }
+    .add-guide.open { display: block; }
+    .add-guide strong { font-weight: 700; }
+    .add-guide code {
+      background: rgba(247,164,184,0.3);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+      .sidebar { display: none; }
+      .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
+      .hero-stats { justify-content: center; }
+      .header-nav { display: none; }
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 12px;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-logo" href="#">
+      <div class="logo-icon">周</div>
+      <div>
+        <div class="logo-text">周翊然 주익연</div>
+        <div class="logo-sub">한국어 번역 아카이브</div>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <button class="nav-btn active" onclick="filterPosts('all')">전체글</button>
+      <button class="nav-btn" onclick="filterPosts('소통')">팬소통</button>
+      <button class="nav-btn" onclick="filterPosts('촬영완료')">촬영완료</button>
+      <button class="nav-btn" onclick="showGuide()">글 추가 방법</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-avatar">周</div>
+    <div class="hero-info">
+      <h1>周翊然 주익연</h1>
+      <p>웨이보 원문을 한국어로 번역한 팬 아카이브입니다.<br>배우의 글과 팬 소통 댓글을 모두 보실 수 있어요.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" id="total-posts">0</span>
+          <span class="stat-label">번역 게시물</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="total-comments">0</span>
+          <span class="stat-label">번역 댓글</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="total-replies">0</span>
+          <span class="stat-label">배우 답글</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+  <div class="main-layout">
+    <!-- FEED -->
+    <section>
+      <!-- 검색 -->
+      <div class="search-bar">
+        <input class="search-input" type="text" id="searchInput" placeholder="번역 내용으로 검색..." oninput="searchPosts()" />
+      </div>
+
+      <!-- 글 추가 가이드 -->
+      <div class="add-guide" id="addGuide">
+        <strong>📌 새 게시물 추가 방법</strong><br><br>
+        <code>data.js</code> 파일을 열고 <code>posts</code> 배열에 아래 형식으로 추가하세요:<br><br>
+        <code>{</code><br>
+        &nbsp;&nbsp;<code>id: 3,</code> ← 숫자를 하나씩 올려주세요<br>
+        &nbsp;&nbsp;<code>date: "2025-05-21",</code><br>
+        &nbsp;&nbsp;<code>weiboUrl: "웨이보 원문 링크",</code><br>
+        &nbsp;&nbsp;<code>originalText: "중국어 원문",</code><br>
+        &nbsp;&nbsp;<code>translatedText: "한국어 번역",</code><br>
+        &nbsp;&nbsp;<code>images: [],</code> ← 이미지 URL 배열<br>
+        &nbsp;&nbsp;<code>likes: 12345,</code><br>
+        &nbsp;&nbsp;<code>comments: [],</code><br>
+        &nbsp;&nbsp;<code>tags: ["태그"]</code><br>
+        <code>}</code>
+      </div>
+
+      <!-- 피드 헤더 -->
+      <div class="feed-header">
+        <div class="feed-title">번역 게시물</div>
+        <span class="post-count-badge" id="feed-count"></span>
+      </div>
+
+      <!-- 게시물 목록 -->
+      <div id="posts-feed"></div>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-title"><span class="sidebar-title-dot"></span>태그 분류</div>
+        <div class="tag-cloud" id="tag-cloud"></div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title"><span class="sidebar-title-dot"></span>공지</div>
+        <div class="notice-item">
+          팬 제작 비영리 번역 아카이브입니다. 번역 오류는 제보 환영해요 🌸
+          <div class="notice-date">운영 안내</div>
+        </div>
+        <div class="notice-item">
+          원문 출처는 웨이보 링크를 클릭하면 확인하실 수 있습니다.
+          <div class="notice-date">이용 안내</div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title"><span class="sidebar-title-dot"></span>최근 업데이트</div>
+        <div id="recent-list"></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  周翊然 주익연 한국어 번역 팬 아카이브 &nbsp;·&nbsp; 비영리 팬 제작 사이트
+</footer>
+
+<script src="data.js"></script>
+<script>
+  let currentFilter = 'all';
+
+  function formatNum(n) {
+    if (n >= 10000) return (n / 10000).toFixed(1) + '만';
+    if (n >= 1000) return (n / 1000).toFixed(1) + '천';
+    return n.toLocaleString();
+  }
+
+  function formatDate(d) {
+    const date = new Date(d);
+    return `${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일`;
+  }
+
+  function renderComment(c) {
+    const replyHtml = c.actorReply ? `
+      <div class="actor-reply">
+        <div class="actor-reply-label">💬 주익연 답글</div>
+        <div class="actor-reply-original">${c.actorReply.originalText}</div>
+        <div class="actor-reply-translated">${c.actorReply.translatedText}</div>
+      </div>` : '';
+    return `
+      <div class="comment-item">
+        <div class="comment-header">
+          <div class="comment-avatar">팬</div>
+          <span class="comment-username">${c.username}</span>
+          <span class="comment-likes">♥ ${formatNum(c.likes)}</span>
+        </div>
+        <div class="comment-original">${c.originalText}</div>
+        <div class="comment-translated">${c.translatedText}</div>
+        ${replyHtml}
+      </div>`;
+  }
+
+  function renderPost(post) {
+    const imagesHtml = post.images && post.images.length
+      ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>`
+      : '';
+    const tagsHtml = post.tags && post.tags.length
+      ? `<div class="post-tags">${post.tags.map(t => `<span class="tag">#${t}</span>`).join('')}</div>`
+      : '';
+    const commentsHtml = post.comments && post.comments.length
+      ? post.comments.map(renderComment).join('')
+      : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+    const commentCount = post.comments ? post.comments.length : 0;
+    const replyCount = post.comments ? post.comments.filter(c => c.actorReply).length : 0;
+
+    return `
+      <article class="post-card" id="post-${post.id}">
+        <div class="post-meta">
+          <div class="actor-avatar">周</div>
+          <div class="post-meta-info">
+            <div class="actor-name-row">
+              <span class="actor-name">周翊然 주익연</span>
+              <span class="verified-badge">공식</span>
+            </div>
+            <div class="post-date">${formatDate(post.date)}</div>
+          </div>
+          <a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>
+        </div>
+        <div class="post-body">
+          <div class="original-label">중국어 원문</div>
+          <div class="original-text">${post.originalText}</div>
+          <div class="translated-label">한국어 번역 🇰🇷</div>
+          <div class="translated-text">${post.translatedText}</div>
+        </div>
+        ${imagesHtml}
+        ${tagsHtml}
+        <div class="post-footer">
+          <div class="like-count"><span class="like-heart">♥</span> ${formatNum(post.likes)}</div>
+          <button class="toggle-comments-btn" onclick="toggleComments(${post.id})">
+            댓글 번역 보기 (${commentCount}개${replyCount > 0 ? ` · 답글 ${replyCount}개` : ''})
+          </button>
+        </div>
+        <div class="comments-section" id="comments-${post.id}">
+          <div class="comments-title">💬 댓글 번역</div>
+          ${commentsHtml}
+        </div>
+      </article>`;
+  }
+
+  function toggleComments(id) {
+    const el = document.getElementById(`comments-${id}`);
+    el.classList.toggle('open');
+    const btn = el.previousElementSibling.querySelector('.toggle-comments-btn');
+    btn.textContent = el.classList.contains('open') ? '댓글 접기 ▲' : btn.textContent.replace('접기 ▲', '보기');
+  }
+
+  function getFilteredPosts(filter, query) {
+    let filtered = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    if (filter && filter !== 'all') {
+      filtered = filtered.filter(p => p.tags && p.tags.includes(filter));
+    }
+    if (query) {
+      const q = query.toLowerCase();
+      filtered = filtered.filter(p =>
+        p.translatedText.toLowerCase().includes(q) ||
+        p.originalText.toLowerCase().includes(q) ||
+        (p.tags && p.tags.some(t => t.includes(q)))
+      );
+    }
+    return filtered;
+  }
+
+  function renderFeed() {
+    const query = document.getElementById('searchInput').value;
+    const filtered = getFilteredPosts(currentFilter, query);
+    const feed = document.getElementById('posts-feed');
+    const countEl = document.getElementById('feed-count');
+    countEl.textContent = filtered.length + '개';
+    if (filtered.length === 0) {
+      feed.innerHTML = `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`;
+    } else {
+      feed.innerHTML = filtered.map(renderPost).join('');
+    }
+  }
+
+  function filterPosts(tag) {
+    currentFilter = tag;
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    renderFeed();
+  }
+
+  function searchPosts() { renderFeed(); }
+
+  function showGuide() {
+    const g = document.getElementById('addGuide');
+    g.classList.toggle('open');
+  }
+
+  function renderStats() {
+    document.getElementById('total-posts').textContent = posts.length;
+    const totalComments = posts.reduce((s, p) => s + (p.comments ? p.comments.length : 0), 0);
+    document.getElementById('total-comments').textContent = totalComments;
+    const totalReplies = posts.reduce((s, p) => s + (p.comments ? p.comments.filter(c => c.actorReply).length : 0), 0);
+    document.getElementById('total-replies').textContent = totalReplies;
+  }
+
+  function renderTags() {
+    const tagSet = new Set();
+    posts.forEach(p => p.tags && p.tags.forEach(t => tagSet.add(t)));
+    const cloud = document.getElementById('tag-cloud');
+    cloud.innerHTML = [...tagSet].map(t =>
+      `<span class="tag" onclick="filterPosts('${t}')" style="cursor:pointer;">#${t}</span>`
+    ).join('');
+  }
+
+  function renderRecent() {
+    const recent = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4);
+    document.getElementById('recent-list').innerHTML = recent.map(p => `
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div>
+          <div class="timeline-text">${p.translatedText.slice(0, 30)}...</div>
+          <div class="timeline-date">${formatDate(p.date)}</div>
+        </div>
+      </div>`).join('');
+  }
+
+  // INIT
+  renderStats();
+  renderFeed();
+  renderTags();
+  renderRecent();
+</script>
+</body>
+</html>
