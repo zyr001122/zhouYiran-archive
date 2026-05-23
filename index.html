@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>周翊然Tz 초화 번역 아카이브</title>
+  <title>周翊然Tz 초화 댓파 번역 아카이브</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -164,7 +164,7 @@
     <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
     <div class="hero-info">
       <h1>周翊然Tz</h1>
-      <p> 초화 아카이브</p>
+      <p>22일 이달의 초화 아카이브</p>
       <div class="hero-stats">
         <div class="stat-item">
           <span class="stat-num" id="stat-update">-</span>
@@ -233,7 +233,20 @@
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
-<script src="data.js"></script>
+<script src="data-2026-01.js"></script>
+<script src="data-2026-02.js"></script>
+<script src="data-2026-03.js"></script>
+<script src="data-2026-04.js"></script>
+<script src="data-2026-05.js"></script>
+<script>
+  const posts = [
+    ...(typeof posts_202601 !== 'undefined' ? posts_202601 : []),
+    ...(typeof posts_202602 !== 'undefined' ? posts_202602 : []),
+    ...(typeof posts_202603 !== 'undefined' ? posts_202603 : []),
+    ...(typeof posts_202604 !== 'undefined' ? posts_202604 : []),
+    ...(typeof posts_202605 !== 'undefined' ? posts_202605 : []),
+  ];
+</script>
 <script>
   const ACTOR_IMG = 'IMG_1757.JPG';
   const ACTOR_NICK = '周翊然Tz';
@@ -350,7 +363,8 @@
         <div class="post-body">
           <div class="original-label">중국어 원문</div>
           <div class="original-text zh">${post.originalText}</div>
-          <div class="translated-text" style="margin-top: 12px;">${post.translatedText}</div> 
+          <div class="translated-label">한국어 번역 🇰🇷</div>
+          <div class="translated-text">${post.translatedText}</div>
         </div>
         ${imagesHtml}
         <div class="post-footer">
