@@ -19,7 +19,7 @@ const posts = [
         id: 102,
         username: "Dear-喇巴粥",
         originalText: "人。你在翻评论吗？@周翊然Tz",
-        translatedText: "야, 댓글 내리고 있었지 @周翊然Tz",
+        translatedText: "너 댓글 내리고 있었지 @周翊然Tz",
         images: ["images/cat-green.jpg"],
         actorReply: { originalText: "对的 人", translatedText: "맞음" }
       },
