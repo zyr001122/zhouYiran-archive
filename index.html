@@ -260,15 +260,28 @@
   }
 
   function renderComment(c) {
-    const replyHtml = c.actorReply ? `
-      <div class="actor-reply">
-        <div class="actor-reply-header">
-          <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-          <span class="actor-reply-name">${ACTOR_NICK}</span>
-        </div>
-        <div class="actor-reply-original zh">${c.actorReply.originalText}</div>
-        <div class="actor-reply-translated">${c.actorReply.translatedText}</div>
-      </div>` : '';
+    let replyHtml = '';
+    if (c.actorReplies && c.actorReplies.length) {
+      replyHtml = c.actorReplies.map(r => `
+        <div class="actor-reply">
+          <div class="actor-reply-header">
+            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
+            <span class="actor-reply-name">${ACTOR_NICK}</span>
+          </div>
+          <div class="actor-reply-original zh">${r.originalText}</div>
+          <div class="actor-reply-translated">${r.translatedText}</div>
+        </div>`).join('');
+    } else if (c.actorReply) {
+      replyHtml = `
+        <div class="actor-reply">
+          <div class="actor-reply-header">
+            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
+            <span class="actor-reply-name">${ACTOR_NICK}</span>
+          </div>
+          <div class="actor-reply-original zh">${c.actorReply.originalText}</div>
+          <div class="actor-reply-translated">${c.actorReply.translatedText}</div>
+        </div>`;
+    }
     const isActor = c.username === ACTOR_NICK;
     const avatarHtml = isActor
       ? `<div class="comment-avatar" style="background:none;"><img src="${ACTOR_IMG}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${ACTOR_NICK}" /></div>`
