@@ -269,11 +269,15 @@
         <div class="actor-reply-original zh">${c.actorReply.originalText}</div>
         <div class="actor-reply-translated">${c.actorReply.translatedText}</div>
       </div>` : '';
+    const isActor = c.username === ACTOR_NICK;
+    const avatarHtml = isActor
+      ? `<div class="comment-avatar" style="background:none;"><img src="${ACTOR_IMG}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${ACTOR_NICK}" /></div>`
+      : `<div class="comment-avatar">🥣</div>`;
     return `
       <div class="comment-item">
         <div class="comment-header">
-          <div class="comment-avatar">🥣</div>
-          <span class="comment-username">${c.username}</span>
+          ${avatarHtml}
+          <span class="comment-username" style="${isActor ? 'color:var(--pink-deep);font-weight:700;' : ''}">${c.username}</span>
 
         </div>
         <div class="comment-original zh">${c.originalText}</div>
