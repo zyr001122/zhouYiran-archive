@@ -24,6 +24,14 @@ const posts = [
         actorReply: { originalText: "对的 人", translatedText: "맞음" }
       },
       {
+        id: 103,
+        username: "周翊然Tz",
+        originalText: "才落地 来得有点晚了 😵",
+        translatedText: "이제 막 착륙해서 오느라 좀 늦었네 😵",
+        images: [],
+        actorReply: null
+      },
+      {
         id: 104,
         username: "Zz的小嘉Tz",
         originalText: "看看倒序吧哥😭 @周翊然Tz",
@@ -244,14 +252,6 @@ const posts = [
         actorReply: { originalText: "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈", translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ" }
       },
       {
-        id: 103,
-        username: "周翊然Tz",
-        originalText: "才落地 来得有点晚了 😵",
-        translatedText: "이제 막 착륙해서 오느라 좀 늦었네 😵",
-        images: [],
-        actorReply: null
-      },
-      {
         id: 100,
         username: "周翊然Tz",
         originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
@@ -372,8 +372,6 @@ const posts = [
         translatedText: "오빠 지금 뭐 해 사진 올려서 보고해 줘",
         images: ["images/ribbon-dog.jpg"],
         actorReply: {
-          originalText: "",
-          translatedText: "(사진으로 답장)",
           replyImages: ["images/xianxia-movie.jpg"]
         }
       },
@@ -579,8 +577,6 @@ const posts = [
         translatedText: "오빠 충칭 가서 맛있는 거 먹었어❤️",
         images: ["images/chongqing-noodle.jpg"],
         actorReply: {
-          originalText: "",
-          translatedText: "(사진으로 답장)",
           replyImages: ["images/jeonbyeong-food.jpg"]
         }
       },
