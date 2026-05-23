@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -364,7 +364,12 @@
     if (query) {
       filtered = filtered.filter(p =>
         p.translatedText.toLowerCase().includes(query) ||
-        p.originalText.toLowerCase().includes(query)
+        p.originalText.toLowerCase().includes(query) ||
+        (p.comments && p.comments.some(c =>
+          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
+          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
+        ))
       );
     }
     return filtered;
