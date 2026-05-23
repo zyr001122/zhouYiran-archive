@@ -285,10 +285,17 @@ const posts = [
         originalText: "这样搭配真的好吃吗😭",
         translatedText: "이 조합 진짜 맛있는 거 맞아? 😭",
         images: ["images/food-qingjiao-porridge.jpg"],
-        actorReply: {
-          originalText: "哦不对 是两个字 🤦",
-          translatedText: "아 아니네 두 글자구나 🤦🏻"
-        }
+        actorReplies: [
+          {
+            originalText: "一个字 绝了",
+            translatedText: "한마디로 끝"
+          },
+          {
+            originalText: "哦不对 是两个字 🤦",
+            translatedText: "아 아니네 두 글자구나 🤦🏻"
+          }
+        ],
+        actorReply: null
       },
       {
         id: 127,
