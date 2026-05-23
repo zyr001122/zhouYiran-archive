@@ -2,7 +2,7 @@ const posts = [
   {
     id: 1,
     date: "2026-05-22T23:32",
-    weiboUrl: "https://weibo.com/5994946077/R0CYdlWZC",
+    weiboUrl: "https://weibo.com/5994946077/5301498055231660",
     originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
     translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 뭐든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
     images: [],
