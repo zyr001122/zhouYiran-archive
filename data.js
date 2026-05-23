@@ -347,15 +347,15 @@ const posts = [
     id: 2,
     date: "2026-04-22T20:30",
     weiboUrl: "https://weibo.com/5994946077",
-    originalText: "周翊然超话 来了 ​​​",
-    translatedText: "주익연 초화 왔어요",
+    originalText: "来了 ​​​",
+    translatedText: "왔어",
     images: [],
     comments: [
       {
         id: 201,
         username: "周翊然Tz",
         originalText: "最后分享一张 上班的照片 我先走了下次见！！",
-        translatedText: "마지막으로 출근 사진 한 장 공유해요 저 먼저 갈게요 다음에 봐요!!",
+        translatedText: "마지막으로 출근 사진 한 장 공유하고 나 먼저 갈게 다음에 봐!!",
         images: ["images/work-back.jpg"],
         actorReply: null
       },
