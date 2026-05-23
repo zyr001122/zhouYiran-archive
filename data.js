@@ -2,9 +2,9 @@ const posts = [
   {
     id: 1,
     date: "2026-05-22T23:32",
-    weiboUrl: "https://weibo.com/5994946077/5301498055231660",
+    weiboUrl: "https://weibo.com/5994946077/R0CYdlWZC",
     originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
-    translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 뭐든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
+    translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 모든 일이든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
     images: [],
     comments: [
       {
@@ -15,14 +15,14 @@ const posts = [
         images: ["images/cat-white.jpg"],
         actorReply: {
           originalText: "在看你的表情包 😑",
-          translatedText: "네가 올린 짤 보고 있어 😑"
+          translatedText: "네 짤 보고 있어 😑"
         }
       },
       {
         id: 102,
         username: "Dear-喇巴粥",
         originalText: "人。你在翻评论吗？@周翊然Tz",
-        translatedText: "너 댓글 내리고 있었지 @周翊然Tz",
+        translatedText: "야, 댓글 내리고 있었지 @周翊然Tz",
         images: ["images/cat-green.jpg"],
         actorReply: {
           originalText: "对的 人",
@@ -85,7 +85,7 @@ const posts = [
         id: 108,
         username: "粥粥盐hioo7",
         originalText: "我好奇国外什么温度还能用到这个！！",
-        translatedText: "외국은 날씨가 몇 도길래 이걸 쓰고 있는지 궁금해!!",
+        translatedText: "거기는 날씨가 어떻길래 아직도 이걸 쓰는지 궁금해",
         images: ["images/campfire.jpg"],
         actorReply: {
           originalText: "超级冷 早上晚上只有四度这样",
@@ -111,7 +111,7 @@ const posts = [
         images: ["images/nail.jpg"],
         actorReply: {
           originalText: "好看！",
-          translatedText: "예쁘네!"
+          translatedText: "예쁘다"
         }
       },
       {
@@ -133,7 +133,7 @@ const posts = [
         images: ["images/hair-pink.jpg"],
         actorReply: {
           originalText: "我猜是apm",
-          translatedText: "APM 행사 맞지"
+          translatedText: "APM 행사 때?"
         }
       },
       {
@@ -206,11 +206,11 @@ const posts = [
         id: 119,
         username: "轻轻茉莉不加冰-",
         originalText: "这个黑黑的是什么！",
-        translatedText: "이거 까맣게 생긴 건 뭐야?!",
+        translatedText: "이거 까맣게 생긴 건 뭐야?",
         images: ["images/coal.jpg"],
         actorReply: {
           originalText: "煤炭啊 😹",
-          translatedText: "석탄이야 😹"
+          translatedText: "석탄이지 😹"
         }
       },
       {
@@ -288,7 +288,7 @@ const posts = [
         actorReplies: [
           {
             originalText: "一个字 绝了",
-            translatedText: "한글자로 대박"
+            translatedText: "한마디로 끝"
           },
           {
             originalText: "哦不对 是两个字 🤦",
@@ -338,7 +338,234 @@ const posts = [
         images: ["images/meme-bug.jpg"],
         actorReply: {
           originalText: "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-          translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+          translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+        }
+      }
+    ]
+  },
+  {
+    id: 2,
+    date: "2026-04-22T20:30",
+    weiboUrl: "https://weibo.com/5994946077",
+    originalText: "周翊然超话 来了 ​​​",
+    translatedText: "주익연 초화 왔어요",
+    images: [],
+    comments: [
+      {
+        id: 201,
+        username: "周翊然Tz",
+        originalText: "最后分享一张 上班的照片 我先走了下次见！！",
+        translatedText: "마지막으로 출근 사진 한 장 공유해요 저 먼저 갈게요 다음에 봐요!!",
+        images: ["images/work-back.jpg"],
+        actorReply: null
+      },
+      {
+        id: 202,
+        username: "只吃两碗饭-",
+        originalText: "请问这位训狗届最严厉的父亲 茅妹和拉瑞除了坐下和不准吃开发出什么新技能了吗！🙊",
+        translatedText: "실례지만 반려견 훈련계에서 가장 엄격한 아버지님 마오메이랑 라리가 앉아랑 먹지마 말고 새로 익힌 기술이 있나요?! 🙊",
+        images: ["images/maotai-hat.jpg"],
+        actorReply: {
+          originalText: "还有 站起来",
+          translatedText: "그리고 일어서"
+        }
+      },
+      {
+        id: 203,
+        username: "翊分钟恋人z",
+        originalText: "哥哥难道你当时在copy这个？",
+        translatedText: "오빠 혹시 그때 이거 따라한 거야?",
+        images: ["images/valorant-chamber.jpg"],
+        actorReply: {
+          originalText: "那个时候我还没有玩这个游戏🙄",
+          translatedText: "그때는 이 게임 아직 안 했는데요 🙄"
+        }
+      },
+      {
+        id: 204,
+        username: "熹然Z相逢",
+        originalText: "翊然，此时此刻看着它，你在想什么呢～",
+        translatedText: "익연아 지금 이 순간 그걸 보면서 무슨 생각 해~",
+        images: ["images/black-sportscar.jpg"],
+        actorReply: {
+          originalText: "在想 弄什么涂装好看",
+          translatedText: "어떤 도색이 예쁠지 생각 중"
+        }
+      },
+      {
+        id: 205,
+        username: "魚肉蛋黄酥o_",
+        originalText: "哥哥 送你一个表情包 请收好🤔",
+        translatedText: "오빠 짤 하나 선물할게요 잘 받아요 🤔",
+        images: ["images/ferrari-headset.jpg"],
+        actorReply: {
+          originalText: "法拉利什么段位哈哈哈哈",
+          translatedText: "페라리가 무슨 티어예요 ㅋㅋㅋㅋ"
+        }
+      },
+      {
+        id: 206,
+        username: "翊分钟恋人z",
+        originalText: "给假面骑士 滑雪 开车 打瓦排个名 我好想知道现在假面骑士排第几🤭🤭",
+        translatedText: "가면라이더 스키 운전 발로란트 순위 매겨줘요 지금 가면라이더가 몇 위인지 너무 궁금해요 🤭🤭",
+        images: ["images/figure-ski.jpg"],
+        actorReply: {
+          originalText: "每个季节 有每个季节该做的事情🫡",
+          translatedText: "계절마다 그 계절에 해야 할 일이 있죠 🫡"
+        }
+      },
+      {
+        id: 207,
+        username: "轻轻茉莉不加冰-",
+        originalText: "哥哥 给你看我新换的耳钉🫡",
+        translatedText: "오빠 새로 바꾼 귀걸이 보여줄게요 🫡",
+        images: ["images/earring-shinchan.jpg"],
+        actorReply: {
+          originalText: "好看 蜡笔小新也很可爱",
+          translatedText: "예뻐요 짱구도 너무 귀엽네요"
+        }
+      },
+      {
+        id: 208,
+        username: "亿口甜粥_",
+        originalText: "哥哥这是去当赛车拉拉队了吗 体验感怎么样👀",
+        translatedText: "오빠 레이싱 응원단 하러 간 거예요? 어떤 느낌이었어요? 👀",
+        images: ["images/racing-staff.jpg"],
+        actorReply: {
+          originalText: "不如自己开👀",
+          translatedText: "직접 모는 게 낫죠 👀"
+        }
+      },
+      {
+        id: 209,
+        username: "樱花味的cherry",
+        originalText: "哥哥你的微博有没有语音评论的功能呀",
+        translatedText: "오빠 웨이보에 음성 댓글 기능 있어요?",
+        images: ["images/maotai-forehead.jpg"],
+        actorReply: {
+          originalText: "看了一下 没有",
+          translatedText: "확인해봤는데 없어요"
+        }
+      },
+      {
+        id: 210,
+        username: "BianTaoTi-",
+        originalText: "你怎么只喷这个贴纸 你没有别的喷漆图案了吗哈哈哈哈😂",
+        translatedText: "왜 이 스티커만 붙여요 다른 스프레이 패턴은 없어요? ㅋㅋㅋㅋ 😂",
+        images: ["images/valorant-sticker.jpg"],
+        actorReply: {
+          originalText: "这是给队友点赞用的",
+          translatedText: "이건 팀원 칭찬할 때 쓰는 거예요"
+        }
+      },
+      {
+        id: 211,
+        username: "只吃两碗饭-",
+        originalText: "老公给你分享两张刚洗出来的胶片~要是我有间暗房能自己洗胶卷就好了！！🧑‍🧒‍🧒",
+        translatedText: "자기야 방금 현상한 필름 사진 두 장 공유해줄게요~ 암실이 있어서 직접 현상할 수 있으면 좋겠어요!! 🧑‍🧒‍🧒",
+        images: ["images/alley.jpg", "images/china-film.jpg"],
+        actorReply: {
+          originalText: "自己洗照片  厉害啊",
+          translatedText: "직접 사진 현상하다니 대단하네요"
+        }
+      },
+      {
+        id: 212,
+        username: "尴尬家小柴",
+        originalText: "送你一个表情包🤩",
+        translatedText: "짤 하나 선물할게요 🤩",
+        images: ["images/dog-laydown.jpg"],
+        actorReply: {
+          originalText: "哈哈哈哈哈哈哈",
+          translatedText: "ㅋㅋㅋㅋㅋㅋㅋ"
+        }
+      },
+      {
+        id: 213,
+        username: "王一本啊",
+        originalText: "看我听到了什么，春日部版Beauty And A Beat",
+        translatedText: "내가 무슨 걸 들었냐면, 카스카베 버전 Beauty And A Beat",
+        images: ["images/beauty-beat.jpg"],
+        actorReply: {
+          originalText: "？？？",
+          translatedText: "???"
+        }
+      },
+      {
+        id: 214,
+        username: "小狗蔓越莓",
+        originalText: "哥哥现在在干嘛发个照片报备一下",
+        translatedText: "오빠 지금 뭐 해요 사진 한 장 보내줘요",
+        images: ["images/ribbon-dog.jpg"],
+        actorReply: {
+          originalText: "(사진으로 답장)",
+          translatedText: "(사진으로 답장)"
+        }
+      },
+      {
+        id: 215,
+        username: "祈川十里春",
+        originalText: "这么大一条鱼钓了多久呀？要不要考虑分享一下钓鱼技术！",
+        translatedText: "이렇게 큰 물고기를 얼마나 낚은 거예요? 낚시 기술 좀 공유해줄 생각 없어요?",
+        images: ["images/fishing-bw.jpg"],
+        actorReply: {
+          originalText: "遛鱼十分钟",
+          translatedText: "물고기 달래는 데 10분"
+        }
+      },
+      {
+        id: 216,
+        username: "Campbe_眠雪碎眠悸",
+        originalText: "最近我皮肤真的不是很好，他们都让我自己补充点维生素，但是我根本不需要那玩意，因为你就是我的维E。",
+        translatedText: "요즘 피부가 진짜 별로인데 다들 비타민 챙겨 먹으라고 해요. 근데 저는 그런 거 필요 없어요, 당신이 제 비타민E이니까요.",
+        images: ["images/mint-meme.jpg"],
+        actorReply: {
+          originalText: "…..",
+          translatedText: "….."
+        }
+      },
+      {
+        id: 217,
+        username: "Eternal-翊序哼痣",
+        originalText: "人太多了，不喜欢，标记一下，走了，记得回复",
+        translatedText: "사람 너무 많아요, 싫어요, 표시해두고 갈게요, 답장 꼭 해줘요",
+        images: ["images/baby-cat.jpg"],
+        actorReply: {
+          originalText: "OKOK",
+          translatedText: "OKOK"
+        }
+      },
+      {
+        id: 218,
+        username: "忙内专家",
+        originalText: "猜你想念重庆的火锅了",
+        translatedText: "충칭 훠궈 그리울 것 같아서요",
+        images: ["images/hotpot1.jpg", "images/hotpot2.jpg"],
+        actorReply: {
+          originalText: "又来诱惑我🙂",
+          translatedText: "또 나를 유혹하네요 🙂"
+        }
+      },
+      {
+        id: 219,
+        username: "喝口QQ粥-",
+        originalText: "哥哥你这拍的是什么呀 看半天没有看出来是什么",
+        translatedText: "오빠 이게 뭘 찍은 거예요 한참 봐도 뭔지 모르겠어요",
+        images: ["images/leaf-tree.jpg"],
+        actorReply: {
+          originalText: "树上全是公鸡 看不出来吧哈哈哈",
+          translatedText: "나무에 수탉이 가득해요 못 알아보겠죠 ㅋㅋㅋ"
+        }
+      },
+      {
+        id: 220,
+        username: "Michelleq_0915",
+        originalText: "哥哥请选择你的英雄",
+        translatedText: "오빠 영웅을 선택해줘요",
+        images: ["images/racing-green.jpg", "images/naci-green.jpg", "images/purple-hat-green.jpg"],
+        actorReply: {
+          originalText: "画得很好啊",
+          translatedText: "잘 그렸네요"
         }
       }
     ]
