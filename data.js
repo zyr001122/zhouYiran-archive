@@ -354,8 +354,8 @@ const posts = [
   {
     id: 2,
     date: "2026-04-22T20:30",
-    weiboUrl: "https://weibo.com/5994946077",
-    originalText: "周翊然超话 来了 ​​​",
+    weiboUrl: "https://weibo.com/5994946077/5290585814469338",
+    originalText: "周翊然超话 来了",
     translatedText: "주익연 초화 왔어",
     images: [],
     comments: [
@@ -506,8 +506,9 @@ const posts = [
         translatedText: "오빠 지금 뭐 해 사진 올려서 보고해 줘",
         images: ["images/ribbon-dog.jpg"],
         actorReply: {
-          originalText: "(사진으로 답장)",
-          translatedText: "(사진으로 답장)"
+          originalText: "",
+          translatedText: "",
+          replyImages: ["images/xianxia-movie.jpg"]
         }
       },
       {
