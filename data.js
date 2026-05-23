@@ -769,11 +769,11 @@ const posts = [
         username: "家有小狗i开车",
         originalText: "周翊然给我回复！",
         translatedText: "주익연 답글 달아달라고！",
-        images: ["images/wechat-capture.gif"],
+        images: ["images/wechat-capture.jpg"],
         actorReply: { 
           originalText: "", 
           translatedText: "",
-          replyImages: ["images/watermelon.gif"]
+          replyImages: ["images/watermelon-meme.gif"]
         }
       },
       {
