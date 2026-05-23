@@ -371,9 +371,7 @@ const posts = [
         originalText: "哥哥现在在干嘛发个照片报备一下",
         translatedText: "오빠 지금 뭐 해 사진 올려서 보고해 줘",
         images: ["images/ribbon-dog.jpg"],
-        actorReply: {
-          replyImages: ["images/xianxia-movie.jpg"]
-        }
+        actorReply: { replyImages: ["images/xianxia-movie.jpg"] }
       },
       {
         id: 215,
@@ -576,9 +574,7 @@ const posts = [
         originalText: "哥哥去重庆吃好吃的了吗❤️",
         translatedText: "오빠 충칭 가서 맛있는 거 먹었어?❤️",
         images: ["images/chongqing-noodle.jpg"],
-        actorReply: {
-          replyImages: ["images/jeonbyeong-food.jpg"]
-        }
+        actorReply: { replyImages: ["images/jeonbyeong-food.jpg"] }
       },
       {
         id: 318,
@@ -664,25 +660,14 @@ const posts = [
       }
     ]
   },
-  네! 여기 있어요 😊
-
-```js
-  ,{
+  {
     id: 6,
     date: "2026-01-23T00:08",
     weiboUrl: "https://weibo.com/5994946077",
-    originalText: "다들 자?",
+    originalText: "睡觉了吗 大家",
     translatedText: "다들 자?",
     images: [],
     comments: [
-      {
-        id: 602,
-        username: "周翊然Tz",
-        originalText: "我也去蹭蹭烟花看看了🫡",
-        translatedText: "나 차에서 잠깐 눈 좀 붙이려고 다들 일찍 쉬고 밤새지 마 잘 자😴😴😴",
-        images: [],
-        actorReply: null
-      },
       {
         id: 601,
         username: "周翊然Tz",
@@ -890,6 +875,14 @@ const posts = [
         translatedText: "오빠 최근에 귀 뚫고 싶은데 뚫고 나서 관리 팁 같은 거 있어?",
         images: [],
         actorReply: { originalText: "滴眼药水消炎好 具体名字忘了 还有红霉素眼膏真的不错", translatedText: "안약(점안액) 넣어서 소염해주면 좋아 구체적인 이름은 까먹었어 그리고 에리스로마이신(안연고 등 연고류) 연고 진짜 좋아" }
+      },
+      {
+        id: 602,
+        username: "周翊然Tz",
+        originalText: "睡一下 大家早点休息 别熬夜了 晚安😴😴😴",
+        translatedText: "나 차에서 잠깐 눈 좀 붙이려고 다들 일찍 쉬고 밤새지 마 잘 자😴😴😴",
+        images: [],
+        actorReply: null
       }
     ]
   }
