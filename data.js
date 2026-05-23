@@ -59,7 +59,7 @@ const posts = [
         id: 108,
         username: "粥粥盐hioo7",
         originalText: "我好奇国外什么温度还能用到这个！！",
-        translatedText: "거기는 날씨가 어떻길래 아직도 이걸 쓰는지 궁금해!!",
+        translatedText: "외국은 날씨가 어떻길래 아직도 이걸 쓰는거야!!",
         images: ["images/campfire.jpg"],
         actorReply: { originalText: "超级冷 早上晚上只有四度这样", translatedText: "엄청 추워 아침 저녁으로 해봤자 4도 밖에 안 돼" }
       },
@@ -93,7 +93,7 @@ const posts = [
         originalText: "哥哥你看！电脑作业画的三视图 你猜猜是哪个活动造型！（很简单哦！）但是我肤色颜色没抓好 难受🫳🏻求夸！",
         translatedText: "오빠 이것 봐 컴퓨터 과제로 그린 삼면도인데 어떤 행사 스타일링인지 맞춰봐 (엄청 쉬워) 근데 내가 피부색 톤을 잘 못 잡아서 속상해 🫳🏻 칭찬해 줘",
         images: ["images/hair-pink.jpg"],
-        actorReply: { originalText: "我猜是apm", translatedText: "APM 행사 때?" }
+        actorReply: { originalText: "我猜是apm", translatedText: "APM 행사 같은데" }
       },
       {
         id: 113,
@@ -109,7 +109,7 @@ const posts = [
         originalText: "你这次去法国有吃到什么好吃的发出来看看👀",
         translatedText: "이번에 프랑스 가서 맛있게 먹은 거 있으면 올려줘 👀",
         images: ["images/crayon-shin.jpg"],
-        actorReply: { originalText: "我自己做的饭好吃啊", translatedText: "내가 직접 만든 밥이 맛있던데" }
+        actorReply: { originalText: "我自己做的饭好吃啊", translatedText: "내가 직접 만든 밥이 제일 맛있더라" }
       },
       {
         id: 115,
@@ -117,7 +117,7 @@ const posts = [
         originalText: "这只喵好帅啊！！在法国和你们同住吗！！",
         translatedText: "고양이 진짜 잘생겼다 프랑스 숙소에서 너희랑 같이 지낸 거야?!!",
         images: ["images/cat.jpg"],
-        actorReply: { originalText: "一睡醒就跑进来了 😹", translatedText: "자고 일어나니까 뛰어 들어왔어 😹" }
+        actorReply: { originalText: "一睡醒就跑进来了 😹", translatedText: "자고 일어나니까 침입해있었어 😹" }
       },
       {
         id: 116,
@@ -133,7 +133,7 @@ const posts = [
         originalText: "看到锦鲤许个愿吧",
         translatedText: "행운의 잉어를 봤으니 소원 빌어봐",
         images: ["images/fish-koi.jpg"],
-        actorReply: { originalText: "🙏希望我和评论区的所有人都一切顺利！！！", translatedText: "🙏 나랑 댓글에 있는 모든 사람들 다 모든 일이 다 잘 풀리길" }
+        actorReply: { originalText: "🙏希望我和评论区的所有人都一切顺利！！！", translatedText: "🙏 나랑 댓글에 있는 모든 사람들 원하는 대로 다 잘 풀리길" }
       },
       {
         id: 118,
@@ -147,9 +147,9 @@ const posts = [
         id: 119,
         username: "轻轻茉莉不加冰-",
         originalText: "这个黑黑的是什么！",
-        translatedText: "이거 까맣게 생긴 건 뭐야?",
+        translatedText: "이거 까맣게 생긴 건 뭐야?!",
         images: ["images/coal.jpg"],
-        actorReply: { originalText: "煤炭啊 😹", translatedText: "석탄이지 😹" }
+        actorReply: { originalText: "煤炭啊 😹", translatedText: "석탄이야 😹" }
       },
       {
         id: 120,
@@ -179,7 +179,7 @@ const posts = [
         id: 123,
         username: "安颜颜颜颜Tz",
         originalText: "然然 感觉做的蛤蜊煎蛋很美味 😋",
-        translatedText: "익연이가 만든 굴계란전 엄청 맛있어 보이는데 😋",
+        translatedText: "익연이가 만든 굴계란전 엄청 맛있어 보이더라😋",
         images: ["images/food-zyr.jpg"],
         actorReply: { originalText: "😏", translatedText: "😏" }
       },
@@ -206,7 +206,7 @@ const posts = [
         translatedText: "이 조합 진짜 맛있는 거 맞아? 😭",
         images: ["images/food-qingjiao-porridge.jpg"],
         actorReplies: [
-          { originalText: "一个字 绝了", translatedText: "한마디로 끝" },
+          { originalText: "一个字 绝了", translatedText: "한글자로 대박" },
           { originalText: "哦不对 是两个字 🤦", translatedText: "아 아니네 두 글자구나 🤦🏻" }
         ],
         actorReply: null
@@ -225,7 +225,7 @@ const posts = [
         originalText: "哥哥会不会颠锅翻面呀！！🤭",
         translatedText: "오빠 웍질로 뒤집는 거 할 줄 알아? 🤭",
         images: ["images/food-egg-drawing.jpg"],
-        actorReply: { originalText: "难道没看到我预告中那快离地一米的翻面吗", translatedText: "예고편에서 내가 땅에서 거의 1미터 높이로 뒤집는 거 못 봤어?" }
+        actorReply: { originalText: "难道没看到我预告中那快离地一米的翻面吗", translatedText: "예고편에 내가 바닥에서 거의 1미터 높이로 뒤집는 거 못 봤어?" }
       },
       {
         id: 129,
@@ -233,7 +233,7 @@ const posts = [
         originalText: "你猜猜是什么猅？😋",
         translatedText: "무슨 고기인지 맞춰봐 😋",
         images: ["images/food-meat.jpg"],
-        actorReply: { originalText: "我猜鸡肉", translatedText: "닭고기 같은데" }
+        actorReply: { originalText: "我猜鸡肉", translatedText: "닭고기인가" }
       },
       {
         id: 130,
