@@ -770,7 +770,10 @@ const posts = [
         originalText: "周翊然给我回复！",
         translatedText: "주익연 답글 달아달라고！",
         images: ["images/wechat-capture.gif"],
-        actorReply: { originalText: "[수박짤]", translatedText: "(수박 짤로 답장)" }
+        actorReply: { 
+        originalText: "", 
+        translatedText: "",
+        replyImages: ["images/watermelon.gif"]
       },
       {
         id: 615,
