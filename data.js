@@ -4,7 +4,7 @@ const posts = [
     date: "2026-05-22T23:32",
     weiboUrl: "https://weibo.com/u/5994946077",
     originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
-    translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 모든 일이든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
+    translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 뭐든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
     images: [],
     comments: [
       {
@@ -15,14 +15,14 @@ const posts = [
         images: ["images/cat-white.jpg"],
         actorReply: {
           originalText: "在看你的表情包 😑",
-          translatedText: "네 짤 보고 있어 😑"
+          translatedText: "네가 올린 짤 보고 있어 😑"
         }
       },
       {
         id: 102,
         username: "Dear-喇巴粥",
         originalText: "人。你在翻评论吗？@周翊然Tz",
-        translatedText: "야, 댓글 내리고 있었지 @周翊然Tz",
+        translatedText: "너 댓글 내리고 있었지 @周翊然Tz",
         images: ["images/cat-green.jpg"],
         actorReply: {
           originalText: "对的 人",
@@ -85,7 +85,7 @@ const posts = [
         id: 108,
         username: "粥粥盐hioo7",
         originalText: "我好奇国外什么温度还能用到这个！！",
-        translatedText: "거기는 날씨가 어떻길래 아직도 이걸 쓰는지 궁금해",
+        translatedText: "외국은 날씨가 몇 도길래 이걸 쓰고 있는지 궁금해!!",
         images: ["images/campfire.jpg"],
         actorReply: {
           originalText: "超级冷 早上晚上只有四度这样",
@@ -111,7 +111,7 @@ const posts = [
         images: ["images/nail.jpg"],
         actorReply: {
           originalText: "好看！",
-          translatedText: "예쁘다"
+          translatedText: "예쁘네!"
         }
       },
       {
@@ -133,7 +133,7 @@ const posts = [
         images: ["images/hair-pink.jpg"],
         actorReply: {
           originalText: "我猜是apm",
-          translatedText: "APM 행사 때?"
+          translatedText: "APM 행사 맞지"
         }
       },
       {
@@ -206,11 +206,11 @@ const posts = [
         id: 119,
         username: "轻轻茉莉不加冰-",
         originalText: "这个黑黑的是什么！",
-        translatedText: "이거 까맣게 생긴 건 뭐야?",
+        translatedText: "이거 까맣게 생긴 건 뭐야?!",
         images: ["images/coal.jpg"],
         actorReply: {
           originalText: "煤炭啊 😹",
-          translatedText: "석탄이지 😹"
+          translatedText: "석탄이야 😹"
         }
       },
       {
@@ -288,7 +288,7 @@ const posts = [
         actorReplies: [
           {
             originalText: "一个字 绝了",
-            translatedText: "한마디로 끝"
+            translatedText: "한글자로 대박"
           },
           {
             originalText: "哦不对 是两个字 🤦",
@@ -338,7 +338,7 @@ const posts = [
         images: ["images/meme-bug.jpg"],
         actorReply: {
           originalText: "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-          translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+          translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         }
       }
     ]
