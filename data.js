@@ -11,7 +11,7 @@ const posts = [
         id: 101,
         username: "yiiii___________",
         originalText: "占有欲发作了 现在马上告诉我你在干嘛 @周翊然Tz",
-        translatedText: "소유욕 발동 지금 당장 뭐 하고 있는지 말해줘 @周翊然Tz",
+        translatedText: "집착 발동 지금 당장 뭐 하고 있는지 말해줘 @周翊然Tz",
         images: ["images/cat-white.jpg"],
         actorReply: { originalText: "在看你的表情包 😑", translatedText: "네 짤 보고 있어 😑" }
       },
