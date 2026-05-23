@@ -8,14 +8,6 @@ const posts = [
     images: [],
     comments: [
       {
-        id: 100,
-        username: "周翊然Tz",
-        originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
-        translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 모든 일이든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
-        images: [],
-        actorReply: null
-      },
-      {
         id: 101,
         username: "yiiii___________",
         originalText: "占有欲发作了 现在马上告诉我你在干嘛 @周翊然Tz",
@@ -36,14 +28,6 @@ const posts = [
           originalText: "对的 人",
           translatedText: "맞음"
         }
-      },
-      {
-        id: 103,
-        username: "周翊然Tz",
-        originalText: "才落地 来得有点晚了 😵",
-        translatedText: "이제 막 착륙해서 오느라 좀 늦었네 😵",
-        images: [],
-        actorReply: null
       },
       {
         id: 104,
@@ -348,6 +332,22 @@ const posts = [
           originalText: "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
           translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         }
+      },
+      {
+        id: 103,
+        username: "周翊然Tz",
+        originalText: "才落地 来得有点晚了 😵",
+        translatedText: "이제 막 착륙해서 오느라 좀 늦었네 😵",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 100,
+        username: "周翊然Tz",
+        originalText: "我走了 大家早点休息！🧑‍🚀 大家好好照顾自己 也希望我和大家能一切顺利 希望评论区的锦鲤许的愿能实现",
+        translatedText: "나 이제 갈게 다들 일찍 쉬어 🧑‍🚀 다들 몸 잘 챙기고 우리 다 모든 일이든 잘 풀릴 거야 댓글에 있던 행운의 잉어한테 빈 소원들이 다 이루어지면 좋겠다",
+        images: [],
+        actorReply: null
       }
     ]
   },
@@ -355,18 +355,10 @@ const posts = [
     id: 2,
     date: "2026-04-22T20:30",
     weiboUrl: "https://weibo.com/5994946077/5290585814469338",
-    originalText: "周翊然超话 来了",
+    originalText: "周翊然超话 来了 ​​​",
     translatedText: "주익연 초화 왔어",
     images: [],
     comments: [
-      {
-        id: 201,
-        username: "周翊然Tz",
-        originalText: "最后分享一张 上班的照片 我先走了下次见！！",
-        translatedText: "마지막으로 출근 사진 한 장 공유할게 나 먼저 갈게 다음에 봐!!",
-        images: ["images/work-back.jpg"],
-        actorReply: null
-      },
       {
         id: 202,
         username: "只吃两碗饭-",
@@ -382,11 +374,11 @@ const posts = [
         id: 203,
         username: "翊分钟恋人z",
         originalText: "哥哥难道你当时在copy这个？",
-        translatedText: "오빠 설마 너 그때 이거 카피하고 있었던 거야?",
+        translatedText: "오빠 설마 그때 이거 카피하고 있었던 거야?",
         images: ["images/valorant-chamber.jpg"],
         actorReply: {
           originalText: "那个时候我还没有玩这个游戏🙄",
-          translatedText: "그때 난 아직 이 게임 안 했었어 🙄"
+          translatedText: "그때는 아직 이 게임 안 했었어 🙄"
         }
       },
       {
@@ -408,7 +400,7 @@ const posts = [
         images: ["images/ferrari-headset.jpg"],
         actorReply: {
           originalText: "法拉利什么段位哈哈哈哈",
-          translatedText: "페라리 티어가 어떻게 돼 ㅋㅋㅋㅋ"
+          translatedText: "페라리 티어 뭔데 ㅋㅋㅋㅋ"
         }
       },
       {
@@ -419,29 +411,29 @@ const posts = [
         images: ["images/figure-ski.jpg"],
         actorReply: {
           originalText: "每个季节 有每个季节该做的事情🫡",
-          translatedText: "계절마다 그 계절에 해야 할 일이 있어 🫡"
+          translatedText: "계절마다 그 계절에 해야 할 일이 있는 거지 🫡"
         }
       },
       {
         id: 207,
         username: "轻轻茉莉不加冰-",
         originalText: "哥哥 给你看我新换的耳钉🫡",
-        translatedText: "오빠 나 새로 바꾼 귀걸이 보여줄게 🫡",
+        translatedText: "오빠 새로 바꾼 귀걸이 보여줄게 🫡",
         images: ["images/earring-shinchan.jpg"],
         actorReply: {
           originalText: "好看 蜡笔小新也很可爱",
-          translatedText: "예뻐 짱구도 귀엽네"
+          translatedText: "예쁘네 짱구도 귀엽다"
         }
       },
       {
         id: 208,
         username: "亿口甜粥_",
         originalText: "哥哥这是去当赛车拉拉队了吗 体验感怎么样👀",
-        translatedText: "오빠 이번에 레이싱 응원단 하러 간 거야 체감 어때 👀",
+        translatedText: "오빠 이번에 레이싱 응원단 하러 가보니까 어땠어 👀",
         images: ["images/racing-staff.jpg"],
         actorReply: {
           originalText: "不如自己开👀",
-          translatedText: "직접 운전하는 것만 못해 👀"
+          translatedText: "직접 운전하는 것만 못하더라 👀"
         }
       },
       {
@@ -452,29 +444,29 @@ const posts = [
         images: ["images/maotai-forehead.jpg"],
         actorReply: {
           originalText: "看了一下 没有",
-          translatedText: "방금 봤는데 없어"
+          translatedText: "방금 봤는데 없네"
         }
       },
       {
         id: 210,
         username: "BianTaoTi-",
         originalText: "你怎么只喷这个贴纸 你没有别的喷漆图案了吗哈哈哈哈😂",
-        translatedText: "너 왜 이 스티커만 뿌려 다른 스프레이 도안은 없어 ㅋㅋㅋㅋ 😂",
+        translatedText: "너 왜 이 스티커만 뿌려 다른 스프레이 없어? ㅋㅋㅋㅋ 😂",
         images: ["images/valorant-sticker.jpg"],
         actorReply: {
           originalText: "这是给队友点赞用的",
-          translatedText: "이건 팀원들한테 좋아요 누르는 용도야"
+          translatedText: "이건 팀원들 잘했다고 좋아요 해주는 용도야"
         }
       },
       {
         id: 211,
         username: "只吃两碗饭-",
         originalText: "老公给你分享两张刚洗出来的胶片~要是我有间暗房能自己洗胶卷就好了！！🧑‍🧒‍🧒",
-        translatedText: "여보 방금 인화한 필름 사진 두 장 공유할게~ 나한테 암실이 있어서 필름 직접 현상할 수 있으면 얼마나 좋을까!! 🧑‍🧒‍🧒",
+        translatedText: "여보 방금 인화한 필름 사진 두 장 공유할게~ 나한테 암실이 있어서 직접 현상할 수 있으면 얼마나 좋을까!! 🧑‍🧒‍🧒",
         images: ["images/alley.jpg", "images/china-film.jpg"],
         actorReply: {
           originalText: "自己洗照片  厉害啊",
-          translatedText: "사진을 직접 인화하다니 대단하네"
+          translatedText: "사진을 직접 인화한다니 대단하다"
         }
       },
       {
@@ -506,8 +498,8 @@ const posts = [
         translatedText: "오빠 지금 뭐 해 사진 올려서 보고해 줘",
         images: ["images/ribbon-dog.jpg"],
         actorReply: {
-          originalText: "",
-          translatedText: "",
+          originalText: "(사진으로 답장)",
+          translatedText: "(사진으로 답장)",
           replyImages: ["images/xianxia-movie.jpg"]
         }
       },
@@ -515,18 +507,18 @@ const posts = [
         id: 215,
         username: "祈川十里春",
         originalText: "这么大一条鱼钓了多久呀？要不要考虑分享一下钓鱼技术！",
-        translatedText: "이렇게 큰 물고기를 낚는 데 얼마나 걸렸어? 낚시 기술 좀 공유해 줄 생각 없어?",
+        translatedText: "이렇게 큰 물고기는 낚는 데 얼마나 걸려? 낚시 기술 좀 공유해 줄 생각 없어?",
         images: ["images/fishing-bw.jpg"],
         actorReply: {
           originalText: "遛鱼十分钟",
-          translatedText: "물고기랑 힘겨루기 10분"
+          translatedText: "물고기랑 10분동안 힘싸움했어"
         }
       },
       {
         id: 216,
         username: "Campbe_眠雪碎眠悸",
         originalText: "最近我皮肤真的不是很好，他们都让我自己补充点维生素，但是我根本不需要那玩意，因为你就是我的维E。",
-        translatedText: "요즘 내 피부가 진짜 별로라 다들 나보고 비타민 좀 챙겨 먹으라는데 난 그런 거 전혀 필요 없어 왜냐면 네가 내 비타민E니까.",
+        translatedText: "요즘 내 피부가 진짜 안 좋나봐 다들 나보고 비타민 좀 챙겨 먹으라는데 난 그런 거 전혀 필요 없어 왜냐면 네가 내 비타민E니까.",
         images: ["images/mint-meme.jpg"],
         actorReply: {
           originalText: "…..",
@@ -563,19 +555,27 @@ const posts = [
         images: ["images/leaf-tree.jpg"],
         actorReply: {
           originalText: "树上全是公鸡 看不出来吧哈哈哈",
-          translatedText: "나무 위에 수탉이 가득해 안 보이지 ㅋㅋㅋ"
+          translatedText: "나무 위에 수탉이 가득한데 안 보이나보네 ㅋㅋㅋ"
         }
       },
       {
         id: 220,
         username: "Michelleq_0915",
         originalText: "哥哥请选择你的英雄",
-        translatedText: "오빠 너의 영웅을 선택해 줘",
+        translatedText: "오빠 캐릭 선택해 줘",
         images: ["images/racing-green.jpg", "images/naci-green.jpg", "images/purple-hat-green.jpg"],
         actorReply: {
           originalText: "画得很好啊",
-          translatedText: "잘 그렸네"
+          translatedText: "잘 그렸다"
         }
+      },
+      {
+        id: 201,
+        username: "周翊然Tz",
+        originalText: "最后分享一张 上班的照片 我先走了下次见！！",
+        translatedText: "마지막으로 출근 사진 한 장 공유할게 나 먼저 갈게 다음에 봐!!",
+        images: ["images/work-back.jpg"],
+        actorReply: null
       }
     ]
   }
