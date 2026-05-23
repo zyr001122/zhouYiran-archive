@@ -434,7 +434,7 @@ const posts = [
   {
     id: 4,
     date: "2026-03-03T23:07",
-    weiboUrl: "https://weibo.com/5994946077/5279276314135607",
+    weiboUrl: "https://weibo.com/5994946077/5272505997854820",
     originalText: "元宵节快乐",
     translatedText: "즐거운 원소절 보내",
     images: ["images/yuanxiao.jpg"],
@@ -443,7 +443,7 @@ const posts = [
   {
     id: 3,
     date: "2026-03-22T15:30",
-    weiboUrl: "https://weibo.com/5994946077",
+    weiboUrl: "https://weibo.com/5994946077/5279276314135607",
     originalText: "hello ​​​",
     translatedText: "hello",
     images: [],
@@ -663,7 +663,7 @@ const posts = [
   {
     id: 6,
     date: "2026-01-23T00:08",
-    weiboUrl: "https://weibo.com/5994946077",
+    weiboUrl: "https://weibo.com/5994946077/5258025946319275",
     originalText: "睡觉了吗 大家",
     translatedText: "다들 자려나?",
     images: [],
