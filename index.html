@@ -283,8 +283,9 @@
             <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
-          <div class="actor-reply-original zh">${c.actorReply.originalText}</div>
-          <div class="actor-reply-translated">${c.actorReply.translatedText}</div>
+          ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${c.actorReply.originalText}</div>` : ''}
+          ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${c.actorReply.translatedText}</div>` : ''}
+          ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" />`).join('')}</div>` : ''}
         </div>`;
     }
     const isActor = c.username === ACTOR_NICK;
