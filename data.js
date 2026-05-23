@@ -355,19 +355,19 @@ const posts = [
     id: 2,
     date: "2026-04-22T20:30",
     weiboUrl: "https://weibo.com/5994946077/5290585814469338",
-    originalText: "周翊然超话 来了 ​​​",
-    translatedText: "주익연 초화 왔어",
+    originalText: "来了 ​​​",
+    translatedText: "왔어",
     images: [],
     comments: [
       {
         id: 202,
         username: "只吃两碗饭-",
         originalText: "请问这位训狗届最严厉的父亲 茅妹和拉瑞除了坐下和不准吃开发出什么新技能了吗！🙊",
-        translatedText: "반려견 훈련계의 가장 엄격한 아버님께 여쭙니다 마오메이랑 라루이는 앉아랑 먹지 마 말고 새로 개발한 개인기 있어?! 🙊",
+        translatedText: "반려견 훈련계의 가장 엄격한 아버지에게 질문 마오타이랑 페라리는 앉아랑 먹지 마 말고 새로 배운 개인기 있어?! 🙊",
         images: ["images/maotai-hat.jpg"],
         actorReply: {
           originalText: "还有 站起来",
-          translatedText: "그리고 일어서기"
+          translatedText: "그거랑 일어서기"
         }
       },
       {
@@ -385,11 +385,11 @@ const posts = [
         id: 204,
         username: "熹然Z相逢",
         originalText: "翊然，此时此刻看着它，你在想什么呢～",
-        translatedText: "익연아 지금 이 순간 이걸 보면서 무슨 생각 하고 있어~",
+        translatedText: "익연, 이 순간에 보면서 무슨 생각 하고 있던 거야?~",
         images: ["images/black-sportscar.jpg"],
         actorReply: {
           originalText: "在想 弄什么涂装好看",
-          translatedText: "어떤 랩핑 해야 예쁠까 생각 중"
+          translatedText: "어떤 랩핑 해야 예쁠까"
         }
       },
       {
@@ -400,14 +400,14 @@ const posts = [
         images: ["images/ferrari-headset.jpg"],
         actorReply: {
           originalText: "法拉利什么段位哈哈哈哈",
-          translatedText: "페라리 티어 뭔데 ㅋㅋㅋㅋ"
+          translatedText: "페라리는 티어 뭔데 ㅋㅋㅋㅋ"
         }
       },
       {
         id: 206,
         username: "翊分钟恋人z",
         originalText: "给假面骑士 滑雪 开车 打瓦排个名 我好想知道现在假面骑士排第几🤭🤭",
-        translatedText: "가면라이더 스키 운전 발로란트 순위 좀 매겨줘 지금 가면라이더가 몇 등인지 너무 알고 싶어 🤭🤭",
+        translatedText: "가면라이더 스키 운전 발로란트 순위 매겨줘 지금 가면라이더가 몇 등인지 너무 알고 싶어 🤭🤭",
         images: ["images/figure-ski.jpg"],
         actorReply: {
           originalText: "每个季节 有每个季节该做的事情🫡",
@@ -451,7 +451,7 @@ const posts = [
         id: 210,
         username: "BianTaoTi-",
         originalText: "你怎么只喷这个贴纸 你没有别的喷漆图案了吗哈哈哈哈😂",
-        translatedText: "너 왜 이 스티커만 뿌려 다른 스프레이 없어? ㅋㅋㅋㅋ 😂",
+        translatedText: "왜 이 스티커만 뿌려 다른 스프레이 없어? ㅋㅋㅋㅋ 😂",
         images: ["images/valorant-sticker.jpg"],
         actorReply: {
           originalText: "这是给队友点赞用的",
@@ -466,7 +466,7 @@ const posts = [
         images: ["images/alley.jpg", "images/china-film.jpg"],
         actorReply: {
           originalText: "自己洗照片  厉害啊",
-          translatedText: "사진을 직접 인화한다니 대단하다"
+          translatedText: "직접 인화라니 대단하다"
         }
       },
       {
@@ -498,8 +498,6 @@ const posts = [
         translatedText: "오빠 지금 뭐 해 사진 올려서 보고해 줘",
         images: ["images/ribbon-dog.jpg"],
         actorReply: {
-          originalText: "(사진으로 답장)",
-          translatedText: "(사진으로 답장)",
           replyImages: ["images/xianxia-movie.jpg"]
         }
       },
@@ -518,7 +516,7 @@ const posts = [
         id: 216,
         username: "Campbe_眠雪碎眠悸",
         originalText: "最近我皮肤真的不是很好，他们都让我自己补充点维生素，但是我根本不需要那玩意，因为你就是我的维E。",
-        translatedText: "요즘 내 피부가 진짜 안 좋나봐 다들 나보고 비타민 좀 챙겨 먹으라는데 난 그런 거 전혀 필요 없어 왜냐면 네가 내 비타민E니까.",
+        translatedText: "요즘 내 피부가 진짜 안 좋나봐 다들 나보고 비타민 좀 챙겨 먹으래 근데 난 그런 거 전혀 필요 없는데 왜냐면 네가 내 비타민E니까.",
         images: ["images/mint-meme.jpg"],
         actorReply: {
           originalText: "…..",
@@ -540,7 +538,7 @@ const posts = [
         id: 218,
         username: "忙内专家",
         originalText: "猜你想念重庆的火锅了",
-        translatedText: "네가 충칭 훠궈 그리워하고 있을 거라고 추측 중",
+        translatedText: "충칭 훠궈 땡기지",
         images: ["images/hotpot1.jpg", "images/hotpot2.jpg"],
         actorReply: {
           originalText: "又来诱惑我🙂",
@@ -576,7 +574,7 @@ const posts = [
         translatedText: "마지막으로 출근 사진 한 장 공유할게 나 먼저 갈게 다음에 봐!!",
         images: ["images/work-back.jpg"],
         actorReply: null
-      }
+        }
     ]
   },
   {
