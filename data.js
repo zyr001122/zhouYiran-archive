@@ -19,7 +19,7 @@ const posts = [
         id: 102,
         username: "Dear-喇巴粥",
         originalText: "人。你在翻评论吗？@周翊然Tz",
-        translatedText: "야, 댓글 내리고 있었지 @周翊然Tz",
+        translatedText: "너 댓글 내리고 있었지? @周翊然Tz",
         images: ["images/cat-green.jpg"],
         actorReply: { originalText: "对的 人", translatedText: "맞음" }
       },
@@ -59,7 +59,7 @@ const posts = [
         id: 108,
         username: "粥粥盐hioo7",
         originalText: "我好奇国外什么温度还能用到这个！！",
-        translatedText: "거기는 날씨가 어떻길래 아직도 이걸 쓰는지 궁금해",
+        translatedText: "거기는 날씨가 어떻길래 아직도 이걸 쓰는지 궁금해!!",
         images: ["images/campfire.jpg"],
         actorReply: { originalText: "超级冷 早上晚上只有四度这样", translatedText: "엄청 추워 아침 저녁으로 해봤자 4도 밖에 안 돼" }
       },
