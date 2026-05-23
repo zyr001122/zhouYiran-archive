@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -376,11 +376,43 @@
   }
 
   function renderFeed() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
     const filtered = getFilteredPosts();
     document.getElementById('feed-count').textContent = filtered.length + '개';
     document.getElementById('posts-feed').innerHTML = filtered.length === 0
       ? `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`
       : filtered.map(renderPost).join('');
+
+    // 검색어 있으면 댓글창 자동 열기 + 하이라이트
+    if (query) {
+      filtered.forEach(post => {
+        const hasCommentMatch = post.comments && post.comments.some(c =>
+          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
+          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
+        );
+        if (hasCommentMatch) {
+          const cmtSection = document.getElementById(`comments-${post.id}`);
+          const btn = document.getElementById(`cmtbtn-${post.id}`);
+          if (cmtSection) {
+            cmtSection.classList.add('open');
+            btn.textContent = '댓글 접기 ▲';
+          }
+          // 일치하는 댓글 하이라이트
+          if (cmtSection) {
+            cmtSection.querySelectorAll('.comment-item').forEach(item => {
+              const text = item.textContent.toLowerCase();
+              if (text.includes(query)) {
+                item.style.outline = '2px solid var(--pink)';
+                item.style.borderRadius = '10px';
+              } else {
+                item.style.outline = '';
+              }
+            });
+          }
+        }
+      });
+    }
   }
 
   function filterByMonth(year, month) {
