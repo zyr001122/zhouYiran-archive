@@ -229,7 +229,7 @@ const posts = [
         username: "然然不转弯zz",
         originalText: "是自己做的吗哥哥",
         translatedText: "오빠가 직접 만든 거야?",
-        images: ["images/food-qingjiao-cook.jpg"],
+        images: ["images/food-qingjiao-porridge.jpg"],
         actorReply: {
           originalText: "你猜",
           translatedText: "맞춰봐"
