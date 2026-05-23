@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>周翊然Tz 초화 댓파 번역 아카이브</title>
+  <title>周翊然Tz 초화 번역 아카이브</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -28,14 +28,6 @@
     body { font-family: 'Pretendard', -apple-system, sans-serif; background: var(--pink-pale); color: var(--text); min-height: 100vh; }
     .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
 
-    /* HEADER */
-    .site-header { background: #fde8ef; border-bottom: none; position: sticky; top: 0; z-index: 100; }
-    .header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 52px; display: flex; align-items: center; }
-    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-icon { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-    .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .logo-name { font-size: 15px; font-weight: 700; color: var(--pink-deep); letter-spacing: -0.3px; }
-
     /* HERO */
     .hero { background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 60%, #fff0f5 100%); border-bottom: 1px solid var(--border); padding: 1.5rem 1.5rem 2rem; }
     .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.75rem; }
@@ -43,12 +35,9 @@
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--pink-deep); margin-bottom: 4px; }
     .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
-    .hero-stats { display: flex; gap: 24px; }
-    .stat-item { text-align: left; }
-    .stat-num { font-size: 17px; font-weight: 700; color: var(--pink-deep); display: block; }
-    .stat-label { font-size: 11px; color: var(--text-muted); }
+    .hero-notice { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
+    .hero-notice-desc { font-size: 11px; color: var(--text-light); margin-top: 4px; }
 
-    .hero-notice { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--text-muted); }
     .main-layout { max-width: 960px; margin: 0 auto; padding: 1.5rem; display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: start; }
 
     /* FEED */
@@ -56,6 +45,12 @@
     .feed-title { font-size: 15px; font-weight: 700; color: var(--pink-deep); display: flex; align-items: center; gap: 8px; }
     .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--pink); border-radius: 2px; }
     .post-count-badge { font-size: 11px; background: var(--pink-light); color: var(--pink-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+
+    /* 날짜 인덱스 */
+    .date-index { display: flex; align-items: center; gap: 10px; margin: 1.2rem 0 0.6rem; }
+    .date-index-badge { font-size: 11px; font-weight: 700; color: var(--pink-deep); background: var(--pink-light); padding: 3px 10px; border-radius: 10px; white-space: nowrap; }
+    .date-index-line { flex: 1; height: 1px; background: var(--border); }
+
     .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
     .post-card:hover { box-shadow: 0 4px 20px rgba(247,164,184,0.2); }
 
@@ -72,13 +67,10 @@
     /* POST BODY */
     .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
     .original-text { font-size: 13px; color: var(--text-muted); line-height: 1.8; padding: 10px 12px; background: var(--pink-pale); border-radius: 8px; border-left: 3px solid var(--pink-light); margin-bottom: 10px; }
-    .translated-label { font-size: 10px; color: var(--pink-deep); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 4px; }
     .translated-text { font-size: 15px; color: var(--text); line-height: 1.85; }
     .post-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 12px 0; }
     .post-images img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 280px; }
     .post-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 10px; }
-    .like-count { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--text-muted); }
-    .like-heart { color: var(--pink); font-size: 15px; }
     .toggle-comments-btn { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); border: none; padding: 5px 12px; border-radius: 12px; cursor: pointer; font-family: inherit; transition: all 0.2s; }
     .toggle-comments-btn:hover { background: var(--pink); color: white; }
 
@@ -90,10 +82,8 @@
     .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .comment-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
     .comment-username { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .comment-likes { margin-left: auto; font-size: 11px; color: var(--text-light); }
     .comment-original { font-size: 11px; color: var(--text-light); line-height: 1.6; margin-bottom: 3px; }
     .comment-translated { font-size: 13px; color: var(--text); line-height: 1.7; }
-
     .comment-images { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .comment-images img { width: auto; max-width: 100%; max-height: 180px; border-radius: 8px; object-fit: contain; }
 
@@ -111,8 +101,6 @@
     .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; }
     .sidebar-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
     .sidebar-title-dot { width: 6px; height: 6px; background: var(--pink); border-radius: 50%; display: inline-block; }
-
-    /* DATE TREE */
     .year-group { margin-bottom: 8px; }
     .year-label { font-size: 13px; font-weight: 700; color: var(--pink-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
     .year-label:hover { color: var(--pink-dark); }
@@ -121,8 +109,6 @@
     .month-item:hover { background: var(--pink-light); color: var(--pink-deep); }
     .month-item.active { background: var(--pink); color: white; font-weight: 600; }
     .month-count { font-size: 10px; opacity: 0.7; }
-
-    /* NOTICE */
     .notice-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
     .notice-item:last-child { border-bottom: none; }
     .notice-label { font-size: 10px; color: var(--text-light); margin-top: 2px; font-weight: 500; }
@@ -149,14 +135,11 @@
       .main-layout { grid-template-columns: 1fr; padding: 1rem; }
       .sidebar { display: none; }
       .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
-      .hero-stats { justify-content: center; }
       .hero-avatar { width: 100px; height: 100px; }
     }
   </style>
 </head>
 <body>
-
-
 
 <!-- HERO -->
 <section class="hero">
@@ -164,22 +147,13 @@
     <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
     <div class="hero-info">
       <h1>周翊然Tz</h1>
-      <p>22일 이달의 초화 아카이브</p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num" id="stat-update">-</span>
-          <span class="stat-label">최근 업데이트</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" id="stat-comments">0</span>
-          <span class="stat-label">번역 댓글 수</span>
-        </div>
-      </div>
+      <p>초화 아카이브</p>
       <div class="hero-notice">
         <span>✍️ VAz</span>
         <span>·</span>
         <span> 번역 오/의역 多</span>
       </div>
+      <div class="hero-notice-desc">매 달 22일 초화 댓글파티</div>
     </div>
   </div>
 </section>
@@ -189,7 +163,7 @@
   <div class="main-layout">
     <section>
       <div class="search-bar">
-        <input class="search-input" type="text" id="searchInput" placeholder="번역 내용으로 검색..." oninput="renderFeed()" />
+        <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
       </div>
       <div class="filter-active-bar" id="filterBar">
         <span id="filterLabel"></span>
@@ -252,17 +226,6 @@
   const ACTOR_NICK = '周翊然Tz';
   let currentFilter = { type: 'all', value: null };
 
-  function formatNum(n) {
-    if (n >= 10000) return (n / 10000).toFixed(1) + '만';
-    if (n >= 1000) return (n / 1000).toFixed(1) + '천';
-    return n.toLocaleString();
-  }
-
-  function formatDate(d) {
-    const date = new Date(d);
-    return `${date.getMonth()+1}월 ${date.getDate()}일`;
-  }
-
   function formatDateTime(d) {
     const date = new Date(d);
     const month = date.getMonth() + 1;
@@ -275,6 +238,11 @@
   function formatUpdateDate(d) {
     const date = new Date(d);
     return `${date.getMonth()+1}월 ${date.getDate()}일`;
+  }
+
+  function getMonthLabel(d) {
+    const date = new Date(d);
+    return `${date.getFullYear()}년 ${date.getMonth()+1}월`;
   }
 
   function renderComment(c) {
@@ -310,7 +278,6 @@
         <div class="comment-header">
           ${avatarHtml}
           <span class="comment-username" style="${isActor ? 'color:var(--pink-deep);font-weight:700;' : ''}">${c.username}</span>
-
         </div>
         <div class="comment-original zh">${c.originalText}</div>
         <div class="comment-translated">${c.translatedText}</div>
@@ -332,7 +299,6 @@
 
     let commentsHtml;
     let commentCount = post.comments ? post.comments.length : 0;
-    let replyCount = post.comments ? post.comments.filter(c => c.actorReply || c.actorReplies).length : 0;
     let autoOpen = false;
 
     if (query && post.comments && post.comments.length) {
@@ -361,15 +327,14 @@
           <a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>
         </div>
         <div class="post-body">
-          <div class="original-label">중국어 원문</div>
+          <div class="original-label">원문</div>
           <div class="original-text zh">${post.originalText}</div>
-          <div class="translated-label">한국어 번역 🇰🇷</div>
           <div class="translated-text">${post.translatedText}</div>
         </div>
         ${imagesHtml}
         <div class="post-footer">
           <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
-            댓글 번역 보기 (${commentCount}개${replyCount > 0 ? ` · 답글 ${replyCount}개` : ''})
+            댓글 보기 (${commentCount})
           </button>
         </div>
         <div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
@@ -383,7 +348,10 @@
     const el = document.getElementById(`comments-${id}`);
     const btn = document.getElementById(`cmtbtn-${id}`);
     el.classList.toggle('open');
-    btn.textContent = el.classList.contains('open') ? '댓글 접기 ▲' : btn.textContent.replace('접기 ▲', '보기');
+    if (el.classList.contains('open')) {
+      const total = el.querySelectorAll('.comment-item').length;
+      btn.textContent = `댓글 접기 ▲`;
+    }
   }
 
   function getFilteredPosts() {
@@ -415,9 +383,25 @@
     const query = document.getElementById('searchInput').value.toLowerCase();
     const filtered = getFilteredPosts();
     document.getElementById('feed-count').textContent = filtered.length + '개';
-    document.getElementById('posts-feed').innerHTML = filtered.length === 0
-      ? `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`
-      : filtered.map(p => renderPost(p, query)).join('');
+
+    if (filtered.length === 0) {
+      document.getElementById('posts-feed').innerHTML = `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`;
+      return;
+    }
+
+    // 날짜 인덱스 추가
+    let html = '';
+    let lastMonth = null;
+    filtered.forEach(p => {
+      const monthLabel = getMonthLabel(p.date);
+      if (monthLabel !== lastMonth) {
+        html += `<div class="date-index"><span class="date-index-badge">🗓 ${monthLabel}</span><span class="date-index-line"></span></div>`;
+        lastMonth = monthLabel;
+      }
+      html += renderPost(p, query);
+    });
+
+    document.getElementById('posts-feed').innerHTML = html;
   }
 
   function filterByMonth(year, month) {
@@ -436,15 +420,6 @@
     document.getElementById('searchInput').value = '';
     document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     renderFeed();
-  }
-
-  function renderStats() {
-    const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    if (sorted.length > 0) {
-      document.getElementById('stat-update').textContent = formatUpdateDate(sorted[0].date);
-    }
-    const totalComments = posts.reduce((s, p) => s + (p.comments ? p.comments.length : 0), 0);
-    document.getElementById('stat-comments').textContent = totalComments;
   }
 
   function renderDateTree() {
@@ -473,7 +448,6 @@
     }).join('');
   }
 
-  renderStats();
   renderFeed();
   renderDateTree();
 </script>
