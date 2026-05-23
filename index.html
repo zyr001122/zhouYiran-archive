@@ -306,14 +306,37 @@
       </div>`;
   }
 
-  function renderPost(post) {
+  function commentMatches(c, query) {
+    return (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+      (c.originalText && c.originalText.toLowerCase().includes(query)) ||
+      (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query)) ||
+      (c.actorReplies && c.actorReplies.some(r => r.translatedText && r.translatedText.toLowerCase().includes(query)));
+  }
+
+  function renderPost(post, query) {
     const imagesHtml = post.images && post.images.length
       ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>` : '';
-    const commentsHtml = post.comments && post.comments.length
-      ? post.comments.map(renderComment).join('')
-      : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
-    const commentCount = post.comments ? post.comments.length : 0;
-    const replyCount = post.comments ? post.comments.filter(c => c.actorReply).length : 0;
+
+    let commentsHtml;
+    let commentCount = post.comments ? post.comments.length : 0;
+    let replyCount = post.comments ? post.comments.filter(c => c.actorReply || c.actorReplies).length : 0;
+    let autoOpen = false;
+
+    if (query && post.comments && post.comments.length) {
+      const matched = post.comments.filter(c => commentMatches(c, query));
+      if (matched.length > 0) {
+        commentsHtml = matched.map(renderComment).join('');
+        commentCount = matched.length;
+        autoOpen = true;
+      } else {
+        commentsHtml = '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+      }
+    } else {
+      commentsHtml = post.comments && post.comments.length
+        ? post.comments.map(renderComment).join('')
+        : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+    }
+
     return `
       <article class="post-card" id="post-${post.id}">
         <div class="post-meta">
@@ -336,8 +359,8 @@
             댓글 번역 보기 (${commentCount}개${replyCount > 0 ? ` · 답글 ${replyCount}개` : ''})
           </button>
         </div>
-        <div class="comments-section" id="comments-${post.id}">
-          <div class="comments-title">💬 댓글 번역</div>
+        <div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
+          <div class="comments-title">💬 댓글 번역${query && autoOpen ? ` <span style="font-size:11px;color:var(--pink);font-weight:400;">· "${query}" 검색 결과</span>` : ''}</div>
           ${commentsHtml}
         </div>
       </article>`;
@@ -381,38 +404,7 @@
     document.getElementById('feed-count').textContent = filtered.length + '개';
     document.getElementById('posts-feed').innerHTML = filtered.length === 0
       ? `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`
-      : filtered.map(renderPost).join('');
-
-    // 검색어 있으면 댓글창 자동 열기 + 하이라이트
-    if (query) {
-      filtered.forEach(post => {
-        const hasCommentMatch = post.comments && post.comments.some(c =>
-          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
-          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
-        );
-        if (hasCommentMatch) {
-          const cmtSection = document.getElementById(`comments-${post.id}`);
-          const btn = document.getElementById(`cmtbtn-${post.id}`);
-          if (cmtSection) {
-            cmtSection.classList.add('open');
-            btn.textContent = '댓글 접기 ▲';
-          }
-          // 일치하는 댓글 하이라이트
-          if (cmtSection) {
-            cmtSection.querySelectorAll('.comment-item').forEach(item => {
-              const text = item.textContent.toLowerCase();
-              if (text.includes(query)) {
-                item.style.outline = '2px solid var(--pink)';
-                item.style.borderRadius = '10px';
-              } else {
-                item.style.outline = '';
-              }
-            });
-          }
-        }
-      });
-    }
+      : filtered.map(p => renderPost(p, query)).join('');
   }
 
   function filterByMonth(year, month) {
