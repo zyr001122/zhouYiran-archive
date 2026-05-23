@@ -82,7 +82,7 @@ const posts = [
       {
         id: 110,
         username: "翊橘Tz_",
-        originalText: "看我设计的美甲怎么样 还有很多你的元素 好看不 🧑‍🚀",
+        originalText: "看我设计的美甲怎么样 还有很多你的元素 好好看不 🧑‍🚀",
         translatedText: "내가 디자인한 네일아트 어때 오빠랑 관련된 포인트도 많이 들어가 있어 예쁘지 🧑‍🚀",
         images: ["images/nail.jpg"],
         actorReply: { originalText: "好看！", translatedText: "예쁘다" }
@@ -280,7 +280,7 @@ const posts = [
       {
         id: 203,
         username: "翊分钟恋人z",
-        originalText: "哥哥难道你当时在copy这个？",
+        originalText: "哥哥难道你当时在copy this？",
         translatedText: "오빠 설마 그때 이거 카피하고 있었던 거야?",
         images: ["images/valorant-chamber.jpg"],
         actorReply: { originalText: "那个时候我还没有玩这个游戏🙄", translatedText: "그때는 아직 이 게임 안 했었어 🙄" }
@@ -355,7 +355,7 @@ const posts = [
         originalText: "送你一个表情包🤩",
         translatedText: "짤 하나 선물할게 🤩",
         images: ["images/dog-laydown.jpg"],
-        actorReply: { originalText: "哈哈哈哈哈哈哈", translatedText: "ㅋㅋㅋㅋㅋㅋㅋ" }
+        actorReply: { originalText: "哈哈哈哈哈哈哈", translatedText: "ㅋㅋㅋㅋ<<<ㅋㅋㅋ" }
       },
       {
         id: 213,
@@ -523,7 +523,7 @@ const posts = [
       {
         id: 311,
         username: "翊粒紫然Tz",
-        originalText: "谢谢周哥的翻牌，虽然还没翻，可能是忘了，但是提前谢谢了，周哥总不可能真的不翻吧，肯定不可能，毕竟哥哥超级心软，我怕一会翻我的时候哥哥看不到的我的感谢，这里提前谢谢全宇宙超级无敌第一帅的哥哥‼️你最棒‼️@周翊然Tz",
+        originalText: "谢谢周哥的翻牌，虽然还没翻，可能是忘了，但是提前谢谢了，周哥总不可能真的不翻吧，肯定不可能，毕竟哥哥超级心软，我怕一会翻我的时候哥哥看不到의 my thank you, 这里提前谢谢全宇宙超级无敌第一帅的哥哥‼️你最棒‼️@周翊然Tz",
         translatedText: "오빠 답글 고마워, 비록 아직 안 달아줬고 까먹었을 수도 있지만, 그래도 미리 고마워, 우리 오빠가 설마 답글을 안 달아줄 리가 없잖아, 절대 그럴 리 없지, 왜냐면 오빠는 엄청 마음이 약하니까, 이따가 나한테 답글 달아줄 때 오빠가 내 감사 인사를 못 볼까 봐 미리 전 우주에서 제일 최고로 잘생긴 오빠한테 감사 인사를 남겨‼️ 네가 최고야‼️@周翊然Tz",
         images: ["images/shaving.jpg"],
         actorReply: { originalText: "来了啊", translatedText: "등장" }
@@ -771,9 +771,10 @@ const posts = [
         translatedText: "주익연 답글 달아달라고！",
         images: ["images/wechat-capture.gif"],
         actorReply: { 
-        originalText: "", 
-        translatedText: "",
-        replyImages: ["images/watermelon.gif"]
+          originalText: "", 
+          translatedText: "",
+          replyImages: ["images/watermelon.gif"]
+        }
       },
       {
         id: 615,
