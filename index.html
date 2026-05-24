@@ -3,434 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>周翊然Tz 초화 번역 아카이브</title>
+  <title>ZhouYiran Archive</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --accent: #F7A4B8;
-      --accent-light: #fde8ef;
-      --accent-deep: #c45e77;
-      --pink: #F7A4B8;
-      --pink-dark: #E8839A;
-      --pink-deep: #c45e77;
-      --pink-light: #fde8ef;
-      --pink-pale: #fff5f8;
-      --text: #2a1a20;
-      --text-muted: #8a6070;
-      --text-light: #c4a0ae;
-      --border: #f0d0da;
-      --white: #ffffff;
-      --card-bg: #fffbfc;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Pretendard', -apple-system, sans-serif; background: var(--pink-pale); color: var(--text); min-height: 100vh; }
-    .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
 
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 60%, #fff0f5 100%); border-bottom: 1px solid var(--border); padding: 1.5rem 1.5rem 2rem; }
-    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.75rem; }
-    .hero-avatar { width: 126px; height: 126px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 20px rgba(247,164,184,0.4); }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--pink-deep); margin-bottom: 4px; }
-    .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
-    .hero-notice { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
-    .hero-notice-desc { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: #f7ede8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-    .main-layout { max-width: 960px; margin: 0 auto; padding: 1.5rem; display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: start; }
+    .wrap {
+      width: 100%;
+      max-width: 390px;
+      min-height: 100vh;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem 3.5rem;
+    }
 
-    /* FEED */
-    .feed-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .feed-title { font-size: 15px; font-weight: 700; color: var(--pink-deep); display: flex; align-items: center; gap: 8px; }
-    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--pink); border-radius: 2px; }
-    .post-count-badge { font-size: 11px; background: var(--pink-light); color: var(--pink-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+    /* 종이 질감 배경 */
+    .wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='0.08'/%3E%3C/svg%3E");
+      background-size: 300px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-    /* 날짜 인덱스 */
-    .date-index { display: flex; align-items: center; gap: 10px; margin: 1.2rem 0 0.6rem; }
-    .date-index-badge { font-size: 11px; font-weight: 700; color: var(--pink-deep); background: var(--pink-light); padding: 3px 10px; border-radius: 10px; white-space: nowrap; }
-    .date-index-line { flex: 1; height: 1px; background: var(--border); }
+    /* 배경 blur 텍스트 */
+    .bg-blur-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 1.5rem 0;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+    .bg-big {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 96px;
+      color: #2a1a20;
+      letter-spacing: -3px;
+      line-height: 0.88;
+      filter: blur(5px);
+      opacity: 0.07;
+      white-space: nowrap;
+    }
+    .bg-italic {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 54px;
+      color: #c45e77;
+      letter-spacing: 2px;
+      filter: blur(4px);
+      opacity: 0.14;
+      white-space: nowrap;
+      margin-top: -4px;
+      padding-left: 12px;
+    }
 
-    .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
-    .post-card:hover { box-shadow: 0 4px 20px rgba(247,164,184,0.2); }
+    /* 폴더 */
+    .folders {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
 
-    /* POST META */
-    .post-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .actor-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--pink-light); }
-    .actor-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .post-meta-info { flex: 1; }
-    .actor-name { font-size: 14px; font-weight: 700; color: var(--pink-deep); }
-    .post-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
-    .weibo-link { font-size: 11px; color: var(--pink-deep); text-decoration: none; padding: 4px 10px; border: 1px solid var(--pink); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
-    .weibo-link:hover { background: var(--pink); color: white; }
+    .folder-wrap {
+      width: 100%;
+      margin-bottom: -24px;
+      filter: drop-shadow(0px 8px 18px rgba(150,60,80,0.14));
+    }
+    .folder-wrap:last-child {
+      margin-bottom: 0;
+      filter: drop-shadow(0px 12px 24px rgba(150,60,80,0.22));
+    }
 
-    /* POST BODY */
-    .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
-    .original-text { font-size: 13px; color: var(--text-muted); line-height: 1.8; padding: 10px 12px; background: var(--pink-pale); border-radius: 8px; border-left: 3px solid var(--pink-light); margin-bottom: 10px; }
-    .translated-text { font-size: 15px; color: var(--text); line-height: 1.85; }
-    .post-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 12px 0; }
-    .post-images img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 280px; }
-    .post-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 10px; }
-    .toggle-comments-btn { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); border: none; padding: 5px 12px; border-radius: 12px; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-    .toggle-comments-btn:hover { background: var(--pink); color: white; }
+    .folder-tab-row {
+      display: flex;
+      align-items: flex-end;
+      height: 27px;
+      padding-left: 18px;
+    }
+    .folder-tab {
+      padding: 5px 18px 0;
+      border-radius: 10px 10px 0 0;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
 
-    /* COMMENTS */
-    .comments-section { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border); display: none; }
-    .comments-section.open { display: block; }
-    .comments-title { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; }
-    .comment-item { margin-bottom: 12px; padding: 10px 12px; background: var(--pink-pale); border-radius: 10px; }
-    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .comment-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-    .comment-username { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .comment-original { font-size: 11px; color: var(--text-light); line-height: 1.6; margin-bottom: 3px; }
-    .comment-translated { font-size: 13px; color: var(--text); line-height: 1.7; }
-    .comment-images { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .comment-images img { width: auto; max-width: 100%; max-height: 180px; border-radius: 8px; object-fit: contain; }
+    .folder-body {
+      width: 100%;
+      border-radius: 4px 14px 14px 14px;
+      padding: 1.3rem 1.5rem 2.8rem;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: filter 0.15s;
+    }
+    .folder-body:hover { filter: brightness(0.96); }
 
-    /* ACTOR REPLY */
-    .actor-reply { margin-top: 10px; padding: 10px 12px; background: var(--pink-light); border-radius: 10px; border-left: 3px solid var(--pink); }
-    .actor-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .actor-reply-avatar { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1.5px solid var(--pink); }
-    .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--pink-deep); }
-    .actor-reply-original { font-size: 11px; color: var(--pink-dark); line-height: 1.6; margin-bottom: 2px; }
-    .actor-reply-translated { font-size: 13px; color: var(--pink-deep); font-weight: 500; line-height: 1.7; }
+    .folder-body::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 160px;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+      opacity: 0.16;
+    }
 
-    /* SIDEBAR */
-    .sidebar { display: flex; flex-direction: column; gap: 1rem; }
-    .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; }
-    .sidebar-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .sidebar-title-dot { width: 6px; height: 6px; background: var(--pink); border-radius: 50%; display: inline-block; }
-    .year-group { margin-bottom: 8px; }
-    .year-label { font-size: 13px; font-weight: 700; color: var(--pink-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
-    .year-label:hover { color: var(--pink-dark); }
-    .month-list { padding-left: 12px; margin-top: 4px; }
-    .month-item { font-size: 12px; color: var(--text-muted); padding: 4px 8px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s; }
-    .month-item:hover { background: var(--pink-light); color: var(--pink-deep); }
-    .month-item.active { background: var(--pink); color: white; font-weight: 600; }
-    .month-count { font-size: 10px; opacity: 0.7; }
-    .notice-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
-    .notice-item:last-child { border-bottom: none; }
-    .notice-label { font-size: 10px; color: var(--text-light); margin-top: 2px; font-weight: 500; }
+    .folder-title { font-size: 18px; font-weight: 700; margin-bottom: 3px; position: relative; z-index: 1; }
+    .folder-desc { font-size: 11px; opacity: 0.58; position: relative; z-index: 1; }
 
-    /* SEARCH */
-    .search-bar { margin-bottom: 1rem; }
-    .search-input { width: 100%; padding: 9px 16px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-family: inherit; background: white; outline: none; color: var(--text); transition: border-color 0.2s; }
-    .search-input:focus { border-color: var(--pink); }
-    .search-input::placeholder { color: var(--text-light); }
+    .f1 .folder-tab { background: #f0879e; color: white; }
+    .f1 .folder-body { background: #F7A4B8; }
+    .f1 .folder-title { color: white; }
+    .f1 .folder-desc { color: rgba(255,255,255,0.8); }
 
-    /* FILTER BAR */
-    .filter-active-bar { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
-    .filter-active-bar.show { display: flex; }
-    .clear-filter { cursor: pointer; font-weight: 600; color: var(--pink-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
+    .f2 .folder-tab { background: #f9ccd8; color: #c45e77; }
+    .f2 .folder-body { background: #fcd5e0; }
+    .f2 .folder-title { color: #c45e77; }
+    .f2 .folder-desc { color: #c45e77; }
 
-    /* EMPTY */
-    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-light); }
-    .empty-state .big-icon { font-size: 40px; margin-bottom: 12px; }
+    .f3 .folder-tab { background: #e0d8d0; color: #7a6a5a; }
+    .f3 .folder-body { background: #e8e0d8; }
+    .f3 .folder-title { color: #5a4a3a; }
+    .f3 .folder-desc { color: #5a4a3a; }
 
-    /* FOOTER */
-    .site-footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 2rem; }
-
-    @media (max-width: 700px) {
-      .main-layout { grid-template-columns: 1fr; padding: 1rem; }
-      .sidebar { display: none; }
-      .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
-      .hero-avatar { width: 100px; height: 100px; }
+    .footer {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 10px;
+      color: #c4a0ae;
+      opacity: 0.35;
+      letter-spacing: 0.5px;
+      z-index: 2;
     }
   </style>
 </head>
 <body>
+<div class="wrap">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
-    <div class="hero-info">
-      <h1>周翊然Tz</h1>
-      <p>초화 아카이브</p>
-      <div class="hero-notice">
-        <span>✍️ VAz</span>
-        <span>·</span>
-        <span> 번역 오/의역 多</span>
-      </div>
-      <div class="hero-notice-desc">매 달 22일 초화 댓글파티</div>
+  <div class="bg-blur-wrap">
+    <div class="bg-big">Zhou<br>Yiran</div>
+    <div class="bg-italic">周翊然</div>
+  </div>
+
+  <div class="folders">
+
+    <div class="folder-wrap f3">
+      <div class="folder-tab-row"><span class="folder-tab">🥣</span></div>
+      <a class="folder-body" href="guide.html">
+        <div class="folder-title">🥣</div>
+        <div class="folder-desc">웨이보 사용법 · 공방 · 용어 정리</div>
+      </a>
     </div>
+
+    <div class="folder-wrap f2">
+      <div class="folder-tab-row"><span class="folder-tab">SpinSpin</span></div>
+      <a class="folder-body" href="spinspin.html">
+        <div class="folder-title">SpinSpin</div>
+        <div class="folder-desc">익명 Q&amp;A 답변 모음</div>
+      </a>
+    </div>
+
+    <div class="folder-wrap f1">
+      <div class="folder-tab-row"><span class="folder-tab">archive</span></div>
+      <a class="folder-body" href="archive.html">
+        <div class="folder-title">초화 아카이브</div>
+        <div class="folder-desc">웨이보 게시물 &amp; 댓글 번역</div>
+      </a>
+    </div>
+
   </div>
-</section>
 
-<!-- MAIN -->
-<main>
-  <div class="main-layout">
-    <section>
-      <div class="search-bar">
-        <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
-      </div>
-      <div class="filter-active-bar" id="filterBar">
-        <span id="filterLabel"></span>
-        <button class="clear-filter" onclick="clearAllFilters()">✕ 전체보기</button>
-      </div>
-      <div class="feed-header">
-        <div class="feed-title">초화 게시물</div>
-        <span class="post-count-badge" id="feed-count"></span>
-      </div>
-      <div id="posts-feed"></div>
-    </section>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-card">
-        <div class="sidebar-title"><span class="sidebar-title-dot"></span>날짜별 보기</div>
-        <div id="date-tree"></div>
-      </div>
-    </aside>
-  </div>
-</main>
-
-<footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
-
-<script src="data-2026-01.js"></script>
-<script src="data-2026-02.js"></script>
-<script src="data-2026-03.js"></script>
-<script src="data-2026-04.js"></script>
-<script src="data-2026-05.js"></script>
-<script>
-  const posts = [
-    ...(typeof posts_202601 !== 'undefined' ? posts_202601 : []),
-    ...(typeof posts_202602 !== 'undefined' ? posts_202602 : []),
-    ...(typeof posts_202603 !== 'undefined' ? posts_202603 : []),
-    ...(typeof posts_202604 !== 'undefined' ? posts_202604 : []),
-    ...(typeof posts_202605 !== 'undefined' ? posts_202605 : []),
-  ];
-</script>
-<script>
-  const ACTOR_IMG = 'IMG_1757.JPG';
-  const ACTOR_NICK = '周翊然Tz';
-  let currentFilter = { type: 'all', value: null };
-
-  function formatDateTime(d) {
-    const date = new Date(d);
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
-    const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
-    return hour ? `${month}월 ${day}일 ${hour}:${min}` : `${month}월 ${day}일`;
-  }
-
-  function formatUpdateDate(d) {
-    const date = new Date(d);
-    return `${date.getMonth()+1}월 ${date.getDate()}일`;
-  }
-
-  function getMonthLabel(d) {
-    const date = new Date(d);
-    return `${date.getFullYear()}년 ${date.getMonth()+1}월`;
-  }
-
-  function renderComment(c) {
-    let replyHtml = '';
-    if (c.actorReplies && c.actorReplies.length) {
-      replyHtml = c.actorReplies.map(r => `
-        <div class="actor-reply">
-          <div class="actor-reply-header">
-            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-            <span class="actor-reply-name">${ACTOR_NICK}</span>
-          </div>
-          <div class="actor-reply-original zh">${r.originalText}</div>
-          <div class="actor-reply-translated">${r.translatedText}</div>
-        </div>`).join('');
-    } else if (c.actorReply) {
-      replyHtml = `
-        <div class="actor-reply">
-          <div class="actor-reply-header">
-            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-            <span class="actor-reply-name">${ACTOR_NICK}</span>
-          </div>
-          ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${c.actorReply.originalText}</div>` : ''}
-          ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${c.actorReply.translatedText}</div>` : ''}
-          ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" />`).join('')}</div>` : ''}
-        </div>`;
-    }
-    const isActor = c.username === ACTOR_NICK;
-    const avatarHtml = isActor
-      ? `<div class="comment-avatar" style="background:none;"><img src="${ACTOR_IMG}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${ACTOR_NICK}" /></div>`
-      : `<div class="comment-avatar">🥣</div>`;
-    return `
-      <div class="comment-item">
-        <div class="comment-header">
-          ${avatarHtml}
-          <span class="comment-username" style="${isActor ? 'color:var(--pink-deep);font-weight:700;' : ''}">${c.username}</span>
-        </div>
-        <div class="comment-original zh">${c.originalText}</div>
-        <div class="comment-translated">${c.translatedText}</div>
-        ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" />`).join('')}</div>` : ''}
-        ${replyHtml}
-      </div>`;
-  }
-
-  function commentMatches(c, query) {
-    return (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-      (c.originalText && c.originalText.toLowerCase().includes(query)) ||
-      (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query)) ||
-      (c.actorReplies && c.actorReplies.some(r => r.translatedText && r.translatedText.toLowerCase().includes(query)));
-  }
-
-  function renderPost(post, query) {
-    const imagesHtml = post.images && post.images.length
-      ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>` : '';
-
-    let commentsHtml;
-    let commentCount = post.comments ? post.comments.length : 0;
-    let autoOpen = false;
-
-    if (query && post.comments && post.comments.length) {
-      const matched = post.comments.filter(c => commentMatches(c, query));
-      if (matched.length > 0) {
-        commentsHtml = matched.map(renderComment).join('');
-        commentCount = matched.length;
-        autoOpen = true;
-      } else {
-        commentsHtml = '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
-      }
-    } else {
-      commentsHtml = post.comments && post.comments.length
-        ? post.comments.map(renderComment).join('')
-        : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
-    }
-
-    return `
-      <article class="post-card" id="post-${post.id}">
-        <div class="post-meta">
-          <div class="actor-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-          <div class="post-meta-info">
-            <div class="actor-name">${ACTOR_NICK}</div>
-            <div class="post-date">${formatDateTime(post.date)}</div>
-          </div>
-          <a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>
-        </div>
-        <div class="post-body">
-          <div class="original-label">원문</div>
-          <div class="original-text zh">${post.originalText}</div>
-          <div class="translated-text">${post.translatedText}</div>
-        </div>
-        ${imagesHtml}
-        <div class="post-footer">
-          <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
-            댓글 보기 (${commentCount})
-          </button>
-        </div>
-        <div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
-          <div class="comments-title">💬 댓글 번역${query && autoOpen ? ` <span style="font-size:11px;color:var(--pink);font-weight:400;">· "${query}" 검색 결과</span>` : ''}</div>
-          ${commentsHtml}
-        </div>
-      </article>`;
-  }
-
-  function toggleComments(id) {
-    const el = document.getElementById(`comments-${id}`);
-    const btn = document.getElementById(`cmtbtn-${id}`);
-    el.classList.toggle('open');
-    if (el.classList.contains('open')) {
-      const total = el.querySelectorAll('.comment-item').length;
-      btn.textContent = `댓글 접기 ▲`;
-    }
-  }
-
-  function getFilteredPosts() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    let filtered = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    if (currentFilter.type === 'year') {
-      filtered = filtered.filter(p => new Date(p.date).getFullYear() === currentFilter.value);
-    } else if (currentFilter.type === 'month') {
-      filtered = filtered.filter(p => {
-        const d = new Date(p.date);
-        return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
-      });
-    }
-    if (query) {
-      filtered = filtered.filter(p =>
-        p.translatedText.toLowerCase().includes(query) ||
-        p.originalText.toLowerCase().includes(query) ||
-        (p.comments && p.comments.some(c =>
-          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
-          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
-        ))
-      );
-    }
-    return filtered;
-  }
-
-  function renderFeed() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = getFilteredPosts();
-    document.getElementById('feed-count').textContent = filtered.length + '개';
-
-    if (filtered.length === 0) {
-      document.getElementById('posts-feed').innerHTML = `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`;
-      return;
-    }
-
-    // 날짜 인덱스 추가
-    let html = '';
-    let lastMonth = null;
-    filtered.forEach(p => {
-      const monthLabel = getMonthLabel(p.date);
-      if (monthLabel !== lastMonth) {
-        html += `<div class="date-index"><span class="date-index-badge">🗓 ${monthLabel}</span><span class="date-index-line"></span></div>`;
-        lastMonth = monthLabel;
-      }
-      html += renderPost(p, query);
-    });
-
-    document.getElementById('posts-feed').innerHTML = html;
-  }
-
-  function filterByMonth(year, month) {
-    currentFilter = { type: 'month', value: { year, month } };
-    document.getElementById('filterLabel').textContent = `📅 ${year}년 ${month}월 게시물만 보는 중`;
-    document.getElementById('filterBar').classList.add('show');
-    renderFeed();
-    document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
-    const el = document.getElementById(`m-${year}-${month}`);
-    if (el) el.classList.add('active');
-  }
-
-  function clearAllFilters() {
-    currentFilter = { type: 'all', value: null };
-    document.getElementById('filterBar').classList.remove('show');
-    document.getElementById('searchInput').value = '';
-    document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
-    renderFeed();
-  }
-
-  function renderDateTree() {
-    const tree = {};
-    posts.forEach(p => {
-      const d = new Date(p.date);
-      const y = d.getFullYear();
-      const m = d.getMonth() + 1;
-      if (!tree[y]) tree[y] = {};
-      if (!tree[y][m]) tree[y][m] = 0;
-      tree[y][m]++;
-    });
-    document.getElementById('date-tree').innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
-      const months = Object.keys(tree[year]).sort((a,b) => b-a).map(month => `
-        <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">
-          <span>${month}월</span>
-          <span class="month-count">${tree[year][month]}개</span>
-        </div>`).join('');
-      return `
-        <div class="year-group">
-          <div class="year-label" onclick="currentFilter={type:'year',value:${year}};document.getElementById('filterLabel').textContent='📅 ${year}년 게시물만 보는 중';document.getElementById('filterBar').classList.add('show');renderFeed();">
-            <span>${year}년</span><span style="font-size:10px;opacity:0.6;">▾</span>
-          </div>
-          <div class="month-list">${months}</div>
-        </div>`;
-    }).join('');
-  }
-
-  renderFeed();
-  renderDateTree();
-</script>
+  <div class="footer">VAz archive</div>
+</div>
 </body>
 </html>
