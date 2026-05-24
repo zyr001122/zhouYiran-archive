@@ -228,5 +228,31 @@ const posts_202601 = [
         actorReply: null
       }
     ]
+  },
+  {
+    id: 7,
+    date: "2026-01-01T01:03",
+    weiboUrl: "https://weibo.com/5994946077/Ql0ty6oxt",
+    originalText: "新年快乐！！！",
+    translatedText: "새해 복 많이 받아!!!",
+    images: [],
+    comments: [
+      {
+        id: 701,
+        username: "周翊然Tz",
+        originalText: "🎉🎉🎉  电子烟花 安排一波",
+        translatedText: "🎉🎉🎉 온라인 폭죽 한 번 준비해 볼게",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 702,
+        username: "周翊然Tz",
+        originalText: "由衷的希望 大家在新的一年 可以天天开心 这很重要",
+        translatedText: "진심으로 다들 새해에는 매일매일 행복했으면 좋겠어 제일 중요한 거야",
+        images: [],
+        actorReply: null
+      }
+    ]
   }
 ];
