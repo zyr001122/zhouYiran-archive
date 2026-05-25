@@ -132,11 +132,11 @@
     .site-footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 2rem; }
 
     @media (max-width: 700px) {
-      .main-layout { grid-template-columns: 1fr; padding: 1rem; }
-      .sidebar { display: none; }
-      .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
-      .hero-avatar { width: 100px; height: 100px; }
-    }
+  .main-layout { grid-template-columns: 1fr; padding: 1rem; }
+  .sidebar { display: flex; }
+  .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  .hero-avatar { width: 100px; height: 100px; }
+}
   </style>
 </head>
 <body>
@@ -422,31 +422,55 @@
     renderFeed();
   }
 
-  function renderDateTree() {
-    const tree = {};
-    posts.forEach(p => {
-      const d = new Date(p.date);
-      const y = d.getFullYear();
-      const m = d.getMonth() + 1;
-      if (!tree[y]) tree[y] = {};
-      if (!tree[y][m]) tree[y][m] = 0;
-      tree[y][m]++;
-    });
-    document.getElementById('date-tree').innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
-      const months = Object.keys(tree[year]).sort((a,b) => b-a).map(month => `
-        <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">
-          <span>${month}월</span>
-          <span class="month-count">${tree[year][month]}개</span>
-        </div>`).join('');
-      return `
-        <div class="year-group">
-          <div class="year-label" onclick="currentFilter={type:'year',value:${year}};document.getElementById('filterLabel').textContent='📅 ${year}년 게시물만 보는 중';document.getElementById('filterBar').classList.add('show');renderFeed();">
-            <span>${year}년</span><span style="font-size:10px;opacity:0.6;">▾</span>
-          </div>
-          <div class="month-list">${months}</div>
-        </div>`;
-    }).join('');
+function renderDateTree() {
+  const tree = {};
+  posts.forEach(p => {
+    const d = new Date(p.date);
+    const y = d.getFullYear();
+    const m = d.getMonth() + 1;
+    if (!tree[y]) tree[y] = {};
+    if (!tree[y][m]) tree[y][m] = 0;
+    tree[y][m]++;
+  });
+
+  // 가장 최근 연도/월 구하기
+  const latestYear = Math.max(...Object.keys(tree).map(Number));
+  const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
+
+  document.getElementById('date-tree').innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
+    const months = Object.keys(tree[year]).sort((a,b) => b-a).map(month => `
+      <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">
+        <span>${month}월</span>
+        <span class="month-count">${tree[year][month]}개</span>
+      </div>`).join('');
+
+    const isLatestYear = Number(year) === latestYear;
+    return `
+      <div class="year-group">
+        <div class="year-label" onclick="toggleYear(this, ${year})">
+          <span>${year}년</span><span class="year-arrow" style="font-size:10px;opacity:0.6;">▾</span>
+        </div>
+        <div class="month-list" id="year-${year}" style="${isLatestYear ? '' : 'display:none;'}">
+          ${months}
+        </div>
+      </div>`;
+  }).join('');
+
+  // 최근 월 자동 활성화
+  filterByMonth(latestYear, latestMonth);
+}
+
+function toggleYear(el, year) {
+  const list = document.getElementById(`year-${year}`);
+  const arrow = el.querySelector('.year-arrow');
+  if (list.style.display === 'none') {
+    list.style.display = 'block';
+    arrow.textContent = '▴';
+  } else {
+    list.style.display = 'none';
+    arrow.textContent = '▾';
   }
+}
 
   renderFeed();
   renderDateTree();
