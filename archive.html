@@ -342,29 +342,42 @@
   }
 
   function getFilteredPosts() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    let filtered = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-    if (currentFilter.type === 'year') {
-      filtered = filtered.filter(p => new Date(p.date).getFullYear() === currentFilter.value);
-    } else if (currentFilter.type === 'month') {
-      filtered = filtered.filter(p => {
-        const d = new Date(p.date);
-        return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
-      });
-    }
-    if (query) {
-      filtered = filtered.filter(p =>
-        p.translatedText.toLowerCase().includes(query) ||
-        p.originalText.toLowerCase().includes(query) ||
-        (p.comments && p.comments.some(c =>
-          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
-          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
-        ))
-      );
-    }
-    return filtered;
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  let filtered = [...posts];
+
+  if (currentFilter.type === 'year') {
+    filtered = filtered.filter(p => new Date(p.date).getFullYear() === currentFilter.value);
+  } else if (currentFilter.type === 'month') {
+    filtered = filtered.filter(p => {
+      const d = new Date(p.date);
+      return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
+    });
   }
+
+  if (query) {
+    filtered = filtered.filter(p =>
+      p.translatedText.toLowerCase().includes(query) ||
+      p.originalText.toLowerCase().includes(query) ||
+      (p.comments && p.comments.some(c =>
+        (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+        (c.originalText && c.originalText.toLowerCase().includes(query)) ||
+        (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
+      ))
+    );
+  }
+
+  // 월 단위는 최신순, 월 안에서는 오래된순
+  filtered.sort((a, b) => {
+    const da = new Date(a.date);
+    const db = new Date(b.date);
+    const monthA = da.getFullYear() * 100 + da.getMonth();
+    const monthB = db.getFullYear() * 100 + db.getMonth();
+    if (monthA !== monthB) return monthB - monthA; // 월은 최신순
+    return da - db; // 같은 월 안에서는 오래된순
+  });
+
+  return filtered;
+}
 
   function renderFeed() {
     const query = document.getElementById('searchInput').value.toLowerCase();
