@@ -130,7 +130,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmRj3MQ",
     originalText: "最喜欢殷赏哪个造型",
-    translatedText: "인상 코디 중에 제일 좋아하는 거 뭐야 ",
+    translatedText: "인상 코디 중에 제일 좋아하는 거 뭐야",
     images: [],
     comments: []
   },
@@ -212,6 +212,24 @@ const posts_202208 = [
     weiboUrl: "https://weibo.com/5994946077/M2RsTDYOc",
     originalText: "工作人员跟我说发够25条可以让你们看到惊喜",
     translatedText: "스태프가 나한테 글 25개 채우면 너네한테 깜짝 이벤트 보여줄 수 있다는데",
+    images: [],
+    comments: []
+  },
+  {
+    id: 1241,
+    date: "2022-08-26",
+    weiboUrl: "https://weibo.com/5994946077/M2RsXfaNk",
+    originalText: "我努力",
+    translatedText: "열심히 해볼게",
+    images: [],
+    comments: []
+  },
+  {
+    id: 1242,
+    date: "2022-08-26",
+    weiboUrl: "https://weibo.com/5994946077/M2Rt5aynA",
+    originalText: "这算一条吧？",
+    translatedText: "이것도 1개로 치는 거지?",
     images: [],
     comments: []
   },
