@@ -68,6 +68,7 @@
     .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
     .original-text { font-size: 13px; color: var(--text-muted); line-height: 1.8; padding: 10px 12px; background: var(--pink-pale); border-radius: 8px; border-left: 3px solid var(--pink-light); margin-bottom: 10px; }
     .translated-text { font-size: 15px; color: var(--text); line-height: 1.85; }
+    .translation-note { font-size: 12px; color: var(--text-light); margin-top: 4px; line-height: 1.5; }
     .post-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 12px 0; }
     .post-images img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 280px; }
     .post-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 10px; }
@@ -320,7 +321,8 @@
         <div class="post-body">
           <div class="original-label">원문</div>
           <div class="original-text zh">${post.originalText}</div>
-          <div class="translated-text">${post.translatedText}</div>
+         <div class="translated-text">${post.translatedText}</div>
+          ${post.note ? `<div class="translation-note">${post.note}</div>` : ''}
         </div>
         ${imagesHtml}
         <div class="post-footer">
