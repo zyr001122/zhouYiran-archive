@@ -1,13 +1,14 @@
 const posts_202301 = [
-  {
-    id: 401,
-    date: "2023-01-21",
-    weiboUrl: "https://weibo.com/5994946077/Mpn1Ie4wN",
-    originalText: "我怕三十的鞭炮太响 你们会听不到我的祝福",
-    translatedText: "설날 폭죽 소리가 너무 커서 너네가 내 새해 인사를 못 들을까 봐 (새해에 복 많이 받으라는 중국식 새해 인사 밈)",
-    images: [],
-    comments: []
-  },
+{
+  id: 401,
+  date: "2023-01-21",
+  weiboUrl: "https://weibo.com/5994946077/Mpn1Ie4wN",
+  originalText: "我怕三十的鞭炮太响 你们会听不到我的祝福",
+  translatedText: "설날 폭죽 소리가 너무 커서 너네가 내 새해 인사를 못 들을까 봐",
+  note: "새해에 복 많이 받으라는 중국식 새해 인사 밈",
+  images: [],
+  comments: []
+},
   {
     id: 402,
     date: "2023-01-21",
@@ -36,14 +37,15 @@ const posts_202301 = [
     comments: []
   },
   {
-    id: 405,
-    date: "2023-01-21",
-    weiboUrl: "https://weibo.com/5994946077/Mpn3Vike3",
-    originalText: "你们今晚有没有跟家人一起吃年夜饭看春晚？",
-    translatedText: "다들 오늘 저녁에 가족이랑 같이 연야반(새해 전날 밤에 먹는 밥) 먹으면서 춘완 봤어?",
-    images: [],
-    comments: []
-  },
+  id: 405,
+  date: "2023-01-21",
+  weiboUrl: "https://weibo.com/5994946077/Mpn3Vike3",
+  originalText: "你们今晚有没有跟家人一起吃年夜饭看春晚？",
+  translatedText: "다들 오늘 저녁에 가족이랑 같이 연야반 먹으면서 춘완 봤어?",
+  note: "연야반: 새해 전날 밤에 먹는 밥",
+  images: [],
+  comments: []
+},
   {
     id: 406,
     date: "2023-01-21",
