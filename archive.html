@@ -312,12 +312,14 @@
         : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
     }
 
-    return `
+   return `
       <article class="post-card" id="post-${post.id}">
         <div class="post-meta">
-          <div class="actor-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
+          <div class="actor-avatar" style="${post.authorName ? 'display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--pink-light);' : ''}">
+            ${post.authorName ? post.authorAvatar : `<img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" />`}
+          </div>
           <div class="post-meta-info">
-            <div class="actor-name">${ACTOR_NICK}</div>
+            <div class="actor-name">${post.authorName || ACTOR_NICK}</div>
             <div class="post-date">${formatDateTime(post.date)}</div>
           </div>
           ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>` : ''}
