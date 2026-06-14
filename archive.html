@@ -189,6 +189,7 @@
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
+<script src="data-2023-09.js"></script>
 <script src="data-2023-08.js"></script>
 <script src="data-2023-07.js"></script>  
 <script src="data-2023-03.js"></script>  
@@ -203,6 +204,7 @@
 <script src="data-2026-05.js"></script>
 <script>
   const posts = [
+    ...(typeof posts_202309 !== 'undefined' ? posts_202309 : []),
     ...(typeof posts_202308 !== 'undefined' ? posts_202308 : []),
     ...(typeof posts_202307 !== 'undefined' ? posts_202307 : []),
     ...(typeof posts_202303 !== 'undefined' ? posts_202303 : []),
