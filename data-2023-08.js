@@ -13,14 +13,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "宝宝我的披风和小草帽送给你 不要感冒淋雨哦",
-    translatedText: "자기야 내 망토랑 밀짚모자 줄게 비 맞아서 감기 걸리지 마",
+    translatedText: "익연아 내 망토랑 밀짚모자 줄게 비 맞고 감기 걸리지 않게 조심해",
     images: ["images/2308-superman.jpg"],
     comments: [
       {
         id: 70201,
         username: "周翊然Tz",
         originalText: "酷👍",
-        translatedText: "멋있다👍",
+        translatedText: "쩐다👍",
         images: [],
         actorReply: null
       }
@@ -31,14 +31,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "宝宝我把我的麻袋分你一半🥹",
-    translatedText: "자기야 내 포대자루 반 나눠줄게🥹",
+    translatedText: "익연아 내 포대자루 반 나눠줄게🥹",
     images: ["images/2308-sack.jpg"],
     comments: [
       {
         id: 70301,
         username: "周翊然Tz",
         originalText: "我喜欢蓝色的麻袋",
-        translatedText: "나 파란색 포대자루 좋아",
+        translatedText: "난 파란색 포대자루가 좋아",
         images: [],
         actorReply: null
       }
@@ -49,14 +49,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "宝宝看我的表情包素材😋",
-    translatedText: "자기야 내 짤 봐봐😋",
+    translatedText: "익연아 내 짤 봐봐😋",
     images: ["images/2308-ride.jpg"],
     comments: [
       {
         id: 70401,
         username: "周翊然Tz",
         originalText: "这个好笑",
-        translatedText: "이거 웃기다",
+        translatedText: "이거 웃기네",
         images: [],
         actorReply: null
       }
@@ -67,14 +67,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "收到宝宝^ ^（现在点赞评论能兑换签名合影吗🥰",
-    translatedText: "자기야 받았어^ ^(지금 좋아요 댓글로 싸인 투샷 교환 되는 거야🥰",
+    translatedText: "익연이 댓글 확인^^ (지금 좋아요 누르고 댓글 달면 친필싸인이나 투샷으로 교환 해준다고?🥰",
     images: ["images/2308-dog-umbrella.jpg"],
     comments: [
       {
         id: 70501,
         username: "周翊然Tz",
         originalText: "emmmmm……",
-        translatedText: "음……",
+        translatedText: "emmmmm……",
         images: [],
         actorReply: null
       }
@@ -85,7 +85,7 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "倦子，跑慢点，我来给你撑个伞😏",
-    translatedText: "권자야 천천히 달려 내가 우산 씌워줄게😏",
+    translatedText: "쥐안, 천천히 뛰어, 내가 우산 씌워줄게😏",
     images: ["images/2308-yellow-umbrella.jpg"],
     comments: [
       {
@@ -103,7 +103,7 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "举个爪，求个翻牌啦 这个怎么样😏",
-    translatedText: "발 들어 답글 좀 달아줘 이거 어때😏",
+    translatedText: "발 들고, 답글 좀 달아줘봐 이거 어때😏",
     images: ["images/2308-bamboo-umbrella.jpg"],
     comments: [
       {
@@ -121,14 +121,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "倦 我把我的公主披风给你披上",
-    translatedText: "권 내 공주 망토 입혀줄게",
+    translatedText: "쥐안 내 공주 망토 너한테 입혀줄게",
     images: ["images/2308-princess-cape.jpg"],
     comments: [
       {
         id: 70801,
         username: "周翊然Tz",
         originalText: "你这图没加载完",
-        translatedText: "이 사진 아직 덜 로딩됐는데",
+        translatedText: "사진 아직 로딩 중인데",
         images: [],
         actorReply: null
       }
@@ -139,14 +139,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "在线冲浪，终于遇到你啦！不怪我的雨伞小 怪你滴头大！😏",
-    translatedText: "온라인 서핑 중에 드디어 만났다! 내 우산이 작은 게 아니라 네 머리가 큰 거야😏",
+    translatedText: "연어중이였는데, 드디어 발견! 내 우산이 작은 게 아니라 니 머리가 큰 탓이야!",
     images: ["images/2308-mudo-bubble.jpg"],
     comments: [
       {
         id: 70901,
         username: "周翊然Tz",
         originalText: "怪我啰",
-        translatedText: "내 탓이구나",
+        translatedText: "그래 다 내 탓이겠지",
         images: [],
         actorReply: null
       }
@@ -182,7 +182,7 @@ const posts_202308 = [
         id: 71101,
         username: "周翊然Tz",
         originalText: "很实用",
-        translatedText: "실용적이네",
+        translatedText: "실용적인데",
         images: [],
         actorReply: null
       }
@@ -200,7 +200,7 @@ const posts_202308 = [
         id: 71201,
         username: "周翊然Tz",
         originalText: "是魔法吗",
-        translatedText: "마법인가",
+        translatedText: "법사야?",
         images: [],
         actorReply: null
       }
@@ -211,14 +211,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "不翻我！就让这大雨全都落下吧！不挡了",
-    translatedText: "답글 안 달아줄 거야! 그냥 비 다 맞아라! 안 막아줄 거야",
+    translatedText: "나한텐 답글 안 달아주고!그냥 비 다 맞아라! 안 막아줄 거야",
     images: ["images/2308-rain-head.jpg"],
     comments: [
       {
         id: 71301,
         username: "周翊然Tz",
         originalText: "翻",
-        translatedText: "달아줄게",
+        translatedText: "답글",
         images: [],
         actorReply: null
       }
@@ -229,14 +229,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "马上回家，就不用淋雨啦",
-    translatedText: "빨리 집에 가면 비 안 맞잖아",
+    translatedText: "빨리 집에 가, 그럼 비 안 맞잖아",
     images: ["images/2308-house.jpg"],
     comments: [
       {
         id: 71401,
         username: "周翊然Tz",
         originalText: "这像是法拉利住的地方",
-        translatedText: "이거 페라리가 사는 곳 같은데",
+        translatedText: "이거 페라리가 사는 집 같은데",
         images: [],
         actorReply: null
       }
@@ -247,14 +247,14 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "那你跑快点吧宝宝 我给你加速度",
-    translatedText: "그럼 빨리 달려 자기야 내가 속도 올려줄게",
+    translatedText: "그럼 빨리 달려 익연아 내가 부스터 달아줄게",
     images: ["images/2308-fire-shoes.jpg"],
     comments: [
       {
         id: 71501,
         username: "周翊然Tz",
         originalText: "被雨浇灭了怎么办",
-        translatedText: "비에 꺼지면 어떡해",
+        translatedText: "비 맞아서 꺼지면 어떡해",
         images: [],
         actorReply: null
       }
@@ -265,7 +265,7 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "",
     originalText: "带着大家的雨伞 走了",
-    translatedText: "다들 우산 챙겨서 간다",
+    translatedText: "다들 우산 챙겨 가볼게",
     images: [],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202308 = [
     date: "2023-08-22",
     weiboUrl: "",
     originalText: "我又来了 给大家带点礼物",
-    translatedText: "나 또 왔어 다들 선물 갖고 왔어",
+    translatedText: "또 왔다 얘들아 선물 갖고 왔어",
     images: [],
     comments: [
       {
@@ -285,18 +285,18 @@ const posts_202308 = [
         images: ["images/2308-selfie-stick.jpg"],
         actorReply: {
           originalText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭",
-          translatedText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭"
+          translatedText: ""
         }
       },
       {
         id: 71702,
         username: "我的钱包已空空ZYR",
         originalText: "希望我们阿倦能够早日站在那个领奖台上，加油",
-        translatedText: "우리 아권이 빨리 저 시상대 위에 설 수 있길 바라, 화이팅",
+        translatedText: "우리 쥐안이 빨리 저 시상대 위에 설 수 있길 바라, 화이팅",
         images: ["images/2308-shooting.jpg"],
         actorReply: {
           originalText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭",
-          translatedText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭"
+          translatedText: ""
         }
       }
     ]
@@ -306,7 +306,7 @@ const posts_202308 = [
     date: "2023-08-22",
     weiboUrl: "",
     originalText: "走了 大家记得看剧",
-    translatedText: "간다 다들 드라마 챙겨봐",
+    translatedText: "갈게 다들 드라마 챙겨봐",
     images: [],
     comments: []
   },
@@ -317,14 +317,14 @@ const posts_202308 = [
     authorName: "周翊然Studio",
     authorAvatar: "💼",
     originalText: "庆祝我们沈倦逆风翻盘成功入队！💪🏻 from 你永远的后援 室子",
-    translatedText: "우리 선권이 역전 성공으로 팀 입단한 것 축하해！💪🏻 from 영원한 지원군 스튜디오",
+    translatedText: "우리 쥐안님 역전 성공으로 팀 입단한 것 축하해！💪🏻 from 영원한 지원군 공작실",
     images: ["images/2308-studio1.jpg", "images/2308-studio2.jpg"],
     comments: [
       {
         id: 71901,
         username: "周翊然Tz",
         originalText: "论让我社死，你是有一手的，速速撤下，一切好说",
-        translatedText: "나 사회적으로 죽이는 건 너가 한 수 위야, 빨리 내려, 그러면 다 얘기해줄게",
+        translatedText: "팬: "너 사람 사회적 매장 시키는 건 아주 선수구나. 당장 내려, 좋은 말로 할 때",
         images: [],
         actorReply: null
       }
@@ -337,7 +337,7 @@ const posts_202308 = [
     authorName: "周翊然Studio",
     authorAvatar: "💼",
     originalText: "老板‼️大📣运📣会📣集📣训📣加📣油📣啊‼️‼️‼️‼️",
-    translatedText: "사장님‼️전국체육대회 집훈 화이팅‼️‼️‼️‼️",
+    translatedText: "보스‼️ 대📣유📣니📣버📣시📣아📣드📣 합📣숙📣훈련📣파📣이📣티📣이📣잉📣‼️‼️‼️‼️",
     images: [],
     comments: [
       {
