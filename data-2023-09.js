@@ -4,7 +4,7 @@ const posts_202309 = [
     date: "2023-09-08",
     weiboUrl: "https://weibo.com/5994946077/Nio6RABRb",
     originalText: "🌧️大家注意安全 都要平平安安的",
-    translatedText: "🌧️다들 다치지말고 조심해",
+    translatedText: "🌧️다들 다치지않게 조심해",
     images: [],
     comments: []
   },
@@ -38,7 +38,7 @@ const posts_202309 = [
         id: 80401,
         username: "翊加翊ci然",
         originalText: "你到了才能开局",
-        translatedText: "네가 와야 시작할 수 있지",
+        translatedText: "네가 와야 시작하지",
         images: ["images/2309-hotpot1.jpg"],
         actorReply: { originalText: "🤔", translatedText: "🤔" }
       },
