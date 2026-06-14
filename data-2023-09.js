@@ -33,7 +33,24 @@ const posts_202309 = [
     originalText: "大家吃晚饭了吗",
     translatedText: "다들 저녁 먹었어?",
     images: [],
-    comments: []
+    comments: [
+      {
+        id: 80401,
+        username: "翊加翊ci然",
+        originalText: "你到了才能开局",
+        translatedText: "네가 와야 시작할 수 있지",
+        images: ["images/2309-hotpot1.jpg"],
+        actorReply: { originalText: "🤔", translatedText: "🤔" }
+      },
+      {
+        id: 80402,
+        username: "要吃就是白米饭",
+        originalText: "在吃着呢",
+        translatedText: "먹는 중이야",
+        images: ["images/2309-ramen.jpg"],
+        actorReply: { originalText: "看着不错", translatedText: "맛있어 보이는데" }
+      }
+    ]
   },
   {
     id: 805,
