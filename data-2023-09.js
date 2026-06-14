@@ -54,11 +54,11 @@ const posts_202309 = [
     comments: [
       {
         id: 80601,
-        username: "周翊然Tz",
-        originalText: "你画的吗",
-        translatedText: "네가 그린 거야?",
+        username: "饺子不想练琴",
+        originalText: "",
+        translatedText: "",
         images: [],
-        actorReply: null
+        actorReply: { originalText: "你画的吗", translatedText: "네가 그린 거야?" }
       }
     ]
   },
@@ -90,11 +90,11 @@ const posts_202309 = [
     comments: [
       {
         id: 80901,
-        username: "周翊然Tz",
-        originalText: "非常棒👍",
-        translatedText: "완전 좋은데👍",
+        username: "邂逅翊夏_",
+        originalText: "",
+        translatedText: "",
         images: [],
-        actorReply: null
+        actorReply: { originalText: "非常棒👍", translatedText: "완전 좋은데👍" }
       }
     ]
   },
