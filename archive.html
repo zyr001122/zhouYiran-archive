@@ -318,7 +318,7 @@
             <div class="actor-name">${ACTOR_NICK}</div>
             <div class="post-date">${formatDateTime(post.date)}</div>
           </div>
-          <a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>
+          ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>` : ''}
         </div>
         <div class="post-body">
           <div class="original-label">원문</div>
