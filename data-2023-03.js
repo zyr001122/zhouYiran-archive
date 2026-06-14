@@ -22,7 +22,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3v0zjK",
     originalText: "分享图片",
-    translatedText: "사진 공유",
+    translatedText: "",
     images: ["images/2303-pink-flower.jpg"],
     comments: []
   },
@@ -31,7 +31,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3AitYA",
     originalText: "开开心心",
-    translatedText: "행복하게",
+    translatedText: "항상 행복하고",
     images: [],
     comments: []
   },
@@ -40,7 +40,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3FjQO1",
     originalText: "快快乐乐",
-    translatedText: "즐겁게",
+    translatedText: "즐겁고",
     images: [],
     comments: []
   },
@@ -49,7 +49,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3M7J3e",
     originalText: "健健康康",
-    translatedText: "건강하게",
+    translatedText: "아프지 말고",
     images: [],
     comments: []
   },
@@ -58,7 +58,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl5Q4DzJ",
     originalText: "分享图片",
-    translatedText: "사진 공유",
+    translatedText: "",
     images: ["images/2303-shinchan-turn.jpg"],
     comments: []
   },
@@ -76,7 +76,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl6ol7LQ",
     originalText: "分享图片",
-    translatedText: "사진 공유",
+    translatedText: "",
     images: ["images/2303-shinchan-turn.jpg"],
     comments: []
   },
@@ -94,7 +94,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl6KfmNi",
     originalText: "可以出门走走",
-    translatedText: "나가서 좀 걷기 좋아",
+    translatedText: "나가서 산책하기 딱 좋다",
     images: [],
     comments: []
   },
@@ -103,7 +103,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl6OE1Hv",
     originalText: "和朋友们吃顿好的",
-    translatedText: "친구들이랑 맛있는 거 먹기도 좋고",
+    translatedText: "친구들이랑 맛있는 것도 좀 먹고",
     images: [],
     comments: []
   },
@@ -112,7 +112,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl7419qz",
     originalText: "拍拍好看的照片",
-    translatedText: "예쁜 사진도 좀 찍고",
+    translatedText: "예쁜 사진도 찍고",
     images: [],
     comments: []
   },
@@ -121,7 +121,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl7clQsG",
     originalText: "让我看看你们拍的春天",
-    translatedText: "너네가 찍은 봄 보여줘",
+    translatedText: "얘들아 봄 느낌 나는 사진 찍은 거 있으면 나도 좀 보여줘",
     images: [],
     comments: []
   },
@@ -130,7 +130,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl7FigDo",
     originalText: "分享图片",
-    translatedText: "사진 공유",
+    translatedText: "",
     images: ["images/2303-thumbs-up.jpg"],
     comments: []
   },
@@ -139,7 +139,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl86r6xs",
     originalText: "周末也可以出去玩儿",
-    translatedText: "주말에도 나가서 놀기 좋아",
+    translatedText: "주말에도 나가 놀면 좋지",
     images: [],
     comments: []
   },
@@ -148,7 +148,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl9pEooT",
     originalText: "我准备吃饭了",
-    translatedText: "나 이제 밥 먹으려고",
+    translatedText: "난 이제 밥 먹으려고",
     images: [],
     comments: []
   },
@@ -157,7 +157,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl9P9NSa",
     originalText: "还没想好 你们给点建议？",
-    translatedText: "아직 뭐 먹을지 못 정했어 추천 좀 해줄래?",
+    translatedText: "아직 뭐 먹을지 못 정했어 추천 해줄래?",
     images: [],
     comments: []
   },
@@ -175,7 +175,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwlan6v07",
     originalText: "拜拜",
-    translatedText: "잘 있어",
+    translatedText: "빠이빠이",
     images: [],
     comments: []
   }
