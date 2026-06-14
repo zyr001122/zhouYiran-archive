@@ -2,7 +2,7 @@ const posts_202308 = [
   {
     id: 701,
     date: "2023-08-16",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "今晚有\"雨\" 记得带伞",
     translatedText: "오늘 밤에 \"비\" 온대 우산 챙겨",
     images: [],
@@ -124,7 +124,7 @@ const posts_202308 = [
   {
     id: 702,
     date: "2023-08-16",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "带着大家的雨伞 走了",
     translatedText: "다들 우산 챙겨서 간다",
     images: [],
@@ -133,7 +133,7 @@ const posts_202308 = [
   {
     id: 703,
     date: "2023-08-22",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "我又来了 给大家带点礼物",
     translatedText: "나 또 왔어 다들 선물 갖고 왔어",
     images: [],
@@ -165,7 +165,7 @@ const posts_202308 = [
   {
     id: 704,
     date: "2023-08-22",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "走了 大家记得看剧",
     translatedText: "간다 다들 드라마 챙겨봐",
     images: [],
@@ -174,7 +174,7 @@ const posts_202308 = [
   {
     id: 705,
     date: "2023-08-23",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "庆祝我们沈倦逆风翻盘成功入队！💪🏻 from 你永远的后援 室子",
     translatedText: "우리 선권이 역전 성공으로 팀 입단한 것 축하해！💪🏻 from 영원한 지원군 스튜디오",
     images: ["images/2308-studio1.jpg", "images/2308-studio2.jpg"],
@@ -192,7 +192,7 @@ const posts_202308 = [
   {
     id: 706,
     date: "2023-08-28",
-    weiboUrl: "https://weibo.com/5994946077/NcqG8tQw8",
+    weiboUrl: "",
     originalText: "老板‼️大📣运📣会📣集📣训📣加📣油📣啊‼️‼️‼️‼️",
     translatedText: "사장님‼️전국체육대회 집훈 화이팅‼️‼️‼️‼️",
     images: [],
