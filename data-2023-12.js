@@ -13,7 +13,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi0LE49u",
     originalText: "今天冬至 大家吃饺子了吗",
-    translatedText: "오늘 동지야 다들 만두 먹었어?",
+    translatedText: "오늘 동진데 다들 만두 먹었어?",
     images: [],
     comments: []
   },
@@ -22,7 +22,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi3GhpwG",
     originalText: "棚里没信号 ip咋变江苏了？",
-    translatedText: "현장 안에 신호가 없어 아이피가 왜 장쑤로 바뀐 거야?",
+    translatedText: "여기 현장에 신호가 안 잡혀 근데 아이피는 왜 장쑤로 바꼈지?",
     images: [],
     comments: []
   },
@@ -48,7 +48,7 @@ const posts_202312 = [
         originalText: "吃",
         translatedText: "먹어",
         images: ["images/2312-hotpot2.jpg"],
-        actorReply: { originalText: "挺丰盛啊", translatedText: "꽤 푸짐한데" }
+        actorReply: { originalText: "挺丰盛啊", translatedText: "되게 푸짐한데" }
       },
       {
         id: 110403,
@@ -56,15 +56,15 @@ const posts_202312 = [
         originalText: "在家涮火锅😍",
         translatedText: "집에서 훠궈 끓이는 중😍",
         images: ["images/2312-hotpot3.jpg"],
-        actorReply: { originalText: "不错不错👍", translatedText: "좋은데 좋아👍" }
+        actorReply: { originalText: "不错不错👍", translatedText: "좋다 좋다👍" }
       },
       {
         id: 110404,
         username: "永远明天见Tz",
         originalText: "没有火锅 麻辣香锅也是锅",
-        translatedText: "훠궈 없으면 마라샹궈도 냄비지",
+        translatedText: "훠궈 없으면 마라샹궈라도",
         images: ["images/2312-hotpot4.jpg"],
-        actorReply: { originalText: "给你加点汤底", translatedText: "탕 베이스 좀 더 넣어줄게" }
+        actorReply: { originalText: "给你加点汤底", translatedText: "탕 베이스 좀 더 넣어줘야겠다" }
       },
       {
         id: 110405,
@@ -81,7 +81,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi7r8lc1",
     originalText: "开工了 拜👋🏻",
-    translatedText: "일 시작해야 해 잘 있어👋🏻",
+    translatedText: "일 가야 해 빠이👋🏻",
     images: [],
     comments: []
   }
