@@ -193,7 +193,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7K6ALKN",
     originalText: "哎 kpi还差点",
-    translatedText: "아 kpi(할당량) 아직 좀 부족한데",
+    translatedText: "아 kpi 아직 좀 부족한데",
     images: [],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7MO7qpN",
     originalText: "猜错了吧",
-    translatedText: "너네가 잘못 추측했어",
+    translatedText: "너네 추측 틀렸어",
     images: [],
     comments: []
   },
@@ -283,7 +283,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7MVvA2U",
     originalText: "今天就到这里了",
-    translatedText: "오늘은 여기까지 할게",
+    translatedText: "오늘은 여기까지 해야겠다",
     images: [],
     comments: []
   },
