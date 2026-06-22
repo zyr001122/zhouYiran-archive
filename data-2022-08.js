@@ -13,7 +13,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rdxyo4h",
     originalText: "又来超话了",
-    translatedText: "또 초화 놀러왔어",
+    translatedText: "초화 또 놀러왔어",
     images: [],
     comments: []
   },
@@ -31,7 +31,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RdVe0L8",
     originalText: "喜欢殷赏吗",
-    translatedText: "인상 좋았어?",
+    translatedText: "인상 괜찮지?",
     images: [],
     comments: []
   },
@@ -76,7 +76,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rhfwpsp",
     originalText: "殷赏的嘴太毒了",
-    translatedText: "인상이 말을 너무 독하게 하지",
+    translatedText: "인상이 말이 너무 독하긴 해",
     images: [],
     comments: []
   },
@@ -103,7 +103,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmvtcjM",
     originalText: "回来了",
-    translatedText: "돌아왔어",
+    translatedText: "다시 왔다",
     images: [],
     comments: []
   },
@@ -139,7 +139,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmXxt6M",
     originalText: "我觉得殷赏发型不好看",
-    translatedText: "나는 인상이 헤어스타일 좀 안 예쁜 것 같아",
+    translatedText: "나는 인상 헤어스타일 좀 안 예쁜 것 같아",
     images: [],
     comments: []
   },
@@ -292,7 +292,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RvTy8A0",
     originalText: "拜拜",
-    translatedText: "ㅃㅃ",
+    translatedText: "빠빠이",
     images: [],
     comments: []
   },
@@ -310,7 +310,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M2RwqBzkK",
     originalText: "28号有惊喜 我任务完成了",
-    translatedText: "28일에 깜짝 이벤트 있어 미션 완료했거든",
+    translatedText: "28일에 깜짝 이벤트 나올 거야 미션 완료했거든",
     images: [],
     comments: []
   },
