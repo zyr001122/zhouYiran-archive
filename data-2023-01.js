@@ -23,7 +23,7 @@ const posts_202301 = [
     date: "2023-01-21",
     weiboUrl: "https://weibo.com/5994946077/Mpn2LrMzu",
     originalText: "提前祝大家新年快乐",
-    translatedText: "다들 남들보다 먼저 미리 새해 복 많이 받아",
+    translatedText: "다들 남들보다 먼저 미리 새해 복 많이 받자",
     images: [],
     comments: []
   },
@@ -41,7 +41,7 @@ const posts_202301 = [
   date: "2023-01-21",
   weiboUrl: "https://weibo.com/5994946077/Mpn3Vike3",
   originalText: "你们今晚有没有跟家人一起吃年夜饭看春晚？",
-  translatedText: "다들 오늘 저녁에 가족이랑 같이 연야반 먹으면서 춘완 봤어?",
+  translatedText: "다들 오늘 저녁에 가족이랑 같이 연야반 먹으면서 춘완 봤겠지?",
   note: "연야반: 새해 전날 밤에 먹는 밥",
   images: [],
   comments: []
@@ -60,7 +60,7 @@ const posts_202301 = [
     date: "2023-01-21",
     weiboUrl: "https://weibo.com/5994946077/Mpn5cfvCR",
     originalText: "我吃了饺子啊",
-    translatedText: "나는 만두 먹었지이",
+    translatedText: "나는 만두 먹었지",
     images: [],
     comments: []
   },
@@ -69,7 +69,7 @@ const posts_202301 = [
     date: "2023-01-21",
     weiboUrl: "https://weibo.com/5994946077/Mpn5rBfzP",
     originalText: "除夕最重要的是团圆",
-    translatedText: "설날 전 날에는 가족이 함께하는 게 제일 중요하지",
+    translatedText: "설날 전 날에는 가족이 함께하는 게 제일 중요해",
     images: [],
     comments: []
   },
