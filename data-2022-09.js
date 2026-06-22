@@ -157,7 +157,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tpwn9Dt",
     originalText: "今天感受到大家的热情了",
-    translatedText: "오늘 너희 열정을 진짜 제대로 느꼈어",
+    translatedText: "오늘 너희 열정 진짜 제대로 느껴지더라",
     images: [],
     comments: []
   },
@@ -166,7 +166,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TpC1i2k",
     originalText: "但是下次不要这样了",
-    translatedText: "근데 다음엔 이렇게 하지 마",
+    translatedText: "근데 다음엔 이렇게까지 하지 마",
     images: [],
     comments: []
   },
@@ -193,7 +193,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tq6aK3R",
     originalText: "咱们有机会见面的",
-    translatedText: "우리 만날 기회는 또 있을 거야",
+    translatedText: "우리가 만날 기회는 또 있을 거야",
     images: [],
     comments: []
   },
@@ -211,7 +211,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TqouUQs",
     originalText: "🙏铁子们",
-    translatedText: "🙏얘들아",
+    translatedText: "🙏다들 알겠지",
     images: [],
     comments: []
   },
@@ -229,7 +229,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TrKq8s4",
     originalText: "说着说着更饿了",
-    translatedText: "얘기하다 보니까 배가 더 고파졌어",
+    translatedText: "얘기하다 보니까 배가 더 고파졌는데",
     images: [],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tt339oo",
     originalText: "走了走了",
-    translatedText: "간다 가볼게",
+    translatedText: "갈게 갈게",
     images: [],
     comments: []
   }
