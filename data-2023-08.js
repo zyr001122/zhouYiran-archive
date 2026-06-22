@@ -142,7 +142,7 @@ const posts_202308 = [
         id: 70801,
         username: "周翊然Tz",
         originalText: "你这图没加载完",
-        translatedText: "사진 아직 로딩 중인데",
+        translatedText: "사진 아직 로딩중이야",
         images: [],
         actorReply: null
       }
@@ -162,7 +162,7 @@ const posts_202308 = [
         id: 70901,
         username: "周翊然Tz",
         originalText: "怪我啰",
-        translatedText: "그래 다 내 탓이겠지",
+        translatedText: "그래 다 내 탓이지",
         images: [],
         actorReply: null
       }
@@ -262,7 +262,7 @@ const posts_202308 = [
         id: 71401,
         username: "周翊然Tz",
         originalText: "这像是法拉利住的地方",
-        translatedText: "이거 페라리가 사는 집 같은데",
+        translatedText: "이거 페라리가 사는 집 같다",
         images: [],
         actorReply: null
       }
@@ -302,7 +302,7 @@ const posts_202308 = [
     date: "2023-08-22",
     weiboUrl: "https://weibo.com/5994946077/NfMGetGJW",
     originalText: "我又来了 给大家带点礼物",
-    translatedText: "또 왔다 얘들아 선물 갖고 왔어",
+    translatedText: "컴백 얘들아 내가 선물 갖고 왔어",
     images: [],
     comments: []
   },
@@ -369,7 +369,7 @@ const posts_202308 = [
         id: 71901,
         username: "周翊然Tz",
         originalText: "论让我社死，你是有一手的，速速撤下，一切好说",
-        translatedText: "너 사람 사회적 매장 시키는 건 아주 선수구나, 당장 내려, 좋은 말로 할 때",
+        translatedText: "사람 사회적 매장 시키는 건 아주 선수구나, 당장 내려, 좋은 말로 할 때",
         images: [],
         actorReply: null
       }
