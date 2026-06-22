@@ -175,7 +175,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwlan6v07",
     originalText: "拜拜",
-    translatedText: "빠이빠이",
+    translatedText: "갈게빠이빠이",
     images: [],
     comments: []
   }
