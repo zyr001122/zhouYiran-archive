@@ -4,7 +4,7 @@ const posts_202401 = [
     date: "2024-01-13",
     weiboUrl: "https://weibo.com/5994946077/NBHbmaHet",
     originalText: "感谢大家，我继续努力💪🏻",
-    translatedText: "다들 고마워, 계속 열심히 할게💪🏻",
+    translatedText: "다들 고마워, 앞으로도 계속 열심히 할게💪🏻",
     images: ["images/2401-trophy.jpg"],
     comments: []
   },
@@ -12,8 +12,8 @@ const posts_202401 = [
     id: 1202,
     date: "2024-01-21",
     weiboUrl: "https://weibo.com/5994946077/NCT9ktEM6",
-    originalText: "感受零下二十五度的崇礼❄️#本周报备#",
-    translatedText: "영하 25도 충리를 느끼는 중❄️#本周报备#",
+    originalText: "感受零下二十五度的崇礼❄️",
+    translatedText: "영하 25도 충리를 느끼는 중❄️ ",
     images: [
       "images/2401-cheonglie1.jpg",
       "images/2401-cheonglie2.jpg",
@@ -28,8 +28,8 @@ const posts_202401 = [
     id: 1203,
     date: "2024-01-26",
     weiboUrl: "https://weibo.com/5994946077/NDDkTyqDy",
-    originalText: "拍摄现场🤫#本周报备#",
-    translatedText: "촬영 현장🤫#本周报备#",
+    originalText: "拍摄现场🤫",
+    translatedText: "촬영 현장🤫",
     images: [
       "images/2401-set1.jpg",
       "images/2401-set2.jpg",
@@ -43,15 +43,15 @@ const posts_202401 = [
         id: 120301,
         username: "玥玥Tz",
         originalText: "法拉利怎么也穿红的",
-        translatedText: "페라리는 왜 또 빨간 옷이야",
+        translatedText: "페라리는 왜 또 빨간 옷 입었어",
         images: [],
-        actorReply: { originalText: "喜庆", translatedText: "경사스러워서" }
+        actorReply: { originalText: "喜庆", translatedText: "축제 분위기 내려고" }
       },
       {
         id: 120302,
         username: "_最惬意",
         originalText: "这29个未接来电是你打的吗",
-        translatedText: "이 부재중 전화 29개 너가 건 거야?",
+        translatedText: "부재중 전화 29개 너가 건 거야?",
         images: ["images/2401-remote.jpg"],
         actorReply: { originalText: "", translatedText: "", replyImages: ["images/2401-three-dogs.jpg"] }
       },
@@ -59,7 +59,7 @@ const posts_202401 = [
         id: 120303,
         username: "佩佩睡着惹_",
         originalText: "快看我做的花花，好不好看",
-        translatedText: "내가 만든 꽃 좀 봐줘, 예쁘지 않아?",
+        translatedText: "내가 만든 꽃인데 봐봐, 예쁘지?",
         images: ["images/2401-snow-rose.jpg"],
         actorReply: { originalText: "👍", translatedText: "👍" }
       }
@@ -72,14 +72,14 @@ const posts_202401 = [
     authorName: "你荔枝亦点啊房",
     authorAvatar: "🥣",
     originalText: "嗨网友哥哥 你来啦",
-    translatedText: "안녕 네티즌 오빠 왔구나",
+    translatedText: "안녕 랜선오빠 왔구나",
     images: [],
     comments: [
       {
         id: 120401,
         username: "周翊然Tz",
         originalText: "冒个泡",
-        translatedText: "잠깐 인사하러 왔어",
+        translatedText: "잠깐 생존신고 하러 왔어",
         images: [],
         actorReply: null
       }
@@ -92,14 +92,14 @@ const posts_202401 = [
     authorName: "吉不吉岛普吉岛",
     authorAvatar: "🥣",
     originalText: "新年你打算要怎么过🤔",
-    translatedText: "새해 어떻게 보낼 거야🤔",
+    translatedText: "새해 뭐하고 보낼 거야🤔",
     images: ["images/2401-fireworks.jpg"],
     comments: [
       {
         id: 120501,
         username: "周翊然Tz",
         originalText: "在剧组过💪🏻",
-        translatedText: "촬영장에서 보낼 거야💪🏻",
+        translatedText: "촬영장에서 보내야지💪🏻",
         images: [],
         actorReply: null
       }
@@ -112,7 +112,7 @@ const posts_202401 = [
     authorName: "忙内专家",
     authorAvatar: "🥣",
     originalText: "小然你看有100个你的造型 可爱吗！🥰🥰🥰",
-    translatedText: "익연아 봐봐 너 코디 100개 있어 귀엽지!🥰🥰🥰",
+    translatedText: "익연아 봐봐 너 코디 100개짜리 귀엽지!🥰🥰🥰",
     images: ["images/2401-characters.jpg"],
     comments: [
       {
@@ -132,14 +132,14 @@ const posts_202401 = [
     authorName: "周周让让tz",
     authorAvatar: "🥣",
     originalText: "然哥看！所以然哥你要不要翻我一下🫠",
-    translatedText: "익연이형 봐봐! 그래서 나한테 답글 좀 달아줄 거야 안 줄 거야🫠",
+    translatedText: "오빠 여기! 나 답글 달아줄 거야 안 달아줄 거야🫠",
     images: ["images/2401-dragon-puzzle.jpg"],
     comments: [
       {
         id: 120701,
         username: "周翊然Tz",
         originalText: "同款小🐉",
-        translatedText: "똑같은 작은 🐉네",
+        translatedText: "똑같은 🐉네",
         images: [],
         actorReply: null
       }
@@ -152,14 +152,14 @@ const posts_202401 = [
     authorName: "我真的是易燃妻",
     authorAvatar: "🥣",
     originalText: "然弟 我过年也不放假，搬砖",
-    translatedText: "익연 동생아 나 새해에도 휴가 없어, 일하는 중",
+    translatedText: "익연 난 새해에도 못 쉬어, 일하는 중이야",
     images: ["images/2401-doll.jpg"],
     comments: [
       {
         id: 120801,
         username: "周翊然Tz",
         originalText: "我也是💪🏻新年快乐！",
-        translatedText: "나도 그래💪🏻새해 복 많이 받아!",
+        translatedText: "나도💪🏻새해 복 많이 받아!",
         images: [],
         actorReply: null
       }
@@ -192,14 +192,14 @@ const posts_202401 = [
     authorName: "是巴拉不是芭芭拉",
     authorAvatar: "🥣",
     originalText: "苦 太苦了 没有然哥翻牌的日子太苦了",
-    translatedText: "괴롭다 너무 괴로워 익연이형이 답글 안 달아주는 날들이 너무 괴로워",
-    images: ["images/2401-cold-kid.jpg"],
+    translatedText: "괴롭다 너무 괴로워 익연오빠가 답글 안 달아주는 날들이 너무 괴로워",
+    images: ["images/ 2401-cold-kid.jpg"],
     comments: [
       {
         id: 121001,
         username: "周翊然Tz",
         originalText: "周三快乐",
-        translatedText: "수요일도 즐겁게",
+        translatedText: "즐거운 하루 보내",
         images: [],
         actorReply: null
       }
