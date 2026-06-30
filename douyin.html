@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Zz 的眼睛 · 抖音</title>
+<style>
+  :root{
+    --accent:#fe2c55;      /* 더우인 레드 */
+    --like:#fe2c55;
+    --text:#161823;
+    --sub:#8a8b91;
+    --line:#ededed;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{background:#000;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+    color:var(--text);
+    display:flex;justify-content:center;
+  }
+  .phone{
+    width:100%;max-width:440px;background:#fff;min-height:100vh;position:relative;overflow:hidden;
+  }
+
+  /* ===== 헤더 / 커버 영역 ===== */
+  .cover{
+    position:relative;height:300px;color:#fff;overflow:hidden;
+  }
+  .cover-img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  }
+  /* 커버 위 어둑한 그라데이션 */
+  .cover::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.15) 100%);
+  }
+  .topbar{
+    position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;
+    padding:14px 14px 0;
+  }
+  .topbar .left,.topbar .right{display:flex;align-items:center;gap:10px;}
+  .icon-btn{
+    width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.25);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;
+    backdrop-filter:blur(2px);
+  }
+  .pill{
+    display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.25);
+    color:#fff;border-radius:18px;padding:7px 14px;font-size:15px;backdrop-filter:blur(2px);
+  }
+
+  /* 프로필 헤더(아바타+이름) */
+  .profile-head{
+    position:relative;z-index:3;display:flex;align-items:center;gap:14px;padding:18px 16px 0;
+  }
+  .avatar{
+    width:74px;height:74px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.6);
+    background:#ddd;flex-shrink:0;
+  }
+  .name-block .name{font-size:23px;font-weight:700;letter-spacing:.5px;text-shadow:0 1px 4px rgba(0,0,0,.3);}
+  .name-block .uid{
+    margin-top:6px;font-size:13px;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:6px;
+    text-shadow:0 1px 3px rgba(0,0,0,.3);
+  }
+  .copy-ic{font-size:13px;opacity:.9;}
+
+  /* ===== 흰 카드 영역 ===== */
+  .info{padding:16px 16px 0;background:#fff;}
+  .stats{display:flex;align-items:center;gap:26px;}
+  .stat .num{font-size:19px;font-weight:700;}
+  .stat .lbl{font-size:13px;color:var(--sub);margin-left:5px;}
+  .stat{display:flex;align-items:baseline;}
+
+  .bio{margin-top:16px;font-size:15px;line-height:1.5;color:#222;}
+  .tags{display:flex;gap:10px;margin-top:14px;}
+  .tag{
+    background:#f4f4f5;border-radius:6px;padding:6px 12px;font-size:13px;color:#5a5b60;
+    display:flex;align-items:center;gap:5px;
+  }
+
+  .actions{display:flex;gap:12px;margin-top:18px;}
+  .btn{
+    flex:1;border:none;border-radius:8px;height:44px;font-size:16px;font-weight:600;
+    display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;
+  }
+  .btn-follow{background:#f4f4f5;color:#161823;}
+  .btn-msg{background:#f4f4f5;color:#161823;}
+
+  /* ===== 작품 탭 ===== */
+  .works-bar{
+    margin-top:22px;padding:0 16px;display:flex;align-items:center;gap:8px;
+    font-size:18px;font-weight:700;
+  }
+  .works-bar .count{font-weight:700;}
+  .works-bar .caret{font-size:12px;color:#666;}
+
+  /* 그리드 */
+  .grid{
+    margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#fff;
+  }
+  .cell{position:relative;aspect-ratio:3/4;overflow:hidden;background:#222;cursor:pointer;}
+  .cell img{width:100%;height:100%;object-fit:cover;display:block;}
+  .cell .multi{
+    position:absolute;top:7px;right:7px;color:#fff;font-size:15px;
+    filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  }
+  .cell .like{
+    position:absolute;left:9px;bottom:9px;display:flex;align-items:center;gap:5px;
+    color:#fff;font-size:15px;font-weight:600;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6));
+  }
+  .cell .like svg{width:15px;height:15px;}
+  .cell.empty{display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;border:1.5px dashed #ccc;background:#fafafa;aspect-ratio:3/4;}
+
+  /* 편집 패널 */
+  .editbar{
+    position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;
+    background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;z-index:50;
+    box-shadow:0 -2px 12px rgba(0,0,0,.08);
+  }
+  .editbar button{
+    flex:1;height:42px;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;
+  }
+  .edit-on{background:var(--accent);color:#fff;}
+  .edit-off{background:#f4f4f5;color:#161823;}
+  .hint{font-size:11px;color:var(--sub);text-align:center;padding:6px 0 70px;}
+
+  [contenteditable="true"]{outline:1.5px dashed var(--accent);outline-offset:2px;border-radius:3px;cursor:text;}
+  .editing .editable-img{outline:2px dashed var(--accent);outline-offset:-2px;cursor:pointer;}
+  .editing .editable-img::after{content:"점\2009터치 → 교체";}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+
+  <!-- 커버 -->
+  <div class="cover">
+    <img class="cover-img editable-img" id="cover" data-img="cover" alt="cover"
+      src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='440' height='300'&gt;&lt;defs&gt;&lt;linearGradient id='g' x1='0' y1='0' x2='1' y2='1'&gt;&lt;stop offset='0' stop-color='%23ff7b54'/&gt;&lt;stop offset='1' stop-color='%23c0392b'/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;rect width='440' height='300' fill='url(%23g)'/&gt;&lt;/svg&gt;">
+    <div class="topbar">
+      <div class="left"><div class="icon-btn">‹</div></div>
+      <div class="right">
+        <div class="pill">👆 求更新</div>
+        <div class="icon-btn">🔍</div>
+        <div class="icon-btn">⋯</div>
+      </div>
+    </div>
+    <div class="profile-head">
+      <img class="avatar editable-img" id="avatar" data-img="avatar" alt="avatar"
+        src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='74' height='74'&gt;&lt;rect width='74' height='74' fill='%23f4c542'/&gt;&lt;text x='37' y='46' font-size='30' text-anchor='middle' fill='%23fff'&gt;Zz&lt;/text&gt;&lt;/svg&gt;">
+      <div class="name-block">
+        <div class="name editable" data-field>Zz 的眼睛</div>
+        <div class="uid">抖音号：<span class="editable" data-field>24224022404</span> <span class="copy-ic">⧉</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 정보 -->
+  <div class="info">
+    <div class="stats">
+      <div class="stat"><span class="num editable" data-field>237.4万</span><span class="lbl">获赞</span></div>
+      <div class="stat"><span class="num editable" data-field>145</span><span class="lbl">关注</span></div>
+      <div class="stat"><span class="num editable" data-field>38.8万</span><span class="lbl">粉丝</span></div>
+    </div>
+
+    <div class="bio editable" data-field>"分享一些我眼里的世界"</div>
+
+    <div class="tags">
+      <div class="tag">IP：<span class="editable" data-field>浙江</span></div>
+      <div class="tag editable" data-field>男 · 25岁</div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-follow">👤 特别关注 ▾</button>
+      <button class="btn btn-msg">✈ 发私信</button>
+    </div>
+  </div>
+
+  <!-- 작품 -->
+  <div class="works-bar">作品 <span class="count editable" data-field>23</span> <span class="caret">▼</span></div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="hint" id="hint"></div>
+</div>
+
+<!-- 편집 바 -->
+<div class="editbar">
+  <button class="edit-off" id="toggleEdit">✏️ 편집 모드</button>
+  <button class="edit-off" id="addCell">＋ 게시물 추가</button>
+</div>
+
+<input type="file" id="fileInput" accept="image/*" style="display:none">
+
+<script>
+/* ====== 초기 작품 데이터 ====== */
+const works = [
+  {likes:"18.7万", multi:false},
+  {likes:"25.4万", multi:true},
+  {likes:"33.7万", multi:false},
+  {likes:"9.2万",  multi:false},
+  {likes:"12.9万", multi:false},
+  {likes:"19.9万", multi:true},
+  {likes:"8.1万",  multi:false},
+  {likes:"15.2万", multi:false},
+  {likes:"6.7万",  multi:true},
+];
+
+const heart = `<svg viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7.5-4.6-10-9.1C.3 8.6 2 5 5.4 5c2 0 3.3 1.1 4.1 2.3C10.3 6.1 11.6 5 13.6 5 17 5 18.7 8.6 17 11.9 14.5 16.4 12 21 12 21z"/></svg>`;
+
+function placeholder(i){
+  const colors=['#5b7a9d','#a8744f','#8a9ba8','#3d4f5c','#6d5a4a','#4a4a4a','#7d8fa0','#9d7b5b','#5a6d7a'];
+  const c = colors[i%colors.length];
+  return "data:image/svg+xml;utf8,"+encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='240' height='320'><rect width='240' height='320' fill='${c}'/><text x='120' y='165' font-size='15' text-anchor='middle' fill='rgba(255,255,255,.7)'>작품 ${i+1}</text></svg>`
+  );
+}
+
+const grid = document.getElementById('grid');
+function render(){
+  grid.innerHTML='';
+  works.forEach((w,i)=>{
+    const cell=document.createElement('div');
+    cell.className='cell';
+    cell.dataset.index=i;
+    cell.innerHTML=`
+      <img class="editable-img" data-cell="${i}" src="${w.src||placeholder(i)}">
+      ${w.multi?'<div class="multi">▢</div>':''}
+      <div class="like">${heart}<span class="editable like-num" data-cell-like="${i}">${w.likes}</span></div>
+    `;
+    grid.appendChild(cell);
+  });
+}
+render();
+
+/* ====== 편집 모드 ====== */
+let editing=false;
+const phone=document.getElementById('phone');
+const hint=document.getElementById('hint');
+const toggleBtn=document.getElementById('toggleEdit');
+
+toggleBtn.addEventListener('click',()=>{
+  editing=!editing;
+  phone.classList.toggle('editing',editing);
+  toggleBtn.textContent = editing? '✓ 편집 완료' : '✏️ 편집 모드';
+  toggleBtn.className = editing? 'edit-on' : 'edit-off';
+  document.querySelectorAll('[data-field],.like-num').forEach(el=>{
+    el.setAttribute('contenteditable', editing?'true':'false');
+  });
+  hint.textContent = editing
+    ? '글자를 직접 눌러 수정하고, 사진을 누르면 내 이미지로 교체할 수 있어요. 끝나면 [편집 완료]를 누르세요.'
+    : '';
+});
+
+/* ====== 이미지 교체 ====== */
+const fileInput=document.getElementById('fileInput');
+let targetImg=null;
+
+phone.addEventListener('click',(e)=>{
+  if(!editing) return;
+  const img=e.target.closest('.editable-img');
+  if(img){ targetImg=img; fileInput.click(); }
+});
+
+fileInput.addEventListener('change',(e)=>{
+  const file=e.target.files[0];
+  if(!file||!targetImg) return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    targetImg.src=ev.target.result;
+    // 작품 셀이면 데이터에도 저장
+    const ci=targetImg.dataset.cell;
+    if(ci!==undefined) works[+ci].src=ev.target.result;
+    targetImg=null;
+  };
+  reader.readAsDataURL(file);
+  fileInput.value='';
+});
+
+/* ====== 게시물 추가 ====== */
+document.getElementById('addCell').addEventListener('click',()=>{
+  works.push({likes:"0", multi:false});
+  render();
+  if(editing){
+    document.querySelectorAll('.like-num').forEach(el=>el.setAttribute('contenteditable','true'));
+  }
+});
+</script>
+</body>
+</html>
