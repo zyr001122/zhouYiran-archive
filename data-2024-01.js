@@ -139,7 +139,7 @@ const posts_202401 = [
         id: 120701,
         username: "周翊然Tz",
         originalText: "同款小🐉",
-        translatedText: "똑같은 🐉네",
+        translatedText: "같은🐉이네",
         images: [],
         actorReply: null
       }
@@ -152,14 +152,14 @@ const posts_202401 = [
     authorName: "我真的是易燃妻",
     authorAvatar: "🥣",
     originalText: "然弟 我过年也不放假，搬砖",
-    translatedText: "익연 난 새해에도 못 쉬어, 일하는 중이야",
+    translatedText: "익연 난 새해에도 못 쉬고 일하는 중이야",
     images: ["images/2401-doll.jpg"],
     comments: [
       {
         id: 120801,
         username: "周翊然Tz",
         originalText: "我也是💪🏻新年快乐！",
-        translatedText: "나도💪🏻새해 복 많이 받아!",
+        translatedText: "나돈데💪🏻새해 복 많이 받아!",
         images: [],
         actorReply: null
       }
@@ -172,7 +172,7 @@ const posts_202401 = [
     authorName: "小猫说每天都会很开心o",
     authorAvatar: "🥣",
     originalText: "新年快乐 在过年之前拿到了驾照🚗 考试的分数也出啦 好像考的还不错捏 🎉在剧组搬砖的小然也要努力💪🏻一起加油",
-    translatedText: "새해 복 많이 받아 설 전에 운전면허증 땄어🚗 시험 점수도 나왔는데 꽤 잘 본 것 같아 🎉촬영장에서 일하는 익연이도 열심히💪🏻 같이 화이팅하자",
+    translatedText: "새해 복 많이 받아 난 설 전에 운전면허증 땄어🚗 시험 점수도 나왔는데 나름 잘 본 것 같아 🎉촬영장에서 일하는 익연이도 열심히💪🏻 같이 빠이팅",
     images: [],
     comments: [
       {
@@ -199,7 +199,7 @@ const posts_202401 = [
         id: 121001,
         username: "周翊然Tz",
         originalText: "周三快乐",
-        translatedText: "즐거운 하루 보내",
+        translatedText: "좋은 하루 보내",
         images: [],
         actorReply: null
       }
