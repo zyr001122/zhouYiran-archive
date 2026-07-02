@@ -188,7 +188,8 @@
 </main>
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
-  
+
+<script src="data-2024-02.js"></script>  
 <script src="data-2024-01.js"></script>
 <script src="data-2023-10.js"></script>
 <script src="data-2023-11.js"></script>
@@ -208,6 +209,7 @@
 <script src="data-2026-05.js"></script>
 <script>
   const posts = [
+    ...(typeof posts_202402 !== 'undefined' ? posts_202402 : []),
     ...(typeof posts_202401 !== 'undefined' ? posts_202401 : []),
     ...(typeof posts_202310 !== 'undefined' ? posts_202310 : []),
     ...(typeof posts_202311 !== 'undefined' ? posts_202311 : []),
@@ -302,7 +304,7 @@
   function renderPost(post, query) {
     const imagesHtml = post.images && post.images.length
       ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>` : '';
-
+    const youtubeHtml = post.youtubeUrl ? `<div style="margin:12px 0;border-radius:10px;overflow:hidden;aspect-ratio:16/9;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" frameborder="0" allowfullscreen></iframe></div>` : '';
     let commentsHtml;
     let commentCount = post.comments ? post.comments.length : 0;
     let autoOpen = false;
@@ -340,7 +342,7 @@
          <div class="translated-text">${post.translatedText}</div>
           ${post.note ? `<div class="translation-note">${post.note}</div>` : ''}
         </div>
-        ${imagesHtml}
+        ${imagesHtml}${youtubeHtml}
         <div class="post-footer">
           <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
             댓글 보기 (${commentCount})
