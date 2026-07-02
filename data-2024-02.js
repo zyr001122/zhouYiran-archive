@@ -3,8 +3,8 @@ const posts_202402 = [
     id: 1301,
     date: "2024-02-02",
     weiboUrl: "https://weibo.com/5994946077/NEIFfles9",
-    originalText: "小年夜飞行✈️ #春节搭子##本周报备#",
-    translatedText: "설 전날 밤 비행✈️ #春节搭子##本周报备#",
+    originalText: "小年夜飞行✈️",
+    translatedText: "설 전날 밤 비행✈️",
     images: [
       "images/2402-flight1.jpg",
       "images/2402-flight2.jpg",
@@ -28,8 +28,8 @@ const posts_202402 = [
     date: "2024-02-09",
     weiboUrl: "https://weibo.com/5994946077/NFKoYaXz8",
     originalText: "#本周报备# 新春快乐🎉 祝大家万事兴\"龙\"",
-    translatedText: "#本周报备# 새해 복 많이 받아🎉 다들 만사형통하길",
-    note: "万事兴\"龙\": 만사형통(万事兴隆)에서 隆 대신 龙(용)으로 바꾼 말장난. 용의 해라서!",
+    translatedText: "새해 복 많이 받아🎉 올 한 해 모두 만사형'용'하길",
+    note: "万事兴\"龙\": 용의해, 만사형통(万事兴隆)에서 隆 대신 龙(용)으로 바꾼 말장난",
     images: [
       "images/2402-newyear1.jpg",
       "images/2402-newyear2.jpg",
@@ -47,8 +47,8 @@ const posts_202402 = [
     id: 1304,
     date: "2024-02-19",
     weiboUrl: "https://weibo.com/5994946077/O1jUJ4o5U",
-    originalText: "一些开工记录 #本周报备#",
-    translatedText: "업무 복귀 기록 #本周报备#",
+    originalText: "一些开工记录",
+    translatedText: "업무 복귀 일지",
     images: [
       "images/2402-work1.jpg",
       "images/2402-work2.jpg",
@@ -74,9 +74,9 @@ const posts_202402 = [
         id: 130501,
         username: "超可爱的小猪宝",
         originalText: "雪猪来咯",
-        translatedText: "눈 돼지 왔다",
+        translatedText: "돼지 눈사람 등장",
         images: ["images/2402-snow-pig.jpg"],
-        actorReply: { originalText: "堆雪猪？", translatedText: "눈 돼지 만든 거야?" }
+        actorReply: { originalText: "堆雪猪？", translatedText: "돼지 만든 거야?" }
       },
       {
         id: 130502,
@@ -90,9 +90,9 @@ const posts_202402 = [
         id: 130503,
         username: "半颗小番茄",
         originalText: "给你看楼下不知名的小丑人😆",
-        translatedText: "아래층 이름 모를 광대 보여줄게😆",
+        translatedText: "아래층에 있는 이상한 사람 보여줄게😆",
         images: ["images/2402-clown.jpg"],
-        actorReply: { originalText: "🤔挺man的", translatedText: "🤔꽤 남자다운데" }
+        actorReply: { originalText: "🤔挺man的", translatedText: "🤔상남잔데" }
       },
       {
         id: 130504,
@@ -100,7 +100,7 @@ const posts_202402 = [
         originalText: "哈哈哈哈哈你看我的",
         translatedText: "ㅋㅋㅋㅋㅋ내 거 봐봐",
         images: ["images/2402-hair-acc.jpg"],
-        actorReply: { originalText: "头饰挺别致😏", translatedText: "머리 장식 꽤 독특한데😏" }
+        actorReply: { originalText: "头饰挺别致😏", translatedText: "머리 악세 되게 개성있다😏" }
       },
       {
         id: 130505,
@@ -116,8 +116,8 @@ const posts_202402 = [
     id: 1306,
     date: "2024-02-28",
     weiboUrl: "https://weibo.com/5994946077/O2GybmFjJ",
-    originalText: "有雪有雨也有晴 #本周报备##一条plog告别二月#",
-    translatedText: "눈도 오고 비도 오고 맑기도 하고 #本周报备##一条plog告别二月#",
+    originalText: "有雪有雨也有晴",
+    translatedText: "눈도 오고 비도 오고 맑기도 하고",
     images: [
       "images/2402-plog1.jpg",
       "images/2402-plog2.jpg",
@@ -136,7 +136,7 @@ const posts_202402 = [
     date: "2024-02-29",
     weiboUrl: "https://weibo.com/5994946077/O2SHS6k1G",
     originalText: "最好的都给你-余佳运",
-    translatedText: "최고의 것은 모두 너에게 - 위자윈",
+    translatedText: "最好的都给你- 여가운",
     youtubeUrl: "https://youtu.be/O7Mzg4zpruA",
     images: [],
     comments: []
