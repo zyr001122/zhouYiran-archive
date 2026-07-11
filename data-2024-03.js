@@ -4,7 +4,7 @@ const posts_202403 = [
     date: "2024-03-05",
     weiboUrl: "https://weibo.com/5994946077/O3Bh1hIkt",
     originalText: "🎨涂涂画画，记录春天",
-    translatedText: "🎨낙서낙서, 봄을 기록하는 중",
+    translatedText: "🎨끄적끄적, 기록해 봄",
     images: [
       "images/2403-spring1.jpg",
       "images/2403-spring2.jpg",
@@ -23,7 +23,7 @@ const posts_202403 = [
     date: "2024-03-14",
     weiboUrl: "https://weibo.com/5994946077/O4YYdwCUu",
     originalText: "📮🚥🐈",
-    translatedText: "📮🚥🐈",
+    translatedText: "",
     images: [
       "images/2403-march14-1.jpg",
       "images/2403-march14-2.jpg",
@@ -41,8 +41,8 @@ const posts_202403 = [
         username: "不知名低像素面包",
         originalText: "听说你喜欢这个？",
         translatedText: "이거 좋아한다고 들었는데?",
-        images: [],
-        actorReply: { originalText: "是谁走漏了风声", translatedText: "누가 말 흘렸어" }
+        images: ["images/24032-fan1.jpg"],
+        actorReply: { originalText: "是谁走漏了风声", translatedText: "누가 소문 냈어" }
       }
     ]
   },
