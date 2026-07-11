@@ -63,7 +63,7 @@ const posts_202403 = [
     authorAvatar: "🥣",
     originalText: "昨天报名了英语四级考试 小然可不可以祝我一次过🥹🥹🥹",
     translatedText: "어제 영어 4급 시험 신청했거든 익연이가 나 한 번에 합격할 수 있게 응원해 줄 수 있어?🥹🥹🥹",
-    images: ["images/2403-fan1.jpg", "images/2403-fan2.jpg"],
+    images: ["images/2403-fan1.jpg"],
     comments: [
       {
         id: 140301,
