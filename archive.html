@@ -290,7 +290,7 @@
     const isActor = c.username === ACTOR_NICK;
     const avatarHtml = isActor
       ? `<div class="comment-avatar" style="background:none;"><img src="${ACTOR_IMG}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${ACTOR_NICK}" /></div>`
-      : `<div class="comment-avatar">🥣</div>`;
+     : c.username === '吃瓜罗伯特' ? `<div class="comment-avatar">🤖</div>` : `<div class="comment-avatar">🥣</div>`;
     return `
       <div class="comment-item">
         <div class="comment-header">
