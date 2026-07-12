@@ -161,16 +161,7 @@ const posts_202406 = [
     originalText: "hi来了",
     translatedText: "hi 왔어",
     images: [],
-    comments: [
-      {
-        id: 1707001,
-        username: "周翊然Tz",
-        originalText: "走了 搬砖去了",
-        translatedText: "갈게 일하러 간다",
-        images: [],
-        actorReply: null
-      }
-    ]
+    comments: []
   },
   {
     id: 1708,
@@ -553,5 +544,33 @@ const posts_202406 = [
         actorReply: null
       }
     ]
+  },
+  {
+    id: 1727,
+    date: "2024-06-22",
+    weiboUrl: "https://weibo.com/5994946077/Okcj03wKQ",
+    originalText: "走了 搬砖去了",
+    translatedText: "갈게 일하러 간다",
+    images: [],
+    comments: []
+  },
+  {
+    id: 1728,
+    date: "2024-06-29",
+    weiboUrl: "https://weibo.com/5994946077/OlfzKrzbZ",
+    originalText: "💇🏻‍♂️#本周报备#",
+    translatedText: "💇🏻‍♂️#本周报备#",
+    images: [
+      "images/2406-jun29-1.jpg",
+      "images/2406-jun29-2.jpg",
+      "images/2406-jun29-3.jpg",
+      "images/2406-jun29-4.jpg",
+      "images/2406-jun29-5.jpg",
+      "images/2406-jun29-6.jpg",
+      "images/2406-jun29-7.jpg",
+      "images/2406-jun29-8.jpg",
+      "images/2406-jun29-9.jpg"
+    ],
+    comments: []
   }
 ];
