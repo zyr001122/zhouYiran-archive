@@ -9,206 +9,435 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --accent: #F7A4B8;
-      --accent-light: #fde8ef;
-      --accent-deep: #c45e77;
-      --pink: #F7A4B8;
-      --pink-dark: #E8839A;
-      --pink-deep: #c45e77;
-      --pink-light: #fde8ef;
-      --pink-pale: #fff5f8;
-      --text: #2a1a20;
-      --text-muted: #8a6070;
-      --text-light: #c4a0ae;
-      --border: #f0d0da;
+      --pink: #F0577F;
+      --pink-pale: #FDEEF1;
+      --pink-dim: #f7b3c4;
+      --tab-inactive: #322b31;
+      --black: #1a1216;
+      --gray-muted: #c4c4c4;
+      --gray-bg: #f4f4f4;
+      --border: #ececec;
       --white: #ffffff;
-      --card-bg: #fffbfc;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Pretendard', -apple-system, sans-serif; background: var(--pink-pale); color: var(--text); min-height: 100vh; }
-    .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; letter-spacing: 0; }
 
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #fde8ef 0%, #fdf0f4 60%, #fff0f5 100%); border-bottom: 1px solid var(--border); padding: 1.5rem 1.5rem 2rem; }
-    .hero-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.75rem; }
-    .hero-avatar { width: 126px; height: 126px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 20px rgba(247,164,184,0.4); }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-info h1 { font-size: 22px; font-weight: 700; color: var(--pink-deep); margin-bottom: 4px; }
-    .hero-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
-    .hero-notice { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--text-muted); flex-wrap: wrap; }
-    .hero-notice-desc { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+    /* ============ HERO / DARK BAND ============ */
+    .hero-band {
+      background: var(--black);
+      padding: 28px 20px 0;
+    }
+    .hero-top {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .hero-text .hero-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .hero-text .hero-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .hero-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    .main-layout { max-width: 960px; margin: 0 auto; padding: 1.5rem; display: grid; grid-template-columns: 1fr 250px; gap: 1.5rem; align-items: start; }
+    /* year index tabs */
+    .year-tabs {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      gap: 3px;
+      padding-left: 4px;
+    }
+    .year-tab {
+      padding: 9px 18px 0;
+      height: 34px;
+      border-radius: 3px 3px 0 0;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      background: var(--tab-inactive);
+      color: rgba(255,255,255,0.5);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .year-tab:hover { color: rgba(255,255,255,0.8); }
+    .year-tab.active { background: var(--pink); color: var(--white); }
 
-    /* FEED */
-    .feed-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .feed-title { font-size: 15px; font-weight: 700; color: var(--pink-deep); display: flex; align-items: center; gap: 8px; }
-    .feed-title::before { content: ''; display: block; width: 3px; height: 16px; background: var(--pink); border-radius: 2px; }
-    .post-count-badge { font-size: 11px; background: var(--pink-light); color: var(--pink-deep); padding: 2px 8px; border-radius: 10px; font-weight: 500; }
+    /* ============ WHITE PANEL ============ */
+    .panel {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-    /* 날짜 인덱스 */
-    .date-index { display: flex; align-items: center; gap: 10px; margin: 1.2rem 0 0.6rem; }
-    .date-index-badge { font-size: 11px; font-weight: 700; color: var(--pink-deep); background: var(--pink-light); padding: 3px 10px; border-radius: 10px; white-space: nowrap; }
-    .date-index-line { flex: 1; height: 1px; background: var(--border); }
+    /* month selector: borderless spaced text */
+    .month-row {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 18px 0 14px;
+      overflow-x: auto;
+      border-bottom: 2px solid var(--black);
+    }
+    .month-row::-webkit-scrollbar { display: none; }
+    .month-item {
+      font-size: 16px;
+      font-weight: 500;
+      color: #c4c4c4;
+      position: relative;
+      white-space: nowrap;
+      cursor: pointer;
+      padding-bottom: 8px;
+      transition: color 0.15s;
+    }
+    .month-item:hover { color: var(--black); }
+    .month-item.active {
+      font-weight: 700;
+      color: var(--black);
+    }
+    .month-item.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--pink);
+    }
+    .month-item .m-count {
+      font-size: 10px;
+      color: var(--gray-muted);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+    .month-item.active .m-count { color: var(--pink); }
 
-    .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
-    .post-card:hover { box-shadow: 0 4px 20px rgba(247,164,184,0.2); }
+    /* search + filter */
+    .search-row { padding: 14px 0 0; }
+    .search-input {
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      font-family: inherit;
+      letter-spacing: -0.01em;
+      background: transparent;
+      outline: none;
+      color: var(--black);
+    }
+    .search-input:focus { border-bottom-color: var(--pink); }
+    .search-input::placeholder { color: var(--gray-muted); }
 
-    /* POST META */
-    .post-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .actor-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--pink-light); }
-    .actor-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .post-meta-info { flex: 1; }
-    .actor-name { font-size: 14px; font-weight: 700; color: var(--pink-deep); }
-    .post-date { font-size: 11px; color: var(--text-light); margin-top: 2px; }
-    .weibo-link { font-size: 11px; color: var(--pink-deep); text-decoration: none; padding: 4px 10px; border: 1px solid var(--pink); border-radius: 12px; transition: all 0.2s; white-space: nowrap; }
-    .weibo-link:hover { background: var(--pink); color: white; }
-
-    /* POST BODY */
-    .original-label { font-size: 10px; color: var(--text-light); font-weight: 500; letter-spacing: 0.5px; margin-bottom: 3px; }
-    .original-text { font-size: 13px; color: var(--text-muted); line-height: 1.8; padding: 10px 12px; background: var(--pink-pale); border-radius: 8px; border-left: 3px solid var(--pink-light); margin-bottom: 10px; }
-    .translated-text { font-size: 15px; color: var(--text); line-height: 1.85; }
-    .translation-note { font-size: 12px; color: var(--text-light); margin-top: 4px; line-height: 1.5; }
-    .post-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; margin: 12px 0; }
-    .post-images img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 280px; }
-    .post-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 10px; }
-    .toggle-comments-btn { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); border: none; padding: 5px 12px; border-radius: 12px; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-    .toggle-comments-btn:hover { background: var(--pink); color: white; }
-
-    /* COMMENTS */
-    .comments-section { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border); display: none; }
-    .comments-section.open { display: block; }
-    .comments-title { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; }
-    .comment-item { margin-bottom: 12px; padding: 10px 12px; background: var(--pink-pale); border-radius: 10px; }
-    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .comment-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-    .comment-username { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-    .comment-original { font-size: 11px; color: var(--text-light); line-height: 1.6; margin-bottom: 3px; }
-    .comment-translated { font-size: 13px; color: var(--text); line-height: 1.7; }
-    .comment-images { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .comment-images img { width: auto; max-width: 100%; max-height: 180px; border-radius: 8px; object-fit: contain; }
-
-    /* ACTOR REPLY */
-    .actor-reply { margin-top: 10px; padding: 10px 12px; background: var(--pink-light); border-radius: 10px; border-left: 3px solid var(--pink); }
-    .actor-reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .actor-reply-avatar { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1.5px solid var(--pink); }
-    .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .actor-reply-name { font-size: 12px; font-weight: 700; color: var(--pink-deep); }
-    .actor-reply-original { font-size: 11px; color: var(--pink-dark); line-height: 1.6; margin-bottom: 2px; }
-    .actor-reply-translated { font-size: 13px; color: var(--pink-deep); font-weight: 500; line-height: 1.7; }
-
-    /* SIDEBAR */
-    .sidebar { display: flex; flex-direction: column; gap: 1rem; }
-    .sidebar-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.25rem; }
-    .sidebar-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .sidebar-title-dot { width: 6px; height: 6px; background: var(--pink); border-radius: 50%; display: inline-block; }
-    .year-group { margin-bottom: 8px; }
-    .year-label { font-size: 13px; font-weight: 700; color: var(--pink-deep); padding: 4px 0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
-    .year-label:hover { color: var(--pink-dark); }
-    .month-list { padding-left: 12px; margin-top: 4px; }
-    .month-item { font-size: 12px; color: var(--text-muted); padding: 4px 8px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s; }
-    .month-item:hover { background: var(--pink-light); color: var(--pink-deep); }
-    .month-item.active { background: var(--pink); color: white; font-weight: 600; }
-    .month-count { font-size: 10px; opacity: 0.7; }
-    .notice-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
-    .notice-item:last-child { border-bottom: none; }
-    .notice-label { font-size: 10px; color: var(--text-light); margin-top: 2px; font-weight: 500; }
-
-    /* SEARCH */
-    .search-bar { margin-bottom: 1rem; }
-    .search-input { width: 100%; padding: 9px 16px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; font-family: inherit; background: white; outline: none; color: var(--text); transition: border-color 0.2s; }
-    .search-input:focus { border-color: var(--pink); }
-    .search-input::placeholder { color: var(--text-light); }
-
-    /* FILTER BAR */
-    .filter-active-bar { font-size: 12px; color: var(--pink-deep); background: var(--pink-light); padding: 6px 12px; border-radius: 10px; margin-bottom: 1rem; display: none; align-items: center; justify-content: space-between; }
+    .filter-active-bar {
+      font-size: 12px;
+      color: var(--pink);
+      font-weight: 600;
+      padding: 10px 0;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
     .filter-active-bar.show { display: flex; }
-    .clear-filter { cursor: pointer; font-weight: 600; color: var(--pink-deep); background: none; border: none; font-family: inherit; font-size: 12px; }
+    .clear-filter {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--gray-muted);
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 12px;
+    }
+    .clear-filter:hover { color: var(--black); }
 
-    /* EMPTY */
-    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-light); }
-    .empty-state .big-icon { font-size: 40px; margin-bottom: 12px; }
+    .feed-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 18px 0 4px;
+    }
+    .feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
+    .post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
 
-    /* FOOTER */
-    .site-footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 2rem; }
+    /* ============ POSTS ============ */
+    #posts-feed { padding-bottom: 2rem; }
 
-    @media (max-width: 700px) {
-  .main-layout { grid-template-columns: 1fr; padding: 1rem; }
-  .sidebar { display: flex; }
-  .hero-inner { flex-direction: column; gap: 1rem; text-align: center; }
-  .hero-avatar { width: 100px; height: 100px; }
-}
+    .date-index {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-muted);
+      letter-spacing: 0.02em;
+      padding: 20px 0 10px;
+    }
+
+    .post-card {
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+    }
+    .post-card:first-of-type { border-top: none; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .post-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--pink);
+    }
+    .post-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .post-meta-info { flex: 1; min-width: 0; }
+    .actor-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .post-date { font-size: 11px; color: var(--gray-muted); margin-top: 1px; letter-spacing: 0.01em; }
+    .weibo-link {
+      font-size: 11px;
+      color: var(--pink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .original-text {
+      font-size: 12px;
+      color: var(--gray-muted);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+    .translated-text {
+      font-size: 16px;
+      color: var(--black);
+      line-height: 1.7;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+    .translation-note {
+      font-size: 12px;
+      color: var(--pink);
+      border-left: 2px solid var(--pink);
+      padding-left: 8px;
+      margin-top: 10px;
+      line-height: 1.5;
+      letter-spacing: -0.005em;
+    }
+
+    /* image grid: weibo-style up to 3x3 */
+    .post-image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 12px;
+    }
+    .post-image-grid.cols-1 { grid-template-columns: 1fr; }
+    .post-image-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cell { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--gray-bg); }
+    .grid-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .post-image-single { margin-top: 12px; }
+    .post-image-single img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26,18,22,0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .yt-embed {
+      margin: 12px 0 0;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+    }
+    .yt-embed iframe { width: 100%; height: 100%; border: none; }
+
+    .post-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+    .toggle-comments-btn {
+      font-size: 12px;
+      color: var(--pink);
+      font-weight: 700;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: -0.01em;
+      padding: 0;
+    }
+    .toggle-comments-btn.empty { color: var(--gray-muted); cursor: default; }
+
+    /* comments */
+    .comments-section {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+      display: none;
+    }
+    .comments-section.open { display: block; }
+    .comments-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-muted);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+    }
+    .comment-item { margin-bottom: 12px; }
+    .comment-item:last-child { margin-bottom: 0; }
+    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .comment-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gray-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gray-muted);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .comment-username { font-size: 12px; font-weight: 700; color: var(--black); }
+    .comment-original { font-size: 11px; color: var(--gray-muted); line-height: 1.5; margin-bottom: 2px; }
+    .comment-translated { font-size: 13px; color: var(--black); line-height: 1.6; letter-spacing: -0.01em; }
+    .comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .comment-images img { max-width: 120px; max-height: 140px; object-fit: cover; }
+
+    .actor-reply {
+      margin-top: 8px;
+      padding-left: 10px;
+      border-left: 2px solid var(--pink);
+    }
+    .actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+    .actor-reply-name { font-size: 11px; font-weight: 700; color: var(--pink); }
+    .actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.5; margin-bottom: 2px; }
+    .actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 600; line-height: 1.6; }
+
+    .empty-state { text-align: center; padding: 4rem 1rem; color: var(--gray-muted); font-size: 13px; }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 11px;
+      color: var(--gray-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 480px) {
+      .hero-band { padding: 22px 16px 0; }
+      .hero-text .hero-title { font-size: 26px; }
+      .panel { padding: 0 16px; }
+      .year-tabs { padding-left: 0; }
+    }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
-    <div class="hero-info">
-      <h1>周翊然Tz</h1>
-      <p>초화 아카이브</p>
-      <div class="hero-notice">
-        <span>✍️ VAz</span>
-        <span>·</span>
-        <span> 번역 오/의역 多</span>
-      </div>
-      <div class="hero-notice-desc">매 달 22일 초화 댓글파티</div>
+<!-- HERO / DARK BAND -->
+<div class="hero-band">
+  <div class="hero-top">
+    <div class="hero-text">
+      <div class="hero-label">周翊然Tz</div>
+      <div class="hero-title">초화 아카이브</div>
     </div>
+    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
   </div>
-</section>
+  <div class="year-tabs" id="year-tabs"></div>
+</div>
 
-<!-- MAIN -->
-<main>
-  <div class="main-layout">
-    <section>
-      <div class="search-bar">
-        <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
-      </div>
-      <div class="filter-active-bar" id="filterBar">
-        <span id="filterLabel"></span>
-        <button class="clear-filter" onclick="clearAllFilters()">✕ 전체보기</button>
-      </div>
-      <div class="feed-header">
-        <div class="feed-title">초화 게시물</div>
-        <span class="post-count-badge" id="feed-count"></span>
-      </div>
-      <div id="posts-feed"></div>
-    </section>
+<!-- WHITE PANEL -->
+<div class="panel">
+  <div class="month-row" id="month-row"></div>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-card">
-        <div class="sidebar-title"><span class="sidebar-title-dot"></span>날짜별 보기</div>
-        <div id="date-tree"></div>
-      </div>
-    </aside>
+  <div class="search-row">
+    <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
   </div>
-</main>
+
+  <div class="filter-active-bar" id="filterBar">
+    <span id="filterLabel"></span>
+    <button class="clear-filter" onclick="clearAllFilters()">전체보기 ✕</button>
+  </div>
+
+  <div class="feed-header">
+    <div class="feed-title">초화 게시물</div>
+    <span class="post-count-badge" id="feed-count"></span>
+  </div>
+
+  <div id="posts-feed"></div>
+</div>
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
-<script src="data-2024-10.js"></script>  
+<script src="data-2024-10.js"></script>
 <script src="data-2024-09.js"></script>
-<script src="data-2024-08.js"></script>  
-<script src="data-2024-07.js"></script>  
+<script src="data-2024-08.js"></script>
+<script src="data-2024-07.js"></script>
 <script src="data-2024-06.js"></script>
 <script src="data-2024-05.js"></script>
 <script src="data-2024-04.js"></script>
 <script src="data-2024-03.js"></script>
-<script src="data-2024-02.js"></script>  
+<script src="data-2024-02.js"></script>
 <script src="data-2024-01.js"></script>
 <script src="data-2023-10.js"></script>
 <script src="data-2023-11.js"></script>
 <script src="data-2023-12.js"></script>
 <script src="data-2023-09.js"></script>
 <script src="data-2023-08.js"></script>
-<script src="data-2023-07.js"></script>  
-<script src="data-2023-03.js"></script>  
+<script src="data-2023-07.js"></script>
+<script src="data-2023-03.js"></script>
 <script src="data-2023-01.js"></script>
 <script src="data-2022-09.js"></script>
-<script src="data-2022-11.js"></script>  
+<script src="data-2022-11.js"></script>
 <script src="data-2022-08.js"></script>
 <script src="data-2026-01.js"></script>
 <script src="data-2026-02.js"></script>
@@ -249,6 +478,7 @@
   const ACTOR_IMG = 'IMG_1757.JPG';
   const ACTOR_NICK = '周翊然Tz';
   let currentFilter = { type: 'all', value: null };
+  let dateTree = {};
 
   function formatDateTime(d) {
     const date = new Date(d);
@@ -256,12 +486,7 @@
     const day = date.getDate();
     const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
     const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
-    return hour ? `${month}월 ${day}일 ${hour}:${min}` : `${month}월 ${day}일`;
-  }
-
-  function formatUpdateDate(d) {
-    const date = new Date(d);
-    return `${date.getMonth()+1}월 ${date.getDate()}일`;
+    return hour ? `${month}.${day} ${hour}:${min}` : `${month}.${day}`;
   }
 
   function getMonthLabel(d) {
@@ -275,7 +500,6 @@
       replyHtml = c.actorReplies.map(r => `
         <div class="actor-reply">
           <div class="actor-reply-header">
-            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
           <div class="actor-reply-original zh">${r.originalText}</div>
@@ -285,7 +509,6 @@
       replyHtml = `
         <div class="actor-reply">
           <div class="actor-reply-header">
-            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
           ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${c.actorReply.originalText}</div>` : ''}
@@ -295,13 +518,13 @@
     }
     const isActor = c.username === ACTOR_NICK;
     const avatarHtml = isActor
-      ? `<div class="comment-avatar" style="background:none;"><img src="${ACTOR_IMG}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${ACTOR_NICK}" /></div>`
-     : c.username === '吃瓜罗伯特' ? `<div class="comment-avatar">🤖</div>` : `<div class="comment-avatar">🥣</div>`;
+      ? `<img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" />`
+      : (c.username === '吃瓜罗伯特' ? '🤖' : '');
     return `
       <div class="comment-item">
         <div class="comment-header">
-          ${avatarHtml}
-          <span class="comment-username" style="${isActor ? 'color:var(--pink-deep);font-weight:700;' : ''}">${c.username}</span>
+          <div class="comment-avatar" style="${isActor ? '' : 'background:var(--pink);'}">${avatarHtml}</div>
+          <span class="comment-username" style="${isActor ? 'color:var(--pink);' : ''}">${c.username}</span>
         </div>
         <div class="comment-original zh">${c.originalText}</div>
         <div class="comment-translated">${c.translatedText}</div>
@@ -317,10 +540,33 @@
       (c.actorReplies && c.actorReplies.some(r => r.translatedText && r.translatedText.toLowerCase().includes(query)));
   }
 
+  function renderImages(images) {
+    if (!images || !images.length) return '';
+    if (images.length === 1) {
+      return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" /></div>`;
+    }
+    const shown = images.slice(0, 9);
+    const remaining = images.length - 9;
+    const colsClass = shown.length === 2 ? 'cols-2' : '';
+    const cells = shown.map((src, i) => {
+      if (i === 8 && remaining > 0) {
+        return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" /><div class="grid-overlay">+${remaining}</div></div>`;
+      }
+      return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" /></div>`;
+    }).join('');
+    return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
+  }
+
   function renderPost(post, query) {
-    const imagesHtml = post.images && post.images.length
-      ? `<div class="post-images">${post.images.map(src => `<img src="${src}" alt="게시물 이미지" loading="lazy" />`).join('')}</div>` : '';
-    const youtubeHtml = post.youtubeUrl ? `<div style="margin:12px 0;border-radius:10px;overflow:hidden;aspect-ratio:16/9;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" frameborder="0" allowfullscreen></iframe></div>` : '';
+    const isFan = post.authorAvatar === '🥣';
+    const authorName = post.authorName || ACTOR_NICK;
+    const avatarHtml = isFan
+      ? ''
+      : `<img src="${ACTOR_IMG}" alt="${authorName}" />`;
+
+    const imagesHtml = renderImages(post.images);
+    const youtubeHtml = post.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
+
     let commentsHtml;
     let commentCount = post.comments ? post.comments.length : 0;
     let autoOpen = false;
@@ -332,40 +578,37 @@
         commentCount = matched.length;
         autoOpen = true;
       } else {
-        commentsHtml = '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+        commentsHtml = '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
       }
     } else {
       commentsHtml = post.comments && post.comments.length
         ? post.comments.map(renderComment).join('')
-        : '<p style="font-size:13px;color:var(--text-light);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+        : '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
     }
 
-   return `
+    const footerBtn = commentCount > 0
+      ? `<button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">댓글 ${commentCount}개 &nbsp;↓</button>`
+      : `<span class="toggle-comments-btn empty">댓글 없음</span>`;
+
+    return `
       <article class="post-card" id="post-${post.id}">
         <div class="post-meta">
-          <div class="actor-avatar" style="${post.authorName ? 'display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--pink-light);' : ''}">
-            ${post.authorName ? post.authorAvatar : `<img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" />`}
-          </div>
+          <div class="post-avatar">${avatarHtml}</div>
           <div class="post-meta-info">
-            <div class="actor-name">${post.authorName || ACTOR_NICK}</div>
+            <div class="actor-name">${authorName}</div>
             <div class="post-date">${formatDateTime(post.date)}</div>
           </div>
-          ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 보기</a>` : ''}
+          ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 ↗</a>` : ''}
         </div>
-        <div class="post-body">
-          <div class="original-label">원문</div>
-          <div class="original-text zh">${post.originalText}</div>
-         <div class="translated-text">${post.translatedText}</div>
-          ${post.note ? `<div class="translation-note">${post.note}</div>` : ''}
-        </div>
+        <div class="original-text zh">${post.originalText}</div>
+        <div class="translated-text">${post.translatedText}</div>
+        ${post.note ? `<div class="translation-note">note: ${post.note}</div>` : ''}
         ${imagesHtml}${youtubeHtml}
         <div class="post-footer">
-          <button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">
-            댓글 보기 (${commentCount})
-          </button>
+          ${footerBtn}
         </div>
         <div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
-          <div class="comments-title">💬 댓글 번역${query && autoOpen ? ` <span style="font-size:11px;color:var(--pink);font-weight:400;">· "${query}" 검색 결과</span>` : ''}</div>
+          <div class="comments-title">댓글 번역${query && autoOpen ? ` · "${query}" 검색 결과` : ''}</div>
           ${commentsHtml}
         </div>
       </article>`;
@@ -376,48 +619,47 @@
     const btn = document.getElementById(`cmtbtn-${id}`);
     el.classList.toggle('open');
     if (el.classList.contains('open')) {
-      const total = el.querySelectorAll('.comment-item').length;
-      btn.textContent = `댓글 접기 ▲`;
+      btn.innerHTML = '댓글 접기 &nbsp;↑';
+    } else {
+      const count = el.querySelectorAll('.comment-item').length;
+      btn.innerHTML = `댓글 ${count}개 &nbsp;↓`;
     }
   }
 
   function getFilteredPosts() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  let filtered = [...posts];
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    let filtered = [...posts];
 
-  if (currentFilter.type === 'year') {
-    filtered = filtered.filter(p => new Date(p.date).getFullYear() === currentFilter.value);
-  } else if (currentFilter.type === 'month') {
-    filtered = filtered.filter(p => {
-      const d = new Date(p.date);
-      return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
+    if (currentFilter.type === 'month') {
+      filtered = filtered.filter(p => {
+        const d = new Date(p.date);
+        return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
+      });
+    }
+
+    if (query) {
+      filtered = filtered.filter(p =>
+        p.translatedText.toLowerCase().includes(query) ||
+        p.originalText.toLowerCase().includes(query) ||
+        (p.comments && p.comments.some(c =>
+          (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+          (c.originalText && c.originalText.toLowerCase().includes(query)) ||
+          (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
+        ))
+      );
+    }
+
+    filtered.sort((a, b) => {
+      const da = new Date(a.date);
+      const db = new Date(b.date);
+      const monthA = da.getFullYear() * 100 + da.getMonth();
+      const monthB = db.getFullYear() * 100 + db.getMonth();
+      if (monthA !== monthB) return monthB - monthA;
+      return da - db;
     });
+
+    return filtered;
   }
-
-  if (query) {
-    filtered = filtered.filter(p =>
-      p.translatedText.toLowerCase().includes(query) ||
-      p.originalText.toLowerCase().includes(query) ||
-      (p.comments && p.comments.some(c =>
-        (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-        (c.originalText && c.originalText.toLowerCase().includes(query)) ||
-        (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
-      ))
-    );
-  }
-
-  // 월 단위는 최신순, 월 안에서는 오래된순
-  filtered.sort((a, b) => {
-    const da = new Date(a.date);
-    const db = new Date(b.date);
-    const monthA = da.getFullYear() * 100 + da.getMonth();
-    const monthB = db.getFullYear() * 100 + db.getMonth();
-    if (monthA !== monthB) return monthB - monthA; // 월은 최신순
-    return da - db; // 같은 월 안에서는 오래된순
-  });
-
-  return filtered;
-}
 
   function renderFeed() {
     const query = document.getElementById('searchInput').value.toLowerCase();
@@ -425,17 +667,16 @@
     document.getElementById('feed-count').textContent = filtered.length + '개';
 
     if (filtered.length === 0) {
-      document.getElementById('posts-feed').innerHTML = `<div class="empty-state"><div class="big-icon">🌸</div><p>게시물이 없습니다.</p></div>`;
+      document.getElementById('posts-feed').innerHTML = `<div class="empty-state">게시물이 없습니다.</div>`;
       return;
     }
 
-    // 날짜 인덱스 추가
     let html = '';
     let lastMonth = null;
     filtered.forEach(p => {
       const monthLabel = getMonthLabel(p.date);
-      if (monthLabel !== lastMonth) {
-        html += `<div class="date-index"><span class="date-index-badge">🗓 ${monthLabel}</span><span class="date-index-line"></span></div>`;
+      if (monthLabel !== lastMonth && query) {
+        html += `<div class="date-index">${monthLabel}</div>`;
         lastMonth = monthLabel;
       }
       html += renderPost(p, query);
@@ -446,12 +687,15 @@
 
   function filterByMonth(year, month) {
     currentFilter = { type: 'month', value: { year, month } };
-    document.getElementById('filterLabel').textContent = `📅 ${year}년 ${month}월 게시물만 보는 중`;
-    document.getElementById('filterBar').classList.add('show');
+    document.getElementById('filterLabel').textContent = `${year}년 ${month}월 게시물만 보는 중`;
+    document.getElementById('filterBar').classList.remove('show');
     renderFeed();
     document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     const el = document.getElementById(`m-${year}-${month}`);
     if (el) el.classList.add('active');
+    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+    const yEl = document.getElementById(`ytab-${year}`);
+    if (yEl) yEl.classList.add('active');
   }
 
   function clearAllFilters() {
@@ -462,55 +706,45 @@
     renderFeed();
   }
 
-function renderDateTree() {
-  const tree = {};
-  posts.forEach(p => {
-    const d = new Date(p.date);
-    const y = d.getFullYear();
-    const m = d.getMonth() + 1;
-    if (!tree[y]) tree[y] = {};
-    if (!tree[y][m]) tree[y][m] = 0;
-    tree[y][m]++;
-  });
+  function renderDateTree() {
+    const tree = {};
+    posts.forEach(p => {
+      const d = new Date(p.date);
+      const y = d.getFullYear();
+      const m = d.getMonth() + 1;
+      if (!tree[y]) tree[y] = {};
+      if (!tree[y][m]) tree[y][m] = 0;
+      tree[y][m]++;
+    });
+    dateTree = tree;
 
-  // 가장 최근 연도/월 구하기
-  const latestYear = Math.max(...Object.keys(tree).map(Number));
-  const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
+    const years = Object.keys(tree).map(Number).sort((a,b) => b - a);
+    const latestYear = years[0];
+    const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
 
-  document.getElementById('date-tree').innerHTML = Object.keys(tree).sort((a,b) => b-a).map(year => {
-    const months = Object.keys(tree[year]).sort((a,b) => b-a).map(month => `
-      <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">
-        <span>${month}월</span>
-        <span class="month-count">${tree[year][month]}개</span>
-      </div>`).join('');
+    document.getElementById('year-tabs').innerHTML = years.map(year => `
+      <div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
+    `).join('');
 
-    const isLatestYear = Number(year) === latestYear;
-    return `
-      <div class="year-group">
-        <div class="year-label" onclick="toggleYear(this, ${year})">
-          <span>${year}년</span><span class="year-arrow" style="font-size:10px;opacity:0.6;">▾</span>
-        </div>
-        <div class="month-list" id="year-${year}" style="${isLatestYear ? '' : 'display:none;'}">
-          ${months}
-        </div>
-      </div>`;
-  }).join('');
-
-  // 최근 월 자동 활성화
-  filterByMonth(latestYear, latestMonth);
-}
-
-function toggleYear(el, year) {
-  const list = document.getElementById(`year-${year}`);
-  const arrow = el.querySelector('.year-arrow');
-  if (list.style.display === 'none') {
-    list.style.display = 'block';
-    arrow.textContent = '▴';
-  } else {
-    list.style.display = 'none';
-    arrow.textContent = '▾';
+    renderMonthRow(latestYear);
+    filterByMonth(latestYear, latestMonth);
   }
-}
+
+  function renderMonthRow(year) {
+    const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
+    document.getElementById('month-row').innerHTML = months.map(month => `
+      <div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">${month}월<span class="m-count">${dateTree[year][month]}</span></div>
+    `).join('');
+  }
+
+  function selectYear(year) {
+    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+    const yEl = document.getElementById(`ytab-${year}`);
+    if (yEl) yEl.classList.add('active');
+    renderMonthRow(year);
+    const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
+    filterByMonth(year, months[0]);
+  }
 
   renderFeed();
   renderDateTree();
