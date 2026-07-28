@@ -65,29 +65,53 @@
     }
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* year index tabs */
+    /* year index tabs: folder silhouette (small round flap + body) */
     .year-tabs {
       max-width: 640px;
       margin: 0 auto;
       display: flex;
       gap: 3px;
-      padding-left: 4px;
+      padding-left: 14px;
+      align-items: flex-end;
     }
-    .year-tab {
-      padding: 9px 18px 0;
+    .year-folder {
+      position: relative;
+      width: 58px;
       height: 34px;
-      border-radius: 3px 3px 0 0;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
       cursor: pointer;
+      flex-shrink: 0;
+    }
+    .year-folder .folder-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 13px;
+      border-radius: 5px 5px 0 0;
       background: var(--tab-inactive);
+      transition: background 0.15s;
+    }
+    .year-folder .folder-body {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 58px;
+      height: 26px;
+      border-radius: 2px 6px 0 0;
+      background: var(--tab-inactive);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 5px;
+      font-size: 12px;
+      font-weight: 700;
       color: rgba(255,255,255,0.5);
       transition: background 0.15s, color 0.15s;
-      white-space: nowrap;
     }
-    .year-tab:hover { color: rgba(255,255,255,0.8); }
-    .year-tab.active { background: var(--pink); color: var(--white); }
+    .year-folder:hover .folder-body { color: rgba(255,255,255,0.8); }
+    .year-folder.active .folder-flap,
+    .year-folder.active .folder-body { background: var(--pink); }
+    .year-folder.active .folder-body { color: var(--white); font-size: 13px; }
 
     /* ============ WHITE PANEL ============ */
     .panel {
@@ -327,9 +351,10 @@
       letter-spacing: 0.02em;
       margin-bottom: 10px;
     }
-    .comment-item { margin-bottom: 12px; }
-    .comment-item:last-child { margin-bottom: 0; }
-    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .comment-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .comment-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .comment-item:first-child { padding-top: 0; }
+    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
     .comment-avatar {
       width: 22px;
       height: 22px;
@@ -346,20 +371,21 @@
     }
     .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .comment-username { font-size: 12px; font-weight: 700; color: var(--black); }
-    .comment-original { font-size: 11px; color: var(--gray-muted); line-height: 1.5; margin-bottom: 2px; }
-    .comment-translated { font-size: 13px; color: var(--black); line-height: 1.6; letter-spacing: -0.01em; }
-    .comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .comment-original { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
+    .comment-translated { font-size: 14px; color: var(--black); line-height: 1.65; font-weight: 500; letter-spacing: -0.01em; padding-left: 34px; }
+    .comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; padding-left: 34px; }
     .comment-images img { max-width: 120px; max-height: 140px; object-fit: cover; }
 
+    /* 답글: 핑크선 없이 들여쓰기만으로 위계 구분 */
     .actor-reply {
-      margin-top: 8px;
-      padding-left: 10px;
-      border-left: 2px solid var(--pink);
+      margin-top: 12px;
+      padding-left: 54px;
     }
-    .actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+    .actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
     .actor-reply-name { font-size: 11px; font-weight: 700; color: var(--pink); }
-    .actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.5; margin-bottom: 2px; }
-    .actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 600; line-height: 1.6; }
+    .actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.6; margin: 0 0 4px; }
+    .actor-reply-translated { font-size: 13px; color: var(--pink); font-weight: 600; line-height: 1.65; }
+    .actor-reply .comment-images { padding-left: 0; margin-top: 8px; }
 
     .empty-state { text-align: center; padding: 4rem 1rem; color: var(--gray-muted); font-size: 13px; }
 
@@ -405,7 +431,7 @@
 
   <div class="filter-active-bar" id="filterBar">
     <span id="filterLabel"></span>
-    <button class="clear-filter" onclick="clearAllFilters()">전체보기 ✕</button>
+    <button class="clear-filter" onclick="clearSearch()">검색 지우기 ✕</button>
   </div>
 
   <div class="feed-header">
@@ -627,17 +653,11 @@
   }
 
   function getFilteredPosts() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
     let filtered = [...posts];
 
-    if (currentFilter.type === 'month') {
-      filtered = filtered.filter(p => {
-        const d = new Date(p.date);
-        return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
-      });
-    }
-
     if (query) {
+      // 검색어가 있으면 연도/월 필터 무시하고 전체 기간에서 검색
       filtered = filtered.filter(p =>
         p.translatedText.toLowerCase().includes(query) ||
         p.originalText.toLowerCase().includes(query) ||
@@ -647,6 +667,11 @@
           (c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
         ))
       );
+    } else if (currentFilter.type === 'month') {
+      filtered = filtered.filter(p => {
+        const d = new Date(p.date);
+        return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
+      });
     }
 
     filtered.sort((a, b) => {
@@ -662,9 +687,18 @@
   }
 
   function renderFeed() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
+    const rawQuery = document.getElementById('searchInput').value.trim();
+    const query = rawQuery.toLowerCase();
     const filtered = getFilteredPosts();
     document.getElementById('feed-count').textContent = filtered.length + '개';
+
+    const filterBar = document.getElementById('filterBar');
+    if (rawQuery) {
+      document.getElementById('filterLabel').textContent = `"${rawQuery}" 검색 결과 · 전체 기간`;
+      filterBar.classList.add('show');
+    } else {
+      filterBar.classList.remove('show');
+    }
 
     if (filtered.length === 0) {
       document.getElementById('posts-feed').innerHTML = `<div class="empty-state">게시물이 없습니다.</div>`;
@@ -687,22 +721,17 @@
 
   function filterByMonth(year, month) {
     currentFilter = { type: 'month', value: { year, month } };
-    document.getElementById('filterLabel').textContent = `${year}년 ${month}월 게시물만 보는 중`;
-    document.getElementById('filterBar').classList.remove('show');
     renderFeed();
     document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     const el = document.getElementById(`m-${year}-${month}`);
     if (el) el.classList.add('active');
-    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.year-folder').forEach(el => el.classList.remove('active'));
     const yEl = document.getElementById(`ytab-${year}`);
     if (yEl) yEl.classList.add('active');
   }
 
-  function clearAllFilters() {
-    currentFilter = { type: 'all', value: null };
-    document.getElementById('filterBar').classList.remove('show');
+  function clearSearch() {
     document.getElementById('searchInput').value = '';
-    document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     renderFeed();
   }
 
@@ -723,7 +752,10 @@
     const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
 
     document.getElementById('year-tabs').innerHTML = years.map(year => `
-      <div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
+      <div class="year-folder${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">
+        <div class="folder-flap"></div>
+        <div class="folder-body">${year}</div>
+      </div>
     `).join('');
 
     renderMonthRow(latestYear);
@@ -738,7 +770,7 @@
   }
 
   function selectYear(year) {
-    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.year-folder').forEach(el => el.classList.remove('active'));
     const yEl = document.getElementById(`ytab-${year}`);
     if (yEl) yEl.classList.add('active');
     renderMonthRow(year);
