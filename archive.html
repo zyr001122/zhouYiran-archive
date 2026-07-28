@@ -553,6 +553,11 @@
   ];
 </script>
 <script>
+  // emoticons.js가 아직 없거나 로드 실패해도 사이트가 깨지지 않도록 안전장치
+  if (typeof renderWeiboEmoticons !== 'function') {
+    window.renderWeiboEmoticons = function(text) { return text; };
+  }
+
   const ACTOR_IMG = 'IMG_1757.JPG';
   const ACTOR_NICK = '周翊然Tz';
   let currentFilter = { type: 'all', value: null };
