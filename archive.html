@@ -28,6 +28,13 @@
       -webkit-font-smoothing: antialiased;
     }
     .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; letter-spacing: 0; }
+    .weibo-emoticon {
+      display: inline-block;
+      height: 1.15em;
+      width: 1.15em;
+      vertical-align: -2px;
+      object-fit: contain;
+    }
 
     /* ============ HERO / DARK BAND ============ */
     .hero-band {
@@ -65,53 +72,29 @@
     }
     .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* year index tabs: folder silhouette (small round flap + body) */
+    /* year index tabs: simple flat tab */
     .year-tabs {
       max-width: 640px;
       margin: 0 auto;
       display: flex;
       gap: 3px;
       padding-left: 14px;
-      align-items: flex-end;
     }
-    .year-folder {
-      position: relative;
-      width: 58px;
+    .year-tab {
+      padding: 9px 18px 0;
       height: 34px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .year-folder .folder-flap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 24px;
-      height: 13px;
-      border-radius: 5px 5px 0 0;
-      background: var(--tab-inactive);
-      transition: background 0.15s;
-    }
-    .year-folder .folder-body {
-      position: absolute;
-      top: 8px;
-      left: 0;
-      width: 58px;
-      height: 26px;
-      border-radius: 2px 6px 0 0;
-      background: var(--tab-inactive);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 5px;
-      font-size: 12px;
+      border-radius: 3px 3px 0 0;
+      font-size: 13px;
       font-weight: 700;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      background: var(--tab-inactive);
       color: rgba(255,255,255,0.5);
       transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
     }
-    .year-folder:hover .folder-body { color: rgba(255,255,255,0.8); }
-    .year-folder.active .folder-flap,
-    .year-folder.active .folder-body { background: var(--pink); }
-    .year-folder.active .folder-body { color: var(--white); font-size: 13px; }
+    .year-tab:hover { color: rgba(255,255,255,0.8); }
+    .year-tab.active { background: var(--pink); color: var(--white); }
 
     /* ============ WHITE PANEL ============ */
     .panel {
@@ -243,37 +226,37 @@
     .post-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .post-meta-info { flex: 1; min-width: 0; }
     .actor-name {
-      font-size: 13px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
       color: var(--black);
       letter-spacing: -0.01em;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .post-date { font-size: 11px; color: var(--gray-muted); margin-top: 1px; letter-spacing: 0.01em; }
+    .post-date { font-size: 10px; color: var(--gray-muted); margin-top: 1px; letter-spacing: 0.01em; }
     .weibo-link {
       font-size: 11px;
       color: var(--pink);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.01em;
       white-space: nowrap;
       flex-shrink: 0;
     }
 
     .original-text {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--gray-muted);
       line-height: 1.6;
       margin-bottom: 6px;
     }
     .translated-text {
-      font-size: 16px;
+      font-size: 13.5px;
       color: var(--black);
-      line-height: 1.7;
-      font-weight: 500;
-      letter-spacing: -0.015em;
+      line-height: 1.65;
+      font-weight: 400;
+      letter-spacing: -0.01em;
     }
     .translation-note {
       font-size: 12px;
@@ -370,9 +353,9 @@
       overflow: hidden;
     }
     .comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .comment-username { font-size: 12px; font-weight: 700; color: var(--black); }
-    .comment-original { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
-    .comment-translated { font-size: 14px; color: var(--black); line-height: 1.65; font-weight: 500; letter-spacing: -0.01em; padding-left: 34px; }
+    .comment-username { font-size: 11px; font-weight: 600; color: var(--black); }
+    .comment-original { font-size: 10px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
+    .comment-translated { font-size: 12.5px; color: var(--black); line-height: 1.6; font-weight: 400; letter-spacing: -0.005em; padding-left: 34px; }
     .comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; padding-left: 34px; }
     .comment-images img { max-width: 120px; max-height: 140px; object-fit: cover; }
 
@@ -382,9 +365,9 @@
       padding-left: 54px;
     }
     .actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
-    .actor-reply-name { font-size: 11px; font-weight: 700; color: var(--pink); }
+    .actor-reply-name { font-size: 10px; font-weight: 600; color: var(--pink); }
     .actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.6; margin: 0 0 4px; }
-    .actor-reply-translated { font-size: 13px; color: var(--pink); font-weight: 600; line-height: 1.65; }
+    .actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 500; line-height: 1.65; }
     .actor-reply .comment-images { padding-left: 0; margin-top: 8px; }
 
     .empty-state { text-align: center; padding: 4rem 1rem; color: var(--gray-muted); font-size: 13px; }
@@ -444,6 +427,7 @@
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
+<script src="emoticons.js"></script>
 <script src="data-2024-10.js"></script>
 <script src="data-2024-09.js"></script>
 <script src="data-2024-08.js"></script>
@@ -528,8 +512,8 @@
           <div class="actor-reply-header">
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
-          <div class="actor-reply-original zh">${r.originalText}</div>
-          <div class="actor-reply-translated">${r.translatedText}</div>
+          <div class="actor-reply-original zh">${renderWeiboEmoticons(r.originalText)}</div>
+          <div class="actor-reply-translated">${renderWeiboEmoticons(r.translatedText)}</div>
         </div>`).join('');
     } else if (c.actorReply) {
       replyHtml = `
@@ -537,8 +521,8 @@
           <div class="actor-reply-header">
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
-          ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${c.actorReply.originalText}</div>` : ''}
-          ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${c.actorReply.translatedText}</div>` : ''}
+          ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
+          ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${renderWeiboEmoticons(c.actorReply.translatedText)}</div>` : ''}
           ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" />`).join('')}</div>` : ''}
         </div>`;
     }
@@ -552,8 +536,8 @@
           <div class="comment-avatar" style="${isActor ? '' : 'background:var(--pink);'}">${avatarHtml}</div>
           <span class="comment-username" style="${isActor ? 'color:var(--pink);' : ''}">${c.username}</span>
         </div>
-        <div class="comment-original zh">${c.originalText}</div>
-        <div class="comment-translated">${c.translatedText}</div>
+        <div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>
+        <div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
         ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" />`).join('')}</div>` : ''}
         ${replyHtml}
       </div>`;
@@ -626,8 +610,8 @@
           </div>
           ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 ↗</a>` : ''}
         </div>
-        <div class="original-text zh">${post.originalText}</div>
-        <div class="translated-text">${post.translatedText}</div>
+        <div class="original-text zh">${renderWeiboEmoticons(post.originalText)}</div>
+        <div class="translated-text">${renderWeiboEmoticons(post.translatedText)}</div>
         ${post.note ? `<div class="translation-note">note: ${post.note}</div>` : ''}
         ${imagesHtml}${youtubeHtml}
         <div class="post-footer">
@@ -725,7 +709,7 @@
     document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
     const el = document.getElementById(`m-${year}-${month}`);
     if (el) el.classList.add('active');
-    document.querySelectorAll('.year-folder').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
     const yEl = document.getElementById(`ytab-${year}`);
     if (yEl) yEl.classList.add('active');
   }
@@ -752,10 +736,7 @@
     const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
 
     document.getElementById('year-tabs').innerHTML = years.map(year => `
-      <div class="year-folder${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">
-        <div class="folder-flap"></div>
-        <div class="folder-body">${year}</div>
-      </div>
+      <div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
     `).join('');
 
     renderMonthRow(latestYear);
@@ -770,7 +751,7 @@
   }
 
   function selectYear(year) {
-    document.querySelectorAll('.year-folder').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
     const yEl = document.getElementById(`ytab-${year}`);
     if (yEl) yEl.classList.add('active');
     renderMonthRow(year);
