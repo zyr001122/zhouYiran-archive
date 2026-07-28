@@ -6,7 +6,7 @@
   <title>周翊然Tz 초화 번역 아카이브</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Archivo+Black&display=swap" rel="stylesheet" />
   <style>
     :root {
       --pink: #F0577F;
@@ -39,38 +39,86 @@
     /* ============ HERO / DARK BAND ============ */
     .hero-band {
       background: var(--black);
-      padding: 28px 20px 0;
+      padding: 20px 20px 0;
+      position: relative;
     }
-    .hero-top {
+    .hero-nav {
       max-width: 640px;
       margin: 0 auto;
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 22px;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
     }
-    .hero-text .hero-label {
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-link {
       font-size: 12px;
       font-weight: 500;
       color: rgba(255,255,255,0.55);
-      letter-spacing: 0.02em;
-      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.15s;
     }
-    .hero-text .hero-title {
-      font-size: 30px;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-    .hero-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
+    .nav-link:hover { color: rgba(255,255,255,0.85); }
+    .nav-link.current { color: var(--pink); font-weight: 700; }
+
+    .hamburger-btn {
+      display: none;
+      width: 32px;
+      height: 32px;
+      background: var(--pink);
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
       flex-shrink: 0;
     }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hamburger-btn .bar {
+      width: 15px;
+      height: 1.5px;
+      background: var(--white);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
+    .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+
+    .mobile-dropdown {
+      max-width: 640px;
+      margin: 0 auto;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.22s ease, opacity 0.18s ease;
+    }
+    .mobile-dropdown.open { max-height: 200px; opacity: 1; margin-top: 10px; }
+    .mobile-dropdown-inner { background: var(--tab-inactive); }
+    .mobile-dropdown-item {
+      padding: 13px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+    .mobile-dropdown-item:last-child { border-bottom: none; }
+    .mobile-dropdown-item.current { color: var(--pink); font-weight: 700; }
+
+    .archive-wordmark {
+      max-width: 640px;
+      margin: 0 auto;
+      font-family: 'Archivo Black', 'Pretendard', sans-serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 0.92;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      padding: 16px 0 18px;
+    }
 
     /* year index tabs: simple flat tab */
     .year-tabs {
@@ -95,6 +143,11 @@
     }
     .year-tab:hover { color: rgba(255,255,255,0.8); }
     .year-tab.active { background: var(--pink); color: var(--white); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hamburger-btn { display: flex; }
+    }
 
     /* ============ WHITE PANEL ============ */
     .panel {
@@ -383,8 +436,8 @@
     }
 
     @media (max-width: 480px) {
-      .hero-band { padding: 22px 16px 0; }
-      .hero-text .hero-title { font-size: 26px; }
+      .hero-band { padding: 18px 16px 0; }
+      .archive-wordmark { font-size: 40px; padding: 12px 0 14px; }
       .panel { padding: 0 16px; }
       .year-tabs { padding-left: 0; }
     }
@@ -394,13 +447,28 @@
 
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
-  <div class="hero-top">
-    <div class="hero-text">
-      <div class="hero-label">周翊然Tz</div>
-      <div class="hero-title">초화 아카이브</div>
+  <div class="hero-nav">
+    <div class="nav-links">
+      <a class="nav-link current" href="archive.html">archive</a>
+      <a class="nav-link" href="spinspin.html">SpinSpin</a>
+      <a class="nav-link" href="guide.html">가이드</a>
     </div>
-    <div class="hero-avatar"><img src="IMG_1757.JPG" alt="周翊然Tz" /></div>
+    <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
+
+  <div class="mobile-dropdown" id="mobileDropdown">
+    <div class="mobile-dropdown-inner">
+      <a class="mobile-dropdown-item current" href="archive.html">archive</a>
+      <a class="mobile-dropdown-item" href="spinspin.html">SpinSpin</a>
+      <a class="mobile-dropdown-item" href="guide.html">가이드</a>
+    </div>
+  </div>
+
+  <div class="archive-wordmark">ARCHIVE</div>
+
   <div class="year-tabs" id="year-tabs"></div>
 </div>
 
@@ -489,6 +557,11 @@
   const ACTOR_NICK = '周翊然Tz';
   let currentFilter = { type: 'all', value: null };
   let dateTree = {};
+
+  function toggleMobileMenu() {
+    document.getElementById('hamburgerBtn').classList.toggle('open');
+    document.getElementById('mobileDropdown').classList.toggle('open');
+  }
 
   function formatDateTime(d) {
     const date = new Date(d);
