@@ -4,7 +4,7 @@ const posts_202309 = [
     date: "2023-09-08",
     weiboUrl: "https://weibo.com/5994946077/Nio6RABRb",
     originalText: "🌧️大家注意安全 都要平平安安的",
-    translatedText: "🌧️다들 다치지 않게 조심해 다들 무슨 일 없게 조심해야 돼",
+    translatedText: "🌧️다들 조심해 다치지 않게 조심해야 돼",
     images: [],
     comments: []
   },
