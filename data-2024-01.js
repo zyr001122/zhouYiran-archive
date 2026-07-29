@@ -12,7 +12,7 @@ const posts_202401 = [
     id: 1202,
     date: "2024-01-21",
     weiboUrl: "https://weibo.com/5994946077/NCT9ktEM6",
-    originalText: "感受零下二十五度的崇礼❄️",
+    originalText: "感受零下二十五度的崇礼❄️#本周报备#",
     translatedText: "영하 25도 충리를 느끼는 중❄️ ",
     images: [
       "images/2401-cheonglie1.jpg",
@@ -28,7 +28,7 @@ const posts_202401 = [
     id: 1203,
     date: "2024-01-26",
     weiboUrl: "https://weibo.com/5994946077/NDDkTyqDy",
-    originalText: "拍摄现场🤫",
+    originalText: "拍摄现场🤫#本周报备#",
     translatedText: "촬영 현장🤫",
     images: [
       "images/2401-set1.jpg",
@@ -45,13 +45,13 @@ const posts_202401 = [
         originalText: "法拉利怎么也穿红的",
         translatedText: "페라리는 왜 또 빨간 옷 입었어",
         images: [],
-        actorReply: { originalText: "喜庆", translatedText: "축제 분위기 내려고" }
+        actorReply: { originalText: "喜庆", translatedText: "명절 분위기 좀 내보려고" }
       },
       {
         id: 120302,
         username: "_最惬意",
         originalText: "这29个未接来电是你打的吗",
-        translatedText: "부재중 전화 29개 너가 건 거야?",
+        translatedText: "이 부재중 전화 29통 너가 건 거야?",
         images: ["images/2401-remote.jpg"],
         actorReply: { originalText: "", translatedText: "", replyImages: ["images/2401-three-dogs.jpg"] }
       },
@@ -72,7 +72,7 @@ const posts_202401 = [
     authorName: "你荔枝亦点啊房",
     authorAvatar: "🥣",
     originalText: "嗨网友哥哥 你来啦",
-    translatedText: "안녕 랜선오빠 왔구나",
+    translatedText: "ㅎㅇ 랜선오빠 드디어 왔구나",
     images: [],
     comments: [
       {
@@ -91,8 +91,8 @@ const posts_202401 = [
     weiboUrl: "https://weibo.com/7820691555/NEn6hiRYi",
     authorName: "吉不吉岛普吉岛",
     authorAvatar: "🥣",
-    originalText: "新年你打算要怎么过🤔",
-    translatedText: "새해 뭐하고 보낼 거야🤔",
+    originalText: "新年你打算要怎么过[并不简单]",
+    translatedText: "올 새해에는 뭐하고 보낼 거야[并不简单]",
     images: ["images/2401-fireworks.jpg"],
     comments: [
       {
@@ -111,15 +111,15 @@ const posts_202401 = [
     weiboUrl: "https://weibo.com/6822950966/NEn7vwZeX",
     authorName: "忙内专家",
     authorAvatar: "🥣",
-    originalText: "小然你看有100个你的造型 可爱吗！🥰🥰🥰",
-    translatedText: "익연아 봐봐 너 코디 100개짜리 귀엽지!🥰🥰🥰",
+    originalText: "小然你看有100个你的造型 可爱吗！[哇][哇][哇]",
+    translatedText: "익연아 봐봐 너 코디 100개짜리 모아둔 건데 짱 귀엽지![哇][哇][哇]",
     images: ["images/2401-characters.jpg"],
     comments: [
       {
         id: 120601,
         username: "周翊然Tz",
-        originalText: "🤝🏻👍",
-        translatedText: "🤝🏻👍",
+        originalText: "[作揖][good]",
+        translatedText: "[作揖][good]",
         images: [],
         actorReply: null
       }
@@ -131,15 +131,15 @@ const posts_202401 = [
     weiboUrl: "https://weibo.com/7854369909/NEnaXFih3",
     authorName: "周周让让tz",
     authorAvatar: "🥣",
-    originalText: "然哥看！所以然哥你要不要翻我一下🫠",
-    translatedText: "오빠 여기! 나 답글 달아줄 거야 안 달아줄 거야🫠",
+    originalText: "然哥看！所以然哥你要不要翻我一下[融化]",
+    translatedText: "오빠 여기! 그래서 나 답글 달아줄 거야 안 달아줄 거야[融化]",
     images: ["images/2401-dragon-puzzle.jpg"],
     comments: [
       {
         id: 120701,
         username: "周翊然Tz",
         originalText: "同款小🐉",
-        translatedText: "같은🐉이네",
+        translatedText: "똑같은 🐉이네",
         images: [],
         actorReply: null
       }
@@ -152,7 +152,7 @@ const posts_202401 = [
     authorName: "我真的是易燃妻",
     authorAvatar: "🥣",
     originalText: "然弟 我过年也不放假，搬砖",
-    translatedText: "익연 난 새해에도 못 쉬고 일하는 중이야",
+    translatedText: "익연아 나도 이번 설에 못 쉬고 열일 중이야",
     images: ["images/2401-doll.jpg"],
     comments: [
       {
@@ -172,7 +172,7 @@ const posts_202401 = [
     authorName: "小猫说每天都会很开心o",
     authorAvatar: "🥣",
     originalText: "新年快乐 在过年之前拿到了驾照🚗 考试的分数也出啦 好像考的还不错捏 🎉在剧组搬砖的小然也要努力💪🏻一起加油",
-    translatedText: "새해 복 많이 받아 난 설 전에 운전면허증 땄어🚗 시험 점수도 나왔는데 나름 잘 본 것 같아 🎉촬영장에서 일하는 익연이도 열심히💪🏻 같이 빠이팅",
+    translatedText: "새해 복 많이 받아 난 설 전에 운전면허 땄어🚗 점수도 나왔는데 나름 잘 본 것 같아 🎉촬영장에서 일하는 익연이도 힘내고💪🏻 같이 빠이팅하자",
     images: [],
     comments: [
       {
@@ -199,7 +199,7 @@ const posts_202401 = [
         id: 121001,
         username: "周翊然Tz",
         originalText: "周三快乐",
-        translatedText: "좋은 하루 보내",
+        translatedText: "즐거운 하루 보내",
         images: [],
         actorReply: null
       }
