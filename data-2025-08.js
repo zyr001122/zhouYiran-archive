@@ -52,19 +52,19 @@ const posts_202508 = [
         id: 25080302,
         username: "魚肉蛋黄酥o_",
         originalText: "老公 请问这个炸鸡是有多好吃才会让你做出这个反应？？？[流鼻血]",
-        translatedText: "자기야 이 튀긴 치킨이 얼마나 맛있길래 이런 반응을 보이는 거야???[流鼻血]",
+        translatedText: "자기야 치킨이 얼마나 맛있길래 이런 반응을 보이는 거야???[流鼻血]",
         note: "원문 동영상",
         images: [],
         actorReply: {
-          originalText: "很香[赞]",
-          translatedText: "냄새 좋아[赞]"
+          originalText: "很香👍",
+          translatedText: "진짜 맛있어👍"
         }
       },
       {
         id: 25080303,
         username: "梨花白翊白",
         originalText: "好看不",
-        translatedText: "예쁘지 않아?",
+        translatedText: "예쁘지?",
         images: ["images/2508-pretty-or-not.jpg"],
         actorReply: {
           originalText: "很可爱",
@@ -75,33 +75,33 @@ const posts_202508 = [
         id: 25080304,
         username: "Zz的保镖",
         originalText: "然然我说阿寻，你应该说什么",
-        translatedText: "익연아 내가 '아쉰'이라고 부르면 뭐라고 해야 돼",
+        translatedText: "익연아 내가 아쉰하면, 넌 뭐라고 대답할거야",
         images: ["images/2508-what-should-you-say.jpg"],
         actorReply: {
           originalText: "我在 我在",
-          translatedText: "나 여기 있어 나 여기 있어"
+          translatedText: "나 여깄어 여깄어"
         }
       },
       {
         id: 25080305,
         username: "扁桃体发炎不发言-",
         originalText: "目测你这个锅都粘了半斤肉😂 真的不考虑买个不粘锅吗",
-        translatedText: "눈대중으로 봐도 이 냄비에 고기 반 근은 눌어붙었겠다😂 진짜 코팅 냄비 하나 살 생각 없어?",
+        translatedText: "눈대중으로 봐도 이 팬에 고기 반 근은 눌어붙었겠다😂 진짜 코팅 팬 하나 살 생각 없어?",
         images: ["images/2508-nonstick-pan.jpg"],
         actorReply: {
-          originalText: "[允悲]",
-          translatedText: "[允悲]"
+          originalText: "[笑哭]",
+          translatedText: "[笑哭]"
         }
       },
       {
         id: 25080306,
         username: "不吃年糕Tz",
         originalText: "新疆网也不好吗",
-        translatedText: "신장도 와이파이 안 좋아?",
+        translatedText: "신장도 인터넷 잘 안 터져?,
         images: ["images/2508-xinjiang-wifi.jpg"],
         actorReply: {
           originalText: "网确实有点差",
-          translatedText: "와이파이 확실히 좀 안 좋아"
+          translatedText: "응 아무래도 잘 안터지네"
         }
       },
       {
@@ -112,29 +112,29 @@ const posts_202508 = [
         images: ["images/2508-come-quick.jpg"],
         actorReply: {
           originalText: "马上来了",
-          translatedText: "바로 갈게"
+          translatedText: "금방 갈게"
         }
       },
       {
         id: 25080308,
         username: "综上所述你最萌",
         originalText: "请你看海呀[期待][期待]",
-        translatedText: "바다 좀 봐봐[期待][期待]",
+        translatedText: "바다 구경시켜 줄게[期待][期待]",
         images: ["images/2508-look-at-sea.jpg"],
         actorReply: {
           originalText: "很好看 我旁边都是草原 信号很差",
-          translatedText: "예쁘다 나는 옆에 다 초원이라 신호가 안 좋아"
+          translatedText: "너무 예쁘다 난 옆에 다 초원이라 신호가 잘 안 잡혀"
         }
       },
       {
         id: 25080309,
         username: "祈川十里春",
         originalText: "小然，下期解锁什么新菜",
-        translatedText: "익연아 다음 편에서 새로운 요리 뭐 배워?",
+        translatedText: "익연아 다음 편에선 새로운 요리 어떤 거 보여줄 거야?",
         images: ["images/2508-new-dish.jpg"],
         actorReply: {
           originalText: "等我想一想",
-          translatedText: "생각 좀 해볼게"
+          translatedText: "생각 좀 해보고"
         }
       },
       {
@@ -156,25 +156,25 @@ const posts_202508 = [
         images: [],
         actorReply: {
           originalText: "新疆必吃 手抓饭",
-          translatedText: "신장 가면 꼭 먹어야 하는 건 서우좌판(手抓饭)"
+          translatedText: "신장 가면 꼭 먹어야 하는 건 手抓饭"
         }
       },
       {
         id: 25080312,
         username: "我有严重的恋哥癖_",
         originalText: "哥哥你看起来很害怕😨",
-        translatedText: "오빠 완전 무서워 보이는데😨",
+        translatedText: "오빠 완전 쫀 것 같은데😨",
         images: ["images/2508-scared.jpg"],
         actorReply: {
           originalText: "不不 只是情况紧急",
-          translatedText: "아니야 아니야 그냥 상황이 급해서"
+          translatedText: "아니야 아니야 그냥 상황이 급해서 그랬어"
         }
       },
       {
         id: 25080301,
         username: "周翊然Tz",
         originalText: "我去吃饭了 下次见",
-        translatedText: "나 밥 먹으러 가 다음에 봐",
+        translatedText: "난 밥 먹으러 갈게 담에 봐",
         images: [],
         actorReply: null
       }
@@ -186,7 +186,7 @@ const posts_202508 = [
     weiboUrl: "https://weibo.com/5994946077/Q1naF6kZN",
     authorName: "周翊然Tz",
     originalText: "天黑之前 #本周报备##微博奇遇记#",
-    translatedText: "해 지기 전에 #本周报备##微博奇遇记#",
+    translatedText: "해 지기 전",
     images: [
       "images/2508-0824-01.jpg",
       "images/2508-0824-02.jpg",
@@ -206,7 +206,7 @@ const posts_202508 = [
     weiboUrl: "https://weibo.com/5994946077/Q2nvFoYOm",
     authorName: "周翊然Tz",
     originalText: "✈️💌#本周报备##微博奇遇记#",
-    translatedText: "✈️💌#本周报备##微博奇遇记#",
+    translatedText: "✈️💌",
     images: [
       "images/2508-0831-01.jpg",
       "images/2508-0831-02.jpg",
