@@ -27,7 +27,7 @@ const posts_202510 = [
         images: ["images/2510-paper-craft.jpg"],
         actorReply: {
           originalText: "好厉害",
-          translatedText: "진짜 잘한다"
+          translatedText: "진짜 잘했네"
         }
       },
       {
