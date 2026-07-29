@@ -131,7 +131,7 @@ const posts_202410 = [
         id: 210116,
         username: "周翊然Tz",
         originalText: "看了眼评论区发现不该问大家吃了没 馋死我了[裂开]",
-        translatedText: "댓글창 봤는데 밥 먹었냐고 물어보는 게 아니였는데 먹고 싶어 죽겠다[裂开]",
+        translatedText: "댓글창 봤는데 밥 먹었냐고 물어보면 안 됐었네 먹고 싶어 죽겠다[裂开]",
         images: [],
         actorReply: null
       },
