@@ -59,6 +59,8 @@ const WEIBO_EMOTICON_MAP = {
   '老师爱你': 'Teacherlovesyou',
   '给你小心心': 'xiaoxinxin',
   '好喜欢': 'haoxihuan',
+  '送花花': 'songhuahua',
+  '期待': 'qidai',
 };
 
 /**
