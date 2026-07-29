@@ -9,14 +9,6 @@ const posts_202501 = [
     images: [],
     comments: [
       {
-        id: 25010101,
-        username: "周翊然Tz",
-        originalText: "我要走了各位 假期里做了自己喜欢的事 然后时隔那么长时间 也能再一次陪在家人身边过年 我很开心 希望大家也能开开心心的 和家人们一起迎接新年！",
-        translatedText: "나 이제 가볼게 얘들아 휴가 기간동안 좋아하는 일도 하고, 오랜만에 가족들 곁에서 같이 설 보낼 수 있어서 너무 좋았어 다들 즐겁게 가족들이랑 좋은 설날 보내!",
-        images: [],
-        actorReply: null
-      },
-      {
         id: 25010102,
         username: "周翊然Tz",
         originalText: "大家最近有没有什么好听的歌分享一下",
@@ -301,7 +293,7 @@ const posts_202501 = [
         actorReply: {
           originalText: "images/2501-tz-sticker-8.gif",
           translatedText: "images/2501-tz-sticker-5.gif"
-        }
+      }
       },
       {
         id: 25010151,
@@ -313,6 +305,14 @@ const posts_202501 = [
           originalText: "赛车都没有副驾驶",
           translatedText: "레이싱카엔 조수석 없어"
         }
+      },
+      {
+        id: 25010101,
+        username: "周翊然Tz",
+        originalText: "我要走了各位 假期里做了自己喜欢的事 然后时隔那么长时间 也能再一次陪在家人身边过年 我很开心 希望大家也能开开心心的 和家人们一起迎接新年！",
+        translatedText: "나 이제 가볼게 얘들아 휴가 기간동안 좋아하는 일도 하고, 오랜만에 가족들 곁에서 같이 설 보낼 수 있어서 너무 좋았어 다들 즐겁게 가족들이랑 좋은 설날 보내!",
+        images: [],
+        actorReply: null
       }
     ]
   }
