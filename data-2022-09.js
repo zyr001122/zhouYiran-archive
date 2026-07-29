@@ -22,7 +22,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TlCoRNb",
     originalText: "现在还有点困",
-    translatedText: "지금도 좀 졸려",
+    translatedText: "지금도 아직 졸려",
     images: [],
     comments: []
   },
@@ -40,7 +40,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tm52A0m",
     originalText: "大家在干嘛",
-    translatedText: "다들 뭐 하고 있어",
+    translatedText: "다들 뭐 하고 있는데",
     images: [],
     comments: []
   },
@@ -49,7 +49,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TmbdJ00",
     originalText: "吃了吗",
-    translatedText: "밥 먹었어?",
+    translatedText: "밥은 먹었어?",
     images: [],
     comments: []
   },
@@ -76,7 +76,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TmDAHAF",
     originalText: "有点饿",
-    translatedText: "조금 배고파",
+    translatedText: "출출하다",
     images: [],
     comments: []
   },
@@ -94,7 +94,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tnb2B08",
     originalText: "有什么好吃的推荐吗",
-    translatedText: "맛있는 거 추천 해줄래?",
+    translatedText: "맛있는 거 추천 좀 해줘",
     images: [],
     comments: []
   },
@@ -102,8 +102,8 @@ const posts_202209 = [
     id: 212,
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tnt5b3v",
-    originalText: "不想吃小龙虾😏",
-    translatedText: "샤오롱샤는 별로😏",
+    originalText: "不想吃小龙虾[doge]",
+    translatedText: "샤오롱샤는 별로 안 땡기는데[doge]",
     images: [],
     comments: []
   },
@@ -129,8 +129,8 @@ const posts_202209 = [
     id: 215,
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tojm5g8",
-    originalText: "阿宽最好吃😏",
-    translatedText: "아콴이 제일 맛있던데😏",
+    originalText: "阿宽最好吃[doge]",
+    translatedText: "아콴이 제일 맛있지[doge]",
     images: [],
     comments: []
   },
@@ -139,7 +139,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tp2i5JR",
     originalText: "苕皮味真的正宗",
-    translatedText: "샤오피 맛이 진짜 정통이야",
+    translatedText: "샤오피 맛이 진짜 제대로야",
     images: [],
     comments: []
   },
@@ -157,7 +157,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tpwn9Dt",
     originalText: "今天感受到大家的热情了",
-    translatedText: "오늘 너희 열정 진짜 제대로 느껴지더라",
+    translatedText: "오늘 다들 열정이 진짜 대단하더라 완전 제대로 느꼈어",
     images: [],
     comments: []
   },
@@ -166,7 +166,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TpC1i2k",
     originalText: "但是下次不要这样了",
-    translatedText: "근데 다음엔 이렇게까지 하지 마",
+    translatedText: "그래도 다음엔 이렇게까지 하지 마",
     images: [],
     comments: []
   },
@@ -175,7 +175,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TpM1RBS",
     originalText: "聚集不好",
-    translatedText: "모이는 게 좀 안 좋잖아",
+    translatedText: "사람들 몰려다니면 안 좋잖아",
     images: [],
     comments: []
   },
@@ -184,7 +184,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TpSxSLl",
     originalText: "万一受伤更不好",
-    translatedText: "혹시라도 다치면 더 안 좋고",
+    translatedText: "혹시라도 다치기라도 하면 더 큰일이니까",
     images: [],
     comments: []
   },
@@ -193,7 +193,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tq6aK3R",
     originalText: "咱们有机会见面的",
-    translatedText: "우리가 만날 기회는 또 있을 거야",
+    translatedText: "우리가 제대로 만날 기회는 앞으로도 더 있을 거야",
     images: [],
     comments: []
   },
@@ -211,7 +211,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TqouUQs",
     originalText: "🙏铁子们",
-    translatedText: "🙏다들 알겠지",
+    translatedText: "🙏친구들아",
     images: [],
     comments: []
   },
@@ -229,7 +229,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TrKq8s4",
     originalText: "说着说着更饿了",
-    translatedText: "얘기하다 보니까 배가 더 고파졌는데",
+    translatedText: "얘기하다 보니까 더 배고파졌어",
     images: [],
     comments: []
   },
@@ -247,7 +247,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Ts49I9G",
     originalText: "你们也发我一点表情包",
-    translatedText: "너네도 나한테 짤 좀 보내줘",
+    translatedText: "너네도 나한테 짤 좀 공유해 줘",
     images: [],
     comments: []
   },
@@ -265,7 +265,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5TsOgyw9",
     originalText: "再送你们一个",
-    translatedText: "이것도 선물로 줄게",
+    translatedText: "이것도 하나 더 선물로 줄게",
     images: ["images/2209-duck-weird.jpg"],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tt339oo",
     originalText: "走了走了",
-    translatedText: "갈게 갈게",
+    translatedText: "갈게 진짜 간다",
     images: [],
     comments: []
   }
