@@ -66,7 +66,7 @@ const posts_202406 = [
         id: 170601,
         username: "Rabbituui",
         originalText: "起落平安宝宝",
-        translatedText: "이착륙 무사히 해 익연아",
+        translatedText: "익연이 조심히 갔다와",
         images: [],
         actorReply: { originalText: "好嘞 但我延误了", translatedText: "응응 근데 지연됐어" }
       },
@@ -90,9 +90,9 @@ const posts_202406 = [
         id: 170604,
         username: "海豚不是豚骨拉面",
         originalText: "喜欢这一款，但是博主喜欢假面骑士，怎么办？",
-        translatedText: "이 분 딱 제 취향인데,이 사람 가면라이더 좋아하면 어떡하죠?",
+        translatedText: "이 분 딱 제 취향인데, 가면라이더 좋아한다고 하면 어떡하죠?",
         images: [],
-        actorReply: { originalText: "一起加入", translatedText: "같이 입덕해" }
+        actorReply: { originalText: "一起加入", translatedText: "같이 입덕해요" }
       }
     ]
   },
@@ -191,6 +191,7 @@ const posts_202406 = [
     authorAvatar: "🥣",
     originalText: "阴沉沉的下雨播报 本月气象台显示 大雨准备转晴 再也不用过着湿漉漉的天气啦",
     translatedText: "침침한 비 예보 이번 달 기상대 발표에 따르면 큰 비가 곧 개인다고 해 이제 더 이상 축축한 날씨 속에 살지 않아도 돼",
+    note: "원문 사진 참고"
     images: [],
     comments: [
       {
