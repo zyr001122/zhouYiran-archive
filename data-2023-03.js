@@ -31,7 +31,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3AitYA",
     originalText: "开开心心",
-    translatedText: "항상 행복하고",
+    translatedText: "항상 기분 좋은 일만 가득하고",
     images: [],
     comments: []
   },
@@ -40,7 +40,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3FjQO1",
     originalText: "快快乐乐",
-    translatedText: "즐겁고",
+    translatedText: "항상 즐겁고",
     images: [],
     comments: []
   },
@@ -49,7 +49,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl3M7J3e",
     originalText: "健健康康",
-    translatedText: "아프지 말고",
+    translatedText: "항상 아프지 말기",
     images: [],
     comments: []
   },
@@ -67,7 +67,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl5TkDH5",
     originalText: "自拍",
-    translatedText: "셀카",
+    translatedText: "셀카 투척",
     images: ["images/2303-ultraman-tilt.jpg"],
     comments: []
   },
@@ -94,7 +94,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl6KfmNi",
     originalText: "可以出门走走",
-    translatedText: "나가서 산책하기 딱 좋다",
+    translatedText: "나가서 산책하기 딱 좋아",
     images: [],
     comments: []
   },
@@ -112,7 +112,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl7419qz",
     originalText: "拍拍好看的照片",
-    translatedText: "예쁜 사진도 찍고",
+    translatedText: "예쁜 사진도 많이 찍고",
     images: [],
     comments: []
   },
@@ -121,7 +121,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl7clQsG",
     originalText: "让我看看你们拍的春天",
-    translatedText: "얘들아 봄 느낌 나는 사진 찍은 거 있으면 나도 좀 보여줘",
+    translatedText: "얘들아 봄 사진 찍은 거 있으면 나도 좀 보여줘",
     images: [],
     comments: []
   },
@@ -139,7 +139,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwl86r6xs",
     originalText: "周末也可以出去玩儿",
-    translatedText: "주말에도 나가 놀면 좋지",
+    translatedText: "주말에 나가노는 것도 좋지",
     images: [],
     comments: []
   },
@@ -175,7 +175,7 @@ const posts_202303 = [
     date: "2023-03-08",
     weiboUrl: "https://weibo.com/5994946077/Mwlan6v07",
     originalText: "拜拜",
-    translatedText: "갈게빠이빠이",
+    translatedText: "빠이ㅃㅃ",
     images: [],
     comments: []
   }
