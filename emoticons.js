@@ -64,6 +64,7 @@ const WEIBO_EMOTICON_MAP = {
   '期待': 'qidai',
   '送花花': 'songhuahua',
   '流鼻血': 'liubixie',
+  '苦涩': 'bitter',
 };
 
 /**
