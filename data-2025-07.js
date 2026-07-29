@@ -53,8 +53,8 @@ const posts_202507 = [
         translatedText: "",
         images: ["images/2507-mention-only.jpg"],
         actorReply: {
-          originalText: "谢谢你的喜欢啊 我也很荣幸能够在精神上给到你帮助 希望你未来一切顺利 天天开心[心]",
-          translatedText: "좋아해줘서 고마워 나도 너한테 마음의 힘이 되어줄 수 있어서 큰 영광이야 앞으로 다 잘 되고 매일매일 행복하길 바랄게[心]"
+          originalText: "谢谢你的喜欢啊 我也很荣幸能够在精神上给到你帮助 希望你未来一切顺利 天天开心❤️",
+          translatedText: "좋아해줘서 고마워 나도 너한테 마음의 힘이 되어줄 수 있어서 큰 영광이야 앞으로 다 잘 되고 매일매일 행복하길 바랄게❤️"
         }
       },
       {
@@ -241,7 +241,7 @@ const posts_202507 = [
         images: [],
         actorReply: {
           originalText: "抢天光算吗",
-          translatedText: "새벽에 먼저 일어나는 것도 믿는 걸로 쳐주나?"
+          translatedText: "해 지기 전에 촬영 끝내려고 타임어택 하는 것도 믿는 걸로 쳐주나?"
         }
       },
       {
