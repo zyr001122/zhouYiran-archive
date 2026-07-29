@@ -62,7 +62,7 @@ const posts_202308 = [
         id: 70401,
         username: "周翊然Tz",
         originalText: "这个好笑",
-        translatedText: "아 이거 웃기네",
+        translatedText: "이거 웃겼다",
         images: [],
         actorReply: null
       }
