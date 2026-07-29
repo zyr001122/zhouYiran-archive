@@ -3,8 +3,8 @@ const posts_202312 = [
     id: 1101,
     date: "2023-12-05",
     weiboUrl: "https://weibo.com/5994946077/NvKCqfPy4",
-    originalText: "谢谢大家 继续努力😄",
-    translatedText: "다들 고마워 계속 열심히 할게😄",
+    originalText: "谢谢大家 继续努力[加油]",
+    translatedText: "다들 너무 고마워 앞으로도 계속 열심히 노력할게[加油]",
     images: ["images/2312-trophy.jpg"],
     comments: []
   },
@@ -13,7 +13,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi0LE49u",
     originalText: "今天冬至 大家吃饺子了吗",
-    translatedText: "오늘 동진데 다들 만두 먹었어?",
+    translatedText: "오늘 동지라는데 다들 만두 먹었어?",
     images: [],
     comments: []
   },
@@ -22,7 +22,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi3GhpwG",
     originalText: "棚里没信号 ip咋变江苏了？",
-    translatedText: "여기 현장에 신호가 안 잡혀 근데 아이피는 왜 장쑤로 바꼈지?",
+    translatedText: "세트장 신호가 잘 안 터져 근데 내ip 왜 장쑤로 바꼈지?",
     images: [],
     comments: []
   },
@@ -46,15 +46,15 @@ const posts_202312 = [
         id: 110402,
         username: "Jay-果果",
         originalText: "吃",
-        translatedText: "먹어",
+        translatedText: "옛다",
         images: ["images/2312-hotpot2.jpg"],
-        actorReply: { originalText: "挺丰盛啊", translatedText: "되게 푸짐한데" }
+        actorReply: { originalText: "挺丰盛啊", translatedText: "엄청 푸짐하네" }
       },
       {
         id: 110403,
         username: "你油猫饼就去汁",
-        originalText: "在家涮火锅😍",
-        translatedText: "집에서 훠궈 끓이는 중😍",
+        originalText: "在家涮火锅[甜]",
+        translatedText: "집에서 훠궈 끓여 먹는 중[甜]",
         images: ["images/2312-hotpot3.jpg"],
         actorReply: { originalText: "不错不错👍", translatedText: "좋다 좋다👍" }
       },
@@ -62,17 +62,17 @@ const posts_202312 = [
         id: 110404,
         username: "永远明天见Tz",
         originalText: "没有火锅 麻辣香锅也是锅",
-        translatedText: "훠궈 없으면 마라샹궈라도",
+        translatedText: "훠궈 없으면 마라샹궈라도 먹어야지 어차피 같은 거 잖아",
         images: ["images/2312-hotpot4.jpg"],
-        actorReply: { originalText: "给你加点汤底", translatedText: "탕 베이스 좀 더 넣어줘야겠다" }
+        actorReply: { originalText: "给你加点汤底", translatedText: "육수 좀 더 넣어줘야겠다" }
       },
       {
         id: 110405,
         username: "周周让让tz",
-        originalText: "火锅🍲来了🤭🤭🤭",
-        translatedText: "훠궈🍲 왔어요🤭🤭🤭",
+        originalText: "火锅🍲来了[偷笑][偷笑][偷笑]",
+        translatedText: "훠궈🍲 대령이요[偷笑][偷笑][偷笑]",
         images: ["images/2312-hotpot5.jpg"],
-        actorReply: { originalText: "帮忙涮个毛肚", translatedText: "마오두 좀 데쳐줘" }
+        actorReply: { originalText: "帮忙涮个毛肚", translatedText: "천엽 좀 살짝 데쳐서 건져줘" }
       }
     ]
   },
@@ -81,7 +81,7 @@ const posts_202312 = [
     date: "2023-12-22",
     weiboUrl: "https://weibo.com/5994946077/Nyi7r8lc1",
     originalText: "开工了 拜👋🏻",
-    translatedText: "일 가야 해 빠이👋🏻",
+    translatedText: "나 촬영 들어가야 해 빠이👋🏻",
     images: [],
     comments: []
   }
