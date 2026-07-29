@@ -13,7 +13,7 @@ const posts_202311 = [
     date: "2023-11-23",
     weiboUrl: "https://weibo.com/5994946077/NtNrpadcf",
     originalText: "今天很开心，大家回去路上注意安全！",
-    translatedText: "오늘 너무 즐거웠어, 다들 집에 가는 길 조심해!",
+    translatedText: "오늘 너무 즐거웠어, 다들 집 가는 길 조심해!",
     images: ["images/2311-group.jpg"],
     comments: []
   }
