@@ -13,6 +13,8 @@
       --pink-pale: #FDEEF1;
       --pink-dim: #f7b3c4;
       --tab-inactive: #322b31;
+      --studio: #2E6B63;
+      --studio-pale: #EAF3F1;
       --black: #1a1216;
       --gray-muted: #c4c4c4;
       --gray-bg: #f4f4f4;
@@ -256,11 +258,32 @@
       padding: 20px 0 10px;
     }
 
+    .day-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 26px 0 6px;
+    }
+    .day-divider:first-child { margin-top: 0; }
+    .day-divider-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--pink);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .day-divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
     .post-card {
       padding: 18px 0;
       border-top: 1px solid var(--border);
     }
     .post-card:first-of-type { border-top: none; }
+    .day-divider + .post-card { border-top: none; }
 
     .post-meta {
       display: flex;
@@ -614,6 +637,15 @@
     return `${date.getFullYear()}년 ${date.getMonth()+1}월`;
   }
 
+  function getDayLabel(d) {
+    const date = new Date(d);
+    return `${date.getMonth()+1}월 ${date.getDate()}일`;
+  }
+
+  function sameText(a, b) {
+    return (a || '').trim() === (b || '').trim();
+  }
+
   function renderComment(c) {
     let replyHtml = '';
     if (c.actorReplies && c.actorReplies.length) {
@@ -631,7 +663,7 @@
           <div class="actor-reply-header">
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
-          ${c.actorReply.originalText ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
+          ${c.actorReply.originalText && !sameText(c.actorReply.originalText, c.actorReply.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
           ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${renderWeiboEmoticons(c.actorReply.translatedText)}</div>` : ''}
           ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" />`).join('')}</div>` : ''}
         </div>`;
@@ -646,7 +678,7 @@
           <div class="comment-avatar" style="${isActor ? '' : 'background:var(--pink);'}">${avatarHtml}</div>
           <span class="comment-username" style="${isActor ? 'color:var(--pink);' : ''}">${c.username}</span>
         </div>
-        <div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>
+        ${!sameText(c.originalText, c.translatedText) ? `<div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>` : ''}
         <div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
         ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" />`).join('')}</div>` : ''}
         ${replyHtml}
@@ -679,10 +711,17 @@
 
   function renderPost(post, query) {
     const isFan = post.authorAvatar === '🥣';
+    const isStudio = post.authorAvatar === '💼';
     const authorName = post.authorName || ACTOR_NICK;
-    const avatarHtml = isFan
-      ? ''
-      : `<img src="${ACTOR_IMG}" alt="${authorName}" />`;
+    let avatarHtml, avatarStyle = '';
+    if (isFan) {
+      avatarHtml = '';
+    } else if (isStudio) {
+      avatarHtml = '💼';
+      avatarStyle = 'background:var(--studio);display:flex;align-items:center;justify-content:center;font-size:15px;';
+    } else {
+      avatarHtml = `<img src="${ACTOR_IMG}" alt="${authorName}" />`;
+    }
 
     const imagesHtml = renderImages(post.images);
     const youtubeHtml = post.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
@@ -706,21 +745,28 @@
         : '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
     }
 
-    const footerBtn = commentCount > 0
-      ? `<button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">댓글 ${commentCount}개 &nbsp;↓</button>`
-      : `<span class="toggle-comments-btn empty">댓글 없음</span>`;
+    // 팬이 자기 글에 올리고 익연이가 답글만 단 구조(단독 게시물)는
+    // 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여줌
+    const forceOpen = isFan && commentCount > 0;
+    if (forceOpen) autoOpen = true;
+
+    const footerBtn = forceOpen
+      ? ''
+      : (commentCount > 0
+        ? `<button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">댓글 ${commentCount}개 &nbsp;↓</button>`
+        : `<span class="toggle-comments-btn empty">댓글 없음</span>`);
 
     return `
       <article class="post-card" id="post-${post.id}">
         <div class="post-meta">
-          <div class="post-avatar">${avatarHtml}</div>
+          <div class="post-avatar" style="${avatarStyle}">${avatarHtml}</div>
           <div class="post-meta-info">
-            <div class="actor-name">${authorName}</div>
+            <div class="actor-name" style="${isStudio ? 'color:var(--studio);' : ''}">${authorName}</div>
             <div class="post-date">${formatDateTime(post.date)}</div>
           </div>
-          ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener">원문 ↗</a>` : ''}
+          ${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener" style="${isStudio ? 'color:var(--studio);' : ''}">원문 ↗</a>` : ''}
         </div>
-        <div class="original-text zh">${renderWeiboEmoticons(post.originalText)}</div>
+        ${!sameText(post.originalText, post.translatedText) ? `<div class="original-text zh">${renderWeiboEmoticons(post.originalText)}</div>` : ''}
         <div class="translated-text">${renderWeiboEmoticons(post.translatedText)}</div>
         ${post.note ? `<div class="translation-note">note: ${post.note}</div>` : ''}
         ${imagesHtml}${youtubeHtml}
@@ -801,11 +847,18 @@
 
     let html = '';
     let lastMonth = null;
+    let lastDay = null;
     filtered.forEach(p => {
       const monthLabel = getMonthLabel(p.date);
       if (monthLabel !== lastMonth && query) {
         html += `<div class="date-index">${monthLabel}</div>`;
         lastMonth = monthLabel;
+        lastDay = null;
+      }
+      const dayLabel = getDayLabel(p.date);
+      if (dayLabel !== lastDay) {
+        html += `<div class="day-divider"><span class="day-divider-label">${dayLabel}</span><span class="day-divider-line"></span></div>`;
+        lastDay = dayLabel;
       }
       html += renderPost(p, query);
     });
