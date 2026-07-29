@@ -226,7 +226,7 @@ const posts_202505 = [
     weiboUrl: "https://weibo.com/5994946077/PtTCwm8ea",
     authorName: "周翊然Tz",
     originalText: "收藏了 下次见",
-    translatedText: "저장완료 또 보자",
+    translatedText: "저장완료 또 만나자",
     images: ["images/2505-see-you-next.jpg"],
     comments: []
   }
