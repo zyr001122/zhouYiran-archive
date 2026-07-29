@@ -4,7 +4,7 @@ const posts_202312 = [
     date: "2023-12-05",
     weiboUrl: "https://weibo.com/5994946077/NvKCqfPy4",
     originalText: "谢谢大家 继续努力[加油]",
-    translatedText: "다들 너무 고마워 앞으로도 계속 열심히 노력할게[加油]",
+    translatedText: "너무 고마워 앞으로도 계속 열심히 노력할게[加油]",
     images: ["images/2312-trophy.jpg"],
     comments: []
   },
