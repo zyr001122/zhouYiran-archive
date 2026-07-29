@@ -110,14 +110,14 @@ const posts_202505 = [
           originalText: "主要是爱自由[裂开]",
           translatedText: "워낙 자유로운 영혼이셔[裂开]"
         }
-        {
+      },
+      {
         id: 25050202,
         username: "周翊然Tz",
         originalText: "笑死 你们真的把 法拉利和茅台玩坏了",
         translatedText: "진짜 미치겠다 너네 진짜 페라리랑 마오타이 가지고 아주 뽕을 뽑네",
         images: [],
         actorReply: null
-        },
       },
       {
         id: 25050211,
