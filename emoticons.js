@@ -66,6 +66,7 @@ const WEIBO_EMOTICON_MAP = {
   '流鼻血': 'liubixie',
   '苦涩': 'bitter',
   '手指比心': 'HandHeart',
+  '钢铁侠': 'ironman01',
 };
 
 /**
