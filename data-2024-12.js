@@ -755,7 +755,7 @@ const posts_202412 = [
     date: "2024-12-19",
     weiboUrl: "https://weibo.com/5994946077/P5BSumNud",
     originalText: "上来看看",
-    translatedText: "잠깐 들렸어",
+    translatedText: "잠깐 보러 왔어",
     images: [],
     comments: [
       {
@@ -766,7 +766,7 @@ const posts_202412 = [
         images: ["images/2412-hotpot2.jpg"],
         actorReply: {
           originalText: "每天都有人在吃火锅",
-          translatedText: "맨날 누군가는 훠궈를 꼭 먹고 있더라"
+          translatedText: "맨날 누군가는 훠궈를 꼭 먹고 있네"
         }
       },
       {
@@ -891,7 +891,7 @@ const posts_202412 = [
       }
     ]
   },
-  {
+ {
     id: 241227,
     date: "2024-12-22",
     weiboUrl: "",
@@ -907,7 +907,7 @@ const posts_202412 = [
         images: [],
         actorReply: {
           originalText: "刚上班",
-          translatedText: "방금 막 출근했어"
+          translatedText: "이제 막 출근했어"
         }
       },
       {
