@@ -133,7 +133,7 @@ const posts_202502 = [
         username: "是我的小土豆-Tz",
         originalText: "老公 生病了 你注意身体哦[泪]",
         translatedText: "여보 나 아파, 몸 조심해[泪]",
-       images: [
+        images: [
           "images/2502-cold.jpg"
         ],
         actorReply: {
@@ -203,6 +203,32 @@ const posts_202502 = [
         actorReply: {
           originalText: "我来了啊",
           translatedText: "나 왔어"
+        }
+      },
+      {
+        id: 25020132,
+        username: "Yun_kookie",
+        originalText: "我有时间 理我理我",
+        translatedText: "나 시간 있어 나 좀 봐줘 봐줘",
+        images: [
+          "images/2502-notice-me.jpg"
+        ],
+        actorReply: {
+          originalText: "这个好眼熟 谁家狗",
+          translatedText: "이거 낯익은데 누구네 강아지야"
+        }
+      },
+      {
+        id: 25020134,
+        username: "iiiovo999",
+        originalText: "宝宝，猜猜这是啥",
+        translatedText: "익연아, 이게 뭔지 맞혀봐",
+        images: [
+          "images/2502-guess-what.jpg"
+        ],
+        actorReply: {
+          originalText: "蚂蚱…？",
+          translatedText: "메뚜기…?"
         }
       }
     ]
@@ -325,7 +351,7 @@ const posts_202502 = [
         username: "_一口甜粥7",
         originalText: "然然他好像你啊 [doge][doge]",
         translatedText: "익연 얘 너 닮았어 [doge][doge]",
-         images: [
+        images: [
           "images/2502-0222-image6.jpg"
         ],
         actorReply: {
@@ -603,6 +629,19 @@ const posts_202502 = [
         actorReply: {
           originalText: "cool！！！",
           translatedText: "cool!!!"
+        }
+      },
+      {
+        id: 25020260,
+        username: "年餻糯糯粥",
+        originalText: "哥下雨了好冷🥶想躲你怀里去取暖",
+        translatedText: "오빠 비 오는데 너무 추워🥶 오빠 품에 숨어서 몸 좀 녹이고 싶다",
+        images: [
+          "images/2502-0222-cold-rain.jpg"
+        ],
+        actorReply: {
+          originalText: "回家里被窝里不好吗",
+          translatedText: "집에 가서 이불 속에 있는 게 낫지 않아?"
         }
       }
     ]
