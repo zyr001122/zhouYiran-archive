@@ -57,7 +57,7 @@ const WEIBO_EMOTICON_MAP = {
   '偷乐': 'touyue',
   '航天员': 'yuhangyuan',
   '老师爱你': 'Teacherlovesyou',
-  '给你小心心': 'geinixiaoxinxin',
+  '给你小心心': 'xiaoxinxin',
   '好喜欢': 'haoxihuan',
 };
 
