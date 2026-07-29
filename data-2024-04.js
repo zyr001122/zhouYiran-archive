@@ -123,7 +123,7 @@ const posts_202404 = [
         id: 150701,
         username: "周翊然Tz",
         originalText: "第一天就吃了啊",
-        translatedText: "첫날에 바로 먹었지~",
+        translatedText: "첫날에 바로 먹었지",
         images: [],
         actorReply: null
       }
