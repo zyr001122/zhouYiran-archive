@@ -16,7 +16,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "然然快看！",
     translatedText: "익연아 얼른 봐봐!",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -58,7 +58,16 @@ const posts_202412 = [
     originalText: "小然 看我的电动车可爱嘛 你喜欢的蜡笔小新哦",
     translatedText: "익연아 내 전동스쿠터 귀엽지? 너가 좋아하는 짱구야",
     images: ["images/2412-ebike.jpg"],
-    comments: []
+    comments: [
+      {
+        id: 24120401,
+        username: "周翊然Tz",
+        originalText: "整挺好",
+        translatedText: "완전 잘 꾸며놨네",
+        images: [],
+        actorReply: null
+      }
+    ]
   },
   {
     id: 241205,
@@ -68,7 +77,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "看雪！！！",
     translatedText: "눈 봐!!!",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -87,9 +96,9 @@ const posts_202412 = [
     weiboUrl: "https://weibo.com/6224003001/P2RAK9ZiM",
     authorName: "该去碎觉觉辣",
     authorAvatar: "🥣",
-    originalText: "在杭州吃的披着辣椒的\u201c甜品\u201d",
+    originalText: "在杭州吃的披着辣椒的“甜品”",
     translatedText: "항저우에서 먹은 고추 옷 입은 '디저트'",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -130,7 +139,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "翻我的话今天就给我的狗加餐",
     translatedText: "내 글에 댓글 달아주면 오늘 우리 강아지 특식 쏜다",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -234,7 +243,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "我的状态就跟我家猫一样",
     translatedText: "내 상태 딱 우리 집 고양이 상태임",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -315,7 +324,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "树叶 牛不牛",
     translatedText: "나뭇잎으로 만든 건데, 쩔지않아?",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -336,7 +345,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "看今天北京的晚霞！",
     translatedText: "오늘 베이징 노을 봐!",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -375,30 +384,6 @@ const posts_202412 = [
         actorReply: null
       },
       {
-        id: 24122002,
-        username: "周翊然Tz",
-        originalText: "我怎么发现每天都人在吃火锅",
-        translatedText: "근데 왜 맨날 다들 훠궈 먹고 있는 것 같지",
-        images: [],
-        actorReply: null
-      },
-      {
-        id: 24122003,
-        username: "周翊然Tz",
-        originalText: "想去看蜡笔小新的电影 但没时间 有看过的人吗 好看吗？？？",
-        translatedText: "짱구 극장판 보고 싶은데 시간이 없어 본 사람? 재밌어??",
-        images: [],
-        actorReply: null
-      },
-      {
-        id: 24122004,
-        username: "周翊然Tz",
-        originalText: "我溜了 各位 到现场了[收到]",
-        translatedText: "나 이만 가볼게 얘들아 나 현장 도착했어[收到]",
-        images: [],
-        actorReply: null
-      },
-      {
         id: 24122005,
         username: "粥里有什么_",
         originalText: "吃火锅",
@@ -408,6 +393,14 @@ const posts_202412 = [
           originalText: "舒服了 我猜那个是鹅肠",
           translatedText: "아 좋겠다 저거 거위 창자 맞지?"
         }
+      },
+      {
+        id: 24122002,
+        username: "周翊然Tz",
+        originalText: "我怎么发现每天都人在吃火锅",
+        translatedText: "근데 왜 맨날 다들 훠궈 먹고 있는 것 같지",
+        images: [],
+        actorReply: null
       },
       {
         id: 24122007,
@@ -564,6 +557,14 @@ const posts_202412 = [
         }
       },
       {
+        id: 24122003,
+        username: "周翊然Tz",
+        originalText: "想去看蜡笔小新的电影 但没时间 有看过的人吗 好看吗？？？",
+        translatedText: "짱구 극장판 보고 싶은데 시간이 없어 본 사람? 재밌어??",
+        images: [],
+        actorReply: null
+      },
+      {
         id: 24122035,
         username: "着急过冬",
         originalText: "能不能回一下着急过冬？",
@@ -592,7 +593,7 @@ const posts_202412 = [
         translatedText: "너랑 같이 찍은 합성사진 어때!",
         images: [],
         actorReply: {
-          originalText: "\u201c✌️\u201d差点意思",
+          originalText: "“✌️”差点意思",
           translatedText: "'✌️' 포즈가 약간 아쉽다"
         }
       },
@@ -738,6 +739,14 @@ const posts_202412 = [
           originalText: "…..",
           translatedText: "….."
         }
+      },
+      {
+        id: 24122004,
+        username: "周翊然Tz",
+        originalText: "我溜了 各位 到现场了[收到]",
+        translatedText: "나 이만 가볼게 얘들아 나 현장 도착했어[收到]",
+        images: [],
+        actorReply: null
       }
     ]
   },
@@ -749,14 +758,6 @@ const posts_202412 = [
     translatedText: "잠깐 보러 왔어",
     images: [],
     comments: [
-      {
-        id: 24122101,
-        username: "周翊然Tz",
-        originalText: "先下线了 下次见",
-        translatedText: "먼저 갈게 담에 봐",
-        images: [],
-        actorReply: null
-      },
       {
         id: 24122102,
         username: "烦恼豆沙包z",
@@ -778,6 +779,14 @@ const posts_202412 = [
           originalText: "还有烤肉",
           translatedText: "고기도 있네"
         }
+      },
+      {
+        id: 24122101,
+        username: "周翊然Tz",
+        originalText: "先下线了 下次见",
+        translatedText: "먼저 갈게 담에 봐",
+        images: [],
+        actorReply: null
       }
     ]
   },
@@ -849,7 +858,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "正在做陶艺得我 也腾出一只手来看看",
     translatedText: "도예 하다가 손 한 쪽 겨우 빼서 왔어",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -890,14 +899,6 @@ const posts_202412 = [
     translatedText: "분장실 와이파이가 좀 안 좋네",
     images: [],
     comments: [
-      {
-        id: 24122701,
-        username: "周翊然Tz",
-        originalText: "先下线了 下次见",
-        translatedText: "이만 나볼게 담에 보자",
-        images: [],
-        actorReply: null
-      },
       {
         id: 24122702,
         username: "综上所述你最萌",
@@ -941,6 +942,14 @@ const posts_202412 = [
           originalText: "甜的",
           translatedText: "단맛"
         }
+      },
+      {
+        id: 24122701,
+        username: "周翊然Tz",
+        originalText: "先下线了 下次见",
+        translatedText: "이만 나가볼게 담에 보자",
+        images: [],
+        actorReply: null
       }
     ]
   },
@@ -952,7 +961,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "To：12月的小然\nHello啊 然然 不知什么时候可以见到你，所以写下了这一封电子信\n初三后时间过得很快，每天两点一线，甚至早上起来上学都能看到月亮，晚上还有月亮陪伴着回家 每当我看向月亮时，我常会想到\"你看到会不会是和我同一时间段的月亮\"所以我想把我拍到的月亮分享给你\n每周休息时，总喜欢呆在爷爷的小菜园里，就连小猫也向往着那唯一的一缕阳光（悄悄告诉你，小猫的鼻子中间有一块黑点，所以我们经常喊他喵桑）除此之外，我还会靠零食来鼓励每一天的自己，每天上学前总会用此安慰自己 不知道然然每天坚持下去的动力会不会是我们甜粥呢？\n12月的突击考也终于过去了，虽然着急习惯了学校突击的测试，但每次还是会很紧张，对了这次的考号竟然是你的生日！！！这次考试后我听见老师口中最常说的一句话就是不要放弃自己，其实我也很畏惧前方的位置可如果我不向前，那我就不能跟上你的脚步所以接下来我可能要打一场硬仗啦\n最近朋友推荐了我一本书，感觉真的非常的治愈，想分享给你 有没有觉得里面的主人公小狗长得非常像法拉利呀 就像书上所说的\n\"未来也许依旧不那么清晰\n但这些小而具体的理由正是照亮人生脚步的微弱光点\n指引着我们继续往前走\"\n那么接下来就祝你祝我 事业学业顺顺利利 天天开心 平安喜乐",
     translatedText: "To: 12월의 익연이에게\nHello 익연아, 언제 만날 수 있을지 몰라서 이렇게 모바일 편지를 적어봐\n중학교 3학년이 되고 나서는 시간이 너무 빠르게 흘러가는 것 같아. 매일 집과 학교만 반복하는 일상이고, 아침 일찍 등교할 때도 달을 보고, 밤에 집에 돌아갈 때도 달이 날 지켜봐 주거든. 달을 바라볼 때마다 '너도 혹시 지금 나와 같은 시각의 달을 보고 있을까?' 하는 생각이 들어서 내가 직접 찍은 달 사진을 보여주고 싶었어.\n주말에 쉴 때면 늘 할아버지의 작은 텃밭에 가 있곤 해. 고양이조차도 비치는 한 줄기 햇살을 따스하게 쬐는 걸 좋아하더라고 (비밀인데 알려주자면, 그 고양이는 코 한가운데에 까만 점이 있어서 우리가 늘 '냥상'이라고 불러!). 그리고 나는 매일 간식을 먹으면서 스스로를 응원하곤 해. 아침에 등교하기 전에 늘 그렇게 마음을 달래지. 익연이가 매일 힘을 내는 원동력도 혹시 우리 '톈저우(甜粥)' 팬들일까?\n12월 쪽지시험도 드디어 끝났어. 학교에서 불시에 보는 시험에 익숙해졌다고 생각하면서도 매번 긴장되는 건 어쩔 수 없더라. 그런데 이번 시험 수험번호가 글쎄 너 생일 번호였어!!! 이번 시험 끝나고 선생님들께서 제일 많이 하신 말씀이 '절대 포기하지 마라'였어. 사실 나도 앞에 놓인 내 미래나 목표가 겁나기도 하지만, 나아가지 않으면 너의 발자취를 따라갈 수 없잖아. 그래서 앞으로 진짜 단단히 마음먹고 힘내보려고 해!\n최근에 친구가 책을 한 권 추천해 줬는데 정말 힐링 되어서 너한테도 나누고 싶었어. 거기 나오는 주인공 강아지가 페라리랑 진짜 닮았다고 느끼지 않았어? 책에 이런 문구가 있더라고.\n'미래가 여전히 불투명할지라도,\n이 소소하고 구체적인 이유들이야말로 인생의 길을 비추는 희미한 희망의 빛이 되어\n우리를 계속 나아가게 해준다.'\n그럼 너도, 나도 하는 일과 학업 모두 잘 풀리고, 매일 웃을 일만 가득하며 평안하길 바랄게",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -973,7 +982,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "我染头发的时候理发店的猫一直陪着我 超可爱 你也看看",
     translatedText: "나 염색하는 동안 미용실 고양이가 옆에 착 붙어서 계속 같이 있어줬어 완전 귀여워 너도 봐봐",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -1074,7 +1083,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "然然看熊猫",
     translatedText: "익연아 판다 봐봐",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -1138,7 +1147,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "刚拍的铁花✨分享给你",
     translatedText: "방금 찍은 불꽃 사진✨ 공유 해줄게",
-    note: "📹 원문 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -1311,10 +1320,10 @@ const posts_202412 = [
     images: [],
     comments: [
       {
-        id: 24124501,
+        id: 24124505,
         username: "周翊然Tz",
-        originalText: "新的一年 希望大家在新的一年可以一切顺利 身体健康 财源广进 开开心心\n一起告别24 迎接25 新年快乐！！！[2025][2025][2025]",
-        translatedText: "새해에는 다들 모든 일이 잘 풀리고, 건강하고, 부자 되고, 늘 행복하길\n같이 24년 잘 마무리하고 25년 맞이하자 새해 복 많이 받아!!![2025][2025][2025]",
+        originalText: "等戏空隙[收到]",
+        translatedText: "촬영 쉬는 시간[收到]",
         images: [],
         actorReply: null
       },
@@ -1335,26 +1344,40 @@ const posts_202412 = [
         actorReply: null
       },
       {
-        id: 24124504,
-        username: "周翊然Tz",
-        originalText: "我先走了 大家玩的开心！ 新年快乐！！ 等等记得刷我微博[收到]",
-        translatedText: "나 먼저 갈게 재밌게 놀아! 새해 복 많이 받고!! 이따 내 웨이보 꼭 확인해[收到]",
-        images: [],
-        actorReply: null
-      },
-      {
-        id: 24124505,
-        username: "周翊然Tz",
-        originalText: "等戏空隙[收到]",
-        translatedText: "촬영 쉬는 시간[收到]",
-        images: [],
-        actorReply: null
+        id: 24124517,
+        username: "吃翊口脆薯饼_",
+        originalText: "小哥哥你为什么不好好抠图！！",
+        translatedText: "오빠 누끼 좀 성의 있게 따봐!!",
+        images: ["images/2412-cutout.jpg"],
+        actorReply: {
+          originalText: "那你倒是发个原图啊！！",
+          translatedText: "그럼 원본 사진 좀 올려주든가!!"
+        }
       },
       {
         id: 24124506,
         username: "周翊然Tz",
         originalText: "抠图的那位好人 请记得发一下原图",
         translatedText: "누끼 따준 천사분, 원본 사진 좀 공유해주세요",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124511,
+        username: "粥里有什么_",
+        originalText: "看重庆的跨年气球🎈",
+        translatedText: "충칭 카운트다운 풍선 봐🎈",
+        images: ["images/2412-balloon.jpg"],
+        actorReply: {
+          originalText: "很美 但要注意安全",
+          translatedText: "예쁘다 근데 다치지 않게 조심해"
+        }
+      },
+      {
+        id: 24124501,
+        username: "周翊然Tz",
+        originalText: "新的一年 希望大家在新的一年可以一切顺利 身体健康 财源广进 开开心心\n一起告别24 迎接25 新年快乐！！！[2025][2025][2025]",
+        translatedText: "새해에는 다들 모든 일이 잘 풀리고, 건강하고, 부자 되고, 늘 행복하길\n같이 24년 잘 마무리하고 25년 맞이하자 새해 복 많이 받아!!![2025][2025][2025]",
         images: [],
         actorReply: null
       },
@@ -1381,17 +1404,6 @@ const posts_202412 = [
         }
       },
       {
-        id: 24124511,
-        username: "粥里有什么_",
-        originalText: "看重庆的跨年气球🎈",
-        translatedText: "충칭 카운트다운 풍선 봐🎈",
-        images: ["images/2412-balloon.jpg"],
-        actorReply: {
-          originalText: "很美 但要注意安全",
-          translatedText: "예쁘다 근데 다치지 않게 조심해"
-        }
-      },
-      {
         id: 24124513,
         username: "落日屿橘",
         originalText: "老公派你帮我守宿舍了！我放假啦哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
@@ -1411,17 +1423,6 @@ const posts_202412 = [
         actorReply: {
           originalText: "那你别吃了",
           translatedText: "그럼 그만 먹어"
-        }
-      },
-      {
-        id: 24124517,
-        username: "吃翊口脆薯饼_",
-        originalText: "小哥哥你为什么不好好抠图！！",
-        translatedText: "오빠 누끼 좀 성의 있게 따봐!!",
-        images: ["images/2412-cutout.jpg"],
-        actorReply: {
-          originalText: "那你倒是发个原图啊！！",
-          translatedText: "그럼 원본 사진 좀 올려주든가!!"
         }
       },
       {
@@ -1467,6 +1468,14 @@ const posts_202412 = [
           originalText: "[doge]",
           translatedText: "[doge]"
         }
+      },
+      {
+        id: 24124504,
+        username: "周翊然Tz",
+        originalText: "我先走了 大家玩的开心！ 新年快乐！！ 等等记得刷我微博[收到]",
+        translatedText: "나 먼저 갈게 재밌게 놀아! 새해 복 많이 받고!! 이따 내 웨이보 꼭 확인해[收到]",
+        images: [],
+        actorReply: null
       }
     ]
   }
