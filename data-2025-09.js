@@ -82,7 +82,7 @@ const posts_202509 = [
         images: ["images/2509-our-banner.jpg"],
         actorReply: {
           originalText: "看到了谢谢大家[钢铁侠]",
-          translatedText: "봤지 다들 너무 고마워[钢铁侠]"
+          translatedText: "봤지 너무 고마워[钢铁侠]"
         }
       },
       {
@@ -122,7 +122,7 @@ const posts_202509 = [
         id: 25090112,
         username: "檬檬软粥味",
         originalText: "哥哥 敢不敢摸[doge]",
-        translatedText: "오빠 만져볼 용기 있어?[doge]",
+        translatedText: "오빠 용기 있으면 만져볼래?[doge]",
         images: ["images/2509-dare-to-touch.jpg"],
         actorReply: {
           originalText: "敢拍照",
@@ -144,7 +144,7 @@ const posts_202509 = [
         id: 25090101,
         username: "周翊然Tz",
         originalText: "我先走了 大家好好工作好好上学好好生活",
-        translatedText: "먼저 가볼게 다들 일 열심히 하고 공부 열심히 하고 잘 지내",
+        translatedText: "먼저 가볼게 다들 일 열심히 하고 공부 열심히 하고 잘 지내고 있어",
         images: [],
         actorReply: null
       }
