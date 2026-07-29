@@ -97,7 +97,7 @@ const posts_202508 = [
         id: 25080306,
         username: "不吃年糕Tz",
         originalText: "新疆网也不好吗",
-        translatedText: "신장도 인터넷 잘 안 터져?,
+        translatedText: "신장도 인터넷 잘 안 터져?",
         images: ["images/2508-xinjiang-wifi.jpg"],
         actorReply: {
           originalText: "网确实有点差",
