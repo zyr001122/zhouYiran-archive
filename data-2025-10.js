@@ -34,7 +34,7 @@ const posts_202510 = [
         id: 25100104,
         username: "魚肉蛋黄酥o_",
         originalText: "法拉利在赛车场享受按摩这事儿它跟你说了吗？🐶",
-        translatedText: "페라리가 서킷에서 마사지 받은 거, 페라리가 너한테 말했어?🐶",
+        translatedText: "페라리 서킷에서 마사지 받았던데 페라리가 너한테 말했어?🐶",
         images: ["images/2510-ferrari-massage.jpg"],
         actorReply: {
           originalText: "听说了",
