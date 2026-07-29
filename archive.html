@@ -442,6 +442,8 @@
       padding-left: 54px;
     }
     .actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+    .actor-reply-avatar { width: 18px; height: 18px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+    .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .actor-reply-name { font-size: 10px; font-weight: 600; color: var(--pink); }
     .actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.6; margin: 0 0 4px; }
     .actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 500; line-height: 1.65; }
@@ -500,6 +502,68 @@
       .scroll-nav { right: 14px; bottom: 16px; }
       .scroll-btn { width: 34px; height: 34px; font-size: 13px; }
     }
+
+    /* image lightbox */
+    .grid-cell img, .post-image-single img, .comment-images img { cursor: pointer; }
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26,18,22,0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      padding: 60px 20px 30px;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      width: 34px;
+      height: 34px;
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 501;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.24); }
+    .lightbox-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 76vh;
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox-save {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 22px;
+      border: none;
+      border-radius: 3px;
+      background: var(--pink);
+      color: var(--white);
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+    .lightbox-save:hover { background: #d9456d; }
   </style>
 </head>
 <body>
@@ -508,6 +572,15 @@
 <div class="scroll-nav">
   <button class="scroll-btn" id="scrollTopBtn" onclick="scrollToTop()" aria-label="맨 위로">▲</button>
   <button class="scroll-btn" id="scrollBottomBtn" onclick="scrollToBottom()" aria-label="맨 아래로">▼</button>
+</div>
+
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this) closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="닫기">✕</button>
+  <div class="lightbox-body">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="확대 이미지" />
+    <a class="lightbox-save" id="lightboxSave" href="" download target="_blank" rel="noopener">저장 ↓</a>
+  </div>
 </div>
 
 <!-- HERO / DARK BAND -->
@@ -694,6 +767,7 @@
       replyHtml = c.actorReplies.map(r => `
         <div class="actor-reply">
           <div class="actor-reply-header">
+            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
           <div class="actor-reply-original zh">${renderWeiboEmoticons(r.originalText)}</div>
@@ -703,11 +777,12 @@
       replyHtml = `
         <div class="actor-reply">
           <div class="actor-reply-header">
+            <div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
             <span class="actor-reply-name">${ACTOR_NICK}</span>
           </div>
           ${c.actorReply.originalText && !sameText(c.actorReply.originalText, c.actorReply.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
           ${c.actorReply.translatedText ? `<div class="actor-reply-translated">${renderWeiboEmoticons(c.actorReply.translatedText)}</div>` : ''}
-          ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" />`).join('')}</div>` : ''}
+          ${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
         </div>`;
     }
     const isActor = c.username === ACTOR_NICK;
@@ -723,7 +798,7 @@
         ${!sameText(c.originalText, c.translatedText) ? `<div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>` : ''}
         <div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
         ${c.note ? `<div class="comment-note">note: ${c.note}</div>` : ''}
-        ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" />`).join('')}</div>` : ''}
+        ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
         ${replyHtml}
       </div>`;
   }
@@ -738,16 +813,16 @@
   function renderImages(images) {
     if (!images || !images.length) return '';
     if (images.length === 1) {
-      return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" /></div>`;
+      return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${images[0]}')" /></div>`;
     }
     const shown = images.slice(0, 9);
     const remaining = images.length - 9;
     const colsClass = shown.length === 2 ? 'cols-2' : '';
     const cells = shown.map((src, i) => {
       if (i === 8 && remaining > 0) {
-        return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" /><div class="grid-overlay">+${remaining}</div></div>`;
+        return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /><div class="grid-overlay">+${remaining}</div></div>`;
       }
-      return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" /></div>`;
+      return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /></div>`;
     }).join('');
     return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
   }
@@ -788,10 +863,9 @@
         : '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
     }
 
-    // 팬(🥣)이 자기 글에 올리고 익연이가 답글만 단 구조(단독 게시물),
-    // 그리고 공작실(💼) 본인 글에 익연이가 댓글만 단 구조도
-    // 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여줌
-    const forceOpen = (isFan || isStudio) && commentCount > 0;
+    // 댓글이 5개 이하면 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여주고,
+    // 5개 초과(댓글 많은 스레드형)는 기존처럼 펼치기/접기 버튼을 눌러야 보이게 유지
+    const forceOpen = commentCount > 0 && commentCount <= 5;
     if (forceOpen) autoOpen = true;
 
     const footerBtn = forceOpen
@@ -988,6 +1062,25 @@
   window.addEventListener('scroll', updateScrollNav);
   window.addEventListener('resize', updateScrollNav);
   updateScrollNav();
+
+  // 이미지 크게보기 + 저장
+  function openLightbox(src) {
+    const overlay = document.getElementById('lightboxOverlay');
+    const img = document.getElementById('lightboxImg');
+    const save = document.getElementById('lightboxSave');
+    img.src = src;
+    save.href = src;
+    save.setAttribute('download', src.split('/').pop());
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightboxOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
 </script>
 </body>
 </html>
