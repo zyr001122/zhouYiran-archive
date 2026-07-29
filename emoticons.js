@@ -55,8 +55,8 @@ const WEIBO_EMOTICON_MAP = {
   '笑哭': 'laughcry_mobile',
   '淡淡的': 'dandande',
   '偷乐': 'touyue',
-  '航天员': 'hangtianyuan',
-  '老师爱你': 'laoshiaini',
+  '航天员': 'yuhangyuan',
+  '老师爱你': 'Teacherlovesyou',
   '给你小心心': 'geinixiaoxinxin',
   '好喜欢': 'haoxihuan',
 };
