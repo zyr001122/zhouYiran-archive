@@ -169,7 +169,7 @@ const posts_202301 = [
     date: "2023-01-21",
     weiboUrl: "https://weibo.com/5994946077/Mpn9uqmLd",
     originalText: "真的走了啊",
-    translatedText: "진짜 간다~",
+    translatedText: "진짜 간다",
     images: [],
     comments: []
   }
