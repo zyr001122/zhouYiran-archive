@@ -307,7 +307,7 @@ const posts_202208 = [
   },
   {
     id: 133,
-    date: "2022-08-28",
+    date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RwqBzkK",
     originalText: "28号有惊喜 我任务完成了",
     translatedText: "28일에 서프라이즈 보일 거야 미션 완료했거든",
