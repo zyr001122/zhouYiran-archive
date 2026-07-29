@@ -5,7 +5,7 @@ const posts_202508 = [
     weiboUrl: "https://weibo.com/5994946077/PE7iaa2Jz",
     authorName: "周翊然Tz",
     originalText: "一起上班前 🐶#本周报备#",
-    translatedText: "출근하기 전에 🐶#本周报备#",
+    translatedText: "출근하기 전에 🐶",
     images: [
       "images/2508-0803-01.jpg",
       "images/2508-0803-02.jpg",
@@ -25,7 +25,7 @@ const posts_202508 = [
     weiboUrl: "https://weibo.com/5994946077/PF8OQDgtI",
     authorName: "周翊然Tz",
     originalText: "🎹 #本周报备#",
-    translatedText: "🎹 #本周报备#",
+    translatedText: "🎹 ",
     images: [
       "images/2508-0810-01.jpg",
       "images/2508-0810-02.jpg",
