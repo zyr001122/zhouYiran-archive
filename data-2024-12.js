@@ -1305,7 +1305,7 @@ const posts_202412 = [
         id: 24122701,
         username: "周翊然Tz",
         originalText: "先下线了 下次见",
-        translatedText: "이만 나가볼게 담에 보자",
+        translatedText: "이제 가볼게 담에 보자",
         images: [],
         actorReply: null
       }
