@@ -67,6 +67,7 @@ const WEIBO_EMOTICON_MAP = {
   '苦涩': 'bitter',
   '手指比心': 'HandHeart',
   '钢铁侠': 'ironman01',
+  '毕业快乐': 'Happygraduation',
 };
 
 /**
