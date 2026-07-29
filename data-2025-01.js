@@ -5,7 +5,7 @@ const posts_202501 = [
     weiboUrl: null,
     authorName: "周翊然Tz",
     originalText: "晚上好",
-    translatedText: "저녁 잘 보내고 있지",
+    translatedText: "안녕",
     images: [],
     comments: [
       {
@@ -51,7 +51,7 @@ const posts_202501 = [
         username: "十八点Singer_",
         originalText: "棒棒的汪汪已经开始新年旺旺模式咯",
         translatedText: "멋쟁이 우리 강아지 벌써 새해 대박 모드 시작했네",
-        images: [],
+        images: ["images/2501-new-year-dog.jpg"],
         actorReply: {
           originalText: "什么鬼东西 归我了",
           translatedText: "이게 뭔데ㅋㅋㅋㅋ 내가 가짐"
@@ -99,7 +99,7 @@ const posts_202501 = [
         username: "祈川十里春",
         originalText: "吃完饭了没",
         translatedText: "밥은 다 먹었어?",
-        images: [],
+        images: ["images/2501-meal.jpg"],
         actorReply: {
           originalText: "我也吃了火锅",
           translatedText: "나도 훠궈 먹었는데"
@@ -110,7 +110,7 @@ const posts_202501 = [
         username: "绝版的每一天咯",
         originalText: "好累😔",
         translatedText: "너무 피곤해😔",
-        images: [],
+        images: ["images/2501-drawing.jpg"],
         actorReply: {
           originalText: "这画工比我好上百倍了",
           translatedText: "그림 실력이 나보다 백배는 낫네"
@@ -134,7 +134,7 @@ const posts_202501 = [
         username: "十八点Singer_",
         originalText: "走吧小狗 周翊然是不会注意到我们的👩🏻‍🦯       🦮🐕‍🦺 ",
         translatedText: "가자 멍멍아, 주익연은 우리 안중에도 없을 거야👩🏻‍🦯       🦮🐕‍🦺 ",
-        images: [],
+        images: ["images/2501-guide-dog-photo.jpg"],
         actorReply: {
           originalText: "images/2501-dogrun.gif",
           translatedText: "images/22501-dogrun-1.gif"
@@ -182,7 +182,7 @@ const posts_202501 = [
         username: "骤然吐司yr",
         originalText: "哥哥你是有什么心事吗",
         translatedText: "오빠 무슨 고민 있어?",
-        images: [],
+        images: ["images/2501-worried-photo.jpg"],
         actorReply: {
           originalText: "images/2501-tz-sticker-3.gif",
           translatedText: "images/2501-tz-sticker-3.gif"
@@ -193,7 +193,7 @@ const posts_202501 = [
         username: "我产是世界第yi_",
         originalText: "许愿新的一年开车哥能天天开赛车",
         translatedText: "새해엔 우리 레이서 오빠가 매일레이싱 탈 수 있게 해주세요",
-        images: [],
+        images: ["images/2501-racing-wish.jpg"],
         actorReply: {
           originalText: "images/2501-tz-sticker-4.jpg",
           translatedText: "images/2501-tz-sticker-4.jpg"
@@ -204,7 +204,7 @@ const posts_202501 = [
         username: "猫卷眠眠然",
         originalText: "不翻我 我直接皇化",
         translatedText: "나 답글 안 달아주면 바로 흑화한다",
-        images: [],
+        images: ["images/2501-not-replied.jpg"],
         actorReply: {
           originalText: "哈哈哈哈哈哈哈哈哈什么鬼",
           translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋ이건 뭔데 미치겠넼"
@@ -240,7 +240,7 @@ const posts_202501 = [
         username: "我就是周六栗子日",
         originalText: "周翊然会翻我这件事假面骑士、假面骑士v3、假面骑士X、假面骑士亚马逊、假面骑士强人、假面骑士sky rider、假面骑士超一号、假面骑士暗日、假面骑士空我、假面骑士亚极陀、假面骑士龙骑、假面骑士555、假面骑士剑、假面骑士响鬼、假面骑士the first等诸多假面骑士都觉得很赞",
         translatedText: "주익연이 내 댓글에 답글 달아줄 거라는 사실은 가면라이더, 가면라이더 V3, 가면라이더 X, 가면라이더 아마존, 가면라이더 스트롱거, 가면라이더 스카이라이더, 가면라이더 슈퍼원, 가면라이더 블랙, 가면라이더 쿠우가, 가면라이더 아기토, 가면라이더 류우키, 가면라이더 555, 가면라이더 켄, 가면라이더 히비키, 가면라이더 더 퍼스트 등 수많은 가면라이더들도 인정하는 바임",
-        images: [],
+        images: ["images/2501-kamen-rider.jpg"],
         actorReply: {
           originalText: "给555的",
           translatedText: "555한테 주는 답"
@@ -251,7 +251,7 @@ const posts_202501 = [
         username: "-融雪初岛-",
         originalText: "问问小然年夜饭都吃什么 提前祝你小年快乐！",
         translatedText: "익연이한테 물어볼게, 연야반 뭐 먹을 거야? 미리 설날 잘 보내!",
-        images: [],
+        images: ["images/2501-new-year-eve.jpg"],
         actorReply: {
           originalText: "小年快乐！ 到时候拍给你们看看",
           translatedText: "설날 잘 보내! 그때 사진 찍어서 보여줄게"
