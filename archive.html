@@ -465,9 +465,50 @@
       .panel { padding: 0 16px; }
       .year-tabs { padding-left: 0; }
     }
+
+    /* scroll to top/bottom */
+    .scroll-nav {
+      position: fixed;
+      right: 18px;
+      bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 200;
+    }
+    .scroll-btn {
+      width: 38px;
+      height: 38px;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1;
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+      transition: opacity 0.18s ease, transform 0.18s ease, background 0.15s;
+    }
+    .scroll-btn:hover { background: var(--pink); }
+    .scroll-btn.show { opacity: 0.92; transform: translateY(0); pointer-events: auto; }
+    @media (max-width: 480px) {
+      .scroll-nav { right: 14px; bottom: 16px; }
+      .scroll-btn { width: 34px; height: 34px; font-size: 13px; }
+    }
   </style>
 </head>
 <body>
+
+<!-- SCROLL TOP/BOTTOM NAV -->
+<div class="scroll-nav">
+  <button class="scroll-btn" id="scrollTopBtn" onclick="scrollToTop()" aria-label="맨 위로">▲</button>
+  <button class="scroll-btn" id="scrollBottomBtn" onclick="scrollToBottom()" aria-label="맨 아래로">▼</button>
+</div>
 
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
@@ -927,6 +968,26 @@
 
   renderFeed();
   renderDateTree();
+
+  // 맨 위로 / 맨 아래로 버튼
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function scrollToBottom() {
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+  }
+  function updateScrollNav() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const topBtn = document.getElementById('scrollTopBtn');
+    const bottomBtn = document.getElementById('scrollBottomBtn');
+    if (!topBtn || !bottomBtn) return;
+    topBtn.classList.toggle('show', scrollY > 400);
+    bottomBtn.classList.toggle('show', maxScroll > 400 && scrollY < maxScroll - 200);
+  }
+  window.addEventListener('scroll', updateScrollNav);
+  window.addEventListener('resize', updateScrollNav);
+  updateScrollNav();
 </script>
 </body>
 </html>
