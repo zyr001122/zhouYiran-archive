@@ -122,7 +122,7 @@ const posts_202510 = [
         id: 25100112,
         username: "小吴同学KC",
         originalText: "然哥快看大熊！超级可爱[哇]",
-        translatedText: "오빠 빨리 큰 곰돌이 좀 봐봐! 완전 귀엽지[哇]",
+        translatedText: "오빠 빨리 대왕곰 봐봐! 완전 귀엽지[哇]",
         images: ["images/2510-big-bear.jpg"],
         actorReply: {
           originalText: "哈哈哈感觉还没睡醒",
