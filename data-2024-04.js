@@ -42,7 +42,7 @@ const posts_202404 = [
         id: 150301,
         username: "周翊然Tz",
         originalText: "超级帅 可以贴点小拉花上去",
-        translatedText: "완전 멋있네 라떼아트 스티커 붙여도 되겠다",
+        translatedText: "완전 멋있네 데칼 스티커 붙여도 되겠다",
         images: [],
         actorReply: null
       }
