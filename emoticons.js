@@ -50,6 +50,7 @@ const WEIBO_EMOTICON_MAP = {
   '笑哈哈': 'laugh_mobile',
   '你好': 'hello_mobile',
   '爱橙': 'loveorange_mobile',
+  '老师': 'teacher_mobile',
 };
 
 /**
