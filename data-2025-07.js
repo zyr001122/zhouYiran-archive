@@ -248,7 +248,7 @@ const posts_202507 = [
         id: 25070101,
         username: "周翊然Tz",
         originalText: "我要走了  大家最近天气热 一定要注意不要中暑了 我去改妆了 下次见 ！",
-        translatedText: "나 이제 가볼게 요즘 날씨 더우니까 다들 더위 먹지 않게 조심하고 나 메이크업 수정하러 가야 해서 담에 올게!",
+        translatedText: "나 이제 가볼게 요즘 날씨 더우니까 다들 더위 먹지 않게 조심해 메이크업 수정하러 가야 해서 담에 올게!",
         images: [],
         actorReply: null
       }
