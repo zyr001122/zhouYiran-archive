@@ -45,7 +45,7 @@ const posts_202510 = [
         id: 25100105,
         username: "来翊口甜瓜",
         originalText: "帮我选一个口味[你好]",
-        translatedText: "맛 하나 골라줘[你好]",
+        translatedText: "뭐 먹을까 맛 하나만 골라줘[你好]",
         images: ["images/2510-pick-a-flavor.jpg"],
         actorReply: {
           originalText: "蓝莓",
