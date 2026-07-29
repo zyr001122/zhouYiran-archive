@@ -171,7 +171,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "来昆明看海鸥啊！小然！（大师！请指点拍照技术[可怜]）",
     translatedText: "쿤밍 와서 갈매기 보러 와! 익연아! (대가님! 사진 촬영 기술 좀 알려주세요[可怜])",
-    images: [],
+    images: ["images/2412-sea.jpg"],
     comments: [
       {
         id: 24121001,
@@ -211,7 +211,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "诺 我家孩子 怎么样！",
     translatedText: "짜잔 우리 애 어때!",
-    images: [],
+    images: ["images/2412-dog3.jpg"],
     comments: [
       {
         id: 24121201,
@@ -252,7 +252,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "小猫咪，可以帮他取个名字嘛，马上模拟考了可以祝我超常发挥嘛然然[抱一抱]",
     translatedText: "고양이인데 이름 좀 지어줄 수 있어? 곧 모의고사인데 대박 나라고 빌어줄 수 있어 익연아[抱一抱]",
-    images: [],
+    images: ["images/2412-cat3.jpg"],
     comments: [
       {
         id: 24121401,
@@ -272,7 +272,7 @@ const posts_202412 = [
     authorAvatar: "🥣",
     originalText: "想念夏天的海边🥹昨天找到了一组两个月前洗出来的胶片！分享给你～",
     translatedText: "여름 바다가 그리워🥹 어제 두 달 전에 인화한 필름 사진 찾았어! 너한테 공유할게~",
-    images: [],
+    images: ["images/2412-sea5.jpg"],
     comments: [
       {
         id: 24121501,
