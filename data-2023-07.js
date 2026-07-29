@@ -23,7 +23,7 @@ const posts_202307 = [
     date: "2023-07-31",
     weiboUrl: "https://weibo.com/5994946077/NcqTQgJP8",
     originalText: "走了走了 开工了",
-    translatedText: "가야겠다 갈게 일 하러 가야 돼",
+    translatedText: "가야겠다 가볼게 일 하러 가야 돼",
     images: ["images/2307-ultraman-bye.jpg"],
     comments: []
   }
