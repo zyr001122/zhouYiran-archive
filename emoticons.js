@@ -41,6 +41,7 @@ const WEIBO_EMOTICON_MAP = {
   '躺平': 'takearest',
   '耶耶': 'yeahyeah',
   '苦': 'bitter',
+  '开学季': 'kaixueji',
 };
 
 /**
