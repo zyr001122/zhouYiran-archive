@@ -4,7 +4,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rd465ir",
     originalText: "好久不见",
-    translatedText: "오랜만이네",
+    translatedText: "오랜만이야",
     images: [],
     comments: []
   },
@@ -13,7 +13,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rdxyo4h",
     originalText: "又来超话了",
-    translatedText: "초화 또 놀러왔어",
+    translatedText: "또 초화 놀러왔어",
     images: [],
     comments: []
   },
@@ -22,7 +22,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RdJ8fhg",
     originalText: "大家最近有看二十不惑2吗？",
-    translatedText: "다들 이십불혹2 봤어?",
+    translatedText: "다들 최근에 이십불혹2 봤어?",
     images: [],
     comments: []
   },
@@ -31,7 +31,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RdVe0L8",
     originalText: "喜欢殷赏吗",
-    translatedText: "인상 괜찮지?",
+    translatedText: "인상 캐릭터 어때 괜찮아?",
     images: [],
     comments: []
   },
@@ -40,7 +40,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RgxvOOG",
     originalText: "刚去工作了",
-    translatedText: "방금 일하러 왔어",
+    translatedText: "방금 일 좀 하고 왔어",
     images: [],
     comments: []
   },
@@ -58,7 +58,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RgOCYyP",
     originalText: "我网不好",
-    translatedText: "인터넷이 안 좋네",
+    translatedText: "인터넷 상태가 안 좋아",
     images: [],
     comments: []
   },
@@ -67,7 +67,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RgV5W4b",
     originalText: "说说话吧",
-    translatedText: "얘기나 하자",
+    translatedText: "수다나 떨자",
     images: [],
     comments: []
   },
@@ -76,7 +76,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rhfwpsp",
     originalText: "殷赏的嘴太毒了",
-    translatedText: "인상이 말이 너무 독하긴 해",
+    translatedText: "인상이 말이 너무 쎄긴 해 독설 장난 아니지",
     images: [],
     comments: []
   },
@@ -85,7 +85,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rhmxu8d",
     originalText: "但是我觉得说得挺好",
-    translatedText: "근데 나는 맞는 말 같던데",
+    translatedText: "근데 나는 맞는 말만 하는 것 같던데",
     images: [],
     comments: []
   },
@@ -103,7 +103,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmvtcjM",
     originalText: "回来了",
-    translatedText: "다시 왔다",
+    translatedText: "다시 컴백",
     images: [],
     comments: []
   },
@@ -112,7 +112,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmzvSQO",
     originalText: "考一考你们",
-    translatedText: "너네 테스트 해봐야겠다",
+    translatedText: "너네 테스트 하나 해봐야겠다",
     images: [],
     comments: []
   },
@@ -139,7 +139,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RmXxt6M",
     originalText: "我觉得殷赏发型不好看",
-    translatedText: "나는 인상 헤어스타일 좀 안 예쁜 것 같아",
+    translatedText: "난 인상 헤어스타일은 좀 별로인 것 같아",
     images: [],
     comments: []
   },
@@ -148,7 +148,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rn4CXaY",
     originalText: "不要提泡脚桶",
-    translatedText: "족욕기 얘기는 꺼내지 마",
+    translatedText: "족욕기 얘기는 꺼내지도 마",
     images: [],
     comments: []
   },
@@ -157,7 +157,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rn8FC6Q",
     originalText: "我不需要泡脚桶",
-    translatedText: "족욕기 필요 없어",
+    translatedText: "족욕기 필 요 없 다 고",
     images: [],
     comments: []
   },
@@ -175,7 +175,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rsd64ne",
     originalText: "一休息就犯困",
-    translatedText: "쉬기만 하면 졸려",
+    translatedText: "쉬기만 하면 잠이 와",
     images: [],
     comments: []
   },
@@ -193,7 +193,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RsuAk9x",
     originalText: "都吃饭了吗",
-    translatedText: "다들 밥 먹었어?",
+    translatedText: "다들 밥은 먹었어?",
     images: [],
     comments: []
   },
@@ -202,7 +202,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RsG3AkT",
     originalText: "太卡就不回复了",
-    translatedText: "너무 끊기면 답장 못 할 것 같아",
+    translatedText: "너무 끊기면 답장 못 할 수도 있어",
     images: [],
     comments: []
   },
@@ -211,7 +211,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RsTDYOc",
     originalText: "工作人员跟我说发够25条可以让你们看到惊喜",
-    translatedText: "스태프가 나한테 글 25개 채우면 너네한테 깜짝 이벤트 보여줄 수 있다는데",
+    translatedText: "스태프가 글 25개 채우면 너네한테 서프라이즈 보여줄 수 있다는데",
     images: [],
     comments: []
   },
@@ -220,7 +220,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RsXfaNk",
     originalText: "我努力",
-    translatedText: "열심히 해볼게",
+    translatedText: "열심히 달려볼게",
     images: [],
     comments: []
   },
@@ -229,7 +229,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Rt5aynA",
     originalText: "这算一条吧？",
-    translatedText: "이것도 1개로 치는 거지?",
+    translatedText: "이것도 1개로 치는 거겠지?",
     images: [],
     comments: []
   },
@@ -238,7 +238,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RtbmN9t",
     originalText: "今晚有没有殷赏？",
-    translatedText: "오늘 밤에 인상 나오나?",
+    translatedText: "오늘 밤에 인상 나오려나?",
     images: [],
     comments: []
   },
@@ -247,7 +247,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RtqcEvr",
     originalText: "够25条没？",
-    translatedText: "25개 채웠어?",
+    translatedText: "25개 채워졌어?",
     images: [],
     comments: []
   },
@@ -256,7 +256,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RtR8h1Q",
     originalText: "是不是够25了？",
-    translatedText: "25개 다 채워진 거 맞아?",
+    translatedText: "25개 다 채워진 거 맞지?",
     images: [],
     comments: []
   },
@@ -265,7 +265,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RugsqQd",
     originalText: "我已经不会数了",
-    translatedText: "나도 이제 못 세겠어",
+    translatedText: "이제 몇 개 썼는지도 못 세겠어",
     images: [],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2Ruu4cD1",
     originalText: "看到惊喜了吗？",
-    translatedText: "깜짝 이벤트 봤어?",
+    translatedText: "서프라이즈 봤어?",
     images: [],
     comments: []
   },
@@ -283,7 +283,7 @@ const posts_202208 = [
     date: "2022-08-26",
     weiboUrl: "https://weibo.com/5994946077/M2RuyxeJR",
     originalText: "我没看见",
-    translatedText: "나한텐 안 보이네",
+    translatedText: "난 안 보여",
     images: [],
     comments: []
   },
@@ -310,7 +310,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M2RwqBzkK",
     originalText: "28号有惊喜 我任务完成了",
-    translatedText: "28일에 깜짝 이벤트 나올 거야 미션 완료했거든",
+    translatedText: "28일에 서프라이즈 보일 거야 미션 완료했거든",
     images: [],
     comments: []
   },
@@ -319,7 +319,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M36i13fOz",
     originalText: "早上好 我来看彩蛋了",
-    translatedText: "굿모닝 이벤트 뜨는 거 보러 왔어",
+    translatedText: "굿모닝 이스터에그 뜨는 거 보러 왔어",
     images: [],
     comments: []
   },
@@ -328,7 +328,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M36ien9ud",
     originalText: "谁做的 怎么是这样",
-    translatedText: "누가 만들었지 왜 이래",
+    translatedText: "누가 만들었어 왜 이래",
     images: [],
     comments: []
   },
@@ -364,7 +364,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M36kfjsBn",
     originalText: "期待下一次见面",
-    translatedText: "다음에 또 만날 수 있길 기대하자",
+    translatedText: "다음에 또 만날 날을 기대하자",
     images: [],
     comments: []
   },
@@ -373,7 +373,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M36kDw4bv",
     originalText: "今天起太早有点困",
-    translatedText: "오늘 일찍 일어나서 그런가 좀 졸려",
+    translatedText: "오늘 일찍 일어나서 그런가 좀 졸리네",
     images: [],
     comments: []
   },
@@ -409,7 +409,7 @@ const posts_202208 = [
     date: "2022-08-28",
     weiboUrl: "https://weibo.com/5994946077/M36lN2QAF",
     originalText: "我会再来的",
-    translatedText: "또 올게",
+    translatedText: "또 놀러 올게",
     images: [],
     comments: []
   },
