@@ -942,14 +942,6 @@ const posts_202412 = [
           originalText: "甜的",
           translatedText: "단맛"
         }
-      },
-      {
-        id: 24122701,
-        username: "周翊然Tz",
-        originalText: "先下线了 下次见",
-        translatedText: "이만 나가볼게 담에 보자",
-        images: [],
-        actorReply: null
       }
     ]
   },
@@ -1291,7 +1283,7 @@ const posts_202412 = [
       }
     ]
   },
-  {
+ {
     id: 241244,
     date: "2024-12-22",
     weiboUrl: "",
@@ -1306,6 +1298,14 @@ const posts_202412 = [
         username: "周翊然Tz",
         originalText: "你好薯条大王",
         translatedText: "안녕하세요 감자튀김 대왕님",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122701,
+        username: "周翊然Tz",
+        originalText: "先下线了 下次见",
+        translatedText: "이만 나가볼게 담에 보자",
         images: [],
         actorReply: null
       }
