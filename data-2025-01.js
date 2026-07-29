@@ -292,7 +292,7 @@ const posts_202501 = [
         images: ["images/2501-tz-sticker-5.jpg"],
         actorReply: {
           originalText: "images/2501-tz-sticker-8.gif",
-          translatedText: "images/2501-tz-sticker-5.gif"
+          translatedText: "images/2501-tz-sticker-8.gif"
       }
       },
       {
