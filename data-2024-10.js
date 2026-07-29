@@ -222,7 +222,7 @@ const posts_202410 = [
     authorAvatar: "🥣",
     originalText: "终于来了！然然看，实习空闲去逛展看见的，一眼就觉得是你和法拉利的坐骑",
     translatedText: "드디어 왔구나! 익연아 봐봐, 인턴 휴가 기간에 전시 구경 갔다가 봤는데, 딱 보자마자 너랑 페라리가 탈 것 같다는 생각이 들었어",
-    note: "원문은 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -243,7 +243,7 @@ const posts_202410 = [
     authorAvatar: "🥣",
     originalText: "然子哥！给我考研加油吧！每天学到头秃，只有五十多天就要考啦！",
     translatedText: "익연오빠! 대학원 시험 응원해줘! 매일 공부하느라 대머리 될 것 같아, 50일 조금 넘게 남았당!",
-    note: "원문은 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -344,14 +344,14 @@ const posts_202410 = [
     authorAvatar: "🥣",
     originalText: "我这下雨了 然后我用上了自己画的伞",
     translatedText: "비 오길래 내가 직접 그린 우산 꺼냈어",
-    note: "원문은 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
         id: 211301,
         username: "周翊然Tz",
         originalText: "你的雨天是蓝色的",
-        translatedText: "너한테 비 오는 날은 파란색이네",
+        translatedText: "너한테 비 오는 날은 파란색이겠네",
         images: [],
         actorReply: null
       }
@@ -384,14 +384,14 @@ const posts_202410 = [
     authorName: "Mennnxg",
     authorAvatar: "🥣",
     originalText: "下次见！",
-    translatedText: "다음에 봐!",
+    translatedText: "담에 봐!",
     images: [],
     comments: [
       {
         id: 211501,
         username: "周翊然Tz",
         originalText: "下次见",
-        translatedText: "다음에 보자",
+        translatedText: "담에 보자",
         images: [],
         actorReply: null
       }
@@ -405,7 +405,7 @@ const posts_202410 = [
     authorAvatar: "🥣",
     originalText: "今天画的色彩咋样🤫🤫 还有39天联考 可以祝我联考顺利嘛 回我开心一辈子",
     translatedText: "오늘 그린 색감 어때?🤫🤫 실기 연합고사까지 39일 남았는데 연합고사 잘 보게 빌어줄 수 있어? 답장해주면 평생 행복할 거야",
-    note: "원문은 동영상",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
