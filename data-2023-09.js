@@ -4,7 +4,7 @@ const posts_202309 = [
     date: "2023-09-08",
     weiboUrl: "https://weibo.com/5994946077/Nio6RABRb",
     originalText: "🌧️大家注意安全 都要平平安安的",
-    translatedText: "🌧️다들 다치지않게 조심해",
+    translatedText: "🌧️다들 다치지 않게 조심해 다들 무슨 일 없게 조심해야 돼",
     images: [],
     comments: []
   },
@@ -40,13 +40,13 @@ const posts_202309 = [
         originalText: "你到了才能开局",
         translatedText: "네가 와야 시작하지",
         images: ["images/2309-hotpot1.jpg"],
-        actorReply: { originalText: "🤔", translatedText: "🤔" }
+        actorReply: { originalText: "[并不简单]", translatedText: "[并不简单]" }
       },
       {
         id: 80402,
         username: "要吃就是白米饭",
         originalText: "在吃着呢",
-        translatedText: "먹는 중이야",
+        translatedText: "지금 한창 먹는 중이야",
         images: ["images/2309-ramen.jpg"],
         actorReply: { originalText: "看着不错", translatedText: "맛있어 보이는데" }
       }
@@ -57,7 +57,7 @@ const posts_202309 = [
     date: "2023-09-22",
     weiboUrl: "https://weibo.com/5994946077/Nkv4ZnjbR",
     originalText: "福建还挺热",
-    translatedText: "푸젠은 아직도 꽤 더워",
+    translatedText: "푸젠은 아직도 되게 더워",
     images: [],
     comments: []
   },
@@ -68,14 +68,14 @@ const posts_202309 = [
     authorName: "饺子不想练琴",
     authorAvatar: "🥣",
     originalText: "给你看一家三口 希望你能看到😭",
-    translatedText: "세 식구 그림 보여줄게 네가 봐줬으면😭",
+    translatedText: "너 보여주려고 그린 우리 세 식구 그림이야 꼭 봐줬으면😭",
     images: ["images/2309-cat-drawing.jpg"],
     comments: [
       {
         id: 80601,
         username: "周翊然Tz",
         originalText: "你画的吗",
-        translatedText: "네가 그린 거야?",
+        translatedText: "너가 직접 그린 거야?",
         images: [],
         actorReply: null
       }
@@ -86,7 +86,7 @@ const posts_202309 = [
     date: "2023-09-22",
     weiboUrl: "https://weibo.com/5994946077/Nkv5BzRVq",
     originalText: "大家还是要注意安全",
-    translatedText: "그래도 다들 꼭 조심해야 돼",
+    translatedText: "그래도 다들 다치지 않게 꼭 조심해야 돼",
     images: [],
     comments: []
   },
@@ -95,7 +95,7 @@ const posts_202309 = [
     date: "2023-09-22",
     weiboUrl: "https://weibo.com/5994946077/Nkv5K81jo",
     originalText: "见面的机会还有很多",
-    translatedText: "만날 기회는 앞으로도 많으니까",
+    translatedText: "우리 만날 기회는 앞으로도 많으니까",
     images: [],
     comments: []
   },
@@ -105,8 +105,8 @@ const posts_202309 = [
     weiboUrl: "https://weibo.com/2874109744/Nkv5K96RW",
     authorName: "邂逅翊夏_",
     authorAvatar: "🥣",
-    originalText: "不看看假面腰带吗 宝🥲",
-    translatedText: "가면라이더 벨트인데 안 봐줄 거야?🥲",
+    originalText: "不看看假面腰带吗 宝[可怜]",
+    translatedText: "가면라이더 벨트인데 안 봐줄 거야?[可怜]",
     images: ["images/2309-ultraman-belt.jpg"],
     comments: [
       {
@@ -124,7 +124,7 @@ const posts_202309 = [
     date: "2023-09-22",
     weiboUrl: "https://weibo.com/5994946077/Nkv6yy2Mz",
     originalText: "溜了溜了",
-    translatedText: "ㅌㅌ",
+    translatedText: "ㅌㅌㅌ",
     images: [],
     comments: []
   },
