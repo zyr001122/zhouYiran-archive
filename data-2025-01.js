@@ -163,7 +163,7 @@ const posts_202501 = [
         username: "拜托了哥哥酱",
         originalText: "我的心好痛",
         translatedText: "마음이 너무 아파",
-        images: ["2501-quuu"],
+        images: ["images/2501-quuu.jpg"],
         actorReply: {
           originalText: "images/2501-quuu-reply.jpg",
           translatedText: "images/2501-quuu-reply.jpg"
@@ -289,7 +289,7 @@ const posts_202501 = [
         username: "小周喜欢过秋天",
         originalText: "今天是什么顺序翻牌？能翻到我不！",
         translatedText: "오늘은 무슨 순서로 답글 달아주는 거야? 나도 받을 수 없을까!",
-        images: ["2501-tz-sticker-5"],
+        images: ["images/2501-tz-sticker-5.jpg"],
         actorReply: {
           originalText: "images/2501-tz-sticker-8.gif",
           translatedText: "images/2501-tz-sticker-5.gif"
