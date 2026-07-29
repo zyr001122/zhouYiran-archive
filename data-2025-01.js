@@ -39,7 +39,7 @@ const posts_202501 = [
         id: 25010105,
         username: "慕翊婷",
         originalText: "晚上好呀 开完赛车感觉如何呀[doge][doge]",
-        translatedText: "좋은 저녁이넹 레이싱 하니까 기분 어땠어?[doge][doge]",
+        translatedText: "안녀엉 레이싱 하니까 기분 어땠어?[doge][doge]",
         images: [],
         actorReply: {
           originalText: "不错",
@@ -144,7 +144,7 @@ const posts_202501 = [
         id: 25010123,
         username: "我衹是喜歡一頭可愛豬又有什麼錯",
         originalText: "看看这是啥",
-        translatedText: "이거 뭐게",
+        translatedText: "얘 뭐게",
         images: [
           "images/2501-thinking-photo.jpg"
         ],
@@ -243,7 +243,7 @@ const posts_202501 = [
         images: ["images/2501-kamen-rider.jpg"],
         actorReply: {
           originalText: "给555的",
-          translatedText: "555한테 주는 답"
+          translatedText: "555한테 답"
         }
       },
       {
