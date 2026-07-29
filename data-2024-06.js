@@ -191,7 +191,7 @@ const posts_202406 = [
     authorAvatar: "🥣",
     originalText: "阴沉沉的下雨播报 本月气象台显示 大雨准备转晴 再也不用过着湿漉漉的天气啦",
     translatedText: "침침한 비 예보 이번 달 기상대 발표에 따르면 큰 비가 곧 개인다고 해 이제 더 이상 축축한 날씨 속에 살지 않아도 돼",
-    note: "원문 사진 참고"
+    note: "원문 사진 참고",
     images: [],
     comments: [
       {
@@ -272,7 +272,7 @@ const posts_202406 = [
     authorName: "魚肉蛋黄酥o_",
     authorAvatar: "🥣",
     originalText: "老乡 你看法拉利开\"法拉利\"哈哈哈哈",
-    translatedText: "고향 사람아 페라리가 \"페라리\" 타는 거 봐ㅋㅋㅋㅋ",
+    translatedText: "페라리가 \"페라리\" 타는 거 보실 분ㅋㅋㅋㅋ",
     images: ["images/2406-ferrari.jpg"],
     comments: [
       {
