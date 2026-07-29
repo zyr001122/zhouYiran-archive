@@ -201,7 +201,7 @@ const posts_202502 = [
         id: 25020132,
         username: "Yun_kookie",
         originalText: "我有时间 理我理我",
-        translatedText: "나 시간 있어 나 좀 봐줘 봐줘",
+        translatedText: "시간 있으면 나 좀 봐줘",
         images: [
           "images/2502-notice-me.jpg"
         ],
@@ -541,9 +541,7 @@ const posts_202502 = [
         username: "A椰卷小然",
         originalText: "你是不是很忙",
         translatedText: "너 많이 바쁘구나",
-        images: [
-          "images/2502-0222-1617.jpg"
-        ],
+        images: [],
         actorReply: {
           originalText: "没有啊",
           translatedText: "아닌데 안 바빠"
