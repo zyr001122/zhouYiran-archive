@@ -46,6 +46,7 @@ const WEIBO_EMOTICON_MAP = {
   '收到': 'get',
   '哇': 'wow',
   '甜': 'tian',
+  '融化': 'melt',
 };
 
 /**
