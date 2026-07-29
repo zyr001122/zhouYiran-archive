@@ -22,15 +22,7 @@ const posts_202505 = [
         id: 25050201,
         username: "周翊然Tz",
         originalText: "等等要上台了 感觉比生日会还紧张[裂开]",
-        translatedText: "이제 곧 무대 올라가 생일파티보다 더 떨려[裂开]",
-        images: [],
-        actorReply: null
-      },
-      {
-        id: 25050202,
-        username: "周翊然Tz",
-        originalText: "笑死 你们真的把 法拉利和茅台玩坏了",
-        translatedText: "웃겨 죽겠네 너네 진짜 페라리랑 마오타이 갖고 놀다가 망가뜨렸어",
+        translatedText: "이제 곧 무대 올라가는데 생일파티보다 더 떨려[裂开]",
         images: [],
         actorReply: null
       },
@@ -38,7 +30,7 @@ const posts_202505 = [
         id: 25050203,
         username: "周翊然Tz",
         originalText: "今天拍的",
-        translatedText: "오늘 찍은 거",
+        translatedText: "오늘 찍은 거야",
         images: ["images/2505-today-photo.jpg"],
         actorReply: null
       },
@@ -46,7 +38,7 @@ const posts_202505 = [
         id: 25050204,
         username: "樱花味的cherry",
         originalText: "这个翅膀很帅诶",
-        translatedText: "이 날개 완전 멋지다",
+        translatedText: "이 날개 진짜 간지 난다",
         images: ["images/2505-wings.jpg"],
         actorReply: {
           originalText: "[doge]",
@@ -57,18 +49,18 @@ const posts_202505 = [
         id: 25050205,
         username: "祈川十里春",
         originalText: "小然，想知道羊肉抓饭里的羊肉膻味会很重嘛",
-        translatedText: "익연아, 양고기 필라프에 들어간 양고기 누린내 많이 나?",
+        translatedText: "익연아, 양고기 볶음밥에 들어간 양고기 누린내 많이 나?",
         images: ["images/2505-pilaf.jpg"],
         actorReply: {
           originalText: "不会 新疆的真的没有一点膻味！",
-          translatedText: "안 나 신장 건 진짜 하나도 안 누려!"
+          translatedText: "안 나 신장 건 진짜 누린내 하나도 안 나!"
         }
       },
       {
         id: 25050206,
         username: "染然然然RY",
         originalText: "宝宝帮我想一个很适配的文案！！",
-        translatedText: "자기야 이거 딱 어울리는 캡션 하나만 생각해줘!!",
+        translatedText: "익연아 이거에 어울리는 캡션 하나만 생각해줘!!",
         images: ["images/2505-caption-request.jpg"],
         actorReply: {
           originalText: "弹琴的人",
@@ -90,7 +82,7 @@ const posts_202505 = [
         id: 25050208,
         username: "我真的真的好困_",
         originalText: "周翊然！我报了男生女生向前冲, 但是他们没有同意, 说我不符合条件。后来我去问他们, 原来问题在于,我不是男生也不是女生,我是为你而生！！！",
-        translatedText: "주익연! 나 남녀 커플 게임쇼(男生女生向前冲) 신청했는데, 걔네가 안 된다 그러더라, 자격 안 된다고. 그래서 나중에 물어보러 갔는데, 알고 보니까 문제는, 나는 남자도 아니고 여자도 아니고, 난 너를 위해 태어난 거였어!!!",
+        translatedText: "주익연! 나 커플 예능 신청했는데, 걔네가 안 된다 그러더라, 자격 미달이라고. 그래서 나중에 물어보러 갔는데, 알고 보니까 내가 남자도 아니고 여자도 아니고 너를 위해 태어난 존재라서 그렇대!!!",
         images: [],
         actorReply: {
           originalText: "…..",
@@ -101,40 +93,48 @@ const posts_202505 = [
         id: 25050209,
         username: "鸡锁骨大小姐想让我告白",
         originalText: "哥哥欧巴今天的耳返是不是生日会那个呀 嘻嘻嘻🤫🤫🤫",
-        translatedText: "오빠 오늘 인이어 생일파티 때 그거 맞지? 히히히🤫🤫🤫",
+        translatedText: "오빠 오늘 인이어 생일파티 때 쓰던 거 맞지? ㅎㅎㅎ🤫🤫🤫",
         images: ["images/2505-in-ear-monitor.jpg"],
         actorReply: {
           originalText: "对的！",
-          translatedText: "맞아!"
+          translatedText: "정답!"
         }
       },
       {
         id: 25050210,
         username: "C733-Tz",
         originalText: "这个茅台跑出去 你是不是找很久[兔子]",
-        translatedText: "이 마오타이 뛰쳐나가면 자기 한참 찾아다녔지?[兔子]",
+        translatedText: "마오타이 뛰쳐나가서 한참 찾아다녔겠다 그치[兔子]",
         images: ["images/2505-moutai-run.jpg"],
         actorReply: {
           originalText: "主要是爱自由[裂开]",
-          translatedText: "그냥 자유를 사랑하는 거지[裂开]"
+          translatedText: "워낙 자유로운 영혼이셔[裂开]"
         }
+        {
+        id: 25050202,
+        username: "周翊然Tz",
+        originalText: "笑死 你们真的把 法拉利和茅台玩坏了",
+        translatedText: "진짜 미치겠다 너네 진짜 페라리랑 마오타이 가지고 아주 뽕을 뽑네",
+        images: [],
+        actorReply: null
+        },
       },
       {
         id: 25050211,
         username: "芝士椰啵脆",
         originalText: "宝宝 录制综艺你觉得小法和小茅谁表现的更好？",
-        translatedText: "자기야 예능 찍을 때 파라(法)랑 마오(茅) 중에 누가 더 잘한 것 같아?",
+        translatedText: "익연아 예능 찍을 때 페라리랑 마오타이 중에 누가 더 잘하는 것 같아?",
         images: ["images/2505-fa-vs-mao.jpg"],
         actorReply: {
           originalText: "今天才给茅台捡完💩",
-          translatedText: "오늘에서야 마오타이 응가 다 치웠어💩"
+          translatedText: "오늘도 마오타이 똥 치우다 왔어💩"
         }
       },
       {
         id: 25050212,
         username: "是茵不是焉吖",
         originalText: "然然看！我无意间抬头看到的❤️形状的云[憧憬][憧憬]",
-        translatedText: "익연아 봐봐! 우연히 고개 들었다가 본 하트❤️ 모양 구름이야[憧憬][憧憬]",
+        translatedText: "익연아 봐봐! 우연히 고개 들었다가 발견한 하트❤️ 모양 구름이야[憧憬][憧憬]",
         images: ["images/2505-heart-cloud.jpg"],
         actorReply: {
           originalText: "好看！",
@@ -145,7 +145,7 @@ const posts_202505 = [
         id: 25050213,
         username: "yi翊口小周",
         originalText: "回复我一个符号也行",
-        translatedText: "기호 하나로만 답장해줘도 돼",
+        translatedText: "이모티콘 하나만이라도 달아줘",
         images: ["images/2505-just-a-symbol.jpg"],
         actorReply: {
           originalText: "👍",
@@ -156,18 +156,18 @@ const posts_202505 = [
         id: 25050214,
         username: "C733-Tz",
         originalText: "我们今天运动会 你看这是什么[兔子]",
-        translatedText: "우리 오늘 운동회인데 이거 봐, 이게 뭐게?[兔子]",
+        translatedText: "우리 오늘 운동회인데 이거 봐 이게 뭐게?[兔子]",
         images: ["images/2505-sports-day.jpg"],
         actorReply: {
           originalText: "卡面来打",
-          translatedText: "카드로 붙자"
+          translatedText: "가면라이더"
         }
       },
       {
         id: 25050215,
         username: "甜丸泡奶芙Zz_",
         originalText: "宝宝快看～看俺上次打到的车",
-        translatedText: "자기야 빨리 봐봐～ 내가 저번에 뽑은 차 봐봐",
+        translatedText: "익연아 빨리 봐봐～ 내가 저번에 잡은 차야",
         images: ["images/2505-my-car.jpg"],
         actorReply: {
           originalText: "好可爱 哈哈哈哈哈",
@@ -178,7 +178,7 @@ const posts_202505 = [
         id: 25050216,
         username: "噜撸源",
         originalText: "桃花币有多少呀现在[兔子]",
-        translatedText: "지금 타오화 코인 얼마나 있어?[兔子]",
+        translatedText: "지금 도화 코인 얼마나 있어?[兔子]",
         images: [],
         actorReply: {
           originalText: "负的[裂开]",
@@ -189,7 +189,7 @@ const posts_202505 = [
         id: 25050217,
         username: "扁桃体发炎不发言-",
         originalText: "今晚弹钢琴？？？别出错[并不简单]",
-        translatedText: "오늘 밤 피아노 쳐??? 실수하지 마[并不简单]",
+        translatedText: "오늘 밤에 피아노 쳐??? 실수하지말구[并不简单]",
         images: [],
         actorReply: {
           originalText: "保佑吧[裂开]",
@@ -200,22 +200,22 @@ const posts_202505 = [
         id: 25050218,
         username: "燥候22号",
         originalText: "新疆天黑了吗宝",
-        translatedText: "신장은 벌써 어두워졌어 자기야?",
+        translatedText: "익연아 신장은 벌써 해 졌으려나?",
         images: [],
         actorReply: {
           originalText: "还是大太阳呢",
-          translatedText: "아직 쨍쨍해"
+          translatedText: "아직 엄청 쨍쨍해"
         }
       },
       {
         id: 25050219,
         username: "Gardeniae_栀落翊归橙",
         originalText: "我六一要唱谁是你朋友哈哈哈~",
-        translatedText: "나 6월 1일에 누가 니 친구야 부를 거야ㅋㅋㅋ~",
+        translatedText: "나 6월 1일에 谁是你朋友 부를 거다ㅋㅋㅋ~",
         images: [],
         actorReply: {
           originalText: "哈哈哈 能@ 给我看看吗",
-          translatedText: "ㅋㅋㅋ 나 태그해서 보여줄 수 있어?"
+          translatedText: "ㅋㅋㅋ 나 @태그해줄 수 있어?"
         }
       }
     ]
@@ -226,7 +226,7 @@ const posts_202505 = [
     weiboUrl: "https://weibo.com/5994946077/PtTCwm8ea",
     authorName: "周翊然Tz",
     originalText: "收藏了 下次见",
-    translatedText: "저장해놨어 다음에 봐",
+    translatedText: "저장완료 또 보자",
     images: ["images/2505-see-you-next.jpg"],
     comments: []
   }
