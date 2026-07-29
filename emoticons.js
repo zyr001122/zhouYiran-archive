@@ -61,6 +61,8 @@ const WEIBO_EMOTICON_MAP = {
   '好喜欢': 'haoxihuan',
   '送花花': 'songhuahua',
   '期待': 'qidai',
+  '期待': 'qidai',
+  '送花花': 'songhuahua',
 };
 
 /**
