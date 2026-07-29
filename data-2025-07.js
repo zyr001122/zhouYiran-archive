@@ -43,7 +43,7 @@ const posts_202507 = [
         images: ["images/2507-money-god.jpg"],
         actorReply: {
           originalText: "说啥啊",
-          translatedText: "뭘 또 기도까지 할라구"
+          translatedText: "무슨 말 할라구"
         }
       },
       {
