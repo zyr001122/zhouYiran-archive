@@ -3,7 +3,7 @@ const posts_202403 = [
     id: 1401,
     date: "2024-03-05",
     weiboUrl: "https://weibo.com/5994946077/O3Bh1hIkt",
-    originalText: "🎨涂涂画画，记录春天",
+    originalText: "🎨涂涂画画，记录春天 #本周报备#",
     translatedText: "🎨끄적끄적, 기록해 봄",
     images: [
       "images/2403-spring1.jpg",
@@ -22,7 +22,7 @@ const posts_202403 = [
     id: 1402,
     date: "2024-03-14",
     weiboUrl: "https://weibo.com/5994946077/O4YYdwCUu",
-    originalText: "📮🚥🐈",
+    originalText: "📮🚥🐈 #本周报备#",
     translatedText: "",
     images: [
       "images/2403-march14-1.jpg",
@@ -40,7 +40,7 @@ const posts_202403 = [
         id: 140201,
         username: "不知名低像素面包",
         originalText: "听说你喜欢这个？",
-        translatedText: "이거 좋아한다고 들었는데?",
+        translatedText: "이거 좋아한다고 들었는데 맞지?",
         images: ["images/24032-fan1.jpg"],
         actorReply: { originalText: "是谁走漏了风声", translatedText: "누가 소문 냈어" }
       }
@@ -50,8 +50,8 @@ const posts_202403 = [
     id: 14180,
     date: "2024-03-22",
     weiboUrl: "https://weibo.com/5994946077/O6cW29av6",
-    originalText: "来了👽",
-    translatedText: "나 왔어👽",
+    originalText: "来了[奥特曼]",
+    translatedText: "등장[奥特曼]",
     images: [],
     comments: []
   },
@@ -61,15 +61,16 @@ const posts_202403 = [
     weiboUrl: "https://weibo.com/6271092497/O6cW6kC1u",
     authorName: "贝贝爱喝白开水z_",
     authorAvatar: "🥣",
-    originalText: "昨天报名了英语四级考试 小然可不可以祝我一次过🥹🥹🥹",
-    translatedText: "어제 영어 4급 시험 신청했거든 익연이가 나 한 번에 합격할 수 있게 응원해 줄 수 있어?🥹🥹🥹",
+    originalText: "昨天报名了英语四级考试 小然可不可以祝我一次过[可怜][可怜][可怜]",
+    translatedText: "어제 영어 4급 시험 신청했거든 익연이가 나 한 번에 합격할 수 있게 응원해 줄 수 있을까?[可怜][可怜][可怜]",
     images: ["images/2403-fan1.jpg"],
     comments: [
       {
         id: 140301,
         username: "周翊然Tz",
-        originalText: "加油 时王保佑你😏",
-        translatedText: "화이팅 지오(가면라이더)가 지켜줄 거야😏",
+        originalText: "加油 时王保佑你[doge]",
+        translatedText: "화이팅 지오가 지켜줄 거야[doge]",
+        note: "지오 : 가면라이더",
         images: [],
         actorReply: null
       }
@@ -88,8 +89,8 @@ const posts_202403 = [
       {
         id: 140401,
         username: "周翊然Tz",
-        originalText: "成年快乐 小狗超可爱😏",
-        translatedText: "성인 된 거 축하해 강아지 너무 귀엽다😏",
+        originalText: "成年快乐 小狗超可爱",
+        translatedText: "성인 된 거 축하해 강아지 너무 귀엽다[doge]",
         images: [],
         actorReply: null
       }
@@ -102,7 +103,7 @@ const posts_202403 = [
     authorName: "小狗吐司tusi",
     authorAvatar: "🥣",
     originalText: "嘿，bro 理理我呢",
-    translatedText: "헤이, 브로 나 좀 봐줘",
+    translatedText: "헤이, 브로 나 좀 아는 척 좀 해줘",
     images: ["images/2403-bro.jpg"],
     comments: [
       {
@@ -129,7 +130,7 @@ const posts_202403 = [
         id: 140601,
         username: "周翊然Tz",
         originalText: "可以可以 台词都来了是吧",
-        translatedText: "ㅇㅋㅇㅋ 명대사까지 준비했네",
+        translatedText: "ㅇㅋㅇㅋ 명대사까지 준비했으면 인정",
         images: [],
         actorReply: null
       }
@@ -169,7 +170,7 @@ const posts_202403 = [
         id: 140801,
         username: "周翊然Tz",
         originalText: "吃了水煮玉米",
-        translatedText: "옥수수 삶은 거 먹었어",
+        translatedText: "삶은 옥수수 먹었어",
         images: [],
         actorReply: null
       }
@@ -182,14 +183,14 @@ const posts_202403 = [
     authorName: "Y-Congee",
     authorAvatar: "🥣",
     originalText: "看我嘟小狗然然",
-    translatedText: "혀 내밀고 있는 우리 댕댕이 익연이도 봐봐",
+    translatedText: "메롱 하고 있는 우리 댕댕이 익연이도 봐봐",
     images: ["images/2403-chubby-dog.jpg"],
     comments: [
       {
         id: 140901,
         username: "周翊然Tz",
-        originalText: "自带腮红😏",
-        translatedText: "볼터치도 했네😏",
+        originalText: "自带腮红[doge]",
+        translatedText: "볼터치까지 했네[doge]",
         images: [],
         actorReply: null
       }
@@ -228,8 +229,8 @@ const posts_202403 = [
       {
         id: 141101,
         username: "周翊然Tz",
-        originalText: "坐车😏",
-        translatedText: "차 타고 이동 중😏",
+        originalText: "坐车[doge]",
+        translatedText: "차 타고 이동 중[doge]",
         images: [],
         actorReply: null
       }
@@ -241,15 +242,15 @@ const posts_202403 = [
     weiboUrl: "https://weibo.com/5175386555/O6cZbbJc6",
     authorName: "假意或真心-",
     authorAvatar: "🥣",
-    originalText: "小然你看！三月的日出🌅和樱花🌸，还有好好在心理咨询行业深耕学习的我🙋🏻‍♀️",
-    translatedText: "익연아 봐봐! 3월의 일출🌅이랑 벚꽃🌸, 그리고 심리상담 업계에서 열심히 노력하는 나🙋🏻‍♀️",
+    originalText: "小然你看！三月的日出🌅和樱花🌸，还有好好在心理咨询行业深耕学习的我[你好]",
+    translatedText: "익연아 봐봐! 3월의 일출🌅이랑 벚꽃🌸, 그리고 심리상담 업계에서 열심히 노력하는 나🙋🏻‍♀️[你好]",
     images: ["images/2403-cherry.jpg"],
     comments: [
       {
         id: 141201,
         username: "周翊然Tz",
         originalText: "樱花超美",
-        translatedText: "벚꽃 엄청 예쁘다",
+        translatedText: "벚꽃 너무 예쁘다",
         images: [],
         actorReply: null
       }
@@ -261,15 +262,15 @@ const posts_202403 = [
     weiboUrl: "https://weibo.com/7508257299/O6cZA3htJ",
     authorName: "轮到这季幸福了Tz",
     authorAvatar: "🥣",
-    originalText: "我们这边感觉最近天气无常，你那边呢？要照顾好自己别感冒啦💝",
-    translatedText: "우리 동네는 요즘 날씨가 엄청 변덕스러운데, 네가 있는 곳은 어때? 감기 걸리지 않게 몸조리 잘해💝",
+    originalText: "我们这边感觉最近天气无常，你那边呢？要照顾好自己别感冒啦[小心心]",
+    translatedText: "우리 동네는 요즘 날씨가 너무 변덕스러운데, 네가 있는 곳은 어때? 감기 걸리지 않게 몸조리 잘해[小心心]",
     images: ["images/2403-weather.jpg"],
     comments: [
       {
         id: 141301,
         username: "周翊然Tz",
         originalText: "我这边最近出大太阳 还不错",
-        translatedText: "여기는 요즘 햇볕이 쨍쨍해 괜찮아",
+        translatedText: "여기는 요즘 햇볕이 쨍쨍해서 괜찮아",
         images: [],
         actorReply: null
       }
@@ -289,7 +290,7 @@ const posts_202403 = [
         id: 141401,
         username: "周翊然Tz",
         originalText: "你吃的啥",
-        translatedText: "뭐 먹고 있는 거야?",
+        translatedText: "뭘 먹고 있는 거야?",
         images: [],
         actorReply: null
       }
@@ -309,7 +310,7 @@ const posts_202403 = [
         id: 141501,
         username: "周翊然Tz",
         originalText: "炒饭看起来流口水了",
-        translatedText: "볶음밥 보니까 침 나온다",
+        translatedText: "볶음밥 보니까 침 나와",
         images: [],
         actorReply: null
       }
@@ -322,7 +323,7 @@ const posts_202403 = [
     authorName: "我不吃饭abb",
     authorAvatar: "🥣",
     originalText: "啊啊啊啊啊老公你看这个狗的尾巴酷不酷",
-    translatedText: "아ㅏㅏㅏㅏ 자기야 강아지 꼬리 멋있지 않아?",
+    translatedText: "아ㅏㅏㅏㅏ 자기야 강아지 꼬리 좀 봐봐 힙하지 않아?",
     images: ["images/2403-dog-tail.jpg"],
     comments: [
       {
@@ -348,8 +349,8 @@ const posts_202403 = [
       {
         id: 141701,
         username: "周翊然Tz",
-        originalText: "谢谢你！ 不用过分焦虑 好事儿都会来的 剩下的只要自己努力 问心无愧就好😘",
-        translatedText: "고마워! 너무 불안해하지 마 좋은 일들은 다 찾아오기 마련이니까 나머지는 그냥 스스로 열심히 하고 양심에 부끄럽지만 않으면 돼😘",
+        originalText: "谢谢你！ 不用过分焦虑 好事儿都会来的 剩下的只要自己努力 问心无愧就好[爱橙]",
+        translatedText: "고마워! 너무 불안해하지 마 좋은 일들은 다 때가 되면 찾아올 테니까 남은 건 그저 스스로 열심히 하고 자신에게 부끄럽지 않으면 그걸로 충분해[爱橙]",
         images: [],
         actorReply: null
       }
@@ -360,7 +361,7 @@ const posts_202403 = [
     date: "2024-03-22",
     weiboUrl: "https://weibo.com/5994946077/O6cW29av6",
     originalText: "大家都幸福地度过余下的三月吧 天天开心 赶飞机去了 下次见👋🏻",
-    translatedText: "다들 남은 3월도 행복하게 매일 즐겁게 보내 난 비행기 타러 가야 해 다음에 봐👋🏻",
+    translatedText: "다들 남은 3월도 행복하고 매일 매일 즐겁게 보내길 난 비행기 타러 가야 해 다음에 봐👋🏻",
     images: [],
     comments: []
   },
@@ -368,7 +369,7 @@ const posts_202403 = [
     id: 1419,
     date: "2024-03-28",
     weiboUrl: "https://weibo.com/5994946077/O78LhdLrG",
-    originalText: "吃了火锅看了海",
+    originalText: "吃了火锅看了海 #本周报备#​​​",
     translatedText: "훠궈 먹고 바다 구경",
     images: [
       "images/2403-mar28-1.jpg",
