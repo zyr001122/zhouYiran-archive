@@ -22,8 +22,8 @@ const posts_202510 = [
       {
         id: 25100103,
         username: "咬一口脆皮年糕_",
-        originalText: "哥哥 给你分享我做的立体纸艺[可爱]",
-        translatedText: "오빠 내가 만든 입체 종이공예 보여줄게[可爱]",
+        originalText: "哥哥 给你分享我做的立体纸艺😄",
+        translatedText: "오빠 내가 만든 입체 종이공예 보여줄게😄",
         images: ["images/2510-paper-craft.jpg"],
         actorReply: {
           originalText: "好厉害",
