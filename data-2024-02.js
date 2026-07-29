@@ -89,8 +89,8 @@ const posts_202402 = [
       {
         id: 130503,
         username: "半颗小番茄",
-        originalText: "给你看楼下不知名的小丑人😆",
-        translatedText: "우리 건물 아래층에 있는 이상한 사람 보여줄게😆",
+        originalText: "给你看楼下不知名的小丑人[笑哈哈]",
+        translatedText: "우리 건물 아래층에 있는 이상한 사람 보여줄게[笑哈哈]",
         images: ["images/2402-clown.jpg"],
         actorReply: { originalText: "[思考]挺man的", translatedText: "[思考]상남잔데" }
       },
