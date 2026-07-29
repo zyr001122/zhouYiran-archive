@@ -5,7 +5,7 @@ const posts_202502 = [
     weiboUrl: "https://weibo.com/5994946077/PegtwetoV",
     authorName: "周翊然Tz",
     originalText: "hello 节日快乐大家！",
-    translatedText: "hello 다들 즐거운 원소절 보내!",
+    translatedText: "hello 즐거운 원소절 보내!",
     images: [],
     comments: [
       {
@@ -20,7 +20,7 @@ const posts_202502 = [
         id: 25020102,
         username: "周翊然Tz",
         originalText: "我这会儿吃饭呢 吃的海鲜火锅",
-        translatedText: "나 지금 밥 먹어 해물 훠궈 먹으려고",
+        translatedText: "나 지금 밥 먹으려구 해물 훠궈 먹을거야",
         images: [],
         actorReply: null
       },
@@ -194,7 +194,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "我来了啊",
-          translatedText: "나 왔잖아"
+          translatedText: "나 왔어ㅓ"
         }
       },
       {
@@ -207,7 +207,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "这个好眼熟 谁家狗",
-          translatedText: "이거 낯익은데 누구 강아지야"
+          translatedText: "이거 어디서 많이 본 강아진데 누구 강아지야"
         }
       },
       {
@@ -227,7 +227,7 @@ const posts_202502 = [
         id: 25020103,
         username: "周翊然Tz",
         originalText: "我上菜了 该吃饭了 节日快乐🌹🌹🌹",
-        translatedText: "음식 나왔다 다들 밥 얼른 먹고 행복한 원소절 보내🌹🌹🌹",
+        translatedText: "음식 나왔다 다들 얼른 밥 즐거운 원소절 보내🌹🌹🌹",
         images: [],
         actorReply: null
       }
@@ -246,7 +246,7 @@ const posts_202502 = [
         id: 25020201,
         username: "周翊然Tz",
         originalText: "过完年 胖了9斤 …. 最近一口都不敢吃了",
-        translatedText: "설 지나고 나서 4.5kg 쪘어…. 요즘 한 입도 못 먹겠어",
+        translatedText: "설 지나고 나서 4.5kg 쪘다…. 요즘 한 입도 못 먹겠어",
         images: [],
         actorReply: null
       },
@@ -390,7 +390,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "我就学了六天 提升空间还很大 [doge]",
-          translatedText: "겨우 6일 배웠는데 아직 상승할 일만 남았어[doge]"
+          translatedText: "겨우 6일 배웠는데 이제 늘 일만 남았다[doge]"
         }
       },
       {
@@ -429,7 +429,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "喜欢！ 哈哈哈哈哈 画的好好！",
-          translatedText: "좋아! ㅋㅋㅋㅋㅋ 그림 진짜 잘 그렸다!"
+          translatedText: "좋아! ㅋㅋㅋㅋㅋ 그림 진짜 잘 그렸네!"
         }
       },
       {
@@ -621,14 +621,14 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "回家里被窝里不好吗",
-          translatedText: "집에 가서 이불 속에 있는 게 낫지 않아?"
+          translatedText: "집 가서 이불 속에 있는 게 낫지 않겠어?"
         }
       },
       {
         id: 25020202,
         username: "周翊然Tz",
         originalText: "赶上了 落日航空",
-        translatedText: "막차 탔다, 노을 지는 공항✈️",
+        translatedText: "겨우 탔다, 노을 지는 공항✈️",
         images: [
           "images/2502-sunset-flight.jpg"
         ],
@@ -638,7 +638,7 @@ const posts_202502 = [
         id: 25020203,
         username: "周翊然Tz",
         originalText: "咳咳 我要准备起飞了 下次见！",
-        translatedText: "크흠 나 이제 이륙 준비해야 돼 다음에 봐!",
+        translatedText: "크흠 나 이제 이륙 준비해야 돼 담에 봐!",
         images: [],
         actorReply: null
       }
