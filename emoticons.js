@@ -48,6 +48,7 @@ const WEIBO_EMOTICON_MAP = {
   '甜': 'tian',
   '融化': 'melt',
   '笑哈哈': 'laugh_mobile',
+  '你好': 'hello_mobile',
 };
 
 /**
