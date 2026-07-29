@@ -45,6 +45,7 @@ const WEIBO_EMOTICON_MAP = {
   '2025': '2025',
   '收到': 'get',
   '哇': 'wow',
+  '甜': 'tian',
 };
 
 /**
