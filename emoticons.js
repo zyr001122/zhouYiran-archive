@@ -44,6 +44,7 @@ const WEIBO_EMOTICON_MAP = {
   '开学季': 'kaixueji',
   '2025': '2025',
   '收到': 'get',
+  '哇': 'wow',
 };
 
 /**
