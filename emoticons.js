@@ -53,6 +53,7 @@ const WEIBO_EMOTICON_MAP = {
   '老师': 'teacher_mobile',
   'fighting': 'fighting_mobile',
   '笑哭': 'laughcry_mobile',
+  '淡淡的': 'dandande',
 };
 
 /**
