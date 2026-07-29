@@ -414,8 +414,8 @@ const posts_202412 = [
       {
         id: 24122007,
         username: "草莓云朵kitty_",
-        originalText: "然然，我明天生日，可以祝我生日快乐吗",
-        translatedText: "익연아, 나 내일 생일인데 생일 축하해줄 수 있어?",
+        originalText: "然然，我明天生日，可以祝我生日快乐吗[爱慕]",
+        translatedText: "익연아, 나 내일 생일인데 생일 축하해줄 수 있어?[爱慕]",
         images: ["images/2412-birthday1.jpg"],
         actorReply: null
       },
@@ -590,8 +590,8 @@ const posts_202412 = [
       {
         id: 24122029,
         username: "Yirrrraan",
-        originalText: "宝宝这是你的小巧思对吗[兔子]",
-        translatedText: "자기야 이거 너의 작은 아이디어 맞지?[兔子]",
+        originalText: "宝宝这是你的小巧思对吗[兔子][爱慕]",
+        translatedText: "자기야 이거 너의 작은 아이디어 맞지?[兔子][爱慕]",
         images: ["images/2412-craft.jpg"],
         actorReply: null
       },
@@ -782,8 +782,8 @@ const posts_202412 = [
       {
         id: 24122053,
         username: "交换涟漪io",
-        originalText: "最近在听什么歌？",
-        translatedText: "요즘 무슨 노래 듣고 있어?",
+        originalText: "最近在听什么歌？[爱慕]",
+        translatedText: "요즘 무슨 노래 듣고 있어?[爱慕]",
         images: [],
         actorReply: null
       },
@@ -888,6 +888,591 @@ const posts_202412 = [
         username: "周翊然Tz",
         originalText: "…..",
         translatedText: "…..",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241221,
+    date: "2024-12-19",
+    weiboUrl: "",
+    originalText: "上来看看",
+    translatedText: "올라와서 좀 봤어",
+    images: [],
+    comments: [
+      {
+        id: 24122101,
+        username: "周翊然Tz",
+        originalText: "先下线了 下次见😬",
+        translatedText: "이만 나갈게 다음에 봐😬",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122102,
+        username: "烦恼豆沙包z",
+        originalText: "今中午吃的火锅[爱慕]",
+        translatedText: "오늘 점심에 먹은 훠궈[爱慕]",
+        images: ["images/2412-hotpot2.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24122103,
+        username: "周翊然Tz",
+        originalText: "每天都有人在吃火锅",
+        translatedText: "맨날 누가 훠궈 먹고 있네",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122104,
+        username: "小盈油炸地球",
+        originalText: "想吃吗宝宝",
+        translatedText: "먹고 싶어 자기야",
+        images: ["images/2412-craving.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24122105,
+        username: "周翊然Tz",
+        originalText: "还有烤肉",
+        translatedText: "고기도 있어",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241222,
+    date: "2024-12-19",
+    weiboUrl: "",
+    authorName: "1ikeey",
+    authorAvatar: "🥣",
+    originalText: "下班了吗老铁",
+    translatedText: "퇴근했어 친구야?",
+    images: [],
+    comments: [
+      {
+        id: 24122201,
+        username: "周翊然Tz",
+        originalText: "还没",
+        translatedText: "아직",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241223,
+    date: "2024-12-19",
+    weiboUrl: "",
+    authorName: "耶耶不拿铁Oo",
+    authorAvatar: "🥣",
+    originalText: "我的新头盔怎么样[开学季]",
+    translatedText: "내 새 헬멧 어때[开学季]",
+    images: ["images/2412-helmet.jpg"],
+    comments: [
+      {
+        id: 24122301,
+        username: "周翊然Tz",
+        originalText: "酷👍🏻",
+        translatedText: "쿨하다👍🏻",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241224,
+    date: "2024-12-19",
+    weiboUrl: "",
+    authorName: "Heliotrope1122",
+    authorAvatar: "🥣",
+    originalText: "我今天生日，可以祝我生日快乐吗？然然",
+    translatedText: "나 오늘 생일인데 생일 축하해줄 수 있어? 익연아",
+    images: [],
+    comments: [
+      {
+        id: 24122401,
+        username: "周翊然Tz",
+        originalText: "生日快乐",
+        translatedText: "생일 축하해",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241225,
+    date: "2024-12-19",
+    weiboUrl: "",
+    authorName: "洋芋不吃土豆_",
+    authorAvatar: "🥣",
+    originalText: "正在做陶艺得我 也腾出一只手来看看",
+    translatedText: "도예 하다가 손 하나 비워서 봐봐",
+    note: "📹 원문 동영상",
+    images: [],
+    comments: [
+      {
+        id: 24122501,
+        username: "周翊然Tz",
+        originalText: "这是水杯吗",
+        translatedText: "이거 물컵이야?",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241226,
+    date: "2024-12-19",
+    weiboUrl: "",
+    authorName: "小猫椰绒",
+    authorAvatar: "🥣",
+    originalText: "我到史莱克学院了，怎么没看见你啊三哥[疑问]",
+    translatedText: "나 슬레이크 학원 왔는데 왜 삼형이 안 보여[疑问]",
+    images: ["images/2412-slake.jpg"],
+    comments: [
+      {
+        id: 24122601,
+        username: "周翊然Tz",
+        originalText: "三哥最近外出游历中",
+        translatedText: "삼형은 요즘 외출 중이야",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241227,
+    date: "2024-12-22",
+    weiboUrl: "",
+    originalText: "化妆间的网速不太好",
+    translatedText: "분장실 와이파이가 좀 안 좋네",
+    images: [],
+    comments: [
+      {
+        id: 24122701,
+        username: "周翊然Tz",
+        originalText: "先下线了 下次见",
+        translatedText: "이만 나갈게 다음에 봐",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122702,
+        username: "综上所述你最萌",
+        originalText: "还没收工吗？！！",
+        translatedText: "아직 퇴근 안 했어?!!",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122703,
+        username: "周翊然Tz",
+        originalText: "刚上班",
+        translatedText: "이제 막 출근했어",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122704,
+        username: "忙内专家",
+        originalText: "小然给你看我的小猫",
+        translatedText: "익연아 내 고양이 보여줄게",
+        images: ["images/2412-cat4.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24122705,
+        username: "周翊然Tz",
+        originalText: "帽子不错",
+        translatedText: "모자 괜찮네",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122706,
+        username: "走啊摘星星",
+        originalText: "过得这是哪国时间[躺平]",
+        translatedText: "이게 대체 어느 나라 시간이야[躺平]",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122707,
+        username: "周翊然Tz",
+        originalText: "横国",
+        translatedText: "헝뎬국",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24122708,
+        username: "椿雨遇翊",
+        originalText: "猜猜什么味儿的？",
+        translatedText: "무슨 맛인지 맞혀봐?",
+        images: ["images/2412-guess3.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24122709,
+        username: "周翊然Tz",
+        originalText: "甜的",
+        translatedText: "단맛",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241228,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "天气骤然小雨-",
+    authorAvatar: "🥣",
+    originalText: "To：12月的小然\nHello啊 然然 不知什么时候可以见到你，所以写下了这一封电子信\n初三后时间过得很快，每天两点一线，甚至早上起来上学都能看到月亮，晚上还有月亮陪伴着回家 每当我看向月亮时，我常会想到\"你看到会不会是和我同一时间段的月亮\"所以我想把我拍到的月亮分享给你\n每周休息时，总喜欢呆在爷爷的小菜园里，就连小猫也向往着那唯一的一缕阳光（悄悄告诉你，小猫的鼻子中间有一块黑点，所以我们经常喊他喵桑）除此之外，我还会靠零食来鼓励每一天的自己，每天上学前总会用此安慰自己 不知道然然每天坚持下去的动力会不会是我们甜粥呢？\n12月的突击考也终于过去了，虽然着急习惯了学校突击的测试，但每次还是会很紧张，对了这次的考号竟然是你的生日！！！这次考试后我听见老师口中最常说的一句话就是不要放弃自己，其实我也很畏惧前方的位置可如果我不向前，那我就不能跟上你的脚步所以接下来我可能要打一场硬仗啦\n最近朋友推荐了我一本书，感觉真的非常的治愈，想分享给你 有没有觉得里面的主人公小狗长得非常像法拉利呀 就像书上所说的\n\"未来也许依旧不那么清晰\n但这些小而具体的理由正是照亮人生脚步的微弱光点\n指引着我们继续往前走\"\n那么接下来就祝你祝我 事业学业顺顺利利 天天开心 平安喜乐",
+    translatedText: "To: 12월의 익연이에게\nHello 익연아, 언제 만날 수 있을지 몰라서 이렇게 전자편지를 써봐\n중3 되고 나서 시간이 너무 빨리 가. 매일 집이랑 학교만 왔다갔다 하는데, 아침에 등교할 때도 달이 보이고 밤에 집에 갈 때도 달이 같이 있어줘. 달 볼 때마다 '너도 지금 나랑 같은 시간의 달을 보고 있을까' 하는 생각이 들어서, 내가 찍은 달 사진을 너한테 보내주고 싶었어\n매주 쉬는 날엔 할아버지 텃밭에 있는 걸 제일 좋아해, 고양이도 그 한 줄기 햇빛을 그렇게 좋아하더라 (몰래 알려주면, 그 고양이 코에 까만 점이 있어서 우리는 걔를 '냥짱'이라고 불러) 그리고 나는 매일 간식으로 나 자신을 응원하고 있어, 등교하기 전엔 항상 이걸로 스스로를 위로해. 익연이 매일 버티는 힘이 혹시 우리 甜粥 아닐까 궁금해\n12월 깜짝시험도 드디어 끝났어. 학교 깜짝시험엔 이제 익숙해졌다고 생각했는데도 매번 너무 긴장돼. 참, 이번 시험 수험번호가 글쎄 네 생일이었어!!! 이번 시험 끝나고 선생님이 제일 많이 하신 말이 '포기하지 마라'였는데, 사실 나도 앞자리가 너무 무서워. 근데 내가 앞으로 안 나가면 네 발걸음을 못 따라갈 것 같아서, 앞으로 한바탕 힘든 싸움을 해야 할 것 같아\n요즘 친구가 책을 하나 추천해줬는데 진짜 힐링되더라, 너한테도 공유하고 싶어. 그 책 주인공 강아지가 페라리랑 완전 닮지 않았어? 책에 이런 말이 있어\n'미래는 어쩌면 여전히 뚜렷하지 않을지도 모르지만\n이 작고 구체적인 이유들이야말로 인생의 발걸음을 비추는 희미한 빛이 되어\n우리를 계속 앞으로 나아가게 한다'\n그럼 이제 너랑 나 둘 다, 하는 일이랑 공부 다 잘 풀리고 매일 행복하고 평안하길 바랄게",
+    note: "📹 원문 동영상",
+    images: [],
+    comments: [
+      {
+        id: 24122801,
+        username: "周翊然Tz",
+        originalText: "顺顺利利 天天开心",
+        translatedText: "잘 풀리길, 매일 행복하길",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241229,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "一个努力干活还不磨人的小妖精",
+    authorAvatar: "🥣",
+    originalText: "我染头发的时候理发店的猫一直陪着我 超可爱 你也看看",
+    translatedText: "염색할 때 미용실 고양이가 계속 옆에 있어줬어 완전 귀여워 너도 봐봐",
+    note: "📹 원문 동영상",
+    images: [],
+    comments: [
+      {
+        id: 24122901,
+        username: "周翊然Tz",
+        originalText: "这么可爱的猫有两只",
+        translatedText: "이렇게 귀여운 고양이가 두 마리나 있네",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241230,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "我真的只想开机车啊",
+    authorAvatar: "🥣",
+    originalText: "后天考驾照了然然能不能祝我顺利考过",
+    translatedText: "모레 운전면허 시험인데 익연아 합격 기원해줄 수 있어?",
+    images: ["images/2412-license.jpg"],
+    comments: [
+      {
+        id: 24123001,
+        username: "周翊然Tz",
+        originalText: "一定能过",
+        translatedText: "꼭 붙을 거야",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241231,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "吃好睡好天下第一好",
+    authorAvatar: "🥣",
+    originalText: "看我家小狗的新衣服 好看吗",
+    translatedText: "우리 강아지 새 옷 좀 봐 예뻐?",
+    images: ["images/2412-dogclothes.jpg"],
+    comments: [
+      {
+        id: 24123101,
+        username: "周翊然Tz",
+        originalText: "梦回东北了",
+        translatedText: "동북 지방 온 줄",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241232,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "超绝然然",
+    authorAvatar: "🥣",
+    originalText: "看我的架子鼓帅吗？",
+    translatedText: "내 드럼 멋있지?",
+    images: ["images/2412-drum.jpg"],
+    comments: [
+      {
+        id: 24123201,
+        username: "周翊然Tz",
+        originalText: "🆒",
+        translatedText: "🆒",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241233,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "温沅Tz_",
+    authorAvatar: "🥣",
+    originalText: "然然快看我在和你一起变好🥰",
+    translatedText: "익연아 나 너랑 같이 좋아지고 있어 봐봐🥰",
+    images: ["images/2412-together.jpg"],
+    comments: [
+      {
+        id: 24123301,
+        username: "周翊然Tz",
+        originalText: "好厉害",
+        translatedText: "대단하다",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241234,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "牙不吃香菜",
+    authorAvatar: "🥣",
+    originalText: "然然看熊猫",
+    translatedText: "익연아 판다 봐",
+    note: "📹 원문 동영상",
+    images: [],
+    comments: [
+      {
+        id: 24123401,
+        username: "周翊然Tz",
+        originalText: "[疑问]",
+        translatedText: "[疑问]",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241235,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "骤然吐司yr",
+    authorAvatar: "🥣",
+    originalText: "乌龟大军来袭🐢",
+    translatedText: "거북이 대군 습격🐢",
+    images: ["images/2412-turtles.jpg"],
+    comments: [
+      {
+        id: 24123501,
+        username: "周翊然Tz",
+        originalText: "怎么混进一只mini龟",
+        translatedText: "미니 거북이 한 마리가 왜 섞여있어",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241236,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "内娱第一甜弟-",
+    authorAvatar: "🥣",
+    originalText: "法拉利和茅台能这样吗😁",
+    translatedText: "페라리랑 마오타이 이래도 되는거야?😁",
+    images: ["images/2412-pets2.jpg"],
+    comments: [
+      {
+        id: 24123601,
+        username: "周翊然Tz",
+        originalText: "不太行",
+        translatedText: "이건 좀 아니지",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241237,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "Nniu又困了",
+    authorAvatar: "🥣",
+    originalText: "刚拍的铁花✨分享给你",
+    translatedText: "방금 찍은 불꽃 공예✨ 너한테 공유",
+    note: "📹 원문 동영상",
+    images: [],
+    comments: [
+      {
+        id: 24123701,
+        username: "周翊然Tz",
+        originalText: "哇",
+        translatedText: "우와",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241238,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "Aaaa甜粥zyr",
+    authorAvatar: "🥣",
+    originalText: "然然给你分享一个粉色的天",
+    translatedText: "익연아 분홍빛 하늘 공유할게",
+    images: ["images/2412-pinksky.jpg"],
+    comments: [
+      {
+        id: 24123801,
+        username: "周翊然Tz",
+        originalText: "好看",
+        translatedText: "예쁘다",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241239,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "等三十秒月初_",
+    authorAvatar: "🥣",
+    originalText: "给你看看恐龙化石",
+    translatedText: "공룡 화석 좀 보여줄게",
+    images: ["images/2412-fossil.jpg"],
+    comments: [
+      {
+        id: 24123901,
+        username: "周翊然Tz",
+        originalText: "好霸气",
+        translatedText: "완전 위풍당당하다",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241240,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "Starry--YH",
+    authorAvatar: "🥣",
+    originalText: "快看树🎄也穿上了新衣服啦！！！",
+    translatedText: "나무🎄도 새 옷 입었어 봐봐!!!",
+    images: ["images/2412-tree.jpg"],
+    comments: [
+      {
+        id: 24124001,
+        username: "周翊然Tz",
+        originalText: "穿搭品味不错",
+        translatedText: "패션 센스 괜찮은데",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241241,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "予翊一笺诗",
+    authorAvatar: "🥣",
+    originalText: "让法拉利和茅台好好学习一下",
+    translatedText: "페라리랑 마오타이 좀 열심히 공부시켜야겠다",
+    images: ["images/2412-study.jpg"],
+    comments: [
+      {
+        id: 24124101,
+        username: "周翊然Tz",
+        originalText: "法拉利可以 茅台算了",
+        translatedText: "페라리는 되는데 마오타이는 포기",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241242,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "随你ran",
+    authorAvatar: "🥣",
+    originalText: "然然快看！",
+    translatedText: "익연아 얼른 봐!",
+    images: ["images/2412-look2.jpg"],
+    comments: [
+      {
+        id: 24124201,
+        username: "周翊然Tz",
+        originalText: "不冷吗",
+        translatedText: "안 추워?",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241243,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "吃不吃花生酱呢",
+    authorAvatar: "🥣",
+    originalText: "然然 给你看我在西湖旁边看到的松鼠🐿️",
+    translatedText: "익연아 시후 옆에서 본 다람쥐 보여줄게🐿️",
+    images: ["images/2412-squirrel.jpg"],
+    comments: [
+      {
+        id: 24124301,
+        username: "周翊然Tz",
+        originalText: "罗伯特怎么总比我快",
+        translatedText: "로버트는 왜 맨날 나보다 빠르지",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124302,
+        username: "周翊然Tz",
+        originalText: "发型有点酷",
+        translatedText: "헤어스타일 좀 멋있네",
+        images: [],
+        actorReply: null
+      }
+    ]
+  },
+  {
+    id: 241244,
+    date: "2024-12-22",
+    weiboUrl: "",
+    authorName: "_33three_",
+    authorAvatar: "🥣",
+    originalText: "我是薯条大王",
+    translatedText: "나는 감자튀김 대왕",
+    images: ["images/2412-fries.jpg"],
+    comments: [
+      {
+        id: 24124401,
+        username: "周翊然Tz",
+        originalText: "你好薯条大王",
+        translatedText: "안녕 감자튀김 대왕",
         images: [],
         actorReply: null
       }
