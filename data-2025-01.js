@@ -46,7 +46,7 @@ const posts_202501 = [
         images: ["images/2501-new-year-dog.jpg"],
         actorReply: {
           originalText: "什么鬼东西 归我了",
-          translatedText: "이게 뭔데ㅋㅋㅋㅋ 내가 가짐"
+          translatedText: "이게 뭔데ㅋㅋㅋㅋ 일단 저장"
         }
       },
       {
