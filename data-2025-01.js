@@ -128,8 +128,7 @@ const posts_202501 = [
         translatedText: "가자 멍멍아, 주익연은 우리 안중에도 없을 거야👩🏻‍🦯       🦮🐕‍🦺 ",
         images: ["images/2501-guide-dog-photo.jpg"],
         actorReply: {
-          originalText: "images/2501-dogrun.gif",
-          translatedText: "images/22501-dogrun-1.gif"
+          replyImages: ["images/2501-dogrun.gif"]
         }
       },
       {
@@ -165,8 +164,7 @@ const posts_202501 = [
         translatedText: "마음이 너무 아파",
         images: ["images/2501-quuu.jpg"],
         actorReply: {
-          originalText: "images/2501-quuu-reply.jpg",
-          translatedText: "images/2501-quuu-reply.jpg"
+          replyImages: ["images/2501-quuu-reply.jpg"]
         }
       },
       {
@@ -176,8 +174,7 @@ const posts_202501 = [
         translatedText: "오빠 무슨 고민 있어?",
         images: ["images/2501-worried-photo.jpg"],
         actorReply: {
-          originalText: "images/2501-tz-sticker-3.gif",
-          translatedText: "images/2501-tz-sticker-3.gif"
+          replyImages: ["images/2501-tz-sticker-3.gif"]
         }
       },
       {
@@ -187,8 +184,7 @@ const posts_202501 = [
         translatedText: "새해엔 우리 레이서 오빠가 매일레이싱 탈 수 있게 해주세요",
         images: ["images/2501-racing-wish.jpg"],
         actorReply: {
-          originalText: "images/2501-tz-sticker-4.jpg",
-          translatedText: "images/2501-tz-sticker-4.jpg"
+          replyImages: ["images/2501-tz-sticker-4.jpg"]
         }
       },
       {
@@ -291,9 +287,8 @@ const posts_202501 = [
         translatedText: "오늘은 무슨 순서로 답글 달아주는 거야? 나도 받을 수 없을까!",
         images: ["images/2501-tz-sticker-5.jpg"],
         actorReply: {
-          originalText: "images/2501-tz-sticker-8.gif",
-          translatedText: "images/2501-tz-sticker-8.gif"
-      }
+          replyImages: ["images/2501-tz-sticker-8.gif"]
+        }
       },
       {
         id: 25010151,
