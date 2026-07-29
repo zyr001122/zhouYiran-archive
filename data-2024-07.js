@@ -74,8 +74,8 @@ const posts_202407 = [
     weiboUrl: "https://weibo.com/7872504973/OoLvc8mAq",
     authorName: "周_什么然",
     authorAvatar: "🥣",
-    originalText: "宝宝 我给你看我拍的月亮 是不是很好看 (呀好看请回复[来][来][来])",
-    translatedText: "익연아 내가 찍은 달 보여줄게 진짜 예쁘지? (예쁘다고 답글 달아줘[来][来][来])",
+    originalText: "宝宝 我给你看我拍的月亮 是不是很好看 (呀好看请回复[泪][泪][泪])",
+    translatedText: "익연아 내가 찍은 달 보여줄게 진짜 예쁘지? (예쁘다고 답글 달아줘[泪][泪][泪])",
     images: ["images/2407-moon2.jpg"],
     comments: [
       {
@@ -122,7 +122,7 @@ const posts_202407 = [
         id: 180701,
         username: "周翊然Tz",
         originalText: "祝你天天开心",
-        translatedText: "매일 행복하길 바랄게",
+        translatedText: "너가 매일 행복했으면 좋겠다",
         images: [],
         actorReply: null
       }
@@ -142,7 +142,7 @@ const posts_202407 = [
         id: 180801,
         username: "周翊然Tz",
         originalText: "emmm",
-        translatedText: "emm",
+        translatedText: "emmm",
         images: [],
         actorReply: null
       }
@@ -375,7 +375,7 @@ const posts_202407 = [
     authorName: "柚子元元堡",
     authorAvatar: "🥣",
     originalText: "我说15的月亮你说__________[偷笑][偷笑][偷笑] 来看圆圆的月亮啦小然",
-    translatedText: "내가 15일의 달 보름달이라고 하면 넌__________[偷笑][偷笑][偷笑] 둥근 달 보러 와 익연아",
+    translatedText: "내가 15일의 달 이라고 하면 넌__________[偷笑][偷笑][偷笑] 둥근 달 보러 와 익연아",
     images: ["images/2407-moon.jpg"],
     comments: [
       {
@@ -396,6 +396,7 @@ const posts_202407 = [
     authorAvatar: "🥣",
     originalText: "小然 炎炎夏日吃冰吗😜🍧",
     translatedText: "익연아 무더위 여름에 아이스크림 어때?😜🍧",
+    note: "원문 라이브포토",
     images: [],
     comments: [
       {
@@ -413,7 +414,7 @@ const posts_202407 = [
     date: "2024-07-22",
     weiboUrl: "https://weibo.com/5994946077/OoLvV2cT9",
     originalText: "饿了 吃饭去了",
-    translatedText: "배고파 밥 먹으러 갈게",
+    translatedText: "배고프다 밥 먹으러 갈게",
     images: [],
     comments: []
   },
@@ -422,7 +423,7 @@ const posts_202407 = [
     date: "2024-07-22",
     weiboUrl: "https://weibo.com/5994946077/OoLvV2cT9",
     originalText: "88",
-    translatedText: "ㅃㅃ",
+    translatedText: "ㅃㅃ빠이",
     images: [],
     comments: []
   },
@@ -440,7 +441,7 @@ const posts_202407 = [
     date: "2024-07-23",
     weiboUrl: "https://weibo.com/5994946077/OoVqOefvT",
     originalText: "今日偶遇明盛同学",
-    translatedText: "오늘 밍셩 군과 우연히 만남",
+    translatedText: "오늘 밍셩이랑 우연히 만남",
     images: ["images/2407-mingsheng.jpg"],
     comments: []
   }
