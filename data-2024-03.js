@@ -243,7 +243,7 @@ const posts_202403 = [
     authorName: "假意或真心-",
     authorAvatar: "🥣",
     originalText: "小然你看！三月的日出🌅和樱花🌸，还有好好在心理咨询行业深耕学习的我[你好]",
-    translatedText: "익연아 봐봐! 3월의 일출🌅이랑 벚꽃🌸, 그리고 심리상담 업계에서 열심히 노력하는 나🙋🏻‍♀️[你好]",
+    translatedText: "익연아 봐봐! 3월의 일출🌅이랑 벚꽃🌸, 그리고 심리상담 업계에서 열심히 노력하는 나[你好]",
     images: ["images/2403-cherry.jpg"],
     comments: [
       {
