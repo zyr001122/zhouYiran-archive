@@ -143,7 +143,7 @@ const posts_202404 = [
         id: 150801,
         username: "周翊然Tz",
         originalText: "哈哈哈 很稳",
-        translatedText: "ㅋㅋㅋ 승차감이 안정감 있던데",
+        translatedText: "ㅋㅋㅋ 안정감 있더라",
         images: [],
         actorReply: null
       }
