@@ -3,7 +3,7 @@ const posts_202402 = [
     id: 1301,
     date: "2024-02-02",
     weiboUrl: "https://weibo.com/5994946077/NEIFfles9",
-    originalText: "小年夜飞行✈️",
+    originalText: "小年夜飞行✈️#本周报备#",
     translatedText: "설 전날 밤 비행✈️",
     images: [
       "images/2402-flight1.jpg",
@@ -17,9 +17,9 @@ const posts_202402 = [
     id: 1302,
     date: "2024-02-08",
     weiboUrl: "https://weibo.com/5994946077/NFBinwIea",
-    originalText: "年夜饭吃什么🤔",
-    translatedText: "연야반 뭐 먹지🤔",
-    note: "연야반: 새해 전날 밤에 먹는 밥",
+    originalText: "年夜饭吃什么[思考]",
+    translatedText: "연야반 뭐 먹지[思考]",
+    note: "연야반: 새해 전날 밤 가족이 모여 먹는 저녁 식사 문화",
     images: [],
     comments: []
   },
@@ -29,7 +29,7 @@ const posts_202402 = [
     weiboUrl: "https://weibo.com/5994946077/NFKoYaXz8",
     originalText: "#本周报备# 新春快乐🎉 祝大家万事兴\"龙\"",
     translatedText: "새해 복 많이 받아🎉 올 한 해 모두 만사형'용'하길",
-    note: "万事兴\"龙\": 용의해, 만사형통(万事兴隆)에서 隆 대신 龙(용)으로 바꾼 말장난",
+    note: "万事兴\"龙\": 용의해라고 만사형통(万事兴隆)에서 隆 대신 龙(용)으로 바꾼 말장난",
     images: [
       "images/2402-newyear1.jpg",
       "images/2402-newyear2.jpg",
@@ -47,7 +47,7 @@ const posts_202402 = [
     id: 1304,
     date: "2024-02-19",
     weiboUrl: "https://weibo.com/5994946077/O1jUJ4o5U",
-    originalText: "一些开工记录",
+    originalText: "一些开工记录#本周报备#",
     translatedText: "업무 복귀 일지",
     images: [
       "images/2402-work1.jpg",
@@ -67,7 +67,7 @@ const posts_202402 = [
     date: "2024-02-22",
     weiboUrl: "https://weibo.com/5994946077/O1LD32j9u",
     originalText: "下雪了",
-    translatedText: "눈 왔어",
+    translatedText: "눈 온다",
     images: ["images/2402-snow.jpg"],
     comments: [
       {
@@ -76,37 +76,37 @@ const posts_202402 = [
         originalText: "雪猪来咯",
         translatedText: "돼지 눈사람 등장",
         images: ["images/2402-snow-pig.jpg"],
-        actorReply: { originalText: "堆雪猪？", translatedText: "돼지 만든 거야?" }
+        actorReply: { originalText: "堆雪猪？", translatedText: "돼지 모양으로 만든 거야?" }
       },
       {
         id: 130502,
         username: "树深时雾起i",
         originalText: "你怎么站在房顶上",
-        translatedText: "왜 지붕 위에 서 있어",
+        translatedText: "너 왜 지붕 위에 올라갔어",
         images: [],
-        actorReply: { originalText: "看雪呢", translatedText: "눈 보는 중이지" }
+        actorReply: { originalText: "看雪呢", translatedText: "눈 구경 중이야" }
       },
       {
         id: 130503,
         username: "半颗小番茄",
         originalText: "给你看楼下不知名的小丑人😆",
-        translatedText: "아래층에 있는 이상한 사람 보여줄게😆",
+        translatedText: "우리 건물 아래층에 있는 이상한 사람 보여줄게😆",
         images: ["images/2402-clown.jpg"],
-        actorReply: { originalText: "🤔挺man的", translatedText: "🤔상남잔데" }
+        actorReply: { originalText: "[思考]挺man的", translatedText: "[思考]상남잔데" }
       },
       {
         id: 130504,
         username: "-什么东西y",
         originalText: "哈哈哈哈哈你看我的",
-        translatedText: "ㅋㅋㅋㅋㅋ내 거 봐봐",
+        translatedText: "ㅋㅋㅋㅋㅋ이것 좀 봐봐",
         images: ["images/2402-hair-acc.jpg"],
-        actorReply: { originalText: "头饰挺别致😏", translatedText: "머리 악세 되게 개성있다😏" }
+        actorReply: { originalText: "头饰挺别致[doge]", translatedText: "머리 악세사리 되게 개성있다[doge]" }
       },
       {
         id: 130505,
         username: "周翊然Tz",
         originalText: "搬砖去了👋🏻",
-        translatedText: "일하러 갈게👋🏻",
+        translatedText: "나 일하러 갈게👋🏻",
         images: [],
         actorReply: null
       }
@@ -116,7 +116,7 @@ const posts_202402 = [
     id: 1306,
     date: "2024-02-28",
     weiboUrl: "https://weibo.com/5994946077/O2GybmFjJ",
-    originalText: "有雪有雨也有晴",
+    originalText: "有雪有雨也有晴#本周报备#",
     translatedText: "눈도 오고 비도 오고 맑기도 하고",
     images: [
       "images/2402-plog1.jpg",
