@@ -23,15 +23,15 @@ const posts_202503 = [
         translatedText: "타오화우 재밌어?!",
         images: [],
         actorReply: {
-          originalText: "好玩 就是每天吃很多",
-          translatedText: "재밌어 근데 맨날 많이 먹어"
+          originalText: "好玩 就是每天吃很多[doge]",
+          translatedText: "재밌어 근데 맨날 많이 먹어[doge]"
         }
       },
       {
         id: 25030104,
         username: "翊分钟恋人z",
-        originalText: "哥你又开车了",
-        translatedText: "오빠 또 운전하네",
+        originalText: "哥你又开车了[思考]",
+        translatedText: "오빠 또 운전하네[思考]",
         images: [
           "images/2503-driving.jpg"
         ],
@@ -43,19 +43,19 @@ const posts_202503 = [
       {
         id: 25030105,
         username: "樱花味的cherry",
-        originalText: "吃到什么好吃的了吗",
-        translatedText: "뭐 맛있는 거 먹었어?",
+        originalText: "吃到什么好吃的了吗[偷乐]",
+        translatedText: "뭐 맛있는 거 먹었어?[偷乐]",
         images: [],
         actorReply: {
-          originalText: "今天吃的硬菜 烤全羊",
-          translatedText: "오늘 든든한 거 먹었어 양 통구이"
+          originalText: "今天吃的硬菜 烤全羊[doge]",
+          translatedText: "오늘 든든한 거 먹었어 양 통구이[doge]"
         }
       },
       {
         id: 25030106,
         username: "先干饭吧Tz",
-        originalText: "来了 在干嘛",
-        translatedText: "왔어 뭐 하고 있어?",
+        originalText: "来了 在干嘛[哈哈][哈哈][哈哈]",
+        translatedText: "왔어 뭐 하고 있어?[哈哈][哈哈][哈哈]",
         note: "원문 동영상",
         images: [],
         actorReply: {
@@ -79,8 +79,8 @@ const posts_202503 = [
       {
         id: 25030108,
         username: "祈川十里春",
-        originalText: "好奇这个番茄炒蛋什么味的",
-        translatedText: "이 토마토계란볶음 무슨 맛인지 궁금해",
+        originalText: "好奇这个番茄炒蛋什么味的[憧憬]",
+        translatedText: "이 토마토계란볶음 무슨 맛인지 궁금해[憧憬]",
         images: [
           "images/2503-tomato-egg.jpg"
         ],
@@ -92,8 +92,8 @@ const posts_202503 = [
       {
         id: 25030109,
         username: "r男朋友真的只想开车",
-        originalText: "番茄排骨汤，我做的",
-        translatedText: "토마토 갈비탕, 내가 만든 거야",
+        originalText: "番茄排骨汤，我做的[嘻嘻]",
+        translatedText: "토마토 갈비탕, 내가 만든 거야[嘻嘻]",
         images: [
           "images/2503-tomato-ribsoup.jpg"
         ],
@@ -117,8 +117,8 @@ const posts_202503 = [
       {
         id: 25030111,
         username: "翊条魚干",
-        originalText: "老公什么时候炒",
-        translatedText: "자기야 언제 볶아?",
+        originalText: "老公什么时候炒[doge][doge][doge]",
+        translatedText: "자기야 언제 볶아?[doge][doge][doge]",
         images: [
           "images/2503-when-cook.jpg"
         ],
@@ -130,21 +130,21 @@ const posts_202503 = [
       {
         id: 25030112,
         username: "翊条魚干",
-        originalText: "老公猜猜这是啥",
-        translatedText: "자기야 이게 뭔지 맞혀봐",
+        originalText: "老公猜猜这是啥[裂开]",
+        translatedText: "자기야 이게 뭔지 맞혀봐[裂开]",
         images: [
           "images/2503-guess-this.jpg"
         ],
         actorReply: {
-          originalText: "少了一个颜色",
-          translatedText: "색깔 하나가 부족해"
+          originalText: "少了一个颜色[doge]",
+          translatedText: "색깔 하나가 부족해[doge]"
         }
       },
       {
         id: 25030113,
         username: "Jia一口鲫鱼饼_",
-        originalText: "挑一个回我吧 周翊然",
-        translatedText: "하나 골라서 나한테 답장 좀 해줘 주익연아",
+        originalText: "挑一个回我吧[淡淡的][淡淡的]周翊然",
+        translatedText: "하나 골라서 나한테 답장 좀 해줘[淡淡的][淡淡的] 주익연아",
         images: [
           "images/2503-pick-one.jpg"
         ],
