@@ -1477,5 +1477,223 @@ const posts_202412 = [
         actorReply: null
       }
     ]
+  },
+  {
+    id: 241245,
+    date: "2024-12-31",
+    weiboUrl: "https://weibo.com/5994946077/P7s9wmPHR",
+    originalText: "hello",
+    translatedText: "hello",
+    images: [],
+    comments: [
+      {
+        id: 24124501,
+        username: "周翊然Tz",
+        originalText: "新的一年 希望大家在新的一年可以一切顺利 身体健康 财源广进 开开心心\n一起告别24 迎接25 新年快乐！！！[2025]",
+        translatedText: "새해에는 다들 모든 일이 순조롭고 건강하고 돈도 많이 벌고 매일 행복하길 바라\n24년이랑 작별하고 25년 맞이하자 새해 복 많이 받아!!![2025]",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124502,
+        username: "周翊然Tz",
+        originalText: "大家在干嘛呢",
+        translatedText: "다들 뭐 해",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124503,
+        username: "周翊然Tz",
+        originalText: "本来今天想直播的 但实在没时间[裂开]",
+        translatedText: "원래 오늘 라이브 하려고 했는데 진짜 시간이 없네[裂开]",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124504,
+        username: "周翊然Tz",
+        originalText: "我先走了 大家玩的开心！ 新年快乐！！ 等等记得刷我微博🙋",
+        translatedText: "나 먼저 갈게 다들 재밌게 놀아! 새해 복 많이 받아!! 이따 내 웨이보 꼭 확인해🙋",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124505,
+        username: "周翊然Tz",
+        originalText: "等戏空隙🙋",
+        translatedText: "촬영 쉬는 시간🙋",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124506,
+        username: "周翊然Tz",
+        originalText: "抠图的那位好人 请记得发一下原图",
+        translatedText: "포토샵으로 오려낸 그 분, 원본 사진 좀 보내줘",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124507,
+        username: "樱花味的cherry",
+        originalText: "这个头像？什么东西",
+        translatedText: "이 프로필 사진? 이게 뭐야",
+        images: ["images/2412-cutout.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124508,
+        username: "周翊然Tz",
+        originalText: "咋了",
+        translatedText: "왜",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124509,
+        username: "Mennnxg",
+        originalText: "许愿明年多见面！",
+        translatedText: "내년엔 더 자주 만나게 해달라고 빌게!",
+        images: ["images/2412-wish.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124510,
+        username: "周翊然Tz",
+        originalText: "一定",
+        translatedText: "당연하지",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124511,
+        username: "粥里有什么_",
+        originalText: "看重庆的跨年气球🎈",
+        translatedText: "충칭 연말 풍선 봐🎈",
+        images: ["images/2412-balloon.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124512,
+        username: "周翊然Tz",
+        originalText: "很美 但要注意安全",
+        translatedText: "예쁘다 근데 안전 조심해",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124513,
+        username: "落日屿橘",
+        originalText: "老公派你帮我守宿舍了！我放假啦哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+        translatedText: "자기야 나 대신 기숙사 지켜줘! 나 방학이다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+        images: ["images/2412-dorm.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124514,
+        username: "周翊然Tz",
+        originalText: "6",
+        translatedText: "6",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124515,
+        username: "是我的小土豆-Tz",
+        originalText: "我要吃吐了老公",
+        translatedText: "나 토할 때까지 먹은 것 같아 자기야",
+        images: ["images/2412-full.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124516,
+        username: "周翊然Tz",
+        originalText: "那你别吃了",
+        translatedText: "그럼 먹지 마",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124517,
+        username: "吃翊口脆薯饼_",
+        originalText: "小哥哥你为什么不好好抠图！！",
+        translatedText: "오빠 왜 이렇게 오려낸 게 엉성해!!",
+        images: ["images/2412-cutout.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124518,
+        username: "周翊然Tz",
+        originalText: "那你倒是发个原图啊！！",
+        translatedText: "그럼 원본 사진 좀 보내봐!!",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124519,
+        username: "那又咋了0_o",
+        originalText: "下次我教你扣图吧",
+        translatedText: "다음에 내가 오려내는 법 알려줄게",
+        images: ["images/2412-cutout.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124520,
+        username: "周翊然Tz",
+        originalText: "确实比我的好 可以发个原图吗",
+        translatedText: "확실히 내 것보다 낫네 원본 좀 보내줄 수 있어?",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124521,
+        username: "美少女壮士_lucky",
+        originalText: "哥哥哥哥哥哥哥",
+        translatedText: "오빠오빠오빠오빠오빠",
+        images: ["images/2412-bro.jpg"],
+        actorReply: null
+      },
+      {
+        id: 24124522,
+        username: "周翊然Tz",
+        originalText: "这么凶干嘛",
+        translatedText: "왜 이렇게 사나워",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124523,
+        username: "Jia一口鲫鱼饼_",
+        originalText: "会和我们一起倒数吗",
+        translatedText: "우리랑 같이 카운트다운 할 거야?",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124524,
+        username: "周翊然Tz",
+        originalText: "可能在片场 我可以在心里倒数",
+        translatedText: "아마 촬영장에 있을 것 같은데 마음속으로 카운트다운 할게",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124525,
+        username: "总是难拥晨",
+        originalText: "啥时候开赛车",
+        translatedText: "언제 레이싱카 몰아",
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 24124526,
+        username: "周翊然Tz",
+        originalText: "[doge]",
+        translatedText: "[doge]",
+        images: [],
+        actorReply: null
+      }
+    ]
   }
 ];
