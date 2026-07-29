@@ -4,7 +4,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7D2CjuQ",
     originalText: "哈喽哈喽，我来了",
-    translatedText: "할로할로, 나 왔어",
+    translatedText: "ㅎㅇㅎㅇ, 나 왔어",
     images: [],
     comments: []
   },
@@ -13,7 +13,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7DSiRUL",
     originalText: "你们怎么都没睡",
-    translatedText: "다들 왜 안 자고 있어",
+    translatedText: "너네 왜 안 자고 있어",
     images: [],
     comments: []
   },
@@ -22,7 +22,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7EcqDxn",
     originalText: "随机考考你们",
-    translatedText: "랜덤 퀴즈 내볼까",
+    translatedText: "급 랜덤 퀴즈 내볼까",
     images: [],
     comments: []
   },
@@ -31,7 +31,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7EYgH79",
     originalText: "你们想知道大结局吗",
-    translatedText: "마지막 화 결말 알고 싶어?",
+    translatedText: "마지막 화 결말 알고 싶지?",
     images: [],
     comments: []
   },
@@ -49,7 +49,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7FB0tet",
     originalText: "哎今天任务有点重",
-    translatedText: "아 오늘 할 일이 좀 많네",
+    translatedText: "아 오늘 미션 해야 할게 좀 많네",
     images: [],
     comments: []
   },
@@ -67,7 +67,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7EAnS2F",
     originalText: "好想路透啊",
-    translatedText: "스포 하고 싶다ㅏ",
+    translatedText: "스포 너무 하고 싶다ㅏ",
     images: [],
     comments: []
   },
@@ -103,7 +103,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7He6a91",
     originalText: "最近试了一下拍vlog",
-    translatedText: "요즘 vlog 좀 시도해보고 있거든",
+    translatedText: "요즘 vlog 찍는 거 한번 시도해봤거든",
     images: [],
     comments: []
   },
@@ -112,7 +112,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7HrlEsJ",
     originalText: "拍后感如图",
-    translatedText: "찍고 나서 느낀 심정 짤로 보여줄게",
+    translatedText: "찍고 나서 느낀 심정.jpg",
     images: ["images/2211-nod-meme.jpg"],
     comments: []
   },
@@ -130,7 +130,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7HYd0x3",
     originalText: "你们的表情包呢？",
-    translatedText: "너넨 짤 가진 거 없어?",
+    translatedText: "너네 짤 가진 거 없어?",
     images: [],
     comments: []
   },
@@ -148,7 +148,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7ISifSH",
     originalText: "这个跟我的好像",
-    translatedText: "이거 나랑 되게 비슷한데",
+    translatedText: "이거 나랑 되게 똑같은데",
     images: ["images/2211-kuromi.jpg"],
     comments: []
   },
@@ -157,7 +157,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7J8eziO",
     originalText: "Vlog这个东西一年也只能录一次",
-    translatedText: "Vlog는 1년에 한 번밖에 못 찍을 것 같아",
+    translatedText: "브이로그는 1년에 한 번밖에 못 찍을 것 같아",
     images: [],
     comments: []
   },
@@ -175,7 +175,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7JC5ku9",
     originalText: "怎么还这么多人",
-    translatedText: "아직도 왜 이렇게 사람이 많지",
+    translatedText: "아니 왜 아직도 이렇게 사람이 많지",
     images: [],
     comments: []
   },
@@ -193,7 +193,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7K6ALKN",
     originalText: "哎 kpi还差点",
-    translatedText: "아 kpi 아직 좀 부족한데",
+    translatedText: "아 kpi 채우려면 아직 좀 부족한데",
     images: [],
     comments: []
   },
@@ -202,7 +202,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7KnECuu",
     originalText: "为什么有人说我11级",
-    translatedText: "어떤 사람들은 내가 11레벨이래",
+    translatedText: "근데 누가 나보고 11레벨이라는데?",
     images: [],
     comments: []
   },
@@ -220,7 +220,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7KVqkzo",
     originalText: "有人截图我10级的吗",
-    translatedText: "나 10레벨인 거 캡처해 둔 사람?",
+    translatedText: "혹시 나 10레벨이었을 때 캡처해 둔 사람?",
     images: [],
     comments: []
   },
@@ -229,7 +229,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7LInV1b",
     originalText: "好像看到有人让我自己p",
-    translatedText: "누가 나보고 직접 만들라는데",
+    translatedText: "누가 나보고 직접 만들래",
     images: ["images/2211-pig-pink.jpg"],
     comments: []
   },
@@ -247,7 +247,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7M37kkR",
     originalText: "怎么你们今天说的我都听不懂",
-    translatedText: "나 오늘 왜 이렇게 너네가 하는 말 하나도 못 알아듣겠지",
+    translatedText: "오늘 왜 이렇게 너네가 하는 말 하나도 못 알아듣겠지",
     images: [],
     comments: []
   },
@@ -256,7 +256,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7MmkJsY",
     originalText: "有人说12级有小粉牌",
-    translatedText: "누가 12레벨 되면 핑크 뱃지 생긴다는데",
+    translatedText: "누가 12레벨 되면 핑크 뱃지 준다는데",
     images: [],
     comments: []
   },
@@ -274,7 +274,7 @@ const posts_202211 = [
     date: "2022-11-08",
     weiboUrl: "https://weibo.com/5994946077/Me7MO7qpN",
     originalText: "猜错了吧",
-    translatedText: "너네 추측 틀렸어",
+    translatedText: "너네 추측 한 거 틀림~",
     images: [],
     comments: []
   },
