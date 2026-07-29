@@ -191,7 +191,7 @@ const posts_202406 = [
     authorAvatar: "🥣",
     originalText: "阴沉沉的下雨播报 本月气象台显示 大雨准备转晴 再也不用过着湿漉漉的天气啦",
     translatedText: "침침한 비 예보 이번 달 기상대 발표에 따르면 큰 비가 곧 개인다고 해 이제 더 이상 축축한 날씨 속에 살지 않아도 돼",
-    note: "원문 사진 참고",
+    note: "원문 라이브 포토",
     images: [],
     comments: [
       {
@@ -339,7 +339,7 @@ const posts_202406 = [
         id: 171601,
         username: "周翊然Tz",
         originalText: "要晴天了",
-        translatedText: "맑아지려나보다",
+        translatedText: "이제 맑아지려나보다",
         images: [],
         actorReply: null
       }
@@ -393,7 +393,7 @@ const posts_202406 = [
     authorAvatar: "🥣",
     originalText: "看海 òᆺó",
     translatedText: "바다 보기 òᆺó",
-    note: "원문은 동영상",
+    note: "원문 동영상",
     images: [],
     comments: [
       {
@@ -432,8 +432,8 @@ const posts_202406 = [
     weiboUrl: "https://weibo.com/7714686089/Okcn3rRgP",
     authorName: "树深时雾起i",
     authorAvatar: "🥣",
-    originalText: "在做项目呢[来] 愁死人了[躺平][躺平][躺平]",
-    translatedText: "프로젝트 하는 중이야[来] 너무 힘들어 죽겠어[躺平][躺平][躺平]",
+    originalText: "在做项目呢[泪] 愁死人了[躺平][躺平][躺平]",
+    translatedText: "프로젝트 하는 중이야[泪] 너무 힘들어 죽겠어[躺平][躺平][躺平]",
     images: ["images/2406-project.jpg"],
     comments: [
       {
@@ -453,7 +453,7 @@ const posts_202406 = [
     authorName: "麦橙呐",
     authorAvatar: "🥣",
     originalText: "看看我的画😭",
-    translatedText: "내 그림 봐줘😭",
+    translatedText: "내꺼 봐줘😭",
     images: ["images/2406-drawing.jpg"],
     comments: [
       {
@@ -473,8 +473,8 @@ const posts_202406 = [
     authorName: "吧啦啦吧啦00",
     authorAvatar: "🥣",
     originalText: "熟不熟悉[doge]",
-    translatedText: "낯익지 않아[doge]",
-    note: "원문은 동영상",
+    translatedText: "어디서 본 것 같지 않아?[doge]",
+    note: "원문 동영상",
     images: [],
     comments: [
       {
@@ -494,8 +494,9 @@ const posts_202406 = [
     authorName: "我不想长痘Hz-",
     authorAvatar: "🥣",
     originalText: "报告然然！最近有好好生活好好学习！虽然情绪有时候不太稳定哈哈… 快看我吃饭时饭店里的咪咪超可爱的！！给你看一下我的日记本日历！前两个月的聊天时刻我都在学校没办法留言呜呜呜🥹这个月终于给我等到了啊啊啊啊啊啊啊啊啊！高中的时光过得真快啊 一转眼高一就要结束啦！这个月真的超忙 一直在备考 呜呜呜呜 然然能祝我考试顺利吗😭😭🫶🏻 祝你生活顺利天天开心呀～我们一起努力吧！",
-    translatedText: "보고합니다 익연아! 요즘 잘 지내고 공부 열심히 하고 있어! 가끔 감정이 불안정할 때도 있지만ㅋㅋ… 밥 먹으러 갔던 식당에 고양이 봐봐 너무 귀여워!! 내 다이어리 달력도 보여줄게! 2개월동안은 학교에 있어서 댓글 달 수가 없었어🥹 이번 달에 드디어 기다리던 게 왔어!!!! 고등학교 다니니까 시간이 너무 빨리 지나가 눈 깜짝하니까 고1이 끝이야! 이번 달 진짜 바빴어 계속 시험 준비해서ㅓㅓㅓㅓ 익연아 시험 잘 보게 빌어줄 수 있어?😭😭🫶🏻 오빠 생활도 순탄하고 매일 행복하길~ 같이 열심히 하자!",
-    images: ["images/2406-cat2.jpg"],
+    translatedText: "보고합니다 익연아! 요즘 잘 지내고 공부 열심히 하고 있어! 가끔 감정이 불안정할 때도 있지만ㅋㅋ… 밥 먹으러 갔던 식당에 고양이 봐봐 너무 귀여워!! 내 다이어리 달력도 보여줄게! 2개월동안은 학교에 있어서 댓글 달 수가 없었어🥹 이번 달에 드디어 기다리던 게 왔어!!!! 고등학교 다니니까 시간이 너무 빨리 지나가 눈 깜짝하니까 고1이 끝이야! 이번 달 진짜 바빴어 계속 시험 준비해서ㅓㅓㅓㅓ 나 시험 잘 보게 빌어줄 수 있어?😭😭🫶🏻 오빠도 일상이 순탄하고 매일 행복하길~ 같이 열심히 하자!",
+    note: "원문 라이브포토",
+    images: [],
     comments: [
       {
         id: 172401,
@@ -513,8 +514,8 @@ const posts_202406 = [
     weiboUrl: "https://weibo.com/7613776623/Okcov2it2",
     authorName: "木子Kang-",
     authorAvatar: "🥣",
-    originalText: "然然，快出高考成绩了！好紧张啊[来][来]",
-    translatedText: "익연아, 수능 성적 곧 나온다! 너무 떨려[来][来]",
+    originalText: "然然，快出高考成绩了！好紧张啊[泪][泪]",
+    translatedText: "익연, 수능 성적 곧 나온다! 너무 떨려[泪][泪]",
     images: [],
     comments: [
       {
