@@ -42,7 +42,7 @@ const posts_202308 = [
         id: 70301,
         username: "周翊然Tz",
         originalText: "我喜欢蓝色的麻袋",
-        translatedText: "난 파란색 포대자루가 좋아",
+        translatedText: "난 파란색 포대자루가 더 좋아",
         images: [],
         actorReply: null
       }
@@ -54,15 +54,15 @@ const posts_202308 = [
     weiboUrl: "https://weibo.com/5356698162/NeS7WdAmF",
     authorName: "Wudong22_",
     authorAvatar: "🥣",
-    originalText: "宝宝看我的表情包素材😋",
-    translatedText: "익연아 내 짤 봐봐😋",
+    originalText: "宝宝看我的表情包素材[馋嘴]",
+    translatedText: "익연아 내 짤 봐봐[馋嘴]",
     images: ["images/2308-ride.jpg"],
     comments: [
       {
         id: 70401,
         username: "周翊然Tz",
         originalText: "这个好笑",
-        translatedText: "이거 웃기네",
+        translatedText: "아 이거 웃기네",
         images: [],
         actorReply: null
       }
@@ -74,8 +74,8 @@ const posts_202308 = [
     weiboUrl: "https://weibo.com/7679048458/NeS9Czidl",
     authorName: "Sssichen",
     authorAvatar: "🥣",
-    originalText: "收到宝宝^ ^（现在点赞评论能兑换签名合影吗🥰",
-    translatedText: "익연이 댓글 확인^^ (지금 좋아요 누르고 댓글 달면 친필싸인이나 투샷으로 교환 해준다고?🥰",
+    originalText: "收到宝宝^ ^（现在点赞评论能兑换签名合影吗[哇]",
+    translatedText: "익연이 댓글 확인^^ (지금 좋아요 누르고 댓글 달면 친필싸인이나 투샷으로 교환 해준다고?[哇]",
     images: ["images/2308-dog-umbrella.jpg"],
     comments: [
       {
@@ -94,8 +94,8 @@ const posts_202308 = [
     weiboUrl: "https://weibo.com/6631832523/NeShI1ptX",
     authorName: "碎星漫游记·",
     authorAvatar: "🥣",
-    originalText: "倦子，跑慢点，我来给你撑个伞😏",
-    translatedText: "쥐안, 천천히 뛰어, 내가 우산 씌워줄게😏",
+    originalText: "倦子，跑慢点，我来给你撑个伞[doge]",
+    translatedText: "쥐안, 천천히 뛰어, 내가 우산 씌워줄게[doge]",
     images: ["images/2308-yellow-umbrella.jpg"],
     comments: [
       {
@@ -114,8 +114,8 @@ const posts_202308 = [
     weiboUrl: "https://weibo.com/6609084100/NeSjL54LZ",
     authorName: "追星少女的一天",
     authorAvatar: "🥣",
-    originalText: "举个爪，求个翻牌啦 这个怎么样😏",
-    translatedText: "발 들고, 답글 좀 달아줘봐 이거 어때😏",
+    originalText: "举个爪，求个翻牌啦 这个怎么样[doge]",
+    translatedText: "저요저요 답글 좀 받아보자 이거 어때[doge]",
     images: ["images/2308-bamboo-umbrella.jpg"],
     comments: [
       {
@@ -135,14 +135,14 @@ const posts_202308 = [
     authorName: "渡绪",
     authorAvatar: "🥣",
     originalText: "倦 我把我的公主披风给你披上",
-    translatedText: "쥐안 내 공주 망토 너한테 입혀줄게",
+    translatedText: "쥐안 내 공주님 망토 너한테 입혀줄게",
     images: ["images/2308-princess-cape.jpg"],
     comments: [
       {
         id: 70801,
         username: "周翊然Tz",
         originalText: "你这图没加载完",
-        translatedText: "사진 아직 로딩중이야",
+        translatedText: "사진 로딩이 안 됐는데?",
         images: [],
         actorReply: null
       }
@@ -155,14 +155,14 @@ const posts_202308 = [
     authorName: "名字被偷了r",
     authorAvatar: "🥣",
     originalText: "在线冲浪，终于遇到你啦！不怪我的雨伞小 怪你滴头大！😏",
-    translatedText: "연어중이였는데, 드디어 발견! 내 우산이 작은 게 아니라 니 머리가 큰 탓이야!",
+    translatedText: "실시간 연어중이였는데, 드디어 발견! 내 우산이 작은 게 아니라 너 머리가 큰 탓이야!",
     images: ["images/2308-mudo-bubble.jpg"],
     comments: [
       {
         id: 70901,
         username: "周翊然Tz",
         originalText: "怪我啰",
-        translatedText: "그래 다 내 탓이지",
+        translatedText: "그래 다 내 탓이다 이거지",
         images: [],
         actorReply: null
       }
@@ -174,15 +174,15 @@ const posts_202308 = [
     weiboUrl: "https://weibo.com/6206252613/NeSfw4ITs",
     authorName: "心动翊夏",
     authorAvatar: "🥣",
-    originalText: "假面骑士披风给你穿上了😏😏 这下淋不到了吧😏😏",
-    translatedText: "가면라이더 망토 입혀줬어😏😏 이제 비 안 맞겠지😏😏",
+    originalText: "假面骑士披风给你穿上了[doge][doge] 这下淋不到了吧[doge][doge]",
+    translatedText: "가면라이더 망토 입혀줬어[doge][doge] 이제 절대 비 안 맞겠지[doge][doge]",
     images: ["images/2308-green-cape.jpg"],
     comments: [
       {
         id: 71001,
         username: "周翊然Tz",
         originalText: "这个真的很酷",
-        translatedText: "이거 진짜 멋있다",
+        translatedText: "이건 진짜 멋있다",
         images: [],
         actorReply: null
       }
@@ -195,7 +195,7 @@ const posts_202308 = [
     authorName: "A蓝玻璃批发牛角包顾师傅",
     authorAvatar: "🥣",
     originalText: "书包都帮你遮好了",
-    translatedText: "가방으로 다 가려줬어",
+    translatedText: "가방으로 가려주기",
     images: ["images/2308-purple-cape.jpg"],
     comments: [
       {
@@ -215,14 +215,14 @@ const posts_202308 = [
     authorName: "粥粥Zouz",
     authorAvatar: "🥣",
     originalText: "快带上你的扫帚飞！",
-    translatedText: "빗자루 타고 날아가버려!",
+    translatedText: "빨리 빗자루 타고 날아가버려!",
     images: ["images/2308-wizard-cape.jpg"],
     comments: [
       {
         id: 71201,
         username: "周翊然Tz",
         originalText: "是魔法吗",
-        translatedText: "법사야?",
+        translatedText: "마법사야?",
         images: [],
         actorReply: null
       }
@@ -235,7 +235,7 @@ const posts_202308 = [
     authorName: "Velpro宋",
     authorAvatar: "🥣",
     originalText: "不翻我！就让这大雨全都落下吧！不挡了",
-    translatedText: "나한텐 답글 안 달아주고! 그냥 비 다 맞아라! 안 막아줄 거야",
+    translatedText: "나한테는 답댓 안 달아주고! 그냥 비 다 맞아라! 안 막아줄 거야",
     images: ["images/2308-rain-head.jpg"],
     comments: [
       {
@@ -262,7 +262,7 @@ const posts_202308 = [
         id: 71401,
         username: "周翊然Tz",
         originalText: "这像是法拉利住的地方",
-        translatedText: "이거 페라리가 사는 집 같다",
+        translatedText: "여긴 우리 페라리가 사는 집 같은데",
         images: [],
         actorReply: null
       }
@@ -293,7 +293,7 @@ const posts_202308 = [
     date: "2023-08-16",
     weiboUrl: "https://weibo.com/5994946077/NeSvhimmw",
     originalText: "带着大家的雨伞 走了",
-    translatedText: "다들 우산 챙겨 가볼게",
+    translatedText: "너네가 우산 챙겨준 거 들고 갈게",
     images: [],
     comments: []
   },
@@ -302,7 +302,7 @@ const posts_202308 = [
     date: "2023-08-22",
     weiboUrl: "https://weibo.com/5994946077/NfMGetGJW",
     originalText: "我又来了 给大家带点礼物",
-    translatedText: "컴백 얘들아 내가 선물 갖고 왔어",
+    translatedText: "컴백 나 왔어 내가 너네 주려고 선물 좀 가져왔거든",
     images: [],
     comments: []
   },
@@ -341,6 +341,7 @@ const posts_202308 = [
         username: "周翊然Tz",
         originalText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭",
         translatedText: "🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭🍭",
+        note: "https://x.com/vazseyo/status/2066157134790705250?s=20",
         images: [],
         actorReply: null
       }
@@ -351,7 +352,7 @@ const posts_202308 = [
     date: "2023-08-22",
     weiboUrl: "https://weibo.com/5994946077/NfMM0ozTZ",
     originalText: "走了 大家记得看剧",
-    translatedText: "갈게 다들 드라마 챙겨봐",
+    translatedText: "갈게 다들 드라마 잊지 말고 본방사수해",
     images: [],
     comments: []
   },
@@ -362,7 +363,7 @@ const posts_202308 = [
     authorName: "周翊然Studio",
     authorAvatar: "💼",
     originalText: "庆祝我们沈倦逆风翻盘成功入队！💪🏻 from 你永远的后援 室子",
-    translatedText: "우리 쥐안님 역전 성공으로 팀 입단한 것 축하해！💪🏻 from 영원한 지원군 공작실",
+    translatedText: "우리 쥐안님 역전 성공과 대표팀 입단을 축하합니다！💪🏻 from 당신의 영원한 지원군 공작실",
     images: ["images/2308-studio1.jpg", "images/2308-studio2.jpg"],
     comments: [
       {
