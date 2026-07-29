@@ -59,8 +59,8 @@ const posts_202509 = [
         translatedText: "도화오 보는데 다른 사람들 다 먹을 때 너는 참는 거 보고 나도 너처럼 참아야겠다고 다짐했어[泪]\n내가 직접 만든 계란노른자 두부 야채탕 봐봐 (다이어트 식단)✌🏻",
         images: ["images/2509-diet-soup.jpg"],
         actorReply: {
-          originalText: "[赞]",
-          translatedText: "[赞]"
+          originalText: "짱이다👍",
+          translatedText: "짱이다👍"
         }
       },
       {
@@ -70,8 +70,8 @@ const posts_202509 = [
         translatedText: "보여줄게 있어[手指比心]",
         images: ["images/2509-look-this.jpg"],
         actorReply: {
-          originalText: "[思考][嘘]",
-          translatedText: "[思考][嘘]"
+          originalText: "[思考][思考]",
+          translatedText: "[思考][思考]"
         }
       },
       {
@@ -126,7 +126,7 @@ const posts_202509 = [
         images: ["images/2509-dare-to-touch.jpg"],
         actorReply: {
           originalText: "敢拍照",
-          translatedText: "사진 찍을 용기는 있어"
+          translatedText: "사진 찍을 용기는 있는데"
         }
       },
       {
