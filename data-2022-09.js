@@ -274,7 +274,7 @@ const posts_202209 = [
     date: "2022-09-15",
     weiboUrl: "https://weibo.com/5994946077/M5Tt339oo",
     originalText: "走了走了",
-    translatedText: "갈게 진짜 간다",
+    translatedText: "가야겠다 갈게",
     images: [],
     comments: []
   }
