@@ -5,7 +5,7 @@ const posts_202502 = [
     weiboUrl: "https://weibo.com/5994946077/PegtwetoV",
     authorName: "周翊然Tz",
     originalText: "hello 节日快乐大家！",
-    translatedText: "hello 다들 원소절 잘 보내!",
+    translatedText: "hello 다들 즐거운 원소절 보내!",
     images: [],
     comments: [
       {
@@ -21,14 +21,6 @@ const posts_202502 = [
         username: "周翊然Tz",
         originalText: "我这会儿吃饭呢 吃的海鲜火锅",
         translatedText: "나 지금 밥 먹어 해물 훠궈 먹으려고",
-        images: [],
-        actorReply: null
-      },
-      {
-        id: 25020103,
-        username: "周翊然Tz",
-        originalText: "我上菜了 该吃饭了 节日快乐🌹🌹🌹",
-        translatedText: "음식 나왔다 다들 밥 얼른 먹어 행복한 원소절 보내🌹🌹🌹",
         images: [],
         actorReply: null
       },
@@ -88,7 +80,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "别告诉我 可以边吃边看 我会很羡慕",
-          translatedText: "설마 먹으면서 보는 거라고 하지 마 진짜 부러울 것 같으니까"
+          translatedText: "설마 먹으면서 보는 거라고 하지 마 진짜 부러우니까"
         }
       },
       {
@@ -125,20 +117,20 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "所以到底是啥[裂开]",
-          translatedText: "그래서 대체 뭔데[裂开]"
+          translatedText: "그래서 대체 뭘 기억해야 하는데[裂开]"
         }
       },
       {
         id: 25020120,
         username: "是我的小土豆-Tz",
         originalText: "老公 生病了 你注意身体哦[泪]",
-        translatedText: "여보 나 아파, 몸 조심해[泪]",
+        translatedText: "여보 나 아파 몸 조심해[泪]",
         images: [
           "images/2502-cold.jpg"
         ],
         actorReply: {
           originalText: "早日康复 要好好注意身体啊",
-          translatedText: "빨리 나아야 할텐데, 몸 잘 챙겨"
+          translatedText: "빨리 나아야 할텐데 몸 잘 챙겨"
         }
       },
       {
@@ -176,7 +168,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "是不是到饭点了",
-          translatedText: "밥 시간 된 거 아니야?"
+          translatedText: "밥 먹을 때 된 거 아니고?"
         }
       },
       {
@@ -189,7 +181,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "这个是不是能把人辣晕",
-          translatedText: "이거 먹으면 매워서 기절하는 거 아니야?"
+          translatedText: "이거 먹으면 매워서 기절한다던데"
         }
       },
       {
@@ -202,7 +194,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "我来了啊",
-          translatedText: "나 왔어"
+          translatedText: "나 왔잖아"
         }
       },
       {
@@ -215,7 +207,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "这个好眼熟 谁家狗",
-          translatedText: "이거 낯익은데 누구네 강아지야"
+          translatedText: "이거 낯익은데 누구 강아지야"
         }
       },
       {
@@ -230,6 +222,14 @@ const posts_202502 = [
           originalText: "蚂蚱…？",
           translatedText: "메뚜기…?"
         }
+      },
+      {
+        id: 25020103,
+        username: "周翊然Tz",
+        originalText: "我上菜了 该吃饭了 节日快乐🌹🌹🌹",
+        translatedText: "음식 나왔다 다들 밥 얼른 먹고 행복한 원소절 보내🌹🌹🌹",
+        images: [],
+        actorReply: null
       }
     ]
   },
@@ -239,7 +239,7 @@ const posts_202502 = [
     weiboUrl: null,
     authorName: "周翊然Tz",
     originalText: "hi 大家在干嘛呢",
-    translatedText: "hi 다들 뭐 하고 있어",
+    translatedText: "hi 뭐 하고 있어",
     images: [],
     comments: [
       {
@@ -251,34 +251,16 @@ const posts_202502 = [
         actorReply: null
       },
       {
-        id: 25020202,
-        username: "周翊然Tz",
-        originalText: "赶上了 落日航空",
-        translatedText: "막차 탔다, 노을 지는 공항✈️",
-        images: [
-          "images/2502-sunset-flight.jpg"
-        ],
-        actorReply: null
-      },
-      {
-        id: 25020203,
-        username: "周翊然Tz",
-        originalText: "咳咳 我要准备起飞了 下次见！",
-        translatedText: "크흠 나 이제 이륙 준비해야 돼 다음에 봐!",
-        images: [],
-        actorReply: null
-      },
-      {
         id: 25020204,
         username: "永Eterno恒",
         originalText: "然然能鼓励鼓励我吗[泪]",
-        translatedText: "익연아 나 좀 응원해줄 수 있어?[泪]",
+        translatedText: "익연아 나 응원 좀 해주면 안 돼?[泪]",
         images: [
           "images/2502-0222-image2.jpg"
         ],
         actorReply: {
           originalText: "希望你可以调整自己 我觉得很多事情都可以去逼自己一把 突破自己 希望你可以一切顺利慢慢的变成一个强大的人",
-          translatedText: "너 스스로를 잘 다잡을 수 있길 바래 많은 일들은 스스로를 좀 더 밀어붙여봐야 한계를 넘어설 수 있다고 생각하거든 모든 일이 다 잘 풀려서 차근차근 강한 사람이 됐으면 좋겠다"
+          translatedText: "너 스스로를 잘 다잡을 수 있길 바래 많은 일들은 스스로를 좀 더 밀어붙여봐야 한계를 넘어설 수 있다고 생각하거든 모든 게 다 잘 풀릴거고 차근차근 강한 사람이 됐으면 좋겠다"
         }
       },
       {
@@ -317,7 +299,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "很可爱啊 如果有铁环就好了 可以挂着 不容易丢",
-          translatedText: "완전 귀여운데, 고리 있으면 키링으로 걸어서 쓰면 안 잃어버리고 딱 좋겠다"
+          translatedText: "완전 귀여운데 고리 있으면 키링으로 걸어서 쓰면 안 잃어버리고 딱 좋겠다"
         }
       },
       {
@@ -330,7 +312,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "没啥味",
-          translatedText: "별 맛 없어"
+          translatedText: "맛이 없어"
         }
       },
       {
@@ -369,7 +351,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "来了来了",
-          translatedText: "왔어"
+          translatedText: "왔다 왔다"
         }
       },
       {
@@ -408,7 +390,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "我就学了六天 提升空间还很大 [doge]",
-          translatedText: "겨우 6일 배웠는데 아직 올라갈 길만 남았어[doge]"
+          translatedText: "겨우 6일 배웠는데 아직 상승할 일만 남았어[doge]"
         }
       },
       {
@@ -506,7 +488,7 @@ const posts_202502 = [
         id: 25020240,
         username: "廷祐牌锅包肉",
         originalText: "一直发我的小可爱娃娃们直到然然回复他们也很可爱为止",
-        translatedText: "익연이가 귀엽다고 답장해줄 때까지 계속 내 애착인형들 올릴 거얌, 얘도 귀엽지",
+        translatedText: "익연이가 귀엽다고 답장해줄 때까지 계속 내 애착인형들 올릴 거얌 얘네도 귀엽지",
         images: [
           "images/2502-0222-dolls.jpg"
         ],
@@ -525,7 +507,7 @@ const posts_202502 = [
         ],
         actorReply: {
           originalText: "给它吃 给它吃！",
-          translatedText: "간식 줘, 간식 줘!"
+          translatedText: "간식 줘 간식 줘!"
         }
       },
       {
@@ -609,7 +591,7 @@ const posts_202502 = [
         id: 25020256,
         username: "今天我是向日葵",
         originalText: "我决定了 同样的东西我要留言到然然看见 宝宝 好看吗好看吗 赶紧夸我 [doge]",
-        translatedText: "나 결심함, 익연이가 볼 때까지 똑같은 거 도배하려고 익연아 예뻐? 예뻐? 빨리 칭찬해줘 [doge]",
+        translatedText: "나 결심함 익연이가 볼 때까지 똑같은 거 도배하려고 익연아 예뻐? 예뻐? 빨리 칭찬해줘 [doge]",
         images: [
           "images/2502-0222-ima1241.jpg"
         ],
@@ -635,7 +617,7 @@ const posts_202502 = [
         id: 25020260,
         username: "年餻糯糯粥",
         originalText: "哥下雨了好冷🥶想躲你怀里去取暖",
-        translatedText: "오빠 비 오는데 너무 추워🥶 오빠 품에 숨어서 몸 좀 녹이고 싶다",
+        translatedText: "오빠 비 오는데 너무 추워🥶 오빠 품에 안겨서 몸 좀 녹이고 싶다",
         images: [
           "images/2502-0222-cold-rain.jpg"
         ],
@@ -643,6 +625,24 @@ const posts_202502 = [
           originalText: "回家里被窝里不好吗",
           translatedText: "집에 가서 이불 속에 있는 게 낫지 않아?"
         }
+      },
+      {
+        id: 25020202,
+        username: "周翊然Tz",
+        originalText: "赶上了 落日航空",
+        translatedText: "막차 탔다, 노을 지는 공항✈️",
+        images: [
+          "images/2502-sunset-flight.jpg"
+        ],
+        actorReply: null
+      },
+      {
+        id: 25020203,
+        username: "周翊然Tz",
+        originalText: "咳咳 我要准备起飞了 下次见！",
+        translatedText: "크흠 나 이제 이륙 준비해야 돼 다음에 봐!",
+        images: [],
+        actorReply: null
       }
     ]
   }
