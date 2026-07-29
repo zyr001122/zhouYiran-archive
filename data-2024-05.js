@@ -208,9 +208,9 @@ const posts_202405 = [
         id: 161006,
         username: "xixinzz",
         originalText: "还有13天高考[来]",
-        translatedText: "수능까지 13일 남았어[来]",
+        translatedText: "수능까지 13일 남았어[泪]",
         images: [],
-        actorReply: { originalText: "高考都加油", translatedText: "수능 보는 사람 다 화이팅" }
+        actorReply: { originalText: "高考都加油", translatedText: "수능 보는 사람들 화이팅" }
       },
       {
         id: 161007,
@@ -244,7 +244,7 @@ const posts_202405 = [
     date: "2024-05-31",
     weiboUrl: "https://weibo.com/5994946077/OgQzGpSfL",
     originalText: "晚餐✅ #本周报备#",
-    translatedText: "저녁완✅",
+    translatedText: "저녁밥✅",
     images: ["images/2405-dinner2.jpg"],
     comments: []
   }
