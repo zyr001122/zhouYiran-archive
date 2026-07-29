@@ -52,6 +52,7 @@ const WEIBO_EMOTICON_MAP = {
   '爱橙': 'loveorange_mobile',
   '老师': 'teacher_mobile',
   'fighting': 'fighting_mobile',
+  '笑哭': 'laughcry_mobile',
 };
 
 /**
