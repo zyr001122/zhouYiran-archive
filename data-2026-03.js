@@ -18,7 +18,7 @@ const posts_202603 = [
       {
         id: 303,
         username: "烟竹阮桐粥",
-        originalText: "轮家庭地位这一块[思考],
+        originalText: "轮家庭地位这一块[思考]",
         translatedText: "집안 서열에 대해서는 말이지[思考]",
         images: ["images/family-3shot.jpg"],
         actorReply: { originalText: "？？", translatedText: "？？" }
