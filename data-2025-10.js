@@ -12,7 +12,7 @@ const posts_202510 = [
         id: 25100102,
         username: "扁桃体发炎不发言-",
         originalText: "哥哥！请问唐亦寻他第一次开赛车紧张吗哈哈哈哈😆",
-        translatedText: "오빠! 탕이쉰으로 처음 레이싱 하는건데 긴장했어? ㅋㅋㅋㅋ😆",
+        translatedText: "오빠! 탕이쉰으로 처음 레이싱하는데 긴장 안 됐어? ㅋㅋㅋㅋ😆",
         images: ["images/2510-first-race.jpg"],
         actorReply: {
           originalText: "还行",
