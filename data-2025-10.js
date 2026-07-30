@@ -34,7 +34,7 @@ const posts_202510 = [
         id: 25100104,
         username: "魚肉蛋黄酥o_",
         originalText: "法拉利在赛车场享受按摩这事儿它跟你说了吗？🐶",
-        translatedText: "페라리 서킷에서 마사지 받았던데 페라리가 너한테 말했어?🐶",
+        translatedText: "페라리 서킷에서 마사지 받았던데 페라리가 얘기해줬어?🐶",
         images: ["images/2510-ferrari-massage.jpg"],
         actorReply: {
           originalText: "听说了",
@@ -56,7 +56,7 @@ const posts_202510 = [
         id: 25100106,
         username: "牙不吃香菜",
         originalText: "周哥有钓到什么吗",
-        translatedText: "오빠 뭐 낚은 거 있어?",
+        translatedText: "오빠 뭐 낚은 거야?",
         images: ["images/2510-fishing-catch.jpg"],
         actorReply: {
           originalText: "大鱼和小鱼",
@@ -78,7 +78,7 @@ const posts_202510 = [
         id: 25100108,
         username: "XJJJXI",
         originalText: "我还在吃饭呢 你吃饭了吗",
-        translatedText: "나 아직 밥 먹는 중인데 너는 밥 먹었어?",
+        translatedText: "난 아직 밥 먹는 중인데 너는 밥 먹었어?",
         images: ["images/2510-still-eating.jpg"],
         actorReply: {
           originalText: "还没",
@@ -133,7 +133,7 @@ const posts_202510 = [
         id: 25100101,
         username: "周翊然Tz",
         originalText: "我走了 明天见",
-        translatedText: "가볼게 내일 보자",
+        translatedText: "가볼게 낼 보자",
         images: [],
         actorReply: null
       }
