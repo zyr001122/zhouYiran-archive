@@ -5,14 +5,14 @@ const posts_202511 = [
     weiboUrl: "https://weibo.com/5994946077/Qf2M0uKrh",
     authorName: "周翊然Tz",
     originalText: "我又来了",
-    translatedText: "내가 다시 왔다",
+    translatedText: "다시 왔어",
     images: [],
     comments: [
       {
         id: 25110117,
         username: "周翊然Tz",
         originalText: "感受到了满满的爱 来自全世界的 非常的开心 也很感谢大家 我们明年见！",
-        translatedText: "전 세계에서 보내준 사랑 다 너무 잘 받았어 진짜 행복하고 너무 고마워 우리 내년에 보자!",
+        translatedText: "전 세계에서 보내준 모든 마음 다 너무 잘 받았어 진짜 행복하고 너무 고마워 우리 내년에 보자!",
         images: [],
         actorReply: null
       },
