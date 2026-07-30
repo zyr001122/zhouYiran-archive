@@ -71,6 +71,7 @@ const WEIBO_EMOTICON_MAP = {
   '允悲': 'xiaocry_check',
   '流鼻血': 'liubixie',
   '二哈': 'erha',
+  '无聊': 'bored',
 };
 
 /**
