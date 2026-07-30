@@ -266,8 +266,8 @@ margin: 26px 0 6px;
 }
 .day-divider:first-child { margin-top: 0; }
 .day-divider-label {
-font-size: 11px;
-font-weight: 700;
+font-size: 13px;
+font-weight: 800;
 color: var(--pink);
 letter-spacing: 0.01em;
 white-space: nowrap;
@@ -445,7 +445,7 @@ padding-left: 54px;
 .actor-reply-avatar { width: 18px; height: 18px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
 .actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .actor-reply-name { font-size: 10px; font-weight: 600; color: var(--pink); }
-.actor-reply-original { font-size: 11px; color: var(--pink-dim); line-height: 1.6; margin: 0 0 4px; }
+.actor-reply-original { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 4px; }
 .actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 500; line-height: 1.65; }
 .actor-reply .comment-images { padding-left: 0; margin-top: 8px; }
 
@@ -622,6 +622,7 @@ transition: opacity 0.15s ease;
 .comment-translated + .voice-message,
 .actor-reply-translated + .voice-message { margin-top: 6px; }
 .actor-reply .voice-message { margin-left: 0; }
+.comment-item > .voice-message { display: flex; margin-left: 34px; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -637,7 +638,7 @@ transition: opacity 0.15s ease;
 <button class="lightbox-close" onclick="closeLightbox()" aria-label="닫기">✕</button>
 <div class="lightbox-body">
 <img class="lightbox-img" id="lightboxImg" src="" alt="확대 이미지" />
-<a class="lightbox-save" id="lightboxSave" href="" download target="_blank" rel="noopener">저장 ↓</a>
+<button class="lightbox-save" id="lightboxSave" onclick="saveOrShareImage()">저장 ↓</button>
 </div>
 </div>
 
@@ -1185,13 +1186,12 @@ window.addEventListener('resize', updateScrollNav);
 updateScrollNav();
 
 // 이미지 크게보기 + 저장
+let currentLightboxSrc = '';
 function openLightbox(src) {
 const overlay = document.getElementById('lightboxOverlay');
 const img = document.getElementById('lightboxImg');
-const save = document.getElementById('lightboxSave');
 img.src = src;
-save.href = src;
-save.setAttribute('download', src.split('/').pop());
+currentLightboxSrc = src;
 overlay.classList.add('open');
 document.body.style.overflow = 'hidden';
 }
@@ -1202,6 +1202,31 @@ document.body.style.overflow = '';
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape') closeLightbox();
 });
+
+// 이미지 저장: 가능하면 네이티브 공유시트(iOS/Android에서 "사진에 저장"을 한 번에 지원)를 띄우고,
+// 지원 안 되는 환경(주로 데스크톱)에서는 기존 다운로드 방식으로 자동 전환됨.
+async function saveOrShareImage() {
+const src = currentLightboxSrc;
+if (!src) return;
+const fileName = src.split('/').pop();
+try {
+const response = await fetch(src);
+const blob = await response.blob();
+const file = new File([blob], fileName, { type: blob.type || 'image/jpeg' });
+if (navigator.canShare && navigator.canShare({ files: [file] })) {
+await navigator.share({ files: [file] });
+return;
+}
+} catch (err) {
+// 공유가 취소되었거나 실패하면 아래 다운로드 방식으로 넘어감
+}
+const a = document.createElement('a');
+a.href = src;
+a.download = fileName;
+document.body.appendChild(a);
+a.click();
+a.remove();
+}
 </script>
 </body>
 </html>
