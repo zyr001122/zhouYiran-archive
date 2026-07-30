@@ -8,7 +8,7 @@ const posts_202511 = [
     translatedText: "내가 다시 왔다",
     images: [],
     comments: [
-        {
+      {
         id: 25110117,
         username: "周翊然Tz",
         originalText: "感受到了满满的爱 来自全世界的 非常的开心 也很感谢大家 我们明年见！",
@@ -32,7 +32,7 @@ const posts_202511 = [
         username: "樱花味的cherry",
         originalText: "哥哥生日快乐！每天都快乐！我的愿望就是你许下的愿望都能实现！要一直一直幸福！",
         translatedText: "오빠 생일 축하해! 매일매일 행복하길! 내 소원은 오빠 소원이 다 이루어지는 거야! 항상 언제나 행복해야 해!",
-        images: ["images/2511-hat-like-socks.jpg"],
+        images: ["images/2511-my-wish.jpg"],
         actorReply: {
           originalText: "❤️",
           translatedText: "❤️"
@@ -91,7 +91,7 @@ const posts_202511 = [
         actorReply: {
           originalText: "新郎官？",
           translatedText: "신랑관?"
-        },
+        }
       },
       {
         id: 25110108,
@@ -153,7 +153,7 @@ const posts_202511 = [
         username: "翊点点喜欢_楠",
         originalText: "哥哥给你看我的耳洞",
         translatedText: "오빠 나 귀 뚫은 거 보여줄게",
-        images: ["images/2511-my-wish.jpg"],
+        images: ["images/2511-ear-piercing.jpg"],
         actorReply: {
           originalText: "打的时候疼不",
           translatedText: "뚫을 때 아팠어?"
@@ -204,7 +204,6 @@ const posts_202511 = [
         translatedText: "나 갈게 얘들아 겨울이니까 따뜻하게 입고 다니고 덕분에 생일이 정말 행복했어 ❤️❤️❤️",
         images: [],
         actorReply: null
-      }
       }
     ]
   }
