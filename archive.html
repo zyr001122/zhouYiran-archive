@@ -277,6 +277,24 @@ padding: 18px 0 4px;
 .feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
 .post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
 
+/* platform toggle: 초화(웨이보) / 도우인 */
+.platform-toggle { display: flex; gap: 4px; padding: 18px 0 0; }
+.platform-btn {
+font-size: 12px; font-weight: 700; letter-spacing: -0.005em; padding: 7px 14px; border-radius: 3px;
+border: none; background: var(--gray-bg); color: var(--gray-muted); cursor: pointer; font-family: inherit;
+transition: background 0.15s, color 0.15s;
+}
+.platform-btn:hover { color: var(--black); }
+.platform-btn.active { background: var(--pink); color: var(--white); }
+
+/* douyin card: 계정 폭파 등 사건 아카이빙용 타임라인 카드 */
+#douyin-feed { padding-bottom: 2rem; }
+.douyin-card { padding: 18px 0; border-top: 1px solid var(--border); }
+.douyin-card:first-of-type { border-top: none; }
+.douyin-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 6px; }
+.douyin-title { font-size: 14px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 8px; }
+.douyin-body { font-size: 13px; color: var(--black); line-height: 1.7; letter-spacing: -0.005em; white-space: pre-line; }
+
 /* ============ POSTS ============ */
 #posts-feed { padding-bottom: 2rem; }
 
@@ -678,8 +696,10 @@ transition: opacity 0.15s ease;
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 <div class="side-drawer-index">
 <a class="side-drawer-item current" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
-<a class="side-drawer-item" href="spinspin.html"><span class="idx">02</span>SpinSpin</a>
-<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>가이드</a>
+<a class="side-drawer-item" href="notice.html"><span class="idx">02</span>NOTICE</a>
+<a class="side-drawer-item" href="profile.html"><span class="idx">03</span>PROFILE</a>
+<a class="side-drawer-item" href="spinspin.html"><span class="idx">04</span>SpinSpin</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">05</span>가이드</a>
 </div>
 </nav>
 
@@ -699,9 +719,14 @@ transition: opacity 0.15s ease;
 
 <!-- WHITE PANEL -->
 <div class="panel">
+<div class="platform-toggle" id="platformToggle">
+<button class="platform-btn active" id="platformBtn-weibo" onclick="switchPlatform('weibo')">초화</button>
+<button class="platform-btn" id="platformBtn-douyin" onclick="switchPlatform('douyin')">도우인</button>
+</div>
+
 <div class="month-row" id="month-row"></div>
 
-<div class="search-row">
+<div class="search-row" id="searchRow">
 <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
 </div>
 
@@ -711,16 +736,18 @@ transition: opacity 0.15s ease;
 </div>
 
 <div class="feed-header">
-<div class="feed-title">초화 게시물</div>
+<div class="feed-title" id="feed-title">초화 게시물</div>
 <span class="post-count-badge" id="feed-count"></span>
 </div>
 
 <div id="posts-feed"></div>
+<div id="douyin-feed" style="display:none;"></div>
 </div>
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
 <script src="emoticons.js"></script>
+<script src="data-douyin.js"></script>
 <script src="data-2024-11.js"></script>
 <script src="data-2024-12.js"></script>
 <script src="data-2024-10.js"></script>
@@ -819,6 +846,46 @@ const ACTOR_IMG = 'IMG_1757.JPG';
 const ACTOR_NICK = '周翊然Tz';
 let currentFilter = { type: 'all', value: null };
 let dateTree = {};
+let currentPlatform = 'weibo';
+
+// ============ 플랫폼 전환: 초화(웨이보) / 도우인 ============
+function switchPlatform(platform) {
+currentPlatform = platform;
+document.getElementById('platformBtn-weibo').classList.toggle('active', platform === 'weibo');
+document.getElementById('platformBtn-douyin').classList.toggle('active', platform === 'douyin');
+
+const isWeibo = platform === 'weibo';
+document.getElementById('month-row').style.display = isWeibo ? '' : 'none';
+document.getElementById('searchRow').style.display = isWeibo ? '' : 'none';
+document.getElementById('filterBar').classList.remove('show');
+document.getElementById('posts-feed').style.display = isWeibo ? '' : 'none';
+document.getElementById('douyin-feed').style.display = isWeibo ? 'none' : '';
+document.getElementById('feed-title').textContent = isWeibo ? '초화 게시물' : '도우인 기록';
+
+if (isWeibo) {
+renderFeed();
+} else {
+renderDouyinFeed();
+}
+}
+
+function renderDouyinFeed() {
+const events = (typeof douyinEvents !== 'undefined' ? douyinEvents : []).slice()
+.sort((a, b) => new Date(b.date) - new Date(a.date));
+document.getElementById('feed-count').textContent = events.length + '개';
+if (!events.length) {
+document.getElementById('douyin-feed').innerHTML = '<div class="empty-state">기록이 없습니다.</div>';
+return;
+}
+document.getElementById('douyin-feed').innerHTML = events.map(ev => `
+<div class="douyin-card">
+<div class="douyin-date">${formatDateTime(ev.date)}</div>
+<div class="douyin-title">${ev.title}</div>
+${ev.body ? `<div class="douyin-body">${ev.body}</div>` : ''}
+${ev.images && ev.images.length ? renderImages(ev.images) : ''}
+</div>
+`).join('');
+}
 
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
