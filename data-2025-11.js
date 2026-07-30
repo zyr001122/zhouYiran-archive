@@ -191,7 +191,7 @@ const posts_202511 = [
         username: "甜粥软乎乎Tz",
         originalText: "新做的好看吗",
         translatedText: "새로 했는데 예쁘지?",
-        images: ["images/2511-new-look.jpg"],
+        images: ["images/2511-runny-nose.jpg"],
         actorReply: {
           originalText: "好看",
           translatedText: "예쁘네"
