@@ -12,11 +12,11 @@ const posts_202606 = [
         id: 26060101,
         username: "祈川十里春",
         originalText: "哥哥 这是你的新宠吗！什么时候给我们介绍介绍哈哈哈",
-        translatedText: "오빠 이거 새로 키우는 애야?! 우리한테 언제 소개해 줄 거야ㅎㅎㅎ",
+        translatedText: "오빠 얘 새로 키우는 애기야?! 우리한테 언제 소개해 줄 거야ㅎㅎㅎ",
         images: ["images/2606-new-pet.jpg"],
         actorReply: {
           originalText: "不是我的 hhh",
-          translatedText: "내가 키우는 애 아니야ㅋㅋㅋ"
+          translatedText: "내가 키우는 거 아니야ㅋㅋㅋ"
         }
       },
       {
