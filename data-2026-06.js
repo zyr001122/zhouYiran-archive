@@ -205,6 +205,8 @@ const posts_202606 = [
         originalText: "哥哥快看 小狗对烧卖🐶👅",
         translatedText: "오빠 봐봐 울 강아지가🐶👅",
         note: "원문 음성 메세지",
+        audio: "audio/2606-voice-c-yikouhanshi.mp3",
+        audioDuration: 1,
         images: ["images/2606-dog-siomai.jpg"],
         actorReply: {
           originalText: "",
