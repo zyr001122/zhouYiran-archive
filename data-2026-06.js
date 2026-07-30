@@ -37,7 +37,7 @@ const posts_202606 = [
         translatedText: "hey 자기야 내가 낚은 물고기 봐봐! 근데 걸린 게 다 너무 작아서 그냥 다 놓아줬어 넌 요즘 낚시해서 뭐 좀 건진 거 있어?",
         note: "원문 음성 메시지",
         audio: "audio/2606-voice-c-zhichiliangwanfan1.mp3",
-        audioDuration: 2,
+        audioDuration: 3,
         images: ["images/2606-fishing.jpg"],
         actorReply: {
           originalText: "你这个是抬调还是是露亚？看着像抬掉?",
@@ -84,7 +84,7 @@ const posts_202606 = [
         translatedText: "새 기능이 있다 그래서 한번 써보려고, 이제 음성도 보낼 수 있다며",
         note: "원문 음성 메시지",
         audio: "audio/2606-voice-0622-1752-self.mp3",
-        audioDuration: 3,
+        audioDuration: 5,
         images: [],
         actorReply: null
       },
@@ -95,7 +95,7 @@ const posts_202606 = [
         translatedText: "자기야 내가 찍은 노을 어때",
         note: "원문 음성 메시지",
         audio: "audio/2606-voice-c-shiwodetudou.mp3",
-        audioDuration: 1,
+        audioDuration: 3,
         images: ["images/2606-sunset-photo-2.jpg"],
         actorReply: {
           originalText: "不错不错",
@@ -109,7 +109,7 @@ const posts_202606 = [
         translatedText: "어제 절친 아니랄까봐 표정도 완전 똑같던데 언제 또 같은 표정 재현해줄 거야[钢铁侠]",
         note: "원문 음성 메시지",
         audio: "audio/2606-voice-c-zhichiliangwanfan2.mp3",
-        audioDuration: 2,
+        audioDuration: 4,
         images: ["images/2606-same-expression.jpg"],
         actorReply: {
           originalText: "",
@@ -134,7 +134,7 @@ const posts_202606 = [
         translatedText: "왜! 왜! 왜 나는 한참 얘기해도 넌 왜 몇 마디만 보내는건데? 너 진짜 차갑다 너의 차가움은 마치 북극의 얼음 같아. 너의 차가움은 히말라야산에서 쏟아지는 얼음물이 뜨거운 내 마음속 열정에 부어지는 것 같아, 온몸이 다 젖어서 손발까지 떨려. 대체 어떻게 해야 네가 예전처럼 다시 나한테 열정을 보여줄 수 있는지 말해줘 우리 진짜 이대로 돌아갈 수 없는 거 아니지?! 내 마음은 마치 영하 100도 물에 잠긴 것처럼 마비된 것 같다고",
         note: "원문 음성 메시지",
         audio: "audio/2606-voice-c-ranzhimaokan.mp3",
-        audioDuration: 1,
+        audioDuration: 2,
         images: ["images/2606-cold-drawing.jpg"],
         actorReply: {
           originalText: "",
@@ -192,7 +192,7 @@ const posts_202606 = [
         translatedText: "주익연 이거 어떻게 한 거야? 따라하게 강의 좀ㅋㅋㅋ",
         note: "원문 음성 메세지",
         audio: "audio/2606-voice-c-zhouniuniu.mp3",
-        audioDuration: 3,
+        audioDuration: 5,
         images: ["images/2606-how-to.jpg"],
         actorReply: {
           originalText: "这个就是这样做，然后那样做，然后再这样做就可以了",
@@ -206,7 +206,7 @@ const posts_202606 = [
         translatedText: "오빠 봐봐 울 강아지가🐶👅",
         note: "원문 음성 메세지",
         audio: "audio/2606-voice-c-yikouhanshi.mp3",
-        audioDuration: 1,
+        audioDuration: 3,
         images: ["images/2606-dog-siomai.jpg"],
         actorReply: {
           originalText: "",
@@ -231,7 +231,29 @@ const posts_202606 = [
         translatedText: "최근에 많은 분들을 봤어요 사연래를 통해서 저를 알게 된 분들 정말 영광스럽고 또 너무 기뻐요 그리고 많은 팬분들이 저한테 남겨준 댓글이랑 남겨주신 메시지도 봤는데 저를 응원해 주시고 인정해 주시는 내용이 많더라고요 전부 다 확인했고 정말 모든분들께 감사드립니다 사연래에 대한 여러분의 인정에도 너무 감사드리고 그리고 팬분들께도 정말 고마워요 지금까지 변함없이 응원해 주셔서 어.. 사실 저는 가끔ㅎㅎ 팬분들이 저보다 더 힘들 수도 있다는 걸 알고 있어요 그래서… 저는 이게 제 영광이라고 생각하고 너무 감사해요 그래서 이 자리를 빌려 여러분께 정중하게 감사 인사를 드리고 싶어요",
         note: "원문 음성 메시지 (51초)",
         audio: "audio/2606-voice-0622-1807-self.mp3",
-        audioDuration: 51,
+        audioDuration: 56,
+        images: [],
+        actorReply: null
+      },
+      {
+        id: 26060119,
+        username: "圣焄妻",
+        originalText: "哥哥巴黎有没有手搓五老哥[可怜]",
+        translatedText: "오빠 파리에서 오빠가 찍은 브이로그 있는 거지?[可怜]",
+        note: "원문 음성 메세지",
+        images: [],
+        actorReply: {
+          originalText: "我只能尽力而为",
+          translatedText: "나도 최선을 다하고 있어",
+          audio: "audio/2606-voice-c-shengxunqi.mp3",
+          audioDuration: 5
+        }
+      },
+      {
+        id: 26060128,
+        username: "圣焄妻",
+        originalText: "[@微博智搜] 夸一下周翊然",
+        translatedText: "[@微博智搜] 주익연 칭찬 좀 해줘",
         images: [],
         actorReply: null
       },
@@ -286,7 +308,7 @@ const posts_202606 = [
         translatedText: "자기야 이번 브이로그는 1시간 정도 분량이면 돼, 너무 무리하지 마[并不简单]",
         note: "원문 음성 메세지",
         audio: "audio/2606-voice-c-shiyuegege.mp3",
-        audioDuration: 1,
+        audioDuration: 2,
         images: [],
         actorReply: {
           originalText: "好的好的，我尽力而为",
