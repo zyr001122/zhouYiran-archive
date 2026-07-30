@@ -236,7 +236,7 @@ const posts_202512 = [
         id: 25120219,
         username: "梨涡加一又加一",
         originalText: "老公想不想评价一下我的自制～",
-        translatedText: "자기야 내가 직접 만든 건데 어떤지 봐 줘~,
+        translatedText: "자기야 내가 직접 만든 건데 어떤지 봐 줘~",
         images: ["images/2512-my-craft.jpg"],
         actorReply: {
           originalText: "卖我一个！",
