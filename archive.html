@@ -919,8 +919,8 @@ ${!sameText(c.originalText, c.translatedText) ? `<div class="comment-original zh
 <div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
 ${c.note ? `<div class="comment-note">note: ${c.note}</div>` : ''}
 ${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
-${c.audio ? renderVoiceMessageHtml(c.audio, c.audioDuration) : ''}
 ${replyHtml}
+${c.audio ? renderVoiceMessageHtml(c.audio, c.audioDuration) : ''}
 </div>`;
 }
 
