@@ -141,7 +141,7 @@ const posts_202603 = [
         originalText: "如何🏎️？",
         translatedText: "레이싱 어때🏎️？",
         images: ["images/labubu-racing.jpg"],
-        actorReply: { originalText: "？？ 这是你家吗", translatedText: "？？ 여기 너네 집이야?" }
+        actorReply: { originalText: "", translatedText: "", images: ["images/jeonbyeong-food.jpg"] }
       },
       {
         id: 319,
