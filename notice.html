@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOTICE · 周翊然Tz 초화 번역 아카이브</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Archivo+Black&display=swap" rel="stylesheet" />
+<style>
+:root {
+--pink: #F0577F;
+--pink-pale: #FDEEF1;
+--pink-dim: #f7b3c4;
+--tab-inactive: #322b31;
+--black: #1a1216;
+--gray-muted: #c4c4c4;
+--gray-bg: #f4f4f4;
+--border: #ececec;
+--white: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: 'Pretendard', -apple-system, sans-serif;
+background: var(--white);
+color: var(--black);
+letter-spacing: -0.01em;
+-webkit-font-smoothing: antialiased;
+}
+
+/* ============ HERO / DARK BAND ============ */
+.hero-band { background: var(--black); padding: 20px 20px 24px; position: relative; }
+.hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+.hamburger-btn {
+display: flex; width: 32px; height: 32px; background: var(--pink); border: none; cursor: pointer;
+flex-direction: column; align-items: center; justify-content: center; gap: 6px; flex-shrink: 0;
+}
+.hamburger-btn .bar { width: 15px; height: 1.5px; background: var(--white); transition: transform 0.2s ease, opacity 0.2s ease; }
+.hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
+.hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+
+.side-drawer-overlay {
+position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
+transition: opacity 0.25s ease; z-index: 600;
+}
+.side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
+.side-drawer {
+position: fixed; top: 0; right: 0; height: 100%; width: min(300px, 78vw); background: var(--black);
+transform: translateX(100%); transition: transform 0.3s ease; z-index: 601;
+display: flex; flex-direction: column; padding: 20px 0 0;
+}
+.side-drawer.open { transform: translateX(0); }
+.side-drawer-close {
+align-self: flex-end; width: 32px; height: 32px; margin: 0 20px 24px; background: rgba(255,255,255,0.08);
+border: none; border-radius: 3px; color: var(--white); font-size: 15px; cursor: pointer;
+display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.side-drawer-close:hover { background: rgba(255,255,255,0.16); }
+.side-drawer-index { display: flex; flex-direction: column; }
+.side-drawer-item {
+display: flex; align-items: baseline; gap: 14px; padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.08);
+text-decoration: none; color: rgba(255,255,255,0.55); font-size: 16px; font-weight: 600;
+letter-spacing: -0.01em; transition: color 0.15s;
+}
+.side-drawer-item:first-child { border-top: none; }
+.side-drawer-item .idx { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 11px; color: var(--pink-dim); letter-spacing: 0.03em; }
+.side-drawer-item:hover { color: rgba(255,255,255,0.85); }
+.side-drawer-item.current { color: var(--pink); }
+.side-drawer-item.current .idx { color: var(--pink); }
+
+.page-wordmark {
+max-width: 640px; margin: 0 auto; font-family: 'Archivo Black', 'Pretendard', sans-serif; font-weight: 400;
+font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em; padding: 16px 0 4px;
+}
+.page-sub { max-width: 640px; margin: 0 auto; font-size: 12px; color: var(--pink-dim); letter-spacing: -0.01em; }
+
+/* ============ PANEL ============ */
+.panel { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.feed-header { display: flex; align-items: baseline; justify-content: space-between; padding: 22px 0 4px; }
+.feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
+.post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
+
+#notice-feed { padding-bottom: 3rem; }
+.notice-card { padding: 18px 0; border-top: 1px solid var(--border); }
+.notice-card:first-of-type { border-top: none; }
+.notice-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 6px; }
+.notice-title { font-size: 14.5px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 8px; }
+.notice-title.pinned::before { content: '📌 '; }
+.notice-body { font-size: 13px; color: var(--black); line-height: 1.7; letter-spacing: -0.005em; white-space: pre-line; }
+
+.empty-state { padding: 60px 0; text-align: center; font-size: 13px; color: var(--gray-muted); }
+
+.site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- SIDE DRAWER NAV -->
+<div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
+<nav class="side-drawer" id="sideDrawer">
+<button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
+<div class="side-drawer-index">
+<a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
+<a class="side-drawer-item current" href="notice.html"><span class="idx">02</span>NOTICE</a>
+<a class="side-drawer-item" href="profile.html"><span class="idx">03</span>PROFILE</a>
+<a class="side-drawer-item" href="spinspin.html"><span class="idx">04</span>SpinSpin</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">05</span>가이드</a>
+</div>
+</nav>
+
+<!-- HERO / DARK BAND -->
+<div class="hero-band">
+<div class="hero-nav">
+<button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+<span class="bar"></span>
+<span class="bar"></span>
+</button>
+</div>
+<div class="page-wordmark">NOTICE</div>
+<div class="page-sub">사이트 관련 공지사항</div>
+</div>
+
+<!-- WHITE PANEL -->
+<div class="panel">
+<div class="feed-header">
+<div class="feed-title">공지사항</div>
+<span class="post-count-badge" id="notice-count"></span>
+</div>
+<div id="notice-feed"></div>
+</div>
+
+<footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
+
+<script>
+/* 공지 추가는 아래 배열에 새 항목을 위에서부터 추가하면 됨 (최신순 정렬은 date 기준 자동) */
+const notices = [
+{
+id: 1,
+date: "2026-07-31",
+title: "NOTICE 게시판을 새로 만들었어요",
+pinned: true,
+body: "사이트 업데이트나 공지 사항을 여기에 올릴 예정입니다.\n내용은 추후 채워질 예정이에요."
+}
+];
+
+function toggleMobileMenu() {
+document.getElementById('hamburgerBtn').classList.toggle('open');
+document.getElementById('sideDrawer').classList.toggle('open');
+document.getElementById('sideDrawerOverlay').classList.toggle('open');
+document.body.style.overflow = document.getElementById('sideDrawer').classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('keydown', e => {
+if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
+});
+
+function formatDate(d) {
+const date = new Date(d);
+return `${date.getFullYear()}.${(date.getMonth()+1).toString().padStart(2,'0')}.${date.getDate().toString().padStart(2,'0')}`;
+}
+
+function renderNotices() {
+const sorted = [...notices].sort((a, b) => {
+if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
+return new Date(b.date) - new Date(a.date);
+});
+document.getElementById('notice-count').textContent = notices.length + '개';
+if (!sorted.length) {
+document.getElementById('notice-feed').innerHTML = '<div class="empty-state">등록된 공지가 없습니다.</div>';
+return;
+}
+document.getElementById('notice-feed').innerHTML = sorted.map(n => `
+<div class="notice-card">
+<div class="notice-date">${formatDate(n.date)}</div>
+<div class="notice-title${n.pinned ? ' pinned' : ''}">${n.title}</div>
+<div class="notice-body">${n.body}</div>
+</div>
+`).join('');
+}
+renderNotices();
+</script>
+</body>
+</html>
