@@ -53,7 +53,7 @@ const posts_202603 = [
         originalText: "小然 好奇上次vlog里这个角度是咋拍的！🤔",
         translatedText: "익연아 궁금한 게 지난 브이로그에서 이 각도는 어떻게 찍은 거야!🤔",
         images: ["images/paris-vlog.jpg"],
-        actorReply: { originalText: "把相机放在地上 拍完再跑回去捡[航天员]", translatedText: "카메라를 바닥에 두고 찍은 다음에 다시 뛰어가서 주워왔어[航天员] }
+        actorReply: { originalText: "把相机放在地上 拍完再跑回去捡[航天员]", translatedText: "카메라를 바닥에 두고 찍은 다음에 다시 뛰어가서 주워왔어[航天员]"}
       },
       {
         id: 308,
