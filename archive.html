@@ -52,21 +52,8 @@ align-items: center;
 justify-content: flex-end;
 gap: 20px;
 }
-.nav-links { display: flex; align-items: center; gap: 20px; }
-.nav-link {
-font-size: 12px;
-font-weight: 500;
-color: rgba(255,255,255,0.55);
-letter-spacing: -0.01em;
-text-decoration: none;
-cursor: pointer;
-transition: color 0.15s;
-}
-.nav-link:hover { color: rgba(255,255,255,0.85); }
-.nav-link.current { color: var(--pink); font-weight: 700; }
-
 .hamburger-btn {
-display: none;
+display: flex;
 width: 32px;
 height: 32px;
 background: var(--pink);
@@ -87,28 +74,76 @@ transition: transform 0.2s ease, opacity 0.2s ease;
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 
-.mobile-dropdown {
-max-width: 640px;
-margin: 0 auto;
-max-height: 0;
+/* side drawer nav: 클릭하면 오른쪽에서 슬라이드로 튀어나오는 인덱스형 메뉴 */
+.side-drawer-overlay {
+position: fixed;
+inset: 0;
+background: rgba(26,18,22,0.6);
 opacity: 0;
-overflow: hidden;
-transition: max-height 0.22s ease, opacity 0.18s ease;
+pointer-events: none;
+transition: opacity 0.25s ease;
+z-index: 600;
 }
-.mobile-dropdown.open { max-height: 200px; opacity: 1; margin-top: 10px; }
-.mobile-dropdown-inner { background: var(--tab-inactive); }
-.mobile-dropdown-item {
-padding: 13px 16px;
-font-size: 13px;
-font-weight: 500;
-color: rgba(255,255,255,0.65);
-border-bottom: 1px solid rgba(255,255,255,0.08);
+.side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
+
+.side-drawer {
+position: fixed;
+top: 0;
+right: 0;
+height: 100%;
+width: min(300px, 78vw);
+background: var(--black);
+transform: translateX(100%);
+transition: transform 0.3s ease;
+z-index: 601;
+display: flex;
+flex-direction: column;
+padding: 20px 0 0;
+}
+.side-drawer.open { transform: translateX(0); }
+
+.side-drawer-close {
+align-self: flex-end;
+width: 32px;
+height: 32px;
+margin: 0 20px 24px;
+background: rgba(255,255,255,0.08);
+border: none;
+border-radius: 3px;
+color: var(--white);
+font-size: 15px;
 cursor: pointer;
-text-decoration: none;
-display: block;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
-.mobile-dropdown-item:last-child { border-bottom: none; }
-.mobile-dropdown-item.current { color: var(--pink); font-weight: 700; }
+.side-drawer-close:hover { background: rgba(255,255,255,0.16); }
+
+.side-drawer-index { display: flex; flex-direction: column; }
+.side-drawer-item {
+display: flex;
+align-items: baseline;
+gap: 14px;
+padding: 20px 24px;
+border-top: 1px solid rgba(255,255,255,0.08);
+text-decoration: none;
+color: rgba(255,255,255,0.55);
+font-size: 16px;
+font-weight: 600;
+letter-spacing: -0.01em;
+transition: color 0.15s;
+}
+.side-drawer-item:first-child { border-top: none; }
+.side-drawer-item .idx {
+font-family: 'Archivo Black', 'Pretendard', sans-serif;
+font-size: 11px;
+color: var(--pink-dim);
+letter-spacing: 0.03em;
+}
+.side-drawer-item:hover { color: rgba(255,255,255,0.85); }
+.side-drawer-item.current { color: var(--pink); }
+.side-drawer-item.current .idx { color: var(--pink); }
 
 .archive-wordmark {
 max-width: 640px;
@@ -145,11 +180,6 @@ white-space: nowrap;
 }
 .year-tab:hover { color: rgba(255,255,255,0.8); }
 .year-tab.active { background: var(--pink); color: var(--white); }
-
-@media (max-width: 600px) {
-.nav-links { display: none; }
-.hamburger-btn { display: flex; }
-}
 
 /* ============ WHITE PANEL ============ */
 .panel {
@@ -642,26 +672,24 @@ transition: opacity 0.15s ease;
 </div>
 </div>
 
+<!-- SIDE DRAWER NAV -->
+<div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
+<nav class="side-drawer" id="sideDrawer">
+<button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
+<div class="side-drawer-index">
+<a class="side-drawer-item current" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
+<a class="side-drawer-item" href="spinspin.html"><span class="idx">02</span>SpinSpin</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>가이드</a>
+</div>
+</nav>
+
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
 <div class="hero-nav">
-<div class="nav-links">
-<a class="nav-link current" href="archive.html">archive</a>
-<a class="nav-link" href="spinspin.html">SpinSpin</a>
-<a class="nav-link" href="guide.html">가이드</a>
-</div>
 <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
 <span class="bar"></span>
 <span class="bar"></span>
 </button>
-</div>
-
-<div class="mobile-dropdown" id="mobileDropdown">
-<div class="mobile-dropdown-inner">
-<a class="mobile-dropdown-item current" href="archive.html">archive</a>
-<a class="mobile-dropdown-item" href="spinspin.html">SpinSpin</a>
-<a class="mobile-dropdown-item" href="guide.html">가이드</a>
-</div>
 </div>
 
 <div class="archive-wordmark">ARCHIVE</div>
@@ -794,7 +822,9 @@ let dateTree = {};
 
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
-document.getElementById('mobileDropdown').classList.toggle('open');
+document.getElementById('sideDrawer').classList.toggle('open');
+document.getElementById('sideDrawerOverlay').classList.toggle('open');
+document.body.style.overflow = document.getElementById('sideDrawer').classList.contains('open') ? 'hidden' : '';
 }
 
 function formatDateTime(d) {
@@ -1200,7 +1230,10 @@ document.getElementById('lightboxOverlay').classList.remove('open');
 document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => {
-if (e.key === 'Escape') closeLightbox();
+if (e.key === 'Escape') {
+closeLightbox();
+if (document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
+}
 });
 
 // 이미지 저장: 가능하면 네이티브 공유시트(iOS/Android에서 "사진에 저장"을 한 번에 지원)를 띄우고,
