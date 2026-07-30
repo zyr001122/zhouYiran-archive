@@ -92,7 +92,7 @@ const posts_202512 = [
         id: 25120206,
         username: "周周想念然Tz",
         originalText: "然然今年最后一个月你可以先实现我的愿望“翻翻我” 我再祝你实现你的心愿好嘛",
-        translatedText: "익연아 올해 마지막 달이니까 나한테 답장해주기 라는 내 소원부터 먼저 이뤄주면 안 돼? 그담에 내가 너 소원 이뤄지라고 빌어줄게 어때",
+        translatedText: "익연아 올해 마지막 달이니까 익연이한테 답장받기 라는 내 소원부터 먼저 이뤄주면 안 돼? 그담에 내가 너 소원 이뤄지라고 빌어줄게 어때",
         images: ["images/2512-flip-me.jpg"],
         actorReply: {
           originalText: "[doge]",
