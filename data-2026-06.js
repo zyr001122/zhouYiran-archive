@@ -220,18 +220,6 @@ const posts_202606 = [
         actorReply: null
       },
       {
-        id: 26060119,
-        username: "圣煮妻",
-        originalText: "哥哥巴黎有没有手搓五老哥😭🤔",
-        translatedText: "오빠 파리에서 파이브 가이즈 같이 수제버거라도 직접 만든 거 있어?😭🤔",
-        note: "익연이 답글은 4초 음성 메시지 + 텍스트",
-        images: [],
-        actorReply: {
-          originalText: "我只能尽力而为",
-          translatedText: "나도 최선을 다할 뿐이야 (음성 4초)"
-        }
-      },
-      {
         id: 26060120,
         username: "MangoBasque",
         originalText: "评价一下我的画功[航天员]",
