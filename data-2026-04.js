@@ -69,7 +69,7 @@ const posts_202604 = [
         originalText: "哥哥你的微博有没有语音评论的功能呀",
         translatedText: "오빠는 웨이보에 음성 댓글 기능 없어?",
         images: ["images/maotai-forehead.jpg"],
-        actorReply: { originalText: "看了一下 没有", translatedText: "방금 찾아 봤는데 없어" }
+        actorReply: { originalText: "看了一下 没有", translatedText: "방금 찾아 봤는데 없네" }
       },
       {
         id: 210,
@@ -115,7 +115,7 @@ const posts_202604 = [
         id: 215,
         username: "祈川十里春",
         originalText: "这么大一条鱼钓了多久呀？要不要考虑分享一下钓鱼技术！",
-        translatedText: "이정도로 큰 물고기는 낚을려면 데 얼마나 걸려? 낚시 스킬 공유 해줄 생각 없어?!",
+        translatedText: "이정도로 큰 물고기는 낚을려면 얼마나 걸려? 낚시 스킬 공유 해줄 생각 없어?!",
         images: ["images/fishing-bw.jpg"],
         actorReply: { originalText: "遛鱼十分钟", translatedText: "물고기랑 10분동안 씨름했어" }
       },
@@ -139,7 +139,7 @@ const posts_202604 = [
         id: 218,
         username: "忙内专家",
         originalText: "猜你想念重庆的火锅了",
-        translatedText: "충칭 훠궈 땡기지",
+        translatedText: "충칭 훠궈 땡기지 먹고싶지",
         images: ["images/hotpot1.jpg", "images/hotpot2.jpg"],
         actorReply: { originalText: "又来诱惑我🙂", translatedText: "또 나 유혹하네🙂" }
       },
@@ -149,15 +149,15 @@ const posts_202604 = [
         originalText: "哥哥你这拍的是什么呀 看半天没有看出来是什么",
         translatedText: "오빠 이거 뭘 찍은 거야? 한참 봐도 뭔지 모르겠어",
         images: ["images/leaf-tree.jpg"],
-        actorReply: { originalText: "树上全是公鸡 看不出来吧哈哈哈", translatedText: "나무 위에 수탉 가득한 거 안 보여?ㅋㅋㅋ" }
+        actorReply: { originalText: "树上全是公鸡 看不出来吧哈哈哈", translatedText: "나무 위에 수탉 크게 있는 거 안 보여?ㅋㅋㅋ" }
       },
       {
         id: 220,
         username: "Michelleq_0915",
         originalText: "哥哥请选择你的英雄",
-        translatedText: "오빠 캐릭 선택해 줘",
+        translatedText: "오빠 챔피언 선택해주세요",
         images: ["images/racing-green.jpg", "images/naci-green.jpg", "images/purple-hat-green.jpg"],
-        actorReply: { originalText: "画得很好啊", translatedText: "잘 그렸네" }
+        actorReply: { originalText: "画得很好啊", translatedText: "잘 그렸당" }
       },
       {
         id: 201,
