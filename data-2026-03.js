@@ -194,7 +194,7 @@ const posts_202603 = [
       {
         id: 301,
         username: "周翊然Tz",
-        originalText: "走啦 下次见各位🫡",
+        originalText: "走啦 下次见各位[航天员]",
         translatedText: "갈게 담에 봐 얘들아[航天员] ",
         images: [],
         actorReply: null
