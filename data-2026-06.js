@@ -12,7 +12,7 @@ const posts_202606 = [
         id: 26060107,
         username: "周翊然Tz",
         originalText: "试一下这个新的功能，听说现在可以发语音",
-        translatedText: "새 기능이 있다 그래서 한번 써보려고, 이제 음성도 보낼 수 있다던데",
+        translatedText: "새 기능 생겼다 그래서 한 번 써보려고, 이제 음성도 보낼 수 있네",
         note: "원문 음성 메시지",
         audio: "audio/26-6-22 1752 zyr.MP3",
         audioDuration: 6,
