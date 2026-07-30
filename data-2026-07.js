@@ -216,7 +216,7 @@ const posts_202607 = [
         actorReply: {
           originalText: "头盔帮我换一下",
           translatedText: "헬멧 좀 바꿔줘",
-          images: ["images/2607-c19-reply.jpg"]
+          replyImages: ["images/2607-c19-reply.jpg"]
         }
       },
       {
@@ -228,7 +228,7 @@ const posts_202607 = [
         actorReply: {
           originalText: "",
           translatedText: "",
-          images: ["images/2607-c20-reply.jpg"]
+          replyImages: ["images/2607-c20-reply.jpg"]
         }
       },
       {
