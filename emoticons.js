@@ -68,6 +68,9 @@ const WEIBO_EMOTICON_MAP = {
   '手指比心': 'HandHeart',
   '钢铁侠': 'ironman01',
   '毕业快乐': 'Happygraduation',
+  '允悲': 'xiaocry_check',
+  '流鼻血': 'liubixie',
+  '二哈': 'erha',
 };
 
 /**
