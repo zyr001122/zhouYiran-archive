@@ -125,8 +125,19 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .wiki-section-title .num { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 11px; color: var(--pink); }
 .wiki-section-body { font-size: 13px; color: var(--black); line-height: 1.75; letter-spacing: -0.005em; }
 .wiki-section-body.tbd { color: var(--gray-muted); font-style: normal; }
-.wiki-subsection { margin-top: 14px; }
+.wiki-subsection { margin-top: 18px; }
+.wiki-subsection:first-child { margin-top: 0; }
 .wiki-subsection-title { font-size: 13px; font-weight: 700; color: var(--pink); margin-bottom: 6px; }
+.act-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+.act-row:last-child { border-bottom: none; }
+.act-year { width: 76px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
+.act-detail { flex: 1; color: var(--black); line-height: 1.6; }
+.act-tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 6px; }
+.hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
+.infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
+.infobox-value a:hover { text-decoration: underline; }
+.etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
+.etc-dot { color: var(--pink); flex-shrink: 0; }
 
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
 
@@ -313,11 +324,18 @@ color: var(--gray-muted);
 <div class="infobox-name">주익연</div>
 <div class="infobox-name-zh">周翊然</div>
 <div class="infobox-table">
-<div class="infobox-row"><div class="infobox-label">본명</div><div class="infobox-value tbd">추가 예정</div></div>
-<div class="infobox-row"><div class="infobox-label">생년월일</div><div class="infobox-value tbd">추가 예정</div></div>
-<div class="infobox-row"><div class="infobox-label">소속</div><div class="infobox-value tbd">추가 예정</div></div>
-<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value tbd">추가 예정</div></div>
-<div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value tbd">추가 예정</div></div>
+<div class="infobox-row"><div class="infobox-label">이름</div><div class="infobox-value">저우이란 <span class="hanja">(周翊然, Zhōu Yìrán)</span></div></div>
+<div class="infobox-row"><div class="infobox-label">생년월일</div><div class="infobox-value">2000.11.22 · 충칭시</div></div>
+<div class="infobox-row"><div class="infobox-label">국적</div><div class="infobox-value">중국 (한족)</div></div>
+<div class="infobox-row"><div class="infobox-label">신체</div><div class="infobox-value">182cm · O형</div></div>
+<div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학 (졸업)</div></div>
+<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사</div></div>
+<div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
+<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
+<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 일척염 <span style="color:#F7A4B8;">●</span></div></div>
+<div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)</div></div>
+<div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP</div></div>
+<div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value"><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div></div>
 </div>
 </div>
 
@@ -332,22 +350,121 @@ color: var(--gray-muted);
 <!-- SECTIONS -->
 <section class="wiki-section" id="profile">
 <div class="wiki-section-title"><span class="num">01</span>프로필</div>
-<div class="wiki-section-body tbd">내용 추가 예정입니다.</div>
+<div class="wiki-section-body">중국의 배우, 가수, 레이싱 드라이버.</div>
 </section>
 
 <section class="wiki-section" id="activity">
 <div class="wiki-section-title"><span class="num">02</span>활동</div>
-<div class="wiki-section-body tbd">내용 추가 예정입니다.</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">드라마</div>
+<div class="act-row"><div class="act-year">2020</div><div class="act-detail">봉귀사시가(凤归四时歌) · 종리(钟离)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2021</div><div class="act-detail">배탁료반장(拜托了班长) · 예징시(叶景希)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2021</div><div class="act-detail">니미소시흔미(你微笑时很美) · 아이자(艾佳)</div></div>
+<div class="act-row"><div class="act-year">2021</div><div class="act-detail">교가적아녀(乔家的儿女) · 차오치치(乔七七)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2021</div><div class="act-detail">소민가(小敏家) · 진자준(金家骏)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2021</div><div class="act-detail">니시아최첨밀적심사(你是我最甜蜜的心事) · 린란(林燃)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2022</div><div class="act-detail">이십불혹2(二十不惑2) · 인상(殷赏)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2022</div><div class="act-detail">재니적동야리섬요(在你的冬夜里闪耀) · 무쯔시(慕子希)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2023</div><div class="act-detail">당아비분향니(当我飞奔向你) · 장루랑(张陆让)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2023</div><div class="act-detail">백일몽아(白日梦我) · 선쥐안(沈倦)</div></div>
+<div class="act-row"><div class="act-year">2023</div><div class="act-detail">작작풍류(灼灼风流) · 류침(刘琛)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2024</div><div class="act-detail">투라대륙지연혼전(斗罗大陆之燃魂战) · 당삼(唐三)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">환우(煥羽) · 밍성(明盛)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">십이봉신(十二封信) · 탕이쉰(唐亦寻)</div></div>
+<div class="act-row"><div class="act-year">2026</div><div class="act-detail">강호야우십년등(江湖夜雨十年灯) · 모청안(慕清晏)/상녕(常宁)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">2026</div><div class="act-detail">교초(翘楚) · 사연래(谢燕来)</div></div>
+<div class="act-row"><div class="act-year">미정</div><div class="act-detail">아규묵두아(我叫墨斗儿) · 묵두(墨斗)<span class="act-tag">주연</span></div></div>
+<div class="act-row"><div class="act-year">미정</div><div class="act-detail">생명연(生命缘) · 샤자오양(夏朝阳)</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">영화</div>
+<div class="act-row"><div class="act-year">2018</div><div class="act-detail">쾌파아가대주(快把我哥带走) · 완쑤이(万岁)<span class="act-tag">조연</span></div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">예능</div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5(五十公里桃花坞5)</div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소(一见你就笑) EP.11</div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14(奔跑吧14)</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">음반</div>
+<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail">单恋 (짝사랑) · 싱글 1집</div></div>
+<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail">谈一场恋爱 (우리 연애나 할까) · 싱글 2집</div></div>
+<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail">你知道我知道 (알잖아, 내 마음) · 《배탁료반장》 OST</div></div>
+<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail">心事 (마음속 비밀) · 《니시아최첨밀적심사》 OST</div></div>
+<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail">誰是你朋友 (누가 네 친구야?) · 프로젝트 싱글</div></div>
+<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail">前行 (나아가다) · 《투라대륙지연혼전》 주제곡</div></div>
+<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail">心有所感 (마음에 새겨진 정) · 《교초》 삽입곡</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">광고 및 홍보대사</div>
+<div class="act-row"><div class="act-year">2022</div><div class="act-detail">白家阿宽(도시 미식 대언인), Clarins(글로우 지우), MISTINE(베이스 메이크업 대사), GODIVA(브랜드 대사), 康师傅饮用水(브랜드 대사), CRD克徕帝(신품 브랜드 지우)</div></div>
+<div class="act-row"><div class="act-year">2023~2024</div><div class="act-detail">Stride炫迈(브랜드 대사), YAYA鸭鸭(브랜드 대언인)</div></div>
+<div class="act-row"><div class="act-year">2024</div><div class="act-detail">L'OCCITAN(바디케어 대사), 艾森丝essence(브랜드 대사), THE WHOO 后(취광 대사), 茶百道 ChaPanda(가을 시즌 대사)</div></div>
+<div class="act-row"><div class="act-year">2024~2025</div><div class="act-detail">Saucony(캠퍼스 시리즈 대언인), Nuxe(클렌징 시리즈 대언인), 立白(마스터 향기 모던 대사)</div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">夸克(여름 시즌 대사)</div></div>
+<div class="act-row"><div class="act-year">2025~2026</div><div class="act-detail">小野和子(선케어 대언인), 网易严选(라이프스타일 대사)</div></div>
+<div class="act-row"><div class="act-year">현재</div><div class="act-detail">LATEMON浪特梦眼镜(2023~, 브랜드 대언인), 불가리(아시아 태평양 브랜드 대사), 구찌(2024~, 브랜드 지우), 겔랑(스킨케어 대사), APM_MONACO(아태 브랜드 대언인), WeTV(글로벌 대언인), AMI(2025~, 글로벌 대사), 天猫 타오바오(2026~, 환신 대사), 自然堂(청춘 대언인), 花间颂(베이스 메이크업 대언인)</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">화보 (표지)</div>
+<div class="act-row"><div class="act-year">2023.05</div><div class="act-detail">PurplePearlRising</div></div>
+<div class="act-row"><div class="act-year">2023.08</div><div class="act-detail">广东电视台娱乐周刊</div></div>
+<div class="act-row"><div class="act-year">2023.08</div><div class="act-detail">BOBOSNAP</div></div>
+<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">费加罗男士</div></div>
+<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">时装LOFFICIEL</div></div>
+<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">红秀GRAZIA</div></div>
+<div class="act-row"><div class="act-year">2023.12</div><div class="act-detail">时装男士</div></div>
+<div class="act-row"><div class="act-year">2024.01</div><div class="act-detail">ELLEMEN新青年</div></div>
+<div class="act-row"><div class="act-year">2024.01</div><div class="act-detail">精彩OK</div></div>
+<div class="act-row"><div class="act-year">2024.03</div><div class="act-detail">InStyle优家画报</div></div>
+<div class="act-row"><div class="act-year">2024.05</div><div class="act-detail">风度mensuno</div></div>
+<div class="act-row"><div class="act-year">2024.11</div><div class="act-detail">时装男士</div></div>
+<div class="act-row"><div class="act-year">2024.12</div><div class="act-detail">Glass Man</div></div>
+<div class="act-row"><div class="act-year">2025.02</div><div class="act-detail">Wonderland</div></div>
+<div class="act-row"><div class="act-year">2025 여름</div><div class="act-detail">MarieClaireNOW</div></div>
+<div class="act-row"><div class="act-year">2025.07</div><div class="act-detail">superELLE</div></div>
+<div class="act-row"><div class="act-year">2025.08</div><div class="act-detail">Wonderland</div></div>
+<div class="act-row"><div class="act-year">2025.11</div><div class="act-detail">MadameFigaro</div></div>
+<div class="act-row"><div class="act-year">2026.03·4</div><div class="act-detail">悦游 Traveler</div></div>
+<div class="act-row"><div class="act-year">2026.07</div><div class="act-detail">芭莎男士 Harper's BAZAAR MEN</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">수상</div>
+<div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
+<div class="act-row"><div class="act-year">2023</div><div class="act-detail">2022 웨이보의 밤 올해의 신예배우<br>신시대 국제 TV 페스티벌 신시대 최우수 신인 남자 배우<br>신호각 드라마 TV 드라마 감독의 밤 올해의 돌파 배우<br>2023 웨이보 시상식 올해의 기대 배우</div></div>
+<div class="act-row"><div class="act-year">2024</div><div class="act-detail">2023 웨이보의 밤 올해의 돌파 배우</div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트</div></div>
+</div>
+
+<div class="wiki-subsection">
+<div class="wiki-subsection-title">레이싱</div>
+<div class="act-row"><div class="act-year">2023</div><div class="act-detail">샤먼 국제 레이싱 챔피언십 · 1위</div></div>
+<div class="act-row"><div class="act-year">2024</div><div class="act-detail">CTCC 중국 투어링카 챔피언십 커차오 라운드 A조 · 1위</div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">미쉐린 아부다비 6시간 내구 레이스 · 11위 (Garage59)</div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">상하이 8시간 내구 레이스 · 6위 (Frankenstein Racing)</div></div>
+<div class="act-row"><div class="act-year">2026</div><div class="act-detail">CHINA GT Championship GTC class · 1위 (종합 2위 / Frankenstein Racing)</div></div>
+</div>
 </section>
 
 <section class="wiki-section" id="controversy">
 <div class="wiki-section-title"><span class="num">03</span>논란 및 사건</div>
-<div class="wiki-section-body tbd">내용 추가 예정입니다.</div>
+<div class="wiki-section-body tbd">확인된 내용이 없습니다.</div>
 </section>
 
 <section class="wiki-section" id="etc">
 <div class="wiki-section-title"><span class="num">04</span>기타</div>
-<div class="wiki-section-body tbd">내용 추가 예정입니다.</div>
+<div class="wiki-section-body">
+<div class="etc-row"><span class="etc-dot">·</span><span>이안음악사 활동 당시 예명은 방상예(方翔锐)였으며 현재는 사용하지 않는다.</span></div>
+<div class="etc-row"><span class="etc-dot">·</span><span>휴일엔 레이싱하는 게 취미라고 할 정도로 좋아하며, 실제 2023·2024년 2년 연속 레이싱 대회에서 1위를 차지했다.</span></div>
+</div>
 </section>
 </div>
 
