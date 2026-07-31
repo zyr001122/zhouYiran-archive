@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icon-180.png" />
+<link rel="icon" type="image/png" href="favicon-32.png" />
+<meta name="theme-color" content="#1a1216" />
 <title>PROFILE · 周翊然Tz 초화 번역 아카이브</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,13 +35,17 @@ letter-spacing: -0.01em;
 /* ============ HERO / DARK BAND ============ */
 .hero-band { background: var(--black); padding: 20px 20px 24px; position: relative; }
 .hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
-.hamburger-btn {
-display: flex; width: 32px; height: 32px; background: var(--pink); border: none; cursor: pointer;
-flex-direction: column; align-items: center; justify-content: center; gap: 6px; flex-shrink: 0;
+.hamburger-btn,
+.calendar-btn {
+display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer;
+align-items: center; justify-content: center; flex-shrink: 0;
+filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
 }
+.hamburger-btn { flex-direction: column; gap: 6px; }
 .hamburger-btn .bar { width: 15px; height: 1.5px; background: var(--white); transition: transform 0.2s ease, opacity 0.2s ease; }
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+.calendar-btn svg { width: 18px; height: 18px; }
 
 .side-drawer-overlay {
 position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
@@ -51,11 +59,11 @@ display: flex; flex-direction: column; padding: 20px 0 0;
 }
 .side-drawer.open { transform: translateX(0); }
 .side-drawer-close {
-align-self: flex-end; width: 32px; height: 32px; margin: 0 20px 24px; background: rgba(255,255,255,0.08);
-border: none; border-radius: 3px; color: var(--white); font-size: 15px; cursor: pointer;
+align-self: flex-end; width: 32px; height: 32px; margin: 0 20px 24px; background: none;
+border: none; color: var(--white); font-size: 18px; cursor: pointer;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.side-drawer-close:hover { background: rgba(255,255,255,0.16); }
+.side-drawer-close:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
 .side-drawer-item {
 display: flex; align-items: baseline; gap: 14px; padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.08);
@@ -121,6 +129,123 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .wiki-subsection-title { font-size: 13px; font-weight: 700; color: var(--pink); margin-bottom: 6px; }
 
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
+
+/* ============ SCHEDULE CALENDAR MODAL ============ */
+.schedule-overlay {
+position: fixed;
+inset: 0;
+background: rgba(26,18,22,0.75);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 520;
+padding: 20px;
+}
+.schedule-overlay.open { display: flex; }
+.schedule-modal {
+background: var(--white);
+border-radius: 4px;
+width: 100%;
+max-width: 360px;
+padding: 20px;
+max-height: 86vh;
+overflow-y: auto;
+position: relative;
+}
+.schedule-modal-header {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+margin-bottom: 14px;
+}
+.schedule-nav-arrow {
+background: none;
+border: none;
+font-size: 16px;
+color: var(--gray-muted);
+cursor: pointer;
+padding: 4px 8px;
+font-family: inherit;
+}
+.schedule-nav-arrow:hover { color: var(--black); }
+#scheduleMonthLabel { font-size: 14px; font-weight: 700; color: var(--black); min-width: 90px; text-align: center; }
+.schedule-today-banner {
+background: var(--pink-pale);
+border-radius: 3px;
+padding: 10px 12px;
+margin-bottom: 14px;
+}
+.today-label {
+font-size: 11px;
+font-weight: 700;
+color: var(--pink);
+letter-spacing: 0.02em;
+display: block;
+margin-bottom: 6px;
+}
+.today-events-row { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; margin-bottom: 4px; }
+.today-events-row:last-child { margin-bottom: 0; }
+.today-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.today-time { color: var(--pink); font-weight: 600; flex-shrink: 0; }
+.schedule-close {
+position: absolute;
+right: 16px;
+top: 16px;
+background: none;
+border: none;
+font-size: 15px;
+color: var(--gray-muted);
+cursor: pointer;
+}
+.schedule-close:hover { color: var(--black); }
+.schedule-weekdays {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+text-align: center;
+font-size: 11px;
+color: var(--gray-muted);
+margin-bottom: 6px;
+}
+.schedule-grid {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+row-gap: 10px;
+text-align: center;
+}
+.sched-day {
+font-size: 13px;
+color: var(--black);
+cursor: pointer;
+padding: 4px 0;
+}
+.sched-day:empty { cursor: default; }
+.sched-day.today { font-weight: 700; color: var(--pink); }
+.sched-day.selected .sched-num { color: var(--pink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.sched-num { display: inline-block; }
+.sched-dots { display: flex; justify-content: center; gap: 2px; margin-top: 3px; height: 4px; }
+.sched-dot { width: 4px; height: 4px; border-radius: 50%; display: inline-block; }
+.schedule-detail {
+border-top: 1px solid var(--border);
+margin-top: 14px;
+padding-top: 12px;
+min-height: 40px;
+}
+.sched-event-row { display: flex; gap: 8px; font-size: 12.5px; margin-bottom: 8px; align-items: flex-start; }
+.sched-event-row:last-child { margin-bottom: 0; }
+.sched-event-row .sched-dot { flex-shrink: 0; margin-top: 5px; }
+.sched-event-row .sched-time { color: var(--pink); font-weight: 600; flex-shrink: 0; }
+.sched-empty { font-size: 12px; color: var(--gray-muted); text-align: center; padding: 8px 0; }
+.schedule-legend {
+display: flex;
+gap: 14px;
+margin-top: 14px;
+padding-top: 12px;
+border-top: 1px solid var(--border);
+font-size: 11px;
+color: var(--gray-muted);
+}
+.schedule-legend .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
 </style>
 </head>
 <body>
@@ -137,10 +262,41 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 <a class="side-drawer-item" href="guide.html"><span class="idx">05</span>가이드</a>
 </div>
 </nav>
+<!-- SCHEDULE CALENDAR MODAL -->
+<div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
+<div class="schedule-modal">
+<button class="schedule-close" onclick="closeSchedule()" aria-label="닫기">✕</button>
+<div class="schedule-modal-header">
+<button class="schedule-nav-arrow" onclick="changeScheduleMonth(-1)" aria-label="이전 달">‹</button>
+<span id="scheduleMonthLabel"></span>
+<button class="schedule-nav-arrow" onclick="changeScheduleMonth(1)" aria-label="다음 달">›</button>
+</div>
+<div class="schedule-today-banner" id="scheduleTodayBanner" style="display:none;">
+<span class="today-label">오늘 · <span id="todayDateLabel"></span></span>
+<div id="todayEventsList"></div>
+</div>
+<div class="schedule-weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+<div class="schedule-grid" id="scheduleGrid"></div>
+<div class="schedule-detail" id="scheduleDetail"></div>
+<div class="schedule-legend">
+<span><i class="dot" style="background:#FFC53D"></i>라이브</span>
+<span><i class="dot" style="background:var(--pink)"></i>행사</span>
+<span><i class="dot" style="background:#8B5FBF"></i>촬영</span>
+</div>
+</div>
+</div>
 
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
 <div class="hero-nav">
+<button class="calendar-btn" id="calendarBtn" onclick="openSchedule()" aria-label="스케줄 보기">
+<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="5" width="18" height="16" rx="1"></rect>
+<line x1="3" y1="9" x2="21" y2="9"></line>
+<line x1="8" y1="3" x2="8" y2="7"></line>
+<line x1="16" y1="3" x2="16" y2="7"></line>
+</svg>
+</button>
 <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
 <span class="bar"></span>
 <span class="bar"></span>
@@ -197,6 +353,7 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 
+<script src="data-schedule.js"></script>
 <script>
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
@@ -207,6 +364,94 @@ document.body.style.overflow = document.getElementById('sideDrawer').classList.c
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
+// ============ 스케줄 캘린더 모달 ============
+const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+let scheduleViewDate = new Date();
+let scheduleMonthEvents = {};
+function openSchedule() {
+document.getElementById('scheduleOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+renderTodayBanner();
+renderScheduleCalendar();
+}
+function renderTodayBanner() {
+const events = typeof scheduleEvents !== 'undefined' ? scheduleEvents : [];
+const now = new Date();
+const todayStr = now.toDateString();
+const todays = events.filter(e => new Date(e.date).toDateString() === todayStr);
+const banner = document.getElementById('scheduleTodayBanner');
+if (!todays.length) {
+banner.style.display = 'none';
+return;
+}
+document.getElementById('todayDateLabel').textContent = `${now.getMonth() + 1}월 ${now.getDate()}일`;
+document.getElementById('todayEventsList').innerHTML = todays.map(e => `
+<div class="today-events-row">
+<span class="today-dot" style="background:${SCHEDULE_COLORS[e.category] || 'var(--pink)'}"></span>
+${e.time ? `<span class="today-time">${e.time}</span>` : ''}
+<span>${e.title}</span>
+</div>`).join('');
+banner.style.display = 'block';
+}
+function closeSchedule() {
+document.getElementById('scheduleOverlay').classList.remove('open');
+document.body.style.overflow = '';
+}
+function changeScheduleMonth(delta) {
+scheduleViewDate.setMonth(scheduleViewDate.getMonth() + delta);
+renderScheduleCalendar();
+}
+function renderScheduleCalendar() {
+const events = typeof scheduleEvents !== 'undefined' ? scheduleEvents : [];
+const year = scheduleViewDate.getFullYear();
+const month = scheduleViewDate.getMonth();
+document.getElementById('scheduleMonthLabel').textContent = `${year}년 ${month + 1}월`;
+const firstDay = new Date(year, month, 1).getDay();
+const daysInMonth = new Date(year, month + 1, 0).getDate();
+scheduleMonthEvents = {};
+events.forEach(e => {
+const d = new Date(e.date);
+if (d.getFullYear() === year && d.getMonth() === month) {
+const day = d.getDate();
+if (!scheduleMonthEvents[day]) scheduleMonthEvents[day] = [];
+scheduleMonthEvents[day].push(e);
+}
+});
+const todayStr = new Date().toDateString();
+let html = '';
+for (let i = 0; i < firstDay; i++) html += '<span></span>';
+for (let d = 1; d <= daysInMonth; d++) {
+const isToday = new Date(year, month, d).toDateString() === todayStr;
+const dayEvents = scheduleMonthEvents[d] || [];
+const dots = dayEvents.map(e => `<span class="sched-dot" style="background:${SCHEDULE_COLORS[e.category] || 'var(--pink)'}"></span>`).join('');
+html += `<span class="sched-day${isToday ? ' today' : ''}" data-day="${d}" onclick="selectScheduleDay(${d})"><span class="sched-num">${d}</span><span class="sched-dots">${dots}</span></span>`;
+}
+document.getElementById('scheduleGrid').innerHTML = html;
+const isCurrentMonth = year === new Date().getFullYear() && month === new Date().getMonth();
+const initialDay = (isCurrentMonth && scheduleMonthEvents[new Date().getDate()]) ? new Date().getDate() : Number(Object.keys(scheduleMonthEvents)[0]) || null;
+if (initialDay) {
+selectScheduleDay(initialDay);
+} else {
+document.getElementById('scheduleDetail').innerHTML = '<p class="sched-empty">이번 달 일정이 없습니다.</p>';
+}
+}
+function selectScheduleDay(day) {
+document.querySelectorAll('.sched-day').forEach(el => el.classList.remove('selected'));
+const target = document.querySelector(`.sched-day[data-day="${day}"]`);
+if (target) target.classList.add('selected');
+const dayEvents = scheduleMonthEvents[day] || [];
+const detail = document.getElementById('scheduleDetail');
+if (!dayEvents.length) {
+detail.innerHTML = '<p class="sched-empty">이 날은 일정이 없습니다.</p>';
+return;
+}
+detail.innerHTML = dayEvents.map(e => `
+<div class="sched-event-row">
+<span class="sched-dot" style="background:${SCHEDULE_COLORS[e.category] || 'var(--pink)'}"></span>
+${e.time ? `<span class="sched-time">${e.time}</span>` : ''}
+<span>${e.title}</span>
+</div>`).join('');
+}
 </script>
 </body>
 </html>
