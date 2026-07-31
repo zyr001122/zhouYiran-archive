@@ -6,7 +6,7 @@ const douyinPosts = [
 { id: 221001, date: "2022-10-20", youtubeUrl: "https://youtu.be/NFMRlC90I5M", images: [], originalText: "🍂", translatedText: "🍂" },
 { id: 230201, date: "2023-02-12", youtubeUrl: "https://youtu.be/eqZP-i0SBeI", images: [], originalText: "新疆碎片", translatedText: "신장 조각" },
 { id: 240201, date: "2024-02-16", youtubeUrl: "https://youtube.com/shorts/uXgBIz4r9jU?feature=share", images: [], originalText: "赶个尾巴🧨", translatedText: "막차 탔어🧨" },
-{ id: 240501, date: "2024-05-11", youtubeUrl: null, images: [], originalText: "天黑前", translatedText: "해지기 전" },
+{ id: 240501, date: "2024-05-11", youtubeUrl: null, images: ["images/2405-fireflies.jpg", "images/2405-bridge1.jpg", "images/2405-bridge2.jpg", "images/2405-bridge-tower.jpg"], originalText: "天黑前", translatedText: "해지기 전" },
 { id: 240701, date: "2024-07-04", youtubeUrl: "https://youtube.com/shorts/N4qfJ6vAixY?feature=share", images: [], originalText: "🧊", translatedText: "🧊" },
 { id: 241101, date: "2024-11-22", youtubeUrl: "https://youtu.be/GFtTIP3J4io", images: [], originalText: "❤️", translatedText: "❤️" },
 { id: 250301, date: "2025-03-09", youtubeUrl: "https://youtube.com/shorts/ZkckZ-8M-6Y?feature=share", images: [], originalText: "巴黎碎片", translatedText: "파리 조각" },
@@ -16,14 +16,14 @@ const douyinPosts = [
 { id: 250702, date: "2025-07-23", youtubeUrl: "https://youtube.com/shorts/tEfNL01Wc0o?feature=share", images: [], originalText: "日常碎片", translatedText: "일상 조각" },
 { id: 251001, date: "2025-10-21", youtubeUrl: "https://youtube.com/shorts/k87cPtcc8V4?feature=share", images: [], originalText: "钓鱼碎片", translatedText: "낚시 조각" },
 { id: 251101, date: "2025-11-17", youtubeUrl: "https://youtube.com/shorts/-HFSNhPjQSY?feature=share", images: [], originalText: "新加坡碎片", translatedText: "싱가포르 조각" },
-{ id: 251201, date: "2025-12-17", youtubeUrl: null, images: [], originalText: "⬆️", translatedText: "⬆️" },
+{ id: 251201, date: "2025-12-17", youtubeUrl: null, images: ["images/2512-selfie1.jpg", "images/2512-selfie2.jpg", "images/2512-selfie3.jpg", "images/2512-dog.jpg"], originalText: "⬆️", translatedText: "⬆️" },
 { id: 260201, date: "2026-02-17", youtubeUrl: "https://youtube.com/shorts/CqqOLznzreo?feature=share", images: [], originalText: "\"至少我们现在看的是同一场烟花\"（新年快乐🎆", translatedText: "\"적어도 지금 우리는 같은 불꽃놀이를 보고 있어\"（새해 복 많이 받아🎆" },
 { id: 260301, date: "2026-03-26", youtubeUrl: "https://youtube.com/shorts/D0iRSIg0jQ4?feature=share", images: [], originalText: "🚢🐟🏎️", translatedText: "🚢🐟🏎️" },
-{ id: 260401, date: "2026-04-09", youtubeUrl: null, images: [], originalText: "大胖子你好👋", translatedText: "大胖子你好👋" }, // TODO: 번역 확인 필요 (대상 확인 중)
-{ id: 260402, date: "2026-04-18", youtubeUrl: null, images: [], originalText: "限时日常", translatedText: "잠깐 공개 일상" },
+{ id: 260401, date: "2026-04-09", youtubeUrl: null, images: ["images/2604-car-front.jpg", "images/2604-car-group.jpg", "images/2604-sticker-closeup.jpg", "images/2604-wing-open.jpg", "images/2604-wing-install.jpg", "images/2604-sticker-apply.jpg", "images/2604-door-install.jpg"], originalText: "大胖子你好👋", translatedText: "大胖子你好👋" }, // TODO: 번역 확인 필요 (대상 확인 중)
+{ id: 260402, date: "2026-04-18", youtubeUrl: "https://youtu.be/_kHwNzY5QO0", images: [], originalText: "限时日常", translatedText: "잠깐 공개 일상" },
 { id: 260403, date: "2026-04-24", youtubeUrl: "https://youtube.com/shorts/YcClh9OH7go?feature=share", images: [], originalText: "等待Iceman的第N天", translatedText: "Iceman 기다린 지 N일째" },
 { id: 260501, date: "2026-05-08", youtubeUrl: "https://youtube.com/shorts/elUWmfr3bfE?feature=share", images: [], originalText: "🫡🫡🫡", translatedText: "🫡🫡🫡" },
 { id: 260502, date: "2026-05-21", youtubeUrl: "https://youtube.com/shorts/Qfdj5b3ZoMA?feature=share", images: [], originalText: "🐱", translatedText: "🐱" },
-{ id: 260601, date: "2026-06-07", youtubeUrl: null, images: [], originalText: "☀️", translatedText: "☀️" },
+{ id: 260601, date: "2026-06-07", youtubeUrl: null, images: ["images/2606-fan.jpg", "images/2606-racing-gear.jpg", "images/2606-selfie1.jpg", "images/2606-selfie2.jpg", "images/2606-selfie3.jpg", "images/2606-dog.jpg"], originalText: "☀️", translatedText: "☀️" },
 { id: 260602, date: "2026-06-16", youtubeUrl: "https://youtube.com/shorts/v6VmvG8jpEE?feature=share", images: [], originalText: "🧩", translatedText: "🧩" }
 ];
