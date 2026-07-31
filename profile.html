@@ -110,10 +110,10 @@ border-top: none;
 padding: 22px 20px;
 }
 .infobox-photo {
-width: 96px; height: 96px; border-radius: 50%; overflow: hidden; background: var(--pink-pale);
-margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+width: 100%; border-radius: 3px; overflow: hidden; background: var(--pink-pale);
+margin: 0 0 14px;
 }
-.infobox-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.infobox-photo img { width: 100%; height: auto; display: block; }
 .infobox-name { text-align: center; font-size: 18px; font-weight: 800; color: var(--black); letter-spacing: -0.01em; }
 .infobox-name-zh { text-align: center; font-size: 12px; color: var(--gray-muted); margin-top: 3px; font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
 
@@ -185,6 +185,8 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .act-role.spokesperson { color: var(--pink); }
 .act-role.ambassador { color: var(--teal); }
 .act-role.friend { color: var(--gold); }
+.role-legend { font-size: 10.5px; color: var(--gray-muted); margin: -4px 0 14px; line-height: 1.6; }
+.role-legend b { font-weight: 700; }
 .act-year-divider.muted .act-year-divider-label { color: var(--gray-muted); }
 .mini-badge.year-flat { border-radius: 0; }
 .year-colored .act-year { color: var(--pink); font-weight: 800; }
@@ -373,7 +375,7 @@ color: var(--gray-muted);
 <!-- INFOBOX -->
 <div class="panel">
 <div class="infobox">
-<div class="infobox-photo"><img src="IMG_1757.JPG" alt="周翊然" onerror="this.parentElement.innerHTML='📷'" /></div>
+<div class="infobox-photo"><img src="profile-main.jpg" alt="周翊然" onerror="this.parentElement.innerHTML='📷'" /></div>
 <div class="infobox-name">주익연</div>
 <div class="infobox-name-zh">周翊然</div>
 <div class="infobox-table">
@@ -384,27 +386,15 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학 (졸업)</div></div>
 <div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span id="debutDday" style="color:var(--gray-muted);"></span></div></div>
 <div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
-<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♂ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
-<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 일척염 <span style="color:#F7A4B8;">●</span><span class="footnote-marker" onclick="toggleFootnote('color', event)">[2]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)</div></div>
+<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♀ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
+<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 <span style="color:#F7A4B8;">●</span> #F7A4B8<span class="footnote-marker" onclick="toggleFootnote('color', event)">[2]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
+<div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)<span class="footnote-marker" onclick="toggleFootnote('fandom', event)">[5]<span class="footnote-popup" id="fn-fandom">달콤한 죽을 뜻하는 甜粥(티엔저우)에서 '粥(zhōu)'가 성씨인 '周(zhōu)'와 동음인 점을 활용한 언어유희이다.</span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[3]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
 <div class="infobox-row stacked"><div class="infobox-label">SNS</div><div class="infobox-value">
-<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
-<div><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div>
+<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;display:inline-block;width:38px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
+<div><span style="color:var(--gray-muted);font-size:11px;display:inline-block;width:38px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div>
 </div></div>
 </div>
-</div>
-
-<!-- TOC -->
-<div class="toc">
-<a class="toc-item" href="#drama">01 드라마</a>
-<a class="toc-item" href="#movie">02 영화</a>
-<a class="toc-item" href="#entertainment">03 예능</a>
-<a class="toc-item" href="#music">04 음반</a>
-<a class="toc-item" href="#ads">05 광고 및 홍보대사</a>
-<a class="toc-item" href="#magazine">06 화보</a>
-<a class="toc-item" href="#awards">07 수상</a>
-<a class="toc-item" href="#racing">08 레이싱</a>
 </div>
 
 <!-- SECTIONS -->
@@ -445,9 +435,9 @@ color: var(--gray-muted);
 
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소<span class="act-subtitle">一见你就笑</span> EP.11</div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span></div></div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">영상 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소 EP.11<span class="act-subtitle">一见你就笑</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">영상1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">영상2 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">영상 ↗</a></div></div>
 </section>
 
 <section class="wiki-section year-colored" id="music">
@@ -463,6 +453,7 @@ color: var(--gray-muted);
 
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
+<div class="role-legend"><b style="color:var(--pink);">대언인</b> 최상위 등급 · <b style="color:var(--teal);">대사</b> 중간 등급 · <b style="color:var(--gold);">지우</b> 브랜드 프렌즈(친선) 등급</div>
 <div class="subsection-label">지난 활동</div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
@@ -490,16 +481,16 @@ color: var(--gray-muted);
 <div class="act-row-flat">网易严选 · <span class="act-role ambassador">라이프스타일 대사</span></div>
 
 <div class="subsection-label current">현재 진행중</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · 브랜드 대언인</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>구찌 · 브랜드 지우</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>겔랑 · 스킨케어 대사</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>APM_MONACO · 아시아 태평양 브랜드 대언인</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>WeTV · 글로벌 대언인</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>불가리 · 아시아 태평양 브랜드 대사</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>AMI · 글로벌 대사</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>天猫 타오바오 · 환신 대사</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>自然堂 · 청춘 대언인</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>花间颂 · 베이스 메이크업 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>구찌 · <span class="act-role friend">브랜드 지우</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>겔랑 · <span class="act-role ambassador">스킨케어 대사</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>WeTV · <span class="act-role spokesperson">글로벌 대언인</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>불가리 · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>AMI · <span class="act-role ambassador">글로벌 대사</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>天猫 타오바오 · <span class="act-role ambassador">환신 대사</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
 </section>
 
 <section class="wiki-section" id="magazine">
