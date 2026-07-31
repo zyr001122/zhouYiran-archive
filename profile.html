@@ -168,15 +168,11 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
 .infobox-sns { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
 .infobox-sns-title { font-size: 11px; font-weight: 700; color: var(--gray-muted); margin-bottom: 8px; letter-spacing: 0.02em; }
-.infobox-sns-row { display: flex; gap: 8px; font-size: 12.5px; padding: 4px 0; line-height: 1.6; }
-.infobox-sns-tag { width: 40px; flex-shrink: 0; color: var(--gray-muted); font-size: 11px; }
-.infobox-sns-row a { color: var(--pink); text-decoration: none; font-weight: 600; }
-.infobox-sns-row a:hover { text-decoration: underline; }
 .infobox-value a:hover { text-decoration: underline; }
 .etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
 .etc-dot { color: var(--pink); flex-shrink: 0; }
 .footnote-marker { color: var(--pink); font-size: 10px; font-weight: 700; cursor: pointer; position: relative; margin-left: 2px; }
-.footnote-popup { display: none; position: absolute; z-index: 50; background: var(--black); color: var(--white); font-size: 11.5px; line-height: 1.55; padding: 10px 12px; border-radius: 4px; width: max-content; max-width: 220px; top: 18px; left: 0; }
+.footnote-popup { display: none; position: absolute; z-index: 50; background: var(--black); color: var(--white); font-size: 11.5px; line-height: 1.55; padding: 10px 12px; border-radius: 4px; width: max-content; max-width: min(220px, 78vw); top: 18px; left: 0; }
 .footnote-popup.open { display: block; }
 .footnote-popup a { color: var(--pink-dim); }
 .mag-link { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 8px; text-decoration: none; }
@@ -399,8 +395,8 @@ color: var(--gray-muted);
 </div>
 <div class="infobox-sns">
 <div class="infobox-sns-title">SNS</div>
-<div class="infobox-sns-row"><span class="infobox-sns-tag">개인</span><span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></span></div>
-<div class="infobox-sns-row"><span class="infobox-sns-tag">공작실</span><span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></span></div>
+<div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">개인</div><div class="infobox-value"><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div></div>
+<div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">공작실</div><div class="infobox-value"><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div></div>
 </div>
 </div>
 
@@ -575,13 +571,29 @@ renderDebutDday();
 function toggleFootnote(id, event) {
 event.stopPropagation();
 document.querySelectorAll('.footnote-popup.open').forEach(el => {
-if (el.id !== 'fn-' + id) el.classList.remove('open');
+if (el.id !== 'fn-' + id) { el.classList.remove('open'); el.style.transform = ''; }
 });
 const target = document.getElementById('fn-' + id);
-if (target) target.classList.toggle('open');
+if (!target) return;
+const willOpen = !target.classList.contains('open');
+target.classList.toggle('open');
+target.style.transform = '';
+if (willOpen) {
+requestAnimationFrame(() => {
+const rect = target.getBoundingClientRect();
+const margin = 10;
+let shift = 0;
+if (rect.right > window.innerWidth - margin) {
+shift = (window.innerWidth - margin) - rect.right;
+} else if (rect.left < margin) {
+shift = margin - rect.left;
+}
+if (shift !== 0) target.style.transform = `translateX(${shift}px)`;
+});
+}
 }
 document.addEventListener('click', () => {
-document.querySelectorAll('.footnote-popup.open').forEach(el => el.classList.remove('open'));
+document.querySelectorAll('.footnote-popup.open').forEach(el => { el.classList.remove('open'); el.style.transform = ''; });
 });
 
 // ============ 스케줄 캘린더 모달 ============
