@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>周翊然Tz 초화 번역 아카이브</title>
+<title>周翊然Tz 도우인 아카이브</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Archivo+Black&display=swap" rel="stylesheet" />
@@ -30,13 +30,6 @@ letter-spacing: -0.01em;
 -webkit-font-smoothing: antialiased;
 }
 .zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; letter-spacing: 0; }
-.weibo-emoticon {
-display: inline-block;
-height: 1.15em;
-width: 1.15em;
-vertical-align: -2px;
-object-fit: contain;
-}
 /* ============ HERO / DARK BAND ============ */
 .hero-band {
 background: var(--black) url('IMG_6518.jpeg') center 25% / cover no-repeat;
@@ -54,8 +47,7 @@ z-index: 0;
 }
 .hero-nav,
 .archive-wordmark,
-.archive-subtitle,
-.year-tabs {
+.archive-subtitle {
 position: relative;
 z-index: 1;
 }
@@ -100,7 +92,7 @@ font-size: 13px;
 font-weight: 500;
 color: rgba(255,255,255,0.6);
 letter-spacing: -0.005em;
-padding: 0 0 14px;
+padding: 0 0 20px;
 }
 /* side drawer nav: 클릭하면 오른쪽에서 슬라이드로 튀어나오는 인덱스형 메뉴 */
 .side-drawer-overlay {
@@ -216,112 +208,12 @@ color: var(--white);
 letter-spacing: -0.02em;
 padding: 16px 0 18px;
 }
-/* year index tabs: simple flat tab */
-.year-tabs {
-max-width: 860px;
-margin: 0 auto;
-display: flex;
-gap: 3px;
-padding-left: 14px;
-}
-.year-tab {
-padding: 9px 18px 0;
-height: 34px;
-border-radius: 3px 3px 0 0;
-font-size: 13px;
-font-weight: 700;
-letter-spacing: -0.01em;
-cursor: pointer;
-background: var(--tab-inactive);
-color: rgba(255,255,255,0.5);
-transition: background 0.15s, color 0.15s;
-white-space: nowrap;
-}
-.year-tab:hover { color: rgba(255,255,255,0.8); }
-.year-tab.active { background: var(--pink); color: var(--white); }
 /* ============ WHITE PANEL ============ */
 .panel {
 max-width: 860px;
 margin: 0 auto;
 padding: 0 20px;
 }
-/* month selector: borderless spaced text */
-.month-row {
-display: flex;
-align-items: center;
-gap: 22px;
-padding: 18px 0 14px;
-overflow-x: auto;
-border-bottom: 2px solid var(--black);
-}
-.month-row::-webkit-scrollbar { display: none; }
-.month-item {
-font-size: 16px;
-font-weight: 500;
-color: #c4c4c4;
-position: relative;
-white-space: nowrap;
-cursor: pointer;
-padding-bottom: 8px;
-transition: color 0.15s;
-}
-.month-item:hover { color: var(--black); }
-.month-item.active {
-font-weight: 700;
-color: var(--black);
-}
-.month-item.active::after {
-content: '';
-position: absolute;
-bottom: -2px;
-left: 0;
-right: 0;
-height: 2px;
-background: var(--pink);
-}
-.month-item .m-count {
-font-size: 10px;
-color: var(--gray-muted);
-font-weight: 500;
-margin-left: 3px;
-}
-.month-item.active .m-count { color: var(--pink); }
-/* search + filter */
-.search-row { padding: 14px 0 0; }
-.search-input {
-width: 100%;
-padding: 10px 0;
-border: none;
-border-bottom: 1px solid var(--border);
-font-size: 14px;
-font-family: inherit;
-letter-spacing: -0.01em;
-background: transparent;
-outline: none;
-color: var(--black);
-}
-.search-input:focus { border-bottom-color: var(--pink); }
-.search-input::placeholder { color: var(--gray-muted); }
-.filter-active-bar {
-font-size: 12px;
-color: var(--pink);
-font-weight: 600;
-padding: 10px 0;
-display: none;
-align-items: center;
-justify-content: space-between;
-}
-.filter-active-bar.show { display: flex; }
-.clear-filter {
-cursor: pointer;
-font-weight: 700;
-color: var(--gray-muted);
-background: none;
-border: none;
-font-family: inherit;
-font-size: 12px;
-}
-.clear-filter:hover { color: var(--black); }
 .feed-header {
 display: flex;
 align-items: baseline;
@@ -330,98 +222,14 @@ padding: 18px 0 4px;
 }
 .feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
 .post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
-/* ============ POSTS ============ */
-#posts-feed { padding-bottom: 2rem; }
-.date-index {
-font-size: 11px;
-font-weight: 700;
-color: var(--gray-muted);
-letter-spacing: 0.02em;
-padding: 20px 0 10px;
-}
-.day-divider {
-display: flex;
-align-items: center;
-gap: 10px;
-margin: 26px 0 6px;
-}
-.day-divider:first-child { margin-top: 0; }
-.day-divider-label {
-font-size: 13px;
-font-weight: 800;
-color: var(--pink);
-letter-spacing: 0.01em;
-white-space: nowrap;
-}
-.day-divider-line {
-flex: 1;
-height: 1px;
-background: var(--border);
-}
-.post-card {
-padding: 18px 0;
-border-top: 1px solid var(--border);
-}
-.post-card:first-of-type { border-top: none; }
-.day-divider + .post-card { border-top: none; }
-.post-meta {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 10px;
-}
-.post-avatar {
-width: 34px;
-height: 34px;
-border-radius: 50%;
-overflow: hidden;
-flex-shrink: 0;
-background: var(--pink);
-}
-.post-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.post-meta-info { flex: 1; min-width: 0; }
-.actor-name {
-font-size: 12px;
-font-weight: 600;
-color: var(--black);
-letter-spacing: -0.01em;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.post-date { font-size: 10px; color: var(--gray-muted); margin-top: 1px; letter-spacing: 0.01em; }
-.weibo-link {
-font-size: 11px;
-color: var(--pink);
-text-decoration: none;
-font-weight: 600;
-letter-spacing: -0.01em;
-white-space: nowrap;
-flex-shrink: 0;
-}
-.original-text {
-font-size: 11px;
-color: var(--gray-muted);
-line-height: 1.6;
-margin-bottom: 6px;
-}
-.translated-text {
-font-size: 13.5px;
-color: var(--black);
-line-height: 1.65;
-font-weight: 400;
-letter-spacing: -0.01em;
-}
-.translation-note {
-font-size: 12px;
-color: var(--pink);
-border-left: 2px solid var(--pink);
-padding-left: 8px;
-margin-top: 10px;
-line-height: 1.5;
-letter-spacing: -0.005em;
-}
-/* image grid: weibo-style up to 3x3 */
+/* douyin card: 계정 폭파 등 사건 아카이빙용 타임라인 카드 */
+#douyin-feed { padding-bottom: 2rem; padding-top: 8px; }
+.douyin-card { padding: 18px 0; border-top: 1px solid var(--border); }
+.douyin-card:first-of-type { border-top: none; }
+.douyin-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 6px; }
+.douyin-title { font-size: 14px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 8px; }
+.douyin-body { font-size: 13px; color: var(--black); line-height: 1.7; letter-spacing: -0.005em; white-space: pre-line; }
+/* image grid: weibo-style up to 3x3 (도우인 캡처/썸네일용) */
 .post-image-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -445,82 +253,6 @@ color: var(--white);
 font-size: 18px;
 font-weight: 700;
 }
-.yt-embed {
-margin: 12px 0 0;
-overflow: hidden;
-aspect-ratio: 16/9;
-}
-.yt-embed iframe { width: 100%; height: 100%; border: none; }
-.post-footer {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-top: 12px;
-}
-.toggle-comments-btn {
-font-size: 12px;
-color: var(--pink);
-font-weight: 700;
-background: none;
-border: none;
-cursor: pointer;
-font-family: inherit;
-letter-spacing: -0.01em;
-padding: 0;
-}
-.toggle-comments-btn.empty { color: var(--gray-muted); cursor: default; }
-/* comments */
-.comments-section {
-margin-top: 14px;
-padding-top: 14px;
-border-top: 1px dashed var(--border);
-display: none;
-}
-.comments-section.open { display: block; }
-.comments-title {
-font-size: 11px;
-font-weight: 700;
-color: var(--gray-muted);
-letter-spacing: 0.02em;
-margin-bottom: 10px;
-}
-.comment-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
-.comment-item:last-child { border-bottom: none; padding-bottom: 0; }
-.comment-item:first-child { padding-top: 0; }
-.comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.comment-avatar {
-width: 22px;
-height: 22px;
-border-radius: 50%;
-background: var(--gray-bg);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 11px;
-font-weight: 700;
-color: var(--gray-muted);
-flex-shrink: 0;
-overflow: hidden;
-}
-.comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.comment-username { font-size: 11px; font-weight: 600; color: var(--black); }
-.comment-original { font-size: 10px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
-.comment-translated { font-size: 12.5px; color: var(--black); line-height: 1.6; font-weight: 400; letter-spacing: -0.005em; padding-left: 34px; }
-.comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; padding-left: 34px; }
-.comment-images img { max-width: 120px; max-height: 140px; object-fit: cover; }
-.comment-note { font-size: 11px; color: var(--pink); border-left: 2px solid var(--pink); padding-left: 8px; margin: 8px 0 0 34px; line-height: 1.5; letter-spacing: -0.005em; }
-/* 답글: 핑크선 없이 들여쓰기만으로 위계 구분 */
-.actor-reply {
-margin-top: 12px;
-padding-left: 54px;
-}
-.actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
-.actor-reply-avatar { width: 18px; height: 18px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-.actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.actor-reply-name { font-size: 10px; font-weight: 600; color: var(--pink); }
-.actor-reply-original { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 4px; }
-.actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 500; line-height: 1.65; }
-.actor-reply .comment-images { padding-left: 0; margin-top: 8px; }
 .empty-state { text-align: center; padding: 4rem 1rem; color: var(--gray-muted); font-size: 13px; }
 .site-footer {
 text-align: center;
@@ -535,7 +267,6 @@ letter-spacing: 0.02em;
 .hero-band { padding: 18px 16px 0; }
 .archive-wordmark { font-size: 40px; padding: 12px 0 14px; }
 .panel { padding: 0 16px; }
-.year-tabs { padding-left: 0; }
 }
 /* scroll to top/bottom */
 .scroll-nav {
@@ -572,7 +303,7 @@ transition: opacity 0.18s ease, transform 0.18s ease, background 0.15s;
 .scroll-btn { width: 34px; height: 34px; font-size: 13px; }
 }
 /* image lightbox */
-.grid-cell img, .post-image-single img, .comment-images img { cursor: pointer; }
+.grid-cell img, .post-image-single img { cursor: pointer; }
 .lightbox-overlay {
 position: fixed;
 inset: 0;
@@ -632,64 +363,6 @@ display: inline-block;
 transition: background 0.15s;
 }
 .lightbox-save:hover { background: #d9456d; }
-/* ============ VOICE MESSAGE (flat, site-style click-to-play) ============ */
-.voice-message {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-background: var(--pink-pale);
-border-radius: 3px;
-padding: 4px 9px;
-cursor: pointer;
-user-select: none;
-transition: background 0.15s ease;
-margin-top: 6px;
-}
-.voice-message:hover { background: #fbe0e7; }
-.voice-message:active { opacity: 0.7; }
-.voice-message .vm-play-btn {
-flex-shrink: 0;
-width: 12px;
-height: 12px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.voice-message .vm-play-btn svg { width: 9px; height: 9px; fill: var(--pink); }
-.vm-icon-play { display: block; }
-.vm-icon-pause { display: none; }
-.voice-message.playing .vm-icon-play { display: none; }
-.voice-message.playing .vm-icon-pause { display: block; }
-.voice-message .vm-waveform { display: flex; align-items: center; gap: 2px; height: 10px; }
-.voice-message .vm-bar {
-width: 1.5px;
-background: var(--pink);
-border-radius: 1px;
-opacity: 0.4;
-transition: opacity 0.15s ease;
-}
-.voice-message.playing .vm-bar { opacity: 1; animation: vm-bounce 0.9s ease-in-out infinite; }
-.voice-message .vm-bar:nth-child(1) { height: 3px; }
-.voice-message .vm-bar:nth-child(2) { height: 6px; }
-.voice-message .vm-bar:nth-child(3) { height: 10px; }
-.voice-message .vm-bar:nth-child(4) { height: 5px; }
-.voice-message .vm-bar:nth-child(5) { height: 8px; }
-.voice-message .vm-bar:nth-child(6) { height: 4px; }
-.voice-message.playing .vm-bar:nth-child(1) { animation-delay: 0s; }
-.voice-message.playing .vm-bar:nth-child(2) { animation-delay: 0.1s; }
-.voice-message.playing .vm-bar:nth-child(3) { animation-delay: 0.2s; }
-.voice-message.playing .vm-bar:nth-child(4) { animation-delay: 0.3s; }
-.voice-message.playing .vm-bar:nth-child(5) { animation-delay: 0.4s; }
-.voice-message.playing .vm-bar:nth-child(6) { animation-delay: 0.5s; }
-@keyframes vm-bounce {
-0%, 100% { transform: scaleY(0.4); }
-50% { transform: scaleY(1); }
-}
-.voice-message .vm-duration { font-size: 10.5px; color: var(--pink); font-weight: 600; flex-shrink: 0; }
-.comment-translated + .voice-message,
-.actor-reply-translated + .voice-message { margin-top: 6px; }
-.actor-reply .voice-message { margin-left: 0; }
-.comment-item > .voice-message { display: flex; margin-left: 34px; margin-top: 8px; }
 /* ============ SCHEDULE CALENDAR MODAL ============ */
 .schedule-overlay {
 position: fixed;
@@ -812,8 +485,8 @@ color: var(--gray-muted);
 <span class="idx">01</span>ARCHIVE<span class="side-drawer-caret">⌄</span>
 </button>
 <div class="side-drawer-submenu open" id="archiveSubmenu">
-<a class="side-drawer-subitem current" href="archive.html">초화</a>
-<a class="side-drawer-subitem" href="douyin.html">도우인</a>
+<a class="side-drawer-subitem" href="archive.html">초화</a>
+<a class="side-drawer-subitem current" href="douyin.html">도우인</a>
 </div>
 <a class="side-drawer-item" href="notice.html"><span class="idx">02</span>NOTICE</a>
 <a class="side-drawer-item" href="profile.html"><span class="idx">03</span>PROFILE</a>
@@ -857,125 +530,20 @@ color: var(--gray-muted);
 </button>
 </div>
 <div class="archive-wordmark">ARCHIVE</div>
-<div class="archive-subtitle">초화 아카이브</div>
-<div class="year-tabs" id="year-tabs"></div>
+<div class="archive-subtitle">도우인 아카이브</div>
 </div>
 <!-- WHITE PANEL -->
 <div class="panel">
-<div class="month-row" id="month-row"></div>
-<div class="search-row" id="searchRow">
-<input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
-</div>
-<div class="filter-active-bar" id="filterBar">
-<span id="filterLabel"></span>
-<button class="clear-filter" onclick="clearSearch()">검색 지우기 ✕</button>
-</div>
 <div class="feed-header">
-<div class="feed-title" id="feed-title">초화 게시물</div>
+<div class="feed-title" id="feed-title">도우인 기록</div>
 <span class="post-count-badge" id="feed-count"></span>
 </div>
-<div id="posts-feed"></div>
+<div id="douyin-feed"></div>
 </div>
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
-<script src="emoticons.js"></script>
+<script src="data-douyin.js"></script>
 <script src="data-schedule.js"></script>
-<script src="data-2024-11.js"></script>
-<script src="data-2024-12.js"></script>
-<script src="data-2024-10.js"></script>
-<script src="data-2024-09.js"></script>
-<script src="data-2024-08.js"></script>
-<script src="data-2024-07.js"></script>
-<script src="data-2024-06.js"></script>
-<script src="data-2024-05.js"></script>
-<script src="data-2024-04.js"></script>
-<script src="data-2024-03.js"></script>
-<script src="data-2024-02.js"></script>
-<script src="data-2024-01.js"></script>
-<script src="data-2023-10.js"></script>
-<script src="data-2023-11.js"></script>
-<script src="data-2023-12.js"></script>
-<script src="data-2023-09.js"></script>
-<script src="data-2023-08.js"></script>
-<script src="data-2023-07.js"></script>
-<script src="data-2023-03.js"></script>
-<script src="data-2023-01.js"></script>
-<script src="data-2022-09.js"></script>
-<script src="data-2022-11.js"></script>
-<script src="data-2022-08.js"></script>
-<script src="data-2026-01.js"></script>
-<script src="data-2026-02.js"></script>
-<script src="data-2026-03.js"></script>
-<script src="data-2026-04.js"></script>
-<script src="data-2026-05.js"></script>
-<script src="data-2026-06.js"></script>
-<script src="data-2026-07.js"></script>
-<script src="data-2025-01.js"></script>
-<script src="data-2025-02.js"></script>
-<script src="data-2025-03.js"></script>
-<script src="data-2025-04.js"></script>
-<script src="data-2025-05.js"></script>
-<script src="data-2025-06.js"></script>
-<script src="data-2025-07.js"></script>
-<script src="data-2025-08.js"></script>
-<script src="data-2025-09.js"></script>
-<script src="data-2025-10.js"></script>
-<script src="data-2025-11.js"></script>
-<script src="data-2025-12.js"></script>
 <script>
-const posts = [
-...(typeof posts_202411 !== 'undefined' ? posts_202411 : []),
-...(typeof posts_202412 !== 'undefined' ? posts_202412 : []),
-...(typeof posts_202410 !== 'undefined' ? posts_202410 : []),
-...(typeof posts_202409 !== 'undefined' ? posts_202409 : []),
-...(typeof posts_202408 !== 'undefined' ? posts_202408 : []),
-...(typeof posts_202407 !== 'undefined' ? posts_202407 : []),
-...(typeof posts_202406 !== 'undefined' ? posts_202406 : []),
-...(typeof posts_202405 !== 'undefined' ? posts_202405 : []),
-...(typeof posts_202404 !== 'undefined' ? posts_202404 : []),
-...(typeof posts_202403 !== 'undefined' ? posts_202403 : []),
-...(typeof posts_202402 !== 'undefined' ? posts_202402 : []),
-...(typeof posts_202401 !== 'undefined' ? posts_202401 : []),
-...(typeof posts_202310 !== 'undefined' ? posts_202310 : []),
-...(typeof posts_202311 !== 'undefined' ? posts_202311 : []),
-...(typeof posts_202312 !== 'undefined' ? posts_202312 : []),
-...(typeof posts_202309 !== 'undefined' ? posts_202309 : []),
-...(typeof posts_202308 !== 'undefined' ? posts_202308 : []),
-...(typeof posts_202307 !== 'undefined' ? posts_202307 : []),
-...(typeof posts_202303 !== 'undefined' ? posts_202303 : []),
-...(typeof posts_202301 !== 'undefined' ? posts_202301 : []),
-...(typeof posts_202209 !== 'undefined' ? posts_202209 : []),
-...(typeof posts_202211 !== 'undefined' ? posts_202211 : []),
-...(typeof posts_202208 !== 'undefined' ? posts_202208 : []),
-...(typeof posts_202601 !== 'undefined' ? posts_202601 : []),
-...(typeof posts_202602 !== 'undefined' ? posts_202602 : []),
-...(typeof posts_202603 !== 'undefined' ? posts_202603 : []),
-...(typeof posts_202604 !== 'undefined' ? posts_202604 : []),
-...(typeof posts_202605 !== 'undefined' ? posts_202605 : []),
-...(typeof posts_202606 !== 'undefined' ? posts_202606 : []),
-...(typeof posts_202607 !== 'undefined' ? posts_202607 : []),
-...(typeof posts_202501 !== 'undefined' ? posts_202501 : []),
-...(typeof posts_202502 !== 'undefined' ? posts_202502 : []),
-...(typeof posts_202503 !== 'undefined' ? posts_202503 : []),
-...(typeof posts_202504 !== 'undefined' ? posts_202504 : []),
-...(typeof posts_202505 !== 'undefined' ? posts_202505 : []),
-...(typeof posts_202506 !== 'undefined' ? posts_202506 : []),
-...(typeof posts_202507 !== 'undefined' ? posts_202507 : []),
-...(typeof posts_202508 !== 'undefined' ? posts_202508 : []),
-...(typeof posts_202509 !== 'undefined' ? posts_202509 : []),
-...(typeof posts_202510 !== 'undefined' ? posts_202510 : []),
-...(typeof posts_202511 !== 'undefined' ? posts_202511 : []),
-...(typeof posts_202512 !== 'undefined' ? posts_202512 : []),
-];
-</script>
-<script>
-// emoticons.js가 아직 없거나 로드 실패해도 사이트가 깨지지 않도록 안전장치
-if (typeof renderWeiboEmoticons !== 'function') {
-window.renderWeiboEmoticons = function(text) { return text; };
-}
-const ACTOR_IMG = 'IMG_1757.JPG';
-const ACTOR_NICK = '周翊然Tz';
-let currentFilter = { type: 'all', value: null };
-let dateTree = {};
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
 document.getElementById('sideDrawer').classList.toggle('open');
@@ -986,8 +554,49 @@ function toggleArchiveSubmenu() {
 document.getElementById('archiveMenuToggle').classList.toggle('open');
 document.getElementById('archiveSubmenu').classList.toggle('open');
 }
+function formatDateTime(d) {
+const date = new Date(d);
+const month = date.getMonth() + 1;
+const day = date.getDate();
+const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
+const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
+return hour ? `${month}.${day} ${hour}:${min}` : `${month}.${day}`;
+}
+function renderImages(images) {
+if (!images || !images.length) return '';
+if (images.length === 1) {
+return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${images[0]}')" /></div>`;
+}
+const shown = images.slice(0, 9);
+const remaining = images.length - 9;
+const colsClass = shown.length === 2 ? 'cols-2' : '';
+const cells = shown.map((src, i) => {
+if (i === 8 && remaining > 0) {
+return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /><div class="grid-overlay">+${remaining}</div></div>`;
+}
+return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /></div>`;
+}).join('');
+return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
+}
+function renderDouyinFeed() {
+const events = (typeof douyinEvents !== 'undefined' ? douyinEvents : []).slice()
+.sort((a, b) => new Date(b.date) - new Date(a.date));
+document.getElementById('feed-count').textContent = events.length + '개';
+if (!events.length) {
+document.getElementById('douyin-feed').innerHTML = '<div class="empty-state">기록이 없습니다.</div>';
+return;
+}
+document.getElementById('douyin-feed').innerHTML = events.map(ev => `
+<div class="douyin-card">
+<div class="douyin-date">${formatDateTime(ev.date)}</div>
+<div class="douyin-title">${ev.title}</div>
+${ev.body ? `<div class="douyin-body">${ev.body}</div>` : ''}
+${ev.images && ev.images.length ? renderImages(ev.images) : ''}
+</div>
+`).join('');
+}
+renderDouyinFeed();
 // ============ 스케줄 캘린더 모달 ============
-// data-schedule.js 의 scheduleEvents = [{ date:'YYYY-MM-DD', time:'19:00', title:'...', category:'live'|'event'|'shoot' }, ...] 를 읽어서 렌더링.
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
 let scheduleViewDate = new Date();
 let scheduleMonthEvents = {};
@@ -1054,335 +663,6 @@ detail.innerHTML = dayEvents.map(e => `
 <span>${e.title}</span>
 </div>`).join('');
 }
-function formatDateTime(d) {
-const date = new Date(d);
-const month = date.getMonth() + 1;
-const day = date.getDate();
-const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
-const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
-return hour ? `${month}.${day} ${hour}:${min}` : `${month}.${day}`;
-}
-function getMonthLabel(d) {
-const date = new Date(d);
-return `${date.getFullYear()}년 ${date.getMonth()+1}월`;
-}
-function getDayLabel(d) {
-const date = new Date(d);
-return `${date.getMonth()+1}월 ${date.getDate()}일`;
-}
-function sameText(a, b) {
-return (a || '').trim() === (b || '').trim();
-}
-// ============ VOICE MESSAGE (weibo-style click-to-play) ============
-// data-YYYY-MM.js 의 comment.audio / actorReply.audio 값을 받아서
-// 클릭 시 재생되는 웨이보 스타일 음성 메시지 HTML 문자열을 만들어줌.
-// duration은 초 단위 정수(없으면 오디오 메타데이터에서 자동으로 읽어옴).
-let vmInstanceSeq = 0;
-window.__vmInstances = window.__vmInstances || {};
-function renderVoiceMessageHtml(audioSrc, duration) {
-const vmId = 'vm-' + (++vmInstanceSeq);
-return `
-<span class="voice-message" id="${vmId}" onclick="toggleVoiceMessage('${vmId}', '${audioSrc}')">
-<span class="vm-play-btn">
-<svg class="vm-icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-<svg class="vm-icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-</span>
-<span class="vm-waveform">
-<span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
-<span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
-</span>
-<span class="vm-duration" id="${vmId}-dur">${duration ? duration + '″' : ''}</span>
-</span>`;
-}
-function toggleVoiceMessage(vmId, audioSrc) {
-const el = document.getElementById(vmId);
-if (!el) return;
-// 이 인스턴스에서 이미 만든 Audio 객체가 있으면 재사용, 없으면 새로 생성
-let audio = window.__vmInstances[vmId];
-if (!audio) {
-audio = new Audio(audioSrc);
-window.__vmInstances[vmId] = audio;
-const durEl = document.getElementById(vmId + '-dur');
-audio.addEventListener('loadedmetadata', () => {
-if (durEl && !durEl.textContent) durEl.textContent = Math.round(audio.duration) + '″';
-});
-audio.addEventListener('ended', () => {
-el.classList.remove('playing');
-audio.currentTime = 0;
-});
-}
-// 페이지에서 재생 중인 다른 음성 메시지가 있으면 정지
-document.querySelectorAll('.voice-message.playing').forEach(other => {
-if (other.id !== vmId) {
-other.classList.remove('playing');
-const otherAudio = window.__vmInstances[other.id];
-if (otherAudio) otherAudio.pause();
-}
-});
-if (audio.paused) {
-audio.play();
-el.classList.add('playing');
-} else {
-audio.pause();
-el.classList.remove('playing');
-}
-}
-function renderComment(c) {
-let replyHtml = '';
-if (c.actorReplies && c.actorReplies.length) {
-replyHtml = c.actorReplies.map(r => `
-<div class="actor-reply">
-<div class="actor-reply-header">
-<div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-<span class="actor-reply-name">${ACTOR_NICK}</span>
-</div>
-${r.originalText && !sameText(r.originalText, r.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(r.originalText)}</div>` : ''}
-<div class="actor-reply-translated">${renderWeiboEmoticons(r.translatedText)}</div>
-${r.audio ? renderVoiceMessageHtml(r.audio, r.audioDuration) : ''}
-</div>`).join('');
-} else if (c.actorReply) {
-replyHtml = `
-<div class="actor-reply">
-<div class="actor-reply-header">
-<div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
-<span class="actor-reply-name">${ACTOR_NICK}</span>
-</div>
-${c.actorReply.originalText && !sameText(c.actorReply.originalText, c.actorReply.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
-${c.actorReply.translatedText ? `<div class="actor-reply-translated">${renderWeiboEmoticons(c.actorReply.translatedText)}</div>` : ''}
-${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
-${c.actorReply.audio ? renderVoiceMessageHtml(c.actorReply.audio, c.actorReply.audioDuration) : ''}
-</div>`;
-}
-const isActor = c.username === ACTOR_NICK;
-const avatarHtml = isActor
-? `<img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" />`
-: (c.username === '吃瓜罗伯特' ? '🤖' : '');
-return `
-<div class="comment-item">
-<div class="comment-header">
-<div class="comment-avatar" style="${isActor ? '' : 'background:var(--pink);'}">${avatarHtml}</div>
-<span class="comment-username" style="${isActor ? 'color:var(--pink);' : ''}">${c.username}</span>
-</div>
-${!sameText(c.originalText, c.translatedText) ? `<div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>` : ''}
-<div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
-${c.note ? `<div class="comment-note">note: ${c.note}</div>` : ''}
-${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
-${replyHtml}
-${c.audio ? renderVoiceMessageHtml(c.audio, c.audioDuration) : ''}
-</div>`;
-}
-function commentMatches(c, query) {
-return (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-(c.originalText && c.originalText.toLowerCase().includes(query)) ||
-(c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query)) ||
-(c.actorReplies && c.actorReplies.some(r => r.translatedText && r.translatedText.toLowerCase().includes(query)));
-}
-function renderImages(images) {
-if (!images || !images.length) return '';
-if (images.length === 1) {
-return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${images[0]}')" /></div>`;
-}
-const shown = images.slice(0, 9);
-const remaining = images.length - 9;
-const colsClass = shown.length === 2 ? 'cols-2' : '';
-const cells = shown.map((src, i) => {
-if (i === 8 && remaining > 0) {
-return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /><div class="grid-overlay">+${remaining}</div></div>`;
-}
-return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /></div>`;
-}).join('');
-return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
-}
-function renderPost(post, query) {
-const isFan = post.authorAvatar === '🥣';
-const isStudio = post.authorAvatar === '💼';
-const authorName = post.authorName || ACTOR_NICK;
-let avatarHtml, avatarStyle = '';
-if (isFan) {
-avatarHtml = '';
-} else if (isStudio) {
-avatarHtml = '💼';
-avatarStyle = 'background:var(--studio);display:flex;align-items:center;justify-content:center;font-size:15px;';
-} else {
-avatarHtml = `<img src="${ACTOR_IMG}" alt="${authorName}" />`;
-}
-const imagesHtml = renderImages(post.images);
-const youtubeHtml = post.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
-let commentsHtml;
-let commentCount = post.comments ? post.comments.length : 0;
-let autoOpen = false;
-if (query && post.comments && post.comments.length) {
-const matched = post.comments.filter(c => commentMatches(c, query));
-if (matched.length > 0) {
-commentsHtml = matched.map(renderComment).join('');
-commentCount = matched.length;
-autoOpen = true;
-} else {
-commentsHtml = '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
-}
-} else {
-commentsHtml = post.comments && post.comments.length
-? post.comments.map(renderComment).join('')
-: '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
-}
-// 댓글이 5개 이하면 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여주고,
-// 5개 초과(댓글 많은 스레드형)는 기존처럼 펼치기/접기 버튼을 눌러야 보이게 유지
-const forceOpen = commentCount > 0 && commentCount <= 5;
-if (forceOpen) autoOpen = true;
-const footerBtn = forceOpen
-? ''
-: (commentCount > 0
-? `<button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">댓글 ${commentCount}개 &nbsp;↓</button>`
-: `<span class="toggle-comments-btn empty">댓글 없음</span>`);
-return `
-<article class="post-card" id="post-${post.id}">
-<div class="post-meta">
-<div class="post-avatar" style="${avatarStyle}">${avatarHtml}</div>
-<div class="post-meta-info">
-<div class="actor-name" style="${isStudio ? 'color:var(--studio);' : ''}">${authorName}</div>
-<div class="post-date">${formatDateTime(post.date)}</div>
-</div>
-${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener" style="${isStudio ? 'color:var(--studio);' : ''}">원문 ↗</a>` : ''}
-</div>
-${!sameText(post.originalText, post.translatedText) ? `<div class="original-text zh">${renderWeiboEmoticons(post.originalText)}</div>` : ''}
-<div class="translated-text">${renderWeiboEmoticons(post.translatedText)}</div>
-${post.note ? `<div class="translation-note">note: ${post.note}</div>` : ''}
-${imagesHtml}${youtubeHtml}
-<div class="post-footer">
-${footerBtn}
-</div>
-<div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
-<div class="comments-title">댓글 번역${query && autoOpen ? ` · "${query}" 검색 결과` : ''}</div>
-${commentsHtml}
-</div>
-</article>`;
-}
-function toggleComments(id) {
-const el = document.getElementById(`comments-${id}`);
-const btn = document.getElementById(`cmtbtn-${id}`);
-el.classList.toggle('open');
-if (el.classList.contains('open')) {
-btn.innerHTML = '댓글 접기 &nbsp;↑';
-} else {
-const count = el.querySelectorAll('.comment-item').length;
-btn.innerHTML = `댓글 ${count}개 &nbsp;↓`;
-}
-}
-function getFilteredPosts() {
-const query = document.getElementById('searchInput').value.toLowerCase().trim();
-let filtered = [...posts];
-if (query) {
-// 검색어가 있으면 연도/월 필터 무시하고 전체 기간에서 검색
-filtered = filtered.filter(p =>
-p.translatedText.toLowerCase().includes(query) ||
-p.originalText.toLowerCase().includes(query) ||
-(p.comments && p.comments.some(c =>
-(c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
-(c.originalText && c.originalText.toLowerCase().includes(query)) ||
-(c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
-))
-);
-} else if (currentFilter.type === 'month') {
-filtered = filtered.filter(p => {
-const d = new Date(p.date);
-return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
-});
-}
-filtered.sort((a, b) => {
-const da = new Date(a.date);
-const db = new Date(b.date);
-const monthA = da.getFullYear() * 100 + da.getMonth();
-const monthB = db.getFullYear() * 100 + db.getMonth();
-if (monthA !== monthB) return monthB - monthA;
-return da - db;
-});
-return filtered;
-}
-function renderFeed() {
-const rawQuery = document.getElementById('searchInput').value.trim();
-const query = rawQuery.toLowerCase();
-const filtered = getFilteredPosts();
-document.getElementById('feed-count').textContent = filtered.length + '개';
-const filterBar = document.getElementById('filterBar');
-if (rawQuery) {
-document.getElementById('filterLabel').textContent = `"${rawQuery}" 검색 결과 · 전체 기간`;
-filterBar.classList.add('show');
-} else {
-filterBar.classList.remove('show');
-}
-if (filtered.length === 0) {
-document.getElementById('posts-feed').innerHTML = `<div class="empty-state">게시물이 없습니다.</div>`;
-return;
-}
-let html = '';
-let lastMonth = null;
-let lastDay = null;
-filtered.forEach(p => {
-const monthLabel = getMonthLabel(p.date);
-if (monthLabel !== lastMonth && query) {
-html += `<div class="date-index">${monthLabel}</div>`;
-lastMonth = monthLabel;
-lastDay = null;
-}
-const dayLabel = getDayLabel(p.date);
-if (dayLabel !== lastDay) {
-html += `<div class="day-divider"><span class="day-divider-label">${dayLabel}</span><span class="day-divider-line"></span></div>`;
-lastDay = dayLabel;
-}
-html += renderPost(p, query);
-});
-document.getElementById('posts-feed').innerHTML = html;
-}
-function filterByMonth(year, month) {
-currentFilter = { type: 'month', value: { year, month } };
-renderFeed();
-document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
-const el = document.getElementById(`m-${year}-${month}`);
-if (el) el.classList.add('active');
-document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
-const yEl = document.getElementById(`ytab-${year}`);
-if (yEl) yEl.classList.add('active');
-}
-function clearSearch() {
-document.getElementById('searchInput').value = '';
-renderFeed();
-}
-function renderDateTree() {
-const tree = {};
-posts.forEach(p => {
-const d = new Date(p.date);
-const y = d.getFullYear();
-const m = d.getMonth() + 1;
-if (!tree[y]) tree[y] = {};
-if (!tree[y][m]) tree[y][m] = 0;
-tree[y][m]++;
-});
-dateTree = tree;
-const years = Object.keys(tree).map(Number).sort((a,b) => b - a);
-const latestYear = years[0];
-const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
-document.getElementById('year-tabs').innerHTML = years.map(year => `
-<div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
-`).join('');
-renderMonthRow(latestYear);
-filterByMonth(latestYear, latestMonth);
-}
-function renderMonthRow(year) {
-const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
-document.getElementById('month-row').innerHTML = months.map(month => `
-<div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">${month}월<span class="m-count">${dateTree[year][month]}</span></div>
-`).join('');
-}
-function selectYear(year) {
-document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
-const yEl = document.getElementById(`ytab-${year}`);
-if (yEl) yEl.classList.add('active');
-renderMonthRow(year);
-const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
-filterByMonth(year, months[0]);
-}
-renderFeed();
-renderDateTree();
 // 맨 위로 / 맨 아래로 버튼
 function scrollToTop() {
 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1422,8 +702,6 @@ closeLightbox();
 if (document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 }
 });
-// 이미지 저장: 가능하면 네이티브 공유시트(iOS/Android에서 "사진에 저장"을 한 번에 지원)를 띄우고,
-// 지원 안 되는 환경(주로 데스크톱)에서는 기존 다운로드 방식으로 자동 전환됨.
 async function saveOrShareImage() {
 const src = currentLightboxSrc;
 if (!src) return;
