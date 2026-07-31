@@ -20,6 +20,7 @@
 --black: #1a1216;
 --gray-muted: #c4c4c4;
 --gold: #C99A3B;
+--teal: #2E6B63;
 --gray-bg: #f4f4f4;
 --border: #ececec;
 --white: #ffffff;
@@ -121,6 +122,8 @@ margin: 0 auto 14px; display: flex; align-items: center; justify-content: center
 .infobox-label { width: 84px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
 .infobox-value { flex: 1; color: var(--black); line-height: 1.55; }
 .infobox-value.tbd { color: var(--gray-muted); }
+.infobox-row.stacked { flex-direction: column; }
+.infobox-row.stacked .infobox-label { width: auto; margin-bottom: 7px; }
 
 /* TOC */
 .toc { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 0; }
@@ -159,7 +162,7 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .mini-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; background: var(--pink-pale); color: var(--pink); margin-right: 6px; white-space: nowrap; }
 .mini-badge.pending { background: var(--gray-bg); color: var(--gray-muted); }
 .subsection-label { font-size: 11px; font-weight: 700; color: var(--gray-muted); letter-spacing: 0.02em; margin: 14px 0 6px; }
-.subsection-label.current { color: var(--pink); font-size: 22px; }
+.subsection-label.current { color: var(--pink); font-size: 12px; }
 .subsection-label:first-child { margin-top: 0; }
 .hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
@@ -179,6 +182,9 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .mag-caption { margin-top: 6px; font-size: 10.5px; line-height: 1.4; color: var(--black); }
 .mag-caption .mag-date { display: block; color: var(--pink); font-weight: 700; font-size: 10px; margin-top: 2px; }
 .act-role { color: var(--gray-muted); font-size: 11px; margin-left: 3px; }
+.act-role.spokesperson { color: var(--pink); }
+.act-role.ambassador { color: var(--teal); }
+.act-role.friend { color: var(--gold); }
 .act-year-divider.muted .act-year-divider-label { color: var(--gray-muted); }
 .mini-badge.year-flat { border-radius: 0; }
 .year-colored .act-year { color: var(--pink); font-weight: 800; }
@@ -311,11 +317,10 @@ color: var(--gray-muted);
 <nav class="side-drawer" id="sideDrawer">
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 <div class="side-drawer-index">
-<a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
-<a class="side-drawer-item" href="notice.html"><span class="idx">02</span>NOTICE</a>
+<a class="side-drawer-item" href="notice.html"><span class="idx">01</span>NOTICE</a>
+<a class="side-drawer-item" href="archive.html"><span class="idx">02</span>ARCHIVE</a>
 <a class="side-drawer-item current" href="profile.html"><span class="idx">03</span>PROFILE</a>
 <a class="side-drawer-item" href="spinspin.html"><span class="idx">04</span>SpinSpin</a>
-<a class="side-drawer-item" href="guide.html"><span class="idx">05</span>가이드</a>
 </div>
 </nav>
 <!-- SCHEDULE CALENDAR MODAL -->
@@ -380,7 +385,7 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 일척염 <span style="color:#F7A4B8;">●</span><span class="footnote-marker" onclick="toggleFootnote('color', event)">[2]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)</div></div>
 <div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[3]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value">
+<div class="infobox-row stacked"><div class="infobox-label">SNS</div><div class="infobox-value">
 <div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
 <div><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div>
 </div></div>
@@ -457,29 +462,29 @@ color: var(--gray-muted);
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
 <div class="subsection-label">지난 활동</div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">白家阿宽 · <span class="act-role">도시 미식 대언인</span></div>
-<div class="act-row-flat">Clarins · <span class="act-role">글로우 지우</span></div>
-<div class="act-row-flat">MISTINE · <span class="act-role">베이스 메이크업 대사</span></div>
-<div class="act-row-flat">GODIVA · <span class="act-role">브랜드 대사</span></div>
-<div class="act-row-flat">康师傅饮用水 · <span class="act-role">브랜드 대사</span></div>
-<div class="act-row-flat">CRD克徕帝 · <span class="act-role">신품 브랜드 지우</span></div>
+<div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
+<div class="act-row-flat">Clarins · <span class="act-role friend">글로우 지우</span></div>
+<div class="act-row-flat">MISTINE · <span class="act-role ambassador">베이스 메이크업 대사</span></div>
+<div class="act-row-flat">GODIVA · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">康师傅饮用水 · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">CRD克徕帝 · <span class="act-role friend">신품 브랜드 지우</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2023~2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Stride炫迈 · <span class="act-role">브랜드 대사</span></div>
-<div class="act-row-flat">YAYA鸭鸭 · <span class="act-role">브랜드 대언인</span></div>
+<div class="act-row-flat">Stride炫迈 · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">YAYA鸭鸭 · <span class="act-role spokesperson">브랜드 대언인</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">L'OCCITAN · <span class="act-role">바디케어 대사</span></div>
-<div class="act-row-flat">艾森丝essence · <span class="act-role">브랜드 대사</span></div>
-<div class="act-row-flat">THE WHOO 后 · <span class="act-role">취광 대사</span></div>
-<div class="act-row-flat">茶百道 ChaPanda · <span class="act-role">가을 시즌 대사</span></div>
+<div class="act-row-flat">L'OCCITAN · <span class="act-role ambassador">바디케어 대사</span></div>
+<div class="act-row-flat">艾森丝essence · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">THE WHOO 后 · <span class="act-role ambassador">취광 대사</span></div>
+<div class="act-row-flat">茶百道 ChaPanda · <span class="act-role ambassador">가을 시즌 대사</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2024~2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Saucony · <span class="act-role">캠퍼스 시리즈 대언인</span></div>
-<div class="act-row-flat">Nuxe · <span class="act-role">클렌징 시리즈 대언인</span></div>
-<div class="act-row-flat">立白 · <span class="act-role">마스터 향기 모던 대사</span></div>
+<div class="act-row-flat">Saucony · <span class="act-role spokesperson">캠퍼스 시리즈 대언인</span></div>
+<div class="act-row-flat">Nuxe · <span class="act-role spokesperson">클렌징 시리즈 대언인</span></div>
+<div class="act-row-flat">立白 · <span class="act-role ambassador">마스터 향기 모던 대사</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">夸克 · <span class="act-role">여름 시즌 대사</span></div>
+<div class="act-row-flat">夸克 · <span class="act-role ambassador">여름 시즌 대사</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">小野和子 · <span class="act-role">선케어 대언인</span></div>
-<div class="act-row-flat">网易严选 · <span class="act-role">라이프스타일 대사</span></div>
+<div class="act-row-flat">小野和子 · <span class="act-role spokesperson">선케어 대언인</span></div>
+<div class="act-row-flat">网易严选 · <span class="act-role ambassador">라이프스타일 대사</span></div>
 
 <div class="subsection-label current">현재 진행중</div>
 <div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · 브랜드 대언인</div>
@@ -521,7 +526,7 @@ color: var(--gray-muted);
 </div>
 </section>
 
-<section class="wiki-section award-racing" id="awards">
+<section class="wiki-section year-colored" id="awards">
 <div class="wiki-section-title"><span class="num">07</span>수상</div>
 <div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">2022 웨이보의 밤 올해의 신예배우<br>신시대 국제 TV 페스티벌 신시대 최우수 신인 남자 배우<br>신호각 드라마 TV 드라마 감독의 밤 올해의 돌파 배우<br>2023 웨이보 시상식 올해의 기대 배우</div></div>
@@ -529,7 +534,7 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트<span class="footnote-marker" onclick="toggleFootnote('award', event)">[4]<span class="footnote-popup" id="fn-award">관련 <a href="https://m.weibo.cn/detail/5233731101003549" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 </section>
 
-<section class="wiki-section award-racing" id="racing">
+<section class="wiki-section year-colored" id="racing">
 <div class="wiki-section-title"><span class="num">08</span>레이싱</div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">샤먼 국제 레이싱 챔피언십 · 1위</div></div>
 <div class="act-row"><div class="act-year">2024</div><div class="act-detail">CTCC 중국 투어링카 챔피언십 커차오 라운드 A조 · 1위</div></div>
