@@ -166,6 +166,12 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .subsection-label:first-child { margin-top: 0; }
 .hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
+.infobox-sns { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.infobox-sns-title { font-size: 11px; font-weight: 700; color: var(--gray-muted); margin-bottom: 8px; letter-spacing: 0.02em; }
+.infobox-sns-row { display: flex; gap: 8px; font-size: 12.5px; padding: 4px 0; line-height: 1.6; }
+.infobox-sns-tag { width: 40px; flex-shrink: 0; color: var(--gray-muted); font-size: 11px; }
+.infobox-sns-row a { color: var(--pink); text-decoration: none; font-weight: 600; }
+.infobox-sns-row a:hover { text-decoration: underline; }
 .infobox-value a:hover { text-decoration: underline; }
 .etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
 .etc-dot { color: var(--pink); flex-shrink: 0; }
@@ -386,14 +392,15 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학 (졸업)</div></div>
 <div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span id="debutDday" style="color:var(--gray-muted);"></span></div></div>
 <div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
-<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♀ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
+<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♀ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·빠디엔·메이메이<span class="footnote-marker" onclick="toggleFootnote('cats', event)">[6]<span class="footnote-popup" id="fn-cats">메이메이·두두·지우디엔·빠디엔·쿠거: 익연이 브이로그에 등장한 반려묘들. 근황은 알려지지 않았으나, 익연이 친구 스와이거에 따르면 익연이가 키우던 고양이를 입양 보냈다고 함. <a href="https://x.com/vazseyo/status/2051711455142326628?s=46" target="_blank" rel="noopener">참고 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 <span style="color:#F7A4B8;">●</span> #F7A4B8<span class="footnote-marker" onclick="toggleFootnote('color', event)">[2]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)<span class="footnote-marker" onclick="toggleFootnote('fandom', event)">[5]<span class="footnote-popup" id="fn-fandom">달콤한 죽을 뜻하는 甜粥(티엔저우)에서 '粥(zhōu)'가 성씨인 '周(zhōu)'와 동음인 점을 활용한 언어유희이다.</span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[3]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
-<div class="infobox-row stacked"><div class="infobox-label">SNS</div><div class="infobox-value">
-<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;display:inline-block;width:38px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
-<div><span style="color:var(--gray-muted);font-size:11px;display:inline-block;width:38px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div>
-</div></div>
+</div>
+<div class="infobox-sns">
+<div class="infobox-sns-title">SNS</div>
+<div class="infobox-sns-row"><span class="infobox-sns-tag">개인</span><span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></span></div>
+<div class="infobox-sns-row"><span class="infobox-sns-tag">공작실</span><span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></span></div>
 </div>
 </div>
 
@@ -435,9 +442,10 @@ color: var(--gray-muted);
 
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">영상 ↗</a></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소 EP.11<span class="act-subtitle">一见你就笑</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">영상1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">영상2 ↗</a></div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">영상 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소 EP.11<span class="act-subtitle">一见你就笑</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">보러가기2 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
+<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail">불상수적성기오<span class="act-subtitle">不想睡的星期五</span> <span style="color:var(--gray-muted);font-size:11px;">(방영 예정)</span></div></div>
 </section>
 
 <section class="wiki-section year-colored" id="music">
