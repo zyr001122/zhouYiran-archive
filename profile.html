@@ -169,6 +169,12 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .footnote-popup a { color: var(--pink-dim); }
 .mag-link { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 8px; text-decoration: none; }
 .mag-link:hover { text-decoration: underline; }
+.mag-shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 12px 10px; margin-top: 4px; }
+.mag-item { display: flex; flex-direction: column; }
+.mag-cover { width: 100%; aspect-ratio: 3/4; border-radius: 3px; overflow: hidden; background: var(--gray-bg); box-shadow: 0 1px 4px rgba(26,18,22,0.15); }
+.mag-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mag-caption { margin-top: 6px; font-size: 10.5px; line-height: 1.4; color: var(--black); }
+.mag-caption .mag-date { display: block; color: var(--gray-muted); font-size: 9.5px; margin-top: 1px; }
 
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
 
@@ -474,26 +480,29 @@ color: var(--gray-muted);
 
 <div class="wiki-subsection">
 <div class="wiki-subsection-title">화보 (표지)</div>
-<div class="act-row"><div class="act-year">2023.05</div><div class="act-detail">PurplePearlRising</div></div>
-<div class="act-row"><div class="act-year">2023.08</div><div class="act-detail">广东电视台娱乐周刊</div></div>
-<div class="act-row"><div class="act-year">2023.08</div><div class="act-detail">BOBOSNAP</div></div>
-<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">费加罗男士</div></div>
-<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">时装LOFFICIEL</div></div>
-<div class="act-row"><div class="act-year">2023.11</div><div class="act-detail">红秀GRAZIA</div></div>
-<div class="act-row"><div class="act-year">2023.12</div><div class="act-detail">时装男士</div></div>
-<div class="act-row"><div class="act-year">2024.01</div><div class="act-detail">ELLEMEN新青年</div></div>
-<div class="act-row"><div class="act-year">2024.01</div><div class="act-detail">精彩OK</div></div>
-<div class="act-row"><div class="act-year">2024.03</div><div class="act-detail">InStyle优家画报</div></div>
-<div class="act-row"><div class="act-year">2024.05</div><div class="act-detail">风度mensuno</div></div>
-<div class="act-row"><div class="act-year">2024.11</div><div class="act-detail">时装男士</div></div>
-<div class="act-row"><div class="act-year">2024.12</div><div class="act-detail">Glass Man</div></div>
-<div class="act-row"><div class="act-year">2025.02</div><div class="act-detail">Wonderland</div></div>
-<div class="act-row"><div class="act-year">2025 여름</div><div class="act-detail">MarieClaireNOW</div></div>
-<div class="act-row"><div class="act-year">2025.07</div><div class="act-detail">superELLE</div></div>
-<div class="act-row"><div class="act-year">2025.08</div><div class="act-detail">Wonderland</div></div>
-<div class="act-row"><div class="act-year">2025.11</div><div class="act-detail">MadameFigaro</div></div>
-<div class="act-row"><div class="act-year">2026.03·4</div><div class="act-detail">悦游 Traveler</div></div>
-<div class="act-row"><div class="act-year">2026.07</div><div class="act-detail">芭莎男士 Harper's BAZAAR MEN</div></div>
+<div class="mag-shelf">
+<div class="mag-item"><div class="mag-cover"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></div><div class="mag-caption">费加罗男士<span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></div><div class="mag-caption">时装LOFFICIEL<span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></div><div class="mag-caption">红秀GRAZIA<span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2023년 12월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></div><div class="mag-caption">ELLEMEN新青年<span class="mag-date">2024년 1월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></div><div class="mag-caption">InStyle优家画报<span class="mag-date">2024년 3월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></div><div class="mag-caption">风度mensuno<span class="mag-date">2024년 5월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2024년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2412-glassman.jpg" alt="Glass Man 2024년 12월호" loading="lazy"></div><div class="mag-caption">Glass Man<span class="mag-date">2024년 12월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></div><div class="mag-caption">悦游 Traveler<span class="mag-date">2026년 3·4월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
+</div>
 </div>
 
 <div class="wiki-subsection">
