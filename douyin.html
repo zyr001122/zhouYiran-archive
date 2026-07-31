@@ -226,9 +226,16 @@ padding: 18px 0 4px;
 #douyin-feed { padding-bottom: 2rem; padding-top: 8px; }
 .douyin-card { padding: 18px 0; border-top: 1px solid var(--border); }
 .douyin-card:first-of-type { border-top: none; }
-.douyin-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 6px; }
-.douyin-title { font-size: 14px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 8px; }
-.douyin-body { font-size: 13px; color: var(--black); line-height: 1.7; letter-spacing: -0.005em; white-space: pre-line; }
+.year-divider { display: flex; align-items: center; gap: 10px; margin: 26px 0 6px; }
+.year-divider:first-child { margin-top: 0; }
+.year-divider-label { font-size: 13px; font-weight: 800; color: var(--pink); letter-spacing: 0.01em; white-space: nowrap; }
+.year-divider-line { flex: 1; height: 1px; background: var(--border); }
+.year-divider + .douyin-card { border-top: none; }
+.douyin-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 8px; }
+.original-text { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin-bottom: 6px; }
+.translated-text { font-size: 13.5px; color: var(--black); line-height: 1.65; font-weight: 400; letter-spacing: -0.01em; }
+.yt-embed { margin: 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-radius: 2px; }
+.yt-embed iframe { width: 100%; height: 100%; border: none; }
 /* image grid: weibo-style up to 3x3 (도우인 캡처/썸네일용) */
 .post-image-grid {
 display: grid;
@@ -553,7 +560,7 @@ color: var(--gray-muted);
 </button>
 </div>
 <div class="archive-wordmark">ARCHIVE</div>
-<div class="archive-subtitle">도우인 아카이브</div>
+<div class="archive-subtitle">Zz的眼睛 · 도우인 아카이브</div>
 </div>
 <!-- WHITE PANEL -->
 <div class="panel">
@@ -601,22 +608,37 @@ return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loadi
 }).join('');
 return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
 }
+function sameText(a, b) {
+return (a || '').trim() === (b || '').trim();
+}
 function renderDouyinFeed() {
-const events = (typeof douyinEvents !== 'undefined' ? douyinEvents : []).slice()
+const posts = (typeof douyinPosts !== 'undefined' ? douyinPosts : []).slice()
 .sort((a, b) => new Date(b.date) - new Date(a.date));
-document.getElementById('feed-count').textContent = events.length + '개';
-if (!events.length) {
+document.getElementById('feed-count').textContent = posts.length + '개';
+if (!posts.length) {
 document.getElementById('douyin-feed').innerHTML = '<div class="empty-state">기록이 없습니다.</div>';
 return;
 }
-document.getElementById('douyin-feed').innerHTML = events.map(ev => `
-<div class="douyin-card">
-<div class="douyin-date">${formatDateTime(ev.date)}</div>
-<div class="douyin-title">${ev.title}</div>
-${ev.body ? `<div class="douyin-body">${ev.body}</div>` : ''}
-${ev.images && ev.images.length ? renderImages(ev.images) : ''}
+let html = '';
+let lastYear = null;
+posts.forEach(p => {
+const year = new Date(p.date).getFullYear();
+if (year !== lastYear) {
+html += `<div class="year-divider"><span class="year-divider-label">${year}</span><span class="year-divider-line"></span></div>`;
+lastYear = year;
+}
+const youtubeHtml = p.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${p.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
+const imagesHtml = renderImages(p.images);
+html += `
+<div class="douyin-card" id="douyin-${p.id}">
+<div class="douyin-date">${formatDateTime(p.date)}</div>
+${!sameText(p.originalText, p.translatedText) ? `<div class="original-text zh">${p.originalText}</div>` : ''}
+<div class="translated-text">${p.translatedText}</div>
+${youtubeHtml}${imagesHtml}
 </div>
-`).join('');
+`;
+});
+document.getElementById('douyin-feed').innerHTML = html;
 }
 renderDouyinFeed();
 // ============ 스케줄 캘린더 모달 ============
