@@ -19,6 +19,7 @@
 --tab-inactive: #322b31;
 --black: #1a1216;
 --gray-muted: #c4c4c4;
+--gold: #C99A3B;
 --gray-bg: #f4f4f4;
 --border: #ececec;
 --white: #ffffff;
@@ -147,7 +148,8 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .act-row:last-child { border-bottom: none; }
 .act-year { width: 76px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
 .act-detail { flex: 1; color: var(--black); line-height: 1.6; }
-.act-tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 6px; }
+.act-tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--gold); margin-left: 6px; }
+.act-tag.lead { color: var(--pink); }
 .act-row-flat { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--black); line-height: 1.6; }
 .act-row-flat:last-child { border-bottom: none; }
 .act-year-divider { display: flex; align-items: center; gap: 8px; margin: 14px 0 4px; }
@@ -175,6 +177,11 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .mag-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .mag-caption { margin-top: 6px; font-size: 10.5px; line-height: 1.4; color: var(--black); }
 .mag-caption .mag-date { display: block; color: var(--gray-muted); font-size: 9.5px; margin-top: 1px; }
+.act-role { color: var(--gray-muted); font-size: 11px; margin-left: 3px; }
+.act-year-divider.muted .act-year-divider-label { color: var(--gray-muted); }
+.mini-badge.year-flat { border-radius: 0; }
+.year-colored .act-year { color: var(--pink); font-weight: 800; }
+.act-subtitle { color: var(--gray-muted); font-size: 10.5px; margin-left: 3px; }
 
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
 
@@ -373,8 +380,8 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)</div></div>
 <div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[3]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value">
-<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
-<div><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a></div>
+<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
+<div><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div>
 </div></div>
 </div>
 </div>
@@ -396,116 +403,128 @@ color: var(--gray-muted);
 <section class="wiki-section" id="activity">
 <div class="wiki-section-title"><span class="num">02</span>활동</div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection year-colored">
 <div class="wiki-subsection-title">드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2020</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">Apple TV</span>봉귀사시가(凤归四时歌) · 종리(钟离)<span class="act-tag">조연</span></div>
+<div class="act-row-flat"><span class="mini-badge">Apple TV</span>봉귀사시가<span class="act-subtitle">凤归四时歌</span> · 종리<span class="act-subtitle">钟离</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2021</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>배탁료반장(拜托了班长) · 예징시(叶景希)<span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING · Apple TV</span>니미소시흔미(你微笑时很美) · 아이자(艾佳)</div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교가적아녀(乔家的儿女) · 차오치치(乔七七)<span class="act-tag">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>소민가(小敏家) · 진자준(金家骏)<span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>니시아최첨밀적심사(你是我最甜蜜的心事) · 린란(林燃)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>배탁료반장<span class="act-subtitle">拜托了班长</span> · 예징시<span class="act-subtitle">叶景希</span></div>
+<div class="act-row-flat"><span class="mini-badge">TVING · Apple TV</span>니미소시흔미<span class="act-subtitle">你微笑时很美</span> · 아이자<span class="act-subtitle">艾佳</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교가적아녀<span class="act-subtitle">乔家的儿女</span> · 차오치치<span class="act-subtitle">乔七七</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>소민가<span class="act-subtitle">小敏家</span> · 진자준<span class="act-subtitle">金家骏</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>니시아최첨밀적심사<span class="act-subtitle">你是我最甜蜜的心事</span> · 린란<span class="act-subtitle">林燃</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>이십불혹2(二十不惑2) · 인상(殷赏)<span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>재니적동야리섬요(在你的冬夜里闪耀) · 무쯔시(慕子希)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>이십불혹2<span class="act-subtitle">二十不惑2</span> · 인상<span class="act-subtitle">殷赏</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>재니적동야리섬요<span class="act-subtitle">在你的冬夜里闪耀</span> · 무쯔시<span class="act-subtitle">慕子希</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2023</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">Wavve · Watcha · TVING</span>당아비분향니(当我飞奔向你) · 장루랑(张陆让)<span class="act-tag">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>백일몽아(白日梦我) · 선쥐안(沈倦)</div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>작작풍류(灼灼风流) · 류침(刘琛)<span class="act-tag">조연</span></div>
+<div class="act-row-flat"><span class="mini-badge">Wavve · Watcha · TVING</span>당아비분향니<span class="act-subtitle">当我飞奔向你</span> · 장루랑<span class="act-subtitle">张陆让</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>백일몽아<span class="act-subtitle">白日梦我</span> · 선쥐안<span class="act-subtitle">沈倦</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>작작풍류<span class="act-subtitle">灼灼风流</span> · 류침<span class="act-subtitle">刘琛</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING</span>투라대륙지연혼전(斗罗大陆之燃魂战) · 당삼(唐三)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge">TVING</span>투라대륙지연혼전<span class="act-subtitle">斗罗大陆之燃魂战</span> · 당삼<span class="act-subtitle">唐三</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">Wavve · TVING</span>환우(煥羽) · 밍성(明盛)<span class="act-tag">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>십이봉신(十二封信) · 탕이쉰(唐亦寻)</div>
+<div class="act-row-flat"><span class="mini-badge">Wavve · TVING</span>환우<span class="act-subtitle">煥羽</span> · 밍성<span class="act-subtitle">明盛</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>십이봉신<span class="act-subtitle">十二封信</span> · 탕이쉰<span class="act-subtitle">唐亦寻</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>강호야우십년등(江湖夜雨十年灯) · 모청안(慕清晏)/상녕(常宁)<span class="act-tag">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교초(翘楚) · 사연래(谢燕来)</div>
+<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>강호야우십년등<span class="act-subtitle">江湖夜雨十年灯</span> · 모청안<span class="act-subtitle">慕清晏</span>/상녕<span class="act-subtitle">常宁</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교초<span class="act-subtitle">翘楚</span> · 사연래<span class="act-subtitle">谢燕来</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">미정</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">미정</span>아규묵두아(我叫墨斗儿) · 묵두(墨斗)<span class="act-tag">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">미정</span>생명연(生命缘) · 샤자오양(夏朝阳)</div>
+<div class="act-row-flat"><span class="mini-badge pending">미정</span>아규묵두아<span class="act-subtitle">我叫墨斗儿</span> · 묵두<span class="act-subtitle">墨斗</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">미정</span>생명연<span class="act-subtitle">生命缘</span> · 샤자오양<span class="act-subtitle">夏朝阳</span></div>
 </div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection year-colored">
 <div class="wiki-subsection-title">영화</div>
-<div class="act-row"><div class="act-year">2018</div><div class="act-detail">쾌파아가대주(快把我哥带走) · 완쑤이(万岁)<span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2018</div><div class="act-detail">쾌파아가대주<span class="act-subtitle">快把我哥带走</span> · 완쑤이<span class="act-subtitle">万岁</span><span class="act-tag">조연</span></div></div>
 </div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection year-colored">
 <div class="wiki-subsection-title">예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5(五十公里桃花坞5)</div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소(一见你就笑) EP.11</div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14(奔跑吧14)</div></div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소<span class="act-subtitle">一见你就笑</span> EP.11</div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span></div></div>
 </div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection year-colored">
 <div class="wiki-subsection-title">음반</div>
-<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail">单恋 (짝사랑) · 싱글 1집</div></div>
-<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail">谈一场恋爱 (우리 연애나 할까) · 싱글 2집</div></div>
-<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail">你知道我知道 (알잖아, 내 마음) · 《배탁료반장》 OST</div></div>
-<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail">心事 (마음속 비밀) · 《니시아최첨밀적심사》 OST</div></div>
-<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail">誰是你朋友 (누가 네 친구야?) · 프로젝트 싱글</div></div>
-<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail">前行 (나아가다) · 《투라대륙지연혼전》 주제곡</div></div>
-<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail">心有所感 (마음에 새겨진 정) · 《교초》 삽입곡</div></div>
+<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail">单恋<span class="act-subtitle">짝사랑</span> · 싱글 1집</div></div>
+<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail">谈一场恋爱<span class="act-subtitle">우리 연애나 할까</span> · 싱글 2집</div></div>
+<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail">你知道我知道<span class="act-subtitle">알잖아, 내 마음</span> · 《배탁료반장》 OST</div></div>
+<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail">心事<span class="act-subtitle">마음속 비밀</span> · 《니시아최첨밀적심사》 OST</div></div>
+<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail">誰是你朋友<span class="act-subtitle">누가 네 친구야?</span> · 프로젝트 싱글</div></div>
+<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail">前行<span class="act-subtitle">나아가다</span> · 《투라대륙지연혼전》 주제곡</div></div>
+<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail">心有所感<span class="act-subtitle">마음에 새겨진 정</span> · 《교초》 삽입곡</div></div>
 </div>
 
 <div class="wiki-subsection">
 <div class="wiki-subsection-title">광고 및 홍보대사</div>
 <div class="subsection-label">지난 활동</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">白家阿宽(도시 미식 대언인), Clarins(글로우 지우), MISTINE(베이스 메이크업 대사), GODIVA(브랜드 대사), 康师傅饮用水(브랜드 대사), CRD克徕帝(신품 브랜드 지우)</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2023~2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Stride炫迈(브랜드 대사), YAYA鸭鸭(브랜드 대언인)</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">L'OCCITAN(바디케어 대사), 艾森丝essence(브랜드 대사), THE WHOO 后(취광 대사), 茶百道 ChaPanda(가을 시즌 대사)</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2024~2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Saucony(캠퍼스 시리즈 대언인), Nuxe(클렌징 시리즈 대언인), 立白(마스터 향기 모던 대사)</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">夸克(여름 시즌 대사)</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">小野和子(선케어 대언인), 网易严选(라이프스타일 대사)</div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">白家阿宽 · <span class="act-role">도시 미식 대언인</span></div>
+<div class="act-row-flat">Clarins · <span class="act-role">글로우 지우</span></div>
+<div class="act-row-flat">MISTINE · <span class="act-role">베이스 메이크업 대사</span></div>
+<div class="act-row-flat">GODIVA · <span class="act-role">브랜드 대사</span></div>
+<div class="act-row-flat">康师傅饮用水 · <span class="act-role">브랜드 대사</span></div>
+<div class="act-row-flat">CRD克徕帝 · <span class="act-role">신품 브랜드 지우</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2023~2024</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">Stride炫迈 · <span class="act-role">브랜드 대사</span></div>
+<div class="act-row-flat">YAYA鸭鸭 · <span class="act-role">브랜드 대언인</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">L'OCCITAN · <span class="act-role">바디케어 대사</span></div>
+<div class="act-row-flat">艾森丝essence · <span class="act-role">브랜드 대사</span></div>
+<div class="act-row-flat">THE WHOO 后 · <span class="act-role">취광 대사</span></div>
+<div class="act-row-flat">茶百道 ChaPanda · <span class="act-role">가을 시즌 대사</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2024~2025</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">Saucony · <span class="act-role">캠퍼스 시리즈 대언인</span></div>
+<div class="act-row-flat">Nuxe · <span class="act-role">클렌징 시리즈 대언인</span></div>
+<div class="act-row-flat">立白 · <span class="act-role">마스터 향기 모던 대사</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">夸克 · <span class="act-role">여름 시즌 대사</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">小野和子 · <span class="act-role">선케어 대언인</span></div>
+<div class="act-row-flat">网易严选 · <span class="act-role">라이프스타일 대사</span></div>
 
 <div class="subsection-label">현재 진행중</div>
-<div class="act-row-flat"><span class="mini-badge">2023~</span>LATEMON浪特梦眼镜 · 브랜드 대언인</div>
-<div class="act-row-flat"><span class="mini-badge">2024~</span>구찌 · 브랜드 지우</div>
-<div class="act-row-flat"><span class="mini-badge">2024~</span>겔랑 · 스킨케어 대사</div>
-<div class="act-row-flat"><span class="mini-badge">2024~</span>APM_MONACO · 아시아 태평양 브랜드 대언인</div>
-<div class="act-row-flat"><span class="mini-badge">2024~</span>WeTV · 글로벌 대언인</div>
-<div class="act-row-flat"><span class="mini-badge">2025~</span>불가리 · 아시아 태평양 브랜드 대사</div>
-<div class="act-row-flat"><span class="mini-badge">2025~</span>AMI · 글로벌 대사</div>
-<div class="act-row-flat"><span class="mini-badge">2026~</span>天猫 타오바오 · 환신 대사</div>
-<div class="act-row-flat"><span class="mini-badge">2026~</span>自然堂 · 청춘 대언인</div>
-<div class="act-row-flat"><span class="mini-badge">2026~</span>花间颂 · 베이스 메이크업 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · 브랜드 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>구찌 · 브랜드 지우</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>겔랑 · 스킨케어 대사</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>APM_MONACO · 아시아 태평양 브랜드 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>WeTV · 글로벌 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>불가리 · 아시아 태평양 브랜드 대사</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>AMI · 글로벌 대사</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>天猫 타오바오 · 환신 대사</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>自然堂 · 청춘 대언인</div>
+<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>花间颂 · 베이스 메이크업 대언인</div>
 </div>
 
 <div class="wiki-subsection">
 <div class="wiki-subsection-title">화보 (표지)</div>
 <div class="mag-shelf">
 <div class="mag-item"><div class="mag-cover"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">广东电视台娱乐周刊</span><span class="mag-date">2023년 8월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></div><div class="mag-caption">费加罗男士<span class="mag-date">2023년 11월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></div><div class="mag-caption">时装LOFFICIEL<span class="mag-date">2023년 11월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></div><div class="mag-caption">红秀GRAZIA<span class="mag-date">2023년 11월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2023년 12월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></div><div class="mag-caption">ELLEMEN新青年<span class="mag-date">2024년 1월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></div><div class="mag-caption">InStyle优家画报<span class="mag-date">2024년 3월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></div><div class="mag-caption">风度mensuno<span class="mag-date">2024년 5월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2024년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">费加罗男士</span><span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">时装</span>LOFFICIEL<span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">红秀</span>GRAZIA<span class="mag-date">2023년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">时装男士</span><span class="mag-date">2023년 12월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></div><div class="mag-caption">ELLEMEN<span class="hanja">新青年</span><span class="mag-date">2024년 1월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">精彩</span>OK<span class="mag-date">2024년 1월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></div><div class="mag-caption">InStyle<span class="hanja">优家画报</span><span class="mag-date">2024년 3월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">风度</span>mensuno<span class="mag-date">2024년 5월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">时装男士</span><span class="mag-date">2024년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2412-glassman.jpg" alt="Glass Man 2024년 12월호" loading="lazy"></div><div class="mag-caption">Glass Man<span class="mag-date">2024년 12월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></div><div class="mag-caption">悦游 Traveler<span class="mag-date">2026년 3·4월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">悦游</span> Traveler<span class="mag-date">2026년 3·4월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></div><div class="mag-caption"><span class="hanja">芭莎男士</span> Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
 </div>
 </div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection award-racing">
 <div class="wiki-subsection-title">수상</div>
 <div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">2022 웨이보의 밤 올해의 신예배우<br>신시대 국제 TV 페스티벌 신시대 최우수 신인 남자 배우<br>신호각 드라마 TV 드라마 감독의 밤 올해의 돌파 배우<br>2023 웨이보 시상식 올해의 기대 배우</div></div>
@@ -513,7 +532,7 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트<span class="footnote-marker" onclick="toggleFootnote('award', event)">[4]<span class="footnote-popup" id="fn-award">관련 <a href="https://m.weibo.cn/detail/5233731101003549" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 </div>
 
-<div class="wiki-subsection">
+<div class="wiki-subsection award-racing">
 <div class="wiki-subsection-title">레이싱</div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">샤먼 국제 레이싱 챔피언십 · 1위</div></div>
 <div class="act-row"><div class="act-year">2024</div><div class="act-detail">CTCC 중국 투어링카 챔피언십 커차오 라운드 A조 · 1위</div></div>
