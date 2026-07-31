@@ -627,7 +627,7 @@ if (year !== lastYear) {
 html += `<div class="year-divider"><span class="year-divider-label">${year}</span><span class="year-divider-line"></span></div>`;
 lastYear = year;
 }
-const youtubeHtml = p.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${p.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
+const youtubeHtml = p.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${p.youtubeUrl.match(/(?:youtu\.be\/|v=|shorts\/)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
 const imagesHtml = renderImages(p.images);
 html += `
 <div class="douyin-card" id="douyin-${p.id}">
