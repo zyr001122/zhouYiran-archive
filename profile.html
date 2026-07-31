@@ -33,7 +33,6 @@ color: var(--black);
 letter-spacing: -0.01em;
 -webkit-font-smoothing: antialiased;
 }
-
 /* ============ HERO / DARK BAND ============ */
 .hero-band {
 background: var(--black) url('profile-header.jpg') center 30% / cover no-repeat;
@@ -62,7 +61,6 @@ filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 .calendar-btn svg { width: 18px; height: 18px; }
-
 .side-drawer-overlay {
 position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
 transition: opacity 0.25s ease; z-index: 600;
@@ -91,16 +89,13 @@ letter-spacing: -0.01em; transition: color 0.15s;
 .side-drawer-item:hover { color: rgba(255,255,255,0.85); }
 .side-drawer-item.current { color: var(--pink); }
 .side-drawer-item.current .idx { color: var(--pink); }
-
 .page-wordmark {
 max-width: 640px; margin: 0 auto; font-family: 'Archivo Black', 'Pretendard', sans-serif; font-weight: 400;
 font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em; padding: 16px 0 4px;
 }
 .page-sub { max-width: 640px; margin: 0 auto; font-size: 12px; color: var(--pink-dim); letter-spacing: -0.01em; }
-
 /* ============ PANEL ============ */
 .panel { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-
 /* infobox card */
 .infobox {
 margin-top: -1px;
@@ -116,7 +111,6 @@ margin: 0 0 14px;
 .infobox-photo img { width: 100%; height: auto; display: block; }
 .infobox-name { text-align: center; font-size: 18px; font-weight: 800; color: var(--black); letter-spacing: -0.01em; }
 .infobox-name-zh { text-align: center; font-size: 12px; color: var(--gray-muted); margin-top: 3px; font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
-
 .infobox-table { margin-top: 18px; border-top: 1px solid var(--border); }
 .infobox-row { display: flex; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
 .infobox-label { width: 84px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
@@ -124,7 +118,6 @@ margin: 0 0 14px;
 .infobox-value.tbd { color: var(--gray-muted); }
 .infobox-row.stacked { flex-direction: column; }
 .infobox-row.stacked .infobox-label { width: auto; margin-bottom: 7px; }
-
 /* TOC */
 .toc { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 0; }
 .toc-item {
@@ -132,7 +125,6 @@ font-size: 12px; font-weight: 700; color: var(--pink); background: var(--pink-pa
 padding: 6px 12px; border-radius: 3px; text-decoration: none; letter-spacing: -0.005em;
 }
 .toc-item:hover { background: #fbe0e7; }
-
 /* wiki sections */
 .wiki-section { padding: 22px 0; border-top: 1px solid var(--border); scroll-margin-top: 16px; }
 .wiki-section:first-of-type { border-top: 1px solid var(--border); }
@@ -193,9 +185,7 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .mini-badge.year-flat { border-radius: 0; }
 .year-colored .act-year { color: var(--pink); font-weight: 800; }
 .act-subtitle { color: var(--gray-muted); font-size: 10.5px; margin-left: 3px; }
-
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
-
 /* ============ SCHEDULE CALENDAR MODAL ============ */
 .schedule-overlay {
 position: fixed;
@@ -315,7 +305,6 @@ color: var(--gray-muted);
 </style>
 </head>
 <body>
-
 <!-- SIDE DRAWER NAV -->
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
@@ -353,7 +342,6 @@ color: var(--gray-muted);
 </div>
 </div>
 </div>
-
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
 <div class="hero-nav">
@@ -373,7 +361,6 @@ color: var(--gray-muted);
 <div class="page-wordmark">PROFILE</div>
 <div class="page-sub">인물 정보 정리</div>
 </div>
-
 <!-- INFOBOX -->
 <div class="panel">
 <div class="infobox">
@@ -399,7 +386,6 @@ color: var(--gray-muted);
 <div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">공작실</div><div class="infobox-value"><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div></div>
 </div>
 </div>
-
 <!-- SECTIONS -->
 <section class="wiki-section year-colored" id="drama">
 <div class="wiki-section-title"><span class="num">01</span>드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
@@ -430,12 +416,10 @@ color: var(--gray-muted);
 <div class="act-row-flat"><span class="mini-badge pending">미정</span>아규묵두아<span class="act-subtitle">我叫墨斗儿</span> · 묵두<span class="act-subtitle">墨斗</span><span class="act-tag lead">주연</span></div>
 <div class="act-row-flat"><span class="mini-badge pending">미정</span>생명연<span class="act-subtitle">生命缘</span> · 샤자오양<span class="act-subtitle">夏朝阳</span><span class="act-tag lead">주연</span></div>
 </section>
-
 <section class="wiki-section year-colored" id="movie">
 <div class="wiki-section-title"><span class="num">02</span>영화</div>
 <div class="act-row"><div class="act-year">2018</div><div class="act-detail">우리 오빠 좀 데려가<span class="act-subtitle">快把我哥带走</span> · 완쑤이<span class="act-subtitle">万岁</span><span class="act-tag">조연</span></div></div>
 </section>
-
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
 <div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
@@ -443,7 +427,6 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
 <div class="act-row"><div class="act-year">2026.08</div><div class="act-detail">불상수적성기오<span class="act-subtitle">不想睡的星期五</span> <span style="color:var(--gray-muted);font-size:11px;">(방영 예정)</span></div></div>
 </section>
-
 <section class="wiki-section year-colored" id="music">
 <div class="wiki-section-title"><span class="num">04</span>음반</div>
 <div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail">单恋<span class="act-subtitle">짝사랑</span> · 싱글 1집</div></div>
@@ -454,10 +437,9 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail">前行<span class="act-subtitle">나아가다</span> · 《투라대륙지연혼전》 주제곡</div></div>
 <div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail">心有所感<span class="act-subtitle">마음에 새겨진 정</span> · 《교초》 삽입곡</div></div>
 </section>
-
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
-<div class="role-legend"><b style="color:var(--pink);">대언인</b> 상위 등급 · <b style="color:var(--teal);">대사</b> 중간 등급,브랜드 내 대언인이 없는 경우 대사가 최고 등급 · <b style="color:var(--gold);">지우</b> 프렌즈 등급</div>
+<div class="role-legend"><b style="color:var(--gold);">지우</b> &lt; <b style="color:var(--teal);">대사</b> &lt; <b style="color:var(--pink);">대언인</b> · *브랜드 내 대언인이 없는 경우 대사가 제일 높은 등급<br><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업</div>
 <div class="subsection-label">지난 활동</div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
@@ -483,7 +465,6 @@ color: var(--gray-muted);
 <div class="act-year-divider muted"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">小野和子 · <span class="act-role spokesperson">선케어 대언인</span></div>
 <div class="act-row-flat">网易严选 · <span class="act-role ambassador">라이프스타일 대사</span></div>
-
 <div class="subsection-label current">현재 진행중</div>
 <div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
 <div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>구찌 · <span class="act-role friend">브랜드 지우</span></div>
@@ -496,7 +477,6 @@ color: var(--gray-muted);
 <div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
 <div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
 </section>
-
 <section class="wiki-section" id="magazine">
 <div class="wiki-section-title"><span class="num">06</span>화보</div>
 <div class="mag-shelf">
@@ -523,7 +503,6 @@ color: var(--gray-muted);
 <div class="mag-item"><div class="mag-cover"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
 </div>
 </section>
-
 <section class="wiki-section year-colored" id="awards">
 <div class="wiki-section-title"><span class="num">07</span>수상</div>
 <div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
@@ -531,7 +510,6 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2024</div><div class="act-detail">2023 웨이보의 밤 올해의 돌파 배우</div></div>
 <div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트<span class="footnote-marker" onclick="toggleFootnote('award', event)">[4]<span class="footnote-popup" id="fn-award">관련 <a href="https://m.weibo.cn/detail/5233731101003549" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 </section>
-
 <section class="wiki-section year-colored" id="racing">
 <div class="wiki-section-title"><span class="num">08</span>레이싱</div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">샤먼 국제 레이싱 챔피언십 · 1위</div></div>
@@ -541,9 +519,7 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2026</div><div class="act-detail">CHINA GT Championship GTC class · 1위 (종합 2위 / Frankenstein Racing)</div></div>
 </section>
 </div>
-
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
-
 <script src="data-schedule.js"></script>
 <script>
 function toggleMobileMenu() {
@@ -595,7 +571,6 @@ if (shift !== 0) target.style.transform = `translateX(${shift}px)`;
 document.addEventListener('click', () => {
 document.querySelectorAll('.footnote-popup.open').forEach(el => { el.classList.remove('open'); el.style.transform = ''; });
 });
-
 // ============ 스케줄 캘린더 모달 ============
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
 let scheduleViewDate = new Date();
