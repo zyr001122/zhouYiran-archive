@@ -54,39 +54,54 @@ z-index: 0;
 }
 .hero-nav,
 .archive-wordmark,
+.archive-subtitle,
 .year-tabs {
 position: relative;
 z-index: 1;
 }
 .hero-nav {
-max-width: 640px;
+max-width: 860px;
 margin: 0 auto;
 display: flex;
 align-items: center;
 justify-content: flex-end;
-gap: 20px;
+gap: 14px;
 }
-.hamburger-btn {
+.hamburger-btn,
+.calendar-btn {
 display: flex;
-width: 32px;
-height: 32px;
-background: var(--pink);
+width: 36px;
+height: 36px;
+background: transparent;
 border: none;
 cursor: pointer;
-flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 6px;
 flex-shrink: 0;
+filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
+}
+.hamburger-btn {
+flex-direction: column;
+gap: 6px;
 }
 .hamburger-btn .bar {
-width: 15px;
+width: 16px;
 height: 1.5px;
 background: var(--white);
 transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+.calendar-btn svg { width: 18px; height: 18px; }
+.archive-subtitle {
+max-width: 860px;
+margin: 0 auto;
+font-size: 13px;
+font-weight: 500;
+color: rgba(255,255,255,0.6);
+letter-spacing: -0.005em;
+padding: 0 0 14px;
+}
 /* side drawer nav: 클릭하면 오른쪽에서 슬라이드로 튀어나오는 인덱스형 메뉴 */
 .side-drawer-overlay {
 position: fixed;
@@ -154,8 +169,44 @@ letter-spacing: 0.03em;
 .side-drawer-item:hover { color: rgba(255,255,255,0.85); }
 .side-drawer-item.current { color: var(--pink); }
 .side-drawer-item.current .idx { color: var(--pink); }
+.side-drawer-item.toggle {
+width: 100%;
+background: none;
+border: none;
+border-top: 1px solid rgba(255,255,255,0.08);
+font-family: inherit;
+cursor: pointer;
+}
+.side-drawer-item.toggle:first-child { border-top: none; }
+.side-drawer-caret {
+margin-left: auto;
+font-size: 11px;
+transition: transform 0.2s ease;
+}
+.side-drawer-item.toggle.open .side-drawer-caret { transform: rotate(180deg); }
+.side-drawer-submenu {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.25s ease;
+background: rgba(255,255,255,0.03);
+display: flex;
+flex-direction: column;
+}
+.side-drawer-submenu.open { max-height: 120px; }
+.side-drawer-subitem {
+display: block;
+padding: 14px 24px 14px 48px;
+text-decoration: none;
+color: rgba(255,255,255,0.45);
+font-size: 14px;
+font-weight: 500;
+letter-spacing: -0.01em;
+transition: color 0.15s;
+}
+.side-drawer-subitem:hover { color: rgba(255,255,255,0.75); }
+.side-drawer-subitem.current { color: var(--pink); }
 .archive-wordmark {
-max-width: 640px;
+max-width: 860px;
 margin: 0 auto;
 font-family: 'Archivo Black', 'Pretendard', sans-serif;
 font-weight: 400;
@@ -167,7 +218,7 @@ padding: 16px 0 18px;
 }
 /* year index tabs: simple flat tab */
 .year-tabs {
-max-width: 640px;
+max-width: 860px;
 margin: 0 auto;
 display: flex;
 gap: 3px;
@@ -190,7 +241,7 @@ white-space: nowrap;
 .year-tab.active { background: var(--pink); color: var(--white); }
 /* ============ WHITE PANEL ============ */
 .panel {
-max-width: 640px;
+max-width: 860px;
 margin: 0 auto;
 padding: 0 20px;
 }
@@ -279,22 +330,6 @@ padding: 18px 0 4px;
 }
 .feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
 .post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
-/* platform toggle: 초화(웨이보) / 도우인 */
-.platform-toggle { display: flex; gap: 4px; padding: 18px 0 0; }
-.platform-btn {
-font-size: 12px; font-weight: 700; letter-spacing: -0.005em; padding: 7px 14px; border-radius: 3px;
-border: none; background: var(--gray-bg); color: var(--gray-muted); cursor: pointer; font-family: inherit;
-transition: background 0.15s, color 0.15s;
-}
-.platform-btn:hover { color: var(--black); }
-.platform-btn.active { background: var(--pink); color: var(--white); }
-/* douyin card: 계정 폭파 등 사건 아카이빙용 타임라인 카드 */
-#douyin-feed { padding-bottom: 2rem; }
-.douyin-card { padding: 18px 0; border-top: 1px solid var(--border); }
-.douyin-card:first-of-type { border-top: none; }
-.douyin-date { font-size: 10px; color: var(--gray-muted); letter-spacing: 0.02em; margin-bottom: 6px; }
-.douyin-title { font-size: 14px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; margin-bottom: 8px; }
-.douyin-body { font-size: 13px; color: var(--black); line-height: 1.7; letter-spacing: -0.005em; white-space: pre-line; }
 /* ============ POSTS ============ */
 #posts-feed { padding-bottom: 2rem; }
 .date-index {
@@ -655,6 +690,103 @@ transition: opacity 0.15s ease;
 .actor-reply-translated + .voice-message { margin-top: 6px; }
 .actor-reply .voice-message { margin-left: 0; }
 .comment-item > .voice-message { display: flex; margin-left: 34px; margin-top: 8px; }
+/* ============ SCHEDULE CALENDAR MODAL ============ */
+.schedule-overlay {
+position: fixed;
+inset: 0;
+background: rgba(26,18,22,0.75);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 520;
+padding: 20px;
+}
+.schedule-overlay.open { display: flex; }
+.schedule-modal {
+background: var(--white);
+border-radius: 4px;
+width: 100%;
+max-width: 360px;
+padding: 20px;
+max-height: 86vh;
+overflow-y: auto;
+position: relative;
+}
+.schedule-modal-header {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+margin-bottom: 14px;
+}
+.schedule-nav-arrow {
+background: none;
+border: none;
+font-size: 16px;
+color: var(--gray-muted);
+cursor: pointer;
+padding: 4px 8px;
+font-family: inherit;
+}
+.schedule-nav-arrow:hover { color: var(--black); }
+#scheduleMonthLabel { font-size: 14px; font-weight: 700; color: var(--black); min-width: 90px; text-align: center; }
+.schedule-close {
+position: absolute;
+right: 16px;
+top: 16px;
+background: none;
+border: none;
+font-size: 15px;
+color: var(--gray-muted);
+cursor: pointer;
+}
+.schedule-close:hover { color: var(--black); }
+.schedule-weekdays {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+text-align: center;
+font-size: 11px;
+color: var(--gray-muted);
+margin-bottom: 6px;
+}
+.schedule-grid {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+row-gap: 10px;
+text-align: center;
+}
+.sched-day {
+font-size: 13px;
+color: var(--black);
+cursor: pointer;
+padding: 4px 0;
+}
+.sched-day:empty { cursor: default; }
+.sched-day.today { font-weight: 700; color: var(--pink); }
+.sched-day.selected span.sched-num { background: var(--gray-bg); border-radius: 50%; padding: 3px 6px; }
+.sched-num { display: inline-block; }
+.sched-dots { display: flex; justify-content: center; gap: 2px; margin-top: 3px; height: 4px; }
+.sched-dot { width: 4px; height: 4px; border-radius: 50%; display: inline-block; }
+.schedule-detail {
+border-top: 1px solid var(--border);
+margin-top: 14px;
+padding-top: 12px;
+min-height: 40px;
+}
+.sched-event-row { display: flex; gap: 10px; font-size: 12.5px; margin-bottom: 8px; align-items: baseline; }
+.sched-event-row:last-child { margin-bottom: 0; }
+.sched-event-row .sched-time { color: var(--pink); font-weight: 600; flex-shrink: 0; min-width: 40px; }
+.sched-empty { font-size: 12px; color: var(--gray-muted); text-align: center; padding: 8px 0; }
+.schedule-legend {
+display: flex;
+gap: 14px;
+margin-top: 14px;
+padding-top: 12px;
+border-top: 1px solid var(--border);
+font-size: 11px;
+color: var(--gray-muted);
+}
+.schedule-legend .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
 </style>
 </head>
 <body>
@@ -676,30 +808,60 @@ transition: opacity 0.15s ease;
 <nav class="side-drawer" id="sideDrawer">
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 <div class="side-drawer-index">
-<a class="side-drawer-item current" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
+<button class="side-drawer-item toggle current open" id="archiveMenuToggle" onclick="toggleArchiveSubmenu()" type="button">
+<span class="idx">01</span>ARCHIVE<span class="side-drawer-caret">⌄</span>
+</button>
+<div class="side-drawer-submenu open" id="archiveSubmenu">
+<a class="side-drawer-subitem current" href="archive.html">초화</a>
+<a class="side-drawer-subitem" href="douyin.html">도우인</a>
+</div>
 <a class="side-drawer-item" href="notice.html"><span class="idx">02</span>NOTICE</a>
 <a class="side-drawer-item" href="profile.html"><span class="idx">03</span>PROFILE</a>
 <a class="side-drawer-item" href="spinspin.html"><span class="idx">04</span>SpinSpin</a>
 <a class="side-drawer-item" href="guide.html"><span class="idx">05</span>가이드</a>
 </div>
 </nav>
+<!-- SCHEDULE CALENDAR MODAL -->
+<div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
+<div class="schedule-modal">
+<button class="schedule-close" onclick="closeSchedule()" aria-label="닫기">✕</button>
+<div class="schedule-modal-header">
+<button class="schedule-nav-arrow" onclick="changeScheduleMonth(-1)" aria-label="이전 달">‹</button>
+<span id="scheduleMonthLabel"></span>
+<button class="schedule-nav-arrow" onclick="changeScheduleMonth(1)" aria-label="다음 달">›</button>
+</div>
+<div class="schedule-weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+<div class="schedule-grid" id="scheduleGrid"></div>
+<div class="schedule-detail" id="scheduleDetail"></div>
+<div class="schedule-legend">
+<span><i class="dot" style="background:#FFC53D"></i>라이브</span>
+<span><i class="dot" style="background:var(--pink)"></i>행사</span>
+<span><i class="dot" style="background:#8B5FBF"></i>촬영</span>
+</div>
+</div>
+</div>
 <!-- HERO / DARK BAND -->
 <div class="hero-band">
 <div class="hero-nav">
+<button class="calendar-btn" id="calendarBtn" onclick="openSchedule()" aria-label="스케줄 보기">
+<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="5" width="18" height="16" rx="1"></rect>
+<line x1="3" y1="9" x2="21" y2="9"></line>
+<line x1="8" y1="3" x2="8" y2="7"></line>
+<line x1="16" y1="3" x2="16" y2="7"></line>
+</svg>
+</button>
 <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
 <span class="bar"></span>
 <span class="bar"></span>
 </button>
 </div>
 <div class="archive-wordmark">ARCHIVE</div>
+<div class="archive-subtitle">초화 아카이브</div>
 <div class="year-tabs" id="year-tabs"></div>
 </div>
 <!-- WHITE PANEL -->
 <div class="panel">
-<div class="platform-toggle" id="platformToggle">
-<button class="platform-btn active" id="platformBtn-weibo" onclick="switchPlatform('weibo')">초화</button>
-<button class="platform-btn" id="platformBtn-douyin" onclick="switchPlatform('douyin')">도우인</button>
-</div>
 <div class="month-row" id="month-row"></div>
 <div class="search-row" id="searchRow">
 <input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
@@ -713,11 +875,10 @@ transition: opacity 0.15s ease;
 <span class="post-count-badge" id="feed-count"></span>
 </div>
 <div id="posts-feed"></div>
-<div id="douyin-feed" style="display:none;"></div>
 </div>
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 <script src="emoticons.js"></script>
-<script src="data-douyin.js"></script>
+<script src="data-schedule.js"></script>
 <script src="data-2024-11.js"></script>
 <script src="data-2024-12.js"></script>
 <script src="data-2024-10.js"></script>
@@ -815,47 +976,83 @@ const ACTOR_IMG = 'IMG_1757.JPG';
 const ACTOR_NICK = '周翊然Tz';
 let currentFilter = { type: 'all', value: null };
 let dateTree = {};
-let currentPlatform = 'weibo';
-// ============ 플랫폼 전환: 초화(웨이보) / 도우인 ============
-function switchPlatform(platform) {
-currentPlatform = platform;
-document.getElementById('platformBtn-weibo').classList.toggle('active', platform === 'weibo');
-document.getElementById('platformBtn-douyin').classList.toggle('active', platform === 'douyin');
-const isWeibo = platform === 'weibo';
-document.getElementById('month-row').style.display = isWeibo ? '' : 'none';
-document.getElementById('searchRow').style.display = isWeibo ? '' : 'none';
-document.getElementById('filterBar').classList.remove('show');
-document.getElementById('posts-feed').style.display = isWeibo ? '' : 'none';
-document.getElementById('douyin-feed').style.display = isWeibo ? 'none' : '';
-document.getElementById('feed-title').textContent = isWeibo ? '초화 게시물' : '도우인 기록';
-if (isWeibo) {
-renderFeed();
-} else {
-renderDouyinFeed();
-}
-}
-function renderDouyinFeed() {
-const events = (typeof douyinEvents !== 'undefined' ? douyinEvents : []).slice()
-.sort((a, b) => new Date(b.date) - new Date(a.date));
-document.getElementById('feed-count').textContent = events.length + '개';
-if (!events.length) {
-document.getElementById('douyin-feed').innerHTML = '<div class="empty-state">기록이 없습니다.</div>';
-return;
-}
-document.getElementById('douyin-feed').innerHTML = events.map(ev => `
-<div class="douyin-card">
-<div class="douyin-date">${formatDateTime(ev.date)}</div>
-<div class="douyin-title">${ev.title}</div>
-${ev.body ? `<div class="douyin-body">${ev.body}</div>` : ''}
-${ev.images && ev.images.length ? renderImages(ev.images) : ''}
-</div>
-`).join('');
-}
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
 document.getElementById('sideDrawer').classList.toggle('open');
 document.getElementById('sideDrawerOverlay').classList.toggle('open');
 document.body.style.overflow = document.getElementById('sideDrawer').classList.contains('open') ? 'hidden' : '';
+}
+function toggleArchiveSubmenu() {
+document.getElementById('archiveMenuToggle').classList.toggle('open');
+document.getElementById('archiveSubmenu').classList.toggle('open');
+}
+// ============ 스케줄 캘린더 모달 ============
+// data-schedule.js 의 scheduleEvents = [{ date:'YYYY-MM-DD', time:'19:00', title:'...', category:'live'|'event'|'shoot' }, ...] 를 읽어서 렌더링.
+const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+let scheduleViewDate = new Date();
+let scheduleMonthEvents = {};
+function openSchedule() {
+document.getElementById('scheduleOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+renderScheduleCalendar();
+}
+function closeSchedule() {
+document.getElementById('scheduleOverlay').classList.remove('open');
+document.body.style.overflow = '';
+}
+function changeScheduleMonth(delta) {
+scheduleViewDate.setMonth(scheduleViewDate.getMonth() + delta);
+renderScheduleCalendar();
+}
+function renderScheduleCalendar() {
+const events = typeof scheduleEvents !== 'undefined' ? scheduleEvents : [];
+const year = scheduleViewDate.getFullYear();
+const month = scheduleViewDate.getMonth();
+document.getElementById('scheduleMonthLabel').textContent = `${year}년 ${month + 1}월`;
+const firstDay = new Date(year, month, 1).getDay();
+const daysInMonth = new Date(year, month + 1, 0).getDate();
+scheduleMonthEvents = {};
+events.forEach(e => {
+const d = new Date(e.date);
+if (d.getFullYear() === year && d.getMonth() === month) {
+const day = d.getDate();
+if (!scheduleMonthEvents[day]) scheduleMonthEvents[day] = [];
+scheduleMonthEvents[day].push(e);
+}
+});
+const todayStr = new Date().toDateString();
+let html = '';
+for (let i = 0; i < firstDay; i++) html += '<span></span>';
+for (let d = 1; d <= daysInMonth; d++) {
+const isToday = new Date(year, month, d).toDateString() === todayStr;
+const dayEvents = scheduleMonthEvents[d] || [];
+const dots = dayEvents.map(e => `<span class="sched-dot" style="background:${SCHEDULE_COLORS[e.category] || 'var(--pink)'}"></span>`).join('');
+html += `<span class="sched-day${isToday ? ' today' : ''}" data-day="${d}" onclick="selectScheduleDay(${d})"><span class="sched-num">${d}</span><span class="sched-dots">${dots}</span></span>`;
+}
+document.getElementById('scheduleGrid').innerHTML = html;
+const isCurrentMonth = year === new Date().getFullYear() && month === new Date().getMonth();
+const initialDay = (isCurrentMonth && scheduleMonthEvents[new Date().getDate()]) ? new Date().getDate() : Number(Object.keys(scheduleMonthEvents)[0]) || null;
+if (initialDay) {
+selectScheduleDay(initialDay);
+} else {
+document.getElementById('scheduleDetail').innerHTML = '<p class="sched-empty">이번 달 일정이 없습니다.</p>';
+}
+}
+function selectScheduleDay(day) {
+document.querySelectorAll('.sched-day').forEach(el => el.classList.remove('selected'));
+const target = document.querySelector(`.sched-day[data-day="${day}"]`);
+if (target) target.classList.add('selected');
+const dayEvents = scheduleMonthEvents[day] || [];
+const detail = document.getElementById('scheduleDetail');
+if (!dayEvents.length) {
+detail.innerHTML = '<p class="sched-empty">이 날은 일정이 없습니다.</p>';
+return;
+}
+detail.innerHTML = dayEvents.map(e => `
+<div class="sched-event-row">
+<span class="sched-time">${e.time || ''}</span>
+<span>${e.title}</span>
+</div>`).join('');
 }
 function formatDateTime(d) {
 const date = new Date(d);
