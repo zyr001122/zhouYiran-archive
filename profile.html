@@ -33,7 +33,21 @@ letter-spacing: -0.01em;
 }
 
 /* ============ HERO / DARK BAND ============ */
-.hero-band { background: var(--black); padding: 20px 20px 24px; position: relative; }
+.hero-band {
+background: var(--black) url('profile-header.jpg') center 30% / cover no-repeat;
+padding: 20px 20px 24px;
+position: relative;
+overflow: hidden;
+}
+.hero-band::before {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(26,18,22,0.2) 0%, rgba(26,18,22,0.5) 45%, rgba(26,18,22,0.95) 100%);
+pointer-events: none;
+z-index: 0;
+}
+.hero-nav, .page-wordmark, .page-sub { position: relative; z-index: 1; }
 .hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
 .hamburger-btn,
 .calendar-btn {
@@ -128,16 +142,33 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .wiki-subsection { margin-top: 18px; }
 .wiki-subsection:first-child { margin-top: 0; }
 .wiki-subsection-title { font-size: 13px; font-weight: 700; color: var(--pink); margin-bottom: 6px; }
+.subsection-caption { font-weight: 400; color: var(--gray-muted); font-size: 10.5px; margin-left: 4px; }
 .act-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
 .act-row:last-child { border-bottom: none; }
 .act-year { width: 76px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
 .act-detail { flex: 1; color: var(--black); line-height: 1.6; }
 .act-tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 6px; }
+.act-row-flat { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--black); line-height: 1.6; }
+.act-row-flat:last-child { border-bottom: none; }
+.act-year-divider { display: flex; align-items: center; gap: 8px; margin: 14px 0 4px; }
+.act-year-divider:first-child { margin-top: 0; }
+.act-year-divider-label { font-size: 12px; font-weight: 800; color: var(--pink); }
+.act-year-divider-line { flex: 1; height: 1px; background: var(--border); }
+.mini-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; background: var(--pink-pale); color: var(--pink); margin-right: 6px; white-space: nowrap; }
+.mini-badge.pending { background: var(--gray-bg); color: var(--gray-muted); }
+.subsection-label { font-size: 11px; font-weight: 700; color: var(--gray-muted); letter-spacing: 0.02em; margin: 14px 0 6px; }
+.subsection-label:first-child { margin-top: 0; }
 .hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
 .infobox-value a:hover { text-decoration: underline; }
 .etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
 .etc-dot { color: var(--pink); flex-shrink: 0; }
+.footnote-marker { color: var(--pink); font-size: 10px; font-weight: 700; cursor: pointer; position: relative; margin-left: 2px; }
+.footnote-popup { display: none; position: absolute; z-index: 50; background: var(--black); color: var(--white); font-size: 11.5px; line-height: 1.55; padding: 10px 12px; border-radius: 4px; width: max-content; max-width: 220px; top: 18px; left: 0; }
+.footnote-popup.open { display: block; }
+.footnote-popup a { color: var(--pink-dim); }
+.mag-link { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 8px; text-decoration: none; }
+.mag-link:hover { text-decoration: underline; }
 
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
 
@@ -329,13 +360,16 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">국적</div><div class="infobox-value">중국 (한족)</div></div>
 <div class="infobox-row"><div class="infobox-label">신체</div><div class="infobox-value">182cm · O형</div></div>
 <div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학 (졸업)</div></div>
-<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사</div></div>
+<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span id="debutDday" style="color:var(--gray-muted);"></span></div></div>
 <div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
-<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
-<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 일척염 <span style="color:#F7A4B8;">●</span></div></div>
+<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♂ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·메이메이</div></div>
+<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 일척염 <span style="color:#F7A4B8;">●</span><span class="footnote-marker" onclick="toggleFootnote('color', event)">[2]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)</div></div>
-<div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP</div></div>
-<div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value"><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div></div>
+<div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[3]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
+<div class="infobox-row"><div class="infobox-label">SNS</div><div class="infobox-value">
+<div style="margin-bottom:6px;"><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">개인</span><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div>
+<div><span style="color:var(--gray-muted);font-size:11px;margin-right:6px;">공작실</span><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a></div>
+</div></div>
 </div>
 </div>
 
@@ -357,25 +391,33 @@ color: var(--gray-muted);
 <div class="wiki-section-title"><span class="num">02</span>활동</div>
 
 <div class="wiki-subsection">
-<div class="wiki-subsection-title">드라마</div>
-<div class="act-row"><div class="act-year">2020</div><div class="act-detail">봉귀사시가(凤归四时歌) · 종리(钟离)<span class="act-tag">조연</span></div></div>
-<div class="act-row"><div class="act-year">2021</div><div class="act-detail">배탁료반장(拜托了班长) · 예징시(叶景希)<span class="act-tag">조연</span></div></div>
-<div class="act-row"><div class="act-year">2021</div><div class="act-detail">니미소시흔미(你微笑时很美) · 아이자(艾佳)</div></div>
-<div class="act-row"><div class="act-year">2021</div><div class="act-detail">교가적아녀(乔家的儿女) · 차오치치(乔七七)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2021</div><div class="act-detail">소민가(小敏家) · 진자준(金家骏)<span class="act-tag">조연</span></div></div>
-<div class="act-row"><div class="act-year">2021</div><div class="act-detail">니시아최첨밀적심사(你是我最甜蜜的心事) · 린란(林燃)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2022</div><div class="act-detail">이십불혹2(二十不惑2) · 인상(殷赏)<span class="act-tag">조연</span></div></div>
-<div class="act-row"><div class="act-year">2022</div><div class="act-detail">재니적동야리섬요(在你的冬夜里闪耀) · 무쯔시(慕子希)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2023</div><div class="act-detail">당아비분향니(当我飞奔向你) · 장루랑(张陆让)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2023</div><div class="act-detail">백일몽아(白日梦我) · 선쥐안(沈倦)</div></div>
-<div class="act-row"><div class="act-year">2023</div><div class="act-detail">작작풍류(灼灼风流) · 류침(刘琛)<span class="act-tag">조연</span></div></div>
-<div class="act-row"><div class="act-year">2024</div><div class="act-detail">투라대륙지연혼전(斗罗大陆之燃魂战) · 당삼(唐三)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">환우(煥羽) · 밍성(明盛)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">십이봉신(十二封信) · 탕이쉰(唐亦寻)</div></div>
-<div class="act-row"><div class="act-year">2026</div><div class="act-detail">강호야우십년등(江湖夜雨十年灯) · 모청안(慕清晏)/상녕(常宁)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">2026</div><div class="act-detail">교초(翘楚) · 사연래(谢燕来)</div></div>
-<div class="act-row"><div class="act-year">미정</div><div class="act-detail">아규묵두아(我叫墨斗儿) · 묵두(墨斗)<span class="act-tag">주연</span></div></div>
-<div class="act-row"><div class="act-year">미정</div><div class="act-detail">생명연(生命缘) · 샤자오양(夏朝阳)</div></div>
+<div class="wiki-subsection-title">드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2020</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge">Apple TV</span>봉귀사시가(凤归四时歌) · 종리(钟离)<span class="act-tag">조연</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2021</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>배탁료반장(拜托了班长) · 예징시(叶景希)<span class="act-tag">조연</span></div>
+<div class="act-row-flat"><span class="mini-badge">TVING · Apple TV</span>니미소시흔미(你微笑时很美) · 아이자(艾佳)</div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교가적아녀(乔家的儿女) · 차오치치(乔七七)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>소민가(小敏家) · 진자준(金家骏)<span class="act-tag">조연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>니시아최첨밀적심사(你是我最甜蜜的心事) · 린란(林燃)<span class="act-tag">주연</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>이십불혹2(二十不惑2) · 인상(殷赏)<span class="act-tag">조연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>재니적동야리섬요(在你的冬夜里闪耀) · 무쯔시(慕子希)<span class="act-tag">주연</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2023</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge">Wavve · Watcha · TVING</span>당아비분향니(当我飞奔向你) · 장루랑(张陆让)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>백일몽아(白日梦我) · 선쥐안(沈倦)</div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>작작풍류(灼灼风流) · 류침(刘琛)<span class="act-tag">조연</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge">TVING</span>투라대륙지연혼전(斗罗大陆之燃魂战) · 당삼(唐三)<span class="act-tag">주연</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge">Wavve · TVING</span>환우(煥羽) · 밍성(明盛)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>십이봉신(十二封信) · 탕이쉰(唐亦寻)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge pending">WeTV (한국 미정)</span>강호야우십년등(江湖夜雨十年灯) · 모청안(慕清晏)/상녕(常宁)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">확인중</span>교초(翘楚) · 사연래(谢燕来)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">미정</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat"><span class="mini-badge pending">미정</span>아규묵두아(我叫墨斗儿) · 묵두(墨斗)<span class="act-tag">주연</span></div>
+<div class="act-row-flat"><span class="mini-badge pending">미정</span>생명연(生命缘) · 샤자오양(夏朝阳)</div>
 </div>
 
 <div class="wiki-subsection">
@@ -403,13 +445,31 @@ color: var(--gray-muted);
 
 <div class="wiki-subsection">
 <div class="wiki-subsection-title">광고 및 홍보대사</div>
-<div class="act-row"><div class="act-year">2022</div><div class="act-detail">白家阿宽(도시 미식 대언인), Clarins(글로우 지우), MISTINE(베이스 메이크업 대사), GODIVA(브랜드 대사), 康师傅饮用水(브랜드 대사), CRD克徕帝(신품 브랜드 지우)</div></div>
-<div class="act-row"><div class="act-year">2023~2024</div><div class="act-detail">Stride炫迈(브랜드 대사), YAYA鸭鸭(브랜드 대언인)</div></div>
-<div class="act-row"><div class="act-year">2024</div><div class="act-detail">L'OCCITAN(바디케어 대사), 艾森丝essence(브랜드 대사), THE WHOO 后(취광 대사), 茶百道 ChaPanda(가을 시즌 대사)</div></div>
-<div class="act-row"><div class="act-year">2024~2025</div><div class="act-detail">Saucony(캠퍼스 시리즈 대언인), Nuxe(클렌징 시리즈 대언인), 立白(마스터 향기 모던 대사)</div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">夸克(여름 시즌 대사)</div></div>
-<div class="act-row"><div class="act-year">2025~2026</div><div class="act-detail">小野和子(선케어 대언인), 网易严选(라이프스타일 대사)</div></div>
-<div class="act-row"><div class="act-year">현재</div><div class="act-detail">LATEMON浪特梦眼镜(2023~, 브랜드 대언인), 불가리(아시아 태평양 브랜드 대사), 구찌(2024~, 브랜드 지우), 겔랑(스킨케어 대사), APM_MONACO(아태 브랜드 대언인), WeTV(글로벌 대언인), AMI(2025~, 글로벌 대사), 天猫 타오바오(2026~, 환신 대사), 自然堂(청춘 대언인), 花间颂(베이스 메이크업 대언인)</div></div>
+<div class="subsection-label">지난 활동</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">白家阿宽(도시 미식 대언인), Clarins(글로우 지우), MISTINE(베이스 메이크업 대사), GODIVA(브랜드 대사), 康师傅饮用水(브랜드 대사), CRD克徕帝(신품 브랜드 지우)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2023~2024</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">Stride炫迈(브랜드 대사), YAYA鸭鸭(브랜드 대언인)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">L'OCCITAN(바디케어 대사), 艾森丝essence(브랜드 대사), THE WHOO 后(취광 대사), 茶百道 ChaPanda(가을 시즌 대사)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2024~2025</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">Saucony(캠퍼스 시리즈 대언인), Nuxe(클렌징 시리즈 대언인), 立白(마스터 향기 모던 대사)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">夸克(여름 시즌 대사)</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">小野和子(선케어 대언인), 网易严选(라이프스타일 대사)</div>
+
+<div class="subsection-label">현재 진행중</div>
+<div class="act-row-flat"><span class="mini-badge">2023~</span>LATEMON浪特梦眼镜 · 브랜드 대언인</div>
+<div class="act-row-flat"><span class="mini-badge">2024~</span>구찌 · 브랜드 지우</div>
+<div class="act-row-flat"><span class="mini-badge">2024~</span>겔랑 · 스킨케어 대사</div>
+<div class="act-row-flat"><span class="mini-badge">2024~</span>APM_MONACO · 아시아 태평양 브랜드 대언인</div>
+<div class="act-row-flat"><span class="mini-badge">2024~</span>WeTV · 글로벌 대언인</div>
+<div class="act-row-flat"><span class="mini-badge">2025~</span>불가리 · 아시아 태평양 브랜드 대사</div>
+<div class="act-row-flat"><span class="mini-badge">2025~</span>AMI · 글로벌 대사</div>
+<div class="act-row-flat"><span class="mini-badge">2026~</span>天猫 타오바오 · 환신 대사</div>
+<div class="act-row-flat"><span class="mini-badge">2026~</span>自然堂 · 청춘 대언인</div>
+<div class="act-row-flat"><span class="mini-badge">2026~</span>花间颂 · 베이스 메이크업 대언인</div>
 </div>
 
 <div class="wiki-subsection">
@@ -441,7 +501,7 @@ color: var(--gray-muted);
 <div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
 <div class="act-row"><div class="act-year">2023</div><div class="act-detail">2022 웨이보의 밤 올해의 신예배우<br>신시대 국제 TV 페스티벌 신시대 최우수 신인 남자 배우<br>신호각 드라마 TV 드라마 감독의 밤 올해의 돌파 배우<br>2023 웨이보 시상식 올해의 기대 배우</div></div>
 <div class="act-row"><div class="act-year">2024</div><div class="act-detail">2023 웨이보의 밤 올해의 돌파 배우</div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트</div></div>
+<div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트<span class="footnote-marker" onclick="toggleFootnote('award', event)">[4]<span class="footnote-popup" id="fn-award">관련 <a href="https://m.weibo.cn/detail/5233731101003549" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
 </div>
 
 <div class="wiki-subsection">
@@ -481,6 +541,31 @@ document.body.style.overflow = document.getElementById('sideDrawer').classList.c
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
+// ============ 데뷔 D-day ============
+function renderDebutDday() {
+const debut = new Date('2017-03-30T00:00:00');
+const now = new Date();
+const diffDays = Math.floor((now - debut) / 86400000);
+let years = now.getFullYear() - debut.getFullYear();
+const beforeAnniv = (now.getMonth() < debut.getMonth()) || (now.getMonth() === debut.getMonth() && now.getDate() < debut.getDate());
+if (beforeAnniv) years -= 1;
+const el = document.getElementById('debutDday');
+if (el) el.textContent = ` (+${diffDays.toLocaleString()}일, ${years}주년)`;
+}
+renderDebutDday();
+// ============ 각주 팝업 ============
+function toggleFootnote(id, event) {
+event.stopPropagation();
+document.querySelectorAll('.footnote-popup.open').forEach(el => {
+if (el.id !== 'fn-' + id) el.classList.remove('open');
+});
+const target = document.getElementById('fn-' + id);
+if (target) target.classList.toggle('open');
+}
+document.addEventListener('click', () => {
+document.querySelectorAll('.footnote-popup.open').forEach(el => el.classList.remove('open'));
+});
+
 // ============ 스케줄 캘린더 모달 ============
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
 let scheduleViewDate = new Date();
