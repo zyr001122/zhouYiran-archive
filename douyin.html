@@ -616,9 +616,28 @@ return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loadi
 }).join('');
 return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
 }
+let activeYoutubeWrapId = null;
+function facadeHtml(id, vid) {
+return `<div class="yt-facade" id="${id}" data-vid="${vid}" onclick="loadYoutube(this)">
+<img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="영상 썸네일" loading="lazy" />
+<div class="yt-facade-btn"><span></span></div>
+</div>`;
+}
+function pauseActiveYoutube() {
+if (!activeYoutubeWrapId) return;
+const wrap = document.getElementById(activeYoutubeWrapId);
+if (wrap) {
+const vid = wrap.getAttribute('data-vid');
+wrap.outerHTML = facadeHtml(activeYoutubeWrapId, vid);
+}
+activeYoutubeWrapId = null;
+}
 function loadYoutube(el) {
+pauseActiveYoutube();
 const vid = el.getAttribute('data-vid');
-el.outerHTML = `<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>`;
+const id = el.id;
+el.outerHTML = `<div class="yt-embed" id="${id}" data-vid="${vid}"><iframe src="https://www.youtube-nocookie.com/embed/${vid}?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>`;
+activeYoutubeWrapId = id;
 }
 function sameText(a, b) {
 return (a || '').trim() === (b || '').trim();
@@ -641,7 +660,7 @@ lastYear = year;
 }
 const youtubeHtml = p.youtubeUrl ? (() => {
 const vid = p.youtubeUrl.match(/(?:youtu\.be\/|v=|shorts\/)([^?&]+)/)[1];
-return `<div class="yt-facade" data-vid="${vid}" onclick="loadYoutube(this)">
+return `<div class="yt-facade" id="ytwrap-${p.id}" data-vid="${vid}" onclick="loadYoutube(this)">
 <img src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="영상 썸네일" loading="lazy" />
 <div class="yt-facade-btn"><span></span></div>
 </div>`;
