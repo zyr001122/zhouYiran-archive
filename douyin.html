@@ -687,6 +687,7 @@ let scheduleMonthEvents = {};
 function openSchedule() {
 document.getElementById('scheduleOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
+scheduleViewDate = new Date();
 renderTodayBanner();
 renderScheduleCalendar();
 }
