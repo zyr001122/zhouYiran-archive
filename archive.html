@@ -689,6 +689,9 @@ transition: opacity 0.15s ease;
 50% { transform: scaleY(1); }
 }
 .voice-message .vm-duration { font-size: 10.5px; color: var(--pink); font-weight: 600; flex-shrink: 0; }
+.voice-message .vm-download { flex-shrink: 0; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; margin-left: 2px; }
+.voice-message .vm-download svg { width: 11px; height: 11px; fill: none; stroke: var(--pink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.voice-message .vm-download:hover svg { stroke: #d9456d; }
 .comment-translated + .voice-message,
 .actor-reply-translated + .voice-message { margin-top: 6px; }
 .actor-reply .voice-message { margin-left: 0; }
@@ -1152,6 +1155,9 @@ return `
 <span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
 </span>
 <span class="vm-duration" id="${vmId}-dur">${duration ? duration + '″' : ''}</span>
+<a class="vm-download" href="${audioSrc}" download onclick="event.stopPropagation()" title="음성 다운로드">
+<svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+</a>
 </span>`;
 }
 function toggleVoiceMessage(vmId, audioSrc) {
