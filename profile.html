@@ -33,7 +33,6 @@ color: var(--black);
 letter-spacing: -0.01em;
 -webkit-font-smoothing: antialiased;
 }
-/* ============ HERO / DARK BAND ============ */
 .hero-band {
 background: var(--black) url('profile-header.jpg') center 30% / cover no-repeat;
 padding: 20px 20px 24px;
@@ -94,9 +93,7 @@ max-width: 640px; margin: 0 auto; font-family: 'Archivo Black', 'Pretendard', sa
 font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em; padding: 16px 0 4px;
 }
 .page-sub { max-width: 640px; margin: 0 auto; font-size: 12px; color: var(--pink-dim); letter-spacing: -0.01em; }
-/* ============ PANEL ============ */
 .panel { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-/* infobox card */
 .infobox {
 margin-top: -1px;
 background: var(--white);
@@ -118,14 +115,12 @@ margin: 0 0 14px;
 .infobox-value.tbd { color: var(--gray-muted); }
 .infobox-row.stacked { flex-direction: column; }
 .infobox-row.stacked .infobox-label { width: auto; margin-bottom: 7px; }
-/* TOC */
 .toc { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 0; }
 .toc-item {
 font-size: 12px; font-weight: 700; color: var(--pink); background: var(--pink-pale);
 padding: 6px 12px; border-radius: 3px; text-decoration: none; letter-spacing: -0.005em;
 }
 .toc-item:hover { background: #fbe0e7; }
-/* wiki sections */
 .wiki-section { padding: 22px 0; border-top: 1px solid var(--border); scroll-margin-top: 16px; }
 .wiki-section:first-of-type { border-top: 1px solid var(--border); }
 .wiki-section-title {
@@ -179,7 +174,7 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .act-role.spokesperson { color: var(--pink); }
 .act-role.ambassador { color: var(--teal); }
 .act-role.friend { color: var(--gold); }
-.role-legend { font-size: 10.5px; color: var(--gray-muted); margin: -4px 0 14px; line-height: 1.6; }
+.role-legend { font-size: 10.5px; color: var(--black); margin: -4px 0 14px; line-height: 1.6; }
 .role-legend b { font-weight: 700; }
 .act-year-divider.muted .act-year-divider-label { color: var(--gray-muted); }
 .mini-badge.year-flat { border-radius: 0; }
@@ -190,7 +185,6 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .act-subtitle-line { font-size: 11px; color: var(--gray-muted); margin-top: 3px; line-height: 1.5; }
 .act-row-flat .act-title-line, .act-detail .act-title-line { margin-bottom: 0; }
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
-/* ============ SCHEDULE CALENDAR MODAL ============ */
 .schedule-overlay {
 position: fixed;
 inset: 0;
@@ -309,7 +303,6 @@ color: var(--gray-muted);
 </style>
 </head>
 <body>
-<!-- SIDE DRAWER NAV -->
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
@@ -323,7 +316,6 @@ color: var(--gray-muted);
 <a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>유튜브</a>
 </div>
 </nav>
-<!-- SCHEDULE CALENDAR MODAL -->
 <div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
 <div class="schedule-modal">
 <button class="schedule-close" onclick="closeSchedule()" aria-label="닫기">✕</button>
@@ -346,7 +338,6 @@ color: var(--gray-muted);
 </div>
 </div>
 </div>
-<!-- HERO / DARK BAND -->
 <div class="hero-band">
 <div class="hero-nav">
 <button class="calendar-btn" id="calendarBtn" onclick="openSchedule()" aria-label="스케줄 보기">
@@ -365,7 +356,6 @@ color: var(--gray-muted);
 <div class="page-wordmark">PROFILE</div>
 <div class="page-sub">인물 정보 정리</div>
 </div>
-<!-- INFOBOX -->
 <div class="panel">
 <div class="infobox">
 <div class="infobox-photo"><img src="profile-main.jpg" alt="周翊然" onerror="this.parentElement.innerHTML='📷'" /></div>
@@ -377,7 +367,7 @@ color: var(--gray-muted);
 <div class="infobox-row"><div class="infobox-label">국적</div><div class="infobox-value">중국</div></div>
 <div class="infobox-row"><div class="infobox-label">신체</div><div class="infobox-value">182cm · O형</div></div>
 <div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학</div></div>
-<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span id="debutDday" style="color:var(--gray-muted);"></span></div></div>
+<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span id="debutDday" style="color:var(--pink);font-size:11px;font-weight:600;"></span></div></div>
 <div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
 <div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[1]<span class="footnote-popup" id="fn-pets">♂ 말티즈(페라리), ♀ 시바견(마오타이)</span></span><br>반려묘 두두·쿠거·지우디엔·빠디엔·메이메이<span class="footnote-marker" onclick="toggleFootnote('cats', event)">[2]<span class="footnote-popup" id="fn-cats">익연이 브이로그에 등장한 반려묘들. 근황은 알려지지 않았으나, 익연이 친구 스와이거에 의하면 익연이가 데리고 있던 고양이를 입양 했다고 함. <a href="https://x.com/vazseyo/status/2051711455142326628?s=46" target="_blank" rel="noopener">참고 ↗</a></span></span></div></div>
 <div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 <span style="color:#F7A4B8;">●</span> #F7A4B8<span class="footnote-marker" onclick="toggleFootnote('color', event)">[3]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
@@ -390,39 +380,38 @@ color: var(--gray-muted);
 <div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">공작실</div><div class="infobox-value"><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div></div>
 </div>
 </div>
-<!-- SECTIONS -->
 <section class="wiki-section year-colored" id="drama">
 <div class="wiki-section-title"><span class="num">01</span>드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2020</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">TVING · Wavve</span><span class="act-title">봉귀사시가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">凤归四时歌 · 종리 钟离</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve</span><span class="act-title">봉귀사시가</span> · 종리<span class="act-tag">조연</span></div><div class="act-subtitle-line">凤归四时歌 · 钟离</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2021</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">부탁해요 반장</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">拜托了班长 · 예징시 叶景希</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · WeTV · Netflix</span><span class="act-title">니미소시흔미</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">你微笑时很美 · 아이자 艾佳</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">교가적아녀</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">乔家的儿女 · 교칠칠 乔七七</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">소민가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">小敏家 · 진자준 金家骏</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">니시아최첨밀적심사</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">你是我最甜蜜的心事 · 임연 林燃</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">부탁해요 반장</span> · 예징시<span class="act-tag">조연</span></div><div class="act-subtitle-line">拜托了班长 · 叶景希</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · WeTV · Netflix</span><span class="act-title">니미소시흔미</span> · 아이자<span class="act-tag">조연</span></div><div class="act-subtitle-line">你微笑时很美 · 艾佳</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">교가적아녀</span> · 교칠칠<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">乔家的儿女 · 乔七七</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">소민가</span> · 진자준<span class="act-tag">조연</span></div><div class="act-subtitle-line">小敏家 · 金家骏</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">니시아최첨밀적심사</span> · 임연<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">你是我最甜蜜的心事 · 林燃</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Netflix</span><span class="act-title">이십불혹2</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">二十不惑2 · 인상 殷赏</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">재니적동야리섬요</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">在你的冬夜里闪耀 · 무쯔시 慕子希</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Netflix</span><span class="act-title">이십불혹2</span> · 인상<span class="act-tag">조연</span></div><div class="act-subtitle-line">二十不惑2 · 殷赏</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">재니적동야리섬요</span> · 무쯔시<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">在你的冬夜里闪耀 · 慕子希</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2023</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">당아비분향니</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">当我飞奔向你 · 장루랑 张陆让</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">백일몽아</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">白日梦我 · 선쥐안 沈倦</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">작작풍류</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">灼灼风流 · 류침 刘琛</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">당아비분향니</span> · 장루랑<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">当我飞奔向你 · 张陆让</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">백일몽아</span> · 선쥐안<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">白日梦我 · 沈倦</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">작작풍류</span> · 류침<span class="act-tag">조연</span></div><div class="act-subtitle-line">灼灼风流 · 刘琛</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">투라대륙지연혼전</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">斗罗大陆之燃魂战 · 당삼 唐三</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">투라대륙지연혼전</span> · 당삼<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">斗罗大陆之燃魂战 · 唐三</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">환우</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 밍성 明盛</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Watcha · Coupang Play · WeTV</span><span class="act-title">열두 통의 편지(십이봉신)</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">十二封信 · 탕이쉰 唐亦寻</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">환우</span> · 밍성<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 明盛</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Watcha · Coupang Play · WeTV</span><span class="act-title">열두 통의 편지(십이봉신)</span> · 탕이쉰<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">十二封信 · 唐亦寻</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · WeTV</span><span class="act-title">강호야우,십년의등불(강호야우십년등)</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">江湖夜雨十年灯 · 모청안 慕清晏 / 상녕 常宁</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">Netflix · Coupang Play · MOA</span><span class="act-title">교초</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">翘楚 · 사연래 谢燕来</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · WeTV</span><span class="act-title">강호야우,십년의등불(강호야우십년등)</span> · 모청안/상녕<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">江湖夜雨十年灯 · 慕清晏 / 常宁</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">Netflix · Coupang Play · MOA</span><span class="act-title">교초</span> · 사연래<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">翘楚 · 谢燕来</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">미정</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">아규묵두아</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">我叫墨斗儿 · 묵두 墨斗</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">爱奇艺</span><span class="act-title">생명연</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">生命缘 · 샤자오양 夏朝阳</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">아규묵두아</span> · 묵두<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">我叫墨斗儿 · 墨斗</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">爱奇艺</span><span class="act-title">생명연</span> · 샤자오양<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">生命缘 · 夏朝阳</div></div>
 </section>
 <section class="wiki-section year-colored" id="movie">
 <div class="wiki-section-title"><span class="num">02</span>영화</div>
-<div class="act-row"><div class="act-year">2018</div><div class="act-detail"><div class="act-title-line"><span class="act-title">우리 오빠 좀 데려가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">快把我哥带走 · 완쑤이 万岁</div></div></div>
+<div class="act-row"><div class="act-year">2018</div><div class="act-detail"><div class="act-title-line"><span class="act-title">우리 오빠 좀 데려가</span> · 완쑤이<span class="act-tag">조연</span></div><div class="act-subtitle-line">快把我哥带走 · 万岁</div></div></div>
 </section>
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
@@ -443,7 +432,7 @@ color: var(--gray-muted);
 </section>
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
-<div class="role-legend"><b style="color:var(--gold);">지우</b> &lt; <b style="color:var(--teal);">대사</b> &lt; <b style="color:var(--pink);">대언인</b> · *브랜드 내 대언인이 없는 경우 대사가 제일 높은 등급<br><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업</div>
+<div class="role-legend"><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업<br>*브랜드 내 대언인이 없는 경우 대사가 제일 높은 등급</div>
 <div class="subsection-label">지난 활동</div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
@@ -486,25 +475,27 @@ color: var(--gray-muted);
 <div class="mag-shelf">
 <div class="mag-item"><div class="mag-cover"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></a></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></div><div class="mag-caption">费加罗男士<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></div><div class="mag-caption">时装LOFFICIEL<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></div><div class="mag-caption">红秀GRAZIA<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2023년 12월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></div><div class="mag-caption">ELLEMEN新青年<span class="mag-date">2024년 1월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></a></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></div><div class="mag-caption">InStyle优家画报<span class="mag-date">2024년 3월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></div><div class="mag-caption">风度mensuno<span class="mag-date">2024년 5월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2024년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2412-glassman.jpg" alt="Glass Man 2024년 12월호" loading="lazy"></div><div class="mag-caption">Glass Man<span class="mag-date">2024년 12월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></a></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></a></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></a></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://vogue.sg/zhou-yiran-art-issue-digital-cover-star/" target="_blank" rel="noopener"><img src="images/2601-voguesingapore.jpg" alt="VOGUE SINGAPORE 2026년 1월호" loading="lazy"></a></div><div class="mag-caption">VOGUE SINGAPORE<span class="mag-date">2026년 1월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></div><div class="mag-caption">悦游 Traveler<span class="mag-date">2026년 3·4월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><img src="images/2604-vogue.jpg" alt="VOGUE 2026년 4월호" loading="lazy"></div><div class="mag-caption">VOGUE<span class="mag-date">2026년 4월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></a></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></a></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span></div></div>
 </div>
 </section>
 <section class="wiki-section year-colored" id="awards">
@@ -535,7 +526,6 @@ document.body.style.overflow = document.getElementById('sideDrawer').classList.c
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
-// ============ 데뷔 D-day ============
 function renderDebutDday() {
 const debut = new Date('2017-03-30T00:00:00');
 const now = new Date();
@@ -544,10 +534,9 @@ let years = now.getFullYear() - debut.getFullYear();
 const beforeAnniv = (now.getMonth() < debut.getMonth()) || (now.getMonth() === debut.getMonth() && now.getDate() < debut.getDate());
 if (beforeAnniv) years -= 1;
 const el = document.getElementById('debutDday');
-if (el) el.textContent = ` (+${diffDays.toLocaleString()}일, ${years}주년)`;
+if (el) el.textContent = ` (+${diffDays}일, ${years}주년)`;
 }
 renderDebutDday();
-// ============ 각주 팝업 ============
 function toggleFootnote(id, event) {
 event.stopPropagation();
 document.querySelectorAll('.footnote-popup.open').forEach(el => {
@@ -575,7 +564,6 @@ if (shift !== 0) target.style.transform = `translateX(${shift}px)`;
 document.addEventListener('click', () => {
 document.querySelectorAll('.footnote-popup.open').forEach(el => { el.classList.remove('open'); el.style.transform = ''; });
 });
-// ============ 스케줄 캘린더 모달 ============
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
 let scheduleViewDate = new Date();
 let scheduleMonthEvents = {};
