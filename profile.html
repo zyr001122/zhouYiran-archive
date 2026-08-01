@@ -185,6 +185,10 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .mini-badge.year-flat { border-radius: 0; }
 .year-colored .act-year { color: var(--pink); font-weight: 800; }
 .act-subtitle { color: var(--gray-muted); font-size: 10.5px; margin-left: 3px; }
+.act-title-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.act-title { font-weight: 700; color: var(--black); }
+.act-subtitle-line { font-size: 11px; color: var(--gray-muted); margin-top: 3px; line-height: 1.5; }
+.act-row-flat .act-title-line, .act-detail .act-title-line { margin-bottom: 0; }
 .site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
 /* ============ SCHEDULE CALENDAR MODAL ============ */
 .schedule-overlay {
@@ -390,52 +394,52 @@ color: var(--gray-muted);
 <section class="wiki-section year-colored" id="drama">
 <div class="wiki-section-title"><span class="num">01</span>드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2020</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge"></span>봉귀사시가<span class="act-subtitle">凤归四时歌</span> · 종리<span class="act-subtitle">钟离</span><span class="act-tag">조연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">확인중</span><span class="act-title">봉귀사시가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">凤归四时歌 · 종리 钟离</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2021</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">WeTV</span>부탁해요 반장<span class="act-subtitle">拜托了班长</span> · 예징시<span class="act-subtitle">叶景希</span><span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING · Wavve · WeTV · Netflix</span>니미소시흔미<span class="act-subtitle">你微笑时很美</span> · 아이자<span class="act-subtitle">艾佳</span><span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending"></span>교가적아녀<span class="act-subtitle">乔家的儿女</span> · 교칠칠<span class="act-subtitle">乔七七</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending"></span>소민가<span class="act-subtitle">小敏家</span> · 진자준<span class="act-subtitle">金家骏</span><span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending"></span>니시아최첨밀적심사<span class="act-subtitle">你是我最甜蜜的心事</span> · 임연<span class="act-subtitle">林燃</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">부탁해요 반장</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">拜托了班长 · 예징시 叶景希</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · WeTV · Netflix</span><span class="act-title">니미소시흔미</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">你微笑时很美 · 아이자 艾佳</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">확인중</span><span class="act-title">교가적아녀</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">乔家的儿女 · 교칠칠 乔七七</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">확인중</span><span class="act-title">소민가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">小敏家 · 진자준 金家骏</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">확인중</span><span class="act-title">니시아최첨밀적심사</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">你是我最甜蜜的心事 · 임연 林燃</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">TVING · Wavve · Netflix</span>이십불혹2<span class="act-subtitle">二十不惑2</span> · 인상<span class="act-subtitle">殷赏</span><span class="act-tag">조연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">WeTV</span>재니적동야리섬요<span class="act-subtitle">在你的冬夜里闪耀</span> · 무쯔시<span class="act-subtitle">慕子希</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Netflix</span><span class="act-title">이십불혹2</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">二十不惑2 · 인상 殷赏</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">재니적동야리섬요</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">在你的冬夜里闪耀 · 무쯔시 慕子希</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2023</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING · Wavve · Watcha</span>당아비분향니<span class="act-subtitle">当我飞奔向你</span> · 장루랑<span class="act-subtitle">张陆让</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">TVING · Wavve · Watcha</span>백일몽아<span class="act-subtitle">白日梦我</span> · 선쥐안<span class="act-subtitle">沈倦</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">TVING · Wavve · Watcha · WeTV</span>작작풍류<span class="act-subtitle">灼灼风流</span> · 류침<span class="act-subtitle">刘琛</span><span class="act-tag">조연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">당아비분향니</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">当我飞奔向你 · 장루랑 张陆让</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha</span><span class="act-title">백일몽아</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">白日梦我 · 선쥐안 沈倦</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">작작풍류</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">灼灼风流 · 류침 刘琛</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span>투라대륙지연혼전<span class="act-subtitle">斗罗大陆之燃魂战</span> · 당삼<span class="act-subtitle">唐三</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">투라대륙지연혼전</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">斗罗大陆之燃魂战 · 당삼 唐三</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span>환우<span class="act-subtitle">煥羽</span> · 밍성<span class="act-subtitle">明盛</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">TVING · Watcha · Coupang Play · WeTV</span>열두 통의 편지(십이봉신)<span class="act-subtitle">十二封信</span> · 탕이쉰<span class="act-subtitle">唐亦寻</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">환우</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 밍성 明盛</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Watcha · Coupang Play · WeTV</span><span class="act-title">열두 통의 편지(십이봉신)</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">十二封信 · 탕이쉰 唐亦寻</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">TVING · WeTV</span>강호야우,십년의등불(강호야우십년등)<span class="act-subtitle">江湖夜雨十年灯</span> · 모청안<span class="act-subtitle">慕清晏</span>/상녕<span class="act-subtitle">常宁</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">Netflix · Coupang Play · MOA</span>교초<span class="act-subtitle">翘楚</span> · 사연래<span class="act-subtitle">谢燕来</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · WeTV</span><span class="act-title">강호야우,십년의등불(강호야우십년등)</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">江湖夜雨十年灯 · 모청안 慕清晏 / 상녕 常宁</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">Netflix · Coupang Play · MOA</span><span class="act-title">교초</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">翘楚 · 사연래 谢燕来</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">미정</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><span class="mini-badge pending">미정</span>아규묵두아<span class="act-subtitle">我叫墨斗儿</span> · 묵두<span class="act-subtitle">墨斗</span><span class="act-tag lead">주연</span></div>
-<div class="act-row-flat"><span class="mini-badge pending">미정</span>생명연<span class="act-subtitle">生命缘</span> · 샤자오양<span class="act-subtitle">夏朝阳</span><span class="act-tag lead">주연</span></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">미정</span><span class="act-title">아규묵두아</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">我叫墨斗儿 · 묵두 墨斗</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">미정</span><span class="act-title">생명연</span><span class="act-tag lead">주연</span></div><div class="act-subtitle-line">生命缘 · 샤자오양 夏朝阳</div></div>
 </section>
 <section class="wiki-section year-colored" id="movie">
 <div class="wiki-section-title"><span class="num">02</span>영화</div>
-<div class="act-row"><div class="act-year">2018</div><div class="act-detail">우리 오빠 좀 데려가<span class="act-subtitle">快把我哥带走</span> · 완쑤이<span class="act-subtitle">万岁</span><span class="act-tag">조연</span></div></div>
+<div class="act-row"><div class="act-year">2018</div><div class="act-detail"><div class="act-title-line"><span class="act-title">우리 오빠 좀 데려가</span><span class="act-tag">조연</span></div><div class="act-subtitle-line">快把我哥带走 · 완쑤이 万岁</div></div></div>
 </section>
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail">오십공리도화오5<span class="act-subtitle">五十公里桃花坞5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail">일견니취소 EP.11<span class="act-subtitle">一见你就笑</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">보러가기2 ↗</a></div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail">분포파14<span class="act-subtitle">奔跑吧14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">보러가기 ↗</a></div></div>
-<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail">불상수적성기오<span class="act-subtitle">不想睡的星期五</span> <span style="color:var(--gray-muted);font-size:11px;">(방영 예정)</span></div></div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">오십공리도화오5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">보러가기 ↗</a></div><div class="act-subtitle-line">五十公里桃花坞5</div></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">분포파14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">보러가기 ↗</a></div><div class="act-subtitle-line">奔跑吧14</div></div></div>
+<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail"><div class="act-title-line"><span class="act-title">불상수적성기오</span><span style="color:var(--gray-muted);font-size:11px;">(방영 예정)</span></div><div class="act-subtitle-line">不想睡的星期五</div></div></div>
 </section>
 <section class="wiki-section year-colored" id="music">
 <div class="wiki-section-title"><span class="num">04</span>음반</div>
-<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail">单恋<span class="act-subtitle">짝사랑</span> · 싱글 1집</div></div>
-<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail">谈一场恋爱<span class="act-subtitle">우리 연애나 할까</span> · 싱글 2집</div></div>
-<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail">你知道我知道<span class="act-subtitle">알잖아, 내 마음</span> · 《배탁료반장》 OST</div></div>
-<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail">心事<span class="act-subtitle">마음속 비밀</span> · 《니시아최첨밀적심사》 OST</div></div>
-<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail">誰是你朋友<span class="act-subtitle">누가 네 친구야?</span> · 프로젝트 싱글</div></div>
-<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail">前行<span class="act-subtitle">나아가다</span> · 《투라대륙지연혼전》 주제곡</div></div>
-<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail">心有所感<span class="act-subtitle">마음에 새겨진 정</span> · 《교초》 삽입곡</div></div>
+<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail"><div class="act-title-line"><span class="act-title">单恋</span></div><div class="act-subtitle-line">짝사랑 · 싱글 1집</div></div></div>
+<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">谈一场恋爱</span></div><div class="act-subtitle-line">우리 연애나 할까 · 싱글 2집</div></div></div>
+<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail"><div class="act-title-line"><span class="act-title">你知道我知道</span></div><div class="act-subtitle-line">알잖아, 내 마음 · 《배탁료반장》 OST</div></div></div>
+<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail"><div class="act-title-line"><span class="act-title">心事</span></div><div class="act-subtitle-line">마음속 비밀 · 《니시아최첨밀적심사》 OST</div></div></div>
+<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail"><div class="act-title-line"><span class="act-title">誰是你朋友</span></div><div class="act-subtitle-line">누가 네 친구야? · 프로젝트 싱글</div></div></div>
+<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">前行</span></div><div class="act-subtitle-line">나아가다 · 《투라대륙지연혼전》 주제곡</div></div></div>
+<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">心有所感</span></div><div class="act-subtitle-line">마음에 새겨진 정 · 《교초》 삽입곡</div></div></div>
 </section>
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
