@@ -509,8 +509,8 @@ overflow: hidden;
 .comment-username { font-size: 11px; font-weight: 600; color: var(--black); }
 .comment-original { font-size: 10px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
 .comment-translated { font-size: 12.5px; color: var(--black); line-height: 1.6; font-weight: 400; letter-spacing: -0.005em; padding-left: 34px; }
-.comment-images { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; padding-left: 34px; }
-.comment-images img { max-width: 120px; max-height: 140px; object-fit: cover; }
+.comment-images { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 4px; margin-top: 8px; padding-left: 34px; }
+.comment-images img { max-width: 120px; max-height: 140px; width: auto; height: auto; object-fit: contain; display: block; border-radius: 3px; }
 .comment-note { font-size: 11px; color: var(--pink); border-left: 2px solid var(--pink); padding-left: 8px; margin: 8px 0 0 34px; line-height: 1.5; letter-spacing: -0.005em; }
 /* 답글: 핑크선 없이 들여쓰기만으로 위계 구분 */
 .actor-reply {
@@ -579,7 +579,7 @@ transition: opacity 0.18s ease, transform 0.18s ease, background 0.15s;
 .lightbox-overlay {
 position: fixed;
 inset: 0;
-background: rgba(26,18,22,0.92);
+background: rgba(26,18,22,0.86);
 display: none;
 align-items: center;
 justify-content: center;
@@ -618,6 +618,8 @@ max-width: 100%;
 max-height: 76vh;
 object-fit: contain;
 display: block;
+border-radius: 4px;
+box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 .lightbox-save {
 font-size: 12px;
@@ -692,6 +694,7 @@ transition: opacity 0.15s ease;
 .voice-message .vm-download { flex-shrink: 0; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; margin-left: 2px; }
 .voice-message .vm-download svg { width: 11px; height: 11px; fill: none; stroke: var(--pink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .voice-message .vm-download:hover svg { stroke: #d9456d; }
+.voice-message .vm-download { cursor: pointer; }
 .comment-translated + .voice-message,
 .actor-reply-translated + .voice-message { margin-top: 6px; }
 .actor-reply .voice-message { margin-left: 0; }
@@ -1036,6 +1039,7 @@ let scheduleMonthEvents = {};
 function openSchedule() {
 document.getElementById('scheduleOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
+scheduleViewDate = new Date();
 renderTodayBanner();
 renderScheduleCalendar();
 }
@@ -1155,10 +1159,25 @@ return `
 <span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
 </span>
 <span class="vm-duration" id="${vmId}-dur">${duration ? duration + '″' : ''}</span>
-<a class="vm-download" href="${audioSrc}" download onclick="event.stopPropagation()" title="음성 다운로드">
+<span class="vm-download" onclick="downloadVoiceAudio(event, '${audioSrc}')" title="음성 다운로드">
 <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-</a>
+</span>
 </span>`;
+}
+function downloadVoiceAudio(event, audioSrc) {
+event.stopPropagation();
+fetch(audioSrc).then(res => res.blob()).then(blob => {
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = audioSrc.split('/').pop();
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+setTimeout(() => URL.revokeObjectURL(url), 1000);
+}).catch(() => {
+window.open(audioSrc, '_blank');
+});
 }
 function toggleVoiceMessage(vmId, audioSrc) {
 const el = document.getElementById(vmId);
