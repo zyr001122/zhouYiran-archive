@@ -110,7 +110,7 @@ margin: 0 0 14px;
 .infobox-name-zh { text-align: center; font-size: 12px; color: var(--gray-muted); margin-top: 3px; font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
 .infobox-table { margin-top: 18px; border-top: 1px solid var(--border); }
 .infobox-row { display: flex; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
-.infobox-label { width: 84px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
+.infobox-label { width: 84px; flex-shrink: 0; color: var(--black); font-weight: 600; }
 .infobox-value { flex: 1; color: var(--black); line-height: 1.55; }
 .infobox-value.tbd { color: var(--gray-muted); }
 .infobox-row.stacked { flex-direction: column; }
@@ -153,8 +153,8 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .subsection-label:first-child { margin-top: 0; }
 .hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
-.infobox-sns { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
-.infobox-sns-title { font-size: 11px; font-weight: 700; color: var(--gray-muted); margin-bottom: 8px; letter-spacing: 0.02em; }
+.infobox-sns { margin-top: 14px; padding-top: 6px; }
+.infobox-sns-title { font-size: 12.5px; font-weight: 700; color: var(--black); margin-bottom: 8px; letter-spacing: 0.02em; }
 .infobox-value a:hover { text-decoration: underline; }
 .etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
 .etc-dot { color: var(--pink); flex-shrink: 0; }
@@ -178,7 +178,7 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .act-role.friend { color: var(--gold); }
 .role-legend { font-size: 10.5px; color: var(--black); margin: -4px 0 14px; line-height: 1.6; }
 .role-legend b { font-weight: 700; }
-.act-year-divider.muted .act-year-divider-label { color: var(--gray-muted); }
+.act-year-divider.muted .act-year-divider-label { color: var(--black); }
 .mini-badge.year-flat { border-radius: 0; }
 .year-colored .act-year { color: var(--pink); font-weight: 800; }
 .act-subtitle { color: var(--gray-muted); font-size: 10.5px; margin-left: 3px; }
@@ -402,7 +402,7 @@ color: var(--gray-muted);
 <div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">투라대륙지연혼전</span> · 당삼<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">斗罗大陆之燃魂战 · 唐三</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">환우</span> · 밍셩<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 明盛</div></div>
+<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Wavve · Watcha · WeTV</span><span class="act-title">환우</span> · 밍성<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 明盛</div></div>
 <div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · Watcha · Coupang Play · WeTV</span><span class="act-title">열두 통의 편지(십이봉신)</span> · 탕이쉰<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">十二封信 · 唐亦寻</div></div>
 <div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING · WeTV</span><span class="act-title">강호야우,십년의등불(강호야우십년등)</span> · 모청안/상녕<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">江湖夜雨十年灯 · 慕清晏 / 常宁</div></div>
@@ -463,45 +463,49 @@ color: var(--gray-muted);
 <div class="act-year-divider muted"><span class="act-year-divider-label">2024~2026</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">WeTV · <span class="act-role spokesperson">글로벌 대언인</span></div>
 <div class="subsection-label current">현재 진행중</div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2023~</span>LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>GUCCI · <span class="act-role friend">브랜드 지우</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>GUERLAIN · <span class="act-role ambassador">스킨케어 대사</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span><span class="footnote-marker" onclick="toggleFootnote('apm', event)">[6]<span class="footnote-popup" id="fn-apm">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격 → 2026년 아시아 태평양 브랜드 대언인 승격</span></span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2024~</span>BVLGARI · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span><span class="footnote-marker" onclick="toggleFootnote('bvlgari', event)">[7]<span class="footnote-popup" id="fn-bvlgari">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격</span></span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2025~</span>AMI Paris · <span class="act-role ambassador">글로벌 대사</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>天猫 · <span class="act-role ambassador">환신 대사</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>BLANC1664 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>元气森林 · <span class="act-role ambassador">여름 브랜드 대사</span></div>
-<div class="act-row-flat"><span class="mini-badge year-flat">2026~</span>ASICS · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2023~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2024~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">GUCCI · <span class="act-role friend">브랜드 지우</span></div>
+<div class="act-row-flat">GUERLAIN · <span class="act-role ambassador">스킨케어 대사</span></div>
+<div class="act-row-flat">APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span><span class="footnote-marker" onclick="toggleFootnote('apm', event)">[6]<span class="footnote-popup" id="fn-apm">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격 → 2026년 아시아 태평양 브랜드 대언인 승격</span></span></div>
+<div class="act-row-flat">BVLGARI · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span><span class="footnote-marker" onclick="toggleFootnote('bvlgari', event)">[7]<span class="footnote-popup" id="fn-bvlgari">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격</span></span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2025~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">AMI Paris · <span class="act-role ambassador">글로벌 대사</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2026~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">天猫 · <span class="act-role ambassador">환신 대사</span></div>
+<div class="act-row-flat">自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
+<div class="act-row-flat">花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
+<div class="act-row-flat">凯旋1664 · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">元气森林 · <span class="act-role ambassador">여름 브랜드 대사</span></div>
+<div class="act-row-flat">ASICS · <span class="act-role ambassador">브랜드 대사</span></div>
 </section>
 <section class="wiki-section" id="magazine">
 <div class="wiki-section-title"><span class="num">06</span>화보</div>
 <div class="mag-shelf">
 <div class="mag-item"><div class="mag-cover"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></a></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></a></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></div><div class="mag-caption">费加罗男士<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></div><div class="mag-caption">时装LOFFICIEL<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></div><div class="mag-caption">红秀GRAZIA<span class="mag-date">2023년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2023년 12월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></div><div class="mag-caption">ELLEMEN新青年<span class="mag-date">2024년 1월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></a></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></a></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></div><div class="mag-caption">InStyle优家画报<span class="mag-date">2024년 3월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></div><div class="mag-caption">风度mensuno<span class="mag-date">2024년 5월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></div><div class="mag-caption">时装男士<span class="mag-date">2024년 11월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2412-glassman.jpg" alt="Glass Man 2024년 12월호" loading="lazy"></div><div class="mag-caption">Glass Man<span class="mag-date">2024년 12월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></a></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></a></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></a></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></a></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></a></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></a></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
 <div class="mag-item"><div class="mag-cover"><a href="https://vogue.sg/zhou-yiran-art-issue-digital-cover-star/" target="_blank" rel="noopener"><img src="images/2601-voguesingapore.jpg" alt="VOGUE SINGAPORE 2026년 1월호" loading="lazy"></a></div><div class="mag-caption">VOGUE SINGAPORE<span class="mag-date">2026년 1월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></div><div class="mag-caption">悦游 Traveler<span class="mag-date">2026년 3·4월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2604-vogue.jpg" alt="VOGUE 2026년 4월호" loading="lazy"></div><div class="mag-caption">VOGUE<span class="mag-date">2026년 4월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></a></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></a></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></a></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
+<div class="mag-item"><div class="mag-cover"><a href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></a></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener">번역 보기 ↗</a></div></div>
 </div>
 </section>
 <section class="wiki-section year-colored" id="awards">
@@ -576,6 +580,7 @@ let scheduleMonthEvents = {};
 function openSchedule() {
 document.getElementById('scheduleOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
+scheduleViewDate = new Date();
 renderTodayBanner();
 renderScheduleCalendar();
 }
