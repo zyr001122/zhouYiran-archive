@@ -33,16 +33,21 @@ letter-spacing: -0.01em;
 }
 
 /* ============ HERO / DARK BAND ============ */
-.hero-band { background: var(--black); padding: 20px 20px 24px; position: relative; }
-.hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+.hero-band { background: var(--white); padding: 20px 20px 0; position: relative; }
+.hero-brand { display: flex; align-items: center; gap: 10px; }
+.hero-brand-mark { width: 24px; height: 24px; background: var(--pink); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0; }
+.hero-brand-title { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: var(--black); line-height: 1.2; }
+.hero-brand-sub { font-size: 11px; color: var(--gray-muted); line-height: 1.3; margin-top: 1px; }
+.hero-icons { display: flex; align-items: center; gap: 18px; }
+.hero-stripe { max-width: 640px; margin: 16px auto 0; height: 4px; background: var(--pink); }
+.hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .hamburger-btn,
 .calendar-btn {
 display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer;
 align-items: center; justify-content: center; flex-shrink: 0;
-filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
 }
 .hamburger-btn { flex-direction: column; gap: 6px; }
-.hamburger-btn .bar { width: 15px; height: 1.5px; background: var(--white); transition: transform 0.2s ease, opacity 0.2s ease; }
+.hamburger-btn .bar { width: 15px; height: 1.5px; background: var(--black); transition: transform 0.2s ease, opacity 0.2s ease; }
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 .calendar-btn svg { width: 18px; height: 18px; }
@@ -53,26 +58,26 @@ transition: opacity 0.25s ease; z-index: 600;
 }
 .side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
 .side-drawer {
-position: fixed; top: 0; right: 0; height: 100%; width: min(300px, 78vw); background: var(--black);
+position: fixed; top: 0; right: 0; height: 100%; width: min(300px, 78vw); background: var(--white); border-left: 1px solid var(--border);
 transform: translateX(100%); transition: transform 0.3s ease; z-index: 601;
 display: flex; flex-direction: column; padding: 20px 0 0;
 }
 .side-drawer.open { transform: translateX(0); }
 .side-drawer-close {
 align-self: flex-end; width: 32px; height: 32px; margin: 0 20px 24px; background: none;
-border: none; color: var(--white); font-size: 18px; cursor: pointer;
+border: none; color: var(--black); font-size: 18px; cursor: pointer;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .side-drawer-close:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
 .side-drawer-item {
-display: flex; align-items: baseline; gap: 14px; padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.08);
-text-decoration: none; color: rgba(255,255,255,0.55); font-size: 16px; font-weight: 600;
+display: flex; align-items: baseline; gap: 14px; padding: 20px 24px; border-top: 1px solid var(--border);
+text-decoration: none; color: #6b6b6b; font-size: 16px; font-weight: 600;
 letter-spacing: -0.01em; transition: color 0.15s;
 }
 .side-drawer-item:first-child { border-top: none; }
-.side-drawer-item .idx { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 11px; color: var(--pink-dim); letter-spacing: 0.03em; }
-.side-drawer-item:hover { color: rgba(255,255,255,0.85); }
+.side-drawer-item .idx { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 11px; color: var(--gray-muted); letter-spacing: 0.03em; }
+.side-drawer-item:hover { color: var(--black); }
 .side-drawer-item.current { color: var(--pink); }
 .side-drawer-item.current .idx { color: var(--pink); }
 
@@ -258,11 +263,19 @@ color: var(--gray-muted);
 </div>
 </div>
 
-<!-- HERO / DARK BAND -->
+<!-- HERO -->
 <div class="hero-band">
 <div class="hero-nav">
+<div class="hero-brand">
+<span class="hero-brand-mark">V</span>
+<div>
+<div class="hero-brand-title">사이트 공지</div>
+<div class="hero-brand-sub">사이트 관련 공지사항</div>
+</div>
+</div>
+<div class="hero-icons">
 <button class="calendar-btn" id="calendarBtn" onclick="openSchedule()" aria-label="스케줄 보기">
-<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="#1a1216" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <rect x="3" y="5" width="18" height="16" rx="1"></rect>
 <line x1="3" y1="9" x2="21" y2="9"></line>
 <line x1="8" y1="3" x2="8" y2="7"></line>
@@ -274,8 +287,8 @@ color: var(--gray-muted);
 <span class="bar"></span>
 </button>
 </div>
-<div class="page-wordmark">NOTICE</div>
-<div class="page-sub">사이트 관련 공지사항</div>
+</div>
+<div class="hero-stripe"></div>
 </div>
 
 <!-- WHITE PANEL -->
