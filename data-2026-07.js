@@ -123,11 +123,11 @@ const posts_202607 = [
         id: 26070111,
         username: "桃子泡泡面er",
         originalText: "绝世好瓜",
-        translatedText: "역대급 떡밥",
+        translatedText: "역대급 수박",
         images: ["images/2607-c11.jpg"],
         actorReply: {
           originalText: "让我想到了那个🐷",
-          translatedText: "보니까 생각나네🐷"
+          translatedText: "생각나게 하네🐷"
         }
       },
       {
@@ -210,8 +210,8 @@ const posts_202607 = [
       {
         id: 26070119,
         username: "啵唧翊口耶啵哇",
-        originalText: "赛车手，那准备好了吗[doge][doge]@周翊然Tz",
-        translatedText: "레이서, 준비 완료?[doge][doge]@周翊然Tz",
+        originalText: "赛车手，那准备好了吗[doge][doge]",
+        translatedText: "레이서, 준비 완료?[doge][doge]",
         images: ["images/2607-c19.jpg"],
         actorReply: {
           originalText: "头盔帮我换一下",
@@ -246,7 +246,7 @@ const posts_202607 = [
         id: 26070122,
         username: "淇淇爱喝水qiiii",
         originalText: "来吃烤肉吗哥哥",
-        translatedText: "고기 구워 먹으러 올래? 오빠",
+        translatedText: "고기 구웠는데 먹으러 올래 오빠?",
         images: ["images/2607-c22.jpg"],
         actorReply: {
           originalText: "不吃 你吃吧",
@@ -256,19 +256,19 @@ const posts_202607 = [
       {
         id: 26070123,
         username: "-七颗橙子",
-        originalText: "潮汕好吃吗[干饭人]（你安利的这盘卤鹅是澄海狮头鹅，最灵魂的就是鹅头部分了，会吃！",
-        translatedText: "차오산 맛있었어?[干饭人] (너한테 영업당한 거위 조림 요리는 청하이 사자머리 거위인데, 거위 머리 부분이 완전 킥이야, 먹을 줄 아네!",
+        originalText: "潮汕好吃吗（你安利的这盘卤鹅是澄海狮头鹅，最灵魂的就是鹅头部分了，会吃！",
+        translatedText: "차오산 맛있었어?(너한테 영업당한 거위 조림 요리는 청하이 사자머리 거위인데 거위 머리 부분이 완전 킥이더라, 먹을 줄 아는구나!",
         images: ["images/2607-c23.jpg"],
         actorReply: {
           originalText: "超级无敌好吃",
-          translatedText: "진짜 킥이야 진짜 맛있더라"
+          translatedText: "진짜 킥이야 너무 맛있더라"
         }
       },
       {
         id: 26070124,
         username: "咬一口脆皮年糕_",
         originalText: "这是在？",
-        translatedText: "여기 어디야?",
+        translatedText: "여긴 어디?",
         images: ["images/2607-c24.jpg"],
         actorReply: {
           originalText: "？",
@@ -279,7 +279,7 @@ const posts_202607 = [
         id: 26070125,
         username: "Ran-瑶瑶瑶",
         originalText: "好看吗，然然这是我最喜欢的一张",
-        translatedText: "예뻐? 익연아 이게 내가 제일 좋아하는 사진이야",
+        translatedText: "예쁘지? 익연아 이게 내가 제일 좋아하는 사진이야",
         images: ["images/2607-c25.jpg"],
         actorReply: {
           originalText: "好看",
@@ -316,7 +316,7 @@ const posts_202607 = [
         images: ["images/2607-c28.jpg"],
         actorReply: {
           originalText: "和我坐一桌",
-          translatedText: "나랑 수준이 똑같은 것 같은데"
+          translatedText: "나랑 실력이 똑같은 것 같은데"
         }
       },
       {
@@ -324,7 +324,6 @@ const posts_202607 = [
         username: "周翊然Tz",
         originalText: "",
         translatedText: "几分之几",
-        note: "원문 노래 음성 메시지",
         audio: "audio/26-7-22 1944 zyr.MP3",
         audioDuration: 18,
         images: [],
@@ -334,7 +333,7 @@ const posts_202607 = [
         id: 26070130,
         username: "周翊然Tz",
         originalText: "最近发现 鹦鹉也很好玩 小太阳鹦鹉",
-        translatedText: "요즘 보니까 앵무새도 되게 재밌더라, 썬코뉴어였나",
+        translatedText: "요즘 보니까 앵무새도 되게 귀엽더라, 썬코뉴어였나",
         images: [],
         actorReply: null
       },
