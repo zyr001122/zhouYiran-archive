@@ -581,19 +581,9 @@ let scheduleMonthEvents = {};
 function openSchedule() {
 document.getElementById('scheduleOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
-const events = typeof scheduleEvents !== 'undefined' ? scheduleEvents : [];
 const today = new Date();
-today.setHours(0, 0, 0, 0);
-const upcoming = events.filter(e => new Date(e.date) >= today).sort((a, b) => new Date(a.date) - new Date(b.date));
-let target = today;
-if (upcoming.length) {
-target = new Date(upcoming[0].date);
-} else if (events.length) {
-const past = events.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
-target = new Date(past[0].date);
-}
-scheduleViewDate = new Date(target.getFullYear(), target.getMonth(), 1);
-scheduleTargetDay = target.getDate();
+scheduleViewDate = new Date(today.getFullYear(), today.getMonth(), 1);
+scheduleTargetDay = today.getDate();
 renderTodayBanner();
 renderScheduleCalendar();
 }
