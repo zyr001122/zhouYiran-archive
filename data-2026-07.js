@@ -105,7 +105,7 @@ const posts_202607 = [
         images: [],
         actorReply: {
           originalText: "必须德州搭配vib",
-          translatedText: "무조건 텍사스 리그 바이브로"
+          translatedText: "무조건 텍사스 리그 vib로"
         }
       },
       {
