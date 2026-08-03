@@ -13,7 +13,6 @@ const posts_202606 = [
         username: "周翊然Tz",
         originalText: "试一下这个新的功能，听说现在可以发语音",
         translatedText: "새 기능 생겼다 그래서 한 번 써보려고, 이제 음성도 보낼 수 있네",
-        note: "원문 음성 메시지",
         audio: "audio/26-6-22 1752 zyr.MP3",
         audioDuration: 6,
         images: [],
@@ -24,7 +23,6 @@ const posts_202606 = [
         username: "周翊然Tz",
         originalText: "",
         translatedText: "최근에 많은 분들을 봤어요 사연래를 통해서 저를 알게 된 분들 정말 영광스럽고 또 너무 기뻐요 그리고 많은 팬분들이 저한테 남겨준 댓글이랑 남겨주신 메시지도 봤는데 저를 응원해 주시고 인정해 주시는 내용이 많더라고요 전부 다 확인했고 정말 모든분들께 감사드립니다 사연래에 대한 여러분의 인정에도 너무 감사드리고 그리고 팬분들께도 정말 고마워요 지금까지 변함없이 응원해 주셔서 어.. 사실 저는 가끔ㅎㅎ 팬분들이 저보다 더 힘들 수도 있다는 걸 알고 있어요 그래서… 저는 이게 제 영광이라고 생각하고 너무 감사해요 그래서 이 자리를 빌려 여러분께 정중하게 감사 인사를 드리고 싶어요",
-        note: "원문 음성 메시지",
         audio: "audio/26-6-22 1807 zyr.MP3",
         audioDuration: 52,
         images: [],
@@ -57,7 +55,6 @@ const posts_202606 = [
         username: "只吃两碗饭-",
         originalText: "hey 老公 看我钓的鱼！但是上钩的都太小了最后都放生了你最近钓鱼有啥收获不",
         translatedText: "hey 자기야 내가 낚은 물고기 봐봐! 근데 걸린 게 다 너무 작아서 그냥 다 놓아줬어 넌 요즘 낚시해서 뭐 좀 건진 거 있어?",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-fishing.jpg"],
         actorReply: {
           originalText: "你这个是抬调还是是露亚？看着像抬掉?",
@@ -104,7 +101,6 @@ const posts_202606 = [
         username: "是我的小土豆-Tz",
         originalText: "老公 我拍的日落怎么样",
         translatedText: "자기야 내가 찍은 노을 어때",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-sunset-photo-2.jpg"],
         actorReply: {
           originalText: "不错不错",
@@ -118,7 +114,6 @@ const posts_202606 = [
         username: "只吃两碗饭-",
         originalText: "跟你好朋友昨天这么同步 啥时候再还原一个同款表情[钢铁侠]",
         translatedText: "어제 절친 아니랄까봐 표정도 완전 똑같던데 언제 또 같은 표정 재현해줄 거야[钢铁侠]",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-same-expression.jpg"],
         actorReply: {
           originalText: "",
@@ -143,7 +138,6 @@ const posts_202606 = [
         username: "然应韬刊Angel",
         originalText: "为什么！为什么！为什么我发了一堆话换来的还是你的只言片语，你真的好冷漠 你的冷漠就像北极的冰川你的冷漠好像从喜马拉雅山上倒下来的一瓶水把山脚下热情的我浇的浑身湿透手脚发抖告诉我究竟怎么样才能让你对我重拾往日的热情我们难道真的已经回不去了吗！我的心就像浸泡在负一百度的冰水里一样麻木",
         translatedText: "왜! 왜! 왜 나는 한참 얘기해도 넌 왜 몇 마디만 보내는건데? 너 진짜 차갑다 너의 차가움은 마치 북극의 얼음 같아. 너의 차가움은 히말라야산에서 쏟아지는 얼음물이 뜨거운 내 마음속 열정에 부어지는 것 같아, 온몸이 다 젖어서 손발까지 떨려. 대체 어떻게 해야 네가 예전처럼 다시 나한테 열정을 보여줄 수 있는지 말해줘 우리 진짜 이대로 돌아갈 수 없는 거 아니지?! 내 마음은 마치 영하 100도 물에 잠긴 것처럼 마비된 것 같다고",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-cold-drawing.jpg"],
         actorReply: {
           originalText: "",
@@ -201,7 +195,6 @@ const posts_202606 = [
         username: "粥牛牛不会流鼻涕",
         originalText: "周翊然你这个是咋做到的？有教程可学吗哈哈哈",
         translatedText: "주익연 이거 어떻게 한 거야? 따라하게 강의 좀ㅋㅋㅋ",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-how-to.jpg"],
         actorReply: {
           originalText: "这个就是这样做，然后那样做，然后再这样做就可以了",
@@ -215,7 +208,6 @@ const posts_202606 = [
         username: "翊口韩式拌饭-Tz",
         originalText: "哥哥快看 小狗对烧卖🐶👅",
         translatedText: "오빠 봐봐 울 강아지가🐶👅",
-        note: "익연이 답글은 음성 메시지",
         images: ["images/2606-dog-siomai.jpg"],
         actorReply: {
           originalText: "",
@@ -240,7 +232,6 @@ const posts_202606 = [
         username: "圣焄妻",
         originalText: "哥哥巴黎有没有手搓五老哥[可怜]",
         translatedText: "오빠 파리에서 오빠가 찍은 브이로그 있는 거지?[可怜]",
-        note: "익연이 답글은 음성 메시지",
         images: [],
         actorReply: {
           originalText: "我只能尽力而为",
@@ -298,7 +289,6 @@ const posts_202606 = [
         username: "拾月格格屋",
         originalText: "老公这次vlog录个1小时的时长就行，别太辛苦了[并不简单]",
         translatedText: "자기야 이번 브이로그는 1시간 정도 분량이면 돼, 너무 무리하지 마[并不简单]",
-        note: "익연이 답글은 음성 메시지",
         images: [],
         actorReply: {
           originalText: "好的好的，我尽力而为",
