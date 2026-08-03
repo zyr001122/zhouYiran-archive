@@ -234,7 +234,7 @@ padding: 18px 0 4px;
 .year-divider-label { font-size: 13px; font-weight: 800; color: var(--pink); letter-spacing: 0.01em; white-space: nowrap; }
 .year-divider-line { flex: 1; height: 1px; background: var(--border); }
 .year-divider + .douyin-card { border-top: none; }
-.douyin-date { font-size: 11px; color: var(--black); font-weight: 600; letter-spacing: 0.02em; margin-bottom: 8px; }
+.douyin-date { font-size: 13px; color: var(--black); font-weight: 700; letter-spacing: 0.02em; margin-bottom: 8px; }
 .original-text { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin-bottom: 6px; }
 .translated-text { font-size: 13.5px; color: var(--black); line-height: 1.65; font-weight: 400; letter-spacing: -0.01em; }
 .yt-embed { margin: 12px 0 0; overflow: hidden; aspect-ratio: 16/9; border-radius: 2px; }
@@ -683,11 +683,24 @@ renderDouyinFeed();
 // ============ 스케줄 캘린더 모달 ============
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
 let scheduleViewDate = new Date();
+let scheduleTargetDay = null;
 let scheduleMonthEvents = {};
 function openSchedule() {
 document.getElementById('scheduleOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
-scheduleViewDate = new Date();
+const events = typeof scheduleEvents !== 'undefined' ? scheduleEvents : [];
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+const upcoming = events.filter(e => new Date(e.date) >= today).sort((a, b) => new Date(a.date) - new Date(b.date));
+let target = today;
+if (upcoming.length) {
+target = new Date(upcoming[0].date);
+} else if (events.length) {
+const past = events.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+target = new Date(past[0].date);
+}
+scheduleViewDate = new Date(target.getFullYear(), target.getMonth(), 1);
+scheduleTargetDay = target.getDate();
 renderTodayBanner();
 renderScheduleCalendar();
 }
@@ -745,7 +758,11 @@ html += `<span class="sched-day${isToday ? ' today' : ''}" data-day="${d}" oncli
 }
 document.getElementById('scheduleGrid').innerHTML = html;
 const isCurrentMonth = year === new Date().getFullYear() && month === new Date().getMonth();
-const initialDay = (isCurrentMonth && scheduleMonthEvents[new Date().getDate()]) ? new Date().getDate() : Number(Object.keys(scheduleMonthEvents)[0]) || null;
+let initialDay = scheduleTargetDay;
+scheduleTargetDay = null;
+if (!initialDay) {
+initialDay = (isCurrentMonth && scheduleMonthEvents[new Date().getDate()]) ? new Date().getDate() : Number(Object.keys(scheduleMonthEvents)[0]) || null;
+}
 if (initialDay) {
 selectScheduleDay(initialDay);
 } else {
