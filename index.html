@@ -1,182 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="icon-180.png" />
 <link rel="icon" type="image/png" href="favicon-32.png" />
 <meta name="theme-color" content="#1a1216" />
-  <title>ZhouYiran Archive</title>
-<script>location.replace("notice.html");</script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Cormorant+Garamond:ital,wght@1,700&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Pretendard', -apple-system, sans-serif;
-      background: #f7ede8;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: 390px;
-      min-height: 100vh;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 1.5rem 3.5rem;
-    }
-
-    /* 종이 질감 배경 */
-    .wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='0.08'/%3E%3C/svg%3E");
-      background-size: 300px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* 배경 blur 텍스트 */
-    .bg-blur-wrap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 2rem 1.5rem 0;
-      pointer-events: none;
-      user-select: none;
-      z-index: 1;
-    }
-    .bg-big {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 96px;
-      color: #2a1a20;
-      letter-spacing: -3px;
-      line-height: 0.88;
-      filter: blur(5px);
-      opacity: 0.07;
-      white-space: nowrap;
-    }
-    .bg-italic {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 54px;
-      color: #c45e77;
-      letter-spacing: 2px;
-      filter: blur(4px);
-      opacity: 0.14;
-      white-space: nowrap;
-      margin-top: -4px;
-      padding-left: 12px;
-    }
-
-    /* 폴더 */
-    .folders {
-      width: 100%;
-      max-width: 320px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      z-index: 2;
-    }
-
-    .folder-wrap {
-      width: 100%;
-      margin-bottom: -24px;
-      filter: drop-shadow(0px 8px 18px rgba(150,60,80,0.14));
-    }
-    .folder-wrap:last-child {
-      margin-bottom: 0;
-      filter: drop-shadow(0px 12px 24px rgba(150,60,80,0.22));
-    }
-
-    .folder-tab-row {
-      display: flex;
-      align-items: flex-end;
-      height: 27px;
-      padding-left: 18px;
-    }
-    .folder-tab {
-      padding: 5px 18px 0;
-      border-radius: 10px 10px 0 0;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-    }
-
-    .folder-body {
-      width: 100%;
-      border-radius: 4px 14px 14px 14px;
-      padding: 1.3rem 1.5rem 2.8rem;
-      text-decoration: none;
-      display: block;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: filter 0.15s;
-    }
-    .folder-body:hover { filter: brightness(0.96); }
-
-    .folder-body::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 160px;
-      pointer-events: none;
-      mix-blend-mode: overlay;
-      opacity: 0.16;
-    }
-
-    .folder-title { font-size: 18px; font-weight: 700; margin-bottom: 3px; position: relative; z-index: 1; }
-    .folder-desc { font-size: 11px; opacity: 0.58; position: relative; z-index: 1; }
-
-    .f1 .folder-tab { background: #f0879e; color: white; }
-    .f1 .folder-body { background: #F7A4B8; }
-    .f1 .folder-title { color: white; }
-    .f1 .folder-desc { color: rgba(255,255,255,0.8); }
-
-    .f2 .folder-tab { background: #f9ccd8; color: #c45e77; }
-    .f2 .folder-body { background: #fcd5e0; }
-    .f2 .folder-title { color: #c45e77; }
-    .f2 .folder-desc { color: #c45e77; }
-
-    .f3 .folder-tab { background: #e0d8d0; color: #7a6a5a; }
-    .f3 .folder-body { background: #e8e0d8; }
-    .f3 .folder-title { color: #5a4a3a; }
-    .f3 .folder-desc { color: #5a4a3a; }
-
-    .footer {
-      position: absolute;
-      bottom: 1.2rem;
-      left: 0; right: 0;
-      text-align: center;
-      font-size: 10px;
-      color: #c4a0ae;
-      opacity: 0.35;
-      letter-spacing: 0.5px;
-      z-index: 2;
-    }
-  </style>
+<title>ZhouYiran Archive</title>
+<script>location.replace("archive.html");</script>
 </head>
 <body>
 <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Pretendard',-apple-system,sans-serif;">
-<a href="notice.html" style="color:#F0577F;font-size:14px;">공지 페이지로 이동 →</a>
+<a href="archive.html" style="color:#F0577F;font-size:14px;">아카이브로 이동 →</a>
 </div>
 </body>
 </html>
