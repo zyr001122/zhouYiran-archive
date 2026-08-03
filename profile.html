@@ -328,12 +328,8 @@ color: var(--gray-muted);
 <div class="notice-modal">
 <button class="notice-close" onclick="closeNotice()" aria-label="닫기">✕</button>
 <div class="notice-modal-title">Notice !</div>
-<div class="notice-modal-date">2026.08.04 Open 🏠</div>
-<div class="notice-modal-body">* 초화 아카이브에 있는 사진은 원문으로 이동해 다운 받으셔야 원본 화질로 받으실 수 있습니다.
-* 사이트 내 번역은 전부 오/의역이 있을 수 있으며 오역 발견 시 ASK 게시판에 남겨주세요!
-
-* 사이트 내 모든 내용은 익연이를 좋아하시는 분들이라면 누구나 공유/캡처 가능합니다. 편하게 이용해주세요.</div>
-<button class="notice-dont-show" onclick="dismissNoticeToday()">오늘 하루 보지 않기</button>
+<div class="notice-modal-date" id="noticeModalDate"></div>
+<div class="notice-modal-body" id="noticeModalBody"></div>
 </div>
 </div>
 <div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
@@ -559,6 +555,7 @@ color: var(--gray-muted);
 </div>
 <footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
 <script src="data-schedule.js"></script>
+<script src="data-notice.js"></script>
 <script>
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
@@ -566,23 +563,27 @@ document.getElementById('sideDrawer').classList.toggle('open');
 document.getElementById('sideDrawerOverlay').classList.toggle('open');
 document.body.style.overflow = document.getElementById('sideDrawer').classList.contains('open') ? 'hidden' : '';
 }
-const NOTICE_VERSION = '2026-08-04'; // 공지 내용을 바꿀 때마다 이 날짜만 바꾸면 다시 자동으로 한 번 떠요
+// 공지 내용은 data-notice.js 파일 하나만 수정하면 이 페이지를 포함한 모든 페이지에 반영됩니다.
 function openNotice() {
 document.getElementById('noticeOverlay').classList.add('open');
 document.body.style.overflow = 'hidden';
 document.getElementById('noticeDot').classList.remove('show');
 }
+function markNoticeSeen() {
+if (typeof NOTICE_DATA === 'undefined') return;
+sessionStorage.setItem('noticeSeen', NOTICE_DATA.version + '|' + new Date().toDateString());
+}
 function closeNotice() {
 document.getElementById('noticeOverlay').classList.remove('open');
 document.body.style.overflow = '';
-}
-function dismissNoticeToday() {
-localStorage.setItem('noticeDismissed', NOTICE_VERSION);
-closeNotice();
+markNoticeSeen();
 }
 (function initNotice(){
-const dismissed = localStorage.getItem('noticeDismissed');
-if (dismissed !== NOTICE_VERSION) {
+if (typeof NOTICE_DATA === 'undefined') return;
+document.getElementById('noticeModalDate').textContent = NOTICE_DATA.date;
+document.getElementById('noticeModalBody').textContent = NOTICE_DATA.body;
+const seenKey = NOTICE_DATA.version + '|' + new Date().toDateString();
+if (sessionStorage.getItem('noticeSeen') !== seenKey) {
 document.getElementById('noticeDot').classList.add('show');
 openNotice();
 } else {
