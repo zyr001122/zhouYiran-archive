@@ -52,6 +52,10 @@ align-items: center; justify-content: center; flex-shrink: 0;
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 .calendar-btn svg { width: 18px; height: 18px; }
+.notice-btn { position: relative; display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; }
+.notice-btn svg { width: 18px; height: 18px; }
+.notice-dot { position: absolute; top: 4px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--pink); display: none; }
+.notice-dot.show { display: block; }
 .side-drawer-overlay {
 position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
 transition: opacity 0.25s ease; z-index: 600;
@@ -294,6 +298,16 @@ font-size: 11px;
 color: var(--gray-muted);
 }
 .schedule-legend .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+.notice-overlay { position: fixed; inset: 0; background: rgba(26,18,22,0.75); display: none; align-items: center; justify-content: center; z-index: 530; padding: 20px; }
+.notice-overlay.open { display: flex; }
+.notice-modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 340px; padding: 22px 20px; max-height: 80vh; overflow-y: auto; position: relative; }
+.notice-modal-title { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 15px; font-weight: 400; color: var(--black); margin-bottom: 4px; }
+.notice-modal-date { font-size: 11px; color: var(--pink); font-weight: 700; margin-bottom: 14px; }
+.notice-modal-body { font-size: 13px; line-height: 1.75; color: var(--black); white-space: pre-line; }
+.notice-close { position: absolute; right: 16px; top: 16px; background: none; border: none; font-size: 15px; color: var(--gray-muted); cursor: pointer; }
+.notice-close:hover { color: var(--black); }
+.notice-dont-show { display: block; width: 100%; margin-top: 18px; padding-top: 14px; border: none; border-top: 1px solid var(--border); background: none; font-size: 11.5px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
+.notice-dont-show:hover { color: var(--pink); }
 </style>
 </head>
 <body>
@@ -301,15 +315,27 @@ color: var(--gray-muted);
 <nav class="side-drawer" id="sideDrawer">
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 <div class="side-drawer-index">
-<a class="side-drawer-item" href="notice.html"><span class="idx">01</span>NOTICE</a>
-<a class="side-drawer-item" href="archive.html"><span class="idx">02</span>ARCHIVE</a>
-<a class="side-drawer-item current" href="profile.html"><span class="idx">03</span>PROFILE</a>
-<a class="side-drawer-item" href="guide.html"><span class="idx">04</span>가이드</a>
-<a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>SpinSpin</a>
-<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>블로그</a>
-<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>유튜브</a>
+<a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
+<a class="side-drawer-item current" href="profile.html"><span class="idx">02</span>PROFILE</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>가이드</a>
+<a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
+<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
+<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
 </div>
 </nav>
+<!-- NOTICE MODAL -->
+<div class="notice-overlay" id="noticeOverlay" onclick="if(event.target===this) closeNotice()">
+<div class="notice-modal">
+<button class="notice-close" onclick="closeNotice()" aria-label="닫기">✕</button>
+<div class="notice-modal-title">Notice !</div>
+<div class="notice-modal-date">2026.08.04 Open 🏠</div>
+<div class="notice-modal-body">* 초화 아카이브에 있는 사진은 원문으로 이동해 다운 받으셔야 원본 화질로 받으실 수 있습니다.
+* 사이트 내 번역은 전부 오/의역이 있을 수 있으며 오역 발견 시 ASK 게시판에 남겨주세요!
+
+* 사이트 내 모든 내용은 익연이를 좋아하시는 분들이라면 누구나 공유/캡처 가능합니다. 편하게 이용해주세요.</div>
+<button class="notice-dont-show" onclick="dismissNoticeToday()">오늘 하루 보지 않기</button>
+</div>
+</div>
 <div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
 <div class="schedule-modal">
 <button class="schedule-close" onclick="closeSchedule()" aria-label="닫기">✕</button>
@@ -349,6 +375,13 @@ color: var(--gray-muted);
 <line x1="8" y1="3" x2="8" y2="7"></line>
 <line x1="16" y1="3" x2="16" y2="7"></line>
 </svg>
+</button>
+<button class="notice-btn" id="noticeBtn" onclick="openNotice()" aria-label="공지사항 보기">
+<svg viewBox="0 0 24 24" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+<path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+</svg>
+<span class="notice-dot" id="noticeDot"></span>
 </button>
 <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
 <span class="bar"></span>
@@ -533,6 +566,29 @@ document.getElementById('sideDrawer').classList.toggle('open');
 document.getElementById('sideDrawerOverlay').classList.toggle('open');
 document.body.style.overflow = document.getElementById('sideDrawer').classList.contains('open') ? 'hidden' : '';
 }
+const NOTICE_VERSION = '2026-08-04'; // 공지 내용을 바꿀 때마다 이 날짜만 바꾸면 다시 자동으로 한 번 떠요
+function openNotice() {
+document.getElementById('noticeOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+document.getElementById('noticeDot').classList.remove('show');
+}
+function closeNotice() {
+document.getElementById('noticeOverlay').classList.remove('open');
+document.body.style.overflow = '';
+}
+function dismissNoticeToday() {
+localStorage.setItem('noticeDismissed', NOTICE_VERSION);
+closeNotice();
+}
+(function initNotice(){
+const dismissed = localStorage.getItem('noticeDismissed');
+if (dismissed !== NOTICE_VERSION) {
+document.getElementById('noticeDot').classList.add('show');
+openNotice();
+} else {
+document.getElementById('noticeDot').classList.remove('show');
+}
+})();
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
