@@ -898,6 +898,7 @@ color: var(--gray-muted);
 <a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
 <a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
 <a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
+<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>트위터</a>
 </div>
 </nav>
 <!-- NOTICE MODAL -->
@@ -1117,7 +1118,7 @@ markNoticeSeen();
 (function initNotice(){
 if (typeof NOTICE_DATA === 'undefined') return;
 document.getElementById('noticeModalDate').textContent = NOTICE_DATA.date;
-document.getElementById('noticeModalBody').textContent = NOTICE_DATA.body;
+document.getElementById('noticeModalBody').innerHTML = NOTICE_DATA.body;
 const seenKey = NOTICE_DATA.version + '|' + new Date().toDateString();
 if (sessionStorage.getItem('noticeSeen') !== seenKey) {
 document.getElementById('noticeDot').classList.add('show');
