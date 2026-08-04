@@ -47,7 +47,7 @@ letter-spacing: -0.01em;
 .hero-band { background: var(--white); padding: 20px 20px 0; position: relative; }
 .hero-brand { display: flex; align-items: center; gap: 10px; }
 .hero-brand-mark { width: 24px; height: 24px; background: var(--pink); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0; }
-.hero-brand-title { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: var(--black); line-height: 1.2; }
+.hero-brand-title { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: var(--black); line-height: 1.2; }
 .hero-brand-sub { font-size: 11px; color: var(--gray-muted); line-height: 1.3; margin-top: 1px; }
 .hero-icons { display: flex; align-items: center; gap: 18px; }
 .hero-stripe { max-width: 640px; margin: 16px auto 0; height: 4px; background: var(--pink); }
@@ -84,6 +84,9 @@ border: none; color: var(--black); font-size: 18px; cursor: pointer;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .side-drawer-close:hover { color: var(--pink); }
+.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 4px; margin: 0 12px 24px 0; }
+.theme-toggle-btn { width: 32px; height: 32px; background: none; border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; color: var(--black); flex-shrink: 0; }
+.theme-toggle-btn:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
 .side-drawer-item {
 display: flex; align-items: baseline; gap: 14px; padding: 20px 24px; border-top: 1px solid var(--border);
@@ -267,7 +270,10 @@ color: var(--gray-muted);
 <!-- SIDE DRAWER NAV -->
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
+<div class="side-drawer-top">
+<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon">🌙</span></button>
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
+</div>
 <div class="side-drawer-index">
 <a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
 <a class="side-drawer-item" href="profile.html"><span class="idx">02</span>PROFILE</a>
@@ -275,10 +281,6 @@ color: var(--gray-muted);
 <a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
 <a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
 <a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
-<button class="side-drawer-item" id="themeToggleBtn" onclick="toggleDarkMode()" type="button" style="width:100%;justify-content:space-between;background:none;border:none;border-top:1px solid var(--border);font-family:inherit;cursor:pointer;">
-<span style="display:flex;align-items:baseline;gap:14px;"><span class="idx">07</span>다크 모드</span>
-<span id="themeToggleIcon">🌙</span>
-</button>
 </div>
 </nav>
 <!-- NOTICE MODAL -->
@@ -320,7 +322,6 @@ color: var(--gray-muted);
 <div class="hero-brand">
 <div>
 <div class="hero-brand-title">가이드</div>
-<div class="hero-brand-sub">웨이보 사용법 · 추천 계정 · 용어 정리</div>
 </div>
 </div>
 <div class="hero-icons">
@@ -386,7 +387,7 @@ color: var(--gray-muted);
 
 </div>
 
-<footer class="site-footer">© VAz &nbsp;·&nbsp; 팬 제작 아카이브</footer>
+<footer class="site-footer">© VAz</footer>
 
 <script src="data-schedule.js"></script>
 <script src="data-notice.js"></script>
