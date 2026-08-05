@@ -69,12 +69,12 @@ align-items: center; justify-content: center; flex-shrink: 0;
 
 .side-drawer-overlay {
 position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
-transition: opacity 0.25s ease; z-index: 600;
+transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 600;
 }
 .side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
 .side-drawer {
-position: fixed; top: 0; right: 0; height: 100%; width: min(300px, 78vw); background: var(--white); border-left: 1px solid var(--border);
-transform: translateX(100%); transition: transform 0.3s ease; z-index: 601;
+position: fixed; top: 0; right: 0; height: auto; max-height: calc(100vh - 32px); overflow-y: auto; width: min(300px, 78vw); background: var(--white); border-left: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: 0 0 0 10px; box-shadow: 0 12px 32px rgba(26,18,22,0.14);
+transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 601;
 display: flex; flex-direction: column; padding: 20px 0 0;
 }
 .side-drawer.open { transform: translateX(0); }
@@ -84,7 +84,7 @@ border: none; color: var(--black); font-size: 18px; cursor: pointer;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .side-drawer-close:hover { color: var(--pink); }
-.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 4px; margin: 0 12px 24px 0; }
+.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 12px 24px 0; }
 .theme-toggle-btn { width: 32px; height: 32px; background: none; border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; color: var(--black); flex-shrink: 0; }
 .theme-toggle-btn:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
@@ -271,17 +271,17 @@ color: var(--gray-muted);
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
 <div class="side-drawer-top">
-<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon">🌙</span></button>
+<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon" style="display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 </div>
 <div class="side-drawer-index">
 <a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
 <a class="side-drawer-item" href="profile.html"><span class="idx">02</span>PROFILE</a>
-<a class="side-drawer-item current" href="guide.html"><span class="idx">03</span>가이드</a>
+<a class="side-drawer-item current" href="guide.html"><span class="idx">03</span>GUIDE</a>
 <a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
-<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
-<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
-<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>트위터</a>
+<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>BLOG</a>
+<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>YOUTUBE</a>
+<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>TWITTER</a>
 </div>
 </nav>
 <!-- NOTICE MODAL -->
@@ -358,12 +358,12 @@ color: var(--gray-muted);
 <div class="feed-title">추천 계정</div>
 </div>
 <div class="guide-section-desc">단죽 전용 웨이보 계정 모음</div>
-<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/6782683822" target="_blank" rel="noopener">周翊然官方粉丝后援会</a><div class="acct-note">공식 팬대표 계정<br><br>익연이와 관련된 공지사항들을 해당 계정에서 알림 받을 수 있음, 소속사와 팬들 사이의 중간 다리 역할, 소속사가 팬들에게 알려야할 공지사항 등을 후원회 관리자를 통해 전달합니다.</div></div>
-<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/6729854319" target="_blank" rel="noopener">翊支传声筒</a><div class="acct-note">온라인·오프라인 스케줄 공지 계정</div></div>
+<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/6782683822" target="_blank" rel="noopener">周翊然官方粉丝后援会</a><div class="acct-note">공식 팬대표 계정<br><br>익연이와 관련된 다양한 공지사항을 해당 계정에서 알림 받을 수 있습니다.</div></div>
 <div class="acct-row"><a class="acct-name" href="https://weibo.com/7486647018/5276828233108769" target="_blank" rel="noopener">홈마</a><div class="acct-note">웨이보 팬이 정리해준 홈마 리스트</div></div>
+<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/6729854319" target="_blank" rel="noopener">翊支传声筒</a><div class="acct-note">온라인·오프라인 스케줄 공지 계정</div></div>
 <div class="acct-row"><a class="acct-name" href="https://weibo.com/u/2007897745" target="_blank" rel="noopener">周翊然1122发电站(数据组)</a><div class="acct-note">데이터 집계팀<br><br>중국 내 댓글/글 화력 관리하고 독려하는 계정</div></div>
 <div class="acct-row"><a class="acct-name" href="https://weibo.com/u/7864554172" target="_blank" rel="noopener">周翊然1122翊行录(网宣组)</a><div class="acct-note">온라인 홍보팀<br><br>익연이와 관련된 공식 콘텐츠 업로드 시 공유 해주는 계정</div></div>
-<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/2761705210" target="_blank" rel="noopener">周翊然1122补给站(周边组)</a><div class="acct-note">굿즈 제작·배포팀<br><br>해당 계정에서 제작하는 굿즈들은 제작비 제외 전부 익연이 활동 응원에 사용 됩니다<br>ex.운포장,대관,크랭크인/샤칭 행사 등</div></div>
+<div class="acct-row"><a class="acct-name" href="https://weibo.com/u/2761705210" target="_blank" rel="noopener">周翊然1122补给站(周边组)</a><div class="acct-note">굿즈 제작·배포팀<br><br>해당 계정에서 제작하는 굿즈 및 공구 등은 제작비 제외 전부 익연이 활동 응원에 사용 됩니다.<br>ex.운포장,대관,크랭크인/샤칭 행사 등</div></div>
 <div class="acct-row"><a class="acct-name" href="https://weibo.com/u/7893814856" target="_blank" rel="noopener">Zzzzy_LOOK(同款博)</a><div class="acct-note">옷 정보 계정</div></div>
 </div>
 
@@ -372,13 +372,13 @@ color: var(--gray-muted);
 <div class="feed-title">활동 모음집</div>
 </div>
 <div class="guide-section-desc">입덕 후 보면 좋은 자료 모음</div>
-<div class="material-row"><span class="material-label">🎞️ 영상 작품 모음</span><span class="material-links"><a href="http://t.cn/AXqQUsQe" target="_blank" rel="noopener">함께한 모든 순간</a></span></div>
-<div class="material-row"><span class="material-label">📷 활동 모음</span><span class="material-links"><a href="http://t.cn/A6Jif3rD" target="_blank" rel="noopener">2019-2023</a><a href="http://t.cn/A63EdXhE" target="_blank" rel="noopener">2024</a><a href="http://t.cn/AXVfWNrp" target="_blank" rel="noopener">2025</a></span></div>
-<div class="material-row"><span class="material-label">🥁 무대 모음</span><span class="material-links"><a href="http://t.cn/A6Jxa9uo" target="_blank" rel="noopener">2020-2025 무대·커버 모음</a></span></div>
+<div class="material-row"><span class="material-label">🎞️ 크랭크인/샤칭 모음</span><span class="material-links"><a href="http://t.cn/AXqQUsQe" target="_blank" rel="noopener">↗</a></span></div>
+<div class="material-row"><span class="material-label">📷 활동 모음</span><span class="material-links"><a href="http://t.cn/A6Jif3rD" target="_blank" rel="noopener">2019-2023 ↗</a><a href="http://t.cn/A63EdXhE" target="_blank" rel="noopener">2024 ↗</a><a href="http://t.cn/AXVfWNrp" target="_blank" rel="noopener">2025 ↗</a></span></div>
+<div class="material-row"><span class="material-label">🥁 무대 모음</span><span class="material-links"><a href="http://t.cn/A6Jxa9uo" target="_blank" rel="noopener">2020-2025 무대·커버 모음 ↗</a></span></div>
 <div class="material-row"><span class="material-label">📱 라이브 방송 모음</span><span class="material-links"><a href="http://t.cn/A6JqMuPm" target="_blank" rel="noopener">↗</a></span></div>
 <div class="material-row"><span class="material-label">📮 22년 이전 인터뷰 모음</span><span class="material-links"><a href="http://t.cn/A6JYCqDk" target="_blank" rel="noopener">↗</a></span></div>
 <div class="material-row"><span class="material-label">📚 전체 잡지 모음 (내부 수록 잡지 + 표지)</span><span class="material-links"><a href="http://t.cn/A6is6yCU" target="_blank" rel="noopener">↗</a></span></div>
-<div class="material-row"><span class="material-label">🏎️ 레이싱(취미) 모음</span><span class="material-links"><a href="http://t.cn/AXzVgFIL" target="_blank" rel="noopener">↗</a></span></div>
+<div class="material-row"><span class="material-label">🏎️ 레이싱 모음</span><span class="material-links"><a href="http://t.cn/AXzVgFIL" target="_blank" rel="noopener">↗</a></span></div>
 </div>
 
 </div>
@@ -401,7 +401,11 @@ updateThemeIcon();
 }
 function updateThemeIcon() {
 const el = document.getElementById('themeToggleIcon');
-if (el) el.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+if (!el) return;
+const isDark = document.documentElement.classList.contains('dark');
+el.innerHTML = isDark
+? '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="2.5" x2="12" y2="5"></line><line x1="12" y1="19" x2="12" y2="21.5"></line><line x1="4.2" y1="4.2" x2="6" y2="6"></line><line x1="18" y1="18" x2="19.8" y2="19.8"></line><line x1="2.5" y1="12" x2="5" y2="12"></line><line x1="19" y1="12" x2="21.5" y2="12"></line><line x1="4.2" y1="19.8" x2="6" y2="18"></line><line x1="18" y1="6" x2="19.8" y2="4.2"></line></svg>'
+: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
 }
 updateThemeIcon();
 // 공지 내용은 data-notice.js 파일 하나만 수정하면 이 페이지를 포함한 모든 페이지에 반영됩니다.

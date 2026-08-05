@@ -56,7 +56,7 @@ position: relative;
 .hero-brand-title { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: var(--black); line-height: 1.2; }
 .hero-brand-sub { font-size: 11px; color: var(--gray-muted); line-height: 1.3; margin-top: 1px; }
 .hero-icons { display: flex; align-items: center; gap: 18px; position: relative; z-index: 1; }
-.hero-stripe { max-width: 860px; margin: 16px auto 20px; height: 4px; background: var(--pink); position: relative; z-index: 1; }
+.hero-stripe { max-width: 860px; margin: 16px auto 10px; height: 4px; background: var(--pink); position: relative; z-index: 1; }
 .hero-nav,
 .archive-wordmark,
 .archive-subtitle {
@@ -116,7 +116,7 @@ inset: 0;
 background: rgba(26,18,22,0.6);
 opacity: 0;
 pointer-events: none;
-transition: opacity 0.25s ease;
+transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 z-index: 600;
 }
 .side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
@@ -124,12 +124,17 @@ z-index: 600;
 position: fixed;
 top: 0;
 right: 0;
-height: 100%;
+height: auto;
+max-height: calc(100vh - 32px);
+overflow-y: auto;
 width: min(300px, 78vw);
 background: var(--white);
 border-left: 1px solid var(--border);
+border-bottom: 1px solid var(--border);
+border-radius: 0 0 0 10px;
+box-shadow: 0 12px 32px rgba(26,18,22,0.14);
 transform: translateX(100%);
-transition: transform 0.3s ease;
+transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 z-index: 601;
 display: flex;
 flex-direction: column;
@@ -152,7 +157,7 @@ justify-content: center;
 flex-shrink: 0;
 }
 .side-drawer-close:hover { color: var(--pink); }
-.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 4px; margin: 0 12px 24px 0; }
+.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 12px 24px 0; }
 .theme-toggle-btn { width: 32px; height: 32px; background: none; border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; color: var(--black); flex-shrink: 0; }
 .theme-toggle-btn:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
@@ -236,7 +241,7 @@ padding: 0 20px;
 display: flex;
 align-items: baseline;
 justify-content: space-between;
-padding: 18px 0 4px;
+padding: 8px 0 4px;
 }
 .feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
 #feed-title { font-size: 19px; font-weight: 800; color: var(--pink); }
@@ -540,7 +545,7 @@ color: var(--gray-muted);
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
 <div class="side-drawer-top">
-<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon">🌙</span></button>
+<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon" style="display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 </div>
 <div class="side-drawer-index">
@@ -548,15 +553,15 @@ color: var(--gray-muted);
 <span class="idx">01</span>ARCHIVE<span class="side-drawer-caret">⌄</span>
 </button>
 <div class="side-drawer-submenu open" id="archiveSubmenu">
-<a class="side-drawer-subitem" href="archive.html">초화</a>
-<a class="side-drawer-subitem current" href="douyin.html">도우인</a>
+<a class="side-drawer-subitem" href="archive.html">WEIBO</a>
+<a class="side-drawer-subitem current" href="douyin.html">DOUYIN</a>
 </div>
 <a class="side-drawer-item" href="profile.html"><span class="idx">02</span>PROFILE</a>
-<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>가이드</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>GUIDE</a>
 <a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
-<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
-<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
-<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>트위터</a>
+<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>BLOG</a>
+<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>YOUTUBE</a>
+<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>TWITTER</a>
 </div>
 </nav>
 <!-- NOTICE MODAL -->
@@ -649,7 +654,11 @@ updateThemeIcon();
 }
 function updateThemeIcon() {
 const el = document.getElementById('themeToggleIcon');
-if (el) el.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+if (!el) return;
+const isDark = document.documentElement.classList.contains('dark');
+el.innerHTML = isDark
+? '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="2.5" x2="12" y2="5"></line><line x1="12" y1="19" x2="12" y2="21.5"></line><line x1="4.2" y1="4.2" x2="6" y2="6"></line><line x1="18" y1="18" x2="19.8" y2="19.8"></line><line x1="2.5" y1="12" x2="5" y2="12"></line><line x1="19" y1="12" x2="21.5" y2="12"></line><line x1="4.2" y1="19.8" x2="6" y2="18"></line><line x1="18" y1="6" x2="19.8" y2="4.2"></line></svg>'
+: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
 }
 updateThemeIcon();
 // 공지 내용은 data-notice.js 파일 하나만 수정하면 이 페이지를 포함한 모든 페이지에 반영됩니다.

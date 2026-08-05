@@ -69,12 +69,12 @@ align-items: center; justify-content: center; flex-shrink: 0;
 .notice-dot.show { display: block; }
 .side-drawer-overlay {
 position: fixed; inset: 0; background: rgba(26,18,22,0.6); opacity: 0; pointer-events: none;
-transition: opacity 0.25s ease; z-index: 600;
+transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 600;
 }
 .side-drawer-overlay.open { opacity: 1; pointer-events: auto; }
 .side-drawer {
-position: fixed; top: 0; right: 0; height: 100%; width: min(300px, 78vw); background: var(--white); border-left: 1px solid var(--border);
-transform: translateX(100%); transition: transform 0.3s ease; z-index: 601;
+position: fixed; top: 0; right: 0; height: auto; max-height: calc(100vh - 32px); overflow-y: auto; width: min(300px, 78vw); background: var(--white); border-left: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: 0 0 0 10px; box-shadow: 0 12px 32px rgba(26,18,22,0.14);
+transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 601;
 display: flex; flex-direction: column; padding: 20px 0 0;
 }
 .side-drawer.open { transform: translateX(0); }
@@ -84,7 +84,7 @@ border: none; color: var(--black); font-size: 18px; cursor: pointer;
 display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .side-drawer-close:hover { color: var(--pink); }
-.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 4px; margin: 0 12px 24px 0; }
+.side-drawer-top { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: 0 12px 24px 0; }
 .theme-toggle-btn { width: 32px; height: 32px; background: none; border: none; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; color: var(--black); flex-shrink: 0; }
 .theme-toggle-btn:hover { color: var(--pink); }
 .side-drawer-index { display: flex; flex-direction: column; }
@@ -329,17 +329,17 @@ color: var(--gray-muted);
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
 <div class="side-drawer-top">
-<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon">🌙</span></button>
+<button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleDarkMode()" aria-label="다크 모드 전환" type="button"><span id="themeToggleIcon" style="display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
 <button class="side-drawer-close" onclick="toggleMobileMenu()" aria-label="닫기">✕</button>
 </div>
 <div class="side-drawer-index">
 <a class="side-drawer-item" href="archive.html"><span class="idx">01</span>ARCHIVE</a>
 <a class="side-drawer-item current" href="profile.html"><span class="idx">02</span>PROFILE</a>
-<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>가이드</a>
+<a class="side-drawer-item" href="guide.html"><span class="idx">03</span>GUIDE</a>
 <a class="side-drawer-item" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener"><span class="idx">04</span>SpinSpin</a>
-<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>블로그</a>
-<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>유튜브</a>
-<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>트위터</a>
+<a class="side-drawer-item" href="https://blog.naver.com/vazseyo" target="_blank" rel="noopener"><span class="idx">05</span>BLOG</a>
+<a class="side-drawer-item" href="https://www.youtube.com/@vazseyo" target="_blank" rel="noopener"><span class="idx">06</span>YOUTUBE</a>
+<a class="side-drawer-item" href="https://x.com/vazseyo" target="_blank" rel="noopener"><span class="idx">07</span>TWITTER</a>
 </div>
 </nav>
 <!-- NOTICE MODAL -->
@@ -377,7 +377,7 @@ color: var(--gray-muted);
 <div class="hero-nav">
 <div class="hero-brand">
 <div>
-<div class="hero-brand-title">프로필</div>
+<div class="hero-brand-title">PROFILE</div>
 </div>
 </div>
 <div class="hero-icons">
@@ -480,7 +480,7 @@ color: var(--gray-muted);
 </section>
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
-<div class="role-legend"><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업<br>*브랜드 내 대언인 등급이 없는 경우 대사가 제일 높은 등급 &lt;</div>
+<div class="role-legend"><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업<br>*브랜드 내 대언인 등급이 없는 경우 대사가 제일 높은 등급</div>
 <div class="subsection-label">지난 활동</div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
@@ -587,7 +587,11 @@ updateThemeIcon();
 }
 function updateThemeIcon() {
 const el = document.getElementById('themeToggleIcon');
-if (el) el.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+if (!el) return;
+const isDark = document.documentElement.classList.contains('dark');
+el.innerHTML = isDark
+? '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="2.5" x2="12" y2="5"></line><line x1="12" y1="19" x2="12" y2="21.5"></line><line x1="4.2" y1="4.2" x2="6" y2="6"></line><line x1="18" y1="18" x2="19.8" y2="19.8"></line><line x1="2.5" y1="12" x2="5" y2="12"></line><line x1="19" y1="12" x2="21.5" y2="12"></line><line x1="4.2" y1="19.8" x2="6" y2="18"></line><line x1="18" y1="6" x2="19.8" y2="4.2"></line></svg>'
+: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#1a1216" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
 }
 updateThemeIcon();
 // 공지 내용은 data-notice.js 파일 하나만 수정하면 이 페이지를 포함한 모든 페이지에 반영됩니다.
