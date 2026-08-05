@@ -82,6 +82,7 @@ cursor: pointer;
 align-items: center;
 justify-content: center;
 flex-shrink: 0;
+color: var(--black);
 }
 .hamburger-btn {
 flex-direction: column;
@@ -96,7 +97,7 @@ transition: transform 0.2s ease, opacity 0.2s ease;
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 .calendar-btn svg { width: 18px; height: 18px; }
-.notice-btn { position: relative; display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; }
+.notice-btn { position: relative; display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; color: var(--black); }
 .notice-btn svg { width: 18px; height: 18px; }
 .notice-dot { position: absolute; top: 4px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--pink); display: none; }
 .notice-dot.show { display: block; }
