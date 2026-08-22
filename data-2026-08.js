@@ -243,8 +243,8 @@ const posts_202608 = [
         translatedText: "태국어 한마디만 해줘",
         images: [],
         actorReply: {
-          originalText: "[微笑]",
-          translatedText: "[微笑]"
+          originalText: "🙂",
+          translatedText: "🙂"
         }
       },
       {
