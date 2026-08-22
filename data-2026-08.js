@@ -5,7 +5,7 @@ const posts_202608 = [
     weiboUrl: "https://weibo.com/5994946077/5334793661450171",
     authorName: "周翊然Tz",
     originalText: "hi啊",
-    translatedText: "",
+    translatedText: "hi啊",
     images: [],
     comments: [
       {
