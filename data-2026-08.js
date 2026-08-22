@@ -42,7 +42,7 @@ const posts_202608 = [
         id: 26080104,
         username: "叛逆烤红薯-",
         originalText: "哥哥你看法拉利骑鬼火带茅台上街买奶茶了",
-        translatedText: "오빠 이거 봐 페라리가 오토바이에 마오타이 싣고 밀크티 사러 마실 나왔어",
+        translatedText: "오빠 이거 봐 페라리가 오토바이에 마오타이 태우고 밀크티 사러 나왔엉",
         images: ["images/2608-meme-1.jpg"],
         actorReply: {
           originalText: "怎么不戴头盔",
