@@ -32,7 +32,7 @@ const posts_202608 = [
         username: "小狗蔓越莓",
         originalText: "哥哥来和我一起夜钓",
         translatedText: "오빠 나랑 같이 밤낚시 가자",
-        images: [],
+        images: ["images/2608-night-fishing.jpg"],
         actorReply: {
           originalText: "hhhhhhhhhhh",
           translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
@@ -243,8 +243,8 @@ const posts_202608 = [
         translatedText: "태국어 한마디만 해줘",
         images: [],
         actorReply: {
-          originalText: "🙂",
-          translatedText: "🙂"
+          originalText: "[微笑]",
+          translatedText: "[微笑]"
         }
       },
       {
@@ -284,7 +284,7 @@ const posts_202608 = [
         id: 26080126,
         username: "纸飞飞er_",
         originalText: "我画的",
-        translatedText: "내가 그린 거다",
+        translatedText: "내가 그린 거야",
         images: ["images/2608-drawing-3.jpg"],
         actorReply: {
           originalText: "很羡慕你们这些会画画的人",
