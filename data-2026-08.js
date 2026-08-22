@@ -150,7 +150,7 @@ const posts_202608 = [
         username: "猫咪唱片__",
         originalText: "我第一次用相机你快夸夸我",
         translatedText: "나 카메라 처음 써보는데 빨리 칭찬해줘",
-        images: [],
+        images: ["images/2608-camera-first.jpg"],
         actorReply: {
           originalText: "你超级棒 你超级厉害 你超级可爱 你超级美丽",
           translatedText: "너 완전 짱이야 완전 대단해 완전 귀여워 완전 예뻐"
@@ -161,7 +161,7 @@ const posts_202608 = [
         username: "翊起追光到然处",
         originalText: "哥哥谁教你这么卖萌的",
         translatedText: "오빠 누가 이렇게 애교 부리는 거 가르쳐줬어",
-        images: [],
+        images: ["images/2608-aegyo.jpg"],
         actorReply: {
           originalText: "这不好玩吗",
           translatedText: "이거 재밌지 않아?"
@@ -205,7 +205,7 @@ const posts_202608 = [
         username: "只吃两碗饭-",
         originalText: "今天当寿星 把我的生日愿望分你一个 许个愿吧！",
         translatedText: "오늘 내가 생일 주인공인데 내 생일 소원 하나 너한테 나눠줄게 소원 빌어!",
-        images: [],
+        images: ["images/2608-birthday-wish.jpg"],
         actorReply: {
           originalText: "那希望你的愿望都能实现",
           translatedText: "그럼 네 소원들 다 이뤄지길 바랄게"
@@ -216,7 +216,7 @@ const posts_202608 = [
         username: "1amThur_",
         originalText: "三年从未被翻过💔",
         translatedText: "3년째 한 번도 답장 못 받아봄💔",
-        images: [],
+        images: ["images/2608-three-years.jpg"],
         actorReply: {
           originalText: "那现在再重新计时！",
           translatedText: "그럼 지금부터 다시 카운트!"
