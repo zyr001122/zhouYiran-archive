@@ -332,6 +332,10 @@ color: var(--gray-muted);
 .notice-close:hover { color: var(--black); }
 .notice-dont-show { display: block; width: 100%; margin-top: 18px; padding-top: 14px; border: none; border-top: 1px solid var(--border); background: none; font-size: 11.5px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
 .notice-dont-show:hover { color: var(--pink); }
+.link-confirm-go { display: block; width: 100%; margin-top: 18px; padding: 11px 0; border: none; background: var(--pink); color: var(--white); font-size: 12.5px; font-weight: 700; text-align: center; cursor: pointer; font-family: inherit; letter-spacing: 0.02em; }
+.link-confirm-go:hover { opacity: 0.9; }
+.link-confirm-skip { display: block; width: 100%; margin-top: 10px; padding-top: 10px; border: none; background: none; font-size: 11px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
+.link-confirm-skip:hover { color: var(--pink); }
 </style>
 </head>
 <body>
@@ -363,6 +367,16 @@ color: var(--gray-muted);
 <div class="notice-modal-title">Notice !</div>
 <div class="notice-modal-date" id="noticeModalDate"></div>
 <div class="notice-modal-body" id="noticeModalBody"></div>
+</div>
+</div>
+<!-- LINK CONFIRM MODAL (보러가기 링크 클릭 시) -->
+<div class="notice-overlay" id="linkConfirmOverlay" onclick="if(event.target===this) closeLinkConfirm()">
+<div class="notice-modal">
+<button class="notice-close" onclick="closeLinkConfirm()" aria-label="닫기">✕</button>
+<div class="notice-modal-title" id="linkConfirmTitle">Notice !</div>
+<div class="notice-modal-body" id="linkConfirmBody"></div>
+<button class="link-confirm-go" onclick="goLinkConfirm()">이동하기 ↗</button>
+<button class="link-confirm-skip" onclick="goLinkConfirmDontShowToday()">오늘 하루 그만보기</button>
 </div>
 </div>
 <div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
@@ -478,10 +492,10 @@ color: var(--gray-muted);
 </section>
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">오십공리도화오5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener">보러가기 ↗</a></div><div class="act-subtitle-line">五十公里桃花坞5</div></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">분포파14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener">보러가기 ↗</a></div><div class="act-subtitle-line">奔跑吧14</div></div></div>
-<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail"><div class="act-title-line"><span class="act-title">불상수적성기오</span><span style="color:var(--gray-muted);font-size:11px;">(방영 예정)</span></div><div class="act-subtitle-line">不想睡的星期五</div></div></div>
+<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">오십공리도화오5</span><a class="mag-link" href="https://youtu.be/Jt8x_DczWOQ?si=O4ZBZ4JJLvsxY1W7" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">五十公里桃花坞5</div></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
+<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">분포파14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">奔跑吧14</div></div></div>
+<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail"><div class="act-title-line"><span class="act-title">불상수적성기오</span><a class="mag-link" href="https://youtube.com/playlist?list=PLWG8TH-d01rc&si=4SFcaRvOjgMVTvuP" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">不想睡的星期五</div></div></div>
 </section>
 <section class="wiki-section year-colored" id="music">
 <div class="wiki-section-title"><span class="num">04</span>음반</div>
@@ -588,6 +602,7 @@ color: var(--gray-muted);
 <footer class="site-footer">© VAz</footer>
 <script src="data-schedule.js"></script>
 <script src="data-notice.js"></script>
+<script src="data-link-notice.js"></script>
 <script>
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
@@ -642,6 +657,39 @@ openNotice();
 document.getElementById('noticeDot').classList.remove('show');
 }
 })();
+// "보러가기" 링크 확인 팝업 — 내용은 data-link-notice.js 파일 하나만 수정하면 반영됩니다.
+// "오늘 하루 그만보기"를 누르면 그 날은 팝업 없이 바로 이동합니다.
+let pendingGuideLinkUrl = '';
+function handleGuideLink(e, url) {
+try {
+if (localStorage.getItem('linkNoticeDontShow') === new Date().toDateString()) {
+return true; // 오늘 이미 "그만보기"를 눌렀으면 팝업 없이 바로 이동
+}
+} catch(err) {}
+if (typeof LINK_NOTICE_DATA === 'undefined') {
+return true; // 데이터 파일이 없으면 팝업 없이 바로 이동
+}
+e.preventDefault();
+pendingGuideLinkUrl = url;
+document.getElementById('linkConfirmTitle').textContent = LINK_NOTICE_DATA.title;
+document.getElementById('linkConfirmBody').innerHTML = LINK_NOTICE_DATA.body;
+document.getElementById('linkConfirmOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+return false;
+}
+function closeLinkConfirm() {
+document.getElementById('linkConfirmOverlay').classList.remove('open');
+document.body.style.overflow = '';
+pendingGuideLinkUrl = '';
+}
+function goLinkConfirm() {
+if (pendingGuideLinkUrl) window.open(pendingGuideLinkUrl, '_blank', 'noopener');
+closeLinkConfirm();
+}
+function goLinkConfirmDontShowToday() {
+try { localStorage.setItem('linkNoticeDontShow', new Date().toDateString()); } catch(err) {}
+goLinkConfirm();
+}
 document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
