@@ -101,7 +101,7 @@ const posts_202608 = [
         images: ["images/2608-cat-1.jpg"],
         actorReply: {
           originalText: "你好 外国猫",
-          translatedText: "안녕 외국 고양이"
+          translatedText: "안녕 교포 고양이"
         }
       },
       {
