@@ -12,7 +12,7 @@ const posts_202608 = [
         id: 26080101,
         username: "周翊然Tz",
         originalText: "有人吗",
-        translatedText: "누구 있어요?",
+        translatedText: "누구 있나요?",
         images: [],
         actorReply: null
       },
@@ -42,8 +42,7 @@ const posts_202608 = [
         id: 26080104,
         username: "养了翊只卷毛狗",
         originalText: "笑死我了哈哈哈哈哈要上火星了吗龙少～",
-        translatedText: "진짜 개웃겨 ㅋㅋㅋㅋㅋ 화성 가는 거야～",
-        images: [],
+        translatedText: "진짜 미치겠다ㅋㅋㅋㅋㅋ 화성으로 가보는 거야～",
         actorReply: {
           originalText: "🙂",
           translatedText: "🙂"
@@ -178,7 +177,7 @@ const posts_202608 = [
         images: [],
         actorReply: {
           originalText: "那你预感很准啊",
-          translatedText: "이러면 너 예감 되게 정확한 게 되는 거네"
+          translatedText: "이러면 너 예감이 되게 정확한 거네"
         }
       },
       {
