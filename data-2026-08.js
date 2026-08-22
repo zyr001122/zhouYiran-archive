@@ -12,7 +12,7 @@ const posts_202608 = [
         id: 26080101,
         username: "周翊然Tz",
         originalText: "有人吗",
-        translatedText: "누구 있나?",
+        translatedText: "누구 있어요?",
         images: [],
         actorReply: null
       },
