@@ -68,14 +68,14 @@ const posts_202608 = [
         images: [],
         actorReply: {
           originalText: "……",
-          translatedText: ""
+          translatedText: "……"
         }
       },
       {
         id: 26080107,
         username: "你要开心ooo",
         originalText: "敢不敢挑战这个🫠",
-        translatedText: "이거 도전해 볼 배짱 있어?",
+        translatedText: "이거 도전해 볼 자신 있어?",
         images: ["images/2608-spicy-food.jpg"],
         actorReply: {
           originalText: "辣的我真吃不了一点了",
