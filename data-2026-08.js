@@ -123,7 +123,7 @@ const posts_202608 = [
         images: ["images/2608-question-1.jpg"],
         actorReply: {
           originalText: "还不错",
-          translatedText: "나름 괜찮네"
+          translatedText: "좋은데"
         }
       },
       {
@@ -189,7 +189,7 @@ const posts_202608 = [
         images: ["images/2608-film-photo.jpg"],
         actorReply: {
           originalText: "不错啊 这个色调很好",
-          translatedText: "괜찮은데? 이거 색감 좋다"
+          translatedText: "좋은데 이거 색감 좋다"
         }
       },
       {
