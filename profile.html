@@ -37,6 +37,7 @@
 :root.dark .infobox-photo { background: #241b22; }
 :root.dark .mag-cover { background: #241b22; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
+button, a { -webkit-tap-highlight-color: transparent; outline: none; }
 body {
 font-family: 'Pretendard', -apple-system, sans-serif;
 background: var(--white);
@@ -162,6 +163,7 @@ font-family: inherit;
 transition: color 0.15s;
 }
 .side-drawer-item:hover { color: var(--pink); }
+.side-drawer-item.current { color: var(--pink); }
 .side-drawer-caret { margin-left: auto; font-size: 11px; color: var(--pink); transition: transform 0.2s ease; }
 .side-drawer-item.toggle.open .side-drawer-caret { transform: rotate(180deg); }
 .side-drawer-external { margin-left: auto; font-size: 11px; color: var(--pink); }
