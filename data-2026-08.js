@@ -42,7 +42,7 @@ const posts_202608 = [
         id: 26080104,
         username: "养了翊只卷毛狗",
         originalText: "笑死我了哈哈哈哈哈要上火星了吗龙少～",
-        translatedText: "진짜 미치겠다ㅋㅋㅋㅋㅋ 화성으로 가보는 거야～",
+        translatedText: "진짜 미치겠다ㅋㅋㅋㅋㅋ 화성으로 가보자고～",
         images: ["images/2608-mars.jpg"],
         actorReply: {
           originalText: "🙂",
