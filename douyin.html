@@ -909,7 +909,7 @@ if (target) target.classList.add('selected');
 const dayEvents = scheduleMonthEvents[day] || [];
 const detail = document.getElementById('scheduleDetail');
 if (!dayEvents.length) {
-detail.innerHTML = '<p class="sched-empty">이 날은 일정이 없습니다.</p>';
+detail.innerHTML = '<p class="sched-empty">오늘은 일정이 없습니다.</p>';
 return;
 }
 detail.innerHTML = dayEvents.map(e => `
