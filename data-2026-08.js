@@ -12,7 +12,7 @@ const posts_202608 = [
         id: 26080101,
         username: "周翊然Tz",
         originalText: "有人吗",
-        translatedText: "누구 있나요?",
+        translatedText: "계세요?",
         images: [],
         actorReply: null
       },
@@ -43,6 +43,7 @@ const posts_202608 = [
         username: "养了翊只卷毛狗",
         originalText: "笑死我了哈哈哈哈哈要上火星了吗龙少～",
         translatedText: "진짜 미치겠다ㅋㅋㅋㅋㅋ 화성으로 가보는 거야～",
+        images: ["images/2608-mars.jpg"],
         actorReply: {
           originalText: "🙂",
           translatedText: "🙂"
