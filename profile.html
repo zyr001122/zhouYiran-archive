@@ -678,7 +678,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <div class="act-row-flat">红之HUNGCHI · <span class="act-role spokesperson">청상 대언인</span></div>
 </section>
 <section class="wiki-section" id="magazine">
-<div class="wiki-section-title"><span class="num">06</span>화보</div>
+<div class="wiki-section-title"><span class="num">06</span>화보<span class="subsection-caption"> 표지 클릭 시 내지 사진으로 이동 </span></div>
 <div class="mag-shelf">
 <div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/6758330187/MDs5EvaeZ" target="_blank" rel="noopener"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></a></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
 <div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
@@ -938,7 +938,7 @@ if (target) target.classList.add('selected');
 const dayEvents = scheduleMonthEvents[day] || [];
 const detail = document.getElementById('scheduleDetail');
 if (!dayEvents.length) {
-detail.innerHTML = '<p class="sched-empty">이 날은 일정이 없습니다.</p>';
+detail.innerHTML = '<p class="sched-empty">오늘은 일정이 없습니다.</p>';
 return;
 }
 detail.innerHTML = dayEvents.map(e => `
