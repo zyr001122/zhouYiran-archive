@@ -242,6 +242,12 @@ font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em
 .guide-section:not(:first-child) { border-top: 1px solid var(--border); padding-top: 22px; }
 .guide-section-title { font-size: 13px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
 .guide-section-desc { font-size: 11px; color: var(--gray-muted); margin-bottom: 10px; }
+.tip-block-title { font-weight: 700; color: var(--pink); font-size: 12px; margin: 14px 0 6px; }
+.tip-block-title:first-child { margin-top: 2px; }
+.tip-list { margin: 0 0 4px; padding-left: 16px; }
+.tip-list li { margin-bottom: 5px; line-height: 1.55; }
+.tip-list li:last-child { margin-bottom: 0; }
+.tip-note { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--gray-muted); line-height: 1.6; }
 .acct-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
 .acct-row:last-child { border-bottom: none; }
 .acct-name { font-size: 13px; font-weight: 700; color: var(--pink); text-decoration: none; }
@@ -258,13 +264,16 @@ font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em
 position: fixed;
 inset: 0;
 background: rgba(26,18,22,0.75);
-display: none;
+display: flex;
 align-items: center;
 justify-content: center;
 z-index: 650;
 padding: 20px;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.schedule-overlay.open { display: flex; }
+.schedule-overlay.open { opacity: 1; pointer-events: auto; }
 .schedule-modal {
 background: var(--white);
 border-radius: 4px;
@@ -274,7 +283,11 @@ padding: 20px;
 max-height: 86vh;
 overflow-y: auto;
 position: relative;
+transform: scale(0.96);
+opacity: 0;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
 }
+.schedule-overlay.open .schedule-modal { transform: scale(1); opacity: 1; }
 .schedule-modal-header {
 display: flex;
 align-items: center;
@@ -369,9 +382,10 @@ font-size: 11px;
 color: var(--gray-muted);
 }
 .schedule-legend .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-.notice-overlay { position: fixed; inset: 0; background: rgba(26,18,22,0.75); display: none; align-items: center; justify-content: center; z-index: 650; padding: 20px; }
-.notice-overlay.open { display: flex; }
-.notice-modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 340px; padding: 22px 20px; max-height: 80vh; overflow-y: auto; position: relative; }
+.notice-overlay { position: fixed; inset: 0; background: rgba(26,18,22,0.75); display: flex; align-items: center; justify-content: center; z-index: 650; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.notice-overlay.open { opacity: 1; pointer-events: auto; }
+.notice-modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 340px; padding: 22px 20px; max-height: 80vh; overflow-y: auto; position: relative; transform: scale(0.96); opacity: 0; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease; }
+.notice-overlay.open .notice-modal { transform: scale(1); opacity: 1; }
 .notice-modal-title { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 15px; font-weight: 400; color: var(--black); margin-bottom: 4px; }
 .notice-modal-date { font-size: 11px; color: var(--pink); font-weight: 700; margin-bottom: 14px; }
 .notice-modal-body { font-size: 13px; line-height: 1.75; color: var(--black); white-space: pre-line; }
@@ -508,6 +522,67 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <div class="material-row"><span class="material-label">📮 22년 이전 인터뷰 모음</span><span class="material-links"><a href="http://t.cn/A6JYCqDk" target="_blank" rel="noopener">↗</a></span></div>
 <div class="material-row"><span class="material-label">📚 전체 잡지 모음 (내부 수록 잡지 + 표지)</span><span class="material-links"><a href="http://t.cn/A6is6yCU" target="_blank" rel="noopener">↗</a></span></div>
 <div class="material-row"><span class="material-label">🏎️ 레이싱 활동 모음</span><span class="material-links"><a href="http://t.cn/AXzVgFIL" target="_blank" rel="noopener">↗</a></span></div>
+</div>
+
+<div class="guide-section">
+<div class="feed-header">
+<div class="feed-title">Tip</div>
+</div>
+<div class="guide-section-desc">알아두면 유용한 활용 팁 모음</div>
+<div class="acct-row"><span class="acct-name" style="cursor:default;">워터마크 없이/재생 제한 영상 저장하기</span><div class="acct-note">위챗(WeChat) 미니프로그램에서 <b>去水印</b>이 들어가는 이름의 프로그램을 검색해서 사용하면 됩니다 (여러 개 중 아무거나 사용 가능).<br>웨이보·샤오홍슈·도우인 영상 링크를 넣으면 워터마크 없이, 또는 재생이 막힌 영상도 저장할 수 있습니다.</div></div>
+<div class="acct-row"><span class="acct-name" style="cursor:default;">초화 출석체크</span><div class="acct-note">웨이보의 '슈퍼토픽(超话)'을 줄여서 '초화'라고 부릅니다. 익연이 프로필 → Weibo 탭 → 超话(초화) 진입 후, 오른쪽 위 달력 모양 아이콘을 누르면 출석체크(连签)할 수 있습니다.<br><br>왜 하냐면: 자기만족도 있지만, <b>초화 라이크 80점 달성</b> 및 <b>초화 레벨업</b>에 필요한 점수를 주기 때문입니다. 연속 출석하면 하루에 최대 +8점까지 받을 수 있어요.<br>오프라인 행사(팬미팅, 샤칭 등) 참가 시 보통 <b>초화 레벨 9 이상</b>을 요구하니, 미리미리 출석체크 해두는 게 좋습니다.
+<div class="mag-shelf" style="margin-top:10px;grid-template-columns:repeat(2,1fr);">
+<div class="mag-item"><div class="mag-cover" style="aspect-ratio:auto;"><img src="images/guide-chaohua-checkin-1.jpg" alt="초화 출석체크 위치" loading="lazy"></div></div>
+<div class="mag-item"><div class="mag-cover" style="aspect-ratio:auto;"><img src="images/guide-chaohua-checkin-2.jpg" alt="초화 탭 진입 경로" loading="lazy"></div></div>
+</div>
+</div></div>
+<div class="acct-row"><span class="acct-name" style="cursor:default;">초화 라이크(超话like) 80점 달성하는 방법</span><div class="acct-note">초화 활동으로 하루 <b>80점</b>을 채우면 '초화 라이크'를 얻을 수 있습니다. 오프라인 행사(팬미팅, 샤칭 등) 신청 시 <b>레벨 9 이상 + 초화 라이크 보유 여부</b>를 같이 확인하기 때문에, 두 조건 다 챙겨두는 게 좋습니다.
+
+<div class="tip-block-title">① 원창(原创)</div>
+<ul class="tip-list">
+<li>내가 쓴 글에 댓글 달림: 5명당 +1점, 10명 +2점, 15명 +3점, 20명 +4점, 50명 이상 추가 가점 (하루 최대 10점)</li>
+<li>내 글이 정수(精)로 채택됨: 회당 +1점 (하루 최대 6회)</li>
+<li>초화 글 보기(看帖): 10개 보면 +1점 (하루 최대 4회)</li>
+</ul>
+
+<div class="tip-block-title">② 호동(互动)</div>
+<ul class="tip-list">
+<li>댓글: 회당 +1점, 무반응 글에 첫 댓글이면 +2점 (하루 최대 4회)</li>
+<li>전달(转发/리포스트): 회당 +1점 (하루 최대 2회)</li>
+<li><b>출석체크(签到)</b>: 1일 +4점 / 연속 2~29일 +6점 / 연속 30일 이상 +8점</li>
+</ul>
+
+<div class="tip-block-title">③ 권분(圈粉)</div>
+<ul class="tip-list">
+<li>초화 첫 팔로우: +1점</li>
+<li>친구 초대해서 팔로우시키기: 1명당 +2점 (하루 최대 6명)</li>
+<li>V+서클 초화 유료 동행: 1일당 +1점</li>
+</ul>
+
+<div class="tip-note">경험치 카드가 있으면 위 점수보다 더 많이 붙습니다 (예: 댓글 +1.2~2점, 출석체크 1일 +4.8~8점 등). 매일 출석체크 + 댓글/전달을 꾸준히 하면 80점 채우기가 수월합니다.</div></div></div>
+<div class="acct-row"><span class="acct-name" style="cursor:default;">크랭크인/오프라인 행사 참가 조건 (최근 사례)</span><div class="acct-note">크랭크인(开机) 응원이나 오프라인 행사(팬미팅 등) 참가 조건은 매번 조금씩 다릅니다. 아래는 실제 최근 공지 2건을 참고용으로 정리한 것이며, <b>조건은 행사마다 바뀌니 공지 뜰 때마다 새로 확인</b>해야 합니다.
+
+<div class="tip-block-title">예시 ① 크랭크인 응원 (2026.1.13 헝뎬)</div>
+<ul class="tip-list">
+<li>신청 시간: 짧은 시간대(약 14시간)에만 이메일 접수, 선착순 아닌 조건 심사</li>
+<li>구역별 정원: 图站(포토그래퍼) 5석 / 散粉(일반팬) 50석 / 기본구역 인원 제한 없음</li>
+<li>공통 조건: 익연이 단독 팬(唯粉), 최근 활동 기록 보유, 만 18세 이상</li>
+<li>散粉 조건 예: 초화 레벨 9 이상, 최근 3개월 웨이보 관련 게시물 100개 이상, + 데이터 활동 5개 중 3개 이상 충족 또는 일정 금액 이상 응원 소비 기록</li>
+<li>신청 시 조건에 맞는 화면 녹화(초화 등급, 데이터 기록, 소비 기록 등) 첨부 필수</li>
+<li>일정 금액 이상 응원 참여 시 팬 기념품 증정</li>
+</ul>
+
+<div class="tip-block-title">예시 ② 오프라인 행사 (2026.7.11 충칭, 花间颂)</div>
+<ul class="tip-list">
+<li>소수 정예 모집: 图站 2석 / 散粉 3석</li>
+<li>신청 시간: 단 2시간, <b>선착순 마감</b></li>
+<li>散粉 조건: 초화 레벨 9 이상 + 초화 라이크 보유, 3개월 관련 게시물 100개 이상, 해당 브랜드 상무 기록 또는 연간 누적 상무 실적, 일정 금액 이상 결제(云储存) 기록</li>
+<li>신청 시 웨이보ID·초화등급·초화라이크·팔로우 여부·상무 기록 화면을 한 번에 이어서 녹화해 제출</li>
+<li>명의 양도·거래 금지 (적발 시 이후 모든 행사 참가 자격 영구 박탈)</li>
+<li>참가비 없음 (교통·숙박 등 개인 비용은 본인 부담)</li>
+</ul>
+
+<div class="tip-note"><b>공통 팁</b> · 공지는 웨이보 초화 및 팬클럽 계정(위 '추천 계정' 참고)에서 확인하고, 뜨면 바로 빠르게 신청하는 게 중요합니다. 평소 초화 레벨 9 이상 + 초화 라이크를 유지해두면 신청 가능한 행사가 훨씬 많아지고, 요구하는 인증 화면 녹화 방식을 미리 파악해두면 당황하지 않습니다.</div></div></div>
 </div>
 
 </div>

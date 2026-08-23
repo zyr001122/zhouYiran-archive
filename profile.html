@@ -318,13 +318,16 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 position: fixed;
 inset: 0;
 background: rgba(26,18,22,0.75);
-display: none;
+display: flex;
 align-items: center;
 justify-content: center;
 z-index: 650;
 padding: 20px;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.schedule-overlay.open { display: flex; }
+.schedule-overlay.open { opacity: 1; pointer-events: auto; }
 .schedule-modal {
 background: var(--white);
 border-radius: 4px;
@@ -334,7 +337,11 @@ padding: 20px;
 max-height: 86vh;
 overflow-y: auto;
 position: relative;
+transform: scale(0.96);
+opacity: 0;
+transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
 }
+.schedule-overlay.open .schedule-modal { transform: scale(1); opacity: 1; }
 .schedule-modal-header {
 display: flex;
 align-items: center;
@@ -429,9 +436,10 @@ font-size: 11px;
 color: var(--gray-muted);
 }
 .schedule-legend .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-.notice-overlay { position: fixed; inset: 0; background: rgba(26,18,22,0.75); display: none; align-items: center; justify-content: center; z-index: 650; padding: 20px; }
-.notice-overlay.open { display: flex; }
-.notice-modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 340px; padding: 22px 20px; max-height: 80vh; overflow-y: auto; position: relative; }
+.notice-overlay { position: fixed; inset: 0; background: rgba(26,18,22,0.75); display: flex; align-items: center; justify-content: center; z-index: 650; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+.notice-overlay.open { opacity: 1; pointer-events: auto; }
+.notice-modal { background: var(--white); border-radius: 4px; width: 100%; max-width: 340px; padding: 22px 20px; max-height: 80vh; overflow-y: auto; position: relative; transform: scale(0.96); opacity: 0; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease; }
+.notice-overlay.open .notice-modal { transform: scale(1); opacity: 1; }
 .notice-modal-title { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 15px; font-weight: 400; color: var(--black); margin-bottom: 4px; }
 .notice-modal-date { font-size: 11px; color: var(--pink); font-weight: 700; margin-bottom: 14px; }
 .notice-modal-body { font-size: 13px; line-height: 1.75; color: var(--black); white-space: pre-line; }
