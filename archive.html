@@ -109,6 +109,8 @@ transition: transform 0.2s ease, opacity 0.2s ease;
 .notice-btn svg { width: 18px; height: 18px; }
 .notice-dot { position: absolute; top: 4px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--pink); display: none; }
 .notice-dot.show { display: block; }
+.theme-toggle-btn { display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; color: var(--black); transition: color 0.15s; }
+.theme-toggle-btn:hover { color: var(--pink); }
 .archive-subtitle {
 max-width: 860px;
 margin: 0 auto;
@@ -118,7 +120,6 @@ color: rgba(255,255,255,0.6);
 letter-spacing: -0.005em;
 padding: 0 0 14px;
 }
-/* side drawer nav: 클릭하면 오른쪽에서 슬라이드로 튀어나오는 인덱스형 메뉴 */
 /* side drawer nav: 클릭하면 오른쪽에서 화면 전체 높이로 슬라이드되는 메뉴 패널 */
 .side-drawer-overlay {
 position: fixed;
@@ -178,13 +179,13 @@ padding: 6px 22px 22px;
 }
 .side-drawer-label {
 font-family: 'Archivo Black', 'Pretendard', sans-serif;
-font-size: 8.5px;
+font-size: 10.5px;
 letter-spacing: 0.1em;
 color: var(--pink);
 font-weight: 800;
 margin: 0 0 10px;
 }
-.side-drawer-label.links { margin: 22px 0 0; }
+.side-drawer-label.links { margin: 22px 0 10px; }
 .side-drawer-list { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
 .side-drawer-item {
 display: flex;
@@ -194,7 +195,7 @@ padding: 11px 2px;
 border-bottom: 1px solid var(--border);
 text-decoration: none;
 color: var(--black);
-font-size: 8.5px;
+font-size: 10.5px;
 font-weight: 700;
 letter-spacing: -0.01em;
 background: none;
@@ -224,7 +225,7 @@ display: block;
 padding: 9px 0;
 text-decoration: none;
 color: var(--gray-muted);
-font-size: 7.5px;
+font-size: 9.5px;
 font-weight: 500;
 letter-spacing: -0.01em;
 transition: color 0.15s;
