@@ -111,6 +111,10 @@ flex-shrink: 0;
 .side-drawer-top .notice-btn { width: auto; height: auto; }
 .side-drawer-top .calendar-btn svg,
 .side-drawer-top .notice-btn svg { width: 17px; height: 17px; }
+.side-drawer-top button { -webkit-tap-highlight-color: transparent; outline: none; box-shadow: none; -webkit-appearance: none; appearance: none; }
+.side-drawer-top button:focus,
+.side-drawer-top button:active,
+.side-drawer-top button:focus-visible { outline: none; box-shadow: none; background: transparent; }
 .side-drawer-close {
 width: 26px;
 height: 26px;
@@ -156,15 +160,28 @@ font-size: 15.5px;
 font-weight: 700;
 letter-spacing: -0.01em;
 background: none;
+border: none;
+outline: none;
+box-shadow: none;
+-webkit-appearance: none;
+appearance: none;
+-webkit-tap-highlight-color: transparent;
 width: 100%;
 text-align: left;
 cursor: pointer;
 font-family: inherit;
 transition: color 0.15s;
 }
+.side-drawer-item:focus,
+.side-drawer-item:active,
+.side-drawer-item:focus-visible {
+outline: none;
+box-shadow: none;
+border: none;
+}
 .side-drawer-item:hover { color: var(--pink); }
 .side-drawer-item.current { color: var(--pink); }
-.side-drawer-caret { margin-left: auto; font-size: 11px; color: var(--pink); transition: transform 0.2s ease; }
+.side-drawer-caret { margin-left: auto; display: flex; align-items: center; color: var(--pink); transition: transform 0.2s ease; }
 .side-drawer-item.toggle.open .side-drawer-caret { transform: rotate(180deg); }
 .side-drawer-external { margin-left: auto; font-size: 11px; color: var(--pink); }
 .side-drawer-submenu {
@@ -173,12 +190,12 @@ overflow: hidden;
 transition: max-height 0.25s ease;
 display: flex;
 flex-direction: column;
-padding: 2px 0 6px 12px;
+padding: 0 0 0 12px;
 }
 .side-drawer-submenu.open { max-height: 120px; }
 .side-drawer-subitem {
 display: block;
-padding: 8px 0;
+padding: 12px 0;
 text-decoration: none;
 color: var(--gray-muted);
 font-size: 14.5px;
@@ -392,7 +409,7 @@ color: var(--gray-muted);
 <div class="side-drawer-label">MENU</div>
 <div class="side-drawer-list">
 <button class="side-drawer-item toggle" id="archiveMenuToggle" onclick="toggleArchiveSubmenu()" type="button">
-ARCHIVE<span class="side-drawer-caret">⌄</span>
+ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </button>
 <div class="side-drawer-submenu" id="archiveSubmenu">
 <a class="side-drawer-subitem" href="archive.html">WEIBO</a>
