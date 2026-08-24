@@ -540,7 +540,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 </div>
 <div class="acct-row"><span class="acct-name static">워터마크 없이/다운로드 막힌 영상 저장</span><div class="acct-note">위챗 미니프로그램에서 <b>去水印</b> 검색, 아무거나 사용 가능<br>웨이보·샤오홍슈·도우인 영상 링크를 넣으면 워터마크 제거 또는 다운로드가 막힌 영상도 저장할 수 있음</div></div>
 <div class="acct-row"><span class="acct-name static">초화 출석체크</span><div class="acct-note">웨이보의 超话=팬 커뮤니티, '초화'라고 부름. 주익연 웨이보 프로필 → 超话 진입, 오른쪽 위 달력 모양 아이콘(连签)을 누르면 출석체크 가능.<br><br>출석체크 하는 이유: 超Like 달성 및 초화 레벨업에 필요한 점수를 얻을 수 있고, 연속 출석하면 하루 최대 +8점까지 받을 수 있음.<br>오프라인 행사 참가 시 초화 레벨 9 이상, 超Like 필수
-<button type="button" class="tip-img-toggle" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open');">이미지 보기<span class="caret">▾</span></button>
+<button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">이미지 보기<span class="caret">▾</span></button>
 <div class="tip-img-panel">
 <div style="display:flex;gap:8px;">
 <img src="images/guide-chaohua-checkin-2.jpg" alt="초화 탭 진입 경로" loading="lazy" style="width:50%;border-radius:4px;display:block;">  
@@ -573,7 +573,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 
 <div class="tip-note" style="color:var(--black);">웨이보 SVIP 결제 시 출석체크 1회 보충 카드 증정, 초화 경험치 카드 사용 시 위 점수보다 더 많은 점수를 얻을 수 있음<br>관련 링크: <a class="mag-translate-link" style="display:inline;" href="https://huati.weibo.cn/super/integrationnew?ua=iPhone18,2__weibo__16.8.0__iphone__os26.6&from=10G8093010&page_id=1008082db6c58263d4114f1c1a4c6af76be069" target="_blank" rel="noopener">등급/경험치 규칙 ↗</a></div></div></div>
 <div class="acct-row"><span class="acct-name static">超like 점수 및 내 초화 레벨 확인 방법</span><div class="acct-note">초화 메인 페이지 상단의 <b>超LIKE</b> 탭에서 초 라이크 확인 가능.<br>게시글 하단 오른쪽의 <b>LV+숫자</b> 아이콘(예: LV12)을 누르면 내 현재 초화 레벨, 경험치 확인 가능
-<button type="button" class="tip-img-toggle" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open');">이미지 보기<span class="caret">▾</span></button>
+<button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">이미지 보기<span class="caret">▾</span></button>
 <div class="tip-img-panel"><img src="images/guide-chaohua-level-check.jpg" alt="초 라이크 및 초화 레벨 확인 위치" loading="lazy" style="width:100%;border-radius:4px;display:block;"></div>
 </div></div>
 <div class="acct-row"><span class="acct-name static">초화 글쓰기 규칙 (게시판 구분)</span><div class="acct-note">
@@ -590,7 +590,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <div class="acct-row"><span class="acct-name static">크랭크인/오프라인 행사 참가 조건</span><div class="acct-note">드라마 시작/종료 응원이나 오프라인 행사 참가 조건은 매번 다르며, 아래 가장 최근 공지 2건을 참고. 참가 신청 공지는 후원회 계정에 올라옴
 
 <div class="tip-block-title">예시 ① 크랭크인 응원 (2026.1.13 헝디엔)</div>
-<button type="button" class="tip-img-toggle" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open');">전체 보기<span class="caret">▾</span></button>
+<button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">전체 보기<span class="caret">▾</span></button>
 <div class="tip-img-panel"><div style="white-space:pre-line;font-size:11px;line-height:1.7;color:var(--black);background:var(--gray-bg);border-radius:4px;padding:12px;">【주익연 신작 크랭크인 오프라인 응원 인원 모집】(1월 13일 헝디엔- 구체적인 시간은 미정)
 단죽 여러분, 논의를 거쳐 이번 달 신작 크랭크인 오프라인 응원 인원 모집 내용을 아래와 같이 안내합니다 (현장 입장 시 원구 입장권은 개인 부담), 현장에서 함께 익연이를 응원해주실 단죽분들의 많은 신청 바랍니다 —
 
@@ -646,7 +646,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 4. 신청 팬은 만 18세 이상이어야 하며 단독 이동이 가능해야 함 신변·재산 안전에 유의할 것</div></div>
 
 <div class="tip-block-title">예시 ② 오프라인 행사 (2026.7.11 충칭, 花间颂)</div>
-<button type="button" class="tip-img-toggle" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open');">전체 보기<span class="caret">▾</span></button>
+<button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">전체 보기<span class="caret">▾</span></button>
 <div class="tip-img-panel"><div style="white-space:pre-line;font-size:11px;line-height:1.7;color:var(--black);background:var(--gray-bg);border-radius:4px;padding:12px;">【7월 11일（충칭）花间颂 오프라인 활동】 신청
 1️⃣ 图站 2명
 2️⃣ 散粉 3명
@@ -701,6 +701,15 @@ gsap.fromTo(rows, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, stag
 function toggleArchiveSubmenu() {
 document.getElementById('archiveMenuToggle').classList.toggle('open');
 document.getElementById('archiveSubmenu').classList.toggle('open');
+}
+function toggleTipPanel(btn) {
+btn.classList.toggle('active');
+const panel = btn.nextElementSibling;
+const opening = !panel.classList.contains('open');
+panel.classList.toggle('open');
+if (opening && typeof gsap !== 'undefined') {
+gsap.fromTo(panel, { opacity: 0, scale: 0.97, y: -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+}
 }
 function toggleDarkMode() {
 const isDark = document.documentElement.classList.toggle('dark');
