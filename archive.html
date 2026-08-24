@@ -1526,9 +1526,13 @@ ${commentsHtml}
 function toggleComments(id) {
 const el = document.getElementById(`comments-${id}`);
 const btn = document.getElementById(`cmtbtn-${id}`);
+const opening = !el.classList.contains('open');
 el.classList.toggle('open');
-if (el.classList.contains('open')) {
+if (opening) {
 btn.innerHTML = '댓글 접기 &nbsp;↑';
+if (typeof gsap !== 'undefined') {
+gsap.fromTo(el, { opacity: 0, scale: 0.97, y: -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+}
 } else {
 const count = el.querySelectorAll('.comment-item').length;
 btn.innerHTML = `댓글 ${count}개 &nbsp;↓`;
