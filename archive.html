@@ -550,13 +550,6 @@ border-top: 1px dashed var(--border);
 display: none;
 }
 .comments-section.open { display: block; }
-.comments-title {
-font-size: 11px;
-font-weight: 700;
-color: var(--gray-muted);
-letter-spacing: 0.02em;
-margin-bottom: 10px;
-}
 .comment-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
 .comment-item:last-child { border-bottom: none; padding-bottom: 0; }
 .comment-item:first-child { padding-top: 0; }
@@ -1459,7 +1452,7 @@ return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loadi
 }).join('');
 return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
 }
-function renderPost(post, query) {
+function renderPost(post, query, singlePostMonth) {
 const isFan = post.authorAvatar === '🥣';
 const isStudio = post.authorAvatar === '💼';
 const authorName = post.authorName || ACTOR_NICK;
@@ -1491,9 +1484,10 @@ commentsHtml = post.comments && post.comments.length
 ? post.comments.map(renderComment).join('')
 : '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
 }
-// 댓글이 5개 이하면 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여주고,
+// 1순위: 해당 월에 게시물이 1개뿐이면 댓글 개수 상관없이 항상 펼쳐서 보여줌
+// 2순위: 댓글이 5개 이하면 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여주고,
 // 5개 초과(댓글 많은 스레드형)는 기존처럼 펼치기/접기 버튼을 눌러야 보이게 유지
-const forceOpen = commentCount > 0 && commentCount <= 5;
+const forceOpen = commentCount > 0 && (singlePostMonth || commentCount <= 5);
 if (forceOpen) autoOpen = true;
 const footerBtn = forceOpen
 ? ''
@@ -1518,7 +1512,6 @@ ${imagesHtml}${youtubeHtml}
 ${footerBtn}
 </div>
 <div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
-<div class="comments-title">댓글 번역${query && autoOpen ? ` · "${query}" 검색 결과` : ''}</div>
 ${commentsHtml}
 </div>
 </article>`;
@@ -1572,6 +1565,7 @@ function renderFeed() {
 const rawQuery = document.getElementById('searchInput').value.trim();
 const query = rawQuery.toLowerCase();
 const filtered = getFilteredPosts();
+const singlePostMonth = filtered.length === 1;
 document.getElementById('feed-count').textContent = filtered.length + '개';
 const filterBar = document.getElementById('filterBar');
 if (rawQuery) {
@@ -1600,7 +1594,7 @@ const dd = new Date(p.date);
 html += `<div class="day-divider"><span class="day-divider-dot"></span><span class="day-divider-num">${dd.getDate()}</span><span class="day-divider-cap">${MONTH_CAP[dd.getMonth()]} ${dd.getFullYear()}</span></div>`;
 lastDay = dayLabel;
 }
-html += renderPost(p, query);
+html += renderPost(p, query, singlePostMonth);
 });
 document.getElementById('posts-feed').innerHTML = html;
 }
