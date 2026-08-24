@@ -117,7 +117,7 @@ const posts_202606 = [
         images: ["images/2606-same-expression.jpg"],
         actorReply: {
           originalText: "",
-          translatedText: "음하하하하하하하하",
+          translatedText: "哈哈哈哈哈哈",
           audio: "audio/跟你好朋友咋这么同步.MP3",
           audioDuration: 4
         }
@@ -141,7 +141,7 @@ const posts_202606 = [
         images: ["images/2606-cold-drawing.jpg"],
         actorReply: {
           originalText: "",
-          translatedText: "허허허허",
+          translatedText: "ㅎㅎㅎㅎ",
           audio: "audio/为什么我发了一堆话.MP3",
           audioDuration: 3
         }
