@@ -246,7 +246,7 @@ font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em
 .guide-section-desc { font-size: 11px; color: var(--gray-muted); margin-bottom: 10px; }
 .tip-block-title { font-weight: 700; color: var(--pink); font-size: 12px; margin: 14px 0 6px; }
 .tip-block-title:first-child { margin-top: 2px; }
-.tip-list { margin: 0 0 4px; padding-left: 16px; }
+.tip-list { margin: 0 0 4px; padding-left: 0; list-style: none; }
 .tip-list li { margin-bottom: 5px; line-height: 1.55; }
 .tip-list li:last-child { margin-bottom: 0; }
 .tip-note { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--gray-muted); line-height: 1.6; }
@@ -538,6 +538,13 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <div class="feed-header">
 <div class="feed-title">Tip</div>
 </div>
+<div class="acct-row"><span class="acct-name static">정기 업로드 일정</span><div class="acct-note">
+<ul class="tip-list">
+<li><b>스케줄 공지</b>: 매 월 말일 11시, 공작실 웨이보 업로드</li>
+<li><b>초화 소통</b>: 매 월 22일, 시간 랜덤</li>
+<li><b>주간 보고</b>: 매 주 일요일 11시, 공작실 웨이보 업로드</li>
+</ul>
+</div></div>
 <div class="acct-row"><span class="acct-name static">워터마크 없이/다운로드 막힌 영상 저장</span><div class="acct-note">위챗 미니프로그램에서 <b>去水印</b> 검색, 아무거나 사용 가능<br>웨이보·샤오홍슈·도우인 영상 링크를 넣으면 워터마크 제거 또는 다운로드가 막힌 영상도 저장할 수 있음</div></div>
 <div class="acct-row"><span class="acct-name static">초화 출석체크</span><div class="acct-note">웨이보의 超话=팬 커뮤니티, '초화'라고 부름. 주익연 웨이보 프로필 → 超话 진입, 오른쪽 위 달력 모양 아이콘(连签)을 누르면 출석체크 가능.<br><br>출석체크 하는 이유: 超Like 달성 및 초화 레벨업에 필요한 점수를 얻을 수 있고, 연속 출석하면 하루 최대 +8점까지 받을 수 있음.<br>오프라인 행사 참가 시 초화 레벨 9 이상, 超Like 필수
 <button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">이미지 보기<span class="caret">▾</span></button>
