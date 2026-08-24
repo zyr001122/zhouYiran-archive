@@ -849,13 +849,13 @@ renderDebutDday();
 function toggleFootnote(id, event) {
 event.stopPropagation();
 document.querySelectorAll('.footnote-popup.open').forEach(el => {
-if (el.id !== 'fn-' + id) { el.classList.remove('open'); el.style.transform = ''; }
+if (el.id !== 'fn-' + id) { el.classList.remove('open'); if (typeof gsap !== 'undefined') gsap.set(el, { clearProps: 'all' }); else el.style.transform = ''; }
 });
 const target = document.getElementById('fn-' + id);
 if (!target) return;
 const willOpen = !target.classList.contains('open');
 target.classList.toggle('open');
-target.style.transform = '';
+if (typeof gsap !== 'undefined') gsap.set(target, { clearProps: 'all' }); else target.style.transform = '';
 if (willOpen) {
 requestAnimationFrame(() => {
 const rect = target.getBoundingClientRect();
@@ -866,7 +866,11 @@ shift = (window.innerWidth - margin) - rect.right;
 } else if (rect.left < margin) {
 shift = margin - rect.left;
 }
-if (shift !== 0) target.style.transform = `translateX(${shift}px)`;
+if (typeof gsap !== 'undefined') {
+gsap.fromTo(target, { opacity: 0, scale: 0.9, y: -6, x: shift }, { opacity: 1, scale: 1, y: 0, x: shift, duration: 0.25, ease: 'power2.out' });
+} else if (shift !== 0) {
+target.style.transform = `translateX(${shift}px)`;
+}
 });
 }
 }
