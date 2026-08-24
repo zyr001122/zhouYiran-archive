@@ -16,7 +16,6 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="ᴢʜᴏᴜʏɪʀᴀɴ ʜᴏᴍᴇ ✩⡱" />
 <meta name="twitter:image" content="https://zyr-tz.com/og-thumbnail.jpg" />
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Archivo+Black&family=Inter:wght@500;600;800&display=swap" rel="stylesheet" />
@@ -26,10 +25,10 @@
 --pink-pale: #FDEEF1;
 --pink-dim: #f7b3c4;
 --tab-inactive: #322b31;
+--studio: #2E6B63;
+--studio-pale: #EAF3F1;
 --black: #1a1216;
 --gray-muted: #c4c4c4;
---gold: #C99A3B;
---teal: #2E6B63;
 --gray-bg: #f4f4f4;
 --border: #ececec;
 --white: #ffffff;
@@ -54,22 +53,64 @@ color: var(--black);
 letter-spacing: -0.01em;
 -webkit-font-smoothing: antialiased;
 }
-.hero-band { background: var(--white); padding: 20px 20px 0; position: relative; }
-.hero-nav, .hero-brand, .hero-icons { position: relative; z-index: 1; }
-.hero-brand { display: flex; align-items: center; gap: 10px; }
+.zh { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; letter-spacing: 0; }
+.weibo-emoticon {
+display: inline-block;
+height: 1.15em;
+width: 1.15em;
+vertical-align: -2px;
+object-fit: contain;
+}
+/* ============ HERO / DARK BAND ============ */
+.hero-band {
+background: var(--white);
+padding: 22px 20px 0;
+position: relative;
+}
+.hero-brand { display: flex; align-items: center; gap: 10px; position: relative; z-index: 1; }
 .hero-brand-mark { width: 24px; height: 24px; background: var(--pink); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0; }
 .hero-brand-title { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: var(--black); line-height: 1.2; }
 .hero-brand-sub { font-size: 11px; color: var(--gray-muted); line-height: 1.3; margin-top: 1px; }
-.hero-icons { display: flex; align-items: center; gap: 18px; }
-.hero-stripe { max-width: 640px; margin: 16px auto 0; height: 4px; background: var(--pink); }
-.hero-nav { max-width: 640px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.hero-icons { display: flex; align-items: center; gap: 18px; position: relative; z-index: 1; }
+.hero-stripe { max-width: 860px; margin: 16px auto 20px; height: 4px; background: var(--pink); position: relative; z-index: 1; }
+.hero-nav,
+.archive-wordmark,
+.archive-subtitle,
+.year-tabs {
+position: relative;
+z-index: 1;
+}
+.hero-nav {
+max-width: 860px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 14px;
+}
 .hamburger-btn,
 .calendar-btn {
-display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer;
-align-items: center; justify-content: center; flex-shrink: 0; color: var(--black);
+display: flex;
+width: 36px;
+height: 36px;
+background: transparent;
+border: none;
+cursor: pointer;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+color: var(--black);
 }
-.hamburger-btn { flex-direction: column; gap: 6px; }
-.hamburger-btn .bar { width: 15px; height: 1.5px; background: var(--black); transition: transform 0.2s ease, opacity 0.2s ease; }
+.hamburger-btn {
+flex-direction: column;
+gap: 6px;
+}
+.hamburger-btn .bar {
+width: 16px;
+height: 1.5px;
+background: var(--black);
+transition: transform 0.2s ease, opacity 0.2s ease;
+}
 .hamburger-btn.open .bar:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .hamburger-btn.open .bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 .calendar-btn svg { width: 18px; height: 18px; }
@@ -77,8 +118,15 @@ align-items: center; justify-content: center; flex-shrink: 0; color: var(--black
 .notice-btn svg { width: 18px; height: 18px; }
 .notice-dot { position: absolute; top: 4px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--pink); display: none; }
 .notice-dot.show { display: block; }
-.theme-toggle-btn { display: flex; width: 32px; height: 32px; background: transparent; border: none; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; color: var(--black); transition: color 0.15s; }
-.theme-toggle-btn:hover { color: var(--pink); }
+.archive-subtitle {
+max-width: 860px;
+margin: 0 auto;
+font-size: 13px;
+font-weight: 500;
+color: rgba(255,255,255,0.6);
+letter-spacing: -0.005em;
+padding: 0 0 14px;
+}
 /* side drawer nav: 클릭하면 오른쪽에서 화면 전체 높이로 슬라이드되는 메뉴 패널 */
 .side-drawer-overlay {
 position: fixed;
@@ -223,107 +271,503 @@ color: var(--gray-muted);
 flex-shrink: 0;
 letter-spacing: 0.02em;
 }
-.page-wordmark {
-max-width: 640px; margin: 0 auto; font-family: 'Archivo Black', 'Pretendard', sans-serif; font-weight: 400;
-font-size: 52px; line-height: 0.92; color: var(--white); letter-spacing: -0.02em; padding: 16px 0 4px;
+.archive-wordmark {
+max-width: 860px;
+margin: 0 auto;
+font-family: 'Archivo Black', 'Pretendard', sans-serif;
+font-weight: 400;
+font-size: 52px;
+line-height: 0.92;
+color: var(--white);
+letter-spacing: -0.02em;
+padding: 16px 0 18px;
 }
-.page-sub { max-width: 640px; margin: 0 auto; font-size: 12px; color: var(--pink-dim); letter-spacing: -0.01em; }
-.panel { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-.infobox {
-margin-top: -1px;
-background: var(--white);
-border: 1px solid var(--border);
-border-top: none;
-padding: 22px 20px;
+/* year index tabs: simple flat tab */
+.year-tabs {
+max-width: 860px;
+margin: 0 auto;
+display: flex;
+gap: 26px;
+border-bottom: 1px solid var(--border);
 }
-.infobox-photo {
-width: 100%; border-radius: 3px; overflow: hidden; background: var(--pink-pale);
-margin: 0 0 14px;
+.year-tab {
+padding: 0 0 12px;
+height: auto;
+border-radius: 0;
+font-size: 16px;
+font-weight: 700;
+letter-spacing: -0.01em;
+cursor: pointer;
+background: none;
+color: var(--gray-muted);
+border-bottom: 2px solid transparent;
+transition: color 0.15s, border-color 0.15s;
+white-space: nowrap;
 }
-.infobox-photo img { width: 100%; height: auto; display: block; }
-.infobox-name { text-align: center; font-size: 18px; font-weight: 800; color: var(--black); letter-spacing: -0.01em; }
-.infobox-name-zh { text-align: center; font-size: 12px; color: var(--gray-muted); margin-top: 3px; font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; }
-.infobox-table { margin-top: 18px; border-top: 1px solid var(--border); }
-.infobox-row { display: flex; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
-.infobox-label { width: 84px; flex-shrink: 0; color: var(--black); font-weight: 600; }
-.infobox-value { flex: 1; color: var(--black); line-height: 1.55; }
-.infobox-value.tbd { color: var(--gray-muted); }
-.infobox-row.stacked { flex-direction: column; }
-.infobox-row.stacked .infobox-label { width: auto; margin-bottom: 7px; }
-.toc { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 0; }
-.toc-item {
-font-size: 12px; font-weight: 700; color: var(--pink); background: var(--pink-pale);
-padding: 6px 12px; border-radius: 3px; text-decoration: none; letter-spacing: -0.005em;
+.year-tab:hover { color: var(--black); }
+.year-tab.active { background: none; color: var(--black); border-bottom-color: var(--pink); }
+/* ============ WHITE PANEL ============ */
+.panel {
+max-width: 860px;
+margin: 0 auto;
+padding: 0 20px;
 }
-.toc-item:hover { background: #fbe0e7; }
-.wiki-section { padding: 22px 0; border-top: 1px solid var(--border); scroll-margin-top: 16px; }
-.wiki-section:first-of-type { border-top: 1px solid var(--border); }
-.wiki-section-title {
-font-size: 15px; font-weight: 800; color: var(--black); letter-spacing: -0.01em;
-display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
+/* month selector: borderless spaced text */
+.month-row {
+display: flex;
+align-items: center;
+gap: 22px;
+padding: 18px 0 14px;
+overflow-x: auto;
+border-bottom: 2px solid var(--black);
 }
-.wiki-section-title .num { font-family: 'Archivo Black', 'Pretendard', sans-serif; font-size: 11px; color: var(--pink); }
-.wiki-section-body { font-size: 13px; color: var(--black); line-height: 1.75; letter-spacing: -0.005em; }
-.wiki-section-body.tbd { color: var(--gray-muted); font-style: normal; }
-.wiki-subsection { margin-top: 18px; }
-.wiki-subsection:first-child { margin-top: 0; }
-.wiki-subsection-title { font-size: 13px; font-weight: 700; color: var(--pink); margin-bottom: 6px; }
-.subsection-caption { font-weight: 400; color: var(--gray-muted); font-size: 10.5px; margin-left: 4px; }
-.act-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
-.act-row:last-child { border-bottom: none; }
-.act-year { width: 76px; flex-shrink: 0; color: var(--gray-muted); font-weight: 600; }
-.act-detail { flex: 1; color: var(--black); line-height: 1.6; }
-.act-tag { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--gold); margin-left: 6px; }
-.voice-tag { font-size: 10.5px; font-weight: 600; color: var(--gray-muted); margin-left: 4px; }
-.act-tag.lead { color: var(--pink); }
-.act-row-flat { padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--black); line-height: 1.6; }
-.act-row-flat:last-child { border-bottom: none; }
-.act-year-divider { display: flex; align-items: center; gap: 8px; margin: 14px 0 4px; }
-.act-year-divider:first-child { margin-top: 0; }
-.act-year-divider-label { font-size: 12px; font-weight: 800; color: var(--pink); }
-#ads .act-year-divider-label { font-size: 13.5px; }
-.act-year-divider-line { display: none; }
-.mini-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; background: var(--pink-pale); color: var(--pink); margin-right: 2px; white-space: nowrap; }
-.mini-badge.pending { background: var(--gray-bg); color: var(--gray-muted); }
-.subsection-label { font-size: 12px; font-weight: 700; color: #6b6067; letter-spacing: 0.02em; margin: 14px 0 6px; }
-.subsection-label.current { color: var(--pink); font-size: 13px; }
-.subsection-label:first-child { margin-top: 0; }
-.hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
-.infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
-.infobox-sns { margin-top: 14px; padding-top: 6px; }
-.infobox-sns-title { font-size: 12.5px; font-weight: 700; color: var(--black); margin-bottom: 8px; letter-spacing: 0.02em; }
-.infobox-value a:hover { text-decoration: underline; }
-.etc-row { display: flex; gap: 8px; padding: 6px 0; font-size: 13px; line-height: 1.6; }
-.etc-dot { color: var(--pink); flex-shrink: 0; }
-.footnote-marker { color: var(--pink); font-size: 10px; font-weight: 700; cursor: pointer; position: relative; margin-left: 2px; }
-.footnote-popup { display: none; position: absolute; z-index: 50; background: var(--black); color: var(--white); font-size: 11.5px; line-height: 1.55; padding: 10px 12px; border-radius: 4px; width: max-content; max-width: min(220px, 78vw); top: 18px; left: 0; }
-.footnote-popup.open { display: block; }
-.footnote-popup a { color: var(--pink-dim); }
-.mag-link { display: inline-block; font-size: 10.5px; font-weight: 700; color: var(--pink); margin-left: 8px; text-decoration: none; }
-.mag-link:hover { text-decoration: underline; }
-.mag-translate-link { display: block; font-size: 9.5px; font-weight: 700; color: var(--pink); margin-top: 3px; text-decoration: none; }
-.mag-translate-link:hover { text-decoration: underline; }
-.mag-shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 12px 10px; margin-top: 4px; }
-.mag-item { display: flex; flex-direction: column; }
-.mag-cover { width: 100%; aspect-ratio: 3/4; border-radius: 3px; overflow: hidden; background: var(--gray-bg); box-shadow: 0 1px 4px rgba(26,18,22,0.15); }
-.mag-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.mag-caption { margin-top: 6px; font-size: 10.5px; line-height: 1.4; color: var(--black); }
-.mag-caption .mag-date { display: block; color: var(--pink); font-weight: 700; font-size: 10px; margin-top: 2px; }
-.act-role { color: var(--gray-muted); font-size: 11px; margin-left: 3px; }
-.act-role.spokesperson { color: var(--pink); }
-.act-role.ambassador { color: var(--teal); }
-.act-role.friend { color: var(--gold); }
-.role-legend { font-size: 10.5px; color: var(--black); margin: -4px 0 14px; line-height: 1.6; }
-.role-legend b { font-weight: 700; }
-.act-year-divider.muted .act-year-divider-label { color: var(--black); }
-.mini-badge.year-flat { border-radius: 0; }
-.year-colored .act-year { color: var(--pink); font-weight: 800; }
-.act-subtitle { color: var(--gray-muted); font-size: 10.5px; margin-left: 3px; }
-.act-title-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
-.act-title { font-weight: 700; color: var(--black); }
-.act-subtitle-line { font-size: 11px; color: var(--gray-muted); margin-top: 3px; line-height: 1.5; }
-.act-row-flat .act-title-line, .act-detail .act-title-line { margin-bottom: 0; }
-.site-footer { max-width: 640px; margin: 0 auto; padding: 20px 20px 40px; font-size: 11px; color: var(--gray-muted); text-align: center; }
+.month-row::-webkit-scrollbar { display: none; }
+.month-item {
+font-size: 16px;
+font-weight: 500;
+color: #c4c4c4;
+position: relative;
+white-space: nowrap;
+cursor: pointer;
+padding-bottom: 8px;
+transition: color 0.15s;
+}
+.month-item:hover { color: var(--black); }
+.month-item.active {
+font-weight: 700;
+color: var(--black);
+}
+.month-item.active::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 0;
+right: 0;
+height: 2px;
+background: var(--pink);
+}
+.month-item .m-count {
+font-size: 10px;
+color: var(--gray-muted);
+font-weight: 500;
+margin-left: 3px;
+}
+.month-item.active .m-count { color: var(--pink); }
+/* search + filter */
+.search-row { padding: 14px 0 0; }
+.search-input {
+width: 100%;
+padding: 10px 0;
+border: none;
+border-bottom: 1px solid var(--border);
+font-size: 14px;
+font-family: inherit;
+letter-spacing: -0.01em;
+background: transparent;
+outline: none;
+color: var(--black);
+}
+.search-input:focus { border-bottom-color: var(--pink); }
+.search-input::placeholder { color: var(--gray-muted); }
+.filter-active-bar {
+font-size: 12px;
+color: var(--pink);
+font-weight: 600;
+padding: 10px 0;
+display: none;
+align-items: center;
+justify-content: space-between;
+}
+.filter-active-bar.show { display: flex; }
+.clear-filter {
+cursor: pointer;
+font-weight: 700;
+color: var(--gray-muted);
+background: none;
+border: none;
+font-family: inherit;
+font-size: 12px;
+}
+.clear-filter:hover { color: var(--black); }
+.feed-header {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+padding: 18px 0 4px;
+}
+.feed-title { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
+.post-count-badge { font-size: 11px; color: var(--gray-muted); font-weight: 500; }
+/* ============ POSTS ============ */
+#posts-feed { padding-bottom: 2rem; margin-left: 8px; padding-left: 28px; border-left: 2px solid var(--border); }
+.date-index {
+font-size: 11px;
+font-weight: 700;
+color: var(--gray-muted);
+letter-spacing: 0.02em;
+padding: 20px 0 10px;
+}
+.day-divider {
+position: relative;
+display: flex;
+align-items: baseline;
+gap: 10px;
+margin: 40px 0 0;
+}
+.day-divider:first-child { margin-top: 22px; }
+.day-divider-dot {
+position: absolute;
+left: -33px;
+top: 8px;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+background: var(--pink);
+}
+.day-divider-num {
+font-family: 'Archivo Black', 'Pretendard', sans-serif;
+font-size: 26px;
+color: var(--black);
+line-height: 1;
+}
+.day-divider-cap {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--gray-muted);
+}
+.post-card {
+padding: 18px 0;
+border-top: 1px solid var(--border);
+}
+.post-card:first-of-type { border-top: none; }
+.day-divider + .post-card { border-top: none; }
+.post-meta {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 10px;
+}
+.post-avatar {
+width: 34px;
+height: 34px;
+border-radius: 50%;
+overflow: hidden;
+flex-shrink: 0;
+background: var(--pink);
+}
+.post-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-meta-info { flex: 1; min-width: 0; }
+.actor-name {
+font-size: 12px;
+font-weight: 600;
+color: var(--black);
+letter-spacing: -0.01em;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.post-date { font-size: 10px; color: var(--gray-muted); margin-top: 1px; letter-spacing: 0.01em; }
+.weibo-link {
+font-size: 11px;
+color: var(--pink);
+text-decoration: none;
+font-weight: 600;
+letter-spacing: -0.01em;
+white-space: nowrap;
+flex-shrink: 0;
+}
+.original-text {
+font-size: 11px;
+color: var(--gray-muted);
+line-height: 1.6;
+margin-bottom: 6px;
+}
+.translated-text {
+font-size: 13.5px;
+color: var(--black);
+line-height: 1.65;
+font-weight: 400;
+letter-spacing: -0.01em;
+}
+.translation-note {
+font-size: 12px;
+color: var(--pink);
+border-left: 2px solid var(--pink);
+padding-left: 8px;
+margin-top: 10px;
+line-height: 1.5;
+letter-spacing: -0.005em;
+}
+/* image grid: weibo-style up to 3x3 */
+.post-image-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2px;
+margin-top: 12px;
+}
+.post-image-grid.cols-1 { grid-template-columns: 1fr; }
+.post-image-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cell { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--gray-bg); }
+.grid-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-image-single { margin-top: 12px; }
+.post-image-single img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+.grid-overlay {
+position: absolute;
+inset: 0;
+background: rgba(26,18,22,0.55);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--white);
+font-size: 18px;
+font-weight: 700;
+}
+.yt-embed {
+margin: 12px 0 0;
+overflow: hidden;
+aspect-ratio: 16/9;
+}
+.yt-embed iframe { width: 100%; height: 100%; border: none; }
+.post-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 12px;
+}
+.toggle-comments-btn {
+font-size: 12px;
+color: var(--pink);
+font-weight: 700;
+background: none;
+border: none;
+cursor: pointer;
+font-family: inherit;
+letter-spacing: -0.01em;
+padding: 0;
+}
+.toggle-comments-btn.empty { color: var(--gray-muted); cursor: default; }
+/* comments */
+.comments-section {
+margin-top: 14px;
+padding-top: 14px;
+border-top: 1px dashed var(--border);
+display: none;
+}
+.comments-section.open { display: block; }
+.comment-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.comment-item:last-child { border-bottom: none; padding-bottom: 0; }
+.comment-item:first-child { padding-top: 0; }
+.comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.comment-avatar {
+width: 22px;
+height: 22px;
+border-radius: 50%;
+background: var(--gray-bg);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 11px;
+font-weight: 700;
+color: var(--gray-muted);
+flex-shrink: 0;
+overflow: hidden;
+}
+.comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.comment-username { font-size: 11px; font-weight: 600; color: var(--black); }
+.comment-original { font-size: 10px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 5px; padding-left: 34px; }
+.comment-translated { font-size: 12.5px; color: var(--black); line-height: 1.6; font-weight: 400; letter-spacing: -0.005em; padding-left: 34px; }
+.comment-images { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 4px; margin-top: 8px; padding-left: 34px; }
+.comment-images img { max-width: 120px; max-height: 140px; width: auto; height: auto; object-fit: contain; display: block; border-radius: 3px; }
+.comment-note { font-size: 11px; color: var(--pink); border-left: 2px solid var(--pink); padding-left: 8px; margin: 8px 0 0 34px; line-height: 1.5; letter-spacing: -0.005em; }
+/* 답글: 핑크선 없이 들여쓰기만으로 위계 구분 */
+.actor-reply {
+margin-top: 12px;
+padding-left: 54px;
+}
+.actor-reply-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.actor-reply-avatar { width: 18px; height: 18px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.actor-reply-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.actor-reply-name { font-size: 10px; font-weight: 600; color: var(--pink); }
+.actor-reply-original { font-size: 11px; color: var(--gray-muted); line-height: 1.6; margin: 0 0 4px; }
+.actor-reply-translated { font-size: 12px; color: var(--pink); font-weight: 500; line-height: 1.65; }
+.actor-reply .comment-images { padding-left: 0; margin-top: 8px; }
+.empty-state { text-align: center; padding: 4rem 1rem; color: var(--gray-muted); font-size: 13px; }
+.site-footer {
+text-align: center;
+padding: 2rem;
+font-size: 11px;
+color: var(--gray-muted);
+border-top: 1px solid var(--border);
+margin-top: 1rem;
+letter-spacing: 0.02em;
+}
+@media (max-width: 480px) {
+.hero-band { padding: 18px 16px 0; }
+.panel { padding: 0 16px; }
+#posts-feed { margin-left: 4px; padding-left: 22px; }
+.day-divider-dot { left: -27px; }
+}
+/* scroll to top/bottom */
+.scroll-nav {
+position: fixed;
+right: 18px;
+bottom: 22px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+z-index: 200;
+}
+.scroll-btn {
+width: 38px;
+height: 38px;
+background: var(--black);
+color: var(--white);
+border: none;
+border-radius: 3px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-size: 15px;
+line-height: 1;
+opacity: 0;
+transform: translateY(6px);
+pointer-events: none;
+transition: opacity 0.18s ease, transform 0.18s ease, background 0.15s;
+}
+.scroll-btn:hover { background: var(--pink); }
+.scroll-btn.show { opacity: 0.92; transform: translateY(0); pointer-events: auto; }
+@media (max-width: 480px) {
+.scroll-nav { right: 14px; bottom: 16px; }
+.scroll-btn { width: 34px; height: 34px; font-size: 13px; }
+}
+/* image lightbox */
+.grid-cell img, .post-image-single img, .comment-images img { cursor: pointer; }
+.lightbox-overlay {
+position: fixed;
+inset: 0;
+background: rgba(26,18,22,0.86);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 500;
+padding: 60px 20px 30px;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-close {
+position: fixed;
+top: 18px;
+right: 18px;
+width: 34px;
+height: 34px;
+background: rgba(255,255,255,0.12);
+color: var(--white);
+border: none;
+border-radius: 3px;
+font-size: 16px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 501;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.24); }
+.lightbox-body {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 14px;
+max-width: 100%;
+max-height: 100%;
+}
+.lightbox-img {
+max-width: 100%;
+max-height: 76vh;
+object-fit: contain;
+display: block;
+border-radius: 4px;
+box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+.lightbox-save {
+font-size: 12px;
+font-weight: 700;
+padding: 9px 22px;
+border: none;
+border-radius: 3px;
+background: var(--pink);
+color: var(--white);
+cursor: pointer;
+font-family: inherit;
+letter-spacing: -0.01em;
+text-decoration: none;
+display: inline-block;
+transition: background 0.15s;
+}
+.lightbox-save:hover { background: #d9456d; }
+/* ============ VOICE MESSAGE (flat, site-style click-to-play) ============ */
+.voice-message {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: var(--pink-pale);
+border-radius: 3px;
+padding: 4px 9px;
+cursor: pointer;
+user-select: none;
+transition: background 0.15s ease;
+margin-top: 6px;
+}
+.voice-message:hover { background: #fbe0e7; }
+.voice-message:active { opacity: 0.7; }
+.voice-message .vm-play-btn {
+flex-shrink: 0;
+width: 12px;
+height: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.voice-message .vm-play-btn svg { width: 9px; height: 9px; fill: var(--pink); }
+.vm-icon-play { display: block; }
+.vm-icon-pause { display: none; }
+.voice-message.playing .vm-icon-play { display: none; }
+.voice-message.playing .vm-icon-pause { display: block; }
+.voice-message .vm-waveform { display: flex; align-items: center; gap: 2px; height: 10px; }
+.voice-message .vm-bar {
+width: 1.5px;
+background: var(--pink);
+border-radius: 1px;
+opacity: 0.4;
+transition: opacity 0.15s ease;
+}
+.voice-message.playing .vm-bar { opacity: 1; animation: vm-bounce 0.9s ease-in-out infinite; }
+.voice-message .vm-bar:nth-child(1) { height: 3px; }
+.voice-message .vm-bar:nth-child(2) { height: 6px; }
+.voice-message .vm-bar:nth-child(3) { height: 10px; }
+.voice-message .vm-bar:nth-child(4) { height: 5px; }
+.voice-message .vm-bar:nth-child(5) { height: 8px; }
+.voice-message .vm-bar:nth-child(6) { height: 4px; }
+.voice-message.playing .vm-bar:nth-child(1) { animation-delay: 0s; }
+.voice-message.playing .vm-bar:nth-child(2) { animation-delay: 0.1s; }
+.voice-message.playing .vm-bar:nth-child(3) { animation-delay: 0.2s; }
+.voice-message.playing .vm-bar:nth-child(4) { animation-delay: 0.3s; }
+.voice-message.playing .vm-bar:nth-child(5) { animation-delay: 0.4s; }
+.voice-message.playing .vm-bar:nth-child(6) { animation-delay: 0.5s; }
+@keyframes vm-bounce {
+0%, 100% { transform: scaleY(0.4); }
+50% { transform: scaleY(1); }
+}
+.voice-message .vm-duration { font-size: 10.5px; color: var(--pink); font-weight: 600; flex-shrink: 0; }
+.voice-message .vm-download { flex-shrink: 0; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; margin-left: 2px; }
+.voice-message .vm-download svg { width: 11px; height: 11px; fill: none; stroke: var(--pink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.voice-message .vm-download:hover svg { stroke: #d9456d; }
+.voice-message .vm-download { cursor: pointer; }
+.comment-translated + .voice-message,
+.actor-reply-translated + .voice-message { margin-top: 6px; }
+.actor-reply .voice-message { margin-left: 0; }
+.comment-item > .voice-message { display: flex; margin-left: 34px; margin-top: 8px; }
+/* ============ SCHEDULE CALENDAR MODAL ============ */
 .schedule-overlay {
 position: fixed;
 inset: 0;
@@ -420,9 +864,9 @@ cursor: pointer;
 padding: 4px 0;
 }
 .sched-day:empty { cursor: default; }
-.sched-day.today { font-weight: 700; color: var(--pink); }
-.sched-day.selected .sched-num { color: var(--pink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .sched-num { display: inline-block; }
+.sched-day.today .sched-num { color: var(--pink); font-weight: 700; }
+.sched-day.selected .sched-num { color: var(--pink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .sched-dots { display: flex; justify-content: center; gap: 2px; margin-top: 3px; height: 4px; }
 .sched-dot { width: 4px; height: 4px; border-radius: 50%; display: inline-block; }
 .schedule-detail {
@@ -431,10 +875,20 @@ margin-top: 14px;
 padding-top: 12px;
 min-height: 40px;
 }
-.sched-event-row { display: flex; gap: 8px; font-size: 12.5px; margin-bottom: 8px; align-items: flex-start; }
+.sched-event-row {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 12.5px;
+padding: 10px 12px;
+border-radius: 3px;
+margin-bottom: 8px;
+border-left: 3px solid var(--pink);
+background: var(--gray-bg);
+}
 .sched-event-row:last-child { margin-bottom: 0; }
-.sched-event-row .sched-dot { flex-shrink: 0; margin-top: 5px; }
-.sched-event-row .sched-time { color: var(--pink); font-weight: 600; flex-shrink: 0; }
+.sched-event-row .sched-time { color: var(--black); font-weight: 600; flex-shrink: 0; }
+.sched-event-row .sched-cat { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; color: #fff; flex-shrink: 0; }
 .sched-empty { font-size: 12px; color: var(--gray-muted); text-align: center; padding: 8px 0; }
 .schedule-legend {
 display: flex;
@@ -457,13 +911,23 @@ color: var(--gray-muted);
 .notice-close:hover { color: var(--black); }
 .notice-dont-show { display: block; width: 100%; margin-top: 18px; padding-top: 14px; border: none; border-top: 1px solid var(--border); background: none; font-size: 11.5px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
 .notice-dont-show:hover { color: var(--pink); }
-.link-confirm-go { display: block; width: 100%; margin-top: 18px; padding: 11px 0; border: none; background: var(--pink); color: var(--white); font-size: 12.5px; font-weight: 700; text-align: center; cursor: pointer; font-family: inherit; letter-spacing: 0.02em; }
-.link-confirm-go:hover { opacity: 0.9; }
-.link-confirm-skip { display: block; width: 100%; margin-top: 10px; padding-top: 10px; border: none; background: none; font-size: 11px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
-.link-confirm-skip:hover { color: var(--pink); }
 </style>
 </head>
 <body>
+<!-- SCROLL TOP/BOTTOM NAV -->
+<div class="scroll-nav">
+<button class="scroll-btn" id="scrollTopBtn" onclick="scrollToTop()" aria-label="맨 위로">▲</button>
+<button class="scroll-btn" id="scrollBottomBtn" onclick="scrollToBottom()" aria-label="맨 아래로">▼</button>
+</div>
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this) closeLightbox()">
+<button class="lightbox-close" onclick="closeLightbox()" aria-label="닫기">✕</button>
+<div class="lightbox-body">
+<img class="lightbox-img" id="lightboxImg" src="" alt="확대 이미지" />
+<button class="lightbox-save" id="lightboxSave" onclick="saveOrShareImage()">저장 ↓</button>
+</div>
+</div>
+<!-- SIDE DRAWER NAV -->
 <div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="toggleMobileMenu()"></div>
 <nav class="side-drawer" id="sideDrawer">
 <div class="side-drawer-top">
@@ -488,14 +952,14 @@ color: var(--gray-muted);
 <div class="side-drawer-body">
 <div class="side-drawer-label">MENU</div>
 <div class="side-drawer-list">
-<button class="side-drawer-item toggle" id="archiveMenuToggle" onclick="toggleArchiveSubmenu()" type="button">
+<button class="side-drawer-item toggle open" id="archiveMenuToggle" onclick="toggleArchiveSubmenu()" type="button">
 ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </button>
-<div class="side-drawer-submenu" id="archiveSubmenu">
-<a class="side-drawer-subitem" href="archive">WEIBO · 超话</a>
+<div class="side-drawer-submenu open" id="archiveSubmenu">
+<a class="side-drawer-subitem current" href="archive">WEIBO · 超话</a>
 <a class="side-drawer-subitem" href="douyin">DOUYIN</a>
 </div>
-<a class="side-drawer-item current" href="profile">PROFILE</a>
+<a class="side-drawer-item" href="profile">PROFILE</a>
 <a class="side-drawer-item" href="guide">GUIDE</a>
 </div>
 <div class="side-drawer-label links">LINKS</div>
@@ -517,16 +981,7 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <div class="notice-modal-body" id="noticeModalBody"></div>
 </div>
 </div>
-<!-- LINK CONFIRM MODAL (보러가기 링크 클릭 시) -->
-<div class="notice-overlay" id="linkConfirmOverlay" onclick="if(event.target===this) closeLinkConfirm()">
-<div class="notice-modal">
-<button class="notice-close" onclick="closeLinkConfirm()" aria-label="닫기">✕</button>
-<div class="notice-modal-title" id="linkConfirmTitle">Notice !</div>
-<div class="notice-modal-body" id="linkConfirmBody"></div>
-<button class="link-confirm-go" onclick="goLinkConfirm()">이동하기 ↗</button>
-<button class="link-confirm-skip" onclick="goLinkConfirmDontShowToday()">오늘 하루 그만보기</button>
-</div>
-</div>
+<!-- SCHEDULE CALENDAR MODAL -->
 <div class="schedule-overlay" id="scheduleOverlay" onclick="if(event.target===this) closeSchedule()">
 <div class="schedule-modal">
 <button class="schedule-close" onclick="closeSchedule()" aria-label="닫기">✕</button>
@@ -549,11 +1004,12 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 </div>
 </div>
 </div>
+<!-- HERO -->
 <div class="hero-band">
 <div class="hero-nav">
 <div class="hero-brand">
 <div>
-<div class="hero-brand-title">PROFILE</div>
+<div class="hero-brand-title">ARCHIVE</div>
 </div>
 </div>
 <div class="hero-icons">
@@ -564,190 +1020,129 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 </div>
 </div>
 <div class="hero-stripe"></div>
+<div class="year-tabs" id="year-tabs"></div>
 </div>
+<!-- WHITE PANEL -->
 <div class="panel">
-<div class="infobox">
-<div class="infobox-photo"><img src="profile-main.jpg" alt="周翊然" onerror="this.parentElement.innerHTML='📷'" /></div>
-<div class="infobox-name">주익연</div>
-<div class="infobox-name-zh">周翊然</div>
-<div class="infobox-table">
-<div class="infobox-row"><div class="infobox-label">이름</div><div class="infobox-value">저우이란 <span class="hanja">(周翊然, Zhōu Yìrán)</span><span class="footnote-marker" onclick="toggleFootnote('name', event)">[1]<span class="footnote-popup" id="fn-name">개명 전 이름은 周浩然(저우하오란)</span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">직업</div><div class="infobox-value">배우 · 가수 · 레이서<span class="footnote-marker" onclick="toggleFootnote('job', event)">[2]<span class="footnote-popup" id="fn-job">2023년 《환우》 촬영 당시 샤먼에서 현직 레이싱 코치를 알게 되며 레이싱에 입문. 촬영이 없는 날이면 레이싱장에서 발견될 정도로 좋아하며, 2025년부터 본격적으로 세계 대회에 출전. 휴식기에 레이서로 활동하는 모습을 자주 보여주고, 인터뷰에서도 레이서 활동을 종종 언급함.</span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">생년월일</div><div class="infobox-value">2000.11.22 · 충칭</div></div>
-<div class="infobox-row"><div class="infobox-label">국적</div><div class="infobox-value">중국</div></div>
-<div class="infobox-row"><div class="infobox-label">신체</div><div class="infobox-value">182cm · O형</div></div>
-<div class="infobox-row"><div class="infobox-label">학력</div><div class="infobox-value">상하이펑셴중학</div></div>
-<div class="infobox-row"><div class="infobox-label">데뷔</div><div class="infobox-value">2017.03.30 · 이안음악사<span class="footnote-marker" onclick="toggleFootnote('debutname', event)">[3]<span class="footnote-popup" id="fn-debutname">활동 당시 예명은 方翔锐(팡샹루이)</span></span><span id="debutDday" style="color:var(--pink);font-size:11px;font-weight:600;"></span></div></div>
-<div class="infobox-row"><div class="infobox-label">소속사</div><div class="infobox-value">무소속 <span class="hanja" style="font-family:inherit;">(전: 동락영시 2018~2025)</span></div></div>
-<div class="infobox-row"><div class="infobox-label">가족</div><div class="infobox-value">반려견 페라리·마오타이<span class="footnote-marker" onclick="toggleFootnote('pets', event)">[4]<span class="footnote-popup" id="fn-pets"> 말티즈(페라리), 시바견(마오타이)</span></span><br>반려묘<span class="footnote-marker" onclick="toggleFootnote('cats', event)">[5]<span class="footnote-popup" id="fn-cats">두두·쿠거·지우디엔·빠디엔·메이메이, 브이로그와 라이브 방송에 등장했던 반려묘들 <a href="https://youtu.be/bZ1_c04kuw4?si=LXju8N7CY6K0P9qO" target="_blank" rel="noopener">참고 ↗</a></span></span><span class="footnote-marker" onclick="toggleFootnote('cats2', event)">[6]<span class="footnote-popup" id="fn-cats2">근황은 알려지지 않았으나, 익연이 친구 스와이거에 의하면 익연이가 데리고 있던 고양이를 입양 했다고 함. <a href="https://x.com/vazseyo/status/2051711455142326628?s=46" target="_blank" rel="noopener">참고 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">응원색</div><div class="infobox-value">一斥染 <span style="color:#F7A4B8;">●</span> #F7A4B8<span class="footnote-marker" onclick="toggleFootnote('color', event)">[7]<span class="footnote-popup" id="fn-color">공식 발표 <a href="https://weibo.com/6782683822/GFe5oiHRt" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">팬덤</div><div class="infobox-value">甜粥 (단죽)<span class="footnote-marker" onclick="toggleFootnote('fandom', event)">[8]<span class="footnote-popup" id="fn-fandom">달콤한 죽을 뜻하는 甜粥(티엔저우)에서 '粥(zhōu)'가 성씨인 '周(zhōu)'와 동음인 점을 활용한 언어유희이다.</span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">MBTI</div><div class="infobox-value">ISFP<span class="footnote-marker" onclick="toggleFootnote('mbti', event)">[9]<span class="footnote-popup" id="fn-mbti">본인 언급 <a href="https://youtu.be/7GPQdwYqcyI?t=169" target="_blank" rel="noopener">영상 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">애칭</div><div class="infobox-value">然然 · 开车哥 · 欧巴<span class="footnote-marker" onclick="toggleFootnote('nickname', event)">[10]<span class="footnote-popup" id="fn-nickname">欧巴는 '오빠'의 발음을 중국어로 표기한 것. 팬들이 종종 '韩国欧巴(한국 분위기가 난다고)'라고 부르며, 실제로 공작실에서도 이 애칭을 사용한 적이 있음. <a href="http://xhslink.com/o/AC3gWt14xcF" target="_blank" rel="noopener">참고 ↗</a></span></span></div></div>
-<div class="infobox-row"><div class="infobox-label">취미</div><div class="infobox-value">게임<span class="footnote-marker" onclick="toggleFootnote('hobby-game', event)">[11]<span class="footnote-popup" id="fn-hobby-game">발로란트 게임 방송 <a href="https://x.com/vazseyo/status/2043969897886298204?s=46" target="_blank" rel="noopener">참고 ↗</a></span></span> · 낚시<span class="footnote-marker" onclick="toggleFootnote('hobby-fishing', event)">[12]<span class="footnote-popup" id="fn-hobby-fishing">본인 언급 <a href="https://x.com/vazseyo/status/2013268695926374672?s=46" target="_blank" rel="noopener">참고 ↗</a></span></span> · 스키<span class="footnote-marker" onclick="toggleFootnote('hobby-ski', event)">[13]<span class="footnote-popup" id="fn-hobby-ski">참고 <a href="https://x.com/vazseyo/status/1999489040316531021?s=20" target="_blank" rel="noopener">↗</a></span></span></div></div>
+<div class="month-row" id="month-row"></div>
+<div class="search-row" id="searchRow">
+<input class="search-input" type="text" id="searchInput" placeholder="문구 내용으로 검색..." oninput="renderFeed()" />
 </div>
-<div class="infobox-sns">
-<div class="infobox-sns-title">SNS</div>
-<div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">개인</div><div class="infobox-value"><a href="https://weibo.com/u/5994946077" target="_blank" rel="noopener">웨이보</a> · <a href="https://weibo.com/u/7879265676" target="_blank" rel="noopener">웨이보(부계)</a> · <a href="https://www.instagram.com/zrzrzryyy/" target="_blank" rel="noopener">인스타그램</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfbaf16000000001000b1e3" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://v.douyin.com/iDXGaJG" target="_blank" rel="noopener">도우인</a></div></div>
-<div class="infobox-row" style="border-bottom:none;padding:5px 0;"><div class="infobox-label">공작실</div><div class="infobox-value"><a href="https://weibo.com/u/7242368664" target="_blank" rel="noopener">웨이보</a> · <a href="https://www.xiaohongshu.com/user/profile/5cfb769a0000000018015bcb" target="_blank" rel="noopener">샤오홍슈</a> · <a href="https://xhslink.cn/m/28DLnQgWOq5" target="_blank" rel="noopener">샤오홍슈(스태프)</a></div></div>
+<div class="filter-active-bar" id="filterBar">
+<span id="filterLabel"></span>
+<button class="clear-filter" onclick="clearSearch()">검색 지우기 ✕</button>
 </div>
+<div class="feed-header" style="display:none;">
+<div class="feed-title" id="feed-title">초화 게시물</div>
+<span class="post-count-badge" id="feed-count"></span>
 </div>
-<section class="wiki-section year-colored" id="drama">
-<div class="wiki-section-title"><span class="num">01</span>드라마<span class="subsection-caption">(방영 시작일 기준)</span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2020</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="act-title">봉귀사시가</span> · 종리<span class="act-tag">조연</span></div><div class="act-subtitle-line">凤归四时歌 · 钟离 <span class="voice-tag">더빙</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2021</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">부탁해요 반장</span> · 예징시<span class="act-tag">조연</span></div><div class="act-subtitle-line">拜托了班长 · 叶景希 <span class="voice-tag">더빙</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">WeTV</span><span class="mini-badge">Netflix</span><span class="act-title">니미소시흔미</span> · 아이자<span class="act-tag">조연</span></div><div class="act-subtitle-line">你微笑时很美 · 艾佳 <span class="voice-tag">더빙</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">교가적아녀</span> · 교칠칠<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">乔家的儿女 · 乔七七 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">소민가</span> · 진자준<span class="act-tag">조연</span></div><div class="act-subtitle-line">小敏家 · 金家骏 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">优酷</span><span class="act-title">니시아최첨밀적심사</span> · 임연<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">你是我最甜蜜的心事 · 林燃 <span class="voice-tag">더빙</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Netflix</span><span class="act-title">이십불혹2</span> · 인상<span class="act-tag">조연</span></div><div class="act-subtitle-line">二十不惑2 · 殷赏 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">WeTV</span><span class="act-title">재니적동야리섬요</span> · 무쯔시<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">在你的冬夜里闪耀 · 慕子希 <span class="voice-tag">원음</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2023</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Watcha</span><span class="act-title">당아비분향니</span> · 장루랑<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">当我飞奔向你 · 张陆让 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Watcha</span><span class="act-title">백일몽아</span> · 선쥐안<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">白日梦我 · 沈倦 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Watcha</span><span class="mini-badge">WeTV</span><span class="act-title">작작풍류</span> · 류침<span class="act-tag">조연</span></div><div class="act-subtitle-line">灼灼风流 · 刘琛 <span class="voice-tag">더빙</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Watcha</span><span class="mini-badge">WeTV</span><span class="act-title">투라대륙지연혼전</span> · 당삼<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">斗罗大陆之燃魂战 · 唐三 <span class="voice-tag">원음</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Wavve</span><span class="mini-badge">Watcha</span><span class="mini-badge">WeTV</span><span class="act-title">환우</span> · 밍셩<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">煥羽 · 明盛 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">Watcha</span><span class="mini-badge">Coupang Play</span><span class="mini-badge">WeTV</span><span class="act-title">열두 통의 편지(십이봉신)</span> · 탕이쉰<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">十二封信 · 唐亦寻 <span class="voice-tag">원음</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">TVING</span><span class="mini-badge">WeTV</span><span class="act-title">강호야우,십년의등불(강호야우십년등)</span> · 모청안/상녕<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">江湖夜雨十年灯 · 慕清晏 / 常宁 <span class="voice-tag">원음</span></div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge">Netflix</span><span class="mini-badge">Coupang Play</span><span class="mini-badge">MOA</span><span class="act-title">교초</span> · 사연래<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">翘楚 · 谢燕来 <span class="voice-tag">더빙</span></div></div>
-<div class="act-year-divider"><span class="act-year-divider-label">미정</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">腾讯</span><span class="act-title">아규묵두아</span> · 묵두<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">我叫墨斗儿 · 墨斗</div></div>
-<div class="act-row-flat"><div class="act-title-line"><span class="mini-badge pending">爱奇艺</span><span class="act-title">생명연</span> · 샤자오양<span class="act-tag lead">주연</span></div><div class="act-subtitle-line">生命缘 · 夏朝阳</div></div>
-</section>
-<section class="wiki-section year-colored" id="movie">
-<div class="wiki-section-title"><span class="num">02</span>영화</div>
-<div class="act-row"><div class="act-year">2018</div><div class="act-detail"><div class="act-title-line"><span class="act-title">우리 오빠 좀 데려가</span> · 완쑤이<span class="act-tag">조연</span></div><div class="act-subtitle-line">快把我哥带走 · 万岁 <span class="voice-tag">더빙</span></div></div></div>
-</section>
-<section class="wiki-section year-colored" id="entertainment">
-<div class="wiki-section-title"><span class="num">03</span>예능</div>
-<div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">오십공리도화오5</span><a class="mag-link" href="https://youtube.com/playlist?list=PLj_FQtvyEQOUVe4L7Vd0h3wmgwmpwUE95&si=t96AtoM-FuB-Da54" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">五十公里桃花坞5</div></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
-<div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">분포파14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">奔跑吧14</div></div></div>
-<div class="act-row"><div class="act-year">2026.08</div><div class="act-detail"><div class="act-title-line"><span class="act-title">불상수적성기오</span><a class="mag-link" href="https://youtube.com/playlist?list=PLWG8TH-d01rc&si=4SFcaRvOjgMVTvuP" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">不想睡的星期五</div></div></div>
-</section>
-<section class="wiki-section year-colored" id="music">
-<div class="wiki-section-title"><span class="num">04</span>음반</div>
-<div class="wiki-subsection">
-<div class="wiki-subsection-title">발매곡</div>
-<div class="act-row"><div class="act-year">2018.12.07</div><div class="act-detail"><div class="act-title-line"><span class="act-title">单恋</span></div><div class="act-subtitle-line">짝사랑 · 싱글 1집</div></div></div>
-<div class="act-row"><div class="act-year">2020.11.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">谈一场恋爱</span></div><div class="act-subtitle-line">우리 연애나 할까 · 싱글 2집</div></div></div>
-<div class="act-row"><div class="act-year">2021.04.20</div><div class="act-detail"><div class="act-title-line"><span class="act-title">你知道我知道</span></div><div class="act-subtitle-line">알잖아내마음 · 《배탁료반장》 OST</div></div></div>
-<div class="act-row"><div class="act-year">2021.12.20</div><div class="act-detail"><div class="act-title-line"><span class="act-title">心事</span></div><div class="act-subtitle-line">마음속 비밀 · 《니시아최첨밀적심사》 OST</div></div></div>
-<div class="act-row"><div class="act-year">2024.05.29</div><div class="act-detail"><div class="act-title-line"><span class="act-title">誰是你朋友</span></div><div class="act-subtitle-line">누가 네 친구야 · 프로젝트 싱글</div></div></div>
-<div class="act-row"><div class="act-year">2024.12.06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">前行</span></div><div class="act-subtitle-line">전진 · 《투라대륙지연혼전》 주제곡</div></div></div>
-<div class="act-row"><div class="act-year">2026.06.06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">心有所感</span></div><div class="act-subtitle-line">마음에 새겨진 정 · 《교초》 삽입곡</div></div></div>
-</div>
-<div class="wiki-subsection">
-<div class="wiki-subsection-title">뮤비 특별출연</div>
-<div class="act-row"><div class="act-year">2026.07.30</div><div class="act-detail"><div class="act-title-line"><span class="act-title">透明爱人</span><a class="mag-link" href="https://youtu.be/fnhO4xI8kDY?si=pon2f6t0cHa_lu2w" target="_blank" rel="noopener">↗</a></div><div class="act-subtitle-line">투명한 연인 · 백록 MV 특별출연</div></div></div>
-</div>
-</section>
-<section class="wiki-section" id="ads">
-<div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
-<div class="role-legend"><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업<br>*브랜드 내 대언인 등급이 없는 경우 대사가 제일 높은 등급</div>
-<div class="subsection-label">지난 활동</div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
-<div class="act-row-flat">Clarins · <span class="act-role friend">글로우 지우</span></div>
-<div class="act-row-flat">MISTINE · <span class="act-role ambassador">베이스 메이크업 대사</span></div>
-<div class="act-row-flat">GODIVA · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">康师傅饮用水 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">CRD克徕帝 · <span class="act-role friend">신품 브랜드 지우</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2023~2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Stride炫迈 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">YAYA鸭鸭 · <span class="act-role spokesperson">브랜드 대언인</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2024</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">L'OCCITAN · <span class="act-role ambassador">바디케어 대사</span></div>
-<div class="act-row-flat">艾森丝essence · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">THE WHOO 后 · <span class="act-role ambassador">취광 대사</span></div>
-<div class="act-row-flat">茶百道 ChaPanda · <span class="act-role ambassador">가을 시즌 대사</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2024~2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Saucony · <span class="act-role spokesperson">캠퍼스 시리즈 대언인</span></div>
-<div class="act-row-flat">Nuxe · <span class="act-role spokesperson">클렌징 시리즈 대언인</span></div>
-<div class="act-row-flat">立白 · <span class="act-role ambassador">마스터 향기 모던 대사</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2025</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">夸克 · <span class="act-role ambassador">여름 시즌 대사</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2025~2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">小野和子 · <span class="act-role spokesperson">선케어 대언인</span></div>
-<div class="act-row-flat">网易严选 · <span class="act-role ambassador">라이프스타일 대사</span></div>
-<div class="act-year-divider muted"><span class="act-year-divider-label">2024~2026</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">WeTV · <span class="act-role spokesperson">글로벌 대언인</span></div>
-<div class="subsection-label current">현재 진행중</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2023~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2024~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">GUCCI · <span class="act-role friend">브랜드 지우</span></div>
-<div class="act-row-flat">GUERLAIN · <span class="act-role ambassador">스킨케어 대사</span></div>
-<div class="act-row-flat">APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span><span class="footnote-marker" onclick="toggleFootnote('apm', event)">[14]<span class="footnote-popup" id="fn-apm">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격 → 2026년 아시아 태평양 브랜드 대언인 승격</span></span></div>
-<div class="act-row-flat">BVLGARI Perfume · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span><span class="footnote-marker" onclick="toggleFootnote('bvlgari', event)">[15]<span class="footnote-popup" id="fn-bvlgari">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격</span></span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2025~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Ami Paris · <span class="act-role ambassador">글로벌 대사</span><span class="footnote-marker" onclick="toggleFootnote('ami', event)">[16]<span class="footnote-popup" id="fn-ami">중국 첫 글로벌 대사</span></span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2026~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">天猫 · <span class="act-role ambassador">환신 대사</span></div>
-<div class="act-row-flat">自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
-<div class="act-row-flat">花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
-<div class="act-row-flat">凯旋1664 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">元气森林 · <span class="act-role ambassador">여름 브랜드 대사</span></div>
-<div class="act-row-flat">ASICS亚瑟士 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">红之HUNGCHI · <span class="act-role spokesperson">청상 대언인</span></div>
-</section>
-<section class="wiki-section" id="magazine">
-<div class="wiki-section-title"><span class="num">06</span>화보<span class="subsection-caption"> 표지 클릭 시 내지 사진으로 이동 </span></div>
-<div class="mag-shelf">
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/6758330187/MDs5EvaeZ" target="_blank" rel="noopener"><img src="images/2305-purplepearlrising.jpg" alt="PurplePearlRising 2023년 5월호" loading="lazy"></a></div><div class="mag-caption">PurplePearlRising<span class="mag-date">2023년 5월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><img src="images/2308-guangdongtv.jpg" alt="广东电视台娱乐周刊 2023년 8월호" loading="lazy"></div><div class="mag-caption">广东电视台娱乐周刊<span class="mag-date">2023년 8월호</span></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/5427604697/4938239074377953" target="_blank" rel="noopener"><img src="images/2308-bobosnap.jpg" alt="BOBOSNAP 2023년 8월호" loading="lazy"></a></div><div class="mag-caption">BOBOSNAP<span class="mag-date">2023년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223767054924" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/5468096283/Nt78et78V" target="_blank" rel="noopener"><img src="images/2311-feijialuonanshi.jpg" alt="费加罗男士 2023년 11월호" loading="lazy"></a></div><div class="mag-caption">费加罗男士<span class="mag-date">2023년 11월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/l6jCrDchZXbnIN-6lmavlg?poc_token=HCilimqjz3YB-zBl0cChYF2wzmxRinxnawhvnddl" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1232221900/Nsvn00tiE" target="_blank" rel="noopener"><img src="images/2311-loofficiel.jpg" alt="时装LOFFICIEL 2023년 11월호" loading="lazy"></a></div><div class="mag-caption">时装LOFFICIEL<span class="mag-date">2023년 11월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/l875tiLrWvmM1nxcAKQhHg" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1703513687/NrioD4bUX" target="_blank" rel="noopener"><img src="images/2311-grazia.jpg" alt="红秀GRAZIA 2023년 11월호" loading="lazy"></a></div><div class="mag-caption">红秀GRAZIA<span class="mag-date">2023년 11월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/RyVeaarBQ839t6E4qqZqmA" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1359179855/NxdCoqsjj" target="_blank" rel="noopener"><img src="images/2312-shizhuangnanshi.jpg" alt="时装男士 2023년 12월호" loading="lazy"></a></div><div class="mag-caption">时装男士<span class="mag-date">2023년 12월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/2I94FRgREg1UZZmiGnhJXw" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/5108480945/NEPkY0ktF" target="_blank" rel="noopener"><img src="images/2401-ellemen.jpg" alt="ELLEMEN新青年 2024년 1월호" loading="lazy"></a></div><div class="mag-caption">ELLEMEN新青年<span class="mag-date">2024년 1월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s?__biz=Mzk5MDY5MjQ5MA==&mid=2247787700&idx=1&sn=566117083b6e48b5ebc1c91f8db03bec&source=41&poc_token=HKulimqjfEP3Kg8JEtTe2CsCVOMk1HJumoZL8G1F" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/2479972411/NARJnvGxV" target="_blank" rel="noopener"><img src="images/2401-jingcaiok.jpg" alt="精彩OK 2024년 1월호" loading="lazy"></a></div><div class="mag-caption">精彩OK<span class="mag-date">2024년 1월호</span><a class="mag-translate-link" href="https://weibo.com/2479972411/NAS7JuFN4" target="_blank" rel="noopener">포토2 ↗</a><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223805745730" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1666485652/O6a6hxY3a" target="_blank" rel="noopener"><img src="images/2403-instyle.jpg" alt="InStyle优家画报 2024년 3월호" loading="lazy"></a></div><div class="mag-caption">InStyle优家画报<span class="mag-date">2024년 3월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/DRW6kORlb5K8fxLi844_hQ" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1223849864/Od0hnAQsj" target="_blank" rel="noopener"><img src="images/2405-mensuno.jpg" alt="风度mensuno 2024년 5월호" loading="lazy"></a></div><div class="mag-caption">风度mensuno<span class="mag-date">2024년 5월호</span><a class="mag-translate-link" href="https://mp.weixin.qq.com/s/0gvZSIIu8Png5TmIRl9tTg" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1359179855/P1iRzme7W" target="_blank" rel="noopener"><img src="images/2411-shizhuangnanshi.jpg" alt="时装男士 2024년 11월호" loading="lazy"></a></div><div class="mag-caption">时装男士<span class="mag-date">2024년 11월호</span><a class="mag-translate-link" href="https://cool-router-bf5.notion.site/241121-LOFFICIEL-HOMMES-124380d70c8d809091ebc2ce9fa0919d?source=copy_link" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/7569273904/P56cSskBs" target="_blank" rel="noopener"><img src="images/2412-glassman.jpg" alt="Glass Man 2024년 12월호" loading="lazy"></a></div><div class="mag-caption">Glass Man<span class="mag-date">2024년 12월호</span><a class="mag-translate-link" href="https://cool-router-bf5.notion.site/241216-GLASS-MAN-15e380d70c8d80f283bbe08392453ee5?source=copy_link" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/7337001776/PaSMQDW2M" target="_blank" rel="noopener"><img src="images/2502-wonderland.jpg" alt="Wonderland 2025년 2월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 2월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223775735725" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/6567447391/Ps4qttn2w" target="_blank" rel="noopener"><img src="images/2506-marieclairenow.jpg" alt="MarieClaireNOW 2025년 여름호" loading="lazy"></a></div><div class="mag-caption">MarieClaireNOW<span class="mag-date">2025년 여름호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223868198968" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1684446114/PCHIG2rQP" target="_blank" rel="noopener"><img src="images/2507-superelle.jpg" alt="superELLE 2025년 7월호" loading="lazy"></a></div><div class="mag-caption">superELLE<span class="mag-date">2025년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223947157878" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/7337001776/PEPPKhlO8" target="_blank" rel="noopener"><img src="images/2508-wonderland.jpg" alt="Wonderland 2025년 8월호" loading="lazy"></a></div><div class="mag-caption">Wonderland<span class="mag-date">2025년 8월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/223964139045" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/5747209783/Qf01adWUc" target="_blank" rel="noopener"><img src="images/2511-madamefigaro.jpg" alt="MadameFigaro 2025년 11월호" loading="lazy"></a></div><div class="mag-caption">MadameFigaro<span class="mag-date">2025년 11월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224087903248" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/7242368664/QmitQa41e" target="_blank" rel="noopener"><img src="images/2601-voguesingapore.jpg" alt="VOGUE SINGAPORE 2026년 1월호" loading="lazy"></a></div><div class="mag-caption">VOGUE SINGAPORE<span class="mag-date">2026년 1월호</span><a class="mag-translate-link" href="https://vogue.sg/zhou-yiran-art-issue-digital-cover-star/" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://x.com/vazseyo/status/2036282379216757041?s=46" target="_blank" rel="noopener"><img src="images/2603-traveler.jpg" alt="悦游 Traveler 2026년 3·4월호" loading="lazy"></a></div><div class="mag-caption">悦游 Traveler<span class="mag-date">2026년 3·4월호</span><a class="mag-translate-link" href="https://x.com/vazseyo/status/2036664458387530178?s=20" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://x.com/vazseyo/status/1907659714550460857?s=46" target="_blank" rel="noopener"><img src="images/2604-vogue.jpg" alt="VOGUE 2026년 4월호" loading="lazy"></a></div><div class="mag-caption">VOGUE<span class="mag-date">2026년 4월호</span><a class="mag-translate-link" href="https://m.blog.naver.com/vazseyo/223821040194" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://weibo.com/1896635132/QEpqdBhcI" target="_blank" rel="noopener"><img src="images/2605-ellemen.jpg" alt="ELLEMEN 2026년 5월호" loading="lazy"></a></div><div class="mag-caption">ELLEMEN<span class="mag-date">2026년 5월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224280787398" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-<div class="mag-item"><div class="mag-cover"><a href="https://x.com/vazseyo/status/2080523034117718489?s=46" target="_blank" rel="noopener"><img src="images/2607-bazaarmen.jpg" alt="芭莎男士 Harper's BAZAAR MEN 2026년 7월호" loading="lazy"></a></div><div class="mag-caption">芭莎男士 Harper's BAZAAR MEN<span class="mag-date">2026년 7월호</span><a class="mag-translate-link" href="https://blog.naver.com/vazseyo/224358305130" target="_blank" rel="noopener">인터뷰 ↗</a></div></div>
-</div>
-</section>
-<section class="wiki-section year-colored" id="awards">
-<div class="wiki-section-title"><span class="num">07</span>수상</div>
-<div class="act-row"><div class="act-year">2022</div><div class="act-detail">에스콰이어 신사의 밤 올해의 신세력</div></div>
-<div class="act-row"><div class="act-year">2023</div><div class="act-detail">2022 웨이보의 밤 올해의 신예배우<br>신시대 국제 TV 페스티벌 신시대 최우수 신인 남자 배우<br>신호각 드라마 TV 드라마 감독의 밤 올해의 돌파 배우<br>2023 웨이보 시상식 올해의 기대 배우</div></div>
-<div class="act-row"><div class="act-year">2024</div><div class="act-detail">2023 웨이보의 밤 올해의 돌파 배우</div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">웨이보 시상식 올해의 주목받는 배우<br>웨이보 문화교류의 밤 싱가폴 올해의 따뜻한 에너지 아티스트<span class="footnote-marker" onclick="toggleFootnote('award', event)">[17]<span class="footnote-popup" id="fn-award">관련 <a href="https://m.weibo.cn/detail/5233731101003549" target="_blank" rel="noopener">웨이보 ↗</a></span></span></div></div>
-</section>
-<section class="wiki-section year-colored" id="racing">
-<div class="wiki-section-title"><span class="num">08</span>레이싱</div>
-<div class="act-row"><div class="act-year">2023</div><div class="act-detail">샤먼 국제 레이싱 챔피언십 · 1위</div></div>
-<div class="act-row"><div class="act-year">2024</div><div class="act-detail">CTCC 중국 투어링카 챔피언십 커차오 라운드 A조 · 1위</div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">미쉐린 아부다비 6시간 내구 레이스 · 11위 (Garage59) <a href="https://youtu.be/4zIiPNRxB3Y" target="_blank" rel="noopener" style="color:var(--pink);font-weight:700;text-decoration:none;">↗</a></div></div>
-<div class="act-row"><div class="act-year">2025</div><div class="act-detail">상하이 8시간 내구 레이스 · 6위 (Frankenstein Racing)</div></div>
-<div class="act-row"><div class="act-year">2026</div><div class="act-detail">CHINA GT Championship GTC class · 1위 (종합 2위 / Frankenstein Racing) <a href="https://youtu.be/i3Ow7-QKssA" target="_blank" rel="noopener" style="color:var(--pink);font-weight:700;text-decoration:none;">↗</a></div></div>
-</section>
+<div id="posts-feed"></div>
 </div>
 <footer class="site-footer">© VAz</footer>
+<script src="emoticons.js"></script>
 <script src="data-schedule.js"></script>
 <script src="data-notice.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="data-link-notice.js"></script>
+<script src="data-2024-11.js"></script>
+<script src="data-2024-12.js"></script>
+<script src="data-2024-10.js"></script>
+<script src="data-2024-09.js"></script>
+<script src="data-2024-08.js"></script>
+<script src="data-2024-07.js"></script>
+<script src="data-2024-06.js"></script>
+<script src="data-2024-05.js"></script>
+<script src="data-2024-04.js"></script>
+<script src="data-2024-03.js"></script>
+<script src="data-2024-02.js"></script>
+<script src="data-2024-01.js"></script>
+<script src="data-2023-10.js"></script>
+<script src="data-2023-11.js"></script>
+<script src="data-2023-12.js"></script>
+<script src="data-2023-09.js"></script>
+<script src="data-2023-08.js"></script>
+<script src="data-2023-07.js"></script>
+<script src="data-2023-03.js"></script>
+<script src="data-2023-01.js"></script>
+<script src="data-2022-09.js"></script>
+<script src="data-2022-11.js"></script>
+<script src="data-2022-08.js"></script>
+<script src="data-2026-01.js"></script>
+<script src="data-2026-02.js"></script>
+<script src="data-2026-03.js"></script>
+<script src="data-2026-04.js"></script>
+<script src="data-2026-05.js"></script>
+<script src="data-2026-06.js"></script>
+<script src="data-2026-07.js"></script>
+<script src="data-2026-08.js"></script>
+<script src="data-2025-01.js"></script>
+<script src="data-2025-02.js"></script>
+<script src="data-2025-03.js"></script>
+<script src="data-2025-04.js"></script>
+<script src="data-2025-05.js"></script>
+<script src="data-2025-06.js"></script>
+<script src="data-2025-07.js"></script>
+<script src="data-2025-08.js"></script>
+<script src="data-2025-09.js"></script>
+<script src="data-2025-10.js"></script>
+<script src="data-2025-11.js"></script>
+<script src="data-2025-12.js"></script>
 <script>
+const posts = [
+...(typeof posts_202411 !== 'undefined' ? posts_202411 : []),
+...(typeof posts_202412 !== 'undefined' ? posts_202412 : []),
+...(typeof posts_202410 !== 'undefined' ? posts_202410 : []),
+...(typeof posts_202409 !== 'undefined' ? posts_202409 : []),
+...(typeof posts_202408 !== 'undefined' ? posts_202408 : []),
+...(typeof posts_202407 !== 'undefined' ? posts_202407 : []),
+...(typeof posts_202406 !== 'undefined' ? posts_202406 : []),
+...(typeof posts_202405 !== 'undefined' ? posts_202405 : []),
+...(typeof posts_202404 !== 'undefined' ? posts_202404 : []),
+...(typeof posts_202403 !== 'undefined' ? posts_202403 : []),
+...(typeof posts_202402 !== 'undefined' ? posts_202402 : []),
+...(typeof posts_202401 !== 'undefined' ? posts_202401 : []),
+...(typeof posts_202310 !== 'undefined' ? posts_202310 : []),
+...(typeof posts_202311 !== 'undefined' ? posts_202311 : []),
+...(typeof posts_202312 !== 'undefined' ? posts_202312 : []),
+...(typeof posts_202309 !== 'undefined' ? posts_202309 : []),
+...(typeof posts_202308 !== 'undefined' ? posts_202308 : []),
+...(typeof posts_202307 !== 'undefined' ? posts_202307 : []),
+...(typeof posts_202303 !== 'undefined' ? posts_202303 : []),
+...(typeof posts_202301 !== 'undefined' ? posts_202301 : []),
+...(typeof posts_202209 !== 'undefined' ? posts_202209 : []),
+...(typeof posts_202211 !== 'undefined' ? posts_202211 : []),
+...(typeof posts_202208 !== 'undefined' ? posts_202208 : []),
+...(typeof posts_202601 !== 'undefined' ? posts_202601 : []),
+...(typeof posts_202602 !== 'undefined' ? posts_202602 : []),
+...(typeof posts_202603 !== 'undefined' ? posts_202603 : []),
+...(typeof posts_202604 !== 'undefined' ? posts_202604 : []),
+...(typeof posts_202605 !== 'undefined' ? posts_202605 : []),
+...(typeof posts_202606 !== 'undefined' ? posts_202606 : []),
+...(typeof posts_202607 !== 'undefined' ? posts_202607 : []),
+...(typeof posts_202608 !== 'undefined' ? posts_202608 : []),
+...(typeof posts_202501 !== 'undefined' ? posts_202501 : []),
+...(typeof posts_202502 !== 'undefined' ? posts_202502 : []),
+...(typeof posts_202503 !== 'undefined' ? posts_202503 : []),
+...(typeof posts_202504 !== 'undefined' ? posts_202504 : []),
+...(typeof posts_202505 !== 'undefined' ? posts_202505 : []),
+...(typeof posts_202506 !== 'undefined' ? posts_202506 : []),
+...(typeof posts_202507 !== 'undefined' ? posts_202507 : []),
+...(typeof posts_202508 !== 'undefined' ? posts_202508 : []),
+...(typeof posts_202509 !== 'undefined' ? posts_202509 : []),
+...(typeof posts_202510 !== 'undefined' ? posts_202510 : []),
+...(typeof posts_202511 !== 'undefined' ? posts_202511 : []),
+...(typeof posts_202512 !== 'undefined' ? posts_202512 : []),
+];
+</script>
+<script>
+// emoticons.js가 아직 없거나 로드 실패해도 사이트가 깨지지 않도록 안전장치
+if (typeof renderWeiboEmoticons !== 'function') {
+window.renderWeiboEmoticons = function(text) { return text; };
+}
+const ACTOR_IMG = 'IMG_1757.JPG';
+const ACTOR_NICK = '周翊然Tz';
+const MONTH_CAP = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+let currentFilter = { type: 'all', value: null };
+let dateTree = {};
 function toggleMobileMenu() {
 document.getElementById('hamburgerBtn').classList.toggle('open');
 const drawer = document.getElementById('sideDrawer');
@@ -759,10 +1154,6 @@ if (opening && typeof gsap !== 'undefined') {
 const rows = drawer.querySelectorAll('.side-drawer-label, .side-drawer-list > *');
 gsap.fromTo(rows, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.045, ease: 'power2.out', delay: 0.15 });
 }
-}
-function toggleArchiveSubmenu() {
-document.getElementById('archiveMenuToggle').classList.toggle('open');
-document.getElementById('archiveSubmenu').classList.toggle('open');
 }
 function toggleDarkMode() {
 const isDark = document.documentElement.classList.toggle('dark');
@@ -807,85 +1198,14 @@ openNotice();
 document.getElementById('noticeDot').classList.remove('show');
 }
 })();
-// "보러가기" 링크 확인 팝업 — 내용은 data-link-notice.js 파일 하나만 수정하면 반영됩니다.
-// "오늘 하루 그만보기"를 누르면 그 날은 팝업 없이 바로 이동합니다.
-let pendingGuideLinkUrl = '';
-function handleGuideLink(e, url) {
-try {
-if (localStorage.getItem('linkNoticeDontShow') === new Date().toDateString()) {
-return true; // 오늘 이미 "그만보기"를 눌렀으면 팝업 없이 바로 이동
+function toggleArchiveSubmenu() {
+document.getElementById('archiveMenuToggle').classList.toggle('open');
+document.getElementById('archiveSubmenu').classList.toggle('open');
 }
-} catch(err) {}
-if (typeof LINK_NOTICE_DATA === 'undefined') {
-return true; // 데이터 파일이 없으면 팝업 없이 바로 이동
-}
-e.preventDefault();
-pendingGuideLinkUrl = url;
-document.getElementById('linkConfirmTitle').textContent = LINK_NOTICE_DATA.title;
-document.getElementById('linkConfirmBody').innerHTML = LINK_NOTICE_DATA.body;
-document.getElementById('linkConfirmOverlay').classList.add('open');
-document.body.style.overflow = 'hidden';
-return false;
-}
-function closeLinkConfirm() {
-document.getElementById('linkConfirmOverlay').classList.remove('open');
-document.body.style.overflow = '';
-pendingGuideLinkUrl = '';
-}
-function goLinkConfirm() {
-if (pendingGuideLinkUrl) window.open(pendingGuideLinkUrl, '_blank', 'noopener');
-closeLinkConfirm();
-}
-function goLinkConfirmDontShowToday() {
-try { localStorage.setItem('linkNoticeDontShow', new Date().toDateString()); } catch(err) {}
-goLinkConfirm();
-}
-document.addEventListener('keydown', e => {
-if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
-});
-function renderDebutDday() {
-const debut = new Date('2017-03-30T00:00:00');
-const now = new Date();
-const diffDays = Math.floor((now - debut) / 86400000);
-let years = now.getFullYear() - debut.getFullYear();
-const beforeAnniv = (now.getMonth() < debut.getMonth()) || (now.getMonth() === debut.getMonth() && now.getDate() < debut.getDate());
-if (beforeAnniv) years -= 1;
-const el = document.getElementById('debutDday');
-if (el) el.textContent = ` (+${diffDays}일, ${years}주년)`;
-}
-renderDebutDday();
-function toggleFootnote(id, event) {
-event.stopPropagation();
-document.querySelectorAll('.footnote-popup.open').forEach(el => {
-if (el.id !== 'fn-' + id) { el.classList.remove('open'); if (typeof gsap !== 'undefined') gsap.set(el, { clearProps: 'all' }); else el.style.transform = ''; }
-});
-const target = document.getElementById('fn-' + id);
-if (!target) return;
-const willOpen = !target.classList.contains('open');
-target.classList.toggle('open');
-if (typeof gsap !== 'undefined') gsap.set(target, { clearProps: 'all' }); else target.style.transform = '';
-if (willOpen) {
-requestAnimationFrame(() => {
-const rect = target.getBoundingClientRect();
-const margin = 10;
-let shift = 0;
-if (rect.right > window.innerWidth - margin) {
-shift = (window.innerWidth - margin) - rect.right;
-} else if (rect.left < margin) {
-shift = margin - rect.left;
-}
-if (typeof gsap !== 'undefined') {
-gsap.fromTo(target, { opacity: 0, scale: 0.9, y: -6, x: shift }, { opacity: 1, scale: 1, y: 0, x: shift, duration: 0.25, ease: 'power2.out' });
-} else if (shift !== 0) {
-target.style.transform = `translateX(${shift}px)`;
-}
-});
-}
-}
-document.addEventListener('click', () => {
-document.querySelectorAll('.footnote-popup.open').forEach(el => { el.classList.remove('open'); el.style.transform = ''; });
-});
+// ============ 스케줄 캘린더 모달 ============
+// data-schedule.js 의 scheduleEvents = [{ date:'YYYY-MM-DD', time:'19:00', title:'...', category:'live'|'event'|'shoot' }, ...] 를 읽어서 렌더링.
 const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+const CATEGORY_LABELS = { live: '라이브', event: '행사', shoot: '촬영' };
 let scheduleViewDate = new Date();
 let scheduleTargetDay = null;
 let scheduleMonthEvents = {};
@@ -970,7 +1290,7 @@ if (target) target.classList.add('selected');
 const dayEvents = scheduleMonthEvents[day] || [];
 const detail = document.getElementById('scheduleDetail');
 if (!dayEvents.length) {
-detail.innerHTML = '<p class="sched-empty">오늘은 일정이 없습니다.</p>';
+detail.innerHTML = '<p class="sched-empty">이 날은 일정이 없습니다.</p>';
 return;
 }
 detail.innerHTML = dayEvents.map(e => `
@@ -979,6 +1299,422 @@ detail.innerHTML = dayEvents.map(e => `
 ${e.time ? `<span class="sched-time">${e.time}</span>` : ''}
 <span>${e.title}</span>
 </div>`).join('');
+}
+function formatDateTime(d) {
+const date = new Date(d);
+const month = date.getMonth() + 1;
+const day = date.getDate();
+const hour = d.includes('T') ? date.getHours().toString().padStart(2,'0') : null;
+const min = d.includes('T') ? date.getMinutes().toString().padStart(2,'0') : null;
+return hour ? `${month}.${day} ${hour}:${min}` : `${month}.${day}`;
+}
+function getMonthLabel(d) {
+const date = new Date(d);
+return `${date.getFullYear()}년 ${date.getMonth()+1}월`;
+}
+function getDayLabel(d) {
+const date = new Date(d);
+return `${date.getMonth()+1}월 ${date.getDate()}일`;
+}
+function sameText(a, b) {
+return (a || '').trim() === (b || '').trim();
+}
+// ============ VOICE MESSAGE (weibo-style click-to-play) ============
+// data-YYYY-MM.js 의 comment.audio / actorReply.audio 값을 받아서
+// 클릭 시 재생되는 웨이보 스타일 음성 메시지 HTML 문자열을 만들어줌.
+// duration은 초 단위 정수(없으면 오디오 메타데이터에서 자동으로 읽어옴).
+let vmInstanceSeq = 0;
+window.__vmInstances = window.__vmInstances || {};
+function renderVoiceMessageHtml(audioSrc, duration) {
+const vmId = 'vm-' + (++vmInstanceSeq);
+return `
+<span class="voice-message" id="${vmId}" onclick="toggleVoiceMessage('${vmId}', '${audioSrc}')">
+<span class="vm-play-btn">
+<svg class="vm-icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+<svg class="vm-icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+</span>
+<span class="vm-waveform">
+<span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
+<span class="vm-bar"></span><span class="vm-bar"></span><span class="vm-bar"></span>
+</span>
+<span class="vm-duration" id="${vmId}-dur">${duration ? duration + '″' : ''}</span>
+<span class="vm-download" onclick="downloadVoiceAudio(event, '${audioSrc}')" title="음성 다운로드">
+<svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+</span>
+</span>`;
+}
+function downloadVoiceAudio(event, audioSrc) {
+event.stopPropagation();
+fetch(audioSrc).then(res => res.blob()).then(blob => {
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = audioSrc.split('/').pop();
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+setTimeout(() => URL.revokeObjectURL(url), 1000);
+}).catch(() => {
+window.open(audioSrc, '_blank');
+});
+}
+function toggleVoiceMessage(vmId, audioSrc) {
+const el = document.getElementById(vmId);
+if (!el) return;
+// 이 인스턴스에서 이미 만든 Audio 객체가 있으면 재사용, 없으면 새로 생성
+let audio = window.__vmInstances[vmId];
+if (!audio) {
+audio = new Audio(audioSrc);
+window.__vmInstances[vmId] = audio;
+const durEl = document.getElementById(vmId + '-dur');
+audio.addEventListener('loadedmetadata', () => {
+if (durEl && !durEl.textContent) durEl.textContent = Math.round(audio.duration) + '″';
+});
+audio.addEventListener('ended', () => {
+el.classList.remove('playing');
+audio.currentTime = 0;
+});
+}
+// 페이지에서 재생 중인 다른 음성 메시지가 있으면 정지
+document.querySelectorAll('.voice-message.playing').forEach(other => {
+if (other.id !== vmId) {
+other.classList.remove('playing');
+const otherAudio = window.__vmInstances[other.id];
+if (otherAudio) otherAudio.pause();
+}
+});
+if (audio.paused) {
+audio.play();
+el.classList.add('playing');
+} else {
+audio.pause();
+el.classList.remove('playing');
+}
+}
+function renderComment(c) {
+let replyHtml = '';
+if (c.actorReplies && c.actorReplies.length) {
+replyHtml = c.actorReplies.map(r => `
+<div class="actor-reply">
+<div class="actor-reply-header">
+<div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
+<span class="actor-reply-name">${ACTOR_NICK}</span>
+</div>
+${r.originalText && !sameText(r.originalText, r.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(r.originalText)}</div>` : ''}
+<div class="actor-reply-translated">${renderWeiboEmoticons(r.translatedText)}</div>
+${r.audio ? renderVoiceMessageHtml(r.audio, r.audioDuration) : ''}
+</div>`).join('');
+} else if (c.actorReply) {
+replyHtml = `
+<div class="actor-reply">
+<div class="actor-reply-header">
+<div class="actor-reply-avatar"><img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" /></div>
+<span class="actor-reply-name">${ACTOR_NICK}</span>
+</div>
+${c.actorReply.originalText && !sameText(c.actorReply.originalText, c.actorReply.translatedText) ? `<div class="actor-reply-original zh">${renderWeiboEmoticons(c.actorReply.originalText)}</div>` : ''}
+${c.actorReply.translatedText ? `<div class="actor-reply-translated">${renderWeiboEmoticons(c.actorReply.translatedText)}</div>` : ''}
+${c.actorReply.replyImages && c.actorReply.replyImages.length ? `<div class="comment-images">${c.actorReply.replyImages.map(src => `<img src="${src}" alt="답글 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
+${c.actorReply.audio ? renderVoiceMessageHtml(c.actorReply.audio, c.actorReply.audioDuration) : ''}
+</div>`;
+}
+const isActor = c.username === ACTOR_NICK;
+const avatarHtml = isActor
+? `<img src="${ACTOR_IMG}" alt="${ACTOR_NICK}" />`
+: (c.username === '吃瓜罗伯特' ? '🤖' : '');
+return `
+<div class="comment-item">
+<div class="comment-header">
+<div class="comment-avatar" style="${isActor ? '' : 'background:var(--pink);'}">${avatarHtml}</div>
+<span class="comment-username" style="${isActor ? 'color:var(--pink);' : ''}">${c.username}</span>
+</div>
+${!sameText(c.originalText, c.translatedText) ? `<div class="comment-original zh">${renderWeiboEmoticons(c.originalText)}</div>` : ''}
+<div class="comment-translated">${renderWeiboEmoticons(c.translatedText)}</div>
+${c.note ? `<div class="comment-note">note: ${c.note}</div>` : ''}
+${c.images && c.images.length ? `<div class="comment-images">${c.images.map(src => `<img src="${src}" alt="첨부 이미지" loading="lazy" onclick="openLightbox('${src}')" />`).join('')}</div>` : ''}
+${replyHtml}
+${c.audio ? renderVoiceMessageHtml(c.audio, c.audioDuration) : ''}
+</div>`;
+}
+function commentMatches(c, query) {
+return (c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+(c.originalText && c.originalText.toLowerCase().includes(query)) ||
+(c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query)) ||
+(c.actorReplies && c.actorReplies.some(r => r.translatedText && r.translatedText.toLowerCase().includes(query)));
+}
+function renderImages(images) {
+if (!images || !images.length) return '';
+if (images.length === 1) {
+return `<div class="post-image-single"><img src="${images[0]}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${images[0]}')" /></div>`;
+}
+const shown = images.slice(0, 9);
+const remaining = images.length - 9;
+const colsClass = shown.length === 2 ? 'cols-2' : '';
+const cells = shown.map((src, i) => {
+if (i === 8 && remaining > 0) {
+return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /><div class="grid-overlay">+${remaining}</div></div>`;
+}
+return `<div class="grid-cell"><img src="${src}" alt="게시물 이미지" loading="lazy" onclick="openLightbox('${src}')" /></div>`;
+}).join('');
+return `<div class="post-image-grid ${colsClass}">${cells}</div>`;
+}
+function renderPost(post, query, singlePostMonth) {
+const isFan = post.authorAvatar === '🥣';
+const isStudio = post.authorAvatar === '💼';
+const authorName = post.authorName || ACTOR_NICK;
+let avatarHtml, avatarStyle = '';
+if (isFan) {
+avatarHtml = '';
+} else if (isStudio) {
+avatarHtml = '💼';
+avatarStyle = 'background:var(--studio);display:flex;align-items:center;justify-content:center;font-size:15px;';
+} else {
+avatarHtml = `<img src="${ACTOR_IMG}" alt="${authorName}" />`;
+}
+const imagesHtml = renderImages(post.images);
+const youtubeHtml = post.youtubeUrl ? `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${post.youtubeUrl.match(/(?:youtu\.be\/|v=)([^?&]+)/)[1]}" allowfullscreen></iframe></div>` : '';
+let commentsHtml;
+let commentCount = post.comments ? post.comments.length : 0;
+let autoOpen = false;
+if (query && post.comments && post.comments.length) {
+const matched = post.comments.filter(c => commentMatches(c, query));
+if (matched.length > 0) {
+commentsHtml = matched.map(renderComment).join('');
+commentCount = matched.length;
+autoOpen = true;
+} else {
+commentsHtml = '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+}
+} else {
+commentsHtml = post.comments && post.comments.length
+? post.comments.map(renderComment).join('')
+: '<p style="font-size:12px;color:var(--gray-muted);text-align:center;padding:8px;">댓글이 없습니다.</p>';
+}
+// 1순위: 해당 월에 게시물이 1개뿐이면 댓글 개수 상관없이 항상 펼쳐서 보여줌
+// 2순위: 댓글이 5개 이하면 매번 펼치기 눌러야 하는 게 번거로우니 처음부터 펼쳐서 보여주고,
+// 5개 초과(댓글 많은 스레드형)는 기존처럼 펼치기/접기 버튼을 눌러야 보이게 유지
+const forceOpen = commentCount > 0 && (singlePostMonth || commentCount <= 5);
+if (forceOpen) autoOpen = true;
+const footerBtn = forceOpen
+? ''
+: (commentCount > 0
+? `<button class="toggle-comments-btn" id="cmtbtn-${post.id}" onclick="toggleComments(${post.id})">댓글 ${commentCount}개 &nbsp;↓</button>`
+: `<span class="toggle-comments-btn empty">댓글 없음</span>`);
+return `
+<article class="post-card" id="post-${post.id}">
+<div class="post-meta">
+<div class="post-avatar" style="${avatarStyle}">${avatarHtml}</div>
+<div class="post-meta-info">
+<div class="actor-name" style="${isStudio ? 'color:var(--studio);' : ''}">${authorName}</div>
+<div class="post-date">${formatDateTime(post.date)}</div>
+</div>
+${post.weiboUrl ? `<a class="weibo-link" href="${post.weiboUrl}" target="_blank" rel="noopener" style="${isStudio ? 'color:var(--studio);' : ''}">원문 ↗</a>` : ''}
+</div>
+${!sameText(post.originalText, post.translatedText) ? `<div class="original-text zh">${renderWeiboEmoticons(post.originalText)}</div>` : ''}
+<div class="translated-text">${renderWeiboEmoticons(post.translatedText)}</div>
+${post.note ? `<div class="translation-note">note: ${post.note}</div>` : ''}
+${imagesHtml}${youtubeHtml}
+<div class="post-footer">
+${footerBtn}
+</div>
+<div class="comments-section${autoOpen ? ' open' : ''}" id="comments-${post.id}">
+${commentsHtml}
+</div>
+</article>`;
+}
+function toggleComments(id) {
+const el = document.getElementById(`comments-${id}`);
+const btn = document.getElementById(`cmtbtn-${id}`);
+const opening = !el.classList.contains('open');
+el.classList.toggle('open');
+if (opening) {
+btn.innerHTML = '댓글 접기 &nbsp;↑';
+if (typeof gsap !== 'undefined') {
+gsap.fromTo(el, { opacity: 0, scale: 0.97, y: -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+}
+} else {
+const count = el.querySelectorAll('.comment-item').length;
+btn.innerHTML = `댓글 ${count}개 &nbsp;↓`;
+}
+}
+function getFilteredPosts() {
+const query = document.getElementById('searchInput').value.toLowerCase().trim();
+let filtered = [...posts];
+if (query) {
+// 검색어가 있으면 연도/월 필터 무시하고 전체 기간에서 검색
+filtered = filtered.filter(p =>
+p.translatedText.toLowerCase().includes(query) ||
+p.originalText.toLowerCase().includes(query) ||
+(p.comments && p.comments.some(c =>
+(c.translatedText && c.translatedText.toLowerCase().includes(query)) ||
+(c.originalText && c.originalText.toLowerCase().includes(query)) ||
+(c.actorReply && c.actorReply.translatedText && c.actorReply.translatedText.toLowerCase().includes(query))
+))
+);
+} else if (currentFilter.type === 'month') {
+filtered = filtered.filter(p => {
+const d = new Date(p.date);
+return d.getFullYear() === currentFilter.value.year && d.getMonth() + 1 === currentFilter.value.month;
+});
+}
+filtered.sort((a, b) => {
+const da = new Date(a.date);
+const db = new Date(b.date);
+const monthA = da.getFullYear() * 100 + da.getMonth();
+const monthB = db.getFullYear() * 100 + db.getMonth();
+if (monthA !== monthB) return monthB - monthA;
+return da - db;
+});
+return filtered;
+}
+function renderFeed() {
+const rawQuery = document.getElementById('searchInput').value.trim();
+const query = rawQuery.toLowerCase();
+const filtered = getFilteredPosts();
+const singlePostMonth = filtered.length === 1;
+document.getElementById('feed-count').textContent = filtered.length + '개';
+const filterBar = document.getElementById('filterBar');
+if (rawQuery) {
+document.getElementById('filterLabel').textContent = `"${rawQuery}" 검색 결과 · 전체 기간`;
+filterBar.classList.add('show');
+} else {
+filterBar.classList.remove('show');
+}
+if (filtered.length === 0) {
+document.getElementById('posts-feed').innerHTML = `<div class="empty-state">게시물이 없습니다.</div>`;
+return;
+}
+let html = '';
+let lastMonth = null;
+let lastDay = null;
+filtered.forEach(p => {
+const monthLabel = getMonthLabel(p.date);
+if (monthLabel !== lastMonth && query) {
+html += `<div class="date-index">${monthLabel}</div>`;
+lastMonth = monthLabel;
+lastDay = null;
+}
+const dayLabel = getDayLabel(p.date);
+if (dayLabel !== lastDay) {
+const dd = new Date(p.date);
+html += `<div class="day-divider"><span class="day-divider-dot"></span><span class="day-divider-num">${dd.getDate()}</span><span class="day-divider-cap">${MONTH_CAP[dd.getMonth()]} ${dd.getFullYear()}</span></div>`;
+lastDay = dayLabel;
+}
+html += renderPost(p, query, singlePostMonth);
+});
+document.getElementById('posts-feed').innerHTML = html;
+}
+function filterByMonth(year, month) {
+currentFilter = { type: 'month', value: { year, month } };
+renderFeed();
+document.querySelectorAll('.month-item').forEach(el => el.classList.remove('active'));
+const el = document.getElementById(`m-${year}-${month}`);
+if (el) el.classList.add('active');
+document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+const yEl = document.getElementById(`ytab-${year}`);
+if (yEl) yEl.classList.add('active');
+}
+function clearSearch() {
+document.getElementById('searchInput').value = '';
+renderFeed();
+}
+function renderDateTree() {
+const tree = {};
+posts.forEach(p => {
+const d = new Date(p.date);
+const y = d.getFullYear();
+const m = d.getMonth() + 1;
+if (!tree[y]) tree[y] = {};
+if (!tree[y][m]) tree[y][m] = 0;
+tree[y][m]++;
+});
+dateTree = tree;
+const years = Object.keys(tree).map(Number).sort((a,b) => b - a);
+const latestYear = years[0];
+const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
+document.getElementById('year-tabs').innerHTML = years.map(year => `
+<div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
+`).join('');
+renderMonthRow(latestYear);
+filterByMonth(latestYear, latestMonth);
+}
+function renderMonthRow(year) {
+const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
+document.getElementById('month-row').innerHTML = months.map(month => `
+<div class="month-item" id="m-${year}-${month}" onclick="filterByMonth(${year}, ${month})">${month}월<span class="m-count">${dateTree[year][month]}</span></div>
+`).join('');
+}
+function selectYear(year) {
+document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+const yEl = document.getElementById(`ytab-${year}`);
+if (yEl) yEl.classList.add('active');
+renderMonthRow(year);
+const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
+filterByMonth(year, months[0]);
+}
+renderFeed();
+renderDateTree();
+// 맨 위로 / 맨 아래로 버튼
+function scrollToTop() {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function scrollToBottom() {
+window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+}
+function updateScrollNav() {
+const scrollY = window.scrollY || document.documentElement.scrollTop;
+const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+const topBtn = document.getElementById('scrollTopBtn');
+const bottomBtn = document.getElementById('scrollBottomBtn');
+if (!topBtn || !bottomBtn) return;
+topBtn.classList.toggle('show', scrollY > 400);
+bottomBtn.classList.toggle('show', maxScroll > 400 && scrollY < maxScroll - 200);
+}
+window.addEventListener('scroll', updateScrollNav);
+window.addEventListener('resize', updateScrollNav);
+updateScrollNav();
+// 이미지 크게보기 + 저장
+let currentLightboxSrc = '';
+function openLightbox(src) {
+const overlay = document.getElementById('lightboxOverlay');
+const img = document.getElementById('lightboxImg');
+img.src = src;
+currentLightboxSrc = src;
+overlay.classList.add('open');
+document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+document.getElementById('lightboxOverlay').classList.remove('open');
+document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+if (e.key === 'Escape') {
+closeLightbox();
+if (document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
+}
+});
+// 이미지 저장: 가능하면 네이티브 공유시트(iOS/Android에서 "사진에 저장"을 한 번에 지원)를 띄우고,
+// 지원 안 되는 환경(주로 데스크톱)에서는 기존 다운로드 방식으로 자동 전환됨.
+async function saveOrShareImage() {
+const src = currentLightboxSrc;
+if (!src) return;
+const fileName = src.split('/').pop();
+try {
+const response = await fetch(src);
+const blob = await response.blob();
+const file = new File([blob], fileName, { type: blob.type || 'image/jpeg' });
+if (navigator.canShare && navigator.canShare({ files: [file] })) {
+await navigator.share({ files: [file] });
+return;
+}
+} catch (err) {
+// 공유가 취소되었거나 실패하면 아래 다운로드 방식으로 넘어감
+}
+const a = document.createElement('a');
+a.href = src;
+a.download = fileName;
+document.body.appendChild(a);
+a.click();
+a.remove();
 }
 </script>
 </body>
