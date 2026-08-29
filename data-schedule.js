@@ -16,6 +16,6 @@ const scheduleEvents = [
   { date: '2026-08-21', time: '', title: 'HAPPITAT 행사 📍태국', category: 'event' },
   { date: '2026-08-22', time: '', title: '凯旋1664 행사 📍상하이', category: 'event' },
   { date: '2026-08-24', time: '', title: '비즈니스 촬영', category: 'shoot' },
-  { date: '2026-08-29', time: '', title: '브랜드 행사 📍시안', category: 'event' },
+  { date: '2026-08-29', time: '', title: '겔랑 행사 📍시안', category: 'event' },
   { date: '2026-08-31', time: '', title: '브랜드 행사 📍상하이', category: 'event' },
 ];
