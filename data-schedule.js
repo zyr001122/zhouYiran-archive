@@ -18,4 +18,11 @@ const scheduleEvents = [
   { date: '2026-08-24', time: '', title: '비즈니스 촬영', category: 'shoot' },
   { date: '2026-08-29', time: '', title: '겔랑 행사 📍시안', category: 'event' },
   { date: '2026-08-31', time: '', title: '브랜드 행사 📍상하이', category: 'event' },
+  { date: '2026-09-04', time: '', title: '예능 촬영 - 안녕토요일(你好，星期六)', category: 'shoot' },
+  { date: '2026-09-06', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (1일차)', category: 'shoot' },
+  { date: '2026-09-07', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (2일차)', category: 'shoot' },
+  { date: '2026-09-08', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (3일차)', category: 'shoot' },
+  { date: '2026-09-09', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (4일차)', category: 'shoot' },
+  { date: '2026-09-10', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (5일차)', category: 'shoot' },
+  { date: '2026-09-23', time: '', title: '비즈니스 촬영', category: 'shoot' },
 ];
