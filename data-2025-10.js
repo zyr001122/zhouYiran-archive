@@ -16,7 +16,7 @@ const posts_202510 = [
         images: ["images/2510-first-race.jpg"],
         actorReply: {
           originalText: "还行",
-          translatedText: "할 만했어"
+          translatedText: "할만했어"
         }
       },
       {
