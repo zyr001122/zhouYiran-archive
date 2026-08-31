@@ -1,7 +1,7 @@
 const posts_202601 = [
   {
     id: 6,
-    date: "2026-01-23T00:08",
+    date: "2026-01-22T00:08",
     weiboUrl: "https://weibo.com/5994946077/5258025946319275",
     originalText: "睡觉了吗 大家",
     translatedText: "다들 자려나?",
