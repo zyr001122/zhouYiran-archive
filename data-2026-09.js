@@ -4,7 +4,7 @@ const posts_202609 = [
     date: "2026-09-22",
     weiboUrl: "https://weibo.com/5994946077/Rjk7Z6uL7",
     originalText: "来了",
-    translatedText: "왔어",
+    translatedText: "왔다",
     images: [],
     comments: [
       {
