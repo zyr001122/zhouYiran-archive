@@ -175,12 +175,12 @@ const posts_202609 = [
       {
         id: 26090116,
         username: "脆皮灿包",
-        originalText: "邀请你跟我一起看彩虹@周翊然Tz",
-        translatedText: "나랑 같이 무지개 보러가자 @周翊然Tz",
+        originalText: "邀请你跟我一起看彩虹",
+        translatedText: "나랑 같이 무지개 보러가자",
         images: ["images/2609-rainbow-1.jpg"],
         actorReply: {
           originalText: "藏在云里的彩虹 有点意思",
-          translatedText: "구름 속에 숨은 무지개라니, 느낌있네"
+          translatedText: "구름 속에 숨은 무지개라니 느낌있네"
         }
       },
       {
@@ -221,7 +221,7 @@ const posts_202609 = [
         images: ["images/2609-rival-1.jpg"],
         actorReply: {
           originalText: "瑟瑟发抖了",
-          translatedText: "벌벌 떨고 있다"
+          translatedText: "벌벌 떨고 있어"
         }
       },
       {
