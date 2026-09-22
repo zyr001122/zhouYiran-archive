@@ -44,7 +44,7 @@ const posts_202609 = [
         id: 26090104,
         username: "点点TZL",
         originalText: "听说开车哥要去比赛了 预祝哥哥顺利完赛 稳定发挥 同时也提前祝哥哥中秋快乐 一起吃月饼吧",
-        translatedText: "레이서 오빠 레이스 나간다던데 무사 완주하고 실력 그대로 발휘하고 와 미리 응원할게. 그리고 추석도 미리 축하해! 같이 월병 먹장",
+        translatedText: "레이서 오빠 레이스 나간다던데 무사 완주하고 실력 그대로 발휘하고 와 미리 응원할게 그리고 추석도 미리 축하해 같이 월병 먹자",
         images: ["images/2609-mooncake-1.jpg"],
         actorReply: {
           originalText: "？？？有点厉害",
@@ -143,7 +143,7 @@ const posts_202609 = [
         id: 26090113,
         username: "甜丸泡奶芙Zz_",
         originalText: "好想你呀TT哥哥你现在在干嘛呀",
-        translatedText: "너무 보고 싶어 TT 오빠 지금 뭐 해?",
+        translatedText: "너무 보고 싶어 TT 오빠 지금 뭐 하구 있어?",
         images: ["images/2609-missyou-1.jpg"],
         actorReply: {
           originalText: "在回复你",
