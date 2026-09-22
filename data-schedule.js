@@ -25,4 +25,7 @@ const scheduleEvents = [
   { date: '2026-09-09', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (4일차)', category: 'shoot' },
   { date: '2026-09-10', time: '', title: '예능 촬영 - 불상수적성기오(不想睡的星期五) (5일차)', category: 'shoot' },
   { date: '2026-09-23', time: '', title: '비즈니스 촬영', category: 'shoot' },
+  { date: '2026-09-25', time: '', title: '8시간 내구 레이스 참가 📍상하이 (1일차)', category: 'event' },
+  { date: '2026-09-26', time: '', title: '8시간 내구 레이스 참가 📍상하이 (2일차)', category: 'event' },
+  { date: '2026-09-27', time: '', title: '8시간 내구 레이스 참가 📍상하이 (3일차)', category: 'event' },
 ];
