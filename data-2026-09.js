@@ -21,8 +21,8 @@ const posts_202609 = [
       {
         id: 26090102,
         username: "我的小狗爱开车",
-        originalText: "图片评论",
-        translatedText: "(사진 댓글)",
+        originalText: "",
+        translatedText: "",
         images: ["images/2609-fishing-1.jpg"],
         actorReply: {
           originalText: "钓上鱼了吗",
