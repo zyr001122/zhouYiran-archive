@@ -72,6 +72,8 @@ const WEIBO_EMOTICON_MAP = {
   '流鼻血': 'liubixie',
   '二哈': 'erha',
   '无聊': 'bored',
+  '干饭人': 'foodie',
+  '捂嘴哭': 'wuzuiku',
 };
 
 /**
