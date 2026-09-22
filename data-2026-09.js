@@ -254,7 +254,7 @@ const posts_202609 = [
         images: ["images/2609-feed-1.jpg"],
         actorReply: {
           originalText: "闻到味儿了",
-          translatedText: "냄새가 여기까지 난다"
+          translatedText: "냄새가 여기까지 나"
         }
       },
       {
