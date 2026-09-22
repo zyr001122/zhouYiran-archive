@@ -11,7 +11,7 @@ const posts_202609 = [
         id: 26090101,
         username: "csdiary_",
         originalText: "然然想听你现场唱一段rap！！你唱的可好听了！！[抱一抱]",
-        translatedText: "익연아, 네가 라이브로 랩 한 소절 불러주는 거 듣고 싶어!! 너 랩 진짜 잘하잖아!! [抱一抱]",
+        translatedText: "익연아 네가 라이브로 랩 한 소절 불러주는 거 듣고 싶어!! 너 랩 진짜 잘하잖아!! [抱一抱]",
         images: [],
         actorReply: {
           originalText: "[doge]",
@@ -55,7 +55,7 @@ const posts_202609 = [
         id: 26090105,
         username: "是我的小土豆-Tz",
         originalText: "然然 可以语音唱一下九月底不 超级想听！👂",
-        translatedText: "익연아, 〈九月底〉 음성으로 한 구절 불러줄 수 있어? 너무 듣고 싶어!👂",
+        translatedText: "익연 〈九月底〉 음성으로 한 구절 불러줄 수 있어? 너무 듣고 싶어!👂",
         images: ["images/2609-jiuyuedi-1.jpg"],
         actorReply: {
           originalText: "还没到时间[doge]",
@@ -66,7 +66,7 @@ const posts_202609 = [
         id: 26090106,
         username: "悲伤甜甜圈圈",
         originalText: "老公中秋节是我的生日 如果得到你提前的祝福我会很高兴的🥺🥺[给你小心心][给你小心心]",
-        translatedText: "여보, 추석이 내 생일이야 너가 미리 축하해 주면 진짜 기쁠 것 같아🥺🥺 [给你小心心][给你小心心]",
+        translatedText: "여보 추석이 내 생일이야 너가 미리 축하해 주면 진짜 기쁠 것 같아🥺🥺 [给你小心心][给你小心心]",
         images: [],
         actorReply: {
           originalText: "提前祝你生日快乐！",
@@ -77,7 +77,7 @@ const posts_202609 = [
         id: 26090107,
         username: "绝版青苹果",
         originalText: "哥哥 手上的颜料洗不洗的掉",
-        translatedText: "오빠, 손에 묻은 물감은 잘 지워져?",
+        translatedText: "오빠 손에 묻은 물감은 잘 지워져?",
         images: ["images/2609-paint-hand-1.jpg"],
         actorReply: {
           originalText: "当然可以了",
@@ -88,7 +88,7 @@ const posts_202609 = [
         id: 26090108,
         username: "不准再翘二郎腿",
         originalText: "哥哥不是说不参加上海赛车赛了吗[馋嘴][馋嘴]",
-        translatedText: "오빠, 상하이 레이스는 안 나간다고 하지 않았어? [馋嘴][馋嘴]",
+        translatedText: "오빠 상하이 레이스는 안 나간다고 하지 않았어? [馋嘴][馋嘴]",
         images: [],
         actorReply: {
           originalText: "很仓促的又决定要参加了[允悲]",
@@ -99,7 +99,7 @@ const posts_202609 = [
         id: 26090109,
         username: "椰椰糕冷",
         originalText: "哥哥评价一下小法和茅台的开赛车🏎️技术！你就说能不能去参加比赛吧！[心]",
-        translatedText: "오빠, 페라리랑 마오타이 레이싱🏎️ 실력 좀 평가해 줘! 대회 나갈 수 있는지 없는지만 말해 줘! [心]",
+        translatedText: "오빠 페라리랑 마오타이 레이싱🏎️ 실력 좀 평가해 줘! 대회 나갈 수 있는지 없는지만 말해 줘! [心]",
         images: ["images/2609-dogs-racing-1.jpg"],
         actorReply: {
           originalText: "没系安全带啊 ？？",
@@ -109,8 +109,8 @@ const posts_202609 = [
       {
         id: 26090110,
         username: "JuscHe",
-        originalText: "给你拍的胶片@周翊然Tz",
-        translatedText: "널 찍은 필름 사진이야 @周翊然Tz",
+        originalText: "给你拍的胶片",
+        translatedText: "널 찍은 필름 사진",
         images: ["images/2609-film-1.jpg", "images/2609-film-2.jpg"],
         actorReply: {
           originalText: "好看！近点就更好了",
@@ -132,7 +132,7 @@ const posts_202609 = [
         id: 26090112,
         username: "樱花味的cherry",
         originalText: "哥哥专辑准备的怎么样了！",
-        translatedText: "오빠, 앨범 준비는 잘 돼 가?!",
+        translatedText: "오빠 앨범 준비는 잘 돼 가?!",
         images: ["images/2609-album-1.jpg"],
         actorReply: {
           originalText: "努力中….",
@@ -261,7 +261,7 @@ const posts_202609 = [
         id: 26090124,
         username: "翊个海豹龙",
         originalText: "然然如果你回复我的话，我就给你吃，我今天刚做的月饼，是不是非常可爱？",
-        translatedText: "익연아, 답장해 주면 내가 오늘 만든 월병 너 줄게, 진짜 귀엽지?",
+        translatedText: "익연아 답장해 주면 내가 오늘 만든 월병 너 줄게, 진짜 귀엽지?",
         images: ["images/2609-mooncake-2.jpg"],
         actorReply: {
           originalText: "哈哈哈哈哈 很可爱 而且你好厉害",
@@ -272,7 +272,7 @@ const posts_202609 = [
         id: 26090125,
         username: "周翊然Tz",
         originalText: "先走啦 大家早点休息 晚安[收到]",
-        translatedText: "먼저 갈게 다들 일찍 쉬고 잘 자 [收到]",
+        translatedText: "먼저 갈게 다들 일찍 쉬어 굿밤 [收到]",
         images: [],
         actorReply: null
       }
