@@ -103,7 +103,7 @@ const posts_202609 = [
         images: ["images/2609-dogs-racing-1.jpg"],
         actorReply: {
           originalText: "没系安全带啊 ？？",
-          translatedText: "안전벨트 안 맸잖아??"
+          translatedText: "안전벨트 안 맸는데??"
         }
       },
       {
