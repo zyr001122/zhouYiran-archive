@@ -33,7 +33,7 @@ const posts_202609 = [
         id: 26090103,
         username: "扁桃体发炎不发言-",
         originalText: "哥哥 透露一下专辑进度多少了🫢 有老余？",
-        translatedText: "오빠, 앨범이 얼마나 진행됐는지 살짝만 스포해줘🫢 여가운님도 같이 작업해?",
+        translatedText: "오빠 앨범 얼마나 진행됐는지 살짝만 스포해줘🫢 여가운님도 같이 작업해?",
         images: ["images/2609-album-laoyu-1.jpg"],
         actorReply: {
           originalText: "我们经常在一起创作[doge]",
