@@ -98,8 +98,8 @@ const posts_202609 = [
       {
         id: 26090109,
         username: "椰椰糕冷",
-        originalText: "哥哥评价一下小法和茅台的开赛车🏎️技术！你就说能不能去参加比赛吧！[心]",
-        translatedText: "오빠 페라리랑 마오타이 레이싱🏎️ 실력 좀 평가해 줘! 대회 나갈 수 있는지 없는지만 말해 줘! [心]",
+        originalText: "哥哥评价一下小法和茅台的开赛车🏎️技术！你就说能不能去参加比赛吧！♥️",
+        translatedText: "오빠 페라리랑 마오타이 레이싱🏎️ 실력 좀 평가해 줘! 대회 나갈 수 있는지 없는지만 말해 줘! ♥️",
         images: ["images/2609-dogs-racing-1.jpg"],
         actorReply: {
           originalText: "没系安全带啊 ？？",
