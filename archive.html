@@ -1638,8 +1638,18 @@ const latestMonth = Math.max(...Object.keys(tree[latestYear]).map(Number));
 document.getElementById('year-tabs').innerHTML = years.map(year => `
 <div class="year-tab${year === latestYear ? ' active' : ''}" id="ytab-${year}" onclick="selectYear(${year})">${year}</div>
 `).join('');
-renderMonthRow(latestYear);
-filterByMonth(latestYear, latestMonth);
+const mParam = new URLSearchParams(location.search).get('month');
+const mMatch = mParam && mParam.match(/^(\d{4})-(\d{1,2})$/);
+let startYear = latestYear, startMonth = latestMonth;
+if (mMatch && tree[+mMatch[1]] && tree[+mMatch[1]][+mMatch[2]]) {
+  startYear = +mMatch[1];
+  startMonth = +mMatch[2];
+  document.querySelectorAll('.year-tab').forEach(el => el.classList.remove('active'));
+  const yt = document.getElementById(`ytab-${startYear}`);
+  if (yt) yt.classList.add('active');
+}
+renderMonthRow(startYear);
+filterByMonth(startYear, startMonth);
 }
 function renderMonthRow(year) {
 const months = Object.keys(dateTree[year]).map(Number).sort((a,b) => b - a);
