@@ -28,4 +28,11 @@ const scheduleEvents = [
   { date: '2026-09-25', time: '', title: '8시간 내구 레이스 참가 📍상하이 (1일차)', category: 'event' },
   { date: '2026-09-26', time: '', title: '8시간 내구 레이스 참가 📍상하이 (2일차)', category: 'event' },
   { date: '2026-09-27', time: '', title: '8시간 내구 레이스 참가 📍상하이 (3일차)', category: 'event' },
+  { date: '2026-10-11', time: '', title: '브랜드 행사 📍싱가포르', category: 'event' },
+  { date: '2026-10-17', time: '', title: '성하회향 슈퍼 콘서트(盛夏回响超级演唱会)', category: 'event' },
+  { date: '2026-10-23', time: '', title: '패션 성전(时装盛典)', category: 'event' },
+  { date: '2026-10-24', time: '', title: '잡지 촬영', category: 'shoot' },
+  { date: '2026-10-28', time: '', title: '광고 촬영', category: 'shoot' },
+  { date: '2026-10-29', time: '', title: '브랜드 라이브방송', category: 'live' },
+  { date: '2026-10-30', time: '', title: '광고 촬영', category: 'shoot' },
 ];
