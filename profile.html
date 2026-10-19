@@ -288,6 +288,13 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .subsection-label { font-size: 12px; font-weight: 700; color: #6b6067; letter-spacing: 0.02em; margin: 14px 0 6px; }
 .subsection-label.current { color: var(--pink); font-size: 13px; }
 .subsection-label:first-child { margin-top: 0; }
+/* 광고 및 홍보대사: 지난 활동 접기/펼치기 */
+.past-acts-toggle { display: flex; align-items: center; gap: 4px; width: 100%; margin: 18px 0 6px; padding: 10px 0 0; border: none; border-top: 1px solid var(--border); background: none; font-family: inherit; font-size: 12px; font-weight: 700; color: #6b6067; letter-spacing: 0.02em; cursor: pointer; text-align: left; }
+.past-acts-toggle .caret { margin-left: auto; font-size: 10px; color: var(--pink); transition: transform 0.2s ease; }
+.past-acts-toggle.open .caret { transform: rotate(180deg); }
+.past-acts { display: none; }
+.past-acts.open { display: block; }
+.past-acts > .act-year-divider:first-child { margin-top: 4px; }
 .hanja { font-family: 'Noto Sans SC', 'Pretendard', sans-serif; font-weight: 300; color: var(--gray-muted); font-size: 11px; }
 .infobox-value a { color: var(--pink); text-decoration: none; font-weight: 600; }
 .infobox-sns { margin-top: 14px; padding-top: 6px; }
@@ -659,7 +666,23 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <section class="wiki-section" id="ads">
 <div class="wiki-section-title"><span class="num">05</span>광고 및 홍보대사</div>
 <div class="role-legend"><b style="color:var(--pink);">대언인</b>: 브랜드 대표 광고 모델 · <b style="color:var(--teal);">대사</b>: 브랜드 광고 모델 · <b style="color:var(--gold);">지우</b>: 브랜드 협업<br>*브랜드 내 대언인 등급이 없는 경우 대사가 제일 높은 등급</div>
-<div class="subsection-label">지난 활동</div>
+<div class="subsection-label current">현재 진행중</div>
+<div class="act-year-divider"><span class="act-year-divider-label">2023~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2024~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">GUERLAIN · <span class="act-role ambassador">스킨케어 대사</span></div>
+<div class="act-row-flat">APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span><span class="footnote-marker" onclick="toggleFootnote('apm', event)">[14]<span class="footnote-popup" id="fn-apm">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격 → 2026년 아시아 태평양 브랜드 대언인 승격</span></span></div>
+<div class="act-row-flat">BVLGARI Perfume · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span><span class="footnote-marker" onclick="toggleFootnote('bvlgari', event)">[15]<span class="footnote-popup" id="fn-bvlgari">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격</span></span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2025~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">Ami Paris · <span class="act-role ambassador">글로벌 대사</span><span class="footnote-marker" onclick="toggleFootnote('ami', event)">[16]<span class="footnote-popup" id="fn-ami">중국 첫 글로벌 대사</span></span></div>
+<div class="act-year-divider"><span class="act-year-divider-label">2026~</span><span class="act-year-divider-line"></span></div>
+<div class="act-row-flat">LOUIS VUITTON · <span class="act-role friend">브랜드 지우</span></div>
+<div class="act-row-flat">TONLION唐狮 · <span class="act-role spokesperson">브랜드 대언인</span></div>
+<div class="act-row-flat">天猫 · <span class="act-role ambassador">환신 대사</span></div>
+<div class="act-row-flat">凯旋1664 · <span class="act-role ambassador">브랜드 대사</span></div>
+<div class="act-row-flat">红之HUNGCHI · <span class="act-role spokesperson">청상 대언인</span></div>
+<button type="button" class="past-acts-toggle" onclick="togglePastActs(this)">지난 활동<span class="caret">▾</span></button>
+<div class="past-acts">
 <div class="act-year-divider muted"><span class="act-year-divider-label">2022</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">白家阿宽 · <span class="act-role spokesperson">도시 미식 대언인</span></div>
 <div class="act-row-flat">Clarins · <span class="act-role friend">글로우 지우</span></div>
@@ -686,24 +709,13 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <div class="act-row-flat">网易严选 · <span class="act-role ambassador">라이프스타일 대사</span></div>
 <div class="act-year-divider muted"><span class="act-year-divider-label">2024~2026</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">WeTV · <span class="act-role spokesperson">글로벌 대언인</span></div>
-<div class="subsection-label current">현재 진행중</div>
-<div class="act-year-divider"><span class="act-year-divider-label">2023~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">LATEMON浪特梦眼镜 · <span class="act-role spokesperson">브랜드 대언인</span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2024~</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">GUCCI · <span class="act-role friend">브랜드 지우</span></div>
-<div class="act-row-flat">GUERLAIN · <span class="act-role ambassador">스킨케어 대사</span></div>
-<div class="act-row-flat">APM_MONACO · <span class="act-role spokesperson">아시아 태평양 브랜드 대언인</span><span class="footnote-marker" onclick="toggleFootnote('apm', event)">[14]<span class="footnote-popup" id="fn-apm">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격 → 2026년 아시아 태평양 브랜드 대언인 승격</span></span></div>
-<div class="act-row-flat">BVLGARI Perfume · <span class="act-role ambassador">아시아 태평양 브랜드 대사</span><span class="footnote-marker" onclick="toggleFootnote('bvlgari', event)">[15]<span class="footnote-popup" id="fn-bvlgari">2024년 브랜드 대사 → 2025년 아시아 태평양 브랜드 대사 승격</span></span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2025~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">Ami Paris · <span class="act-role ambassador">글로벌 대사</span><span class="footnote-marker" onclick="toggleFootnote('ami', event)">[16]<span class="footnote-popup" id="fn-ami">중국 첫 글로벌 대사</span></span></div>
-<div class="act-year-divider"><span class="act-year-divider-label">2026~</span><span class="act-year-divider-line"></span></div>
-<div class="act-row-flat">天猫 · <span class="act-role ambassador">환신 대사</span></div>
+<div class="act-year-divider muted"><span class="act-year-divider-label">2026</span><span class="act-year-divider-line"></span></div>
 <div class="act-row-flat">自然堂 · <span class="act-role spokesperson">청춘 대언인</span></div>
 <div class="act-row-flat">花间颂 · <span class="act-role spokesperson">베이스 메이크업 대언인</span></div>
-<div class="act-row-flat">凯旋1664 · <span class="act-role ambassador">브랜드 대사</span></div>
 <div class="act-row-flat">元气森林 · <span class="act-role ambassador">여름 브랜드 대사</span></div>
 <div class="act-row-flat">ASICS亚瑟士 · <span class="act-role ambassador">브랜드 대사</span></div>
-<div class="act-row-flat">红之HUNGCHI · <span class="act-role spokesperson">청상 대언인</span></div>
+</div>
 </section>
 <section class="wiki-section" id="magazine">
 <div class="wiki-section-title"><span class="num">06</span>화보<span class="subsection-caption"> 표지 클릭 시 내지 사진으로 이동 </span></div>
@@ -865,6 +877,10 @@ const el = document.getElementById('debutDday');
 if (el) el.textContent = ` (+${diffDays}일, ${years}주년)`;
 }
 renderDebutDday();
+function togglePastActs(btn) {
+btn.classList.toggle('open');
+btn.nextElementSibling.classList.toggle('open');
+}
 function toggleFootnote(id, event) {
 event.stopPropagation();
 document.querySelectorAll('.footnote-popup.open').forEach(el => {
