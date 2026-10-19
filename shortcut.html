@@ -708,7 +708,7 @@ document.getElementById('noticeModalBody').innerHTML = NOTICE_DATA.body;
 const seenKey = NOTICE_DATA.version + '|' + new Date().toDateString();
 if (sessionStorage.getItem('noticeSeen') !== seenKey) {
 document.getElementById('noticeDot').classList.add('show');
-openNotice();
+// 단축어 페이지는 공유 링크로 바로 들어오는 사람이 많아서 공지 팝업을 자동으로 띄우지 않음 (🔔 버튼으로는 볼 수 있음)
 } else {
 document.getElementById('noticeDot').classList.remove('show');
 }
