@@ -1,5 +1,5 @@
 // 공지 팝업 위쪽에 다가오는 일정을 붙여서 스케줄 + 공지를 한 팝업으로 보여준다.
-// 팝업 순서: Schedule ! (다가오는 일정) → 구분선 → Notice ! (data-notice.js 공지)
+// 팝업 순서: Schedule (다가오는 일정) → 구분선 → Notice (data-notice.js 공지)
 // 일정은 data-schedule.js, 공지는 data-notice.js 를 그대로 읽으므로 이 파일은 고칠 일이 거의 없음.
 // 각 페이지 </body> 바로 위에 <script src="notice-upcoming.js"></script> 한 줄만 있으면 됨.
 (function () {
@@ -15,14 +15,15 @@
   var style = document.createElement('style');
   style.textContent =
     '#noticeUpcoming { margin-top: 12px; }' +
+    '.notice-modal .notice-modal-title { font-family: \'Pretendard\', -apple-system, sans-serif; font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }' +
     '.nu-row { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; line-height: 1.5; margin-bottom: 7px; color: var(--black); }' +
     '.nu-row:last-child { margin-bottom: 0; }' +
     '.nu-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }' +
     '.nu-date { flex-shrink: 0; font-weight: 700; min-width: 58px; }' +
     '.nu-date.today { color: var(--pink); }' +
-    '.nu-time { color: var(--pink); font-weight: 600; flex-shrink: 0; }' +
+    '.nu-time { color: var(--pink); font-weight: 600; flex-shrink: 0; margin-left: 6px; }' +
     '.nu-empty { font-size: 12px; color: var(--gray-muted); }' +
-    '.nu-more { display: block; margin: 10px 0 0 auto; background: none; border: none; padding: 0; font-family: inherit; font-size: 11.5px; font-weight: 700; color: var(--pink); cursor: pointer; }' +
+    '.nu-more { display: block; margin: 10px 0 0 0; background: none; border: none; padding: 0; font-family: inherit; font-size: 11.5px; font-weight: 700; color: var(--pink); cursor: pointer; }' +
     '.nu-more:hover { text-decoration: underline; }' +
     '.nu-divider { height: 1px; background: var(--border); margin: 16px 0 14px; }';
   document.head.appendChild(style);
@@ -44,8 +45,7 @@
     return '<div class="nu-row">' +
       '<span class="nu-dot" style="background:' + (COLORS[x.e.category] || 'var(--pink)') + '"></span>' +
       '<span class="nu-date' + (isToday ? ' today' : '') + '">' + label + '</span>' +
-      (x.e.time ? '<span class="nu-time">' + x.e.time + '</span>' : '') +
-      '<span>' + x.e.title + '</span></div>';
+      '<span>' + x.e.title + (x.e.time ? '<span class="nu-time">' + x.e.time + '</span>' : '') + '</span></div>';
   }).join('');
 
   var wrap = document.createElement('div');
@@ -54,13 +54,13 @@
     (rows || '<div class="nu-empty">예정된 일정이 없습니다.</div>') +
     '<button type="button" class="nu-more">전체 일정 보기 →</button>' +
     '<div class="nu-divider"></div>' +
-    '<div class="notice-modal-title">Notice !</div>';
+    '<div class="notice-modal-title">Notice</div>';
   wrap.querySelector('.nu-more').addEventListener('click', function () {
     if (typeof closeNotice === 'function') closeNotice();
     if (typeof openSchedule === 'function') openSchedule();
   });
-  // 페이지에 원래 있던 맨 위 제목(Notice !)은 Schedule ! 로 바꾸고, 공지 제목은 구분선 아래로 옮긴다
+  // 페이지에 원래 있던 맨 위 제목(Notice !)은 Schedule 로 바꾸고, 공지 제목은 구분선 아래로 옮긴다
   var topTitle = modal.querySelector('.notice-modal-title');
-  if (topTitle) topTitle.textContent = 'Schedule !';
+  if (topTitle) topTitle.textContent = 'Schedule';
   modal.insertBefore(wrap, dateEl);
 })();
