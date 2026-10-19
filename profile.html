@@ -289,8 +289,8 @@ display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;
 .subsection-label.current { color: var(--pink); font-size: 13px; }
 .subsection-label:first-child { margin-top: 0; }
 /* 광고 및 홍보대사: 지난 활동 접기/펼치기 */
-.past-acts-toggle { display: flex; align-items: center; gap: 4px; width: 100%; margin: 18px 0 6px; padding: 10px 0 0; border: none; border-top: 1px solid var(--border); background: none; font-family: inherit; font-size: 12px; font-weight: 700; color: #6b6067; letter-spacing: 0.02em; cursor: pointer; text-align: left; }
-.past-acts-toggle .caret { margin-left: auto; font-size: 10px; color: var(--pink); transition: transform 0.2s ease; }
+.past-acts-toggle { display: inline-flex; align-items: center; gap: 5px; margin: 18px 0 6px; padding: 0; border: none; background: none; font-family: inherit; font-size: 13px; font-weight: 700; color: #6b6067; letter-spacing: 0.02em; cursor: pointer; text-align: left; }
+.past-acts-toggle .caret { display: inline-block; font-size: 12px; line-height: 1; color: var(--pink); transition: transform 0.2s ease; }
 .past-acts-toggle.open .caret { transform: rotate(180deg); }
 .past-acts { display: none; }
 .past-acts.open { display: block; }
@@ -642,9 +642,10 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <section class="wiki-section year-colored" id="entertainment">
 <div class="wiki-section-title"><span class="num">03</span>예능</div>
 <div class="act-row"><div class="act-year">2025.05~06</div><div class="act-detail"><div class="act-title-line"><span class="act-title">오십공리도화오5</span><a class="mag-link" href="https://youtube.com/playlist?list=PLj_FQtvyEQOUVe4L7Vd0h3wmgwmpwUE95&si=t96AtoM-FuB-Da54" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">五十公里桃花坞5</div></div></div>
-<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
+<div class="act-row"><div class="act-year">2025.06.25</div><div class="act-detail"><div class="act-title-line"><span class="act-title">일견니취소 EP.11 (환우 팀)</span><a class="mag-link" href="https://youtu.be/BnAqIVNDCy8?si=d_Xl4abUlOJ6jUed" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기1 ↗</a><a class="mag-link" href="https://youtu.be/_wWwn58jPHw?si=1_MqwibhhWT4cb1d" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기2 ↗</a></div><div class="act-subtitle-line">一见你就笑</div></div></div>
 <div class="act-row"><div class="act-year">2026.05.22</div><div class="act-detail"><div class="act-title-line"><span class="act-title">분포파14</span><a class="mag-link" href="https://youtu.be/Bsxi4-yq2Ac?si=CGhPvLurk0YF4H5c" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">奔跑吧14</div></div></div>
 <div class="act-row"><div class="act-year">2026.08</div><div class="act-detail"><div class="act-title-line"><span class="act-title">불상수적성기오</span><a class="mag-link" href="https://youtube.com/playlist?list=PLCCZ_gtej1hs&si=8edUu7CkXdJ9I4u2" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">不想睡的星期五</div></div></div>
+<div class="act-row"><div class="act-year">2026.10.03</div><div class="act-detail"><div class="act-title-line"><span class="act-title">안녕 토요일 (불상수적성기오 팀)</span><a class="mag-link" href="https://youtu.be/oBE-7CDDRI8?si=W1AYOuhVyoDOWFLy" target="_blank" rel="noopener" onclick="return handleGuideLink(event, this.href)">보러가기 ↗</a></div><div class="act-subtitle-line">你好星期六</div></div></div>
 </section>
 <section class="wiki-section year-colored" id="music">
 <div class="wiki-section-title"><span class="num">04</span>음반</div>
