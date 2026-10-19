@@ -418,6 +418,8 @@ color: var(--gray-muted);
 .sc-btn:hover { opacity: 0.85; }
 .sc-link { color: var(--pink); font-weight: 700; text-decoration: none; }
 .sc-link:hover { text-decoration: underline; }
+/* 본문 색 그대로 밑줄만 있는 링크 (공지 문단 안) */
+.sc-ul { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 /* 본문과 같은 색으로 보이는 마무리 안내 (tip-note 처럼 구분선만 둠) */
 .sc-plain { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); line-height: 1.6; }
 .sc-log { padding: 4px 0 8px; }
@@ -607,9 +609,9 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <div class="feed-header">
 <div class="feed-title">공지</div>
 </div>
-<div class="acct-row"><span class="acct-name static">사용이 안 될 때</span><div class="acct-note">
-사이트 업데이트 시 일시적으로 단축어 사용이 안 될 수 있음. 오류 발생 시 오류 내용을 <a class="sc-link" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener">스핀</a>이나 <a class="sc-link" href="https://x.com/vazseyo" target="_blank" rel="noopener">디엠</a>으로 보내주시면 확인 후 업데이트 하겠습니다.<br>
-사용이 불가능할 때는 <a class="sc-link" href="guide">팬가이드</a>에 있는 위챗 미니프로그램을 사용해주세요.
+<div class="acct-row"><div class="acct-note">
+사이트 업데이트 시 일시적으로 단축어 사용이 안 될 수 있음. 오류 발생 시 오류 내용을 <a class="sc-ul" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener">스핀</a>이나 <a class="sc-ul" href="https://x.com/vazseyo" target="_blank" rel="noopener">디엠</a>으로 보내주시면 확인 후 업데이트 하겠습니다.<br>
+사용이 불가능할 때는 <a class="sc-ul" href="guide">팬가이드</a>에 있는 위챗 미니프로그램을 사용해주세요.
 </div></div>
 <div class="acct-row"><span class="acct-name static">다운로드 화질 참고</span><div class="acct-note">
 <ul class="tip-list">
