@@ -413,11 +413,18 @@ color: var(--gray-muted);
 .notice-dont-show { display: block; width: 100%; margin-top: 18px; padding-top: 14px; border: none; border-top: 1px solid var(--border); background: none; font-size: 11.5px; color: var(--gray-muted); text-align: center; cursor: pointer; font-family: inherit; }
 .notice-dont-show:hover { color: var(--pink); }
 /* ============ SHORTCUT PAGE ============ */
-.material-row.sc-plat { flex-direction: column; align-items: flex-start; gap: 3px; }
-.sc-meta { font-size: 11.5px; color: var(--black); opacity: 0.65; line-height: 1.5; }
 .sc-tag { display: inline-block; margin-left: 4px; padding: 1px 6px; border-radius: 3px; background: var(--pink-pale); color: var(--pink); font-size: 10px; font-weight: 700; vertical-align: 1px; }
 .sc-btn { display: block; margin-top: 10px; padding: 12px 14px; border-radius: 4px; background: var(--pink); color: #fff; font-size: 13px; font-weight: 700; text-align: center; text-decoration: none; letter-spacing: -0.01em; transition: opacity 0.15s; }
 .sc-btn:hover { opacity: 0.85; }
+.sc-link { color: var(--pink); font-weight: 700; text-decoration: none; }
+.sc-link:hover { text-decoration: underline; }
+/* 본문과 같은 색으로 보이는 마무리 안내 (tip-note 처럼 구분선만 둠) */
+.sc-plain { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); line-height: 1.6; }
+.sc-log { padding: 4px 0 8px; }
+.sc-log-row { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 12px; line-height: 1.55; }
+.sc-log-row:last-child { border-bottom: none; }
+.sc-log-date { flex-shrink: 0; font-weight: 700; color: var(--pink); }
+.sc-log-text { color: var(--black); opacity: 0.8; }
 .guide-section[id] { scroll-margin-top: 16px; }
 </style>
 </head>
@@ -528,45 +535,34 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <!-- WHITE PANEL -->
 <div class="panel">
 
-<div class="guide-section">
-<div class="feed-header">
-<div class="feed-title">SNS 다운로드 단축어</div>
-</div>
-<div class="acct-row"><span class="acct-name static">어떤 단축어?</span><div class="acct-note">
-아이폰 단축어 하나로 🧣 웨이보 · 🍠 샤오홍슈 · 🎵 도우인 게시물의 사진, 라이브포토, 영상을 사진 앱에 바로 저장함.<br>
-링크를 복사하고 단축어를 실행하면 플랫폼을 알아서 구분함.
-</div></div>
-<div class="material-row sc-plat"><span class="material-label">🧣 웨이보</span><span class="sc-meta">원본 사진 (워터마크 삭제 선택 가능) · 라이브포토 · 최고 화질 영상</span></div>
-<div class="material-row sc-plat"><span class="material-label">🍠 샤오홍슈</span><span class="sc-meta">업로드 원본 사진 · 라이브포토 · 영상</span></div>
-<div class="material-row sc-plat"><span class="material-label">🎵 도우인</span><span class="sc-meta">사진 · 라이브포토 · 영상 (도우인 로고/ID 워터마크 없음)</span></div>
-</div>
-
 <div class="guide-section" id="install">
 <div class="feed-header">
-<div class="feed-title">설치</div>
+<div class="feed-title">설치 (iOS 전용)</div>
 </div>
 <div class="acct-row"><span class="acct-name static">단축어 받기</span><div class="acct-note">
+아이폰 단축어 하나로 웨이보 · 샤오홍슈 · 도우인 게시물의 사진, 라이브포토, 영상을 사진 앱에 바로 저장함.<br>
 아래 버튼을 누르고 <b>단축어 추가</b>를 누르면 설치 완료.
-<a class="sc-btn" href="https://www.icloud.com/shortcuts/78fc6cefc4d74401818a4b0b0add1255" target="_blank" rel="noopener">SNS 다운로드 단축어 받기 ↗</a>
-</div></div>
-<div class="acct-row"><span class="acct-name static">처음 한 번만 설정</span><div class="acct-note">
+</div>
+<a class="sc-btn" href="https://www.icloud.com/shortcuts/78fc6cefc4d74401818a4b0b0add1255" target="_blank" rel="noopener">웨이보 · 샤오홍슈 · 도우인 다운로드 단축어 받기 ↗</a>
+</div>
+<div class="acct-row"><span class="acct-name static">초기 설정 방법</span><div class="acct-note">
 <div class="tip-block-title">① 스크립트 실행 허용 <span class="sc-tag">도우인용</span></div>
 <ul class="tip-list"><li>설정 → 앱 → 단축어 → 고급 → <b>스크립트 실행 허용</b> 켜기</li></ul>
+<button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">이미지 보기<span class="caret">▾</span></button>
+<div class="tip-img-panel">
+<div style="display:flex;gap:8px;">
+<img src="images/shortcut-script-allow-1.jpg" alt="단축어 고급 설정 진입 경로" loading="lazy" style="width:50%;border-radius:4px;display:block;">
+<img src="images/shortcut-script-allow-2.jpg" alt="스크립트 실행 허용 스위치" loading="lazy" style="width:50%;border-radius:4px;display:block;">
+</div>
+</div>
 <div class="tip-block-title">② 공유 시트에서 보기 <span class="sc-tag">도우인용</span></div>
-<ul class="tip-list"><li>단축어 앱에서 SNS 다운로드를 길게 누르기 → 세부사항 → <b>공유 시트에서 보기</b> 켜기</li></ul>
-<div class="tip-block-title">③ Safari 데스크탑 설정 <span class="sc-tag">도우인 사진용</span></div>
+<ul class="tip-list"><li>단축어 앱에서 단축어 <b>'WBXHDY'</b>를 길게 누르기 → 세부사항 → <b>공유 시트에서 보기</b> 켜기</li></ul>
+<div class="tip-block-title">③ Safari 데스크탑 설정 <span class="sc-tag">도우인 라이브사진 저장용</span></div>
 <ul class="tip-list">
-<li>Safari 주소창에 <b>www.douyin.com</b> 직접 입력해서 열기</li>
-<li>주소창 왼쪽 <b>가가(aA)</b> → <b>웹 사이트 설정</b> → <b>데스크탑 웹 사이트 요청</b> 켜기</li>
-<li>바로 보이는 '데스크탑 웹 사이트 요청'은 한 번만 적용되니 꼭 웹 사이트 설정 안의 스위치로 켜야 함</li>
+<li>Safari 주소창에 <a class="sc-link" href="https://www.douyin.com" target="_blank" rel="noopener">www.douyin.com</a> 직접 입력 후 열기 → 주소창 왼쪽 <b>가가(aA)</b> → <b>웹 사이트 설정</b> → <b>데스크탑 웹 사이트 요청</b> 켜기</li>
+<li>가가(aA)를 누르면 바로 보이는 '데스크탑 웹 사이트 요청'은 지금 화면에만 한 번 적용되고 다시 열면 풀리니, 꼭 <b>웹 사이트 설정</b> 안의 스위치로 켜야 계속 적용됨</li>
 </ul>
-<div class="tip-block-title">④ 빠른 실행 버튼 (추천)</div>
-<ul class="tip-list">
-<li><b>뒷면 탭</b>: 설정 → 손쉬운 사용 → 터치 → 뒷면 탭 → 이중 탭 → SNS 다운로드</li>
-<li><b>제어 센터</b>: 제어 센터 편집 → 컨트롤 추가 → 단축어 → SNS 다운로드</li>
-<li><b>동작 버튼</b>(iPhone 15 Pro 이후): 설정 → 동작 버튼 → 단축어 → SNS 다운로드</li>
-</ul>
-<div class="tip-note">처음 실행하면 사이트 접근, 스크립트 실행, 사진 저장 권한을 물어봄. 모두 <b>항상 허용</b> 선택.</div>
+<div class="sc-plain">처음 실행하면 사이트 접근, 스크립트 실행, 사진 저장 권한을 물어봄. 모두 <b>항상 허용</b> 선택.</div>
 </div></div>
 </div>
 
@@ -574,71 +570,72 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <div class="feed-header">
 <div class="feed-title">사용법</div>
 </div>
-<div class="acct-row"><span class="acct-name static">🧣 웨이보 · 🍠 샤오홍슈</span><div class="acct-note">
+<div class="acct-row"><span class="acct-name static">빠른 실행 설정</span><div class="acct-note">
 <ul class="tip-list">
-<li>1. 앱에서 공유 → <b>링크 복사</b></li>
-<li>2. 뒷면 탭 / 제어 센터로 <b>SNS 다운로드</b> 실행 → 저장 완료</li>
-</ul>
-<div class="tip-note">사진이 있는 웨이보 게시물은 <b>사진 저장 방법</b> 메뉴가 뜸. 원본 그대로 / 워터마크 삭제 중 선택.</div>
-</div></div>
-<div class="acct-row"><span class="acct-name static">🎵 도우인 영상</span><div class="acct-note">
-<ul class="tip-list">
-<li>1. 도우인 앱에서 공유 → <b>링크 복사</b></li>
-<li>2. 뒷면 탭 / 제어 센터로 <b>SNS 다운로드</b> 실행 → Safari가 열림</li>
-<li>3. Safari 페이지가 열리면 Safari <b>공유 버튼</b> → <b>SNS 다운로드</b> 선택 → 저장 완료</li>
+<li><b>뒷면 탭</b>: 설정 → 손쉬운 사용 → 터치 → 뒷면 탭 → 이중 탭 or 삼중 탭 → 단축어 'WBXHDY' 설정</li>
+<li><b>제어 센터</b>: 제어 센터 편집 → 컨트롤 추가 → 단축어 → 'WBXHDY' 선택</li>
 </ul>
 </div></div>
-<div class="acct-row"><span class="acct-name static">🎵 도우인 사진 · 라이브포토</span><div class="acct-note">
+<div class="acct-row"><span class="acct-name static">웨이보 · 샤오홍슈</span><div class="acct-note">
+<ul class="tip-list">
+<li>1. 웨이보/샤오홍슈에서 게시글 <b>링크 복사</b></li>
+<li>2. 뒷면 탭 / 제어 센터로 단축어 실행 → 저장 완료 알림 확인</li>
+</ul>
+<div class="sc-plain">웨이보 게시물은 사진 저장 시 <b>원본 그대로 / 워터마크 삭제</b> 중 선택 가능</div>
+</div></div>
+<div class="acct-row"><span class="acct-name static">도우인 라이브포토 (동영상 + 사진 저장)</span><div class="acct-note">
 <ul class="tip-list">
 <li>1. 도우인 앱에서 공유 → <b>링크 복사</b></li>
-<li>2. 뒷면 탭 / 제어 센터로 <b>SNS 다운로드</b> 실행 → Safari가 열림</li>
-<li>3. Safari <b>공유 버튼</b> → <b>SNS 다운로드</b> 선택 → 라이브 확인용 페이지로 이동함</li>
-<li>4. 페이지가 열리면 Safari <b>공유 버튼</b> → <b>SNS 다운로드</b> 한 번 더 선택 → 저장 완료</li>
+<li>2. 뒷면 탭 / 제어 센터로 단축어 실행 → Safari 열림</li>
+<li>3. Safari 자체 <b>공유 버튼</b> → <b>WBXHDY</b> 선택 → 저장 완료 알림 확인</li>
+<li>4. 사진·라이브포토 게시물은 '라이브 확인용 페이지로 이동' 알림이 뜸 → 페이지가 열리면 Safari 공유 버튼 → <b>WBXHDY</b> 한 번 더 선택</li>
 </ul>
-<div class="tip-note">도우인 공유 메뉴에서 바로 단축어를 실행하면 도우인 앱으로 되돌아가는 경우가 있음. <b>링크 복사 → 뒷면 탭 / 제어 센터</b>로 실행하는 것을 추천.</div>
+<div class="sc-plain">Safari 공유 버튼을 누른 뒤 하단의 <b>동작 편집</b>에서 단축어를 즐겨찾기에 넣으면 최상단에서 바로 선택할 수 있음</div>
 </div></div>
 </div>
 
 <div class="guide-section" id="error">
 <div class="feed-header">
-<div class="feed-title">알림 · 오류 안내</div>
+<div class="feed-title">알림 · 오류 사항</div>
 </div>
 <div class="acct-row"><span class="acct-name static">링크를 찾지 못함</span><div class="acct-note">복사한 내용에 웨이보·샤오홍슈·도우인 게시물 링크가 없을 때 뜸. 앱에서 <b>링크 복사</b>를 다시 누른 뒤 실행.</div></div>
 <div class="acct-row"><span class="acct-name static">저장할 사진/영상 없음</span><div class="acct-note">삭제된 게시물, 로그인해야 볼 수 있는 게시물(팔로워 공개 등), 글만 있는 게시물일 때 뜸.</div></div>
-<div class="acct-row"><span class="acct-name static">더우인 사진/영상을 찾지 못함</span><div class="acct-note">
+<div class="acct-row"><span class="acct-name static">도우인 사진/영상을 찾지 못함</span><div class="acct-note">
 <ul class="tip-list">
 <li>Safari 페이지가 다 열린 뒤에 다시 실행</li>
-<li>도우인 사진 게시물이면 <b>Safari 데스크탑 설정</b>이 켜져 있는지 확인</li>
-<li>설정에서 <b>스크립트 실행 허용</b>이 켜져 있는지 확인</li>
+<li>도우인 라이브포토 게시물이면 <b>Safari 데스크탑 설정</b>이 켜져 있는지 확인</li>
+<li>단축어 설정에서 <b>스크립트 실행 허용</b>이 켜져 있는지 확인</li>
 </ul>
 </div></div>
-<div class="acct-row"><span class="acct-name static">Safari에서 열기 / 라이브 확인용 페이지로 이동</span><div class="acct-note">오류 아님. Safari 페이지가 열리면 Safari 공유 버튼 → SNS 다운로드 선택.</div></div>
-<div class="acct-row"><span class="acct-name static">공유 시트에 단축어가 안 보임</span><div class="acct-note">공유 시트 맨 아래 <b>작업 편집</b>에서 SNS 다운로드를 켜거나, 단축어 세부사항의 <b>공유 시트에서 보기</b>를 켜기.</div></div>
+<div class="acct-row"><span class="acct-name static">도우인에서 링크 복사 후 Safari에서 열리는 현상</span><div class="acct-note">오류가 아닌 도우인 구조 특성상 Safari 페이지 경유 필요. Safari 자체 공유 버튼 → 단축어 선택.</div></div>
+<div class="acct-row"><span class="acct-name static">공유 시트에 단축어가 안 보임</span><div class="acct-note">공유 시트 맨 아래 <b>작업 편집</b>에서 단축어가 켜져 있는지 확인 또는 단축어 세부사항의 <b>공유 시트에서 보기</b> 켜기.</div></div>
 </div>
 
-<div class="guide-section">
+<div class="guide-section" id="notice">
 <div class="feed-header">
-<div class="feed-title">알아두기</div>
+<div class="feed-title">공지</div>
 </div>
-<div class="acct-row"><span class="acct-name static">라이브포토</span><div class="acct-note">사진과 짧은 영상이 <b>따로</b> 저장됨. 하나의 라이브포토로 합치려면 intoLive, 实况捷径 같은 앱 사용.</div></div>
-<div class="acct-row"><span class="acct-name static">화질</span><div class="acct-note">
+<div class="acct-row"><span class="acct-name static">사용이 안 될 때</span><div class="acct-note">
+사이트 업데이트 시 일시적으로 단축어 사용이 안 될 수 있음. 오류 발생 시 오류 내용을 <a class="sc-link" href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener">스핀</a>이나 <a class="sc-link" href="https://x.com/vazseyo" target="_blank" rel="noopener">디엠</a>으로 보내주시면 확인 후 업데이트 하겠습니다.<br>
+사용이 불가능할 때는 <a class="sc-link" href="guide">팬가이드</a>에 있는 위챗 미니프로그램을 사용해주세요.
+</div></div>
+<div class="acct-row"><span class="acct-name static">다운로드 화질 참고</span><div class="acct-note">
 <ul class="tip-list">
-<li>🧣 웨이보: 서버가 주는 가장 큰 원본 사진 · 최고 화질 영상</li>
-<li>🍠 샤오홍슈: 업로드 원본 사진 (JPG/PNG/HEIC) · 영상은 보통 720p</li>
-<li>🎵 도우인: 게시물 원본 크기 사진 · 영상 720p</li>
+<li>웨이보: 원본 사진 · 최고화질 영상</li>
+<li>샤오홍슈: 업로드 원본 사진, 영상은 보통 720p</li>
+<li>도우인: 게시물 원본 크기 사진 · 영상 720p</li>
+<li>모든 라이브포토는 사진과 영상 2가지 버전이 동시에 저장 됩니다.</li>
 </ul>
 </div></div>
-<div class="acct-row"><span class="acct-name static">웨이보 워터마크 삭제</span><div class="acct-note">원본 사진의 오른쪽 아래(워터마크 위치)만 워터마크 없는 작은 버전으로 덮는 방식. 사진 크기는 원본 그대로이고, 덮은 부분만 살짝 흐려질 수 있음. 워터마크가 없던 사진도 같은 처리가 되니 필요할 때만 선택.</div></div>
-<div class="acct-row"><span class="acct-name static">갑자기 안 될 때</span><div class="acct-note">플랫폼이 페이지 구조를 바꾸면 일시적으로 안 될 수 있음. 아래 문의로 게시물 링크와 알림 내용을 남겨주면 확인 후 업데이트함.</div></div>
-<div class="tip-note">저장한 사진·영상은 개인 소장용으로만 사용하고 재업로드·2차 가공은 하지 말 것.</div>
 </div>
 
-<div class="guide-section" id="contact">
+<div class="guide-section" id="update">
 <div class="feed-header">
-<div class="feed-title">문의</div>
+<div class="feed-title">업데이트</div>
 </div>
-<div class="acct-row"><span class="acct-name static">만든 사람 · @VAz</span><div class="acct-note">단축어 오류·문의는 스핀 또는 디엠으로. <b>게시물 링크</b>와 <b>알림 내용</b>을 같이 보내주면 빠르게 확인 가능.</div></div>
-<div class="material-row"><span class="material-label">문의하기</span><span class="material-links"><a href="https://spin-spin.com/vazseyo" target="_blank" rel="noopener">SpinSpin ↗</a><a href="https://x.com/vazseyo" target="_blank" rel="noopener">Twitter DM ↗</a></span></div>
+<div class="sc-log">
+<div class="sc-log-row"><span class="sc-log-date">2026.10.19</span><span class="sc-log-text">WBXHDY 첫 공개 · 웨이보 · 샤오홍슈 · 도우인 사진 / 라이브포토 / 영상 저장 지원</span></div>
+</div>
 </div>
 
 </div>
