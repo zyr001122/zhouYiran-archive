@@ -1,4 +1,5 @@
-// 공지 팝업 위쪽에 '다가오는 일정'을 붙여서 공지 + 스케줄을 한 팝업으로 보여준다.
+// 공지 팝업 위쪽에 다가오는 일정을 붙여서 스케줄 + 공지를 한 팝업으로 보여준다.
+// 팝업 순서: Schedule ! (다가오는 일정) → 구분선 → Notice ! (data-notice.js 공지)
 // 일정은 data-schedule.js, 공지는 data-notice.js 를 그대로 읽으므로 이 파일은 고칠 일이 거의 없음.
 // 각 페이지 </body> 바로 위에 <script src="notice-upcoming.js"></script> 한 줄만 있으면 됨.
 (function () {
@@ -13,7 +14,7 @@
 
   var style = document.createElement('style');
   style.textContent =
-    '.nu-label { font-size: 11px; font-weight: 700; color: var(--pink); letter-spacing: 0.02em; margin: 12px 0 8px; }' +
+    '#noticeUpcoming { margin-top: 12px; }' +
     '.nu-row { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; line-height: 1.5; margin-bottom: 7px; color: var(--black); }' +
     '.nu-row:last-child { margin-bottom: 0; }' +
     '.nu-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }' +
@@ -50,13 +51,16 @@
   var wrap = document.createElement('div');
   wrap.id = 'noticeUpcoming';
   wrap.innerHTML =
-    '<div class="nu-label">다가오는 일정</div>' +
     (rows || '<div class="nu-empty">예정된 일정이 없습니다.</div>') +
     '<button type="button" class="nu-more">전체 일정 보기 →</button>' +
-    '<div class="nu-divider"></div>';
+    '<div class="nu-divider"></div>' +
+    '<div class="notice-modal-title">Notice !</div>';
   wrap.querySelector('.nu-more').addEventListener('click', function () {
     if (typeof closeNotice === 'function') closeNotice();
     if (typeof openSchedule === 'function') openSchedule();
   });
+  // 페이지에 원래 있던 맨 위 제목(Notice !)은 Schedule ! 로 바꾸고, 공지 제목은 구분선 아래로 옮긴다
+  var topTitle = modal.querySelector('.notice-modal-title');
+  if (topTitle) topTitle.textContent = 'Schedule !';
   modal.insertBefore(wrap, dateEl);
 })();

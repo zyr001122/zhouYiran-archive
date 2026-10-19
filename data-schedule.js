@@ -33,7 +33,7 @@ const scheduleEvents = [
   { date: '2026-10-11', time: '', title: '브랜드 행사 📍싱가포르', category: 'event' },
   { date: '2026-10-16', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
   { date: '2026-10-17', time: '', title: '성하회향 슈퍼 콘서트(盛夏回响超级演唱会)', category: 'event' },
-  { date: '2026-10-23', time: '', title: '패션 성전(时装盛典)', category: 'event' },
+  { date: '2026-10-23', time: '', title: '보그 패션 성전(时装盛典)', category: 'event' },
   { date: '2026-10-23', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
   { date: '2026-10-24', time: '', title: '잡지 촬영', category: 'shoot' },
   { date: '2026-10-28', time: '', title: '광고 촬영', category: 'shoot' },
