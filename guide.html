@@ -496,6 +496,7 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <span><i class="dot" style="background:#FFC53D"></i>라이브</span>
 <span><i class="dot" style="background:var(--pink)"></i>행사</span>
 <span><i class="dot" style="background:#8B5FBF"></i>촬영</span>
+<span><i class="dot" style="background:#4A9FE8"></i>방송</span>
 </div>
 </div>
 </div>
@@ -799,7 +800,7 @@ document.addEventListener('keydown', e => {
 if (e.key === 'Escape' && document.getElementById('sideDrawer').classList.contains('open')) toggleMobileMenu();
 });
 // ============ 스케줄 캘린더 모달 ============
-const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF', broadcast: '#4A9FE8' };
 let scheduleViewDate = new Date();
 let scheduleTargetDay = null;
 let scheduleMonthEvents = {};

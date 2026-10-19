@@ -4,7 +4,7 @@
 (function () {
   var MAX_ITEMS = 4;      // 팝업에 보여줄 일정 개수
   var DAYS_AHEAD = 30;    // 오늘부터 며칠 뒤 일정까지 보여줄지
-  var COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+  var COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF', broadcast: '#4A9FE8' };
   var WEEK = ['일', '월', '화', '수', '목', '금', '토'];
 
   var modal = document.querySelector('.notice-modal');

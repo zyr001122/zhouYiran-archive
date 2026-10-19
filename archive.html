@@ -1009,6 +1009,7 @@ GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height=
 <span><i class="dot" style="background:#FFC53D"></i>라이브</span>
 <span><i class="dot" style="background:var(--pink)"></i>행사</span>
 <span><i class="dot" style="background:#8B5FBF"></i>촬영</span>
+<span><i class="dot" style="background:#4A9FE8"></i>방송</span>
 </div>
 </div>
 </div>
@@ -1218,7 +1219,7 @@ document.getElementById('guideSubmenu').classList.toggle('open');
 }
 // ============ 스케줄 캘린더 모달 ============
 // data-schedule.js 의 scheduleEvents = [{ date:'YYYY-MM-DD', time:'19:00', title:'...', category:'live'|'event'|'shoot' }, ...] 를 읽어서 렌더링.
-const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF' };
+const SCHEDULE_COLORS = { live: '#FFC53D', event: 'var(--pink)', shoot: '#8B5FBF', broadcast: '#4A9FE8' };
 const CATEGORY_LABELS = { live: '라이브', event: '행사', shoot: '촬영' };
 let scheduleViewDate = new Date();
 let scheduleTargetDay = null;

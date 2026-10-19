@@ -1,5 +1,5 @@
 // 스케줄 캘린더 데이터
-// category: 'live'(브랜드/비즈니스 라이브 방송, 노란색) | 'event'(브랜드/비즈니스 행사·오프라인 행사, 분홍색) | 'shoot'(촬영: 예능/광고/잡지/비즈니스 촬영 등, 보라색)
+// category: 'live'(브랜드/비즈니스 라이브 방송, 노란색) | 'event'(브랜드/비즈니스 행사·오프라인 행사, 분홍색) | 'shoot'(촬영: 예능/광고/잡지/비즈니스 촬영 등, 보라색) | 'broadcast'(방송: 드라마/예능 공개, 파란색)
 // time은 없으면 빈 문자열로 두면 됨 (하루 종일 일정 등)
 const scheduleEvents = [
   { date: '2026-08-04', time: '', title: '비즈니스 촬영', category: 'shoot' },
@@ -28,11 +28,16 @@ const scheduleEvents = [
   { date: '2026-09-25', time: '', title: '8시간 내구 레이스 참가 📍상하이 (1일차)', category: 'event' },
   { date: '2026-09-26', time: '', title: '8시간 내구 레이스 참가 📍상하이 (2일차)', category: 'event' },
   { date: '2026-09-27', time: '', title: '8시간 내구 레이스 참가 📍상하이 (3일차)', category: 'event' },
+  { date: '2026-10-02', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
+  { date: '2026-10-09', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
   { date: '2026-10-11', time: '', title: '브랜드 행사 📍싱가포르', category: 'event' },
+  { date: '2026-10-16', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
   { date: '2026-10-17', time: '', title: '성하회향 슈퍼 콘서트(盛夏回响超级演唱会)', category: 'event' },
   { date: '2026-10-23', time: '', title: '패션 성전(时装盛典)', category: 'event' },
+  { date: '2026-10-23', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
   { date: '2026-10-24', time: '', title: '잡지 촬영', category: 'shoot' },
   { date: '2026-10-28', time: '', title: '광고 촬영', category: 'shoot' },
   { date: '2026-10-29', time: '', title: '브랜드 라이브방송', category: 'live' },
   { date: '2026-10-30', time: '', title: '광고 촬영', category: 'shoot' },
+  { date: '2026-10-30', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
 ];
