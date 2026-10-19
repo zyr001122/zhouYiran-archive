@@ -962,7 +962,13 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <a class="side-drawer-subitem" href="douyin">DOUYIN</a>
 </div>
 <a class="side-drawer-item" href="profile">PROFILE</a>
-<a class="side-drawer-item" href="guide">GUIDE</a>
+<button class="side-drawer-item toggle" id="guideMenuToggle" onclick="toggleGuideSubmenu()" type="button">
+GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+</button>
+<div class="side-drawer-submenu" id="guideSubmenu">
+<a class="side-drawer-subitem" href="guide">FAN GUIDE</a>
+<a class="side-drawer-subitem" href="shortcut">SHORTCUT</a>
+</div>
 </div>
 <div class="side-drawer-label links">LINKS</div>
 <div class="side-drawer-list">
@@ -1205,6 +1211,10 @@ document.getElementById('noticeDot').classList.remove('show');
 function toggleArchiveSubmenu() {
 document.getElementById('archiveMenuToggle').classList.toggle('open');
 document.getElementById('archiveSubmenu').classList.toggle('open');
+}
+function toggleGuideSubmenu() {
+document.getElementById('guideMenuToggle').classList.toggle('open');
+document.getElementById('guideSubmenu').classList.toggle('open');
 }
 // ============ 스케줄 캘린더 모달 ============
 // data-schedule.js 의 scheduleEvents = [{ date:'YYYY-MM-DD', time:'19:00', title:'...', category:'live'|'event'|'shoot' }, ...] 를 읽어서 렌더링.

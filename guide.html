@@ -449,7 +449,13 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <a class="side-drawer-subitem" href="douyin">DOUYIN</a>
 </div>
 <a class="side-drawer-item" href="profile">PROFILE</a>
-<a class="side-drawer-item current" href="guide">GUIDE</a>
+<button class="side-drawer-item toggle open" id="guideMenuToggle" onclick="toggleGuideSubmenu()" type="button">
+GUIDE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+</button>
+<div class="side-drawer-submenu open" id="guideSubmenu">
+<a class="side-drawer-subitem current" href="guide">FAN GUIDE</a>
+<a class="side-drawer-subitem" href="shortcut">SHORTCUT</a>
+</div>
 </div>
 <div class="side-drawer-label links">LINKS</div>
 <div class="side-drawer-list">
@@ -568,7 +574,8 @@ ARCHIVE<span class="side-drawer-caret"><svg viewBox="0 0 24 24" width="13" heigh
 <li><b>주간 보고</b>: 매 주 일요일 11시, 공작실 웨이보 업로드</li>
 </ul>
 </div></div>
-<div class="acct-row"><span class="acct-name static">워터마크 없이/다운로드 막힌 영상 저장</span><div class="acct-note">위챗 미니프로그램에서 <b>去水印</b> 검색, 아무거나 사용 가능<br>웨이보·샤오홍슈·도우인 영상 링크를 넣으면 워터마크 제거 또는 다운로드가 막힌 영상도 저장할 수 있음</div></div>
+<div class="acct-row"><span class="acct-name static">워터마크 없이/다운로드 막힌 영상 저장</span><div class="acct-note">위챗 미니프로그램에서 <b>去水印</b> 검색, 아무거나 사용 가능<br>웨이보·샤오홍슈·도우인 영상 링크를 넣으면 워터마크 제거 또는 다운로드가 막힌 영상도 저장할 수 있음
+<div class="tip-note">아이폰은 단축어로 사진·라이브포토·영상을 바로 저장할 수 있음 — <a class="mag-translate-link" href="shortcut">SHORTCUT 가이드 보기 →</a></div></div></div>
 <div class="acct-row"><span class="acct-name static">초화 출석체크</span><div class="acct-note">웨이보의 超话=팬 커뮤니티, '초화'라고 부름.<br>주익연 웨이보 프로필 → 超话 진입, 오른쪽 위 달력 모양 아이콘(连签)을 누르면 출석체크 가능.<br><br>출석체크 하는 이유: 超Like 달성 및 초화 레벨업에 필요한 점수를 얻을 수 있고, 연속 출석하면 하루 최대 +8점까지 받을 수 있음.<br>오프라인 행사 참가 시 초화 레벨 9 이상, 超Like 필수
 <button type="button" class="tip-img-toggle" onclick="toggleTipPanel(this)">이미지 보기<span class="caret">▾</span></button>
 <div class="tip-img-panel">
@@ -731,6 +738,10 @@ gsap.fromTo(rows, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, stag
 function toggleArchiveSubmenu() {
 document.getElementById('archiveMenuToggle').classList.toggle('open');
 document.getElementById('archiveSubmenu').classList.toggle('open');
+}
+function toggleGuideSubmenu() {
+document.getElementById('guideMenuToggle').classList.toggle('open');
+document.getElementById('guideSubmenu').classList.toggle('open');
 }
 function toggleTipPanel(btn) {
 btn.classList.toggle('active');
