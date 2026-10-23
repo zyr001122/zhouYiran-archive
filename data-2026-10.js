@@ -262,17 +262,16 @@ const posts_202610 = [
         id: 26100124,
         username: "大圣Marbury杰锅是nightstar",
         originalText: "在干嘛[哇]",
-        translatedText: "뭐 해? [哇]",
+        translatedText: "뭐 하고 있어? [哇]",
         images: [],
-        note: "翻盘(역전)이라고 잘못 쓴 걸 翻牌(댓글 뽑기)로 바로 고쳐서 다시 답글을 닮",
         actorReplies: [
           {
             originalText: "我不是在翻盘吗[允悲]",
-            translatedText: "나 지금 역전하고 있잖아 [允悲]"
+            translatedText: "나 지금 역댓파 당하는 건가 [允悲]"
           },
           {
             originalText: "回复@周翊然Tz:翻牌",
-            translatedText: "(자기 댓글에) 댓글 뽑기 말이야"
+            translatedText: "댓 뽑혔네"
           }
         ]
       },
