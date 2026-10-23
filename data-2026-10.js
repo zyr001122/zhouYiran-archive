@@ -4,14 +4,14 @@ const posts_202610 = [
     date: "2026-10-22",
     weiboUrl: "https://weibo.com/5994946077/5356885530381694",
     originalText: "hello",
-    translatedText: "안녕~",
+    translatedText: "",
     images: [],
     comments: [
       {
         id: 26100101,
         username: "周翊然Tz",
         originalText: "在干嘛",
-        translatedText: "다들 뭐 해?",
+        translatedText: "뭐 하고 있어?",
         images: [],
         actorReply: null
       },
@@ -19,18 +19,18 @@ const posts_202610 = [
         id: 26100102,
         username: "樱花味的cherry",
         originalText: "哈喽呀，哥哥",
-        translatedText: "할로~ 오빠",
+        translatedText: "하이루 오빠",
         images: ["images/2610-hello-1.jpg"],
         actorReply: {
           originalText: "哈哈哈哈哈哈哈哈",
-          translatedText: "하하하하하하하하"
+          translatedText: "ㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         }
       },
       {
         id: 26100103,
         username: "翊条魚干",
         originalText: "老公好多粉色小朋友",
-        translatedText: "여보, 핑크색 꼬맹이들이 엄청 많아",
+        translatedText: "여보야 핑크색 꼬마 팬들이 엄청 많아",
         images: ["images/2610-pink-crowd-1.jpg"],
         actorReply: {
           originalText: "可爱",
@@ -41,33 +41,33 @@ const posts_202610 = [
         id: 26100104,
         username: "椰椰糕冷",
         originalText: "哥哥特别多的人在爱着你 知豆吗🥹🤲🏻看到我们灯牌的时候在想什么呀！是不是感觉超级幸福！",
-        translatedText: "오빠, 진짜 많은 사람이 오빠를 사랑하고 있어. 알지?🥹🤲🏻 우리 슬로건 봤을 때 무슨 생각 했어! 완전 행복했지!",
+        translatedText: "오빠 진짜 많은 사람이 오빠를 사랑하고 있는 거 알지?🥹🤲🏻 우리 슬로건 봤을 때 무슨 생각 했어! 엄청 행복했지!",
         images: ["images/2610-lightboard-1.jpg"],
         actorReply: {
           originalText: "我在想得走得再近点[收到]",
-          translatedText: "조금만 더 가까이 가야겠다고 생각했어 [收到]"
+          translatedText: "더 가까이 다가가야겠다고 생각했어 [收到]"
         }
       },
       {
         id: 26100105,
         username: "怎么又下雨Tz",
         originalText: "请问这个姿势的来源[并不简单]",
-        translatedText: "저기, 이 자세는 어디서 나온 거야? [并不简单]",
+        translatedText: "저기 이 자세의 출처가 어디인가요? [并不简单]",
         images: ["images/2610-pose-1.jpg"],
         actorReply: {
           originalText: "随地大小睡",
-          translatedText: "아무 데서나 자는 거지"
+          translatedText: "아무 데서나 골아 떨어지기"
         }
       },
       {
         id: 26100106,
         username: "小蕾爱干饭",
         originalText: "老公我是被你卡了吗[手指比心]",
-        translatedText: "여보, 나 혹시 차단당한 거야? [手指比心]",
+        translatedText: "여보 나 혹시 차단당한 거야? [手指比心]",
         images: ["images/2610-blocked-1.jpg"],
         actorReply: {
           originalText: "这是啥意思",
-          translatedText: "이게 무슨 뜻이야?"
+          translatedText: "이게 뭔 뜻이야"
         }
       },
       {
@@ -85,7 +85,7 @@ const posts_202610 = [
         id: 26100108,
         username: "岁岁念翊然",
         originalText: "哥哥 你应该对我说什么[挤眼]",
-        translatedText: "오빠, 나한테 무슨 말 해줘야 하는지 알지? [挤眼]",
+        translatedText: "오빠 나한테 무슨 말 해줘야 하는지 알지? [挤眼]",
         images: ["images/2610-saysomething-1.jpg"],
         actorReply: {
           originalText: "加油加油加油",
@@ -95,8 +95,8 @@ const posts_202610 = [
       {
         id: 26100109,
         username: "雨琪琪琪Tz",
-        originalText: "我记得你之前不是这样的啊[doge]@周翊然Tz",
-        translatedText: "내 기억엔 오빠 예전엔 이러지 않았는데 [doge] @周翊然Tz",
+        originalText: "我记得你之前不是这样的啊[doge]",
+        translatedText: "내 기억엔 오빠가 예전엔 이러지 않았는데 [doge]",
         images: ["images/2610-before-after-1.jpg"],
         actorReply: {
           originalText: "有时候要融入角色[微笑]",
@@ -107,7 +107,7 @@ const posts_202610 = [
         id: 26100110,
         username: "Romantic-季雾漫祎",
         originalText: "哥哥，你回我个标点符号，我都没被你翻过",
-        translatedText: "오빠, 나한테 문장부호 하나라도 답해줘. 나 한 번도 답장 받아본 적 없어",
+        translatedText: "오빠, 나한테 문장부호 하나라도 답해줘, 한 번도 답장 받아본 적 없단말야",
         images: [],
         actorReply: {
           originalText: "！",
@@ -118,52 +118,52 @@ const posts_202610 = [
         id: 26100111,
         username: "Serendipity_梨舟诗韵",
         originalText: "这是在COS爆笑虫子吗？轻松绷住！🤫",
-        translatedText: "이거 폭소 애벌레 코스프레야? 웃음 참기 쉽지 않다!🤫",
+        translatedText: "이거 라바 코스프레야? 웃참 못 하겠는데!🤫",
         images: ["images/2610-cos-1.jpg"],
-        note: "爆笑虫子(폭소 애벌레)는 한국 애니메이션 〈라바〉의 중국어 제목",
+        note: "爆笑虫子는 라바 애니의 중국어 제목",
         actorReply: {
           originalText: "这人是谁 我不认识",
-          translatedText: "이 사람 누구야? 나는 모르는 사람인데"
+          translatedText: "이 사람 누구지 난 모르는 사람인데"
         }
       },
       {
         id: 26100112,
         username: "我是zy然然然然",
-        originalText: "哥哥快看呀@周翊然Tz",
-        translatedText: "오빠 빨리 봐봐 @周翊然Tz",
+        originalText: "哥哥快看呀 ",
+        translatedText: "오빠 빨리 봐바",
         images: ["images/2610-lookhere-1.jpg"],
         actorReply: {
           originalText: "！！好厉害",
-          translatedText: "!! 진짜 대단하다"
+          translatedText: "!! 진짜 대단한데"
         }
       },
       {
         id: 26100113,
         username: "咸鱼yyyr",
         originalText: "三年了[泪]我到底何时才能被翻牌[泪][泪]",
-        translatedText: "삼 년째야 [泪] 대체 언제쯤 내 댓글이 뽑힐까 [泪][泪]",
+        translatedText: "3년째야 [泪] 대체 언제쯤 내 댓글이 뽑힐까 [泪][泪]",
         images: [],
         actorReply: {
           originalText: "我来了",
-          translatedText: "나 왔어"
+          translatedText: "지금"
         }
       },
       {
         id: 26100114,
         username: "yiiii___________",
-        originalText: "哥哥 求开卡丁车教程 我开的时候特害怕 @周翊然Tz",
-        translatedText: "오빠, 카트 타는 법 좀 알려줘. 나는 탈 때 너무 무섭더라 @周翊然Tz",
+        originalText: "哥哥 求开卡丁车教程 我开的时候特害怕",
+        translatedText: "오빠 카트 타는 법 좀 알려줘 난 탈 때 너무 무섭더라고",
         images: ["images/2610-kart-1.jpg"],
         actorReply: {
           originalText: "那咱们开慢点",
-          translatedText: "그럼 우리 좀 천천히 달리자"
+          translatedText: "그럼 우리 좀 천천히 타보자"
         }
       },
       {
         id: 26100115,
         username: "zxyrTz",
-        originalText: "都让让 神图来了[doge] （哥哥你啥时候翻我[泪]）@周翊然Tz",
-        translatedText: "다들 비켜, 레전드 짤 나가신다 [doge] (오빠는 내 댓글 언제 뽑아줄 거야 [泪]) @周翊然Tz",
+        originalText: "都让让 神图来了[doge] （哥哥你啥时候翻我[泪]）",
+        translatedText: "다들 비켜 레전드 짤 나가신다 [doge] (오빠는 내 댓글 언제 뽑아줄 거야 [泪])",
         images: ["images/2610-godtier-1.jpg"],
         actorReply: {
           originalText: "这是什么生物",
@@ -174,7 +174,7 @@ const posts_202610 = [
         id: 26100116,
         username: "Yi贝-",
         originalText: "哥哥 这是我第一次见你 希望生日会还能再见面[泪][泪]",
-        translatedText: "오빠, 이번이 처음 본 거야. 생일 행사 때 또 만날 수 있으면 좋겠어 [泪][泪]",
+        translatedText: "오빠 이번이 처음 본 건데 생일회 때 또 만날 수 있으면 좋겠어 [泪][泪]",
         images: ["images/2610-firstmeet-1.jpg"],
         actorReply: {
           originalText: "好",
@@ -196,7 +196,7 @@ const posts_202610 = [
         id: 26100118,
         username: "Yun_kookie",
         originalText: "分享夕陽～",
-        translatedText: "노을 공유해~",
+        translatedText: "노을 공유~",
         images: ["images/2610-sunset-1.jpg"],
         actorReply: {
           originalText: "美",
@@ -211,7 +211,7 @@ const posts_202610 = [
         images: [],
         actorReply: {
           originalText: "先好好拍戏[收到]",
-          translatedText: "일단 촬영부터 잘 끝내고 [收到]"
+          translatedText: "일단 촬영부터 열심히 하고 [收到]"
         }
       },
       {
@@ -222,7 +222,7 @@ const posts_202610 = [
         images: [],
         actorReply: {
           originalText: "3.4",
-          translatedText: "3번이랑 4번"
+          translatedText: ""
         }
       },
       {
@@ -240,18 +240,18 @@ const posts_202610 = [
         id: 26100122,
         username: "-Lil·JieJie-",
         originalText: "老公 猜猜这是哪",
-        translatedText: "여보, 여기가 어딘지 맞혀 봐",
+        translatedText: "여보 여기가 어딘지 맞혀 봐",
         images: ["images/2610-guesswhere-1.jpg"],
         actorReply: {
           originalText: "我猜下面有个长椅",
-          translatedText: "밑에 벤치 하나 있을 것 같은데"
+          translatedText: "밑에 벤치 하나 있을 것 같네"
         }
       },
       {
         id: 26100123,
         username: "Z然然酱",
         originalText: "周翊然 你有钱吗 有钱的话 给我买一个苹果18promax1TB",
-        translatedText: "주익연, 너 돈 있어? 돈 있으면 나 아이폰 18 프로맥스 1TB 하나 사줘",
+        translatedText: "주익연 너 돈 좀 있어? 돈 있으면 나 아이폰 18 프로맥스 1TB 하나 사줘",
         images: [],
         actorReply: {
           originalText: "🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎promax（1tb）",
