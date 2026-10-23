@@ -267,11 +267,11 @@ const posts_202610 = [
         actorReplies: [
           {
             originalText: "我不是在翻盘吗[允悲]",
-            translatedText: "나 지금 역댓파 당하는 건가 [允悲]"
+            translatedText: "나 지금 역댓파 당한건가 [允悲]"
           },
           {
             originalText: "回复@周翊然Tz:翻牌",
-            translatedText: "댓 뽑혔네"
+            translatedText: "댓파하지"
           }
         ]
       },
