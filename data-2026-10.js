@@ -30,7 +30,7 @@ const posts_202610 = [
         id: 26100103,
         username: "翊条魚干",
         originalText: "老公好多粉色小朋友",
-        translatedText: "여보야 핑크색 꼬마 팬들이 엄청 많아",
+        translatedText: "여보야 핑크 팬들이 엄청 많아",
         images: ["images/2610-pink-crowd-1.jpg"],
         actorReply: {
           originalText: "可爱",
