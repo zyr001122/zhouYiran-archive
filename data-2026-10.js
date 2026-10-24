@@ -52,7 +52,7 @@ const posts_202610 = [
         id: 26100105,
         username: "祈川十里春",
         originalText: "哄了多久才配合你的[doge]",
-        translatedText: "얼마나 달래야 이렇게 맞춰준 거야 [doge]",
+        translatedText: "얼마나 달랬길래 맞춰주신 거야 [doge]",
         images: ["images/2610-coax-1.jpg"],
         actorReply: {
           originalText: "不需要哄",
