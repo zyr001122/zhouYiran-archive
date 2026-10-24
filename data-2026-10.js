@@ -30,7 +30,7 @@ const posts_202610 = [
         id: 26100103,
         username: "翊条魚干",
         originalText: "老公好多粉色小朋友",
-        translatedText: "여보야 핑크 팬들이 엄청 많아",
+        translatedText: "여보야 핑크 팬들 엄청 많지",
         images: ["images/2610-pink-crowd-1.jpg"],
         actorReply: {
           originalText: "可爱",
@@ -174,7 +174,7 @@ const posts_202610 = [
         id: 26100116,
         username: "zxyrTz",
         originalText: "都让让 神图来了[doge] （哥哥你啥时候翻我[泪]）",
-        translatedText: "다들 비켜 레전드 짤 나가신다 [doge] (오빠는 내 댓글 언제 뽑아줄 거야 [泪])",
+        translatedText: "다들 비켜 레전드 짤 나가신다 [doge] (오빠 내 댓글 언제 뽑아줄 거야 [泪])",
         images: ["images/2610-godtier-1.jpg"],
         actorReply: {
           originalText: "这是什么生物",
@@ -189,7 +189,7 @@ const posts_202610 = [
         images: ["images/2610-firstmeet-1.jpg"],
         actorReply: {
           originalText: "好",
-          translatedText: "그래"
+          translatedText: "그러자"
         }
       },
       {
@@ -211,7 +211,7 @@ const posts_202610 = [
         images: ["images/2610-sunset-1.jpg"],
         actorReply: {
           originalText: "美",
-          translatedText: "예쁘다"
+          translatedText: "예쁘네"
         }
       },
       {
@@ -266,7 +266,7 @@ const posts_202610 = [
         images: [],
         actorReply: {
           originalText: "🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎promax（1tb）",
-          translatedText: "🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎 프로맥스(1TB)"
+          translatedText: ""
         }
       },
       {
@@ -294,7 +294,7 @@ const posts_202610 = [
         images: ["images/2610-cute-1.jpg"],
         actorReply: {
           originalText: "这个好这个好",
-          translatedText: "이거 좋다 이거 좋아"
+          translatedText: "이거 좋은데"
         }
       },
       {
@@ -305,7 +305,7 @@ const posts_202610 = [
         images: ["images/2610-godshot-1.jpg"],
         actorReply: {
           originalText: "有点子帅的",
-          translatedText: "좀 멋있는데"
+          translatedText: "좀 멋있네"
         }
       },
       {
