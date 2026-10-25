@@ -41,7 +41,7 @@ const posts_202610 = [
         id: 26100104,
         username: "椰椰糕冷",
         originalText: "哥哥特别多的人在爱着你 知豆吗🥹🤲🏻看到我们灯牌的时候在想什么呀！是不是感觉超级幸福！",
-        translatedText: "오빠 진짜 많은 사람이 오빠를 사랑하고 있는 거 알지?🥹🤲🏻 우리 슬로건 봤을 때 무슨 생각 했어! 엄청 행복했지!",
+        translatedText: "오빠 진짜 많은 사람이 사랑하고 있는 거 알지?🥹🤲🏻 우리 슬로건 봤을 때 무슨 생각 했어?! 엄청 행복했지?!!",
         images: ["images/2610-lightboard-1.jpg"],
         actorReply: {
           originalText: "我在想得走得再近点[收到]",
