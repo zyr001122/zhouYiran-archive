@@ -40,4 +40,6 @@ const scheduleEvents = [
   { date: '2026-10-29', time: '', title: '브랜드 라이브방송', category: 'live' },
   { date: '2026-10-30', time: '', title: '광고 촬영', category: 'shoot' },
   { date: '2026-10-30', time: '13:00', title: '불상수적성기오 공개', category: 'broadcast' },
+  { date: '2026-11-21', time: '', title: 'Over winter 생일 음악회(生日音乐会)', category: 'event' },
+  { date: '2026-11-22', time: '', title: '26th Birthday', category: 'event' },
 ];
